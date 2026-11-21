@@ -1,0 +1,3 @@
+gpu_index,gpu,seed,torch_version,transformers_version,load_seconds,generation_seconds,generated_tokens,peak_allocated_mib,action_delimiters_present,input_sha256,input_fixture,prompt,token_ids
+6,NVIDIA A100-SXM4-40GB,19961103,2.6.0+cu124,4.57.3,17.847,2.112,8,16283,True,4a7e615695cc0213d832ea8208d5f2838a01b3511733cdcb430862acc54e864c,research/observation_contract_live/v3/minecraft/runs/C/visible_original.png,"Mine stone underground.
+observation: ","[677, 151835, 151861, 151876, 151897, 151836, 4432, 151645]"

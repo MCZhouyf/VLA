@@ -1,0 +1,58 @@
+---- Minecraft Crash Report ----
+// Shall we play a game?
+
+Time: 11/21/26 1:22 PM
+Description: Initializing game
+
+java.lang.IllegalStateException: Failed to initialize GLFW, errors: GLFW error during init: [0x10008]140534223126112
+	at com.mojang.blaze3d.platform.GLX._initGlfw(GLX.java:85)
+	at com.mojang.blaze3d.systems.RenderSystem.initBackendSystem(RenderSystem.java:586)
+	at net.minecraft.client.Minecraft.<init>(Minecraft.java:415)
+	at net.minecraft.client.main.Main.main(Main.java:157)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at com.mojang.blaze3d.platform.GLX._initGlfw(GLX.java:85)
+	at com.mojang.blaze3d.systems.RenderSystem.initBackendSystem(RenderSystem.java:586)
+	at net.minecraft.client.Minecraft.<init>(Minecraft.java:415)
+
+-- Initialization --
+Details:
+Stacktrace:
+	at net.minecraft.client.main.Main.main(Main.java:157)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.5
+	Minecraft Version ID: 1.16.5
+	Operating System: Linux (amd64) version 5.15.0-1053-nvidia
+	Java Version: 1.8.0_514, Azul Systems, Inc.
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Azul Systems, Inc.
+	Memory: 1188877728 bytes (1133 MB) / 1624244224 bytes (1549 MB) up to 1908932608 bytes (1820 MB)
+	CPUs: 2
+	JVM Flags: 2 total; -XX:ActiveProcessorCount=2 -Xmx2G
+	Launched Version: ~~NULL~~
+	Backend library: LWJGL version 3.2.2 SNAPSHOT
+	Backend API: NO CONTEXT
+	GL Caps: 
+	Using VBOs: Yes
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	CPU: <unknown>
+	OptiFine Version: OptiFine_1.16.5_HD_U_G8
+	OptiFine Build: ~~NULL~~
+	Render Distance Chunks: 8
+	Mipmaps: 4
+	Anisotropic Filtering: 1
+	Antialiasing: 0
+	Multitexture: false
+	Shaders: null
+	OpenGlVersion: null
+	OpenGlRenderer: null
+	OpenGlVendor: null
+	CpuCount: 2

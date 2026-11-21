@@ -1,0 +1,49 @@
+seed: 19961103
+video_fps: 20
+random_steps: 100
+capacity:
+  levels:
+  - 1
+  - 4
+  - 8
+  - 16
+  - 32
+  - 64
+  steps: 100
+  startup_timeout_seconds: 300
+  step_timeout_seconds: 180
+random_commands:
+- /tp @p ~ ~ ~ 45 0
+- /setblock {x} {y} {z} minecraft:gold_block
+- /fill {x1} {y} {z} {x2} {y} {z} minecraft:iron_block
+- /give @p minecraft:emerald 1
+- /execute if block {x} {y} {z} minecraft:gold_block run give @p minecraft:diamond
+  1
+- /execute if block {x1} {y} {z} minecraft:iron_block if block {x2} {y} {z} minecraft:iron_block
+  run give @p minecraft:lapis_block 1
+random_voxel_bounds:
+- 0
+- 2
+- 2
+- 6
+- 0
+- 0
+random_probe_steps: 12
+mcu:
+  task: mine_stone
+  instruction: Mine stone underground.
+  max_steps: 150
+  visible_stone:
+    max_steps: 150
+    setup_steps: 6
+  max_new_tokens: 64
+  history: 2
+  resolution:
+  - 640
+  - 360
+  camera:
+    camera_binsize: 1
+    camera_maxval: 10
+    camera_mu: 20
+    camera_quantization_scheme: mu_law
+  scene: visible_stone

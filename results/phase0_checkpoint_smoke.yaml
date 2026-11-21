@@ -1,0 +1,22 @@
+task: phase0_static_checkpoint_smoke
+checkpoint: CraftJarvis/JarvisVLA-Qwen2-VL-7B
+checkpoint_revision: 27e83fb89ddf9fe2a3340b9db0a85ba9c3b9c971
+seed: 19961103
+gpu_index: 6
+dtype: bfloat16
+attention: sdpa
+runtime:
+  prefix: /share/project/zhoubowen/conda_env/vision-deepresearch-sft
+  torch: 2.6.0+cu124
+  transformers: 4.57.3
+  image_processor: Qwen2VLImageProcessorFast
+input:
+  frames: 1
+  fixture: research/observation_contract_live/v3/minecraft/runs/C/visible_original.png
+  sha256: 4a7e615695cc0213d832ea8208d5f2838a01b3511733cdcb430862acc54e864c
+  image_mode: RGB
+  instruction: "Mine stone underground."
+generation:
+  max_new_tokens: 64
+  do_sample: false
+action_delimiters: [151835, 151836]
