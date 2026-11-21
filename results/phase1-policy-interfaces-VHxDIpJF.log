@@ -1,0 +1,10 @@
+Fetching 7 files:   0%|          | 0/7 [00:00<?, ?it/s]Fetching 7 files:  14%|█▍        | 1/7 [00:01<00:07,  1.28s/it]Fetching 7 files:  43%|████▎     | 3/7 [00:01<00:02,  1.57it/s]Fetching 7 files:  71%|███████▏  | 5/7 [00:02<00:00,  2.23it/s]Fetching 7 files: 100%|██████████| 7/7 [00:02<00:00,  2.92it/s]Fetching 7 files: 100%|██████████| 7/7 [00:02<00:00,  2.92it/s]
+CLIP tokenizer revision: 57c216476eefef5ab752ec549e440a49ae4ae5f3
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+Loading weights from local directory
+steve1 model loaded, observation to env action passed: [-10.0, -10.0]
+Loading weights from local directory
+vpt model loaded, observation to env action passed: [0.0, 10.0]

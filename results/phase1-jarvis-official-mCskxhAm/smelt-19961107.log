@@ -1,0 +1,70 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+INFO: Starting Minecraft process with device: cpu
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+ERROR:minestudio.simulator.minerl.env.malmo.instance.59d35b:[23:20:47] [Render thread/WARN]: ERROR : Couldn't load Narrator library : Unable to load library 'fliteWrapper': Can't obtain InputStream for linux-x86-64/libfliteWrapper.so
+ERROR:minestudio.simulator.minerl.env.malmo.instance.59d35b:[23:20:47] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: null
+ERROR:minestudio.simulator.minerl.env.malmo.instance.59d35b:[23:20:52] [Worker-Main-6/ERROR]: Using missing texture, unable to load minecraft:optifine/ctm/default/empty.png : java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png
+ERROR:minestudio.simulator.minerl.env.malmo.instance.59d35b:[23:20:52] [Render thread/ERROR]: Error starting SoundSystem. Turning off sounds & music
+ERROR:minestudio.simulator.minerl.env.malmo.instance.59d35b:java.lang.IllegalStateException: Failed to open OpenAL device
+WARNING:minestudio.simulator.minerl.env.malmo.instance.59d35b:[23:20:52] [Render thread/WARN]: [OptiFine] Missing CTM sprite: minecraft:optifine/ctm/default/empty
+WARNING:minestudio.simulator.minerl.env.malmo.instance.59d35b:[23:20:55] [Render thread/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.59d35b:[23:20:55] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.59d35b:[23:20:55] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.59d35b:[23:20:55] [Render thread/WARN]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.59d35b:[23:20:55] [Render thread/WARN]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.59d35b:[23:21:26] [Render thread/WARN]: Failed to load texture: minecraft:optifine/ctm/default/empty.png
+ERROR:minestudio.simulator.minerl.env.malmo.instance.59d35b:java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png
+[23:21:28] Switching to task: iron_ingot.                             task.py:27
+[23:21:31] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[23:21:31] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+/share/project/zhoubowen/zhy/zyf/code/JarvisVLA/jarvisvla/evaluate/assets/recipe
+s/iron_ingot.json
+Speed Test Status: 
+Average Time: 0.04 
+Average FPS: 24.07 
+Total Steps: 50 
+
+Speed Test Status: 
+Average Time: 0.03 
+Average FPS: 32.24 
+Total Steps: 100 
+
+Speed Test Status: 
+Average Time: 0.03 
+Average FPS: 37.48 
+Total Steps: 150 
+
+Speed Test Status: 
+Average Time: 0.02 
+Average FPS: 40.32 
+Total Steps: 200 
+
+Speed Test Status: 
+Average Time: 0.02 
+Average FPS: 42.51 
+Total Steps: 250 
+
+Speed Test Status: 
+Average Time: 0.02 
+Average FPS: 44.53 
+Total Steps: 300 
+
+Speed Test Status: 
+Average Time: 0.02 
+Average FPS: 46.23 
+Total Steps: 350 
+
+Speed Test Status: 
+Average Time: 0.02 
+Average FPS: 47.92 
+Total Steps: 400 
+
+smelt/iron_ingot 19961107 (False, 400, '', '')

@@ -1,0 +1,36 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+Traceback (most recent call last):
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/phase1_jarvis_gate.py", line 198, in <module>
+    main()
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/phase1_jarvis_gate.py", line 191, in main
+    result = episode(args, seed)
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/phase1_jarvis_gate.py", line 78, in official_episode
+    success, index = evaluate.evaluate(
+  File "/share/project/zhoubowen/zhy/zyf/code/JarvisVLA/jarvisvla/evaluate/evaluate.py", line 61, in evaluate
+    env =  MinecraftSim(
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/phase1_jarvis_gate.py", line 55, in create_sim
+    sim = minecraft_sim(*positional, **keywords)
+  File "/share/project/zhoubowen/zhy/zyf/code/MineStudio-muyao-72cdab3/minestudio/simulator/entry.py", line 109, in __init__
+    ).make()
+  File "/share/project/zhoubowen/zhy/zyf/code/MineStudio-muyao-72cdab3/minestudio/simulator/minerl/herobraine/env_spec.py", line 220, in make
+    module = importlib.import_module(entry_point.split(':')[0])
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/share/project/zhoubowen/zhy/zyf/code/MineStudio-muyao-72cdab3/minestudio/simulator/minerl/env/_singleagent.py", line 6, in <module>
+    from minestudio.simulator.minerl.env._multiagent import _MultiAgentEnv
+  File "/share/project/zhoubowen/zhy/zyf/code/MineStudio-muyao-72cdab3/minestudio/simulator/minerl/env/_multiagent.py", line 13, in <module>
+    import minestudio.simulator.minerl.env.database_manager as database_manager
+  File "/share/project/zhoubowen/zhy/zyf/code/MineStudio-muyao-72cdab3/minestudio/simulator/minerl/env/database_manager.py", line 16, in <module>
+    os.makedirs(DATABASE_DIR)
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/os.py", line 225, in makedirs
+    mkdir(name, mode)
+FileExistsError: [Errno 17] File exists: '/share/project/zhoubowen/zhy/zyf/code/MineStudio-muyao-72cdab3/minestudio/simulator/minerl/tmp/database'

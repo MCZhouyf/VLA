@@ -1,0 +1,30 @@
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting matplotlib==3.10.1
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/12/87/9472d4513ff83b7cd864311821793ab72234fa201ab77310ec1b585d27e2/matplotlib-3.10.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (8.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.6/8.6 MB 13.1 MB/s eta 0:00:00
+Collecting fonttools>=4.22.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/ee/56/151b5e81d20c63834f48ad37a0cbbbe2f9b248e38f8d10387f0cf5219244/fonttools-4.65.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.3/5.3 MB 9.8 MB/s eta 0:00:00
+Collecting python-dateutil>=2.7
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/5a/17/cebee01d1c0c1441174cf0456ddc91b280d79acb65340c05e41d77866ee8/python_dateutil-3.0.0-py2.py3-none-any.whl (94 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 94.7/94.7 kB 1.1 MB/s eta 0:00:00
+Collecting kiwisolver>=1.3.1
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/f1/0e/9f394d693be549fa3fab62498c2778294595991047adc3dcf10aa99b91c0/kiwisolver-1.5.1-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 6.0 MB/s eta 0:00:00
+Requirement already satisfied: pillow>=8 in ./envs/mcvla/lib/python3.10/site-packages (from matplotlib==3.10.1) (12.3.0)
+Requirement already satisfied: packaging>=20.0 in ./envs/mcvla/lib/python3.10/site-packages (from matplotlib==3.10.1) (26.3)
+Collecting contourpy>=1.0.1
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/32/5c/1ee32d1c7956923202f00cf8d2a14a62ed7517bdc0ee1e55301227fc273c/contourpy-1.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (325 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 325.0/325.0 kB 3.0 MB/s eta 0:00:00
+Collecting cycler>=0.10
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/e7/05/c19819d5e3d95294a6f5947fb9b9629efb316b96de511b418c53d245aae6/cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Requirement already satisfied: numpy>=1.23 in ./envs/mcvla/lib/python3.10/site-packages (from matplotlib==3.10.1) (1.26.4)
+Collecting pyparsing>=2.3.1
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/38/bb/d215ee7c73b61497b28a5503f9f53523f294fcc936762b7caf90e0c1c2b5/pyparsing-3.3.3-py3-none-any.whl (126 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 126.4/126.4 kB 1.3 MB/s eta 0:00:00
+Collecting tzdata
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/0a/66/9a06c2227fedfd4919f0eaaa8b94377d9730882a7e4f95823c9a331ab5e1/tzdata-2026.6-py2.py3-none-any.whl (348 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 348.2/348.2 kB 3.5 MB/s eta 0:00:00
+Requirement already satisfied: six>=1.6 in ./envs/mcvla/lib/python3.10/site-packages (from python-dateutil>=2.7->matplotlib==3.10.1) (1.17.0)
+Installing collected packages: tzdata, pyparsing, kiwisolver, fonttools, cycler, contourpy, python-dateutil, matplotlib
+Successfully installed contourpy-1.3.2 cycler-0.12.1 fonttools-4.65.0 kiwisolver-1.5.1 matplotlib-3.10.1 pyparsing-3.3.3 python-dateutil-3.0.0 tzdata-2026.6

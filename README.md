@@ -1,11 +1,12 @@
-# MineMem 阶段 0 备份
+# MineMem 阶段 0 与阶段 1 备份
 
-本仓库保存 MineMem 阶段 0 的复现代码和实验记录。数据源为 BAAI 项目目录 `/share/project/zhoubowen/zhy/zyf`。
+本仓库保存 MineMem 阶段 0 与阶段 1 的复现代码和实验记录。数据源为 BAAI 项目目录 `/share/project/zhoubowen/zhy/zyf`。
 
 | 路径 | 内容 |
 | --- | --- |
 | [code/minemem](code/minemem) 和 [env.sh](env.sh) | 环境预检、权重下载校验、GPU 监控、随机试跑、并发吞吐和 MCU 闭环的脚本与配置 |
 | [results](results) | 预检与 GPU 采样、三轮随机试跑、六档 CPU 并发、两次单卡闭环、checkpoint 验证、逐步数据、失败与成功日志、[阶段 0 报告](results/REPORT_phase0.md) |
+| [阶段 1 报告](results/REPORT_phase1.md) | JARVIS-VLA 门槛、T1 教师验收、种子冻结、双卡四实例容量和复跑记录 |
 | [logs](logs) | Minecraft 进程原始日志 |
 | [BACKUP_MANIFEST.csv](BACKUP_MANIFEST.csv) | 文件大小及 SHA-256 |
 
@@ -76,3 +77,85 @@ export GPU_IDS=6,7 CUDA_VISIBLE_DEVICES=6,7 MINEMEM_PROXY=
 cd "$WORK"
 nohup bash code/minemem/phase0.sh watch </dev/null >>results/phase0-gpu-watch.log 2>&1 &
 ```
+
+## MineMem 阶段 1
+
+阶段 1 先验证 JARVIS-VLA 的公开任务复现和 5 格导航，再进入 T1 评测。T1 教师用 CPU 运行，可和这组检查并行。以下命令从 BAAI 项目目录执行，沿用阶段 0 的引擎、Conda 环境和权重。[阶段 1 验收报告](results/REPORT_phase1.md)
+
+```bash
+export WORK=/share/project/zhoubowen/zhy/zyf
+export GPU_IDS=6,7 MINEMEM_PROXY=
+cd "$WORK"
+source env.sh
+export CUDA_VISIBLE_DEVICES=
+envs/mcvla/bin/python -m venv --system-site-packages envs/mcvla-phase1-vllm
+envs/mcvla-phase1-vllm/bin/python -m pip install \
+  'vllm==0.7.3' 'torch==2.5.1' 'transformers==4.49.0' 'matplotlib==3.10.1'
+```
+
+公开 GUI 检查在 `$WORK/code/MineStudio-muyao-72cdab3` 使用 CraftJarvis MineStudio 的固定修订 `72cdab3c6cb5db829cb00f48507a91da37cea3ce`。从官方源码归档下载并校验 SHA-256 `d3534b02b65f9e016cbd0a707bfdbb080d9f1c63f30c0ffa733fee16cdd98cfb`，再以 `tar --strip-components=1` 解包。该分支支持官方评测脚本的装备干扰配置。T1 和 5 格导航使用阶段 0 的 MineStudio 版本。[官方源码归档](https://codeload.github.com/CraftJarvis/MineStudio/tar.gz/72cdab3c6cb5db829cb00f48507a91da37cea3ce)
+
+```bash
+patch -p1 -d "$WORK/code/MineStudio-muyao-72cdab3" \
+  <code/minemem/minestudio_muyao_runtime.patch
+```
+
+```bash
+export PYTHONPATH="$WORK/code/JarvisVLA"
+envs/mcvla/bin/python code/minemem/audit_jarvis_actions.py results/phase1_jarvis_phase0_actions.csv \
+  results/phase0-mcu-JjgkiRLZ/steps.csv results/phase0-mcu-gIMHeiv5/steps.csv
+
+gate="$(mktemp -d "$WORK/results/phase1-jarvis-gate-XXXXXXXX")"
+bash code/minemem/phase1_jarvis.sh serve 6 18606 >"$gate/server-6.log" 2>&1 &
+bash code/minemem/phase1_jarvis.sh serve 7 18607 >"$gate/server-7.log" 2>&1 &
+bash code/minemem/phase1_jarvis.sh batch "$gate" 18606 18607
+envs/mcvla/bin/python code/minemem/phase1_metrics.py gate "$gate/summary.csv" "$gate"/*/episodes.csv
+```
+
+两项有论文单任务结果的公开 GUI 配置各跑 10 个种子，选择合成工作台和炼制铁锭。5 格金柱导航采用同一公开 7B checkpoint 和官方聊天推理封装。每个门槛试例有独立模拟器运行目录。汇总脚本要求每项 10 个规定种子齐全，GUI 任务与论文值的差距在 15 个百分点以内，导航达到 6/10。
+
+```bash
+bash code/minemem/phase1_teacher.sh 1 1
+bash code/minemem/phase1_teacher.sh 32 50
+```
+
+教师脚本输出批次目录，每个工作进程复用一个模拟器。目录下的 CSV 和 JSON 记录世界种子、布景、返回起点、两侧绕障参考及实际步数。使用以下命令汇总四档验收结果。
+
+```bash
+teachers=/path/to/phase1-teacher-batch
+envs/mcvla/bin/python code/minemem/phase1_metrics.py teacher \
+  "$teachers/summary.csv" "$teachers"/worker-*/teacher.csv
+```
+
+完成 JARVIS-VLA 和教师门槛后，停止阶段 1 自己的单实例服务，再用 `phase1_jarvis.sh pair` 在两张卡上各启动两个 7B 服务。T1 运行器要求门槛的原始 CSV。正式档另外验证试点的全部逐回合记录。VPT-BC 附表使用 `CraftJarvis/MineStudio_VPT.bc_early_game_3x` 的固定修订 `e1f124c003fa322ae1e0a07465c090b421586b04`，目录为 `$WORK/models/MineStudio_VPT.bc_early_game_3x`。
+
+```bash
+HF_HUB_DISABLE_XET=1 envs/mcvla/bin/huggingface-cli download \
+  CraftJarvis/MineStudio_VPT.bc_early_game_3x \
+  --revision e1f124c003fa322ae1e0a07465c090b421586b04 \
+  --local-dir "$WORK/models/MineStudio_VPT.bc_early_game_3x"
+envs/mcvla/bin/python - <<'PY'
+from pathlib import Path
+from huggingface_hub import snapshot_download
+
+tokenizer = Path(snapshot_download("openai/clip-vit-base-patch16", revision="main",
+                                   allow_patterns=["*.json", "merges.txt"]))
+assert tokenizer.name == "57c216476eefef5ab752ec549e440a49ae4ae5f3"
+PY
+```
+
+```bash
+pilot="$(mktemp -d "$WORK/results/phase1-t1-pilot-XXXXXXXX")"
+bash code/minemem/phase1_jarvis.sh pair 6 18616 18626 "$pilot/gpu-6" &
+bash code/minemem/phase1_jarvis.sh pair 7 18617 18627 "$pilot/gpu-7" &
+# 四个服务健康检查就绪后，分给各工作进程一个端口。
+ports=(18616 18626 18617 18627)
+for shard in 0 1 2 3; do
+  bash code/minemem/phase1_jarvis.sh t1 "$pilot/worker-$shard" \
+    --base-url "http://127.0.0.1:${ports[shard]}/v1" \
+    --gate-results "$gate"/*/episodes.csv --teacher-dir "$teachers" \
+    --seeds-file "$WORK/results/phase1_t1_seeds.json" --shard "$shard" --end 5 &
+done
+```
+
+正式批次使用 `--end 30 --pilot-dir "$pilot"`。使用 `envs/mcvla-phase1-vllm/bin/python code/minemem/phase1_t1_report.py OUTPUT shard1.csv … --seeds SEED …` 汇总冻结的种子，生成主表、VPT 附表和 Wilson 95% 区间曲线。绘图时可设置 `MPLCONFIGDIR="$XDG_CACHE_HOME/matplotlib"`。

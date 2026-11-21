@@ -1,0 +1,90 @@
+{
+  "protocol": "t1_v2",
+  "scenario_seed": 2026112139,
+  "world_seed": 19961110,
+  "distance": 30,
+  "arena_origin": [
+    4098,
+    75,
+    -2246
+  ],
+  "native_spawn": {
+    "x": 4098.5,
+    "y": 69.0,
+    "z": -2245.5,
+    "pitch": 0.0,
+    "yaw": 0.0
+  },
+  "spawn": {
+    "x": 4100.5,
+    "y": 75.0,
+    "z": -2247.5,
+    "pitch": 0.0,
+    "yaw": 45.0
+  },
+  "landmark": [
+    4098.5,
+    -2245.5
+  ],
+  "distractors": [
+    {
+      "material": "iron_block",
+      "horizontal": [
+        4082.5,
+        -2235.5
+      ]
+    },
+    {
+      "material": "lapis_block",
+      "horizontal": [
+        4118.5,
+        -2241.5
+      ]
+    },
+    {
+      "material": "redstone_block",
+      "horizontal": [
+        4074.5,
+        -2234.5
+      ]
+    }
+  ],
+  "wall": [
+    4095,
+    75,
+    -2231,
+    4101,
+    77,
+    -2231
+  ],
+  "planned_endpoint": [
+    4098.5,
+    -2215.5
+  ],
+  "waypoints": [
+    [
+      4105.5,
+      -2230.5
+    ],
+    [
+      4104.5,
+      -2221.5
+    ],
+    [
+      4098.5,
+      -2215.5
+    ]
+  ],
+  "final_yaw": 0.0,
+  "outbound_dwell_steps": 40,
+  "final_facing_steps": 20,
+  "return_pose": {
+    "x": 4098.558792564955,
+    "y": 75.0,
+    "z": -2215.5587346104803,
+    "pitch": 0.0,
+    "yaw": -4.4741324e-07
+  },
+  "actual_distance": 29.94132311190244,
+  "path_len_out": 35.166016332053644
+}

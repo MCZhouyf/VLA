@@ -1,0 +1,39 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+Traceback (most recent call last):
+  File "/share/project/zhoubowen/zhy/zyf/code/MineStudio-muyao-72cdab3/minestudio/simulator/minerl/env/gpu_utils.py", line 8, in <module>
+    from cuda import cuda, cudart
+ImportError: cannot import name 'cuda' from 'cuda' (unknown location)
+
+Traceback (most recent call last):
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/phase1_jarvis_gate.py", line 198, in <module>
+    main()
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/phase1_jarvis_gate.py", line 191, in main
+    result = episode(args, seed)
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/phase1_jarvis_gate.py", line 78, in official_episode
+    success, index = evaluate.evaluate(
+  File "/share/project/zhoubowen/zhy/zyf/code/JarvisVLA/jarvisvla/evaluate/evaluate.py", line 70, in evaluate
+    obs, info = env.reset()
+  File "/share/project/zhoubowen/zhy/zyf/code/MineStudio-muyao-72cdab3/minestudio/simulator/entry.py", line 166, in reset
+    self.env.reset()
+  File "/share/project/zhoubowen/zhy/zyf/code/MineStudio-muyao-72cdab3/minestudio/simulator/minerl/env/_singleagent.py", line 22, in reset
+    multi_obs = super().reset()
+  File "/share/project/zhoubowen/zhy/zyf/code/MineStudio-muyao-72cdab3/minestudio/simulator/minerl/env/_multiagent.py", line 478, in reset
+    self._setup_instances()
+  File "/share/project/zhoubowen/zhy/zyf/code/MineStudio-muyao-72cdab3/minestudio/simulator/minerl/env/_multiagent.py", line 582, in _setup_instances
+    self.instances.extend([f.result() for f in instance_futures])
+  File "/share/project/zhoubowen/zhy/zyf/code/MineStudio-muyao-72cdab3/minestudio/simulator/minerl/env/_multiagent.py", line 582, in <listcomp>
+    self.instances.extend([f.result() for f in instance_futures])
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/share/project/zhoubowen/zhy/zyf/code/MineStudio-muyao-72cdab3/minestudio/simulator/minerl/env/_multiagent.py", line 843, in _get_new_instance
+    instance = InstanceManager.get_instance(os.getpid(), instance_id=instance_id)
+  File "/share/project/zhoubowen/zhy/zyf/code/MineStudio-muyao-72cdab3/minestudio/simulator/minerl/env/malmo.py", line 222, in get_instance
+    raise Exception("An error occured in gpu_utils.py.")
+Exception: An error occured in gpu_utils.py.

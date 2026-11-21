@@ -1,0 +1,50 @@
+--- a/minestudio/simulator/minerl/env/database_manager.py
++++ b/minestudio/simulator/minerl/env/database_manager.py
+@@ -10,10 +10,11 @@
+ import time
+ from rich.console import Console
+ 
+-DATABASE_DIR = str(Path(__file__).parent.parent / "tmp" / "database")
++from minestudio.utils.temp import get_mine_studio_dir
++
++DATABASE_DIR = str(Path(get_mine_studio_dir()) / "tmp" / "database")
+ RESETTING_EXPIRE = 5 * 60
+-if not os.path.exists(DATABASE_DIR):
+-    os.makedirs(DATABASE_DIR)
++os.makedirs(DATABASE_DIR, exist_ok=True)
+ 
+ if not os.environ.get("MINESTUDIO_DISABLE_DISKCACHE", False):
+     # Console().log("Set JARVISBASE_DISABLE_DISKCACHE = False")
+--- a/minestudio/simulator/minerl/env/gpu_utils.py
++++ b/minestudio/simulator/minerl/env/gpu_utils.py
+@@ -5,7 +5,6 @@
+ FilePath: /MineStudio/minestudio/simulator/minerl/env/gpu_utils.py
+ '''
+ # https://nvidia.github.io/cuda-python/
+-from cuda import cuda, cudart
+ import argparse
+ import os
+ 
+@@ -21,12 +20,14 @@
+     return wrapper
+ 
+ def getCudaDeviceCount():
++    from cuda import cudart
+     return call_and_check_error(cudart.cudaGetDeviceCount)()
+ 
+ def getPCIBusIdByCudaDeviceOrdinal(cuda_device_id):
+     '''
+     cuda_device_id 在 0 ~ getCudaDeviceCount() - 1 之间取值，受到 CUDA_VISIBLE_DEVICES 影响
+     '''
++    from cuda import cuda
+     device = call_and_check_error(cuda.cuDeviceGet)(cuda_device_id)
+     result = call_and_check_error(cuda.cuDeviceGetPCIBusId)(100, device)
+     return result.decode("ascii").split('\0')[0]
+@@ -36,6 +37,7 @@
+         print("cpu")
+         exit(0)
+     try:
++        from cuda import cuda
+         call_and_check_error(cuda.cuInit)(0)
+     except:
+         print("cpu")

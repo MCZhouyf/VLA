@@ -1,0 +1,14 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+Traceback (most recent call last):
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/phase1_jarvis_gate.py", line 172, in <module>
+    main()
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/phase1_jarvis_gate.py", line 165, in main
+    result = episode(args, seed)
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/phase1_jarvis_gate.py", line 57, in official_episode
+    success, index = evaluate.evaluate(
+  File "/share/project/zhoubowen/zhy/zyf/code/JarvisVLA/jarvisvla/evaluate/evaluate.py", line 48, in evaluate
+    InitInventoryCallback(cfg.init_inventory,
+TypeError: InitInventoryCallback.__init__() got an unexpected keyword argument 'inventory_distraction_level'

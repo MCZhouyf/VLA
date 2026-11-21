@@ -1,0 +1,68 @@
+INFO 11-21 23:40:41 __init__.py:207] Automatically detected platform cuda.
+INFO 11-21 23:40:41 api_server.py:912] vLLM API server version 0.7.3
+INFO 11-21 23:40:41 api_server.py:913] args: Namespace(host='127.0.0.1', port=18617, uvicorn_log_level='info', allow_credentials=False, allowed_origins=['*'], allowed_methods=['*'], allowed_headers=['*'], api_key=None, lora_modules=None, prompt_adapters=None, chat_template=None, chat_template_content_format='auto', response_role='assistant', ssl_keyfile=None, ssl_certfile=None, ssl_ca_certs=None, ssl_cert_reqs=0, root_path=None, middleware=[], return_tokens_as_token_ids=False, disable_frontend_multiprocessing=False, enable_request_id_headers=False, enable_auto_tool_choice=False, enable_reasoning=False, reasoning_parser=None, tool_call_parser=None, tool_parser_plugin='', model='/share/project/zhoubowen/zhy/zyf/models/JarvisVLA-Qwen2-VL-7B', task='auto', tokenizer=None, skip_tokenizer_init=False, revision=None, code_revision=None, tokenizer_revision=None, tokenizer_mode='auto', trust_remote_code=False, allowed_local_media_path=None, download_dir=None, load_format='auto', config_format=<ConfigFormat.AUTO: 'auto'>, dtype='bfloat16', kv_cache_dtype='auto', max_model_len=3072, guided_decoding_backend='xgrammar', logits_processor_pattern=None, model_impl='auto', distributed_executor_backend=None, pipeline_parallel_size=1, tensor_parallel_size=1, max_parallel_loading_workers=None, ray_workers_use_nsight=False, block_size=None, enable_prefix_caching=None, disable_sliding_window=False, use_v2_block_manager=True, num_lookahead_slots=0, seed=0, swap_space=4, cpu_offload_gb=0, gpu_memory_utilization=0.47, num_gpu_blocks_override=None, max_num_batched_tokens=None, max_num_partial_prefills=1, max_long_partial_prefills=1, long_prefill_token_threshold=0, max_num_seqs=1, max_logprobs=20, disable_log_stats=False, quantization=None, rope_scaling=None, rope_theta=None, hf_overrides=None, enforce_eager=True, max_seq_len_to_capture=8192, disable_custom_all_reduce=False, tokenizer_pool_size=0, tokenizer_pool_type='ray', tokenizer_pool_extra_config=None, limit_mm_per_prompt={'image': 3}, mm_processor_kwargs=None, disable_mm_preprocessor_cache=False, enable_lora=False, enable_lora_bias=False, max_loras=1, max_lora_rank=16, lora_extra_vocab_size=256, lora_dtype='auto', long_lora_scaling_factors=None, max_cpu_loras=None, fully_sharded_loras=False, enable_prompt_adapter=False, max_prompt_adapters=1, max_prompt_adapter_token=0, device='auto', num_scheduler_steps=1, multi_step_stream_outputs=True, scheduler_delay_factor=0.0, enable_chunked_prefill=None, speculative_model=None, speculative_model_quantization=None, num_speculative_tokens=None, speculative_disable_mqa_scorer=False, speculative_draft_tensor_parallel_size=None, speculative_max_model_len=None, speculative_disable_by_batch_size=None, ngram_prompt_lookup_max=None, ngram_prompt_lookup_min=None, spec_decoding_acceptance_method='rejection_sampler', typical_acceptance_sampler_posterior_threshold=None, typical_acceptance_sampler_posterior_alpha=None, disable_logprobs_during_spec_decoding=None, model_loader_extra_config=None, ignore_patterns=[], preemption_mode=None, served_model_name=None, qlora_adapter_name_or_path=None, otlp_traces_endpoint=None, collect_detailed_traces=None, disable_async_output_proc=False, scheduling_policy='fcfs', scheduler_cls='vllm.core.scheduler.Scheduler', override_neuron_config=None, override_pooler_config=None, compilation_config=None, kv_transfer_config=None, worker_cls='auto', generation_config=None, override_generation_config=None, enable_sleep_mode=False, calculate_kv_scales=False, additional_config=None, disable_log_requests=True, max_log_len=None, disable_fastapi_docs=False, enable_prompt_tokens_details=False)
+INFO 11-21 23:40:41 api_server.py:209] Started engine process with PID 972795
+WARNING 11-21 23:40:41 config.py:2448] Casting torch.float16 to torch.bfloat16.
+INFO 11-21 23:41:59 __init__.py:207] Automatically detected platform cuda.
+WARNING 11-21 23:41:59 config.py:2448] Casting torch.float16 to torch.bfloat16.
+INFO 11-21 23:42:09 config.py:549] This model supports multiple tasks: {'generate', 'classify', 'embed', 'score', 'reward'}. Defaulting to 'generate'.
+WARNING 11-21 23:42:09 cuda.py:95] To see benefits of async output processing, enable CUDA graph. Since, enforce-eager is enabled, async output processor cannot be used
+WARNING 11-21 23:42:09 config.py:685] Async output processing is not supported on the current platform type cuda.
+INFO 11-21 23:43:01 config.py:549] This model supports multiple tasks: {'generate', 'classify', 'reward', 'score', 'embed'}. Defaulting to 'generate'.
+WARNING 11-21 23:43:01 cuda.py:95] To see benefits of async output processing, enable CUDA graph. Since, enforce-eager is enabled, async output processor cannot be used
+WARNING 11-21 23:43:01 config.py:685] Async output processing is not supported on the current platform type cuda.
+INFO 11-21 23:43:01 llm_engine.py:234] Initializing a V0 LLM engine (v0.7.3) with config: model='/share/project/zhoubowen/zhy/zyf/models/JarvisVLA-Qwen2-VL-7B', speculative_config=None, tokenizer='/share/project/zhoubowen/zhy/zyf/models/JarvisVLA-Qwen2-VL-7B', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=3072, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto,  device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='xgrammar'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=0, served_model_name=/share/project/zhoubowen/zhy/zyf/models/JarvisVLA-Qwen2-VL-7B, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=False, chunked_prefill_enabled=False, use_async_output_proc=False, disable_mm_preprocessor_cache=False, mm_processor_kwargs=None, pooler_config=None, compilation_config={"splitting_ops":[],"compile_sizes":[],"cudagraph_capture_sizes":[],"max_capture_size":0}, use_cached_outputs=True, 
+INFO 11-21 23:43:12 cuda.py:229] Using Flash Attention backend.
+INFO 11-21 23:43:15 model_runner.py:1110] Starting to load model /share/project/zhoubowen/zhy/zyf/models/JarvisVLA-Qwen2-VL-7B...
+WARNING 11-21 23:43:15 vision.py:94] Current `vllm-flash-attn` has a bug inside vision module, so we use xformers backend instead. You can run `pip install flash-attn` to use flash-attention backend.
+INFO 11-21 23:43:15 config.py:3054] cudagraph sizes specified by model runner [] is overridden by config []
+Loading safetensors checkpoint shards:   0% Completed | 0/4 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:  25% Completed | 1/4 [00:04<00:14,  4.84s/it]
+Loading safetensors checkpoint shards:  50% Completed | 2/4 [00:07<00:06,  3.45s/it]
+Loading safetensors checkpoint shards:  75% Completed | 3/4 [00:11<00:03,  3.91s/it]
+Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:16<00:00,  4.41s/it]
+Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:16<00:00,  4.24s/it]
+
+INFO 11-21 23:43:34 model_runner.py:1115] Loading model weights took 15.5313 GB
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.48, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+WARNING 11-21 23:43:35 model_runner.py:1288] Computed max_num_seqs (min(1, 5120 // 8100)) to be less than 1. Setting it to the minimum value of 1.
+It looks like you are trying to rescale already rescaled images. If the input images have pixel values between 0 and 1, set `do_rescale=False` to avoid rescaling them again.
+WARNING 11-21 23:43:37 profiling.py:192] The context length (5120) of the model is too short to hold the multi-modal embeddings in the worst case (8100 tokens in total, out of which {'image': 6075, 'video': 2025} are reserved for multi-modal embeddings). This may cause certain multi-modal inputs to fail during inference, even when the input text is short. To avoid this, you should increase `max_model_len`, reduce `max_num_seqs`, and/or reduce `mm_counts`.
+INFO 11-21 23:43:38 worker.py:267] Memory profiling takes 3.92 seconds
+INFO 11-21 23:43:38 worker.py:267] the current vLLM instance can use total_gpu_memory (39.39GiB) x gpu_memory_utilization (0.47) = 18.52GiB
+INFO 11-21 23:43:38 worker.py:267] model weights take 15.53GiB; non_torch_memory takes 0.09GiB; PyTorch activation peak memory takes 0.69GiB; the rest of the memory reserved for KV Cache is 2.20GiB.
+INFO 11-21 23:43:38 executor_base.py:111] # cuda blocks: 2575, # CPU blocks: 4681
+INFO 11-21 23:43:38 executor_base.py:116] Maximum concurrency for 3072 tokens per request: 13.41x
+INFO 11-21 23:43:42 llm_engine.py:436] init engine (profile, create kv cache, warmup model) took 7.79 seconds
+INFO 11-21 23:43:42 api_server.py:958] Starting vLLM API server on http://127.0.0.1:18617
+INFO 11-21 23:43:42 launcher.py:23] Available routes are:
+INFO 11-21 23:43:42 launcher.py:31] Route: /openapi.json, Methods: GET, HEAD
+INFO 11-21 23:43:42 launcher.py:31] Route: /docs, Methods: GET, HEAD
+INFO 11-21 23:43:42 launcher.py:31] Route: /docs/oauth2-redirect, Methods: GET, HEAD
+INFO 11-21 23:43:42 launcher.py:31] Route: /redoc, Methods: GET, HEAD
+INFO:     Started server process [972542]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:44630 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34424 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33288 - "GET /v1/models HTTP/1.1" 200 OK
+INFO 11-21 23:48:25 chat_utils.py:332] Detected the chat template content format to be 'openai'. You can set `--chat-template-content-format` to override this.
+INFO 11-21 23:48:29 metrics.py:455] Avg prompt throughput: 142.4 tokens/s, Avg generation throughput: 0.1 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 2.4%, CPU KV cache usage: 0.0%.
+INFO:     127.0.0.1:50126 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50126 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50126 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50126 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50126 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50126 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50126 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50126 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50126 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO 11-21 23:48:34 metrics.py:455] Avg prompt throughput: 1737.9 tokens/s, Avg generation throughput: 15.9 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 2.4%, CPU KV cache usage: 0.0%.
+INFO:     127.0.0.1:50126 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO 11-21 23:48:44 metrics.py:455] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 1.0 tokens/s, Running: 0 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 0.0%, CPU KV cache usage: 0.0%.
+INFO 11-21 23:48:54 metrics.py:455] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 0.0%, CPU KV cache usage: 0.0%.
+INFO 11-21 23:50:01 launcher.py:62] Shutting down FastAPI HTTP server.
+[rank0]:[W1121 23:50:01.756961519 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.

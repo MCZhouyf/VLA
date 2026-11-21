@@ -1,0 +1,288 @@
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting vllm==0.7.3
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/8d/cf/9b775a1a1f5fe2f6c2d321396ad41b9849de2c76fa46d78e6294ea13be91/vllm-0.7.3-cp38-abi3-manylinux1_x86_64.whl (264.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 264.6/264.6 MB 10.8 MB/s eta 0:00:00
+Requirement already satisfied: torch==2.5.1 in ./envs/mcvla/lib/python3.10/site-packages (2.5.1)
+Requirement already satisfied: transformers==4.49.0 in ./envs/mcvla/lib/python3.10/site-packages (4.49.0)
+Collecting gguf==0.10.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/1b/e4/c5f9bd71840ae9afb7e2b7c285ba209f2ef5e9cd83885f8c596c551d3026/gguf-0.10.0-py3-none-any.whl (71 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.6/71.6 kB 450.5 kB/s eta 0:00:00
+Collecting fastapi[standard]!=0.113.*,!=0.114.0,>=0.107.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/10/19/5b9abfa67a29b862e509911eef40f4901f78aa48de32ad1f939b5c2b165e/fastapi-0.162.5-py3-none-any.whl (151 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.8/151.8 kB 1.3 MB/s eta 0:00:00
+Collecting partial-json-parser
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/42/32/658973117bf0fd82a24abbfb94fe73a5e86216e49342985e10acce54775a/partial_json_parser-0.2.1.1.post7-py3-none-any.whl (10 kB)
+Requirement already satisfied: tokenizers>=0.19.1 in ./envs/mcvla/lib/python3.10/site-packages (from vllm==0.7.3) (0.21.4)
+Requirement already satisfied: pydantic>=2.9 in ./envs/mcvla/lib/python3.10/site-packages (from vllm==0.7.3) (2.14.4)
+Requirement already satisfied: tqdm in ./envs/mcvla/lib/python3.10/site-packages (from vllm==0.7.3) (4.70.1)
+Collecting compressed-tensors==0.9.1
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/d0/6d/cfb16a141dfffc6721737cb5f26951c4e72eb338bace7d9fdfa880dfdda9/compressed_tensors-0.9.1-py3-none-any.whl (96 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.5/96.5 kB 1.3 MB/s eta 0:00:00
+Requirement already satisfied: torchvision==0.20.1 in ./envs/mcvla/lib/python3.10/site-packages (from vllm==0.7.3) (0.20.1)
+Collecting numba==0.60.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/79/58/cb4ac5b8f7ec64200460aef1fed88258fb872ceef504ab1f989d2ff0f684/numba-0.60.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (3.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.7/3.7 MB 7.7 MB/s eta 0:00:00
+Requirement already satisfied: typing_extensions>=4.10 in ./envs/mcvla/lib/python3.10/site-packages (from vllm==0.7.3) (4.16.0)
+Collecting blake3
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/16/c3/3d6c3af8849e4da111ca80c461e4da69b838e129eb7ff79dda0df25874c4/blake3-1.0.10-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (386 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 386.6/386.6 kB 2.6 MB/s eta 0:00:00
+Collecting prometheus-fastapi-instrumentator>=7.0.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/44/b9/91a2246e6cf01b7ccb14479803c8a50f9c258ae5c6a0f16ba3294820632b/prometheus_fastapi_instrumentator-8.1.0-py3-none-any.whl (19 kB)
+Collecting depyf==0.18.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/e7/d8/efc291d5c69a9905515055d23977643dd0d482ebfeb0dbabef1947ee75d8/depyf-0.18.0-py3-none-any.whl (38 kB)
+Collecting lark==1.2.2
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/2d/00/d90b10b962b4277f5e64a78b6609968859ff86889f5b898c1a778c06ec00/lark-1.2.2-py3-none-any.whl (111 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 111.0/111.0 kB 1.2 MB/s eta 0:00:00
+Collecting mistral_common[opencv]>=1.5.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/c0/78/2881bae14f5d79c6d4626439e74f1bc1591d0f10a9eb7eea5a408ecdb877/mistral_common-1.12.0-py3-none-any.whl (6.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 9.9 MB/s eta 0:00:00
+Collecting torchaudio==2.5.1
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/e3/2c/3db92d48e2e4a0bd7398ecb39fb731ad876c7cd6ce6c365630865654d253/torchaudio-2.5.1-cp310-cp310-manylinux1_x86_64.whl (3.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.4/3.4 MB 8.2 MB/s eta 0:00:00
+Collecting sentencepiece
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/14/06/e0d67a135e58a5999429553732bd0f74df5918047b02d012d1cf806419ba/sentencepiece-0.2.3-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (1.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 2.9 MB/s eta 0:00:00
+Collecting lm-format-enforcer<0.11,>=0.10.9
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/57/1c/7bb80fe2dff9a9c38b180571ca867f518eb9110f79d4b670ea124e153680/lm_format_enforcer-0.10.12-py3-none-any.whl (44 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.3/44.3 kB 516.4 kB/s eta 0:00:00
+Collecting outlines==0.1.11
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/13/b4/99ea4a122bef60e3fd6402d19665aff1f928e0daf8fac3044d0b73f72003/outlines-0.1.11-py3-none-any.whl (87 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.6/87.6 kB 853.4 kB/s eta 0:00:00
+Collecting ray[adag]==2.40.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/31/73/6763d7f87756816698fa5f841ba590a869e821a46c0a98d848055ea831bb/ray-2.40.0-cp310-cp310-manylinux2014_x86_64.whl (66.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.8/66.8 MB 28.8 MB/s eta 0:00:00
+Collecting py-cpuinfo
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/e0/a9/023730ba63db1e494a271cb018dcd361bd2c917ba7004c3e49d5daf795a2/py_cpuinfo-9.0.0-py3-none-any.whl (22 kB)
+Requirement already satisfied: pyyaml in ./envs/mcvla/lib/python3.10/site-packages (from vllm==0.7.3) (6.0.3)
+Collecting tiktoken>=0.6.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/af/c8/051e7b72a816ff50eb34a1c7c5b185cd2429ffdf59a497baea35b2b6b2dd/tiktoken-0.14.0-cp310-cp310-manylinux_2_28_x86_64.whl (1.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 6.5 MB/s eta 0:00:00
+Collecting xformers==0.0.28.post3
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/02/56/d1a86f2c4a5a80e1f4926eef1ba69d6eb77ae823d36da7860984ca0b3421/xformers-0.0.28.post3-cp310-cp310-manylinux_2_28_x86_64.whl (16.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.7/16.7 MB 44.6 MB/s eta 0:00:00
+Collecting prometheus_client>=0.18.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/eb/a3/b69efbf4143b5b9859b977770bbbabcc2796b702fa69dc40271e45cd5a56/prometheus_client-0.26.0-py3-none-any.whl (64 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.5/64.5 kB 683.3 kB/s eta 0:00:00
+Collecting openai>=1.52.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/e0/40/0475208a470f90a1d3e94b41382678b44f311c2ea2a317228531e2193567/openai-3.57.0-py3-none-any.whl (2.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.5/2.5 MB 2.8 MB/s eta 0:00:00
+Requirement already satisfied: pillow in ./envs/mcvla/lib/python3.10/site-packages (from vllm==0.7.3) (12.3.0)
+Requirement already satisfied: psutil in ./envs/mcvla/lib/python3.10/site-packages (from vllm==0.7.3) (7.2.2)
+Requirement already satisfied: einops in ./envs/mcvla/lib/python3.10/site-packages (from vllm==0.7.3) (0.8.2)
+Requirement already satisfied: cloudpickle in ./envs/mcvla/lib/python3.10/site-packages (from vllm==0.7.3) (3.1.3)
+Requirement already satisfied: aiohttp in ./envs/mcvla/lib/python3.10/site-packages (from vllm==0.7.3) (3.14.5)
+Collecting importlib_metadata
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/b3/55/ecca97ae19075f1fac62def77731e7f535e6c1fb8f92ff08160c5e6dade8/importlib_metadata-9.0.1-py3-none-any.whl (27 kB)
+Collecting msgspec
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/c6/46/01fe71c42b3342f00e2dd6c5a8837f5dc4d0e1596b4c74c054fb13075201/msgspec-0.22.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (227 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 227.8/227.8 kB 2.2 MB/s eta 0:00:00
+Requirement already satisfied: numpy<2.0.0 in ./envs/mcvla/lib/python3.10/site-packages (from vllm==0.7.3) (1.26.4)
+Collecting pyzmq
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/3b/1d/065528d635023614fb69d6d1608f61661e649b21c72ffcc45a3aebbf560a/pyzmq-27.3.0-cp310-cp310-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (874 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 874.9/874.9 kB 5.7 MB/s eta 0:00:00
+Requirement already satisfied: protobuf in ./envs/mcvla/lib/python3.10/site-packages (from vllm==0.7.3) (7.36.2)
+Requirement already satisfied: filelock>=3.16.1 in ./envs/mcvla/lib/python3.10/site-packages (from vllm==0.7.3) (4.1.0)
+Requirement already satisfied: requests>=2.26.0 in ./envs/mcvla/lib/python3.10/site-packages (from vllm==0.7.3) (2.34.2)
+Collecting xgrammar==0.1.11
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/c8/00/90aa61e90dd375162784192d61c5cce813aa6d2803f0a588791d93fdfa05/xgrammar-0.1.11-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (396 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 396.2/396.2 kB 1.9 MB/s eta 0:00:00
+Requirement already satisfied: fsspec in ./envs/mcvla/lib/python3.10/site-packages (from torch==2.5.1) (2026.9.0)
+Requirement already satisfied: nvidia-cusparse-cu12==12.3.1.170 in ./envs/mcvla/lib/python3.10/site-packages (from torch==2.5.1) (12.3.1.170)
+Requirement already satisfied: nvidia-nccl-cu12==2.21.5 in ./envs/mcvla/lib/python3.10/site-packages (from torch==2.5.1) (2.21.5)
+Requirement already satisfied: nvidia-nvtx-cu12==12.4.127 in ./envs/mcvla/lib/python3.10/site-packages (from torch==2.5.1) (12.4.127)
+Requirement already satisfied: nvidia-cuda-cupti-cu12==12.4.127 in ./envs/mcvla/lib/python3.10/site-packages (from torch==2.5.1) (12.4.127)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.4.127 in ./envs/mcvla/lib/python3.10/site-packages (from torch==2.5.1) (12.4.127)
+Requirement already satisfied: nvidia-cusolver-cu12==11.6.1.9 in ./envs/mcvla/lib/python3.10/site-packages (from torch==2.5.1) (11.6.1.9)
+Requirement already satisfied: jinja2 in ./envs/mcvla/lib/python3.10/site-packages (from torch==2.5.1) (3.1.6)
+Requirement already satisfied: nvidia-cublas-cu12==12.4.5.8 in ./envs/mcvla/lib/python3.10/site-packages (from torch==2.5.1) (12.4.5.8)
+Requirement already satisfied: nvidia-nvjitlink-cu12==12.4.127 in ./envs/mcvla/lib/python3.10/site-packages (from torch==2.5.1) (12.4.127)
+Requirement already satisfied: sympy==1.13.1 in ./envs/mcvla/lib/python3.10/site-packages (from torch==2.5.1) (1.13.1)
+Requirement already satisfied: triton==3.1.0 in ./envs/mcvla/lib/python3.10/site-packages (from torch==2.5.1) (3.1.0)
+Requirement already satisfied: nvidia-cufft-cu12==11.2.1.3 in ./envs/mcvla/lib/python3.10/site-packages (from torch==2.5.1) (11.2.1.3)
+Requirement already satisfied: nvidia-cudnn-cu12==9.1.0.70 in ./envs/mcvla/lib/python3.10/site-packages (from torch==2.5.1) (9.1.0.70)
+Requirement already satisfied: networkx in ./envs/mcvla/lib/python3.10/site-packages (from torch==2.5.1) (2.2)
+Requirement already satisfied: nvidia-curand-cu12==10.3.5.147 in ./envs/mcvla/lib/python3.10/site-packages (from torch==2.5.1) (10.3.5.147)
+Requirement already satisfied: nvidia-cuda-runtime-cu12==12.4.127 in ./envs/mcvla/lib/python3.10/site-packages (from torch==2.5.1) (12.4.127)
+Requirement already satisfied: safetensors>=0.4.1 in ./envs/mcvla/lib/python3.10/site-packages (from transformers==4.49.0) (0.8.0)
+Requirement already satisfied: packaging>=20.0 in ./envs/mcvla/lib/python3.10/site-packages (from transformers==4.49.0) (26.3)
+Requirement already satisfied: huggingface-hub<1.0,>=0.26.0 in ./envs/mcvla/lib/python3.10/site-packages (from transformers==4.49.0) (0.28.1)
+Requirement already satisfied: regex!=2019.12.17 in ./envs/mcvla/lib/python3.10/site-packages (from transformers==4.49.0) (2026.9.29)
+Collecting dill
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/1e/77/dc8c558f7593132cf8fefec57c4f60c83b16941c574ac5f619abb3ae7933/dill-0.4.1-py3-none-any.whl (120 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 120.0/120.0 kB 1.3 MB/s eta 0:00:00
+Collecting astor
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/c3/88/97eef84f48fa04fbd6750e62dcceafba6c63c81b7ac1420856c8dcc0a3f9/astor-0.8.1-py2.py3-none-any.whl (27 kB)
+Collecting llvmlite<0.44,>=0.43.0dev0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/c6/21/2ffbab5714e72f2483207b4a1de79b2eecd9debbf666ff4e7067bcc5c134/llvmlite-0.43.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (43.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.9/43.9 MB 40.0 MB/s eta 0:00:00
+Collecting airportsdata
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/24/2e/cbf1b31fd5d069fb1d2c0f1142fde8bd515ad1a7d0272d05efff63c35eb4/airportsdata-20260315-py3-none-any.whl (935 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 935.4/935.4 kB 5.6 MB/s eta 0:00:00
+Collecting outlines_core==0.1.26
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/c9/c2/1d85bfeaee3a83327e0d162bee4bdc7d7889bea5998e44fcc66c924dc1fd/outlines_core-0.1.26-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (343 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 343.6/343.6 kB 3.4 MB/s eta 0:00:00
+Requirement already satisfied: diskcache in ./envs/mcvla/lib/python3.10/site-packages (from outlines==0.1.11->vllm==0.7.3) (5.6.3)
+Collecting pycountry
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/9c/42/7703bd45b62fecd44cd7d3495423097e2f7d28bc2e99e7c1af68892ab157/pycountry-26.2.16-py3-none-any.whl (8.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.0/8.0 MB 13.7 MB/s eta 0:00:00
+Collecting interegular
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/c4/01/72d6472f80651673716d1deda2a5bbb633e563ecf94f4479da5519d69d25/interegular-0.3.3-py37-none-any.whl (23 kB)
+Collecting nest_asyncio
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/a0/c4/c2971a3ba4c6103a3d10c4b0f24f461ddc027f0f09763220cf35ca1401b3/nest_asyncio-1.6.0-py3-none-any.whl (5.2 kB)
+Requirement already satisfied: referencing in ./envs/mcvla/lib/python3.10/site-packages (from outlines==0.1.11->vllm==0.7.3) (0.37.0)
+Requirement already satisfied: jsonschema in ./envs/mcvla/lib/python3.10/site-packages (from outlines==0.1.11->vllm==0.7.3) (4.26.0)
+Requirement already satisfied: click>=7.0 in ./envs/mcvla/lib/python3.10/site-packages (from ray[adag]==2.40.0->vllm==0.7.3) (8.5.1)
+Requirement already satisfied: aiosignal in ./envs/mcvla/lib/python3.10/site-packages (from ray[adag]==2.40.0->vllm==0.7.3) (1.4.0)
+Requirement already satisfied: msgpack<2.0.0,>=1.0.0 in ./envs/mcvla/lib/python3.10/site-packages (from ray[adag]==2.40.0->vllm==0.7.3) (1.2.4)
+Requirement already satisfied: frozenlist in ./envs/mcvla/lib/python3.10/site-packages (from ray[adag]==2.40.0->vllm==0.7.3) (1.8.0)
+Collecting cupy-cuda12x
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/9e/3a/2935f23741f80a0ea4dc381c58d2178d8b5c4b5a1047c9ecdfff493cefa5/cupy_cuda12x-14.2.0-cp310-cp310-manylinux2014_x86_64.whl (135.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 135.3/135.3 MB 16.5 MB/s eta 0:00:00
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in ./envs/mcvla/lib/python3.10/site-packages (from sympy==1.13.1->torch==2.5.1) (1.3.0)
+Collecting pybind11
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/33/fd/8762f7ee3e4e4be6d1d846cffb4916dd9bb02b2f800d3603718a0efe494c/pybind11-3.1.0-py3-none-any.whl (319 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 319.4/319.4 kB 3.1 MB/s eta 0:00:00
+Collecting pytest
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/51/39/1f5d8c8877a0fa327db959c19341d4be61660de1ab6b7391f9eb805bcd67/pytest-9.2.0-py3-none-any.whl (411 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 411.8/411.8 kB 4.0 MB/s eta 0:00:00
+Requirement already satisfied: typing-inspection>=0.4.2 in ./envs/mcvla/lib/python3.10/site-packages (from fastapi[standard]!=0.113.*,!=0.114.0,>=0.107.0->vllm==0.7.3) (0.4.5)
+Collecting annotated-doc>=0.0.2
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/cd/f5/3dd85d583e55be76cd02b1fc9bbec771b12d63124b01661d9535ccf8721f/annotated_doc-0.0.6-py3-none-any.whl (5.3 kB)
+Requirement already satisfied: opentelemetry-api>=1.44.0 in ./envs/mcvla/lib/python3.10/site-packages (from fastapi[standard]!=0.113.*,!=0.114.0,>=0.107.0->vllm==0.7.3) (1.45.2)
+Requirement already satisfied: anyio>=4.1.0 in ./envs/mcvla/lib/python3.10/site-packages (from fastapi[standard]!=0.113.*,!=0.114.0,>=0.107.0->vllm==0.7.3) (4.16.0)
+Collecting starlette>=0.46.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/4e/d6/1ec1b290f9e0fb067899b61e1d37a30c923068bad260b216dbe37a7d2967/starlette-1.7.0-py3-none-any.whl (78 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.0/79.0 kB 971.8 kB/s eta 0:00:00
+Collecting opentelemetry-exporter-otlp-proto-http>=1.44.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/32/65/f64d7d2450217e2989714e1dee15e19bf79a77a313387abac0cac77bc10e/opentelemetry_exporter_otlp_proto_http-1.45.2-py3-none-any.whl (22 kB)
+Collecting fastapi-cli[standard]>=0.0.32
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/68/07/7b9b4bccb46032067de7a4584aef096ee720dcc26ef56c4b09beb970d45c/fastapi_cli-0.0.33-py3-none-any.whl (14 kB)
+Collecting httpx2>=2.0.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/69/5a/469616aa8c2cbb0bb9dd67a3c18d07c01ab604cc0b236ee1c47d260c7f6e/httpx2-2.14.0-py3-none-any.whl (96 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.9/96.9 kB 1.2 MB/s eta 0:00:00
+Collecting email-validator>=2.0.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/b8/8b/99e715c59560afa0bf68f21ed16eec794d94293945f57934b70c5255d741/email_validator-2.4.0-py3-none-any.whl (36 kB)
+Collecting fastar>=0.9.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/14/14/0f7f70bb42f09f95fbe17baf88f5a0edfbf15bb6d0aeac3169adab279da8/fastar-0.12.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (811 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 811.5/811.5 kB 5.0 MB/s eta 0:00:00
+Collecting pydantic-extra-types>=2.0.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/17/c1/3226e6d7f5a4f736f38ac11a6fbb262d701889802595cdb0f53a885ac2e0/pydantic_extra_types-2.11.1-py3-none-any.whl (79 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.5/79.5 kB 1.3 MB/s eta 0:00:00
+Requirement already satisfied: opentelemetry-sdk>=1.44.0 in ./envs/mcvla/lib/python3.10/site-packages (from fastapi[standard]!=0.113.*,!=0.114.0,>=0.107.0->vllm==0.7.3) (1.45.2)
+Collecting pydantic-settings>=2.0.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/30/a4/2bffa9f8e804325a09867f0e9d30795c80ea9f8d62560bd1b6ad6220eb2f/pydantic_settings-2.15.0-py3-none-any.whl (69 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.4/69.4 kB 869.2 kB/s eta 0:00:00
+Collecting uvicorn[standard]>=0.12.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/38/0c/b54a4fdd7f90a3af8b02ebc9ce6712c2c208b7926a2f7bad95c33ebbe943/uvicorn-0.54.0-py3-none-any.whl (87 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.4/87.4 kB 1.2 MB/s eta 0:00:00
+Collecting python-multipart>=0.0.18
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/e1/04/e8135ebd1ad02c56ec633277529b2602ff99ff634be76cdba5744cf554fd/python_multipart-0.0.32-py3-none-any.whl (30 kB)
+Requirement already satisfied: httpx<1.0.0,>=0.23.0 in ./envs/mcvla/lib/python3.10/site-packages (from fastapi[standard]!=0.113.*,!=0.114.0,>=0.107.0->vllm==0.7.3) (0.28.1)
+Requirement already satisfied: MarkupSafe>=2.0 in ./envs/mcvla/lib/python3.10/site-packages (from jinja2->torch==2.5.1) (3.0.4)
+Requirement already satisfied: opencv-python-headless>=4.0.0 in ./envs/mcvla/lib/python3.10/site-packages (from mistral_common[opencv]>=1.5.0->vllm==0.7.3) (4.8.0.74)
+Requirement already satisfied: sniffio in ./envs/mcvla/lib/python3.10/site-packages (from openai>=1.52.0->vllm==0.7.3) (1.3.1)
+Collecting jiter<1,>=0.16.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/21/d4/88f08cf7189c3070a029a7ab3f22334f138c8664d731f574f6034928bed6/jiter-0.18.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (337 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 337.2/337.2 kB 2.1 MB/s eta 0:00:00
+Requirement already satisfied: pydantic-core==2.50.5 in ./envs/mcvla/lib/python3.10/site-packages (from pydantic>=2.9->vllm==0.7.3) (2.50.5)
+Requirement already satisfied: annotated-types>=0.6.0 in ./envs/mcvla/lib/python3.10/site-packages (from pydantic>=2.9->vllm==0.7.3) (0.8.0)
+Requirement already satisfied: certifi>=2023.5.7 in ./envs/mcvla/lib/python3.10/site-packages (from requests>=2.26.0->vllm==0.7.3) (2026.10.23)
+Requirement already satisfied: charset_normalizer<4,>=2 in ./envs/mcvla/lib/python3.10/site-packages (from requests>=2.26.0->vllm==0.7.3) (3.5.2)
+Requirement already satisfied: idna<4,>=2.5 in ./envs/mcvla/lib/python3.10/site-packages (from requests>=2.26.0->vllm==0.7.3) (3.20)
+Requirement already satisfied: urllib3<3,>=1.26 in ./envs/mcvla/lib/python3.10/site-packages (from requests>=2.26.0->vllm==0.7.3) (2.8.0)
+Requirement already satisfied: propcache>=0.2.0 in ./envs/mcvla/lib/python3.10/site-packages (from aiohttp->vllm==0.7.3) (0.5.4)
+Requirement already satisfied: multidict<8.0,>=4.5 in ./envs/mcvla/lib/python3.10/site-packages (from aiohttp->vllm==0.7.3) (7.1.0)
+Requirement already satisfied: attrs>=17.3.0 in ./envs/mcvla/lib/python3.10/site-packages (from aiohttp->vllm==0.7.3) (26.1.0)
+Requirement already satisfied: yarl<2.0,>=1.25.1 in ./envs/mcvla/lib/python3.10/site-packages (from aiohttp->vllm==0.7.3) (1.25.1)
+Requirement already satisfied: aiohappyeyeballs>=2.5.0 in ./envs/mcvla/lib/python3.10/site-packages (from aiohttp->vllm==0.7.3) (2.7.1)
+Requirement already satisfied: async-timeout<6.0,>=4.0 in ./envs/mcvla/lib/python3.10/site-packages (from aiohttp->vllm==0.7.3) (5.0.1)
+Collecting zipp>=3.20
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/b8/44/7bd2007260da11cccca29ba2d4c345f1287aa663db38ee7cefeabf6386a5/zipp-4.1.2-py3-none-any.whl (10 kB)
+Requirement already satisfied: decorator>=4.3.0 in ./envs/mcvla/lib/python3.10/site-packages (from networkx->torch==2.5.1) (5.3.1)
+Requirement already satisfied: exceptiongroup>=1.0.2 in ./envs/mcvla/lib/python3.10/site-packages (from anyio>=4.1.0->fastapi[standard]!=0.113.*,!=0.114.0,>=0.107.0->vllm==0.7.3) (1.3.2)
+Collecting dnspython>=2.0.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/ba/5a/18ad964b0086c6e62e2e7500f7edc89e3faa45033c71c1893d34eed2b2de/dnspython-2.8.0-py3-none-any.whl (331 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 331.1/331.1 kB 3.2 MB/s eta 0:00:00
+Collecting typer>=0.26.1
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/05/ff/51969745f31cea6bcd12151e668febcf979656316e67a7755942267c1273/typer-0.29.1-py3-none-any.whl (121 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 121.1/121.1 kB 1.0 MB/s eta 0:00:00
+Collecting tomli>=2.0.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/60/3f/3e3f8fd0919249b0200c80fbc4f9a1e70be19f9883da71dfb7f8b9ab8aca/tomli-2.5.0-py3-none-any.whl (14 kB)
+Collecting rich-toolkit>=0.14.8
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/79/fc/7c296a563a893b0a23a73923ce27965ae15f658dcb58c0bcdd463e1671a2/rich_toolkit-0.20.6-py3-none-any.whl (39 kB)
+Collecting fastapi-cloud-cli>=0.1.1
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/17/0c/d1f01df6de9c3b6647aaf0042d3ab5d02a577858adaff775c6e26add15e4/fastapi_cloud_cli-0.28.0-py3-none-any.whl (109 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 109.9/109.9 kB 1.1 MB/s eta 0:00:00
+Requirement already satisfied: httpcore==1.* in ./envs/mcvla/lib/python3.10/site-packages (from httpx<1.0.0,>=0.23.0->fastapi[standard]!=0.113.*,!=0.114.0,>=0.107.0->vllm==0.7.3) (1.0.9)
+Requirement already satisfied: h11>=0.16 in ./envs/mcvla/lib/python3.10/site-packages (from httpcore==1.*->httpx<1.0.0,>=0.23.0->fastapi[standard]!=0.113.*,!=0.114.0,>=0.107.0->vllm==0.7.3) (0.16.0)
+Collecting httpcore2==2.14.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/02/06/a8d6a8f90d11b76d9086242b6bb0ee4b503473bfc8be34c2d5b067275c22/httpcore2-2.14.0-py3-none-any.whl (84 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 84.3/84.3 kB 899.5 kB/s eta 0:00:00
+Collecting truststore>=0.10
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/51/e9/3a7820be2bb0fe53b6bc9c3be26d3d1158004e4c3ab953aa6840b955b1e9/truststore-0.10.5-py3-none-any.whl (19 kB)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in ./envs/mcvla/lib/python3.10/site-packages (from jsonschema->outlines==0.1.11->vllm==0.7.3) (2025.9.1)
+Requirement already satisfied: rpds-py>=0.25.0 in ./envs/mcvla/lib/python3.10/site-packages (from jsonschema->outlines==0.1.11->vllm==0.7.3) (0.30.0)
+Collecting opentelemetry-exporter-otlp-common==0.66b2
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/a8/47/b3049e30b339c82e3c7ec1fc692185a5d5a3ba65a94c570bb39b2c0b8424/opentelemetry_exporter_otlp_common-0.66b2-py3-none-any.whl (12 kB)
+Collecting opentelemetry-exporter-http-transport[requests]==0.66b2
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/a1/b2/c622a101f31c0e6670b82f4264c4e77c161bce415bc6fc158fda0b82e218/opentelemetry_exporter_http_transport-0.66b2-py3-none-any.whl (12 kB)
+Requirement already satisfied: opentelemetry-proto==1.45.2 in ./envs/mcvla/lib/python3.10/site-packages (from opentelemetry-exporter-otlp-proto-http>=1.44.0->fastapi[standard]!=0.113.*,!=0.114.0,>=0.107.0->vllm==0.7.3) (1.45.2)
+Collecting googleapis-common-protos~=1.52
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/05/6d/78dc67a9e779e594b49bf62604034d3a6aa428a55afc729cafda4b7333e1/googleapis_common_protos-1.76.0-py3-none-any.whl (307 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 307.7/307.7 kB 1.9 MB/s eta 0:00:00
+Requirement already satisfied: opentelemetry-exporter-otlp-proto-common==1.45.2 in ./envs/mcvla/lib/python3.10/site-packages (from opentelemetry-exporter-otlp-proto-http>=1.44.0->fastapi[standard]!=0.113.*,!=0.114.0,>=0.107.0->vllm==0.7.3) (1.45.2)
+Requirement already satisfied: opentelemetry-semantic-conventions==0.66b2 in ./envs/mcvla/lib/python3.10/site-packages (from opentelemetry-sdk>=1.44.0->fastapi[standard]!=0.113.*,!=0.114.0,>=0.107.0->vllm==0.7.3) (0.66b2)
+Collecting python-dotenv>=0.21.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/60/d1/38f3a3405989a89ac18390803e70c6ad7c7760da4f9b83cbeca0c44a0c72/python_dotenv-1.2.4-py3-none-any.whl (23 kB)
+Collecting watchfiles>=0.20
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/8a/cf/e3ad894ed5909a7c44b0707e89bc25d19a3d78b3a7aec846119443b6ae56/watchfiles-1.3.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (458 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 458.4/458.4 kB 2.1 MB/s eta 0:00:00
+Collecting websockets>=13.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/f3/18/a17e2f0cde02dc10154c808deed7e1d8528afff93612f70d3f0a5b19b011/websockets-16.1.1-cp310-cp310-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (186 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 186.0/186.0 kB 1.8 MB/s eta 0:00:00
+Collecting uvloop>=0.15.1
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/76/4a/488d9ee6eb87899273d84ebeaf7023c551ff8f8d44f7e7c0f78d06b6da25/uvloop-0.23.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (3.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.9/3.9 MB 7.3 MB/s eta 0:00:00
+Collecting httptools>=0.8.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/a6/16/b0400f48db7a4d4cdfa9301331d55cfd1c872c7f7b593d8be0897a517e55/httptools-0.9.0-cp310-cp310-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (487 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 487.0/487.0 kB 4.3 MB/s eta 0:00:00
+Collecting cupy-cuda12x
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/7c/79/6a4e1562b3b6b18e93365955adfd4f66a84b60bdacf559becc0e3e0f1012/cupy_cuda12x-14.1.1-cp310-cp310-manylinux2014_x86_64.whl (132.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 132.7/132.7 MB 20.8 MB/s eta 0:00:00
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/7c/84/51458f250f92047e7673d6df938d571229d24e22ca66706e56efbac6f207/cupy_cuda12x-14.1.0-cp310-cp310-manylinux2014_x86_64.whl (132.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 132.7/132.7 MB 17.8 MB/s eta 0:00:00
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/c6/9c/21360d0db48912d06724c4f4c37fb60aa1146048aa35b79fd610adc71e23/cupy_cuda12x-14.0.1-cp310-cp310-manylinux2014_x86_64.whl (133.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.7/133.7 MB 15.8 MB/s eta 0:00:00
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/56/4d/4e6f4f827c79b73cad58658b96b39f557ba13575c066339e5b23b966bb83/cupy_cuda12x-14.0.0-cp310-cp310-manylinux2014_x86_64.whl (133.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.7/133.7 MB 7.2 MB/s eta 0:00:00
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/53/2b/8064d94a6ab6b5c4e643d8535ab6af6cabe5455765540931f0ef60a0bc3b/cupy_cuda12x-13.6.0-cp310-cp310-manylinux2014_x86_64.whl (112.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 112.2/112.2 MB 25.6 MB/s eta 0:00:00
+Collecting fastrlock>=0.5
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/86/1a/4c4f8312f27cbbe21bc477254068d54cedd2f5519044297df183610fb49d/fastrlock-0.8.4-cp310-cp310-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (63 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.1/63.1 kB 677.7 kB/s eta 0:00:00
+Requirement already satisfied: pygments>=2.15 in ./envs/mcvla/lib/python3.10/site-packages (from pytest->xgrammar==0.1.11->vllm==0.7.3) (2.21.0)
+Collecting pluggy<2,>=1.6
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/40/9e/2b38731e0fc536806f16490e1a12d7f0dc2a1235aa8cc07bcc75416a7daa/pluggy-1.7.0-py3-none-any.whl (27 kB)
+Collecting iniconfig>=2
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/56/43/4ca9e49d27a1fcf6bece6f6aec0ea46bb9112489b93d4b688fb415457bdb/iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+Collecting agent-detector>=1.1.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/72/15/504337e302d070bd2ff2f39418bb17d2ad73c662c403a4f37cb4e5c5b237/agent_detector-2.0.0-py3-none-any.whl (9.4 kB)
+Collecting rignore>=0.5.1
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/83/ad/911b69cbdcd4fd2a53822bafe6108569386ea67a4df2ca75192b0e34a695/rignore-0.8.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (933 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 933.9/933.9 kB 5.3 MB/s eta 0:00:00
+Collecting sentry-sdk>=2.20.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/ec/ee/fbfe67386d64a7218013c8346b88b89d72f279b4ddb434ed5e94bea3d389/sentry_sdk-2.75.0-py3-none-any.whl (555 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 555.2/555.2 kB 3.4 MB/s eta 0:00:00
+Collecting detect-installer>=0.1.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/61/fe/a245e1d579e7abf47208f7c1ce5684caa2cd956ede5ff646d66d0299d9e8/detect_installer-0.2.1-py3-none-any.whl (5.4 kB)
+Requirement already satisfied: rich>=13.7.1 in ./envs/mcvla/lib/python3.10/site-packages (from rich-toolkit>=0.14.8->fastapi-cli[standard]>=0.0.32->fastapi[standard]!=0.113.*,!=0.114.0,>=0.107.0->vllm==0.7.3) (15.0.0)
+Collecting shellingham>=1.3.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/e0/f9/0595336914c5619e5f28a1fb793285925a8cd4b432c9da0a987836c7f822/shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+Requirement already satisfied: markdown-it-py>=2.2.0 in ./envs/mcvla/lib/python3.10/site-packages (from rich>=13.7.1->rich-toolkit>=0.14.8->fastapi-cli[standard]>=0.0.32->fastapi[standard]!=0.113.*,!=0.114.0,>=0.107.0->vllm==0.7.3) (4.3.0)
+Requirement already satisfied: mdurl~=0.1 in ./envs/mcvla/lib/python3.10/site-packages (from markdown-it-py>=2.2.0->rich>=13.7.1->rich-toolkit>=0.14.8->fastapi-cli[standard]>=0.0.32->fastapi[standard]!=0.113.*,!=0.114.0,>=0.107.0->vllm==0.7.3) (0.1.2)
+Installing collected packages: py-cpuinfo, fastrlock, zipp, websockets, uvloop, uvicorn, truststore, tomli, shellingham, sentry-sdk, sentencepiece, rignore, pyzmq, python-multipart, python-dotenv, pycountry, pybind11, prometheus_client, pluggy, partial-json-parser, nest_asyncio, msgspec, llvmlite, lark, jiter, interegular, iniconfig, httptools, googleapis-common-protos, gguf, fastar, dnspython, dill, detect-installer, cupy-cuda12x, blake3, astor, annotated-doc, airportsdata, agent-detector, tiktoken, pytest, opentelemetry-exporter-http-transport, numba, importlib_metadata, httpcore2, email-validator, depyf, watchfiles, typer, starlette, rich-toolkit, pydantic-settings, pydantic-extra-types, lm-format-enforcer, httpx2, xformers, torchaudio, ray, prometheus-fastapi-instrumentator, outlines_core, opentelemetry-exporter-otlp-common, openai, fastapi, xgrammar, outlines, opentelemetry-exporter-otlp-proto-http, mistral_common, fastapi-cloud-cli, fastapi-cli, compressed-tensors, vllm
+  Attempting uninstall: ray
+    Found existing installation: ray 2.60.0
+    Not uninstalling ray at /share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/site-packages, outside environment /share/project/zhoubowen/zhy/zyf/envs/mcvla-phase1-vllm
+    Can't uninstall 'ray'. No files were found to uninstall.
+Successfully installed agent-detector-2.0.0 airportsdata-20260315 annotated-doc-0.0.6 astor-0.8.1 blake3-1.0.10 compressed-tensors-0.9.1 cupy-cuda12x-13.6.0 depyf-0.18.0 detect-installer-0.2.1 dill-0.4.1 dnspython-2.8.0 email-validator-2.4.0 fastapi-0.162.5 fastapi-cli-0.0.33 fastapi-cloud-cli-0.28.0 fastar-0.12.0 fastrlock-0.8.4 gguf-0.10.0 googleapis-common-protos-1.76.0 httpcore2-2.14.0 httptools-0.9.0 httpx2-2.14.0 importlib_metadata-9.0.1 iniconfig-2.3.1 interegular-0.3.3 jiter-0.18.0 lark-1.2.2 llvmlite-0.43.0 lm-format-enforcer-0.10.12 mistral_common-1.12.0 msgspec-0.22.0 nest_asyncio-1.6.0 numba-0.60.0 openai-3.57.0 opentelemetry-exporter-http-transport-0.66b2 opentelemetry-exporter-otlp-common-0.66b2 opentelemetry-exporter-otlp-proto-http-1.45.2 outlines-0.1.11 outlines_core-0.1.26 partial-json-parser-0.2.1.1.post7 pluggy-1.7.0 prometheus-fastapi-instrumentator-8.1.0 prometheus_client-0.26.0 py-cpuinfo-9.0.0 pybind11-3.1.0 pycountry-26.2.16 pydantic-extra-types-2.11.1 pydantic-settings-2.15.0 pytest-9.2.0 python-dotenv-1.2.4 python-multipart-0.0.32 pyzmq-27.3.0 ray-2.40.0 rich-toolkit-0.20.6 rignore-0.8.1 sentencepiece-0.2.3 sentry-sdk-2.75.0 shellingham-1.5.4 starlette-1.7.0 tiktoken-0.14.0 tomli-2.5.0 torchaudio-2.5.1 truststore-0.10.5 typer-0.29.1 uvicorn-0.54.0 uvloop-0.23.0 vllm-0.7.3 watchfiles-1.3.0 websockets-16.1.1 xformers-0.0.28.post3 xgrammar-0.1.11 zipp-4.1.2

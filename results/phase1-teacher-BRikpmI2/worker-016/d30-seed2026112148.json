@@ -1,0 +1,139 @@
+{
+  "protocol": "t1_v2",
+  "scenario_seed": 2026112148,
+  "world_seed": 19961119,
+  "distance": 30,
+  "arena_origin": [
+    -190,
+    70,
+    -1862
+  ],
+  "native_spawn": {
+    "x": -189.5,
+    "y": 64.0,
+    "z": -1861.5,
+    "pitch": 0.0,
+    "yaw": 0.0
+  },
+  "spawn": {
+    "x": -187.5,
+    "y": 70.0,
+    "z": -1863.5,
+    "pitch": 0.0,
+    "yaw": 45.0
+  },
+  "landmark": [
+    -189.5,
+    -1861.5
+  ],
+  "distractors": [
+    {
+      "material": "iron_block",
+      "horizontal": [
+        -213.5,
+        -1845.5
+      ]
+    },
+    {
+      "material": "lapis_block",
+      "horizontal": [
+        -200.5,
+        -1881.5
+      ]
+    }
+  ],
+  "wall": [
+    -205,
+    70,
+    -1865,
+    -205,
+    72,
+    -1859
+  ],
+  "planned_endpoint": [
+    -219.5,
+    -1861.5
+  ],
+  "waypoints": [
+    [
+      -195.5,
+      -1867.5
+    ],
+    [
+      -204.5,
+      -1869.5
+    ],
+    [
+      -219.5,
+      -1861.5
+    ]
+  ],
+  "final_yaw": 90.0,
+  "outbound_dwell_steps": 40,
+  "final_facing_steps": 20,
+  "return_pose": {
+    "x": -219.33277800478078,
+    "y": 70.0,
+    "z": -1861.59152321502,
+    "pitch": 0.0,
+    "yaw": 90.0
+  },
+  "actual_distance": 29.832918395313243,
+  "path_len_out": 34.955488995910684,
+  "teacher_targets": [
+    [
+      -206.0,
+      -1866.0
+    ],
+    [
+      -203.0,
+      -1866.0
+    ],
+    [
+      -189.5,
+      -1861.5
+    ]
+  ],
+  "teacher_route_attempts": [
+    {
+      "success": true,
+      "steps": 152,
+      "final_dist": 2.8230661926055984,
+      "targets": [
+        [
+          -206.0,
+          -1866.0
+        ],
+        [
+          -203.0,
+          -1866.0
+        ],
+        [
+          -189.5,
+          -1861.5
+        ]
+      ]
+    },
+    {
+      "success": true,
+      "steps": 152,
+      "final_dist": 2.874365557939236,
+      "targets": [
+        [
+          -206.0,
+          -1857.0
+        ],
+        [
+          -203.0,
+          -1857.0
+        ],
+        [
+          -189.5,
+          -1861.5
+        ]
+      ]
+    }
+  ],
+  "teacher_return_steps": 152,
+  "return_limit": 504
+}
