@@ -1,0 +1,34 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+[07:19:18] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[07:19:18] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+INFO: Starting Minecraft process with device: cpu
+ERROR:minestudio.simulator.minerl.env.malmo.instance.8c5d05:[07:19:43] [Render thread/WARN]: ERROR : Couldn't load Narrator library : Unable to load library 'fliteWrapper': Can't obtain InputStream for linux-x86-64/libfliteWrapper.so
+ERROR:minestudio.simulator.minerl.env.malmo.instance.8c5d05:[07:19:44] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: null
+ERROR:minestudio.simulator.minerl.env.malmo.instance.8c5d05:[07:20:52] [Worker-Main-6/ERROR]: Using missing texture, unable to load minecraft:optifine/ctm/default/empty.png : java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png
+ERROR:minestudio.simulator.minerl.env.malmo.instance.8c5d05:[07:20:58] [Render thread/ERROR]: Error starting SoundSystem. Turning off sounds & music
+ERROR:minestudio.simulator.minerl.env.malmo.instance.8c5d05:java.lang.IllegalStateException: Failed to open OpenAL device
+WARNING:minestudio.simulator.minerl.env.malmo.instance.8c5d05:[07:20:59] [Render thread/WARN]: [OptiFine] Missing CTM sprite: minecraft:optifine/ctm/default/empty
+WARNING:minestudio.simulator.minerl.env.malmo.instance.8c5d05:[07:21:02] [Render thread/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.8c5d05:[07:21:02] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.8c5d05:[07:21:02] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.8c5d05:[07:21:02] [Render thread/WARN]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.8c5d05:[07:21:02] [Render thread/WARN]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+WARNING:minestudio.simulator.minerl.env.malmo.instance.8c5d05:[07:21:29] [Render thread/WARN]: Failed to load texture: minecraft:optifine/ctm/default/empty.png
+ERROR:minestudio.simulator.minerl.env.malmo.instance.8c5d05:java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png
+(10, 2026112102, 19961105, 45, 2.865410084470731, 2.865410084470731, 19.84450751579329, 114.10089842886623, True, 52, 2.8658983559924733, False, 290, 9.077346578756513, '')
+(30, 2026112102, 19961105, 144, 2.9496168363657143, 2.9496168363657143, 35.821039607661085, 104.346673054566, False, 504, 15.800475185278787, False, 488, 29.00957445090852, '')
+(60, 2026112102, 19961105, 281, 2.870425317029052, 2.870425317029052, 64.0952645869556, 122.31336308989592, False, 774, 30.800001331535444, False, 762, 50.68706295795241, '')
+(100, 2026112102, 19961105, 469, 2.964575515470289, 2.964575515470289, 103.38779272341324, 158.42350792964226, False, 1138, 50.80009482449787, False, 1138, 36.80174451267279, '')
+(10, 2026112134, 19961105, 48, 2.94219459976172, 2.94219459976172, 17.679235878849624, 129.57173100140614, True, 53, 2.917553766552099, False, 296, 7.724630310133022, '')
+(30, 2026112134, 19961105, 146, 2.9580344770375144, 2.9580344770375144, 34.949693288142896, 111.78794903237569, False, 504, 15.800003794530884, False, 492, 27.97178104262161, '')
+(60, 2026112134, 19961105, 287, 2.8222957253090493, 2.8222957253090493, 63.66252915663362, 171.04522194846777, False, 774, 30.80000599571257, False, 774, 9.36043644242351, '')
+(100, 2026112134, 19961105, 467, 2.924657030403562, 2.924657030403562, 102.95685387603683, 140.42033773814376, False, 1140, 50.80002209957738, False, 1134, 63.731226494051995, '')

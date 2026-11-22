@@ -1,0 +1,16 @@
+[08:11:18] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[08:11:18] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+{
+  "index_sha256": "cee30a839b057c10183f16ee31d5e461fd24e7ccaeb44b92e756bab90a0d698d",
+  "frames": 5000,
+  "decoded_teacher_labels": 1977,
+  "labels_by_group": {
+    "10": 182,
+    "30": 309,
+    "60": 291,
+    "100": 461,
+    "visible": 734
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "protocol": "t1_v4",
+  "scenario_seed": 2026112140,
+  "world_seed": 19961111,
+  "distance": 100,
+  "arena_origin": [
+    2882,
+    76,
+    -2982
+  ],
+  "native_spawn": {
+    "x": 2882.5,
+    "y": 64.0,
+    "z": -2981.5,
+    "pitch": 0.0,
+    "yaw": 0.0
+  },
+  "spawn": {
+    "x": 2880.5,
+    "y": 76.0,
+    "z": -2983.5,
+    "pitch": 0.0,
+    "yaw": -45.0
+  },
+  "landmark": [
+    2882.5,
+    -2981.5
+  ],
+  "distractors": [
+    {
+      "material": "iron_block",
+      "horizontal": [
+        2898.5,
+        -2931.5
+      ]
+    },
+    {
+      "material": "lapis_block",
+      "horizontal": [
+        2862.5,
+        -2977.5
+      ]
+    },
+    {
+      "material": "redstone_block",
+      "horizontal": [
+        2906.5,
+        -2890.5
+      ]
+    }
+  ],
+  "wall": [
+    2879,
+    76,
+    -2932,
+    2885,
+    78,
+    -2932
+  ],
+  "planned_endpoint": [
+    2882.5,
+    -2881.5
+  ],
+  "waypoints": [
+    [
+      2876.5,
+      -2961.5
+    ],
+    [
+      2875.5,
+      -2931.5
+    ],
+    [
+      2882.5,
+      -2881.5
+    ]
+  ],
+  "final_yaw": 103.55311401046947,
+  "outbound_dwell_steps": 40,
+  "final_facing_steps": 20,
+  "return_pose": {
+    "x": 2882.5076685706085,
+    "y": 76.0,
+    "z": -2881.40692329908,
+    "pitch": 0.0,
+    "yaw": 103.553116
+  },
+  "actual_distance": 100.09307699468138,
+  "path_len_out": 102.95773287991325,
+  "sampled_heading_offset": 283.5575036919978,
+  "actual_heading_separation": 76.44249431847167,
+  "teacher_targets": [
+    [
+      2878.0,
+      -2930.0
+    ],
+    [
+      2878.0,
+      -2933.0
+    ],
+    [
+      2882.5,
+      -2981.5
+    ]
+  ],
+  "teacher_route_attempts": [
+    {
+      "success": true,
+      "steps": 461,
+      "final_dist": 2.9878975151468876,
+      "targets": [
+        [
+          2878.0,
+          -2930.0
+        ],
+        [
+          2878.0,
+          -2933.0
+        ],
+        [
+          2882.5,
+          -2981.5
+        ]
+      ]
+    },
+    {
+      "success": true,
+      "steps": 462,
+      "final_dist": 2.9864793168623067,
+      "targets": [
+        [
+          2887.0,
+          -2930.0
+        ],
+        [
+          2887.0,
+          -2933.0
+        ],
+        [
+          2882.5,
+          -2981.5
+        ]
+      ]
+    }
+  ],
+  "teacher_return_steps": 461,
+  "return_limit": 1122
+}

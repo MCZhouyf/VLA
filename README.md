@@ -1,12 +1,14 @@
-# MineMem 阶段 0 与阶段 1 备份
+# MineMem 复现与实验备份
 
-本仓库保存 MineMem 阶段 0 与阶段 1 的复现代码和实验记录。数据源为 BAAI 项目目录 `/share/project/zhoubowen/zhy/zyf`。
+本仓库保存 MineMem 阶段 0、阶段 1 和新版 T1／阶段 3 的复现代码与实验记录。数据源为 BAAI 项目目录 `/share/project/zhoubowen/zhy/zyf`。
 
 | 路径 | 内容 |
 | --- | --- |
 | [code/minemem](code/minemem) 和 [env.sh](env.sh) | 环境预检、权重下载校验、GPU 监控、随机试跑、并发吞吐和 MCU 闭环的脚本与配置 |
 | [results](results) | 预检与 GPU 采样、三轮随机试跑、六档 CPU 并发、两次单卡闭环、checkpoint 验证、逐步数据、失败与成功日志、[阶段 0 报告](results/REPORT_phase0.md) |
 | [阶段 1 报告](results/REPORT_phase1.md) | JARVIS-VLA 门槛、T1 教师验收、种子冻结、双卡四实例容量和复跑记录 |
+| [新版 T1 与阶段 3 报告](results/REPORT_phase3.md) | 随机终点、捷径复核、CPU 零样本试点、数据索引及三个 LoRA 变体 |
+| [新版轨迹元数据](results/data/t1-v4-L6ysa9jV/metadata) | 训练、验证与测试的 1,194 个原始回合的布景、位姿与动作 token |
 | [logs](logs) | Minecraft 进程原始日志 |
 | [BACKUP_MANIFEST.csv](BACKUP_MANIFEST.csv) | 文件大小及 SHA-256 |
 
@@ -80,7 +82,7 @@ nohup bash code/minemem/phase0.sh watch </dev/null >>results/phase0-gpu-watch.lo
 
 ## MineMem 阶段 1
 
-阶段 1 先验证 JARVIS-VLA 的公开任务复现和 5 格导航，再进入 T1 评测。T1 教师用 CPU 运行，可和这组检查并行。以下命令从 BAAI 项目目录执行，沿用阶段 0 的引擎、Conda 环境和权重。[阶段 1 验收报告](results/REPORT_phase1.md)
+以下命令复现阶段 1 的原始验收。2026-11-21 复核后的 T1 试点和主对比使用下一节的新版入口。T1 教师用 CPU 运行，可和这组检查并行。以下命令从 BAAI 项目目录执行，沿用阶段 0 的引擎、Conda 环境和权重。[阶段 1 验收报告](results/REPORT_phase1.md)
 
 ```bash
 export WORK=/share/project/zhoubowen/zhy/zyf
@@ -159,3 +161,65 @@ done
 ```
 
 正式批次使用 `--end 30 --pilot-dir "$pilot"`。使用 `envs/mcvla-phase1-vllm/bin/python code/minemem/phase1_t1_report.py OUTPUT shard1.csv … --seeds SEED …` 汇总冻结的种子，生成主表、VPT 附表和 Wilson 95% 区间曲线。绘图时可设置 `MPLCONFIGDIR="$XDG_CACHE_HOME/matplotlib"`。
+
+## T1 随机终点朝向和阶段 3
+
+2026-11-21 复核意见解除阶段 1 的旧模型门槛。公开权重用于零样本参照，主对比使用同一公开骨干和教师数据微调。新版将终点朝向均匀采样在金柱方位 ±60° 以外，保留停留 20 步、干扰柱和遮挡。[验证报告](results/REPORT_phase3.md)
+
+~~~bash
+export WORK=/share/project/zhoubowen/zhy/zyf GPU_IDS=6,7
+cd "$WORK"
+frozen="$WORK/results/phase1_t1_seeds.json"
+acceptance="$(mktemp -d "$WORK/results/t1-v4-acceptance-XXXXXXXX")"
+bash code/minemem/t1_cpu.sh acceptance "$acceptance" 32 --legacy \
+  "$WORK/results/phase1-teacher-Rk9bGTdG" \
+  "$WORK/results/phase1-teacher-terrain-retry-oHyVJIwe"
+envs/mcvla/bin/python code/minemem/t1_v4_report.py "$acceptance/summary.csv" "$acceptance"
+~~~
+
+四档新版教师各需完成 50 个种子并达到 95%。30、60、100 格的新版 180° 转身直走成功率分别须低于 10%。训练集覆盖四档各 25,000 帧和 5–10 格可见导航 20,000 帧。JPEG 归档保存在服务器的 data/。索引检查数据划分的场景种子、世界种子与轨迹去重。
+
+评分会先检查模拟器终止、角色存活及相邻控制步的位姿连续性，再计算水平距离。可用 acceptance 的 --recheck ARCHIVED_TEACHER 复用一批已完成的新版教师回合，并复跑两个朝向条件的捷径。
+
+~~~bash
+mkdir -p "$WORK/data"
+data="$(mktemp -d "$WORK/data/t1-v4-XXXXXXXX")"
+bash code/minemem/t1_cpu.sh collect "$data/train" 32 --split train
+envs/mcvla/bin/python code/minemem/t1_data_index.py "$data/index-smoke" \
+  "$data/train" --frozen "$frozen" --smoke
+for split in validation test; do
+  bash code/minemem/t1_cpu.sh collect "$data/$split" 4 --split "$split"
+done
+envs/mcvla/bin/python code/minemem/t1_data_index.py "$data/index-full" \
+  "$data/train" "$data/validation" "$data/test" --frozen "$frozen"
+~~~
+
+零样本试点为四档各五个冻结种子。随机、文本 STEVE-1 和 VPT-BC 使用 CPU。JARVIS-VLA 使用阶段 1 双卡四实例入口，给四个并发评测进程各分配一个端口。将下例对五个试点种子分别执行。
+
+~~~bash
+seed=2026112100
+bash code/minemem/t1_exec.sh pilot "$WORK/results/t1-cpu-$seed" \
+  --acceptance "$acceptance" --seeds-file "$frozen" --seed "$seed" \
+  --models random steve1 vpt
+bash code/minemem/t1_exec.sh pilot "$WORK/results/t1-jarvis-$seed" \
+  --acceptance "$acceptance" --seeds-file "$frozen" --seed "$seed" \
+  --models jarvis7b --base-url http://127.0.0.1:18716/v1
+envs/mcvla-phase1-vllm/bin/python code/minemem/t1_pilot.py report \
+  "$WORK/results/t1-v4-pilot-report" --seeds-file "$frozen" --inputs \
+  "$WORK"/results/t1-{cpu,jarvis}-*/cliff_T1.csv
+~~~
+
+阶段 3 环境继承 mcvla，使用 Transformers 4.49.0、Torch 2.5.1、PEFT 0.14.0 和可选的 bitsandbytes 0.45.3。冒烟训练使用 5,000 帧索引，记录优化步损失和动作解码，再用训练后的 LoRA 跑实机闭环。正式训练使用完整索引，三个变体采用同样的数据、步数、种子、量化选择和输入分辨率。默认 BF16，显存不足时通过 --quantized 启用 QLoRA。
+
+~~~bash
+source env.sh
+envs/mcvla/bin/python -m venv --system-site-packages envs/mcvla-phase3
+envs/mcvla-phase3/bin/python -m pip install peft==0.14.0 bitsandbytes==0.45.3
+smoke="$WORK/results/phase3-smoke-no-memory"
+bash code/minemem/t1_exec.sh train 6 --dataset "$data/index-smoke/dataset.jsonl" \
+  --output "$smoke" --variant no_memory --epochs 1 --budget-seconds 3600
+bash code/minemem/t1_exec.sh eval 6 "$WORK/results/phase3-smoke-closed-loop" \
+  --training-run "$smoke" --mode smoke
+~~~
+
+正式变体名为 no_memory、long 和 spatial。用无记忆完整训练输出执行 eval --mode nav，通过 5 格可见导航的 8/10 门槛后，以 --mode formal --no-memory-gate 提供该批导航记录。正式评测还需提供 --acceptance、--seeds-file 和每进程的冻结 --seed。使用 t1_comparison.py 核查训练配置一致性，汇总三变体四档 × 30 个种子的 CSV 和 Wilson 95% 区间曲线。

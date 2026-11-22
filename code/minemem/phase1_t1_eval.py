@@ -84,7 +84,8 @@ class MineStudioPolicy:
         inputs = {"image": self.torch.from_numpy(image).to(self.device)[None, None]}
         if self.condition is not None:
             inputs["condition"] = self.condition
-        action, self.state = self.policy.get_action(inputs, state_in=self.state)
+        with self.torch.inference_mode():
+            action, self.state = self.policy.get_action(inputs, state_in=self.state)
         indices = {key: np.asarray(value.item()) for key, value in action.items()}
         return self.transformer.policy2env(self.mapper.to_factored(indices))
 
@@ -98,17 +99,23 @@ class RandomPolicy:
         return self.space.sample()
 
 
-def return_segment(arena, policy, config, seed, steps_limit):
+def return_segment(arena, policy, config, seed, steps_limit, navigation_step=None):
     arena.restore_return_pose(config)
     policy.start(arena, seed)
     started = perf_counter()
     final_dist = mindist = math.dist(horizontal(arena.info), arena.landmark)
     for step in range(1, steps_limit + 1):
         action = policy.action(arena)
-        _, _, terminated, truncated, arena.info = arena.sim.step(action)
+        if navigation_step is None:
+            _, _, terminated, truncated, arena.info = arena.sim.step(action)
+            done = terminated or truncated
+        else:
+            if not navigation_step(action):
+                break
+            done = False
         final_dist = math.dist(horizontal(arena.info), arena.landmark)
         mindist = min(mindist, final_dist)
-        if final_dist <= SUCCESS_RADIUS or terminated or truncated:
+        if final_dist <= SUCCESS_RADIUS or done:
             break
     return mindist <= SUCCESS_RADIUS, step, final_dist, mindist, perf_counter() - started
 
@@ -134,7 +141,7 @@ def make_policies(args):
     }
 
 
-def evaluate_fixture(arena, fixture, policies, writer):
+def evaluate_fixture(arena, fixture, policies, writer, navigation_step=None):
     d, seed = fixture["distance"], fixture["scenario_seed"]
     config = arena.prepare_episode(seed, d)
     for key in ("landmark", "arena_origin", "wall", "waypoints", "planned_endpoint"):
@@ -149,7 +156,7 @@ def evaluate_fixture(arena, fixture, policies, writer):
     arena.settle()
     for model, policy in policies.items():
         ok, steps, final, closest, seconds = return_segment(
-            arena, policy, config, seed, fixture["return_limit"])
+            arena, policy, config, seed, fixture["return_limit"], navigation_step=navigation_step)
         writer.writerow(dict(zip(FIELDS, (model, d, seed, ok, steps, final, closest,
                                           config["path_len_out"], arena.world_seed,
                                           fixture["return_limit"], seconds), strict=True)))
