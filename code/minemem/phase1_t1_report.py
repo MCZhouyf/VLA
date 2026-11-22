@@ -24,9 +24,11 @@ def validate_results(inputs, seeds, models=MODELS):
         closest = float(row["min_dist"])
         step = int(row["steps"])
         limit = int(row["return_limit"])
-        if not 0 <= closest <= distance or not 1 <= step <= limit:
+        outbound_failure = row.get("end_reason", "").startswith("outbound_")
+        if not 0 <= closest <= distance or not int(not outbound_failure) <= step <= limit:
             raise ValueError(f"Invalid distances or step counts in {row}")
-        if row["success"] != str(closest <= 3):
+        invalid = int(row.get("deaths", 0)) > 0 or row.get("pose_jump", "False") == "True"
+        if row["success"] != str(closest <= 3 and not invalid and not outbound_failure):
             raise ValueError(f"Success flag does not match minimum distance in {row}")
     return sorted(rows, key=lambda row: (row["model"], int(row["d"]), int(row["seed"])))
 
@@ -51,15 +53,18 @@ def summarize(rows, models=MODELS):
     return summary
 
 
-def plot(path, summary, monochrome=False):
+def plot(path, summary, monochrome=False, include_vpt=False):
     import matplotlib
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
     from matplotlib.ticker import PercentFormatter
 
     figure, axis = plt.subplots(figsize=(7.0, 4.4), layout="constrained")
-    for name, label, style in (("random", "Random", ":"), ("steve1", "STEVE-1", "--"),
-                               ("jarvis7b", "JARVIS-VLA-7B", "-")):
+    series = (("random", "Random", ":"), ("steve1", "STEVE-1", "--"),
+              ("jarvis7b", "JARVIS-VLA-7B", "-"))
+    if include_vpt:
+        series += (("vpt", "VPT-BC", "-."),)
+    for name, label, style in series:
         cohort = [row for row in summary if row["model"] == name]
         if not cohort:
             continue

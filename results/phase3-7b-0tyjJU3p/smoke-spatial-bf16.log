@@ -1,0 +1,68 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.48, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+[13:44:22] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[13:44:22] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:06<00:18,  6.31s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:12<00:12,  6.18s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:18<00:06,  6.04s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:20<00:00,  4.69s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:20<00:00,  5.22s/it]
+update=10 samples=40 loss=0.31732
+update=20 samples=80 loss=0.00326
+update=30 samples=120 loss=0.01410
+update=40 samples=160 loss=0.24474
+update=50 samples=200 loss=0.00546
+update=60 samples=240 loss=0.00232
+update=70 samples=280 loss=0.00104
+update=80 samples=320 loss=0.00062
+update=90 samples=360 loss=0.00050
+update=100 samples=400 loss=0.00040
+update=110 samples=440 loss=0.00375
+update=120 samples=480 loss=0.00051
+update=130 samples=520 loss=0.00043
+update=140 samples=560 loss=0.00164
+update=150 samples=600 loss=0.12893
+update=160 samples=640 loss=0.64361
+update=170 samples=680 loss=0.57514
+update=180 samples=720 loss=0.00079
+update=190 samples=760 loss=0.00058
+update=200 samples=800 loss=0.00040
+update=210 samples=840 loss=0.00036
+update=220 samples=880 loss=0.00301
+update=230 samples=920 loss=0.00365
+update=240 samples=960 loss=0.86587
+update=250 samples=1000 loss=0.00143
+update=260 samples=1040 loss=0.00346
+update=270 samples=1080 loss=0.00184
+update=280 samples=1120 loss=0.00104
+update=290 samples=1160 loss=0.00067
+update=300 samples=1200 loss=0.00061
+update=310 samples=1240 loss=0.00073
+update=320 samples=1280 loss=0.00064
+update=330 samples=1320 loss=0.00157
+update=340 samples=1360 loss=0.00206
+update=350 samples=1400 loss=0.00114
+update=360 samples=1440 loss=0.00111
+update=370 samples=1480 loss=0.00097
+update=380 samples=1520 loss=0.32676
+update=390 samples=1560 loss=0.00172
+update=400 samples=1600 loss=0.00892
+update=410 samples=1640 loss=0.00180
+update=420 samples=1680 loss=0.00150
+update=430 samples=1720 loss=0.00089
+update=440 samples=1760 loss=0.00360
+update=450 samples=1800 loss=0.00079
+update=460 samples=1840 loss=0.02682
+update=470 samples=1880 loss=0.01832
+update=480 samples=1920 loss=0.00077
+update=490 samples=1960 loss=0.00054
+{
+  "updates": 495,
+  "supervised_examples": 1977,
+  "elapsed_seconds": 2781.562136474997,
+  "first_update_loss": 5.391214370727539,
+  "last_update_loss": 0.0004965302650816739,
+  "peak_allocated_mib": 21231.8056640625,
+  "stopped_at_budget": false
+}

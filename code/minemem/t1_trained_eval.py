@@ -15,15 +15,24 @@ from PIL import Image
 from phase1_t1_eval import fixture_index
 from t1_collect import CaptureArena
 from t1_model import T1Policy
+from t1_respawn import freeze_return, record_config, verify_scene
+from t1_respawn_report import acceptance_summary
+from t1_safety import SETUP_REVISION, ProtectedArena, StepTrace, TrialInterrupted
 from t1_v4 import (
-    DISTANCES, INSTRUCTION, PROTOCOL, SUCCESS_RADIUS, VISIBLE_INSTRUCTION,
-    horizontal, wrapped_angle,
+    DISTANCES, INSTRUCTION, SUCCESS_RADIUS, VISIBLE_INSTRUCTION, horizontal,
 )
-from t1_v4_report import summarize
 
 
 NAV_SEED = 2030990000
 NAV_WORLD_SEED = 19961103
+
+
+class ProtectedCaptureArena(ProtectedArena, CaptureArena):
+    def visible_trajectory(self, seed, exact_distance=None):
+        self.run_commands(self.protection_commands)
+        config, outbound, returns = super().visible_trajectory(seed, exact_distance)
+        config.update(self.safety_config())
+        return config, outbound, returns
 
 
 class Controller:
@@ -81,24 +90,31 @@ class Controller:
         return control, tags
 
 
-def run_case(arena, controller, config, outbound, instruction, limit):
+def run_case(arena, controller, config, outbound, instruction, limit, trace):
     arena.restore_return_pose(config)
     controller.start(outbound)
     closest = math.dist(horizontal(arena.info), arena.landmark)
     tags = 0
     final = closest
+    steps = 0
     start = perf_counter()
-    for steps in range(1, limit + 1):
-        action, complete = controller.action(arena.info, instruction)
-        tags += complete
-        action = arena.sim.agent_action_to_env_action(action)
-        if not arena.navigation_step(action):
-            break
-        final = math.dist(horizontal(arena.info), arena.landmark)
-        closest = min(closest, final)
-        if closest <= SUCCESS_RADIUS:
-            break
-    return closest <= SUCCESS_RADIUS, steps, final, closest, tags, perf_counter() - start
+    try:
+        with arena.track(trace):
+            for steps in range(1, limit + 1):
+                action, complete = controller.action(arena.info, instruction)
+                tags += complete
+                action = arena.sim.agent_action_to_env_action(action)
+                if not arena.navigation_step(action):
+                    break
+                final = math.dist(horizontal(arena.info), arena.landmark)
+                closest = min(closest, final)
+                if closest <= SUCCESS_RADIUS:
+                    break
+    except TrialInterrupted:
+        pass
+    ok = closest <= SUCCESS_RADIUS and not trace.reason
+    return (ok, steps, final, closest, tags, perf_counter() - start,
+            *trace.flags(), trace.reason or ("reached" if ok else "budget"))
 
 
 def run(args):
@@ -113,59 +129,80 @@ def run(args):
                 or len(nav) != 10
                 or any(row["model"] != "no_memory" or row["mode"] != "nav"
                        or int(row["d"]) != 5
-                       or row["success"] != str(float(row["min_dist"]) <= SUCCESS_RADIUS)
+                       or row.get("setup_revision") != SETUP_REVISION
+                       or row["success"] != str(float(row["min_dist"]) <= SUCCESS_RADIUS
+                                                and int(row["deaths"]) == 0
+                                                and row["pose_jump"] == "False")
                        for row in nav)
                 or sum(row["success"] == "True" for row in nav) < 8):
             raise SystemExit("The no-memory model did not pass visible navigation at 8/10")
         gate_runs = {row["training_run"] for row in nav}
         if len(gate_runs) != 1 or (settings["variant"] == "no_memory" and gate_runs != {training_run}):
             raise SystemExit("The gate must come from the no-memory run being evaluated")
-        if not all(row["accepted"] for row in summarize(args.acceptance)):
-            raise SystemExit("T1 v4 teacher and shortcut gate did not pass")
+        if not all(row["accepted"] for row in acceptance_summary(args.acceptance)):
+            raise SystemExit("T1 respawn teacher and shortcut gate did not pass")
         frozen = json.loads(args.seeds_file.read_text())
         if args.seed not in frozen["formal"]:
             raise ValueError("Select one frozen formal scenario seed")
         fixtures = fixture_index(args.acceptance)
         world = frozen["world_seed_by_scenario"][str(args.seed)]
+        effects = fixtures[DISTANCES[0], args.seed]["optional_effects"]
     else:
         world = NAV_WORLD_SEED
+        effects = False
     controller = Controller(args.checkpoint, args.training_run)
     variant = controller.settings["variant"]
-    arena = CaptureArena(world)
+    arena = ProtectedCaptureArena(world, effects)
     try:
         with (args.output / "episodes.csv").open("x", newline="") as stream:
             writer = csv.writer(stream)
             writer.writerow(("mode", "model", "seed", "d", "world_seed", "success", "steps",
                              "final_dist", "min_dist", "decoded_steps", "elapsed_seconds",
-                             "return_limit", "path_len_out", "training_run"))
+                             "deaths", "pose_jump", "pose_jumps", "end_reason", "return_limit",
+                             "path_len_out", "training_run", "setup_revision"))
             if args.mode in ("nav", "smoke"):
                 count = 10 if args.mode == "nav" else 1
                 limit = 200 if args.mode == "nav" else 30
                 for seed in range(NAV_SEED, NAV_SEED + count):
                     config, outbound, _ = arena.visible_trajectory(seed, exact_distance=5)
-                    result = run_case(arena, controller, config, outbound, VISIBLE_INSTRUCTION, limit)
-                    writer.writerow((args.mode, variant, seed, 5, world, *result, limit, "", training_run))
+                    config["return_limit"] = limit
+                    key = f"d5-seed{seed}"
+                    record_config(args.output, key, config)
+                    trace = StepTrace(args.output / f"{key}-return.csv.gz")
+                    result = run_case(arena, controller, config, outbound, VISIBLE_INSTRUCTION, limit, trace)
+                    writer.writerow((args.mode, variant, seed, 5, world, *result, limit, "",
+                                     training_run, SETUP_REVISION))
                     stream.flush()
             else:
                 for distance in DISTANCES:
                     expected = fixtures[distance, args.seed]
                     config = arena.prepare_episode(args.seed, distance)
-                    if expected["protocol"] != PROTOCOL or list(config["landmark"]) != expected["landmark"]:
-                        raise RuntimeError("Formal scene differs from accepted T1 v4 fixture")
+                    verify_scene(config, expected)
+                    key = f"d{distance}-seed{args.seed}"
+                    outbound_trace = StepTrace(args.output / f"{key}-outbound.csv.gz")
                     arena.capture = []
-                    arena.outbound_segment(config)
-                    outbound = arena.capture
-                    arena.capture = None
-                    if abs(wrapped_angle(config["final_yaw"] - expected["final_yaw"])) > 2:
-                        raise RuntimeError("Formal replay differs from frozen randomized orientation")
-                    config["return_pose"] = expected["return_pose"]
-                    arena.command("/gamemode adventure @p")
-                    arena.settle()
-                    result = run_case(arena, controller, config, outbound, INSTRUCTION,
-                                      expected["return_limit"])
-                    arena.command("/gamemode survival @p")
+                    try:
+                        with arena.track(outbound_trace):
+                            arena.outbound_segment(config)
+                        outbound = arena.capture
+                    except TrialInterrupted:
+                        result = (False, 0, distance, distance, 0, 0, *outbound_trace.flags(),
+                                  f"outbound_{outbound_trace.reason}")
+                        config["path_len_out"] = arena.path_len_out
+                    finally:
+                        arena.capture = None
+                    if not outbound_trace.reason:
+                        freeze_return(config, expected)
+                        arena.command("/gamemode adventure @p")
+                        arena.settle()
+                        trace = StepTrace(args.output / f"{key}-return.csv.gz")
+                        result = run_case(arena, controller, config, outbound, INSTRUCTION,
+                                          expected["return_limit"], trace)
+                        arena.command("/gamemode survival @p")
+                    record_config(args.output, key, config)
                     writer.writerow((args.mode, variant, args.seed, distance, world, *result,
-                                     expected["return_limit"], config["path_len_out"], training_run))
+                                     expected["return_limit"], config["path_len_out"], training_run,
+                                     SETUP_REVISION))
                     stream.flush()
     finally:
         arena.sim.close()

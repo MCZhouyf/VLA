@@ -7,6 +7,7 @@ from pathlib import Path
 
 from phase1_metrics import wilson
 from phase1_t1 import DISTANCES
+from t1_safety import SETUP_REVISION
 
 
 VARIANTS = ("no_memory", "long", "spatial")
@@ -44,8 +45,12 @@ def summarize(rows, seeds):
     if grid != expected or len(grid) != len(rows):
         raise ValueError("Formal evaluation coverage differs from the frozen cohort")
     for row in rows:
-        if (row["mode"] != "formal" or row["success"] != str(float(row["min_dist"]) <= 3)
-                or not 1 <= int(row["steps"]) <= int(row["return_limit"])):
+        outbound_failure = row["end_reason"].startswith("outbound_")
+        ok = (float(row["min_dist"]) <= 3 and int(row["deaths"]) == 0
+              and row["pose_jump"] == "False" and not outbound_failure)
+        if (row["mode"] != "formal" or row["setup_revision"] != SETUP_REVISION
+                or row["success"] != str(ok)
+                or not int(not outbound_failure) <= int(row["steps"]) <= int(row["return_limit"])):
             raise ValueError(f"Invalid formal row: {row}")
     summary = []
     for variant in VARIANTS:

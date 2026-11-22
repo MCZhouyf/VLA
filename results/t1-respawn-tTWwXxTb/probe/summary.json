@@ -1,0 +1,46 @@
+{
+  "world_seed": 19961107,
+  "seed": 2026112104,
+  "initial": [
+    -2587.5,
+    -1507.5
+  ],
+  "actual_respawn": [
+    -2205.5,
+    -1125.5
+  ],
+  "gold": [
+    -2589.5,
+    -1509.5
+  ],
+  "respawn_distance": 543.0580079512685,
+  "steps": 4,
+  "trace_flags": [
+    1,
+    true,
+    1
+  ],
+  "status": "death",
+  "health_after": 20.0,
+  "setup_revision": "remote_respawn_v1",
+  "protection_commands": [
+    "/gamerule doMobSpawning false",
+    "/kill @e[type=!player]",
+    "/time set day",
+    "/gamerule doDaylightCycle false",
+    "/gamerule doWeatherCycle false",
+    "/weather clear",
+    "/spawnpoint @p -2206 160 -1126"
+  ],
+  "respawn_pad_commands": [
+    "/forceload add -2207 -1127 -2205 -1125",
+    "/fill -2207 159 -1127 -2205 159 -1125 minecraft:stone",
+    "/fill -2207 160 -1127 -2205 162 -1125 minecraft:air"
+  ],
+  "respawn_point": [
+    -2206,
+    160,
+    -1126
+  ],
+  "optional_effects": false
+}

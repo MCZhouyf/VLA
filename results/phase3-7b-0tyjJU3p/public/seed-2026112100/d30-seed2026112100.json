@@ -1,0 +1,114 @@
+{
+  "protocol": "t1_v4",
+  "scenario_seed": 2026112100,
+  "world_seed": 19961103,
+  "distance": 30,
+  "arena_origin": [
+    -6238,
+    76,
+    -4518
+  ],
+  "native_spawn": {
+    "x": -6237.5,
+    "y": 64.0,
+    "z": -4517.5,
+    "pitch": 0.0,
+    "yaw": 0.0
+  },
+  "spawn": {
+    "x": -6239.5,
+    "y": 76.0,
+    "z": -4515.5,
+    "pitch": 0.0,
+    "yaw": -135.0
+  },
+  "landmark": [
+    -6237.5,
+    -4517.5
+  ],
+  "distractors": [
+    {
+      "material": "iron_block",
+      "horizontal": [
+        -6221.5,
+        -4526.5
+      ]
+    },
+    {
+      "material": "lapis_block",
+      "horizontal": [
+        -6257.5,
+        -4522.5
+      ]
+    },
+    {
+      "material": "redstone_block",
+      "horizontal": [
+        -6213.5,
+        -4535.5
+      ]
+    }
+  ],
+  "wall": [
+    -6241,
+    76,
+    -4533,
+    -6235,
+    78,
+    -4533
+  ],
+  "planned_endpoint": [
+    -6237.5,
+    -4547.5
+  ],
+  "waypoints": [
+    [
+      -6244.5,
+      -4532.5
+    ],
+    [
+      -6244.5,
+      -4541.5
+    ],
+    [
+      -6237.5,
+      -4547.5
+    ]
+  ],
+  "final_yaw": -85.33520302590011,
+  "outbound_dwell_steps": 40,
+  "final_facing_steps": 20,
+  "setup_revision": "remote_respawn_v1",
+  "protection_commands": [
+    "/gamerule doMobSpawning false",
+    "/kill @e[type=!player]",
+    "/time set day",
+    "/gamerule doDaylightCycle false",
+    "/gamerule doWeatherCycle false",
+    "/weather clear",
+    "/spawnpoint @p -5854 160 -4134"
+  ],
+  "respawn_pad_commands": [
+    "/forceload add -5855 -4135 -5853 -4133",
+    "/fill -5855 159 -4135 -5853 159 -4133 minecraft:stone",
+    "/fill -5855 160 -4135 -5853 162 -4133 minecraft:air"
+  ],
+  "respawn_point": [
+    -5854,
+    160,
+    -4134
+  ],
+  "optional_effects": false,
+  "return_pose": {
+    "x": -6237.5401315836725,
+    "y": 76.0,
+    "z": -4547.464573157628,
+    "pitch": 0.0,
+    "yaw": -85.335205
+  },
+  "actual_distance": 29.964600031751974,
+  "path_len_out": 35.81730151452726,
+  "sampled_heading_offset": 274.741533224695,
+  "actual_heading_separation": 85.25846874940491,
+  "return_limit": 484
+}

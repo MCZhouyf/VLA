@@ -1,6 +1,6 @@
 # MineMem 复现与实验备份
 
-本仓库保存 MineMem 阶段 0、阶段 1 和新版 T1／阶段 3 的复现代码与实验记录。数据源为 BAAI 项目目录 `/share/project/zhoubowen/zhy/zyf`。
+本仓库保存 MineMem 阶段 0、阶段 1 和新版 T1 阶段 3 实机运行的复现代码与实验记录。数据源为 BAAI 项目目录 `/share/project/zhoubowen/zhy/zyf`。
 
 | 路径 | 内容 |
 | --- | --- |
@@ -8,6 +8,8 @@
 | [results](results) | 预检与 GPU 采样、三轮随机试跑、六档 CPU 并发、两次单卡闭环、checkpoint 验证、逐步数据、失败与成功日志、[阶段 0 报告](results/REPORT_phase0.md) |
 | [阶段 1 报告](results/REPORT_phase1.md) | JARVIS-VLA 门槛、T1 教师验收、种子冻结、双卡四实例容量和复跑记录 |
 | [新版 T1 与阶段 3 报告](results/REPORT_phase3.md) | 随机终点、捷径复核、CPU 零样本试点、数据索引及三个 LoRA 变体 |
+| [T1 死亡与重生复核](results/REPORT_t1_respawn.md) | 重生负例、冻结教师与捷径验收、VPT-BC 轨迹复跑 |
+| [阶段 3 实机报告](results/REPORT_phase3_gpu.md) | 三组 BF16 训练与闭环、公开权重试点、5 格导航门槛与正式训练快照 |
 | [新版轨迹元数据](results/data/t1-v4-L6ysa9jV/metadata) | 训练、验证与测试的 1,194 个原始回合的布景、位姿与动作 token |
 | [logs](logs) | Minecraft 进程原始日志 |
 | [BACKUP_MANIFEST.csv](BACKUP_MANIFEST.csv) | 文件大小及 SHA-256 |
@@ -223,3 +225,48 @@ bash code/minemem/t1_exec.sh eval 6 "$WORK/results/phase3-smoke-closed-loop" \
 ~~~
 
 正式变体名为 no_memory、long 和 spatial。用无记忆完整训练输出执行 eval --mode nav，通过 5 格可见导航的 8/10 门槛后，以 --mode formal --no-memory-gate 提供该批导航记录。正式评测还需提供 --acceptance、--seeds-file 和每进程的冻结 --seed。使用 t1_comparison.py 核查训练配置一致性，汇总三变体四档 × 30 个种子的 CSV 和 Wilson 95% 区间曲线。
+
+## T1 死亡与重生复核
+
+新版布景继续使用冻结的 T1 v4 场景、初始返回位姿、预算和种子。启动时在距金柱约 543 格处设置重生平台。每个回合的配置保存布景命令与重生点。受控步记录健康状态、死亡计数、位姿与跳变标记。死亡或单步水平跳变超过 2 格使回合失败。[复核报告](results/REPORT_t1_respawn.md)
+
+~~~bash
+export WORK=/share/project/zhoubowen/zhy/zyf GPU_IDS=6,7
+cd "$WORK"
+v4="$WORK/results/t1-v4-guarded-K6ARCMSV"
+frozen="$WORK/results/phase1_t1_seeds.json"
+acceptance="$(mktemp -d "$WORK/results/t1-protected-XXXXXXXX")"
+bash code/minemem/t1_cpu.sh protected "$acceptance" 32 --fixtures "$v4"
+envs/mcvla/bin/python code/minemem/t1_respawn_report.py acceptance \
+  "$acceptance/summary.csv" "$acceptance"
+~~~
+
+按冻结试点名单为每个种子运行一次下列命令。可以用 --distances 将同一种子的不同距离分给独立进程，并给每个进程独立目录。
+
+~~~bash
+seed=2026112100
+output="$WORK/results/t1-protected-pilot-$seed"
+bash code/minemem/t1_exec.sh protected-pilot "$output" --fixtures "$acceptance" \
+  --seeds-file "$frozen" --seed "$seed" --models random steve1 vpt
+envs/mcvla-phase1-vllm/bin/python code/minemem/t1_respawn_report.py pilot \
+  "$WORK/results/t1-protected-pilot-report" --seeds-file "$frozen" \
+  --inputs "$WORK"/results/t1-protected-pilot-*/cliff_T1.csv
+~~~
+
+历史 VPT-BC 复跑采用归档的旧版布景和旧判定。健康与死亡记录作为观测，随逐步轨迹输出。下面以 100 格成功回合为例。
+
+~~~bash
+history="$WORK/results/t1-vpt-history-2026112104"
+bash code/minemem/t1_exec.sh historical-pilot "$history" --fixtures "$v4" \
+  --seeds-file "$frozen" --seed 2026112104 --distances 100 --models random steve1 vpt
+envs/mcvla-phase1-vllm/bin/python code/minemem/t1_respawn_report.py trajectory \
+  "$history/vpt-trajectory.svg" --config "$history/d100-seed2026112104.json" \
+  --outbound "$history/d100-seed2026112104-outbound.csv" \
+  --trace "$history/d100-seed2026112104-vpt-return.csv.gz"
+~~~
+
+绘制其他策略的回程时，通过 `--policy-label` 指定图中的策略名称。
+
+GPU 实验只使用 6、7 号卡。三个变体各完成 5,000 帧冒烟及闭环后，使用 protected-pilot 运行公开 JARVIS-VLA。训练模型的可见导航和正式评测使用新版保护布景，正式评测的 --acceptance 指向上方复核的布景目录。
+
+实际冒烟入口为 `t1_exec.sh train` 和 `t1_exec.sh eval --mode smoke`。对三个变体使用同一个冒烟索引，传入 `--variant no_memory`、`--variant long` 或 `--variant spatial`。每个变体训练一轮，进程预算为 3,600 秒。训练退出后用保存的训练目录作为 `--training-run`。视觉前向最多把三张图放在同一组，保留图像分辨率、完整历史和模型的注意力范围。闭环的 `decoded_steps` 统计含完整标签、合法控制码和两个相机轴的动作。[7B 实机记录](results/REPORT_phase3_gpu.md)

@@ -15,8 +15,14 @@ cd "$WORK"
 bind_gpu() {
     [[ $1 =~ ^[67]$ ]]
     exec 9>"$TMPDIR/phase1-vllm-gpu-$1.lock"
-    flock -n 9
-    "$prefix/bin/python" "$project/code/minemem/watch_phase0.py" --check-idle "$1"
+    flock -w 30 9
+    local waits=0
+    until "$prefix/bin/python" "$project/code/minemem/watch_phase0.py" --check-idle "$1"; do
+        # A CUDA subprocess can exit before its utilization sample clears.
+        waits=$((waits + 1))
+        if ((waits >= 15)); then return 75; fi
+        sleep 2
+    done
     CUDA_VISIBLE_DEVICES="$(nvidia-smi -i "$1" --query-gpu=uuid --format=csv,noheader)"
     [[ $CUDA_VISIBLE_DEVICES == GPU-* ]]
     export CUDA_VISIBLE_DEVICES
@@ -38,6 +44,19 @@ case "${1:-}" in
         exec xvfb-run -a -e "$output/xvfb.log" "$WORK/envs/mcvla-phase1-vllm/bin/python" -B -u \
             "$project/code/minemem/t1_pilot.py" run --work "$WORK" --output "$output" "$@"
         ;;
+    protected-pilot|historical-pilot|death-replay)
+        mode="$1"
+        output="$2"
+        shift 2
+        simulator_dir "$output"
+        options=(pilot "$output" --work "$WORK")
+        case "$mode" in
+            historical-pilot) options+=(--historical) ;;
+            death-replay) options=(death-replay "$output") ;;
+        esac
+        exec xvfb-run -a -e "$output/xvfb.log" "$WORK/envs/mcvla-phase1-vllm/bin/python" -B -u \
+            "$project/code/minemem/t1_respawn.py" "${options[@]}" "$@"
+        ;;
     train)
         gpu="$2"
         shift 2
@@ -56,7 +75,7 @@ case "${1:-}" in
             --checkpoint "$WORK/models/JarvisVLA-Qwen2-VL-7B" "$@"
         ;;
     *)
-        echo 'Usage: t1_exec.sh {pilot OUTPUT|train GPU|eval GPU OUTPUT} [options]' >&2
+        echo 'Usage: t1_exec.sh {pilot|protected-pilot|historical-pilot|death-replay} OUTPUT or {train GPU|eval GPU OUTPUT} [options]' >&2
         exit 2
         ;;
 esac

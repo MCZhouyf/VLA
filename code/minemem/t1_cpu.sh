@@ -7,10 +7,12 @@ output="${2:-}"
 workers="${3:-32}"
 [[ $output == "$WORK/"* && $workers =~ ^[1-9][0-9]?$ && $workers -le 32 ]]
 shift 3
+entry_args=()
 case "$mode" in
     acceptance) entry=t1_v4.py ;;
+    protected) entry=t1_respawn.py; entry_args=(acceptance) ;;
     collect) entry=t1_collect.py ;;
-    *) echo 'Usage: t1_cpu.sh {acceptance|collect} OUTPUT WORKERS [options]' >&2; exit 2 ;;
+    *) echo 'Usage: t1_cpu.sh {acceptance|protected|collect} OUTPUT WORKERS [options]' >&2; exit 2 ;;
 esac
 
 canonical="$MINESTUDIO_DIR"
@@ -29,7 +31,7 @@ for ((i=0; i<workers; i++)); do
         export MINESTUDIO_DIR="$worker/minestudio" MESA_SHADER_CACHE_DIR="$worker"
         cd "$worker"
         exec xvfb-run -a -e "$worker/xvfb.log" "$prefix/bin/python" -B -u \
-            "$project/code/minemem/$entry" "$worker" --worker "$i" --workers "$workers" "$@"
+            "$project/code/minemem/$entry" "${entry_args[@]}" "$worker" --worker "$i" --workers "$workers" "$@"
     ) >"$worker/worker.log" 2>&1 &
     children+=("$!")
     sleep 0.15

@@ -1,0 +1,202 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+[10:14:32] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[10:14:32] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+INFO: Starting Minecraft process with device: cpu
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:java.lang.IllegalStateException: Failed to initialize GLFW, errors: GLFW error during init: [0x10008]140136835731040
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:Picked up JAVA_TOOL_OPTIONS: -Duser.home='/share/project/zhoubowen/zhy/zyf/runtime/java-home' -Djava.io.tmpdir='/share/project/zhoubowen/zhy/zyf/tmp' -XX:ActiveProcessorCount=2
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:SLF4J: Defaulting to no-operation (NOP) logger implementation
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:[10:14:59] [main/INFO]: [OptiFine] (Reflector) Field not found: World.tileEntitiesToBeRemoved
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:[10:14:59] [main/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.eventbus.api.Event$Result
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:[10:14:59] [main/INFO]: [OptiFine] (Reflector) Method not present: net.minecraftforge.common.extensions.IForgeBlockState.hasTileEntity
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:[10:14:59] [main/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.extensions.IForgeEntity
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:[10:14:59] [main/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.CrashReportExtender
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:[10:14:59] [main/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.tags.ItemTags.createOptional
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:[10:15:01] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.ForgeHooksClient
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:[10:15:01] [Render thread/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:[10:15:02] [Render thread/INFO]: Setting user: Player928
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:[10:15:03] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.settings.KeyConflictContext
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:[10:15:03] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraft.launchwrapper.Launch
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:[10:15:03] [Render thread/INFO]: Backend library: LWJGL version 3.2.2 SNAPSHOT
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:Authorization required, but no authorization protocol specified
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:[10:15:03] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: optifine.OptiFineResourceLocator
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:---- Minecraft Crash Report ----
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:// Daisy, daisy...
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:Time: 11/22/26 10:15 AM
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:Description: Initializing game
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:java.lang.IllegalStateException: Failed to initialize GLFW, errors: GLFW error during init: [0x10008]140136835731040
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:	at com.mojang.blaze3d.platform.GLX._initGlfw(GLX.java:85)
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:	at com.mojang.blaze3d.systems.RenderSystem.initBackendSystem(RenderSystem.java:586)
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:	at net.minecraft.client.Minecraft.<init>(Minecraft.java:415)
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:	at net.minecraft.client.main.Main.main(Main.java:157)
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:A detailed walkthrough of the error, its code path and all known details is as follows:
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:---------------------------------------------------------------------------------------
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:-- Head --
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:Thread: Render thread
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:Stacktrace:
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:	at com.mojang.blaze3d.platform.GLX._initGlfw(GLX.java:85)
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:	at com.mojang.blaze3d.systems.RenderSystem.initBackendSystem(RenderSystem.java:586)
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:	at net.minecraft.client.Minecraft.<init>(Minecraft.java:415)
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:-- Initialization --
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:Details:
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:Stacktrace:
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:	at net.minecraft.client.main.Main.main(Main.java:157)
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:-- System Details --
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:Details:
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:	Minecraft Version: 1.16.5
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:	Minecraft Version ID: 1.16.5
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:	Operating System: Linux (amd64) version 5.15.0-1053-nvidia
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:	Java Version: 1.8.0_514, Azul Systems, Inc.
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Azul Systems, Inc.
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:	Memory: 1468065392 bytes (1400 MB) / 1626865664 bytes (1551 MB) up to 1908932608 bytes (1820 MB)
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:	CPUs: 2
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:	JVM Flags: 2 total; -XX:ActiveProcessorCount=2 -Xmx2G
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:	Launched Version: ~~NULL~~
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:	Backend library: LWJGL version 3.2.2 SNAPSHOT
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:	Backend API: NO CONTEXT
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:	GL Caps: 
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:	Using VBOs: Yes
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:	Is Modded: Very likely; Jar signature invalidated
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:	Type: Client (map_client.txt)
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:	CPU: <unknown>
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:	OptiFine Version: OptiFine_1.16.5_HD_U_G8
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:	OptiFine Build: ~~NULL~~
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:	Render Distance Chunks: 8
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:	Mipmaps: 4
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:	Anisotropic Filtering: 1
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:	Antialiasing: 0
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:	Multitexture: false
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:	Shaders: null
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:	OpenGlVersion: null
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:	OpenGlRenderer: null
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:	OpenGlVendor: null
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:	CpuCount: 2
+ERROR:minestudio.simulator.minerl.env.malmo.instance.d4a94b:#@!@# Game crashed! Crash report saved to: #@!@# /share/project/zhoubowen/zhy/zyf/results/t1-respawn-tTWwXxTb/acceptance/worker-018/minestudio/tmp/stark_tech_instances/9ab0e7b7-3670-4046-ac55-8389380e8ce6/./crash-reports/crash-2026-11-22_10.15.03-client.txt
+Traceback (most recent call last):
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_respawn.py", line 306, in <module>
+    main()
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_respawn.py", line 302, in main
+    {"acceptance": acceptance, "pilot": pilot, "death-replay": death_replay}[args.mode](args)
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_respawn.py", line 131, in acceptance
+    arena = ProtectedArena(world, effects=args.effects)
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_safety.py", line 97, in __init__
+    super().__init__(world_seed)
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/phase1_t1.py", line 53, in __init__
+    _, self.info = self.sim.reset()
+  File "/share/project/zhoubowen/zhy/zyf/code/MineStudio/minestudio/simulator/entry.py", line 217, in reset
+    self.env.reset()
+  File "/share/project/zhoubowen/zhy/zyf/code/MineStudio/minestudio/simulator/minerl/env/_singleagent.py", line 22, in reset
+    multi_obs = super().reset()
+  File "/share/project/zhoubowen/zhy/zyf/code/MineStudio/minestudio/simulator/minerl/env/_multiagent.py", line 478, in reset
+    self._setup_instances()
+  File "/share/project/zhoubowen/zhy/zyf/code/MineStudio/minestudio/simulator/minerl/env/_multiagent.py", line 582, in _setup_instances
+    self.instances.extend([f.result() for f in instance_futures])
+  File "/share/project/zhoubowen/zhy/zyf/code/MineStudio/minestudio/simulator/minerl/env/_multiagent.py", line 582, in <listcomp>
+    self.instances.extend([f.result() for f in instance_futures])
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/share/project/zhoubowen/zhy/zyf/code/MineStudio/minestudio/simulator/minerl/env/_multiagent.py", line 848, in _get_new_instance
+    instance.launch(replaceable=self._is_fault_tolerant)
+  File "/share/project/zhoubowen/zhy/zyf/code/MineStudio/minestudio/simulator/minerl/env/malmo.py", line 453, in launch
+    raise EOFError(
+EOFError: Picked up JAVA_TOOL_OPTIONS: -Duser.home='/share/project/zhoubowen/zhy/zyf/runtime/java-home' -Djava.io.tmpdir='/share/project/zhoubowen/zhy/zyf/tmp' -XX:ActiveProcessorCount=2
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+[10:14:59] [main/INFO]: [OptiFine] (Reflector) Field not found: World.tileEntitiesToBeRemoved
+[10:14:59] [main/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.eventbus.api.Event$Result
+[10:14:59] [main/INFO]: [OptiFine] (Reflector) Method not present: net.minecraftforge.common.extensions.IForgeBlockState.hasTileEntity
+[10:14:59] [main/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.extensions.IForgeEntity
+[10:14:59] [main/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.CrashReportExtender
+[10:14:59] [main/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.tags.ItemTags.createOptional
+[10:15:01] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.ForgeHooksClient
+[10:15:01] [Render thread/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[10:15:02] [Render thread/INFO]: Setting user: Player928
+[10:15:03] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.settings.KeyConflictContext
+[10:15:03] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraft.launchwrapper.Launch
+[10:15:03] [Render thread/INFO]: Backend library: LWJGL version 3.2.2 SNAPSHOT
+Authorization required, but no authorization protocol specified
+[10:15:03] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: optifine.OptiFineResourceLocator
+---- Minecraft Crash Report ----
+// Daisy, daisy...
+
+Time: 11/22/26 10:15 AM
+Description: Initializing game
+
+java.lang.IllegalStateException: Failed to initialize GLFW, errors: GLFW error during init: [0x10008]140136835731040
+	at com.mojang.blaze3d.platform.GLX._initGlfw(GLX.java:85)
+	at com.mojang.blaze3d.systems.RenderSystem.initBackendSystem(RenderSystem.java:586)
+	at net.minecraft.client.Minecraft.<init>(Minecraft.java:415)
+	at net.minecraft.client.main.Main.main(Main.java:157)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at com.mojang.blaze3d.platform.GLX._initGlfw(GLX.java:85)
+	at com.mojang.blaze3d.systems.RenderSystem.initBackendSystem(RenderSystem.java:586)
+	at net.minecraft.client.Minecraft.<init>(Minecraft.java:415)
+
+-- Initialization --
+Details:
+Stacktrace:
+	at net.minecraft.client.main.Main.main(Main.java:157)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.5
+	Minecraft Version ID: 1.16.5
+	Operating System: Linux (amd64) version 5.15.0-1053-nvidia
+	Java Version: 1.8.0_514, Azul Systems, Inc.
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Azul Systems, Inc.
+	Memory: 1468065392 bytes (1400 MB) / 1626865664 bytes (1551 MB) up to 1908932608 bytes (1820 MB)
+	CPUs: 2
+	JVM Flags: 2 total; -XX:ActiveProcessorCount=2 -Xmx2G
+	Launched Version: ~~NULL~~
+	Backend library: LWJGL version 3.2.2 SNAPSHOT
+	Backend API: NO CONTEXT
+	GL Caps: 
+	Using VBOs: Yes
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	CPU: <unknown>
+	OptiFine Version: OptiFine_1.16.5_HD_U_G8
+	OptiFine Build: ~~NULL~~
+	Render Distance Chunks: 8
+	Mipmaps: 4
+	Anisotropic Filtering: 1
+	Antialiasing: 0
+	Multitexture: false
+	Shaders: null
+	OpenGlVersion: null
+	OpenGlRenderer: null
+	OpenGlVendor: null
+	CpuCount: 2
+#@!@# Game crashed! Crash report saved to: #@!@# /share/project/zhoubowen/zhy/zyf/results/t1-respawn-tTWwXxTb/acceptance/worker-018/minestudio/tmp/stark_tech_instances/9ab0e7b7-3670-4046-ac55-8389380e8ce6/./crash-reports/crash-2026-11-22_10.15.03-client.txt
+
+
+Minecraft process finished unexpectedly. There was an error with Malmo.
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.

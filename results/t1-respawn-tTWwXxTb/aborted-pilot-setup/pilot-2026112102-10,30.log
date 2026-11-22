@@ -1,0 +1,47 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+Loading weights from local directory
+Loading weights from local directory
+[10:48:42] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[10:48:42] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+INFO: Starting Minecraft process with device: cpu
+ERROR:minestudio.simulator.minerl.env.malmo.instance.eed5f1:[10:49:04] [Render thread/WARN]: ERROR : Couldn't load Narrator library : Unable to load library 'fliteWrapper': Can't obtain InputStream for linux-x86-64/libfliteWrapper.so
+ERROR:minestudio.simulator.minerl.env.malmo.instance.eed5f1:[10:49:04] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: null
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+ERROR:minestudio.simulator.minerl.env.malmo.instance.eed5f1:[10:50:33] [Worker-Main-3/ERROR]: Using missing texture, unable to load minecraft:optifine/ctm/default/empty.png : java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png
+ERROR:minestudio.simulator.minerl.env.malmo.instance.eed5f1:[10:50:38] [Render thread/ERROR]: Error starting SoundSystem. Turning off sounds & music
+ERROR:minestudio.simulator.minerl.env.malmo.instance.eed5f1:java.lang.IllegalStateException: Failed to open OpenAL device
+WARNING:minestudio.simulator.minerl.env.malmo.instance.eed5f1:[10:50:39] [Render thread/WARN]: [OptiFine] Missing CTM sprite: minecraft:optifine/ctm/default/empty
+WARNING:minestudio.simulator.minerl.env.malmo.instance.eed5f1:[10:50:42] [Render thread/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.eed5f1:[10:50:42] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.eed5f1:[10:50:42] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.eed5f1:[10:50:42] [Render thread/WARN]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.eed5f1:[10:50:42] [Render thread/WARN]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.eed5f1:[10:51:07] [Render thread/WARN]: Failed to load texture: minecraft:optifine/ctm/default/empty.png
+ERROR:minestudio.simulator.minerl.env.malmo.instance.eed5f1:java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png
+random 10 2026112102 False 290 9.630715223280458 (0, False, 0) budget
+Traceback (most recent call last):
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_respawn.py", line 306, in <module>
+    main()
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_respawn.py", line 302, in main
+    {"acceptance": acceptance, "pilot": pilot, "death-replay": death_replay}[args.mode](args)
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_respawn.py", line 242, in pilot
+    ok, steps, final, closest, elapsed = policy_return(
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_respawn.py", line 178, in policy_return
+    return return_segment(arena, policy, config, seed, limit, navigation_step=observed_step)
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/phase1_t1_eval.py", line 103, in return_segment
+    arena.restore_return_pose(config)
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/phase1_t1.py", line 290, in restore_return_pose
+    self.settle(6)
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/phase1_t1.py", line 76, in settle
+    self.tick()
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_safety.py", line 160, in tick
+    raise TrialInterrupted(self.trace.reason)
+t1_safety.TrialInterrupted: pose_jump

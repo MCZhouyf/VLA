@@ -1,0 +1,15 @@
+{
+  "variant": "no_memory",
+  "history": 2,
+  "quantized": false,
+  "checkpoint": "/share/project/zhoubowen/zhy/zyf/models/JarvisVLA-Qwen2-VL-7B",
+  "dataset_sha256": "212b630cab2776b961241368433768c9194c54f800a195a9d7b69db555940ac6",
+  "resolution": null,
+  "seed": 20261122,
+  "epochs": 1,
+  "examples_per_epoch": 54305,
+  "accumulation": 4,
+  "trainable_parameters": 161480704,
+  "learning_rate": 0.0001,
+  "budget_seconds": 0
+}

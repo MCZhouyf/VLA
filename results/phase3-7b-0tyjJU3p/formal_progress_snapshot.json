@@ -1,0 +1,33 @@
+{
+  "captured_at": "2026-11-22T21:01:46+08:00",
+  "gpus": [
+    {
+      "index": 6,
+      "used_mib": 22697,
+      "utilization_percent": 97
+    },
+    {
+      "index": 7,
+      "used_mib": 23549,
+      "utilization_percent": 100
+    }
+  ],
+  "expected_examples_per_variant": 54305,
+  "expected_updates_per_variant": 13577,
+  "formal_train": {
+    "long": {
+      "updates": 1738,
+      "examples": 6952,
+      "loss": 0.0016658718523103744,
+      "elapsed_seconds": 19045.465609092265,
+      "peak_allocated_mib": 21228.79345703125
+    },
+    "no_memory": {
+      "updates": 4811,
+      "examples": 19244,
+      "loss": 0.0009079413284780458,
+      "elapsed_seconds": 19050.125832110643,
+      "peak_allocated_mib": 21117.90966796875
+    }
+  }
+}

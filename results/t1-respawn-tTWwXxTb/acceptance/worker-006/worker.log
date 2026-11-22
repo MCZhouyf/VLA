@@ -1,0 +1,34 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+[10:14:30] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[10:14:30] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+INFO: Starting Minecraft process with device: cpu
+ERROR:minestudio.simulator.minerl.env.malmo.instance.725011:[10:14:57] [Render thread/WARN]: ERROR : Couldn't load Narrator library : Unable to load library 'fliteWrapper': Can't obtain InputStream for linux-x86-64/libfliteWrapper.so
+ERROR:minestudio.simulator.minerl.env.malmo.instance.725011:[10:14:58] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: null
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+ERROR:minestudio.simulator.minerl.env.malmo.instance.725011:[10:19:43] [Worker-Main-3/ERROR]: Using missing texture, unable to load minecraft:optifine/ctm/default/empty.png : java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png
+ERROR:minestudio.simulator.minerl.env.malmo.instance.725011:[10:20:19] [Render thread/ERROR]: Error starting SoundSystem. Turning off sounds & music
+ERROR:minestudio.simulator.minerl.env.malmo.instance.725011:java.lang.IllegalStateException: Failed to open OpenAL device
+WARNING:minestudio.simulator.minerl.env.malmo.instance.725011:[10:20:20] [Render thread/WARN]: [OptiFine] Missing CTM sprite: minecraft:optifine/ctm/default/empty
+WARNING:minestudio.simulator.minerl.env.malmo.instance.725011:[10:20:23] [Render thread/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.725011:[10:20:23] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.725011:[10:20:23] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.725011:[10:20:23] [Render thread/WARN]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.725011:[10:20:23] [Render thread/WARN]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.725011:[10:20:48] [Render thread/WARN]: Failed to load texture: minecraft:optifine/ctm/default/empty.png
+ERROR:minestudio.simulator.minerl.env.malmo.instance.725011:java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png
+(10, 2026112106, 19961109, 292, True, 46, 2.9001123987647275, 2.9001123987647275, 0, False, 0, 'reached', False, 292, 7.916954439063746, 0, False, 0, 'budget', 'remote_respawn_v1', '')
+(30, 2026112106, 19961109, 492, True, 146, 2.954007368430009, 2.954007368430009, 0, False, 0, 'reached', False, 492, 26.435612097981068, 0, False, 0, 'budget', 'remote_respawn_v1', '')
+(60, 2026112106, 19961109, 774, True, 287, 2.903120803894028, 2.903120803894028, 0, False, 0, 'reached', False, 774, 30.802902068005928, 0, False, 0, 'budget', 'remote_respawn_v1', '')
+(100, 2026112106, 19961109, 1122, True, 460, 2.9199472012266368, 2.9199472012266368, 0, False, 0, 'reached', False, 1122, 100.02909534676019, 0, False, 0, 'budget', 'remote_respawn_v1', '')
+(10, 2026112138, 19961109, 298, True, 49, 2.9849483746123213, 2.9849483746123213, 0, False, 0, 'reached', False, 298, 7.670723563994157, 0, False, 0, 'budget', 'remote_respawn_v1', '')
+(30, 2026112138, 19961109, 488, True, 145, 2.875622578514898, 2.875622578514898, 0, False, 0, 'reached', False, 488, 30.060576095595962, 0, False, 0, 'budget', 'remote_respawn_v1', '')
+(60, 2026112138, 19961109, 766, True, 283, 2.802392613968218, 2.802392613968218, 0, False, 0, 'reached', False, 766, 52.081851751988786, 0, False, 0, 'budget', 'remote_respawn_v1', '')
+(100, 2026112138, 19961109, 1126, True, 463, 2.7852124855539584, 2.7852124855539584, 0, False, 0, 'reached', False, 1126, 100.10388465972339, 0, False, 0, 'budget', 'remote_respawn_v1', '')

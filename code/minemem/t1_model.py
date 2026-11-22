@@ -88,8 +88,19 @@ class T1Policy(nn.Module):
 
     @torch.no_grad()
     def embed_images(self, pixel_values, image_grid_thw):
-        self.base.visual.eval()
-        return self.base.visual(pixel_values.to(self.base.visual.get_dtype()), grid_thw=image_grid_thw)
+        visual = self.base.visual
+        visual.eval()
+        pixels = pixel_values.to(visual.get_dtype())
+        if len(image_grid_thw) <= 3:
+            return visual(pixels, grid_thw=image_grid_thw)
+        # Qwen2-VL vision attention is independent across the images. Its SDPA
+        # implementation builds a dense cross-image mask when they are batched.
+        image_sizes = image_grid_thw.prod(dim=1).tolist()
+        sizes = [sum(image_sizes[start:start + 3]) for start in range(0, len(image_sizes), 3)]
+        return torch.cat([
+            visual(chunk, grid_thw=grid)
+            for chunk, grid in zip(pixels.split(sizes), image_grid_thw.split(3), strict=True)
+        ])
 
     @torch.no_grad()
     def pooled_images(self, frames):
@@ -130,6 +141,24 @@ class T1Policy(nn.Module):
         logits = self.base.lm_head(hidden[:, -targets.shape[1] - 1:-1])
         return F.cross_entropy(logits.float().flatten(0, 1), targets.flatten())
 
+    def complete_action(self, ids):
+        from jarvisvla.inference.action_mapping import remap_control_token
+
+        try:
+            start = ids.index(self.actions.act_beg_id)
+            end = ids.index(self.actions.act_end_id, start + 1)
+        except ValueError:
+            return False
+        controls = [
+            remap_control_token(token, use_num=True, tokenizer_type=self.actions.tokenizer_type)
+            for token in ids[start + 1:end]
+        ]
+        count = len(self.actions.bases)
+        if any(not 0 <= group < count or not 0 <= value < self.actions.bases[group]
+               for group, value in controls):
+            return False
+        return {count - 2, count - 1} <= {group for group, _ in controls}
+
     @torch.inference_mode()
     def predict(self, instruction, frames, previous_actions, features=None, poses=None):
         inputs = self.prompts(instruction, frames, previous_actions)
@@ -148,5 +177,4 @@ class T1Policy(nn.Module):
                 past_key_values=output.past_key_values, use_cache=True,
             )
             next_position += 1
-        tags = self.actions.act_beg_id in ids and self.actions.act_end_id in ids
-        return self.actions.decode(ids)[0], self.processor.tokenizer.decode(ids), tags
+        return self.actions.decode(ids)[0], self.processor.tokenizer.decode(ids), self.complete_action(ids)

@@ -1,0 +1,179 @@
+{
+  "protocol": "t1_v4",
+  "scenario_seed": 2026112108,
+  "world_seed": 19961111,
+  "distance": 60,
+  "arena_origin": [
+    2882,
+    76,
+    -2982
+  ],
+  "native_spawn": {
+    "x": 2882.5,
+    "y": 64.0,
+    "z": -2981.5,
+    "pitch": 0.0,
+    "yaw": 0.0
+  },
+  "spawn": {
+    "x": 2880.5,
+    "y": 76.0,
+    "z": -2983.5,
+    "pitch": 0.0,
+    "yaw": -45.0
+  },
+  "landmark": [
+    2882.5,
+    -2981.5
+  ],
+  "distractors": [
+    {
+      "material": "iron_block",
+      "horizontal": [
+        2898.5,
+        -2969.5
+      ]
+    },
+    {
+      "material": "lapis_block",
+      "horizontal": [
+        2862.5,
+        -2936.5
+      ]
+    },
+    {
+      "material": "redstone_block",
+      "horizontal": [
+        2906.5,
+        -2966.5
+      ]
+    }
+  ],
+  "wall": [
+    2879,
+    76,
+    -2952,
+    2885,
+    78,
+    -2952
+  ],
+  "planned_endpoint": [
+    2882.5,
+    -2921.5
+  ],
+  "waypoints": [
+    [
+      2873.5,
+      -2951.5
+    ],
+    [
+      2876.5,
+      -2933.5
+    ],
+    [
+      2882.5,
+      -2921.5
+    ]
+  ],
+  "final_yaw": 84.71715787355492,
+  "outbound_dwell_steps": 40,
+  "final_facing_steps": 20,
+  "setup_revision": "remote_respawn_v1",
+  "protection_commands": [
+    "/gamerule doMobSpawning false",
+    "/kill @e[type=!player]",
+    "/time set day",
+    "/gamerule doDaylightCycle false",
+    "/gamerule doWeatherCycle false",
+    "/weather clear",
+    "/spawnpoint @p 3266 160 -2598"
+  ],
+  "respawn_pad_commands": [
+    "/forceload add 3265 -2599 3267 -2597",
+    "/fill 3265 159 -2599 3267 159 -2597 minecraft:stone",
+    "/fill 3265 160 -2599 3267 162 -2597 minecraft:air"
+  ],
+  "respawn_point": [
+    3266,
+    160,
+    -2598
+  ],
+  "optional_effects": false,
+  "return_pose": {
+    "x": 2882.457611601734,
+    "y": 76.0,
+    "z": -2921.57986309027,
+    "pitch": 0.0,
+    "yaw": 84.71716
+  },
+  "actual_distance": 59.92015190282059,
+  "path_len_out": 64.30840758476467,
+  "sampled_heading_offset": 264.6766259916018,
+  "actual_heading_separation": 95.32337188195311,
+  "return_limit": 758,
+  "teacher_targets": [
+    [
+      2878.0,
+      -2950.0
+    ],
+    [
+      2878.0,
+      -2953.0
+    ],
+    [
+      2882.5,
+      -2981.5
+    ]
+  ],
+  "teacher_route_attempts": [
+    {
+      "success": true,
+      "steps": 279,
+      "final_dist": 2.8125272722337913,
+      "targets": [
+        [
+          2878.0,
+          -2950.0
+        ],
+        [
+          2878.0,
+          -2953.0
+        ],
+        [
+          2882.5,
+          -2981.5
+        ]
+      ]
+    },
+    {
+      "success": true,
+      "steps": 281,
+      "final_dist": 2.825291096401594,
+      "targets": [
+        [
+          2887.0,
+          -2950.0
+        ],
+        [
+          2887.0,
+          -2953.0
+        ],
+        [
+          2882.5,
+          -2981.5
+        ]
+      ]
+    }
+  ],
+  "teacher_return_steps": 279,
+  "teacher_result": {
+    "teacher_success": true,
+    "teacher_steps": 279,
+    "teacher_final_dist": 2.8125272722337913,
+    "teacher_min_dist": 2.8125272722337913,
+    "teacher_deaths": 0,
+    "teacher_pose_jump": false,
+    "teacher_pose_jumps": 0,
+    "teacher_end": "reached"
+  }
+}

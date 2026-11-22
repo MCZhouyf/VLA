@@ -1,0 +1,48 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.48, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+[13:11:45] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[13:11:45] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:06<00:18,  6.21s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:11<00:11,  5.94s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:17<00:05,  5.82s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:20<00:00,  4.53s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:20<00:00,  5.05s/it]
+Traceback (most recent call last):
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_train.py", line 168, in <module>
+    main()
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_train.py", line 164, in main
+    train(args)
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_train.py", line 97, in train
+    for example in case_examples(policy, row, args.seed + epoch, args.resolution):
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_train.py", line 40, in case_examples
+    features = torch.cat([
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_train.py", line 41, in <listcomp>
+    policy.pooled_images(load_images(archive, range(begin, min(begin + 8, stop - 1)),
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_model.py", line 97, in pooled_images
+    # implementation builds a dense cross-image mask when they are batched.
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_model.py", line 92, in embed_images
+    visual.eval()
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/site-packages/transformers/models/qwen2_vl/modeling_qwen2_vl.py", line 1039, in forward
+    hidden_states = blk(hidden_states, cu_seqlens=cu_seqlens, position_embeddings=position_embeddings)
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/site-packages/transformers/models/qwen2_vl/modeling_qwen2_vl.py", line 453, in forward
+    hidden_states = hidden_states + self.attn(
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/site-packages/transformers/models/qwen2_vl/modeling_qwen2_vl.py", line 420, in forward
+    attn_output = F.scaled_dot_product_attention(q, k, v, attention_mask, dropout_p=0.0)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 5.46 GiB. GPU 0 has a total capacity of 39.39 GiB of which 3.15 GiB is free. Process 2938519 has 36.24 GiB memory in use. Of the allocated memory 30.95 GiB is allocated by PyTorch, and 4.78 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

@@ -1,0 +1,134 @@
+{
+  "no_memory": {
+    "early_mean_loss": 0.3696972279925831,
+    "late_mean_loss": 0.0007012387010036037,
+    "window": 20,
+    "quantized": false,
+    "training": {
+      "updates": 495,
+      "supervised_examples": 1977,
+      "elapsed_seconds": 2033.1169211305678,
+      "first_update_loss": 5.063409090042114,
+      "last_update_loss": 0.0005286939558573067,
+      "peak_allocated_mib": 21118.45458984375,
+      "stopped_at_budget": false
+    },
+    "episode": {
+      "mode": "smoke",
+      "model": "no_memory",
+      "seed": "2030990000",
+      "d": "5",
+      "world_seed": "19961103",
+      "success": "True",
+      "steps": "11",
+      "final_dist": "2.884817708710661",
+      "min_dist": "2.884817708710661",
+      "decoded_steps": "11",
+      "elapsed_seconds": "10.462301213294268",
+      "deaths": "0",
+      "pose_jump": "False",
+      "pose_jumps": "0",
+      "end_reason": "reached",
+      "return_limit": "30",
+      "path_len_out": "",
+      "training_run": "/share/project/zhoubowen/zhy/zyf/results/phase3-7b-0tyjJU3p/smoke-no_memory-bf16",
+      "setup_revision": "remote_respawn_v1"
+    },
+    "checks": {
+      "loss_declined": true,
+      "valid_decoded_steps": 11,
+      "steps": 11,
+      "deaths": 0,
+      "pose_jump": false,
+      "passed": true
+    }
+  },
+  "long": {
+    "early_mean_loss": 0.3719418296474032,
+    "late_mean_loss": 0.0010406222703750246,
+    "window": 20,
+    "quantized": false,
+    "training": {
+      "updates": 325,
+      "supervised_examples": 1300,
+      "elapsed_seconds": 3603.7261479459703,
+      "first_update_loss": 4.796541929244995,
+      "last_update_loss": 0.0004722894009319134,
+      "peak_allocated_mib": 21229.21826171875,
+      "stopped_at_budget": true
+    },
+    "episode": {
+      "mode": "smoke",
+      "model": "long",
+      "seed": "2030990000",
+      "d": "5",
+      "world_seed": "19961103",
+      "success": "True",
+      "steps": "11",
+      "final_dist": "2.884817708710661",
+      "min_dist": "2.884817708710661",
+      "decoded_steps": "11",
+      "elapsed_seconds": "23.63840465992689",
+      "deaths": "0",
+      "pose_jump": "False",
+      "pose_jumps": "0",
+      "end_reason": "reached",
+      "return_limit": "30",
+      "path_len_out": "",
+      "training_run": "/share/project/zhoubowen/zhy/zyf/results/phase3-7b-0tyjJU3p/smoke-long-bf16",
+      "setup_revision": "remote_respawn_v1"
+    },
+    "checks": {
+      "loss_declined": true,
+      "valid_decoded_steps": 11,
+      "steps": 11,
+      "deaths": 0,
+      "pose_jump": false,
+      "passed": true
+    }
+  },
+  "spatial": {
+    "early_mean_loss": 0.4539106070922571,
+    "late_mean_loss": 0.000650148313070531,
+    "window": 20,
+    "quantized": false,
+    "training": {
+      "updates": 495,
+      "supervised_examples": 1977,
+      "elapsed_seconds": 2781.562136474997,
+      "first_update_loss": 5.391214370727539,
+      "last_update_loss": 0.0004965302650816739,
+      "peak_allocated_mib": 21231.8056640625,
+      "stopped_at_budget": false
+    },
+    "episode": {
+      "mode": "smoke",
+      "model": "spatial",
+      "seed": "2030990000",
+      "d": "5",
+      "world_seed": "19961103",
+      "success": "True",
+      "steps": "11",
+      "final_dist": "2.884817708710661",
+      "min_dist": "2.884817708710661",
+      "decoded_steps": "11",
+      "elapsed_seconds": "11.249943017959595",
+      "deaths": "0",
+      "pose_jump": "False",
+      "pose_jumps": "0",
+      "end_reason": "reached",
+      "return_limit": "30",
+      "path_len_out": "",
+      "training_run": "/share/project/zhoubowen/zhy/zyf/results/phase3-7b-0tyjJU3p/smoke-spatial-bf16",
+      "setup_revision": "remote_respawn_v1"
+    },
+    "checks": {
+      "loss_declined": true,
+      "valid_decoded_steps": 11,
+      "steps": 11,
+      "deaths": 0,
+      "pose_jump": false,
+      "passed": true
+    }
+  }
+}
