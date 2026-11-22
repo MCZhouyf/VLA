@@ -11,8 +11,10 @@ import numpy as np
 
 from t1_v4 import (
     DISTANCES, INSTRUCTION, PROTOCOL, SUCCESS_RADIUS, VISIBLE_INSTRUCTION,
-    RandomHeadingArena, bearing, horizontal,
+    RandomHeadingArena, bearing, horizontal, wrapped_angle,
 )
+from t1_safety import ProtectedArena, StepTrace
+from t1_occlusion import OcclusionGeometry, set_candidate_render_distance
 
 
 SPLITS = ("train", "validation", "test")
@@ -20,6 +22,9 @@ SCENARIO_BASE = 2030010000
 WORLD_BASE = 20710100
 TRAIN_QUOTAS = {**dict.fromkeys(DISTANCES, 25000), "visible": 20000}
 HELD_OUT_QUOTAS = {**dict.fromkeys(DISTANCES, 1500), "visible": 500}
+NAV_SEED = 2030990000
+NAV_WORLD_SEED = 19961103
+NAV_OFFSET_SEED = 2030990100
 
 
 class CaptureArena(RandomHeadingArena):
@@ -82,7 +87,7 @@ class CaptureArena(RandomHeadingArena):
                                    config["teacher_route_attempts"][i]["final_dist"]))
         return config, outbound, self.candidates[index]
 
-    def visible_trajectory(self, seed, exact_distance=None):
+    def prepare_visible(self, seed, exact_distance=None, heading_offset=0.0):
         rng = random.Random(seed)
         distance = exact_distance if exact_distance is not None else rng.randrange(5, 11)
         for box in self.scene_fills:
@@ -93,15 +98,20 @@ class CaptureArena(RandomHeadingArena):
         start = (self.landmark[0] + distance * math.sin(angle),
                  self.landmark[1] + distance * math.cos(angle))
         yaw = bearing(start, self.landmark)
+        if heading_offset:
+            yaw = wrapped_angle(yaw + heading_offset)
         self.settle(8)
         self.command(f"/tp @p {start[0]:.6f} {self.y} {start[1]:.6f} {yaw:.6f} 0")
         self.settle()
         self.check_blocks([(gold[0], self.y + 1, gold[2], "gold_block")])
         if math.dist(horizontal(self.info), start) > 0.15:
             raise RuntimeError("Could not establish the visible-target start pose")
-        config = dict(protocol=PROTOCOL, scenario_seed=seed, world_seed=self.world_seed,
-                      distance=distance, landmark=self.landmark,
-                      return_pose=self.info["player_pos"], visible=True)
+        return dict(protocol=PROTOCOL, scenario_seed=seed, world_seed=self.world_seed,
+                    distance=distance, landmark=self.landmark, heading_offset=heading_offset,
+                    return_pose=self.info["player_pos"], visible=abs(heading_offset) <= 35)
+
+    def visible_trajectory(self, seed, exact_distance=None, heading_offset=0.0):
+        config = self.prepare_visible(seed, exact_distance, heading_offset)
         self.capture = []
         try:
             for _ in range(2):
@@ -115,6 +125,37 @@ class CaptureArena(RandomHeadingArena):
             return config, outbound, self.capture
         finally:
             self.capture = None
+
+
+class ProtectedCaptureArena(ProtectedArena, CaptureArena):
+    def prepare_visible(self, seed, exact_distance=None, heading_offset=0.0):
+        self.run_commands(self.protection_commands)
+        config = super().prepare_visible(seed, exact_distance, heading_offset)
+        config.update(self.safety_config())
+        return config
+
+
+class RevisedCaptureArena(OcclusionGeometry, ProtectedCaptureArena):
+    screened_pillar = True
+
+    def outbound_segment(self, config):
+        with self.track(StepTrace(None)):
+            super().outbound_segment(config)
+
+
+def navigation_cases(offset=False):
+    if not offset:
+        return [(seed, 5, 0.0, "aligned") for seed in range(NAV_SEED, NAV_SEED+10)]
+    cases = []
+    for index in range(20):
+        seed = NAV_OFFSET_SEED + index
+        rng = random.Random(seed)
+        visible = index < 15
+        distance = rng.uniform(5, 10)
+        angle = rng.uniform(15, 35) if visible else rng.uniform(60, 120)
+        heading = angle if index % 2 else -angle
+        cases.append((seed, distance, heading, "in_view" if visible else "out_of_view"))
+    return cases
 
 
 def write_episode(output, config, outbound, returns, split, group):
@@ -152,9 +193,12 @@ def collect(args):
     world = WORLD_BASE + 1000 * split_index + args.worker
     start_seed = SCENARIO_BASE + 100000 * split_index + 1000 * args.worker
     counter = 0
+    if args.screened:
+        set_candidate_render_distance(args.output)
+    arena_type = RevisedCaptureArena if args.screened else CaptureArena
     for attempt in range(4):
         try:
-            arena = CaptureArena(world + 100 * attempt)
+            arena = arena_type(world + 100 * attempt)
             break
         except RuntimeError as error:
             print(f"World {world + 100 * attempt} setup failed: {error}", flush=True)
@@ -172,7 +216,8 @@ def collect(args):
                     counter += 1
                     try:
                         if group == "visible":
-                            trajectory = arena.visible_trajectory(seed)
+                            offset = random.Random(f"visible-offset:{seed}").uniform(-35,35) if args.screened else 0
+                            trajectory = arena.visible_trajectory(seed, heading_offset=offset)
                         else:
                             trajectory = arena.t1_trajectory(seed, group)
                     except RuntimeError as error:
@@ -194,6 +239,7 @@ def main():
     parser.add_argument("--workers", type=int, default=32)
     parser.add_argument("--split", choices=SPLITS, required=True)
     parser.add_argument("--fraction", type=float, default=1.0)
+    parser.add_argument("--screened", action="store_true")
     args = parser.parse_args()
     if not 0 <= args.worker < args.workers <= 32 or not 0 < args.fraction <= 1:
         parser.error("Invalid worker shard or collection fraction")

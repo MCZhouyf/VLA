@@ -56,11 +56,13 @@ class RandomHeadingArena(Arena):
                       final_yaw=yaw, sampled_heading_offset=offset,
                       actual_heading_separation=separation)
 
-    def turn_to(self, yaw, record=False):
-        for step in range(30):
+    def turn_to(self, yaw, record=False, max_steps=30):
+        for step in range(max_steps+1):
             error = wrapped_angle(yaw - self.info["player_pos"]["yaw"])
             if abs(error) <= 0.01:
                 return step
+            if step == max_steps:
+                break
             self.teacher_step(yaw_delta=max(-10, min(10, error)), record=record)
         raise RuntimeError("Turn did not converge")
 

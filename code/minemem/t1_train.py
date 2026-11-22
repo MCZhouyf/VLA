@@ -7,12 +7,14 @@ import io
 import json
 import math
 import random
+from contextlib import nullcontext
 from pathlib import Path
 from time import monotonic
 from zipfile import ZipFile
 
 import torch
 from PIL import Image
+from torch.nn import functional as F
 
 from t1_model import HISTORY, T1Policy
 
@@ -57,12 +59,45 @@ def case_examples(policy, row, epochs_seed, resolution):
                    meta["pose"][:action_index + 1] if features is not None else None)
 
 
+VALIDATION_FIELDS = ("update", "frames", "actions", "tokens", "loss",
+                     "token_accuracy", "exact_action_accuracy", "seconds", "device", "dtype")
+
+
+@torch.inference_mode()
+def validation_metrics(policy, dataset, seed, resolution, update):
+    started = monotonic()
+    training = policy.training
+    frames = sum(row["selected_frames"] for row in dataset)
+    actions = tokens = correct = exact = 0
+    total = 0.0
+    policy.eval()
+    try:
+        for row in dataset:
+            for example in case_examples(policy, row, seed, resolution):
+                logits, targets = policy.action_logits(*example)
+                total += float(F.cross_entropy(logits, targets, reduction="sum"))
+                matched = int(logits.argmax(dim=-1).eq(targets).sum())
+                tokens += targets.numel()
+                correct += matched
+                actions += 1
+                exact += int(matched == targets.numel())
+    finally:
+        policy.train(training)
+    if actions != sum(row["selected_labels"] for row in dataset) or not tokens or not math.isfinite(total):
+        raise RuntimeError("Invalid validation coverage or loss")
+    return (update, frames, actions, tokens, total/tokens, correct/tokens, exact/actions,
+            monotonic()-started, str(policy.device), str(policy.base.dtype))
+
+
 def train(args):
     started = monotonic()
     args.output.mkdir(parents=True, exist_ok=False)
     dataset_bytes = args.dataset.read_bytes()
-    dataset = [json.loads(line) for line in dataset_bytes.splitlines()]
-    dataset = [row for row in dataset if row["split"] == "train" and row["selected_labels"] > 0]
+    rows = [json.loads(line) for line in dataset_bytes.splitlines()]
+    dataset = [row for row in rows if row["split"] == "train" and row["selected_labels"] > 0]
+    validation = [row for row in rows if row["split"] == "validation"] if args.validate_every else []
+    if args.validate_every and sum(row["selected_frames"] for row in validation) != 6500:
+        raise ValueError("Periodic validation requires the complete 6,500-frame split")
     if not dataset:
         raise ValueError("No return actions in the specified training index")
     torch.manual_seed(args.seed)
@@ -79,7 +114,8 @@ def train(args):
         resolution=args.resolution, seed=args.seed, epochs=args.epochs,
         examples_per_epoch=examples_per_epoch, accumulation=args.accumulation,
         trainable_parameters=sum(p.numel() for p in parameters), learning_rate=args.learning_rate,
-        budget_seconds=args.budget_seconds,
+        budget_seconds=args.budget_seconds, validate_every=args.validate_every,
+        checkpoint_selection="last_optimizer_step",
     )
     (args.output / "training_config.json").write_text(json.dumps(settings, indent=2) + "\n")
 
@@ -87,9 +123,26 @@ def train(args):
     group_loss = 0.0
     first = last = None
     stopped = False
-    with (args.output / "loss.csv").open("x", newline="") as stream:
+    val_context = (args.output / "val_loss.csv").open("x", newline="") if validation else nullcontext()
+    with (args.output / "loss.csv").open("x", newline="") as stream, val_context as val_stream:
         writer = csv.writer(stream)
         writer.writerow(("update", "examples", "loss", "elapsed_seconds", "peak_allocated_mib"))
+        val_writer = csv.writer(val_stream) if val_stream else None
+        if val_writer:
+            val_writer.writerow(VALIDATION_FIELDS)
+            val_stream.flush()
+
+        def validate():
+            try:
+                metrics = validation_metrics(policy, validation, args.seed, args.resolution, updates)
+            except (RuntimeError, OSError) as error:
+                print(f"validation update={updates} failed: {error}", flush=True)
+                return
+            val_writer.writerow(metrics)
+            val_stream.flush()
+            print(f"validation update={updates} loss={metrics[4]:.6f} accuracy={metrics[5]:.6f}",
+                  flush=True)
+
         for epoch in range(args.epochs):
             order = dataset.copy()
             random.Random(args.seed + epoch).shuffle(order)
@@ -121,6 +174,8 @@ def train(args):
                         print(f"update={updates} samples={samples} loss={last:.5f}", flush=True)
                     group_count = 0
                     group_loss = 0.0
+                    if val_writer and updates % args.validate_every == 0:
+                        validate()
                     if args.budget_seconds and elapsed >= args.budget_seconds:
                         stopped = True
                         break
@@ -128,6 +183,8 @@ def train(args):
                     break
             if stopped:
                 break
+        if val_writer and updates and updates % args.validate_every:
+            validate()
     if not updates:
         raise RuntimeError("No optimizer updates completed")
     policy.model.save_pretrained(args.output / "adapter", safe_serialization=True)
@@ -158,8 +215,12 @@ def main():
     parser.add_argument("--resolution", type=int, nargs=2, metavar=("WIDTH", "HEIGHT"))
     parser.add_argument("--seed", type=int, default=20261122)
     parser.add_argument("--quantized", action="store_true")
+    parser.add_argument("--validate-every", type=int)
     args = parser.parse_args()
-    if args.epochs <= 0 or args.accumulation <= 0 or args.budget_seconds < 0:
+    if args.validate_every is None:
+        schedule = args.output.parent / "validation_schedule.json"
+        args.validate_every = int(json.loads(schedule.read_text())["interval"]) if schedule.is_file() else 0
+    if args.epochs <= 0 or args.accumulation <= 0 or args.budget_seconds < 0 or args.validate_every < 0:
         parser.error("Invalid epochs, accumulation, or time budget")
     train(args)
 

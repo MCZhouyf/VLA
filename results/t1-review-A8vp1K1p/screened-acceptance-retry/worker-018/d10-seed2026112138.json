@@ -1,0 +1,123 @@
+{
+  "protocol": "t1_occlusion_candidate",
+  "scenario_seed": 2026112138,
+  "world_seed": 19961109,
+  "distance": 10,
+  "arena_origin": [
+    -586,
+    75,
+    6315
+  ],
+  "native_spawn": {
+    "x": -585.5,
+    "y": 63.0,
+    "z": 6315.5,
+    "pitch": 0.0,
+    "yaw": 0.0
+  },
+  "spawn": {
+    "x": -583.5,
+    "y": 75.0,
+    "z": 6317.5,
+    "pitch": 0.0,
+    "yaw": 135.0
+  },
+  "landmark": [
+    -585.5,
+    6315.5
+  ],
+  "distractors": [
+    {
+      "material": "iron_block",
+      "horizontal": [
+        -587.5,
+        6299.5
+      ]
+    },
+    {
+      "material": "lapis_block",
+      "horizontal": [
+        -593.5,
+        6335.5
+      ]
+    }
+  ],
+  "wall": null,
+  "planned_endpoint": [
+    -595.5,
+    6315.5
+  ],
+  "waypoints": [
+    [
+      -590.5,
+      6324.5
+    ],
+    [
+      -593.5,
+      6320.5
+    ],
+    [
+      -595.5,
+      6315.5
+    ]
+  ],
+  "final_yaw": 50.29956763022818,
+  "outbound_dwell_steps": 40,
+  "final_facing_steps": 20,
+  "setup_revision": "remote_respawn_v1",
+  "protection_commands": [
+    "/gamerule doMobSpawning false",
+    "/kill @e[type=!player]",
+    "/time set day",
+    "/gamerule doDaylightCycle false",
+    "/gamerule doWeatherCycle false",
+    "/weather clear",
+    "/spawnpoint @p -202 160 6699"
+  ],
+  "respawn_pad_commands": [
+    "/forceload add -203 6698 -201 6700",
+    "/fill -203 159 6698 -201 159 6700 minecraft:stone",
+    "/fill -203 160 6698 -201 162 6700 minecraft:air"
+  ],
+  "respawn_point": [
+    -202,
+    160,
+    6699
+  ],
+  "optional_effects": false,
+  "render_distance_chunks": 4,
+  "occlusion_walls": [],
+  "screened_pillar": true,
+  "return_pose": {
+    "x": -595.4954267628772,
+    "y": 75.0,
+    "z": 6315.506245553943,
+    "pitch": 0.0,
+    "yaw": 50.29957
+  },
+  "actual_distance": 9.995428714116533,
+  "path_len_out": 20.05606918047487,
+  "sampled_heading_offset": 140.3353683862701,
+  "actual_heading_separation": 140.33537075604193,
+  "teacher_targets": [
+    [
+      -585.5,
+      6315.5
+    ]
+  ],
+  "teacher_route_attempts": [
+    {
+      "success": true,
+      "steps": 48,
+      "final_dist": 2.915824668861882,
+      "targets": [
+        [
+          -585.5,
+          6315.5
+        ]
+      ]
+    }
+  ],
+  "teacher_return_steps": 48,
+  "return_limit": 296
+}

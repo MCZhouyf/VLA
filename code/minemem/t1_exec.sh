@@ -32,6 +32,11 @@ simulator_dir() {
     [[ $1 == "$WORK/results/"* ]]
     mkdir -p "$1/minestudio"
     ln -s "$MINESTUDIO_DIR/engine" "$1/minestudio/engine"
+    if [[ -n ${T1_LOCAL_DATABASE_ROOT:-} ]]; then
+        [[ $T1_LOCAL_DATABASE_ROOT == /dev/shm/minemem-t1-* ]]
+        database="$(mktemp -d "$T1_LOCAL_DATABASE_ROOT/eval-XXXXXXXX")"
+        ln -s "$database" "$1/minestudio/$(hostname)_tmp"
+    fi
     export MINESTUDIO_DIR="$1/minestudio" MESA_SHADER_CACHE_DIR="$1"
     cd "$1"
 }
@@ -64,18 +69,29 @@ case "${1:-}" in
         exec "$WORK/envs/mcvla-phase3/bin/python" -B -u \
             "$project/code/minemem/t1_train.py" --checkpoint "$WORK/models/JarvisVLA-Qwen2-VL-7B" "$@"
         ;;
-    eval)
-        gpu="$2"
-        output="$3"
-        shift 3
-        bind_gpu "$gpu"
+    eval|eval-cpu)
+        mode="$1"
+        if [[ $mode == eval ]]; then
+            gpu="$2"
+            output="$3"
+            shift 3
+            bind_gpu "$gpu"
+        else
+            output="$2"
+            shift 2
+            threads="${T1_CPU_THREADS:-16}"
+            [[ $threads =~ ^[1-9][0-9]?$ ]]
+            export OMP_NUM_THREADS="$threads" MKL_NUM_THREADS="$threads"
+            T1_LOCAL_DATABASE_ROOT="${T1_LOCAL_DATABASE_ROOT:-$(mktemp -d /dev/shm/minemem-t1-XXXXXXXX)}"
+            set -- --device cpu "$@"
+        fi
         simulator_dir "$output"
         exec xvfb-run -a -e "$output/xvfb.log" "$WORK/envs/mcvla-phase3/bin/python" -B -u \
             "$project/code/minemem/t1_trained_eval.py" --output "$output" \
             --checkpoint "$WORK/models/JarvisVLA-Qwen2-VL-7B" "$@"
         ;;
     *)
-        echo 'Usage: t1_exec.sh {pilot|protected-pilot|historical-pilot|death-replay} OUTPUT or {train GPU|eval GPU OUTPUT} [options]' >&2
+        echo 'Usage: t1_exec.sh {pilot|protected-pilot|historical-pilot|death-replay|eval-cpu} OUTPUT or {train GPU|eval GPU OUTPUT} [options]' >&2
         exit 2
         ;;
 esac

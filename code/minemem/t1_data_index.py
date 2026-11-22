@@ -8,13 +8,14 @@ from pathlib import Path
 from zipfile import ZipFile
 
 from t1_collect import HELD_OUT_QUOTAS, SPLITS, TRAIN_QUOTAS
+from t1_occlusion import SCREENED_PROTOCOL
 from t1_v4 import DISTANCES, PROTOCOL
 
 
 SMOKE_QUOTAS = {**dict.fromkeys(DISTANCES, 1050), "visible": 800}
 
 
-def read_episodes(roots):
+def read_episodes(roots, screened=False):
     records = []
     seed_ids = set()
     fingerprints = set()
@@ -29,7 +30,14 @@ def read_episodes(roots):
                 archive_path = path.parent / row["path"]
                 with ZipFile(archive_path) as archive:
                     meta = json.loads(archive.read("episode.json"))
-                    assert meta["scene"]["protocol"] == PROTOCOL
+                    scene = meta["scene"]
+                    screened_t1 = screened and row["group"] in DISTANCES
+                    expected = SCREENED_PROTOCOL if screened_t1 else PROTOCOL
+                    if scene["protocol"] != expected or (
+                        screened_t1 and (scene.get("screened_pillar") is not True
+                                         or scene.get("render_distance_chunks") != 4)
+                    ):
+                        raise ValueError(f"Unexpected scene protocol for {archive_path}")
                     assert meta["scene"]["scenario_seed"] == seed
                     assert meta["scene"]["world_seed"] == row["world_seed"]
                     assert meta["group"] == row["group"] and meta["split"] == row["split"]
@@ -77,8 +85,10 @@ def main():
     parser.add_argument("roots", type=Path, nargs="+")
     parser.add_argument("--frozen", type=Path, required=True)
     parser.add_argument("--smoke", action="store_true")
+    parser.add_argument("--screened", action="store_true",
+                        help="Use screened T1 trajectories alongside the visible-navigation cohort")
     args = parser.parse_args()
-    records = read_episodes(args.roots)
+    records = read_episodes(args.roots, screened=args.screened)
     frozen = json.loads(args.frozen.read_text())
     benchmark = set(frozen["pilot"]) | set(frozen["formal"])
     if benchmark & {row["scene_seed"] for row in records}:
@@ -110,6 +120,8 @@ def main():
                    captured_frames=dict(available), selected_frames=dict(totals),
                    supervised_frames=dict(labels), duplicate_seeds=0, duplicate_sequences=0,
                    frozen_overlap=0, frozen_world_overlap=0, split_world_overlap=0)
+    if args.screened:
+        summary["scene_protocols"] = {"t1": SCREENED_PROTOCOL, "visible_navigation": PROTOCOL}
     args.output.mkdir(parents=True, exist_ok=True)
     with (args.output / "dataset.jsonl").open("x") as stream:
         for row in selected:

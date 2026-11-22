@@ -10,6 +10,8 @@
 | [新版 T1 与阶段 3 报告](results/REPORT_phase3.md) | 随机终点、捷径复核、CPU 零样本试点、数据索引及三个 LoRA 变体 |
 | [T1 死亡与重生复核](results/REPORT_t1_respawn.md) | 重生负例、冻结教师与捷径验收、VPT-BC 轨迹复跑 |
 | [阶段 3 实机报告](results/REPORT_phase3_gpu.md) | 三组 BF16 训练与闭环、公开权重试点、5 格导航门槛与正式训练快照 |
+| [阶段 3 复核与重采集报告](results/REPORT_phase3_followup.md) | 四档可见性与捷径复核、第二版布景验收、重采集、正式训练快照 |
+| [第二版布景数据索引](results/data/t1-screened-hzw7nYp7) | 1,124 个回合的非图像元数据、采集日志与冻结索引校验 |
 | [新版轨迹元数据](results/data/t1-v4-L6ysa9jV/metadata) | 训练、验证与测试的 1,194 个原始回合的布景、位姿与动作 token |
 | [logs](logs) | Minecraft 进程原始日志 |
 | [BACKUP_MANIFEST.csv](BACKUP_MANIFEST.csv) | 文件大小及 SHA-256 |
@@ -270,3 +272,43 @@ envs/mcvla-phase1-vllm/bin/python code/minemem/t1_respawn_report.py trajectory \
 GPU 实验只使用 6、7 号卡。三个变体各完成 5,000 帧冒烟及闭环后，使用 protected-pilot 运行公开 JARVIS-VLA。训练模型的可见导航和正式评测使用新版保护布景，正式评测的 --acceptance 指向上方复核的布景目录。
 
 实际冒烟入口为 `t1_exec.sh train` 和 `t1_exec.sh eval --mode smoke`。对三个变体使用同一个冒烟索引，传入 `--variant no_memory`、`--variant long` 或 `--variant spatial`。每个变体训练一轮，进程预算为 3,600 秒。训练退出后用保存的训练目录作为 `--training-run`。视觉前向最多把三张图放在同一组，保留图像分辨率、完整历史和模型的注意力范围。闭环的 `decoded_steps` 统计含完整标签、合法控制码和两个相机轴的动作。[7B 实机记录](results/REPORT_phase3_gpu.md)
+
+## T1 可见性与导航对照
+
+`visibility` 在原冻结位姿上对 36 个朝向做有柱、无柱两次渲染。两次画面对齐后，用颜色掩码及像素差确认金块。教师首见统计使用同一路线的两次配对回放。扫视策略只接收 RGB 与自身步数，计分器另用位姿计算到达半径、死亡和跳变。
+
+~~~bash
+export WORK=/share/project/zhoubowen/zhy/zyf GPU_IDS=6,7
+cd "$WORK"
+export T1_LOCAL_DATABASE_ROOT="$(mktemp -d /dev/shm/minemem-t1-XXXXXXXX)"
+review="$(mktemp -d "$WORK/results/t1-review-XXXXXXXX")"
+fixtures="$WORK/results/t1-respawn-tTWwXxTb/verified-acceptance"
+seeds="$WORK/results/phase1_t1_seeds.json"
+bash code/minemem/t1_cpu.sh visibility "$review/visibility" 12 \
+  --fixtures "$fixtures" --seeds-file "$seeds"
+envs/mcvla/bin/python -B code/minemem/t1_shortcut_audit.py summary \
+  "$review/visibility_summary.json" --seeds-file "$seeds" \
+  --inputs "$review"/visibility/worker-*/visibility.csv
+bash code/minemem/t1_cpu.sh forward-control "$review/forward" 1
+~~~
+
+候选布景加 `--candidate`，在候选中验证金柱转角遮挡加 `--screened-pillar`。候选的 4 区块渲染距离只写入各自的实例配置。原布景复跑可用 `--case DISTANCE SEED` 只补缺失回合。SQLite 实例数据库可以通过上述环境变量置于本机临时文件系统，实验输出仍写入项目目录。
+
+重采集使用 `t1_cpu.sh collect` 的 `--screened`。索引同样加 `--screened`，分别校验新版 T1 场景和沿用协议标签的可见导航场景。
+
+~~~bash
+data="$WORK/data/t1-screened-hzw7nYp7"
+envs/mcvla/bin/python -B code/minemem/t1_data_index.py "$data/index-smoke" \
+  "$data/train" --frozen "$seeds" --screened --smoke
+envs/mcvla/bin/python -B code/minemem/t1_data_index.py "$data/index-full" \
+  "$data/train" "$data/validation" "$data/test" --frozen "$seeds" --screened
+~~~
+
+正式检查点保留最后一步，`t1_train.py --validate-every 500` 在冻结验证集上记录 `val_loss.csv`。验证按所有回程动作 token 加权，另保留整条动作完全匹配率。已保存的最后检查点可通过 `t1_validation.py` 独立验证。为早测两版导航，`t1_exec.sh eval-cpu` 支持 `--mode nav` 和 `--mode nav_offset`，同一 BF16 检查点在 CPU 以 FP32 执行。评测记录保存推理设备与精度。
+
+~~~bash
+envs/mcvla-phase1-vllm/bin/python -B code/minemem/t1_validation_plot.py \
+  "$review/val_loss.svg" --full "$WORK/results/phase3-7b-0tyjJU3p/full"
+~~~
+
+[可见性、对照与训练监控复核](results/REPORT_phase3_followup.md)

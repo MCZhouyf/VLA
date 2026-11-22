@@ -1,0 +1,130 @@
+{
+  "protocol": "t1_occlusion_candidate",
+  "scenario_seed": 2026112146,
+  "world_seed": 19961117,
+  "distance": 10,
+  "arena_origin": [
+    1634,
+    76,
+    -390
+  ],
+  "native_spawn": {
+    "x": 1634.5,
+    "y": 64.0,
+    "z": -389.5,
+    "pitch": 0.0,
+    "yaw": 0.0
+  },
+  "spawn": {
+    "x": 1632.5,
+    "y": 76.0,
+    "z": -391.5,
+    "pitch": 0.0,
+    "yaw": -45.0
+  },
+  "landmark": [
+    1634.5,
+    -389.5
+  ],
+  "distractors": [
+    {
+      "material": "iron_block",
+      "horizontal": [
+        1650.5,
+        -386.5
+      ]
+    },
+    {
+      "material": "lapis_block",
+      "horizontal": [
+        1614.5,
+        -386.5
+      ]
+    },
+    {
+      "material": "redstone_block",
+      "horizontal": [
+        1658.5,
+        -381.5
+      ]
+    }
+  ],
+  "wall": null,
+  "planned_endpoint": [
+    1634.5,
+    -379.5
+  ],
+  "waypoints": [
+    [
+      1627.5,
+      -384.5
+    ],
+    [
+      1627.5,
+      -381.5
+    ],
+    [
+      1634.5,
+      -379.5
+    ]
+  ],
+  "final_yaw": -100.24727577295437,
+  "outbound_dwell_steps": 40,
+  "final_facing_steps": 20,
+  "setup_revision": "remote_respawn_v1",
+  "protection_commands": [
+    "/gamerule doMobSpawning false",
+    "/kill @e[type=!player]",
+    "/time set day",
+    "/gamerule doDaylightCycle false",
+    "/gamerule doWeatherCycle false",
+    "/weather clear",
+    "/spawnpoint @p 2018 160 -6"
+  ],
+  "respawn_pad_commands": [
+    "/forceload add 2017 -7 2019 -5",
+    "/fill 2017 159 -7 2019 159 -5 minecraft:stone",
+    "/fill 2017 160 -7 2019 162 -5 minecraft:air"
+  ],
+  "respawn_point": [
+    2018,
+    160,
+    -6
+  ],
+  "optional_effects": false,
+  "render_distance_chunks": 4,
+  "occlusion_walls": [],
+  "screened_pillar": true,
+  "return_pose": {
+    "x": 1634.3152828158945,
+    "y": 76.0,
+    "z": -379.55804579461346,
+    "pitch": 0.0,
+    "yaw": -100.24728
+  },
+  "actual_distance": 9.94367003978445,
+  "path_len_out": 18.54641827947381,
+  "sampled_heading_offset": 78.68831603568668,
+  "actual_heading_separation": 78.68831180864106,
+  "teacher_targets": [
+    [
+      1634.5,
+      -389.5
+    ]
+  ],
+  "teacher_route_attempts": [
+    {
+      "success": true,
+      "steps": 42,
+      "final_dist": 2.8663181668847972,
+      "targets": [
+        [
+          1634.5,
+          -389.5
+        ]
+      ]
+    }
+  ],
+  "teacher_return_steps": 42,
+  "return_limit": 284
+}

@@ -1,0 +1,34 @@
+{
+  "episodes": 1041,
+  "selected_episodes": 41,
+  "captured_frames": {
+    "train/10": 29314,
+    "train/30": 38999,
+    "train/60": 28388,
+    "train/100": 40221,
+    "train/visible": 20506
+  },
+  "selected_frames": {
+    "train/10": 1050,
+    "train/30": 1050,
+    "train/60": 1050,
+    "train/100": 1050,
+    "train/visible": 800
+  },
+  "supervised_frames": {
+    "train/10": 182,
+    "train/30": 365,
+    "train/60": 400,
+    "train/100": 378,
+    "train/visible": 738
+  },
+  "duplicate_seeds": 0,
+  "duplicate_sequences": 0,
+  "frozen_overlap": 0,
+  "frozen_world_overlap": 0,
+  "split_world_overlap": 0,
+  "scene_protocols": {
+    "t1": "t1_occlusion_candidate",
+    "visible_navigation": "t1_v4"
+  }
+}

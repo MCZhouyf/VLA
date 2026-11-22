@@ -1,0 +1,273 @@
+{
+  "protocol": "t1_occlusion_candidate",
+  "scenario_seed": 2026112138,
+  "world_seed": 19961109,
+  "distance": 60,
+  "arena_origin": [
+    -586,
+    75,
+    6315
+  ],
+  "native_spawn": {
+    "x": -585.5,
+    "y": 63.0,
+    "z": 6315.5,
+    "pitch": 0.0,
+    "yaw": 0.0
+  },
+  "spawn": {
+    "x": -583.5,
+    "y": 75.0,
+    "z": 6317.5,
+    "pitch": 0.0,
+    "yaw": 135.0
+  },
+  "landmark": [
+    -585.5,
+    6315.5
+  ],
+  "distractors": [
+    {
+      "material": "iron_block",
+      "horizontal": [
+        -587.5,
+        6299.5
+      ]
+    },
+    {
+      "material": "lapis_block",
+      "horizontal": [
+        -641.5,
+        6335.5
+      ]
+    }
+  ],
+  "wall": [
+    -637,
+    75,
+    6309,
+    -637,
+    80,
+    6321
+  ],
+  "planned_endpoint": [
+    -645.5,
+    6315.5
+  ],
+  "waypoints": [
+    [
+      -578.5,
+      6317.5
+    ],
+    [
+      -578.5,
+      6322.7
+    ],
+    [
+      -638.5,
+      6322.7
+    ],
+    [
+      -645.5,
+      6315.5
+    ]
+  ],
+  "final_yaw": 29.87061942384173,
+  "outbound_dwell_steps": 40,
+  "final_facing_steps": 20,
+  "setup_revision": "remote_respawn_v1",
+  "protection_commands": [
+    "/gamerule doMobSpawning false",
+    "/kill @e[type=!player]",
+    "/time set day",
+    "/gamerule doDaylightCycle false",
+    "/gamerule doWeatherCycle false",
+    "/weather clear",
+    "/spawnpoint @p -202 160 6699"
+  ],
+  "respawn_pad_commands": [
+    "/forceload add -203 6698 -201 6700",
+    "/fill -203 159 6698 -201 159 6700 minecraft:stone",
+    "/fill -203 160 6698 -201 162 6700 minecraft:air"
+  ],
+  "respawn_point": [
+    -202,
+    160,
+    6699
+  ],
+  "optional_effects": false,
+  "render_distance_chunks": 4,
+  "occlusion_walls": [
+    [
+      -637,
+      75,
+      6309,
+      -637,
+      80,
+      6321
+    ],
+    [
+      -655,
+      75,
+      6309,
+      -655,
+      80,
+      6321
+    ],
+    [
+      -652,
+      75,
+      6305,
+      -640,
+      80,
+      6305
+    ],
+    [
+      -652,
+      75,
+      6324,
+      -640,
+      80,
+      6324
+    ]
+  ],
+  "screened_pillar": true,
+  "candidate_routes": [
+    [
+      [
+        -638.5,
+        6322.7
+      ],
+      [
+        -578.5,
+        6322.7
+      ],
+      [
+        -578.5,
+        6317.5
+      ],
+      [
+        -582.5,
+        6317.5
+      ],
+      [
+        -585.5,
+        6315.5
+      ]
+    ]
+  ],
+  "pillar_screen": [
+    [
+      -591,
+      75,
+      6310,
+      -581,
+      80,
+      6310
+    ],
+    [
+      -591,
+      75,
+      6320,
+      -581,
+      80,
+      6320
+    ],
+    [
+      -591,
+      75,
+      6310,
+      -591,
+      80,
+      6320
+    ],
+    [
+      -581,
+      75,
+      6310,
+      -581,
+      80,
+      6315
+    ],
+    [
+      -581,
+      75,
+      6319,
+      -581,
+      80,
+      6320
+    ],
+    [
+      -577,
+      75,
+      6310,
+      -577,
+      80,
+      6320
+    ]
+  ],
+  "return_pose": {
+    "x": -645.4275341816386,
+    "y": 75.0,
+    "z": 6315.574791773162,
+    "pitch": 0.0,
+    "yaw": 389.8706
+  },
+  "actual_distance": 59.92758085306631,
+  "path_len_out": 80.06231160064942,
+  "sampled_heading_offset": 119.94212663297567,
+  "actual_heading_separation": 119.94210720913395,
+  "teacher_targets": [
+    [
+      -638.5,
+      6322.7
+    ],
+    [
+      -578.5,
+      6322.7
+    ],
+    [
+      -578.5,
+      6317.5
+    ],
+    [
+      -582.5,
+      6317.5
+    ],
+    [
+      -585.5,
+      6315.5
+    ]
+  ],
+  "teacher_return_steps": 403,
+  "return_limit": 1006,
+  "teacher_route_attempts": [
+    {
+      "success": true,
+      "steps": 403,
+      "final_dist": 2.8749130803904173,
+      "targets": [
+        [
+          -638.5,
+          6322.7
+        ],
+        [
+          -578.5,
+          6322.7
+        ],
+        [
+          -578.5,
+          6317.5
+        ],
+        [
+          -582.5,
+          6317.5
+        ],
+        [
+          -585.5,
+          6315.5
+        ]
+      ]
+    }
+  ]
+}

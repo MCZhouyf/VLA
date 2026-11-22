@@ -1,0 +1,35 @@
+{
+  "30": {
+    "n": 30,
+    "any_visible": 4,
+    "visible_at_spawn_heading": 3,
+    "endpoint_pixel_quantiles": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      346.0
+    ],
+    "teacher_visible": 30,
+    "teacher_first_dist_quantiles": [
+      7.305970078971252,
+      7.306331118912762,
+      7.307086529513576,
+      7.3071629882040465,
+      29.92589686611843
+    ],
+    "scan_success": 0,
+    "scan_rate": 0.0,
+    "scan_ci95": [
+      0.0,
+      0.11351339317396876
+    ],
+    "deaths": 0,
+    "pose_jumps": 0,
+    "teacher_success": 30,
+    "mean_teacher_steps": 269.1333333333333,
+    "turn180_success": 0,
+    "turn180_deaths": 0,
+    "turn180_pose_jumps": 0
+  }
+}

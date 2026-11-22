@@ -12,7 +12,9 @@ case "$mode" in
     acceptance) entry=t1_v4.py ;;
     protected) entry=t1_respawn.py; entry_args=(acceptance) ;;
     collect) entry=t1_collect.py ;;
-    *) echo 'Usage: t1_cpu.sh {acceptance|protected|collect} OUTPUT WORKERS [options]' >&2; exit 2 ;;
+    visibility) entry=t1_shortcut_audit.py; entry_args=(audit) ;;
+    forward-control) entry=t1_shortcut_audit.py; entry_args=(navigation) ;;
+    *) echo 'Usage: t1_cpu.sh {acceptance|protected|collect|visibility|forward-control} OUTPUT WORKERS [options]' >&2; exit 2 ;;
 esac
 
 canonical="$MINESTUDIO_DIR"
@@ -27,6 +29,11 @@ for ((i=0; i<workers; i++)); do
     worker="$(printf '%s/worker-%03d' "$output" "$i")"
     mkdir -p "$worker/minestudio"
     ln -s "$canonical/engine" "$worker/minestudio/engine"
+    if [[ -n ${T1_LOCAL_DATABASE_ROOT:-} ]]; then
+        [[ $T1_LOCAL_DATABASE_ROOT == /dev/shm/minemem-t1-* ]]
+        database="$(mktemp -d "$T1_LOCAL_DATABASE_ROOT/worker-XXXXXXXX")"
+        ln -s "$database" "$worker/minestudio/$(hostname)_tmp"
+    fi
     (
         export MINESTUDIO_DIR="$worker/minestudio" MESA_SHADER_CACHE_DIR="$worker"
         cd "$worker"

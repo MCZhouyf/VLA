@@ -1,0 +1,114 @@
+{
+  "10": {
+    "n": 30,
+    "any_visible": 30,
+    "visible_at_spawn_heading": 0,
+    "endpoint_pixel_quantiles": [
+      4273.0,
+      5621.75,
+      6006.5,
+      6239.5,
+      6983.0
+    ],
+    "teacher_visible": 30,
+    "teacher_first_dist_quantiles": [
+      9.885711556318165,
+      9.93620040251895,
+      9.944522089277593,
+      9.98301698973066,
+      10.024160850581433
+    ],
+    "scan_success": 30,
+    "scan_rate": 1.0,
+    "scan_ci95": [
+      0.8864866068260312,
+      1.0
+    ],
+    "deaths": 0,
+    "pose_jumps": 0
+  },
+  "30": {
+    "n": 30,
+    "any_visible": 0,
+    "visible_at_spawn_heading": 0,
+    "endpoint_pixel_quantiles": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "teacher_visible": 30,
+    "teacher_first_dist_quantiles": [
+      17.74569966483777,
+      17.81481600919371,
+      17.82886708439925,
+      17.846280704865713,
+      17.99982122654697
+    ],
+    "scan_success": 13,
+    "scan_rate": 0.43333333333333335,
+    "scan_ci95": [
+      0.2737748557646652,
+      0.6080269299918639
+    ],
+    "deaths": 0,
+    "pose_jumps": 0
+  },
+  "60": {
+    "n": 30,
+    "any_visible": 0,
+    "visible_at_spawn_heading": 0,
+    "endpoint_pixel_quantiles": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "teacher_visible": 30,
+    "teacher_first_dist_quantiles": [
+      34.335384406051,
+      34.413709185569175,
+      34.45956028209661,
+      34.68291349129959,
+      34.77721610607473
+    ],
+    "scan_success": 10,
+    "scan_rate": 0.3333333333333333,
+    "scan_ci95": [
+      0.19230498083676134,
+      0.5121994835545616
+    ],
+    "deaths": 0,
+    "pose_jumps": 0
+  },
+  "100": {
+    "n": 30,
+    "any_visible": 0,
+    "visible_at_spawn_heading": 0,
+    "endpoint_pixel_quantiles": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "teacher_visible": 30,
+    "teacher_first_dist_quantiles": [
+      56.71062327216207,
+      56.89284310010289,
+      57.1623266953746,
+      57.30146612727307,
+      57.3832853047555
+    ],
+    "scan_success": 6,
+    "scan_rate": 0.2,
+    "scan_ci95": [
+      0.0950510717728987,
+      0.3730569641314825
+    ],
+    "deaths": 0,
+    "pose_jumps": 0
+  }
+}

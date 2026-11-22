@@ -1,0 +1,9 @@
+Screened CPU acceptance passed {30: 0, 60: 0, 100: 0}
+Traceback (most recent call last):
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_data_index.py", line 122, in <module>
+    main()
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_data_index.py", line 81, in main
+    records = read_episodes(args.roots)
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_data_index.py", line 32, in read_episodes
+    assert meta["scene"]["protocol"] == PROTOCOL
+AssertionError

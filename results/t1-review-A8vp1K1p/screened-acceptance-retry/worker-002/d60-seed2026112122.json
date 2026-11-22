@@ -1,0 +1,273 @@
+{
+  "protocol": "t1_occlusion_candidate",
+  "scenario_seed": 2026112122,
+  "world_seed": 19961125,
+  "distance": 60,
+  "arena_origin": [
+    -5118,
+    78,
+    3482
+  ],
+  "native_spawn": {
+    "x": -5117.5,
+    "y": 66.0,
+    "z": 3482.5,
+    "pitch": 0.0,
+    "yaw": 0.0
+  },
+  "spawn": {
+    "x": -5119.5,
+    "y": 78.0,
+    "z": 3484.5,
+    "pitch": 0.0,
+    "yaw": -135.0
+  },
+  "landmark": [
+    -5117.5,
+    3482.5
+  ],
+  "distractors": [
+    {
+      "material": "iron_block",
+      "horizontal": [
+        -5101.5,
+        3468.5
+      ]
+    },
+    {
+      "material": "lapis_block",
+      "horizontal": [
+        -5137.5,
+        3457.5
+      ]
+    }
+  ],
+  "wall": [
+    -5124,
+    78,
+    3432,
+    -5112,
+    83,
+    3432
+  ],
+  "planned_endpoint": [
+    -5117.5,
+    3422.5
+  ],
+  "waypoints": [
+    [
+      -5119.5,
+      3489.5
+    ],
+    [
+      -5124.7,
+      3489.5
+    ],
+    [
+      -5124.7,
+      3430.5
+    ],
+    [
+      -5117.5,
+      3422.5
+    ]
+  ],
+  "final_yaw": 132.28382575457954,
+  "outbound_dwell_steps": 40,
+  "final_facing_steps": 20,
+  "setup_revision": "remote_respawn_v1",
+  "protection_commands": [
+    "/gamerule doMobSpawning false",
+    "/kill @e[type=!player]",
+    "/time set day",
+    "/gamerule doDaylightCycle false",
+    "/gamerule doWeatherCycle false",
+    "/weather clear",
+    "/spawnpoint @p -4734 160 3866"
+  ],
+  "respawn_pad_commands": [
+    "/forceload add -4735 3865 -4733 3867",
+    "/fill -4735 159 3865 -4733 159 3867 minecraft:stone",
+    "/fill -4735 160 3865 -4733 162 3867 minecraft:air"
+  ],
+  "respawn_point": [
+    -4734,
+    160,
+    3866
+  ],
+  "optional_effects": false,
+  "render_distance_chunks": 4,
+  "occlusion_walls": [
+    [
+      -5124,
+      78,
+      3432,
+      -5112,
+      83,
+      3432
+    ],
+    [
+      -5124,
+      78,
+      3413,
+      -5112,
+      83,
+      3413
+    ],
+    [
+      -5108,
+      78,
+      3416,
+      -5108,
+      83,
+      3428
+    ],
+    [
+      -5128,
+      78,
+      3416,
+      -5128,
+      83,
+      3428
+    ]
+  ],
+  "screened_pillar": true,
+  "candidate_routes": [
+    [
+      [
+        -5124.7,
+        3430.5
+      ],
+      [
+        -5124.7,
+        3489.5
+      ],
+      [
+        -5119.5,
+        3489.5
+      ],
+      [
+        -5119.5,
+        3485.5
+      ],
+      [
+        -5117.5,
+        3482.5
+      ]
+    ]
+  ],
+  "pillar_screen": [
+    [
+      -5113,
+      78,
+      3477,
+      -5113,
+      83,
+      3487
+    ],
+    [
+      -5123,
+      78,
+      3477,
+      -5123,
+      83,
+      3487
+    ],
+    [
+      -5123,
+      78,
+      3477,
+      -5113,
+      83,
+      3477
+    ],
+    [
+      -5118,
+      78,
+      3487,
+      -5113,
+      83,
+      3487
+    ],
+    [
+      -5123,
+      78,
+      3487,
+      -5122,
+      83,
+      3487
+    ],
+    [
+      -5123,
+      78,
+      3491,
+      -5113,
+      83,
+      3491
+    ]
+  ],
+  "return_pose": {
+    "x": -5117.51316101872,
+    "y": 78.0,
+    "z": 3422.514679715422,
+    "pitch": 0.0,
+    "yaw": 132.28383
+  },
+  "actual_distance": 59.98532172836794,
+  "path_len_out": 79.84754772307507,
+  "sampled_heading_offset": 132.29639667711643,
+  "actual_heading_separation": 132.29640092253692,
+  "teacher_targets": [
+    [
+      -5124.7,
+      3430.5
+    ],
+    [
+      -5124.7,
+      3489.5
+    ],
+    [
+      -5119.5,
+      3489.5
+    ],
+    [
+      -5119.5,
+      3485.5
+    ],
+    [
+      -5117.5,
+      3482.5
+    ]
+  ],
+  "teacher_return_steps": 404,
+  "return_limit": 1008,
+  "teacher_route_attempts": [
+    {
+      "success": true,
+      "steps": 404,
+      "final_dist": 2.8773650094891816,
+      "targets": [
+        [
+          -5124.7,
+          3430.5
+        ],
+        [
+          -5124.7,
+          3489.5
+        ],
+        [
+          -5119.5,
+          3489.5
+        ],
+        [
+          -5119.5,
+          3485.5
+        ],
+        [
+          -5117.5,
+          3482.5
+        ]
+      ]
+    }
+  ]
+}

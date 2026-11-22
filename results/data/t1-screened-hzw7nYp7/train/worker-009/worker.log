@@ -1,0 +1,58 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+[00:12:09] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[00:12:09] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+INFO: Starting Minecraft process with device: cpu
+ERROR:minestudio.simulator.minerl.env.malmo.instance.60331b:[00:12:52] [Render thread/WARN]: ERROR : Couldn't load Narrator library : Unable to load library 'fliteWrapper': Can't obtain InputStream for linux-x86-64/libfliteWrapper.so
+ERROR:minestudio.simulator.minerl.env.malmo.instance.60331b:[00:12:52] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: null
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+ERROR:minestudio.simulator.minerl.env.malmo.instance.60331b:[00:15:15] [Worker-Main-3/ERROR]: Using missing texture, unable to load minecraft:optifine/ctm/default/empty.png : java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png
+ERROR:minestudio.simulator.minerl.env.malmo.instance.60331b:[00:15:28] [Render thread/ERROR]: Error starting SoundSystem. Turning off sounds & music
+ERROR:minestudio.simulator.minerl.env.malmo.instance.60331b:java.lang.IllegalStateException: Failed to open OpenAL device
+WARNING:minestudio.simulator.minerl.env.malmo.instance.60331b:[00:15:29] [Render thread/WARN]: [OptiFine] Missing CTM sprite: minecraft:optifine/ctm/default/empty
+WARNING:minestudio.simulator.minerl.env.malmo.instance.60331b:[00:15:32] [Render thread/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.60331b:[00:15:32] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.60331b:[00:15:32] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.60331b:[00:15:32] [Render thread/WARN]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.60331b:[00:15:32] [Render thread/WARN]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.60331b:[00:15:57] [Render thread/WARN]: Failed to load texture: minecraft:optifine/ctm/default/empty.png
+ERROR:minestudio.simulator.minerl.env.malmo.instance.60331b:java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png
+{"path": "episode-2030019000.zip", "scene_seed": 2030019000, "world_seed": 20710109, "split": "train", "group": 10, "frames": 230, "outbound_frames": 181, "return_frames": 49}
+{"path": "episode-2030019001.zip", "scene_seed": 2030019001, "world_seed": 20710109, "split": "train", "group": 30, "frames": 608, "outbound_frames": 349, "return_frames": 259}
+{"path": "episode-2030019002.zip", "scene_seed": 2030019002, "world_seed": 20710109, "split": "train", "group": 60, "frames": 886, "outbound_frames": 478, "return_frames": 408}
+{"path": "episode-2030019003.zip", "scene_seed": 2030019003, "world_seed": 20710109, "split": "train", "group": 100, "frames": 1257, "outbound_frames": 666, "return_frames": 591}
+{"path": "episode-2030019004.zip", "scene_seed": 2030019004, "world_seed": 20710109, "split": "train", "group": "visible", "frames": 36, "outbound_frames": 2, "return_frames": 34}
+{"path": "episode-2030019005.zip", "scene_seed": 2030019005, "world_seed": 20710109, "split": "train", "group": 10, "frames": 229, "outbound_frames": 179, "return_frames": 50}
+{"path": "episode-2030019006.zip", "scene_seed": 2030019006, "world_seed": 20710109, "split": "train", "group": 30, "frames": 610, "outbound_frames": 350, "return_frames": 260}
+{"path": "episode-2030019007.zip", "scene_seed": 2030019007, "world_seed": 20710109, "split": "train", "group": "visible", "frames": 28, "outbound_frames": 2, "return_frames": 26}
+{"path": "episode-2030019008.zip", "scene_seed": 2030019008, "world_seed": 20710109, "split": "train", "group": 10, "frames": 234, "outbound_frames": 184, "return_frames": 50}
+{"path": "episode-2030019009.zip", "scene_seed": 2030019009, "world_seed": 20710109, "split": "train", "group": "visible", "frames": 27, "outbound_frames": 2, "return_frames": 25}
+{"path": "episode-2030019010.zip", "scene_seed": 2030019010, "world_seed": 20710109, "split": "train", "group": 10, "frames": 238, "outbound_frames": 189, "return_frames": 49}
+{"path": "episode-2030019011.zip", "scene_seed": 2030019011, "world_seed": 20710109, "split": "train", "group": "visible", "frames": 13, "outbound_frames": 2, "return_frames": 11}
+{"path": "episode-2030019012.zip", "scene_seed": 2030019012, "world_seed": 20710109, "split": "train", "group": "visible", "frames": 14, "outbound_frames": 2, "return_frames": 12}
+{"path": "episode-2030019013.zip", "scene_seed": 2030019013, "world_seed": 20710109, "split": "train", "group": "visible", "frames": 15, "outbound_frames": 2, "return_frames": 13}
+{"path": "episode-2030019014.zip", "scene_seed": 2030019014, "world_seed": 20710109, "split": "train", "group": "visible", "frames": 37, "outbound_frames": 2, "return_frames": 35}
+{"path": "episode-2030019015.zip", "scene_seed": 2030019015, "world_seed": 20710109, "split": "train", "group": "visible", "frames": 32, "outbound_frames": 2, "return_frames": 30}
+{"path": "episode-2030019016.zip", "scene_seed": 2030019016, "world_seed": 20710109, "split": "train", "group": "visible", "frames": 39, "outbound_frames": 2, "return_frames": 37}
+{"path": "episode-2030019017.zip", "scene_seed": 2030019017, "world_seed": 20710109, "split": "train", "group": "visible", "frames": 25, "outbound_frames": 2, "return_frames": 23}
+{"path": "episode-2030019018.zip", "scene_seed": 2030019018, "world_seed": 20710109, "split": "train", "group": "visible", "frames": 34, "outbound_frames": 2, "return_frames": 32}
+{"path": "episode-2030019019.zip", "scene_seed": 2030019019, "world_seed": 20710109, "split": "train", "group": "visible", "frames": 25, "outbound_frames": 2, "return_frames": 23}
+{"path": "episode-2030019020.zip", "scene_seed": 2030019020, "world_seed": 20710109, "split": "train", "group": "visible", "frames": 25, "outbound_frames": 2, "return_frames": 23}
+{"path": "episode-2030019021.zip", "scene_seed": 2030019021, "world_seed": 20710109, "split": "train", "group": "visible", "frames": 31, "outbound_frames": 2, "return_frames": 29}
+{"path": "episode-2030019022.zip", "scene_seed": 2030019022, "world_seed": 20710109, "split": "train", "group": "visible", "frames": 22, "outbound_frames": 2, "return_frames": 20}
+{"path": "episode-2030019023.zip", "scene_seed": 2030019023, "world_seed": 20710109, "split": "train", "group": "visible", "frames": 33, "outbound_frames": 2, "return_frames": 31}
+{"path": "episode-2030019024.zip", "scene_seed": 2030019024, "world_seed": 20710109, "split": "train", "group": "visible", "frames": 22, "outbound_frames": 2, "return_frames": 20}
+{"path": "episode-2030019025.zip", "scene_seed": 2030019025, "world_seed": 20710109, "split": "train", "group": "visible", "frames": 21, "outbound_frames": 2, "return_frames": 19}
+{"path": "episode-2030019026.zip", "scene_seed": 2030019026, "world_seed": 20710109, "split": "train", "group": "visible", "frames": 37, "outbound_frames": 2, "return_frames": 35}
+{"path": "episode-2030019027.zip", "scene_seed": 2030019027, "world_seed": 20710109, "split": "train", "group": "visible", "frames": 18, "outbound_frames": 2, "return_frames": 16}
+{"path": "episode-2030019028.zip", "scene_seed": 2030019028, "world_seed": 20710109, "split": "train", "group": "visible", "frames": 24, "outbound_frames": 2, "return_frames": 22}
+{"path": "episode-2030019029.zip", "scene_seed": 2030019029, "world_seed": 20710109, "split": "train", "group": "visible", "frames": 32, "outbound_frames": 2, "return_frames": 30}
+{"path": "episode-2030019030.zip", "scene_seed": 2030019030, "world_seed": 20710109, "split": "train", "group": "visible", "frames": 29, "outbound_frames": 2, "return_frames": 27}
+{"path": "episode-2030019031.zip", "scene_seed": 2030019031, "world_seed": 20710109, "split": "train", "group": "visible", "frames": 28, "outbound_frames": 2, "return_frames": 26}

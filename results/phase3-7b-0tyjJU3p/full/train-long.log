@@ -181,3 +181,87 @@ update=1700 samples=6800 loss=0.08210
 update=1710 samples=6840 loss=0.38451
 update=1720 samples=6880 loss=0.00299
 update=1730 samples=6920 loss=0.00164
+update=1740 samples=6960 loss=0.00220
+update=1750 samples=7000 loss=0.01079
+update=1760 samples=7040 loss=0.00171
+update=1770 samples=7080 loss=0.00123
+update=1780 samples=7120 loss=0.00120
+update=1790 samples=7160 loss=0.00089
+update=1800 samples=7200 loss=0.00091
+update=1810 samples=7240 loss=0.00155
+update=1820 samples=7280 loss=0.00179
+update=1830 samples=7320 loss=0.00092
+update=1840 samples=7360 loss=0.00074
+update=1850 samples=7400 loss=0.00061
+update=1860 samples=7440 loss=0.00055
+update=1870 samples=7480 loss=0.00051
+update=1880 samples=7520 loss=0.00047
+update=1890 samples=7560 loss=0.00046
+update=1900 samples=7600 loss=0.00159
+update=1910 samples=7640 loss=0.26460
+update=1920 samples=7680 loss=0.00680
+update=1930 samples=7720 loss=0.00273
+update=1940 samples=7760 loss=0.00093
+update=1950 samples=7800 loss=0.00055
+update=1960 samples=7840 loss=0.10841
+update=1970 samples=7880 loss=0.00229
+update=1980 samples=7920 loss=0.00234
+update=1990 samples=7960 loss=0.19041
+update=2000 samples=8000 loss=0.00104
+update=2010 samples=8040 loss=0.00074
+update=2020 samples=8080 loss=0.00052
+update=2030 samples=8120 loss=0.01916
+update=2040 samples=8160 loss=0.00076
+update=2050 samples=8200 loss=0.00270
+update=2060 samples=8240 loss=0.00057
+update=2070 samples=8280 loss=0.36125
+update=2080 samples=8320 loss=0.07630
+update=2090 samples=8360 loss=0.00213
+update=2100 samples=8400 loss=0.00138
+update=2110 samples=8440 loss=0.57836
+update=2120 samples=8480 loss=0.18270
+update=2130 samples=8520 loss=0.05147
+update=2140 samples=8560 loss=0.00089
+update=2150 samples=8600 loss=0.00103
+update=2160 samples=8640 loss=0.00232
+update=2170 samples=8680 loss=0.00083
+update=2180 samples=8720 loss=0.22415
+update=2190 samples=8760 loss=0.05326
+update=2200 samples=8800 loss=0.00101
+update=2210 samples=8840 loss=0.00087
+update=2220 samples=8880 loss=0.00116
+update=2230 samples=8920 loss=0.00210
+update=2240 samples=8960 loss=0.00119
+update=2250 samples=9000 loss=0.00084
+update=2260 samples=9040 loss=0.00062
+update=2270 samples=9080 loss=0.01544
+update=2280 samples=9120 loss=0.01086
+update=2290 samples=9160 loss=0.00370
+update=2300 samples=9200 loss=0.00194
+update=2310 samples=9240 loss=0.00877
+update=2320 samples=9280 loss=0.02893
+update=2330 samples=9320 loss=0.00457
+update=2340 samples=9360 loss=0.00184
+update=2350 samples=9400 loss=0.00255
+update=2360 samples=9440 loss=0.01073
+update=2370 samples=9480 loss=0.00420
+update=2380 samples=9520 loss=0.00464
+update=2390 samples=9560 loss=0.03248
+update=2400 samples=9600 loss=0.09460
+update=2410 samples=9640 loss=0.00253
+update=2420 samples=9680 loss=0.00840
+update=2430 samples=9720 loss=0.00439
+update=2440 samples=9760 loss=0.00277
+update=2450 samples=9800 loss=0.00206
+Traceback (most recent call last):
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_train.py", line 168, in <module>
+    first = last
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_train.py", line 164, in main
+    optimizer.zero_grad(set_to_none=True)
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_train.py", line 97, in train
+    dataset = [row for row in rows if row["split"] == "train" and row["selected_labels"] > 0]
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_train.py", line 32, in case_examples
+    
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/zipfile.py", line 1296, in __init__
+    self.fp = io.open(file, filemode)
+TimeoutError: [Errno 110] Connection timed out: '/share/project/zhoubowen/zhy/zyf/data/t1-v4-L6ysa9jV/train/worker-007/episode-2030017031.zip'

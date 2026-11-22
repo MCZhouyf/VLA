@@ -1,0 +1,92 @@
+{
+  "protocol": "t1_v4",
+  "scenario_seed": 2026112109,
+  "world_seed": 19961112,
+  "distance": 10,
+  "arena_origin": [
+    5538,
+    82,
+    5082
+  ],
+  "native_spawn": {
+    "x": 5538.5,
+    "y": 70.0,
+    "z": 5082.5,
+    "pitch": 0.0,
+    "yaw": 0.0
+  },
+  "spawn": {
+    "x": 5540.5,
+    "y": 82.0,
+    "z": 5080.5,
+    "pitch": 0.0,
+    "yaw": 45.0
+  },
+  "landmark": [
+    5538.5,
+    5082.5
+  ],
+  "distractors": [
+    {
+      "material": "iron_block",
+      "horizontal": [
+        5522.5,
+        5087.5
+      ]
+    },
+    {
+      "material": "lapis_block",
+      "horizontal": [
+        5558.5,
+        5089.5
+      ]
+    }
+  ],
+  "wall": null,
+  "planned_endpoint": [
+    5538.5,
+    5092.5
+  ],
+  "waypoints": [
+    [
+      5547.5,
+      5087.5
+    ],
+    [
+      5538.5,
+      5092.5
+    ]
+  ],
+  "final_yaw": 0.0,
+  "outbound_dwell_steps": 40,
+  "final_facing_steps": 20,
+  "setup_revision": "remote_respawn_v1",
+  "protection_commands": [
+    "/gamerule doMobSpawning false",
+    "/kill @e[type=!player]",
+    "/time set day",
+    "/gamerule doDaylightCycle false",
+    "/gamerule doWeatherCycle false",
+    "/weather clear",
+    "/spawnpoint @p 5922 160 5466"
+  ],
+  "respawn_pad_commands": [
+    "/forceload add 5921 5465 5923 5467",
+    "/fill 5921 159 5465 5923 159 5467 minecraft:stone",
+    "/fill 5921 160 5465 5923 162 5467 minecraft:air"
+  ],
+  "respawn_point": [
+    5922,
+    160,
+    5466
+  ],
+  "optional_effects": false,
+  "return_pose": {
+    "x": 5538.591623476898,
+    "y": 82.0,
+    "z": 5092.444099868537,
+    "pitch": 0.0,
+    "yaw": -19.825188
+  },
+  "return_limit": 300
+}

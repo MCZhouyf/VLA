@@ -1,0 +1,69 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+[22:52:10] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[22:52:10] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+INFO: Starting Minecraft process with device: cpu
+ERROR:minestudio.simulator.minerl.env.malmo.instance.e14d21:[22:52:31] [Render thread/WARN]: ERROR : Couldn't load Narrator library : Unable to load library 'fliteWrapper': Can't obtain InputStream for linux-x86-64/libfliteWrapper.so
+ERROR:minestudio.simulator.minerl.env.malmo.instance.e14d21:[22:52:31] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: null
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+ERROR:minestudio.simulator.minerl.env.malmo.instance.e14d21:[22:52:51] [Worker-Main-3/ERROR]: Using missing texture, unable to load minecraft:optifine/ctm/default/empty.png : java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png
+ERROR:minestudio.simulator.minerl.env.malmo.instance.e14d21:[22:52:53] [Render thread/ERROR]: Error starting SoundSystem. Turning off sounds & music
+ERROR:minestudio.simulator.minerl.env.malmo.instance.e14d21:java.lang.IllegalStateException: Failed to open OpenAL device
+WARNING:minestudio.simulator.minerl.env.malmo.instance.e14d21:[22:52:53] [Render thread/WARN]: [OptiFine] Missing CTM sprite: minecraft:optifine/ctm/default/empty
+WARNING:minestudio.simulator.minerl.env.malmo.instance.e14d21:[22:52:56] [Render thread/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.e14d21:[22:52:56] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.e14d21:[22:52:56] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.e14d21:[22:52:56] [Render thread/WARN]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.e14d21:[22:52:56] [Render thread/WARN]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.e14d21:[22:53:25] [Render thread/WARN]: Failed to load texture: minecraft:optifine/ctm/default/empty.png
+ERROR:minestudio.simulator.minerl.env.malmo.instance.e14d21:java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png
+10 2026112131 6411  {'success': True, 'steps': 80, 'min_dist': 2.8458067965657685, 'deaths': 0, 'pose_jumps': 0, 'end_reason': 'reached'}
+30 2026112131 0  {'success': False, 'steps': 728, 'min_dist': 16.591683141345076, 'deaths': 0, 'pose_jumps': 0, 'end_reason': 'budget'}
+60 2026112131 0  {'success': False, 'steps': 1004, 'min_dist': 52.20587975008444, 'deaths': 0, 'pose_jumps': 0, 'end_reason': 'budget'}
+100 2026112131 0  {'success': False, 'steps': 1396, 'min_dist': 100.0556408285874, 'deaths': 0, 'pose_jumps': 0, 'end_reason': 'budget'}
+[23:01:12] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[23:01:12] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+INFO: Starting Minecraft process with device: cpu
+ERROR:minestudio.simulator.minerl.env.malmo.instance.f71f39:[23:01:31] [Render thread/WARN]: ERROR : Couldn't load Narrator library : Unable to load library 'fliteWrapper': Can't obtain InputStream for linux-x86-64/libfliteWrapper.so
+ERROR:minestudio.simulator.minerl.env.malmo.instance.f71f39:[23:01:31] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: null
+ERROR:minestudio.simulator.minerl.env.malmo.instance.f71f39:[23:01:36] [Worker-Main-3/ERROR]: Using missing texture, unable to load minecraft:optifine/ctm/default/empty.png : java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png
+ERROR:minestudio.simulator.minerl.env.malmo.instance.f71f39:[23:01:37] [Render thread/ERROR]: Error starting SoundSystem. Turning off sounds & music
+ERROR:minestudio.simulator.minerl.env.malmo.instance.f71f39:java.lang.IllegalStateException: Failed to open OpenAL device
+WARNING:minestudio.simulator.minerl.env.malmo.instance.f71f39:[23:01:37] [Render thread/WARN]: [OptiFine] Missing CTM sprite: minecraft:optifine/ctm/default/empty
+WARNING:minestudio.simulator.minerl.env.malmo.instance.f71f39:[23:01:40] [Render thread/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.f71f39:[23:01:40] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.f71f39:[23:01:40] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.f71f39:[23:01:40] [Render thread/WARN]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.f71f39:[23:01:40] [Render thread/WARN]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.f71f39:[23:02:04] [Render thread/WARN]: Failed to load texture: minecraft:optifine/ctm/default/empty.png
+ERROR:minestudio.simulator.minerl.env.malmo.instance.f71f39:java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png
+10 2026112139 6498  {'success': True, 'steps': 84, 'min_dist': 2.8884405782112306, 'deaths': 0, 'pose_jumps': 0, 'end_reason': 'reached'}
+30 2026112139 0  {'success': False, 'steps': 744, 'min_dist': 12.662877750920599, 'deaths': 0, 'pose_jumps': 0, 'end_reason': 'budget'}
+60 2026112139 0  {'success': False, 'steps': 1008, 'min_dist': 19.56075891265567, 'deaths': 0, 'pose_jumps': 0, 'end_reason': 'budget'}
+Traceback (most recent call last):
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_shortcut_audit.py", line 520, in <module>
+    main()
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_shortcut_audit.py", line 516, in main
+    {"audit":audit, "navigation":navigation, "summary":summarize}[args.mode](args)
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_shortcut_audit.py", line 348, in audit
+    with arena.track(StepTrace(args.output/f"{key}-outbound.csv.gz")):
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/contextlib.py", line 142, in __exit__
+    next(self.gen)
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_safety.py", line 148, in track
+    trace.write()
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_safety.py", line 82, in write
+    with gzip.open(self.path, "xt", newline="", encoding="utf-8") as stream:
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/gzip.py", line 58, in open
+    binary_file = GzipFile(filename, gz_mode, compresslevel)
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/gzip.py", line 174, in __init__
+    fileobj = self.myfileobj = builtins.open(filename, mode or 'rb')
+TimeoutError: [Errno 110] Connection timed out: '/share/project/zhoubowen/zhy/zyf/results/t1-review-A8vp1K1p/screened-acceptance-retry-failed-lanes/worker-007/d100-seed2026112139-outbound.csv.gz'

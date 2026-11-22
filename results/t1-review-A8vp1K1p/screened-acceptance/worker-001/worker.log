@@ -1,0 +1,52 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+[22:07:42] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[22:07:42] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+INFO: Starting Minecraft process with device: cpu
+ERROR:minestudio.simulator.minerl.env.malmo.instance.250cb5:[22:08:03] [Render thread/WARN]: ERROR : Couldn't load Narrator library : Unable to load library 'fliteWrapper': Can't obtain InputStream for linux-x86-64/libfliteWrapper.so
+ERROR:minestudio.simulator.minerl.env.malmo.instance.250cb5:[22:08:03] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: null
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+ERROR:minestudio.simulator.minerl.env.malmo.instance.250cb5:[22:08:47] [Worker-Main-3/ERROR]: Using missing texture, unable to load minecraft:optifine/ctm/default/empty.png : java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png
+ERROR:minestudio.simulator.minerl.env.malmo.instance.250cb5:[22:08:52] [Render thread/ERROR]: Error starting SoundSystem. Turning off sounds & music
+ERROR:minestudio.simulator.minerl.env.malmo.instance.250cb5:java.lang.IllegalStateException: Failed to open OpenAL device
+WARNING:minestudio.simulator.minerl.env.malmo.instance.250cb5:[22:08:52] [Render thread/WARN]: [OptiFine] Missing CTM sprite: minecraft:optifine/ctm/default/empty
+WARNING:minestudio.simulator.minerl.env.malmo.instance.250cb5:[22:08:56] [Render thread/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.250cb5:[22:08:56] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.250cb5:[22:08:56] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.250cb5:[22:08:56] [Render thread/WARN]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.250cb5:[22:08:56] [Render thread/WARN]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.250cb5:[22:09:22] [Render thread/WARN]: Failed to load texture: minecraft:optifine/ctm/default/empty.png
+ERROR:minestudio.simulator.minerl.env.malmo.instance.250cb5:java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png
+10 2026112101 5772 9.88571155631828 {'success': True, 'steps': 86, 'min_dist': 2.8079732818705385, 'deaths': 0, 'pose_jumps': 0, 'end_reason': 'reached'}
+30 2026112101 0 7.306132993562713 {'success': False, 'steps': 738, 'min_dist': 9.998255659813513, 'deaths': 0, 'pose_jumps': 0, 'end_reason': 'budget'}
+Traceback (most recent call last):
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_shortcut_audit.py", line 464, in <module>
+    raise ValueError("Paired teacher visibility cohort is incomplete")
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_shortcut_audit.py", line 460, in main
+    vision = ("any_visible","first_heading_pixels","max_gold_pixels","visible_headings")
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_shortcut_audit.py", line 335, in audit
+    "max_gold_pixels","visible_headings","teacher_first_step","teacher_first_dist",
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_shortcut_audit.py", line 252, in teacher_visibility
+    if self.observe_return:
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_shortcut_audit.py", line 239, in replay
+    return gold_pixels(present,arena.info["pov"],coordinates(config["return_pose"]),box)
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_safety.py", line 164, in follow_return
+    return super().follow_return(targets, distance)
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/phase1_t1.py", line 306, in follow_return
+    count, reached, _ = self.drive(target, SUCCESS_RADIUS if final else POINT_TOLERANCE,
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/phase1_t1.py", line 230, in drive
+    self.teacher_step(max(-10, min(10, error)), forward,
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/phase1_t1.py", line 199, in teacher_step
+    self.tick(action)
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_shortcut_audit.py", line 205, in tick
+    arena.fill(*pillar, "air")
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_shortcut_audit.py", line 221, in record_visibility
+    
+RuntimeError: Teacher ablation pose mismatch at step 70

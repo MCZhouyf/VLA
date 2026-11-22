@@ -16,22 +16,25 @@ LORA_TARGETS = (
 
 
 class T1Policy(nn.Module):
-    def __init__(self, checkpoint, variant, quantized=False, adapter=None, training=False):
+    def __init__(self, checkpoint, variant, quantized=False, adapter=None, training=False,
+                 device="cuda", dtype=torch.bfloat16):
         super().__init__()
         from jarvisvla.inference.action_mapping import OneActionTokenizer
         from jarvisvla.inference.processor_wrapper import ProcessorWrapper
         from peft import LoraConfig, PeftModel, get_peft_model, prepare_model_for_kbit_training
         from transformers import AutoProcessor, BitsAndBytesConfig, Qwen2VLForConditionalGeneration
 
-        if torch.cuda.device_count() != 1:
+        if device == "cuda" and torch.cuda.device_count() != 1:
             raise RuntimeError("T1 policy requires exactly one allocated, visible GPU")
+        if device == "cpu" and (training or quantized):
+            raise ValueError("CPU T1 evaluation requires an unquantized checkpoint")
         self.variant = variant
         self.history = HISTORY[variant]
         self.processor = AutoProcessor.from_pretrained(checkpoint, local_files_only=True)
         self.images = ProcessorWrapper(model_name="qwen2_vl")
         self.actions = OneActionTokenizer(tokenizer_type="qwen2_vl")
-        kwargs = dict(torch_dtype=torch.bfloat16, attn_implementation="sdpa",
-                      local_files_only=True, device_map={"": 0})
+        kwargs = dict(torch_dtype=dtype, attn_implementation="sdpa",
+                      local_files_only=True, device_map={"": 0 if device == "cuda" else device})
         if quantized:
             kwargs["quantization_config"] = BitsAndBytesConfig(
                 load_in_4bit=True, bnb_4bit_quant_type="nf4", bnb_4bit_use_double_quant=True,
@@ -56,7 +59,7 @@ class T1Policy(nn.Module):
             ))
         self.base.visual.requires_grad_(False)
         dim = self.base.config.hidden_size
-        self.memory = SpatialMemory(dim, dim).to("cuda") if variant == "spatial" else None
+        self.memory = SpatialMemory(dim, dim).to(device) if variant == "spatial" else None
 
     @property
     def base(self):
@@ -131,15 +134,18 @@ class T1Policy(nn.Module):
             position_ids = torch.cat((prefix_positions, position_ids + length), dim=2)
         return embeddings, position_ids
 
-    def loss(self, instruction, frames, previous_actions, action, features=None, poses=None):
+    def action_logits(self, instruction, frames, previous_actions, action, features=None, poses=None):
         targets = torch.tensor([self.action_ids(action)], device=self.device)
         inputs = self.prompts(instruction, frames, previous_actions)
         embeddings, position_ids = self.context(inputs, targets, features, poses)
         hidden = self.base.model(inputs_embeds=embeddings, position_ids=position_ids,
                                  use_cache=False).last_hidden_state
         # Only the positions predicting the current return action enter the loss.
-        logits = self.base.lm_head(hidden[:, -targets.shape[1] - 1:-1])
-        return F.cross_entropy(logits.float().flatten(0, 1), targets.flatten())
+        return self.base.lm_head(hidden[:, -targets.shape[1] - 1:-1]).float().flatten(0, 1), targets.flatten()
+
+    def loss(self, *example):
+        logits, targets = self.action_logits(*example)
+        return F.cross_entropy(logits, targets)
 
     def complete_action(self, ids):
         from jarvisvla.inference.action_mapping import remap_control_token

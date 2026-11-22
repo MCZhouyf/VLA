@@ -1,0 +1,84 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+[21:35:51] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[21:35:51] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+INFO: Starting Minecraft process with device: cpu
+ERROR:minestudio.simulator.minerl.env.malmo.instance.573cd6:[21:36:13] [Render thread/WARN]: ERROR : Couldn't load Narrator library : Unable to load library 'fliteWrapper': Can't obtain InputStream for linux-x86-64/libfliteWrapper.so
+ERROR:minestudio.simulator.minerl.env.malmo.instance.573cd6:[21:36:14] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: null
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+ERROR:minestudio.simulator.minerl.env.malmo.instance.573cd6:[21:37:21] [Worker-Main-6/ERROR]: Using missing texture, unable to load minecraft:optifine/ctm/default/empty.png : java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png
+ERROR:minestudio.simulator.minerl.env.malmo.instance.573cd6:[21:37:24] [Render thread/ERROR]: Error starting SoundSystem. Turning off sounds & music
+ERROR:minestudio.simulator.minerl.env.malmo.instance.573cd6:java.lang.IllegalStateException: Failed to open OpenAL device
+WARNING:minestudio.simulator.minerl.env.malmo.instance.573cd6:[21:37:24] [Render thread/WARN]: [OptiFine] Missing CTM sprite: minecraft:optifine/ctm/default/empty
+WARNING:minestudio.simulator.minerl.env.malmo.instance.573cd6:[21:37:27] [Render thread/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.573cd6:[21:37:27] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.573cd6:[21:37:27] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.573cd6:[21:37:27] [Render thread/WARN]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.573cd6:[21:37:27] [Render thread/WARN]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.573cd6:[21:37:51] [Render thread/WARN]: Failed to load texture: minecraft:optifine/ctm/default/empty.png
+ERROR:minestudio.simulator.minerl.env.malmo.instance.573cd6:java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png
+10 2026112108 6034 10.003456960370379 {'success': True, 'steps': 82, 'min_dist': 2.924016428663514, 'deaths': 0, 'pose_jumps': 0, 'end_reason': 'reached'}
+30 2026112108 0 17.814384728568754 {'success': True, 'steps': 297, 'min_dist': 2.90034205656061, 'deaths': 0, 'pose_jumps': 0, 'end_reason': 'reached'}
+60 2026112108 0 59.920151992808904 {'success': True, 'steps': 600, 'min_dist': 2.8320521831250165, 'deaths': 0, 'pose_jumps': 0, 'end_reason': 'reached'}
+100 2026112108 0 98.84494789575976 {'success': True, 'steps': 983, 'min_dist': 2.9841290123903415, 'deaths': 0, 'pose_jumps': 0, 'end_reason': 'reached'}
+[21:44:28] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[21:44:28] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+Traceback (most recent call last):
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_shortcut_audit.py", line 349, in <module>
+    first_heading_pixels=pixels[0], max_gold_pixels=max(pixels),
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_shortcut_audit.py", line 345, in main
+    arena.settle()
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_shortcut_audit.py", line 236, in audit
+    wall_specs = []
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_shortcut_audit.py", line 183, in __init__
+    self.observe_return = False
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_safety.py", line 97, in __init__
+    super().__init__(world_seed)
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/phase1_t1.py", line 53, in __init__
+    _, self.info = self.sim.reset()
+  File "/share/project/zhoubowen/zhy/zyf/code/MineStudio/minestudio/simulator/entry.py", line 217, in reset
+    self.env.reset()
+  File "/share/project/zhoubowen/zhy/zyf/code/MineStudio/minestudio/simulator/minerl/env/_singleagent.py", line 22, in reset
+    multi_obs = super().reset()
+  File "/share/project/zhoubowen/zhy/zyf/code/MineStudio/minestudio/simulator/minerl/env/_multiagent.py", line 478, in reset
+    self._setup_instances()
+  File "/share/project/zhoubowen/zhy/zyf/code/MineStudio/minestudio/simulator/minerl/env/_multiagent.py", line 582, in _setup_instances
+    self.instances.extend([f.result() for f in instance_futures])
+  File "/share/project/zhoubowen/zhy/zyf/code/MineStudio/minestudio/simulator/minerl/env/_multiagent.py", line 582, in <listcomp>
+    self.instances.extend([f.result() for f in instance_futures])
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/share/project/zhoubowen/zhy/zyf/code/MineStudio/minestudio/simulator/minerl/env/_multiagent.py", line 843, in _get_new_instance
+    instance = InstanceManager.get_instance(os.getpid(), instance_id=instance_id)
+  File "/share/project/zhoubowen/zhy/zyf/code/MineStudio/minestudio/simulator/minerl/env/malmo.py", line 217, in get_instance
+    _result = subprocess.run([sys.executable, os.path.abspath(os.path.join(os.path.dirname(__file__), "gpu_utils.py")), str(database_manager.counter())], capture_output=True, text=True, env=_env)
+  File "/share/project/zhoubowen/zhy/zyf/code/MineStudio/minestudio/simulator/minerl/env/database_manager.py", line 59, in counter
+    with counter_lock:
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/site-packages/diskcache/recipes.py", line 113, in __enter__
+    self.acquire()
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/site-packages/diskcache/recipes.py", line 93, in acquire
+    added = self._cache.add(
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/site-packages/diskcache/core.py", line 995, in add
+    with self._transact(retry, filename) as (sql, cleanup):
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/site-packages/diskcache/core.py", line 710, in _transact
+    sql = self._sql
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/site-packages/diskcache/core.py", line 648, in _sql
+    return self._con.execute
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/site-packages/diskcache/core.py", line 636, in _con
+    settings = con.execute(select).fetchall()
+sqlite3.DatabaseError: database disk image is malformed

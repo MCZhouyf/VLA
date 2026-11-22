@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_shortcut_audit.py", line 525, in <module>
+    main()
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_shortcut_audit.py", line 521, in main
+    {"audit":audit, "navigation":navigation, "summary":summarize}[args.mode](args)
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_shortcut_audit.py", line 347, in audit
+    effects = fixtures[DISTANCES[0],cohort[0]]["optional_effects"]
+KeyError: (10, 2026112111)

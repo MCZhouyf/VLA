@@ -1,0 +1,114 @@
+{
+  "10": {
+    "n": 30,
+    "any_visible": 30,
+    "visible_at_spawn_heading": 1,
+    "endpoint_pixel_quantiles": [
+      4273.0,
+      5621.75,
+      6006.5,
+      6239.5,
+      6983.0
+    ],
+    "teacher_visible": 30,
+    "teacher_first_dist_quantiles": [
+      9.885711556318165,
+      9.93620040251895,
+      9.944522089277593,
+      9.98301698973066,
+      10.024160850581433
+    ],
+    "scan_success": 30,
+    "scan_rate": 1.0,
+    "scan_ci95": [
+      0.8864866068260312,
+      1.0
+    ],
+    "deaths": 0,
+    "pose_jumps": 0
+  },
+  "30": {
+    "n": 30,
+    "any_visible": 4,
+    "visible_at_spawn_heading": 1,
+    "endpoint_pixel_quantiles": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      105.0
+    ],
+    "teacher_visible": 30,
+    "teacher_first_dist_quantiles": [
+      17.812745513732313,
+      17.83325486287221,
+      21.52329658302121,
+      29.47172694237948,
+      29.99104277522633
+    ],
+    "scan_success": 13,
+    "scan_rate": 0.43333333333333335,
+    "scan_ci95": [
+      0.2737748557646652,
+      0.6080269299918639
+    ],
+    "deaths": 0,
+    "pose_jumps": 0
+  },
+  "60": {
+    "n": 30,
+    "any_visible": 8,
+    "visible_at_spawn_heading": 1,
+    "endpoint_pixel_quantiles": [
+      0.0,
+      0.0,
+      0.0,
+      3.0,
+      523.0
+    ],
+    "teacher_visible": 30,
+    "teacher_first_dist_quantiles": [
+      34.40305714723723,
+      50.547686548352075,
+      58.927002116839766,
+      59.604163952467026,
+      59.96555229692894
+    ],
+    "scan_success": 10,
+    "scan_rate": 0.3333333333333333,
+    "scan_ci95": [
+      0.19230498083676134,
+      0.5121994835545616
+    ],
+    "deaths": 0,
+    "pose_jumps": 0
+  },
+  "100": {
+    "n": 30,
+    "any_visible": 7,
+    "visible_at_spawn_heading": 4,
+    "endpoint_pixel_quantiles": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      733.0
+    ],
+    "teacher_visible": 30,
+    "teacher_first_dist_quantiles": [
+      73.113387161268,
+      90.8986395845511,
+      98.73629104524873,
+      99.91988300190454,
+      100.2175675173651
+    ],
+    "scan_success": 6,
+    "scan_rate": 0.2,
+    "scan_ci95": [
+      0.0950510717728987,
+      0.3730569641314825
+    ],
+    "deaths": 0,
+    "pose_jumps": 0
+  }
+}

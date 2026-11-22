@@ -1,0 +1,132 @@
+{
+  "10": {
+    "n": 50,
+    "any_visible": 50,
+    "visible_at_spawn_heading": 1,
+    "endpoint_pixel_quantiles": [
+      4723.0,
+      6040.0,
+      6509.5,
+      6728.25,
+      7406.0
+    ],
+    "teacher_visible": 20,
+    "teacher_first_dist_quantiles": [
+      9.885670468264887,
+      9.942229952025807,
+      9.944463575942837,
+      9.982565868448436,
+      10.003584562970037
+    ],
+    "scan_success": 50,
+    "scan_rate": 1.0,
+    "scan_ci95": [
+      0.9286524008666414,
+      1.0
+    ],
+    "deaths": 0,
+    "pose_jumps": 0,
+    "teacher_success": 50,
+    "mean_teacher_steps": 45.88,
+    "outbound_failures": 0,
+    "turn180_success": 7,
+    "turn180_deaths": 0,
+    "turn180_pose_jumps": 0
+  },
+  "30": {
+    "n": 50,
+    "any_visible": 5,
+    "visible_at_spawn_heading": 2,
+    "endpoint_pixel_quantiles": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      106.0
+    ],
+    "teacher_visible": 20,
+    "teacher_first_dist_quantiles": [
+      7.305970078970461,
+      7.307086441124333,
+      14.164868519802463,
+      27.096383316994107,
+      29.98335771067348
+    ],
+    "scan_success": 0,
+    "scan_rate": 0.0,
+    "scan_ci95": [
+      0.0,
+      0.07134759913335872
+    ],
+    "deaths": 0,
+    "pose_jumps": 0,
+    "teacher_success": 50,
+    "mean_teacher_steps": 269.02,
+    "outbound_failures": 0,
+    "turn180_success": 0,
+    "turn180_deaths": 0,
+    "turn180_pose_jumps": 0
+  },
+  "60": {
+    "n": 50,
+    "any_visible": 1,
+    "visible_at_spawn_heading": 0,
+    "endpoint_pixel_quantiles": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      43.0
+    ],
+    "teacher_visible": 3,
+    "teacher_first_dist_quantiles": [
+      53.478739631669036,
+      53.54999806607134,
+      53.62125650047364,
+      53.893958991683945,
+      54.16666148289424
+    ],
+    "scan_success": 0,
+    "scan_rate": 0.0,
+    "scan_ci95": [
+      0.0,
+      0.07134759913335872
+    ],
+    "deaths": 0,
+    "pose_jumps": 0,
+    "teacher_success": 50,
+    "mean_teacher_steps": 405.98,
+    "outbound_failures": 0,
+    "turn180_success": 0,
+    "turn180_deaths": 0,
+    "turn180_pose_jumps": 0
+  },
+  "100": {
+    "n": 50,
+    "any_visible": 0,
+    "visible_at_spawn_heading": 0,
+    "endpoint_pixel_quantiles": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "teacher_visible": 0,
+    "teacher_first_dist_quantiles": [],
+    "scan_success": 0,
+    "scan_rate": 0.0,
+    "scan_ci95": [
+      0.0,
+      0.07134759913335872
+    ],
+    "deaths": 3,
+    "pose_jumps": 3,
+    "teacher_success": 49,
+    "mean_teacher_steps": 593.3469387755102,
+    "outbound_failures": 1,
+    "turn180_success": 0,
+    "turn180_deaths": 3,
+    "turn180_pose_jumps": 3
+  }
+}
