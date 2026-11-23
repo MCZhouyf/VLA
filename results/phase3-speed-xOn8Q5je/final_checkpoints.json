@@ -1,0 +1,96 @@
+{
+  "source_run": "results/phase3-speed-xOn8Q5je",
+  "variants": {
+    "no_memory": {
+      "gpu": 6,
+      "training": {
+        "updates": 14388,
+        "supervised_examples": 57549,
+        "elapsed_seconds": 43936.16239413619,
+        "first_update_loss": 5.0365389585494995,
+        "last_update_loss": 0.0023723896592855453,
+        "peak_allocated_mib": 21111.75927734375,
+        "stopped_at_budget": false
+      },
+      "final_weights": [
+        {
+          "path": "train-no_memory/adapter/adapter_model.safetensors",
+          "bytes": 645975704,
+          "modified_at": "2026-11-23T19:23:13+08:00",
+          "sha256": "6ed32d5eb633c26f80aea8e3e677cbc1f1f5b136e4be2023d5a92ae06dd9c6be"
+        }
+      ],
+      "resume_snapshots": [
+        {
+          "path": "train-no_memory/checkpoints/step-00013000/state.pt",
+          "bytes": 1292134772,
+          "modified_at": "2026-11-23T18:11:00+08:00"
+        },
+        {
+          "path": "train-no_memory/checkpoints/step-00014000/state.pt",
+          "bytes": 1292134772,
+          "modified_at": "2026-11-23T19:00:39+08:00"
+        }
+      ],
+      "formal_episode_csv": false,
+      "training_exit": 0,
+      "evaluation_exit": 1
+    },
+    "spatial": {
+      "gpu": 7,
+      "training": {
+        "updates": 14388,
+        "supervised_examples": 57549,
+        "elapsed_seconds": 55744.664622392505,
+        "first_update_loss": 5.440703272819519,
+        "last_update_loss": 0.0005192163516767323,
+        "peak_allocated_mib": 21185.04052734375,
+        "stopped_at_budget": false
+      },
+      "final_weights": [
+        {
+          "path": "train-spatial/adapter/adapter_model.safetensors",
+          "bytes": 645975704,
+          "modified_at": "2026-11-24T01:40:27+08:00",
+          "sha256": "8de84a421357d20bc8bb67db355de4e6d26db763364ebd546d1d92ccfca0295a"
+        },
+        {
+          "path": "train-spatial/spatial.safetensors",
+          "bytes": 20039220,
+          "modified_at": "2026-11-24T01:40:27+08:00",
+          "sha256": "521296fc5254b68c562f8b049e3dddaf50285f03d7c7120fcf984f28523cd366"
+        }
+      ],
+      "resume_snapshots": [
+        {
+          "path": "train-spatial/checkpoints/step-00013000/spatial.safetensors",
+          "bytes": 20039220,
+          "modified_at": "2026-11-24T00:12:58+08:00"
+        },
+        {
+          "path": "train-spatial/checkpoints/step-00013000/state.pt",
+          "bytes": 1332225801,
+          "modified_at": "2026-11-24T00:12:59+08:00"
+        },
+        {
+          "path": "train-spatial/checkpoints/step-00014000/spatial.safetensors",
+          "bytes": 20039220,
+          "modified_at": "2026-11-24T01:13:23+08:00"
+        },
+        {
+          "path": "train-spatial/checkpoints/step-00014000/state.pt",
+          "bytes": 1332225801,
+          "modified_at": "2026-11-24T01:13:24+08:00"
+        }
+      ],
+      "formal_episode_csv": false,
+      "training_exit": 0,
+      "evaluation_exit": 1
+    }
+  },
+  "captured_at": "2026-11-24T03:01:35+08:00",
+  "gpu_snapshot": [
+    "6, 0, 0, 37",
+    "7, 0, 0, 30"
+  ]
+}

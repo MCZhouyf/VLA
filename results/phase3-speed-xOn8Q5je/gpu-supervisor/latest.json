@@ -1,0 +1,40 @@
+[
+  {
+    "time": "2026-11-24T01:40:44+08:00",
+    "phase": "training_complete",
+    "variant": "no_memory",
+    "gpu": 6,
+    "update": 14388,
+    "validation": 14388,
+    "checkpoint": 14000,
+    "training_status": 0,
+    "evaluation_status": 1,
+    "pids": [],
+    "wrapper_pids": [],
+    "evaluation_pids": [],
+    "detail": "",
+    "memory_mib": 0,
+    "utilization": 0,
+    "compute_pids": [],
+    "idle": true
+  },
+  {
+    "time": "2026-11-24T01:40:44+08:00",
+    "phase": "training_complete",
+    "variant": "spatial",
+    "gpu": 7,
+    "update": 14388,
+    "validation": 14388,
+    "checkpoint": 14000,
+    "training_status": 0,
+    "evaluation_status": 1,
+    "pids": [],
+    "wrapper_pids": [],
+    "evaluation_pids": [],
+    "detail": "",
+    "memory_mib": 0,
+    "utilization": 0,
+    "compute_pids": [],
+    "idle": true
+  }
+]

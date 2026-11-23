@@ -12,6 +12,8 @@
 | [阶段 3 实机报告](results/REPORT_phase3_gpu.md) | 三组 BF16 训练与闭环、公开权重试点、5 格导航门槛与正式训练快照 |
 | [阶段 3 复核与重采集报告](results/REPORT_phase3_followup.md) | 四档可见性与捷径复核、第二版布景验收、重采集、正式训练快照 |
 | [阶段 3 第二版启动与恢复验收](results/REPORT_phase3_screened_launch.md) | 本地归档校验、断点恢复、GPU 训练进度和 48 小时调度 |
+| [阶段 3 第二版布景训练与评测报告](results/REPORT_phase3_screened_training.md) | 无记忆与空间记忆的最终训练、全量开环验证、闭环导航门槛和权重清单 |
+| [GPU 6 无记忆训练报告](results/REPORT_phase3_no_memory_gpu6.md) | 实机时间线、逐步轨迹、验证波动和失败回合分析 |
 | [遮挡建筑 CPU 审计](results/REPORT_phase3_structure_audit.md) | 90 个冻结场景、配对可见性、找结构对照和死亡取证 |
 | [第二版布景数据索引](results/data/t1-screened-hzw7nYp7) | 1,124 个回合的非图像元数据、采集日志与冻结索引校验 |
 | [新版轨迹元数据](results/data/t1-v4-L6ysa9jV/metadata) | 训练、验证与测试的 1,194 个原始回合的布景、位姿与动作 token |
@@ -346,3 +348,15 @@ CUDA_VISIBLE_DEVICES= PYTHONPATH="$WORK/code/JarvisVLA:$WORK/code/minemem" \
 `t1_screened_eval.sh {gates|d30|remaining|all} VARIANT RUN FORWARD_CSV` 使用已冻结的场景与导航控制。先测无记忆的两版门槛。`d30` 使用 30 个固定种子，正式回程评测需要结构对照通过。批量闭环的实际聚合吞吐写入 `rollout_timing.csv`。
 
 [第二版启动与断点恢复验收](results/REPORT_phase3_screened_launch.md)
+
+### GPU 6 和 GPU 7 运行监督
+
+监督程序每 30 秒读取训练、验证、检查点和显存状态，直到两组训练结束。已完成运行的采样与异常记录见[监督日志](results/phase3-speed-xOn8Q5je/gpu-supervisor)。
+
+~~~bash
+run="$WORK/results/phase3-speed-xOn8Q5je"
+cat "$run/gpu-supervisor/latest.json"
+tail -n 10 "$run/gpu-supervisor/events.jsonl"
+~~~
+
+[阶段 3 第二版布景双卡训练与评测报告](results/REPORT_phase3_screened_training.md)
