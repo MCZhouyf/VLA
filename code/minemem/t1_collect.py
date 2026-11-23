@@ -139,6 +139,8 @@ class RevisedCaptureArena(OcclusionGeometry, ProtectedCaptureArena):
     screened_pillar = True
 
     def outbound_segment(self, config):
+        if self.trace is not None:
+            return super().outbound_segment(config)
         with self.track(StepTrace(None)):
             super().outbound_segment(config)
 

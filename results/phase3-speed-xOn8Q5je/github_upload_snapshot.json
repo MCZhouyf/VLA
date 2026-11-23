@@ -1,0 +1,44 @@
+{
+  "captured_at": "2026-11-23T08:10:26+08:00",
+  "latest_training_row": {
+    "update": "1017",
+    "examples": "4068",
+    "loss": "0.00043063461635028943",
+    "elapsed_seconds": "3533.3333277329803",
+    "peak_allocated_mib": "21110.412109375"
+  },
+  "training_examples_per_second_through_1000": 1.4743918776566076,
+  "validation_rows": [
+    {
+      "update": "1000",
+      "frames": "6500",
+      "actions": "2401",
+      "tokens": "11751",
+      "loss": "0.09475576784031779",
+      "token_accuracy": "0.974640456131393",
+      "exact_action_accuracy": "0.8946272386505623",
+      "seconds": "718.9248129054904",
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16"
+    }
+  ],
+  "gpu": [
+    "6, 22685 MiB, 92 %",
+    "7, 38463 MiB, 0 %"
+  ],
+  "gpu7_compute_apps": [
+    "485115, 38454 MiB"
+  ],
+  "checkpoints": [
+    {
+      "step": "step-00000000",
+      "state_bytes": 7948,
+      "adapter_bytes": 645975704
+    },
+    {
+      "step": "step-00001000",
+      "state_bytes": 1292134772,
+      "adapter_bytes": 645975704
+    }
+  ]
+}

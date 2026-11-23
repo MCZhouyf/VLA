@@ -69,6 +69,16 @@ case "${1:-}" in
         exec "$WORK/envs/mcvla-phase3/bin/python" -B -u \
             "$project/code/minemem/t1_train.py" --checkpoint "$WORK/models/JarvisVLA-Qwen2-VL-7B" "$@"
         ;;
+    train-resilient)
+        gpu="$2"
+        output="$3"
+        shift 3
+        bind_gpu "$gpu"
+        command=("$WORK/envs/mcvla-phase3/bin/python" -B -u
+                 "$project/code/minemem/t1_train.py" --checkpoint "$WORK/models/JarvisVLA-Qwen2-VL-7B"
+                 --output "$output" --validate-every 1000 --checkpoint-every 1000 "$@")
+        exec bash "$project/code/minemem/t1_recover.sh" "$output" "${command[@]}"
+        ;;
     eval|eval-cpu)
         mode="$1"
         if [[ $mode == eval ]]; then
@@ -91,7 +101,7 @@ case "${1:-}" in
             --checkpoint "$WORK/models/JarvisVLA-Qwen2-VL-7B" "$@"
         ;;
     *)
-        echo 'Usage: t1_exec.sh {pilot|protected-pilot|historical-pilot|death-replay|eval-cpu} OUTPUT or {train GPU|eval GPU OUTPUT} [options]' >&2
+        echo 'Usage: t1_exec.sh {pilot|protected-pilot|historical-pilot|death-replay|eval-cpu} OUTPUT or {train GPU|train-resilient GPU OUTPUT|eval GPU OUTPUT} [options]' >&2
         exit 2
         ;;
 esac

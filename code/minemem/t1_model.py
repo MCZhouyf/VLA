@@ -1,5 +1,7 @@
 """Shared JARVIS-VLA policy and return-only LoRA objective."""
 
+from typing import NamedTuple
+
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -13,6 +15,11 @@ LORA_TARGETS = (
     r"self_attn\.(?:q_proj|k_proj|v_proj|o_proj)|"
     r"mlp\.(?:gate_proj|up_proj|down_proj))"
 )
+
+
+class EncodedFrame(NamedTuple):
+    grid: tuple[int, int, int]
+    tokens: torch.Tensor
 
 
 class T1Policy(nn.Module):
@@ -81,6 +88,18 @@ class T1Policy(nn.Module):
                 messages.append(dict(role="assistant", content=previous_actions[index] + "\n"))
         template = self.processor.apply_chat_template(messages, tokenize=False,
                                                        add_generation_prompt=True)
+        if isinstance(frames[0], EncodedFrame):
+            marker = self.processor.image_token
+            parts = template.split(marker)
+            if len(parts) != len(frames) + 1:
+                raise ValueError("Chat template does not contain one image token per frame")
+            expanded = [parts[0]]
+            for frame, suffix in zip(frames, parts[1:], strict=True):
+                expanded.extend((marker * len(frame.tokens), suffix))
+            batch = self.processor.tokenizer(["".join(expanded)], return_tensors="pt").to(self.device)
+            batch["image_grid_thw"] = torch.tensor([frame.grid for frame in frames], device=self.device)
+            batch["encoded_frames"] = frames
+            return batch
         return self.processor(text=[template], images=frames, return_tensors="pt").to(self.device)
 
     def action_ids(self, action):
@@ -106,12 +125,21 @@ class T1Policy(nn.Module):
         ])
 
     @torch.no_grad()
-    def pooled_images(self, frames):
+    def encode_frames(self, frames, storage="cpu"):
         values = self.processor.image_processor(images=frames, return_tensors="pt").to(self.device)
-        features = self.embed_images(values["pixel_values"], values["image_grid_thw"])
-        merge_size = self.base.config.vision_config.spatial_merge_size
-        counts = (values["image_grid_thw"].prod(dim=1) // merge_size**2).tolist()
-        return torch.stack([tokens.float().mean(0) for tokens in features.split(counts)]).cpu().half()
+        grid = values["image_grid_thw"]
+        tokens = self.embed_images(values["pixel_values"], grid).to(storage)
+        shapes = grid.tolist()
+        merge_area = self.base.config.vision_config.spatial_merge_size ** 2
+        counts = [time * height * width // merge_area for time, height, width in shapes]
+        return [EncodedFrame(tuple(shape), chunk)
+                for shape, chunk in zip(shapes, tokens.split(counts), strict=True)]
+
+    @torch.no_grad()
+    def pooled_images(self, frames):
+        if not isinstance(frames[0], EncodedFrame):
+            frames = self.encode_frames(frames, storage=self.device)
+        return torch.stack([frame.tokens.float().mean(0) for frame in frames]).cpu().half()
 
     def context(self, batch, target=None, features=None, poses=None):
         ids = batch["input_ids"]
@@ -119,7 +147,11 @@ class T1Policy(nn.Module):
             ids = torch.cat((ids, target), dim=1)
         position_ids, _ = self.base.get_rope_index(ids, image_grid_thw=batch["image_grid_thw"])
         embeddings = self.base.get_input_embeddings()(ids)
-        visual = self.embed_images(batch["pixel_values"], batch["image_grid_thw"])
+        cached = batch.get("encoded_frames")
+        if cached is None:
+            visual = self.embed_images(batch["pixel_values"], batch["image_grid_thw"])
+        else:
+            visual = torch.cat([frame.tokens.to(self.device) for frame in cached])
         mask = ids.eq(self.base.config.image_token_id)
         if int(mask.sum()) != len(visual):
             raise RuntimeError("Vision tokens do not align with the chat template")
@@ -134,6 +166,17 @@ class T1Policy(nn.Module):
             position_ids = torch.cat((prefix_positions, position_ids + length), dim=2)
         return embeddings, position_ids
 
+    def context_batch(self, contexts):
+        width = max(embeddings.shape[1] for embeddings, _ in contexts)
+        padding = [width - embeddings.shape[1] for embeddings, _ in contexts]
+        embeddings = torch.cat([F.pad(values, (0, 0, pad, 0))
+                                for (values, _), pad in zip(contexts, padding, strict=True)])
+        positions = torch.cat([F.pad(values, (pad, 0))
+                               for (_, values), pad in zip(contexts, padding, strict=True)], dim=1)
+        mask = (torch.arange(width, device=self.device)[None, :] >=
+                torch.tensor(padding, device=self.device)[:, None])
+        return embeddings, positions, mask
+
     def action_logits(self, instruction, frames, previous_actions, action, features=None, poses=None):
         targets = torch.tensor([self.action_ids(action)], device=self.device)
         inputs = self.prompts(instruction, frames, previous_actions)
@@ -142,6 +185,20 @@ class T1Policy(nn.Module):
                                  use_cache=False).last_hidden_state
         # Only the positions predicting the current return action enter the loss.
         return self.base.lm_head(hidden[:, -targets.shape[1] - 1:-1]).float().flatten(0, 1), targets.flatten()
+
+    def batched_action_logits(self, examples):
+        contexts, targets = [], []
+        for instruction, frames, previous_actions, action, features, poses in examples:
+            target = torch.tensor([self.action_ids(action)], device=self.device)
+            inputs = self.prompts(instruction, frames, previous_actions)
+            contexts.append(self.context(inputs, target, features, poses))
+            targets.append(target.flatten())
+        embeddings, positions, mask = self.context_batch(contexts)
+        hidden = self.base.model(inputs_embeds=embeddings, position_ids=positions,
+                                 attention_mask=mask, use_cache=False).last_hidden_state
+        lengths = [len(target) for target in targets]
+        selected = torch.cat([row[-length-1:-1] for row, length in zip(hidden, lengths, strict=True)])
+        return zip(self.base.lm_head(selected).float().split(lengths), targets, strict=True)
 
     def loss(self, *example):
         logits, targets = self.action_logits(*example)
@@ -183,4 +240,33 @@ class T1Policy(nn.Module):
                 past_key_values=output.past_key_values, use_cache=True,
             )
             next_position += 1
+        return self.decode_prediction(ids)
+
+    def decode_prediction(self, ids):
         return self.actions.decode(ids)[0], self.processor.tokenizer.decode(ids), self.complete_action(ids)
+
+    @torch.inference_mode()
+    def predict_batch(self, examples):
+        contexts = [self.context(self.prompts(instruction, frames, actions), features=features, poses=poses)
+                    for instruction, frames, actions, features, poses in examples]
+        embeddings, positions, mask = self.context_batch(contexts)
+        output = self.base.model(inputs_embeds=embeddings, position_ids=positions,
+                                 attention_mask=mask, use_cache=True)
+        next_positions = positions.amax(dim=(0, 2)).view(1, -1, 1).expand(3, -1, 1) + 1
+        actions = [[] for _ in examples]
+        finished = [False for _ in examples]
+        end_tokens = (self.actions.act_end_id, self.processor.tokenizer.eos_token_id)
+        for step in range(32):
+            tokens = self.base.lm_head(output.last_hidden_state[:, -1]).argmax(-1, keepdim=True)
+            for index, token in enumerate(tokens.flatten().tolist()):
+                if not finished[index]:
+                    actions[index].append(token)
+                    finished[index] = token in end_tokens
+            if all(finished) or step == 31:
+                break
+            mask = F.pad(mask, (0, 1), value=True)
+            output = self.base.model(
+                input_ids=tokens, position_ids=next_positions + step, attention_mask=mask,
+                past_key_values=output.past_key_values, use_cache=True,
+            )
+        return [self.decode_prediction(ids) for ids in actions]

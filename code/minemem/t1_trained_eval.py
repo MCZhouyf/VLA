@@ -6,6 +6,8 @@ import io
 import json
 import math
 from collections import deque
+from contextlib import ExitStack
+from copy import copy
 from pathlib import Path
 from time import perf_counter
 
@@ -13,9 +15,12 @@ import torch
 from PIL import Image
 
 from phase1_t1_eval import fixture_index
-from t1_collect import NAV_SEED, NAV_WORLD_SEED, ProtectedCaptureArena, navigation_cases
+from t1_collect import (
+    NAV_SEED, NAV_WORLD_SEED, ProtectedCaptureArena, RevisedCaptureArena, navigation_cases,
+)
 from t1_model import T1Policy
-from t1_respawn import freeze_return, record_config, verify_scene
+from t1_occlusion import SCREENED_PROTOCOL, set_candidate_render_distance
+from t1_respawn import GEOMETRY, freeze_return, record_config, verify_scene
 from t1_respawn_report import acceptance_summary
 from t1_safety import SETUP_REVISION, StepTrace, TrialInterrupted
 from t1_v4 import (
@@ -24,8 +29,9 @@ from t1_v4 import (
 
 
 class Controller:
-    def __init__(self, checkpoint, training_run, device="cuda"):
+    def __init__(self, checkpoint, training_run, device="cuda", cache_vision=False):
         self.settings = json.loads((training_run / "training_config.json").read_text())
+        self.cache_vision = cache_vision or self.settings.get("cache_vision", False)
         self.policy = T1Policy(checkpoint, self.settings["variant"],
                                quantized=self.settings["quantized"], adapter=training_run / "adapter",
                                device=device, dtype=torch.float32 if device == "cpu" else torch.bfloat16)
@@ -52,15 +58,19 @@ class Controller:
                 images.append(self.image(frame.convert("RGB")))
             poses.append(pose)
             actions.append(action)
-        self.history = deque(zip(images, actions), maxlen=self.policy.history)
         self.poses = poses
         self.features = []
+        if self.cache_vision:
+            encoded = []
+            for begin in range(0, len(images), 3):
+                encoded.extend(self.policy.encode_frames(images[begin:begin + 3]))
+            images = encoded
+        self.history = deque(zip(images, actions), maxlen=self.policy.history)
         if self.policy.memory is not None:
             for begin in range(0, len(images), 8):
                 self.features.extend(self.policy.pooled_images(images[begin:begin + 8]))
 
-    def action(self, info, instruction):
-        image = self.image(Image.fromarray(info["pov"]))
+    def request(self, info, instruction, image):
         pose = [float(info["player_pos"][key]) for key in ("x", "z", "yaw")]
         frames = [frame for frame, _ in self.history] + [image]
         actions = [action for _, action in self.history]
@@ -68,18 +78,40 @@ class Controller:
             missing = self.policy.history - len(actions)
             frames = [frames[0]] * missing + frames
             actions = [self.policy.actions.null_token()] * missing + actions
-        features = torch.stack(self.features) if self.features else torch.empty(
-            (0, self.policy.base.config.hidden_size))
-        control, generated, tags = self.policy.predict(
-            instruction, frames, actions, features, [*self.poses, pose])
-        self.history.append((image, generated))
-        self.poses.append(pose)
+        features = poses = None
         if self.policy.memory is not None:
+            features = torch.stack(self.features) if self.features else torch.empty(
+                (0, self.policy.base.config.hidden_size))
+            poses = [*self.poses, pose]
+        return (instruction, frames, actions, features, poses), pose
+
+    def record_action(self, image, pose, prediction):
+        control, generated, tags = prediction
+        self.history.append((image, generated))
+        if self.policy.memory is not None:
+            self.poses.append(pose)
             self.features.extend(self.policy.pooled_images([image]))
         return control, tags
 
+    def action(self, info, instruction):
+        return choose_actions([(self, info, instruction)])[0]
 
-def run_case(arena, controller, config, outbound, instruction, limit, trace):
+
+def choose_actions(requests):
+    controller, _, _ = requests[0]
+    policy = controller.policy
+    images = [item.image(Image.fromarray(info["pov"])) for item, info, _ in requests]
+    if controller.cache_vision:
+        images = policy.encode_frames(images)
+    prepared, poses = zip(*(item.request(info, instruction, image) for (item, info, instruction), image
+                            in zip(requests, images, strict=True)), strict=True)
+    predictions = (policy.predict_batch(prepared) if len(prepared) > 1 else
+                   [policy.predict(*prepared[0])])
+    return [item.record_action(image, pose, prediction)
+            for (item, _, _), image, pose, prediction in zip(requests, images, poses, predictions, strict=True)]
+
+
+def rollout(arena, controller, config, outbound, instruction, limit, trace):
     arena.restore_return_pose(config)
     controller.start(outbound)
     closest = math.dist(horizontal(arena.info), arena.landmark)
@@ -90,7 +122,7 @@ def run_case(arena, controller, config, outbound, instruction, limit, trace):
     try:
         with arena.track(trace):
             for steps in range(1, limit + 1):
-                action, complete = controller.action(arena.info, instruction)
+                action, complete = yield controller, arena.info, instruction
                 tags += complete
                 action = arena.sim.agent_action_to_env_action(action)
                 if not arena.navigation_step(action):
@@ -106,12 +138,73 @@ def run_case(arena, controller, config, outbound, instruction, limit, trace):
             *trace.flags(), trace.reason or ("reached" if ok else "budget"))
 
 
+def drive_rollouts(rollouts, on_done):
+    active = {}
+    with ExitStack() as cleanup:
+        for index, lane in enumerate(rollouts):
+            cleanup.callback(lane.close)
+            try:
+                active[index] = next(lane)
+            except StopIteration as done:
+                on_done(index, done.value)
+        while active:
+            indices = list(active)
+            decisions = choose_actions([active[index] for index in indices])
+            for index, decision in zip(indices, decisions, strict=True):
+                try:
+                    active[index] = rollouts[index].send(decision)
+                except StopIteration as done:
+                    del active[index]
+                    on_done(index, done.value)
+
+
+def run_case(arena, controller, config, outbound, instruction, limit, trace):
+    results = []
+    drive_rollouts([rollout(arena, controller, config, outbound, instruction, limit, trace)],
+                   lambda _, result: results.append(result))
+    return results[0]
+
+
+def screened_rollout(args, seed, distance, expected, controller):
+    arena = RevisedCaptureArena(expected["world_seed"], expected["optional_effects"])
+    try:
+        config = arena.prepare_episode(seed, distance)
+        verify_screened_scene(config, expected)
+        key = f"d{distance}-seed{seed}"
+        limit = expected["return_limit"]
+        if expected.get("outbound_error"):
+            record_config(args.output, key, expected)
+            return ((False, 0, distance, distance, 0, 0, 0, False, 0,
+                     "outbound_frozen_teacher_failure"), limit, "")
+        trace = StepTrace(args.output / f"{key}-outbound.csv.gz")
+        arena.capture = []
+        try:
+            with arena.track(trace):
+                arena.outbound_segment(config)
+            outbound = arena.capture
+        except TrialInterrupted:
+            result = (False, 0, distance, distance, 0, 0, *trace.flags(), f"outbound_{trace.reason}")
+            config["path_len_out"] = arena.path_len_out
+        finally:
+            arena.capture = None
+        if not trace.reason:
+            freeze_return(config, expected)
+            arena.command("/gamemode adventure @p")
+            arena.settle()
+            trace = StepTrace(args.output / f"{key}-return.csv.gz")
+            result = yield from rollout(arena, controller, config, outbound, INSTRUCTION, limit, trace)
+        record_config(args.output, key, config)
+        return result, limit, config["path_len_out"]
+    finally:
+        arena.sim.close()
+
+
 def gate_rows(path):
     with path.open(newline="") as source:
         return list(csv.DictReader(source))
 
 
-def validate_offset_gate(path, training_run):
+def validate_offset_gate(path, training_run, forward_control=None):
     rows = gate_rows(path)
     expected = {seed:(distance,heading,cohort) for seed,distance,heading,cohort in navigation_cases(True)}
     if len(rows) != 20 or {int(row["seed"]) for row in rows} != expected.keys():
@@ -128,10 +221,18 @@ def validate_offset_gate(path, training_run):
         visible += int(cohort == "in_view" and safe)
     if visible < 12:
         raise ValueError(f"Offset navigation reached {visible}/15 in-view scenes, below 12/15")
+    if forward_control is not None:
+        reference = [row for row in gate_rows(forward_control) if row["gate"] == "offset"]
+        if len(reference) != 20 or {int(row["seed"]) for row in reference} != expected.keys():
+            raise ValueError("Constant-forward results must cover the same offset scenarios")
+        reference_visible = sum(row["cohort"] == "in_view" and row["success"] == "True"
+                                for row in reference)
+        if visible - reference_visible < 3:
+            raise ValueError("Offset navigation must outperform constant forward by three in-view scenes")
 
 
 def formal_inputs(args, settings, training_run):
-    if not args.no_memory_gate or not args.acceptance or not args.seeds_file:
+    if not args.no_memory_gate or not args.seeds_file or not (args.acceptance or args.screened_fixtures):
         raise SystemExit("Formal evaluation requires the passed no-memory navigation gate and T1 fixtures")
     nav = gate_rows(args.no_memory_gate)
     if ({int(row["seed"]) for row in nav} != set(range(NAV_SEED, NAV_SEED + 10))
@@ -148,11 +249,23 @@ def formal_inputs(args, settings, training_run):
     gate_runs = {row["training_run"] for row in nav}
     if len(gate_runs) != 1 or (settings["variant"] == "no_memory" and gate_runs != {training_run}):
         raise SystemExit("The gate must come from the no-memory run being evaluated")
-    if not all(row["accepted"] for row in acceptance_summary(args.acceptance)):
-        raise SystemExit("T1 respawn teacher and shortcut gate did not pass")
     frozen = json.loads(args.seeds_file.read_text())
     if not args.seed or not set(args.seed) <= set(frozen["formal"]) or len(set(args.seed)) != len(args.seed):
         raise ValueError("Select distinct frozen formal scenario seeds")
+    if args.screened_fixtures:
+        if not args.offset_gate or not args.forward_control:
+            raise ValueError("Screened formal evaluation requires the offset and constant-forward gates")
+        validate_offset_gate(args.offset_gate, next(iter(gate_runs)), args.forward_control)
+        screened = json.loads(args.screened_fixtures.read_text())
+        if screened["formal"] != frozen["formal"] or screened["protocol"] != SCREENED_PROTOCOL:
+            raise ValueError("Screened fixtures do not match the formal seed list")
+        scenes = {(item["distance"], item["scenario_seed"]): item
+                  for item in screened["fixtures"].values()}
+        if scenes.keys() != {(d, seed) for d in DISTANCES for seed in frozen["formal"]}:
+            raise ValueError("Screened fixtures lack full formal coverage")
+        return frozen, scenes
+    if not all(row["accepted"] for row in acceptance_summary(args.acceptance)):
+        raise SystemExit("T1 respawn teacher and shortcut gate did not pass")
     requirements = args.training_run.parent / "review_requirements.json"
     if requirements.is_file():
         review = json.loads(requirements.read_text())
@@ -171,12 +284,22 @@ def formal_inputs(args, settings, training_run):
     return frozen, fixture_index(args.acceptance)
 
 
+def verify_screened_scene(config, expected):
+    keys = (*GEOMETRY, "protocol", "world_seed", "scenario_seed", "occlusion_walls",
+            "pillar_screen", "screened_pillar", "render_distance_chunks")
+    for key in keys:
+        if json.loads(json.dumps(config.get(key))) != expected.get(key):
+            raise RuntimeError(f"Frozen screened geometry changed: {key}")
+
+
 def run(args):
     training_run = str(args.training_run.resolve())
     settings = json.loads((args.training_run / "training_config.json").read_text())
     if args.mode == "formal":
         frozen, fixtures = formal_inputs(args, settings, training_run)
-    controller = Controller(args.checkpoint, args.training_run, args.device)
+    if args.screened_fixtures and args.mode == "formal":
+        set_candidate_render_distance(args.output)
+    controller = Controller(args.checkpoint, args.training_run, args.device, args.cache_vision)
     variant = controller.settings["variant"]
     with (args.output / "episodes.csv").open("x", newline="") as stream:
         writer = csv.writer(stream)
@@ -184,11 +307,13 @@ def run(args):
                          "final_dist", "min_dist", "decoded_steps", "elapsed_seconds",
                          "deaths", "pose_jump", "pose_jumps", "end_reason", "return_limit",
                          "path_len_out", "training_run", "setup_revision", "cohort",
-                         "heading_offset", "inference_device", "inference_dtype"))
+                         "heading_offset", "inference_device", "inference_dtype", "scene_protocol"))
+
         def output_row(seed, distance, world, result, limit, length, cohort="", offset=""):
             writer.writerow((args.mode, variant, seed, distance, world, *result,
                              limit, length, training_run, SETUP_REVISION, cohort, offset,
-                             args.device, str(controller.policy.base.dtype)))
+                             args.device, str(controller.policy.base.dtype),
+                             SCREENED_PROTOCOL if args.screened_fixtures else "t1_v4"))
             stream.flush()
 
         if args.mode != "formal":
@@ -213,16 +338,50 @@ def run(args):
             finally:
                 arena.sim.close()
             return
+        if args.screened_fixtures and args.rollout_batch_size > 1:
+            cases = [(seed, distance) for distance in args.distances for seed in args.seed]
+            with (args.output / "rollout_timing.csv").open("x", newline="") as log:
+                timing = csv.writer(log)
+                timing.writerow(("episodes", "return_steps", "wall_seconds", "aggregate_return_fps"))
+                for begin in range(0, len(cases), args.rollout_batch_size):
+                    batch = cases[begin:begin + args.rollout_batch_size]
+                    lanes = [screened_rollout(args, seed, distance, fixtures[distance, seed], copy(controller))
+                             for seed, distance in batch]
+                    steps = 0
+
+                    def output_lane(index, payload):
+                        nonlocal steps
+                        seed, distance = batch[index]
+                        world = fixtures[distance, seed]["world_seed"]
+                        steps += payload[0][1]
+                        output_row(seed, distance, world, *payload)
+
+                    started = perf_counter()
+                    drive_rollouts(lanes, output_lane)
+                    elapsed = perf_counter() - started
+                    timing.writerow((len(batch), steps, elapsed, steps / elapsed))
+                    log.flush()
+            return
         for seed in args.seed:
             world = frozen["world_seed_by_scenario"][str(seed)]
             effects = fixtures[DISTANCES[0], seed]["optional_effects"]
-            arena = ProtectedCaptureArena(world, effects)
+            arena_type = RevisedCaptureArena if args.screened_fixtures else ProtectedCaptureArena
+            arena = arena_type(world, effects)
             try:
                 for distance in args.distances:
                     expected = fixtures[distance, seed]
                     config = arena.prepare_episode(seed, distance)
-                    verify_scene(config, expected)
+                    if args.screened_fixtures:
+                        verify_screened_scene(config, expected)
+                    else:
+                        verify_scene(config, expected)
                     key = f"d{distance}-seed{seed}"
+                    if expected.get("outbound_error"):
+                        result = (False, 0, distance, distance, 0, 0, 0, False, 0,
+                                  "outbound_frozen_teacher_failure")
+                        record_config(args.output, key, expected)
+                        output_row(seed, distance, world, result, expected["return_limit"], "")
+                        continue
                     outbound_trace = StepTrace(args.output / f"{key}-outbound.csv.gz")
                     arena.capture = []
                     try:
@@ -253,15 +412,24 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--mode", choices=("smoke", "nav", "nav_offset", "formal"), required=True)
     parser.add_argument("--device", choices=("cuda", "cpu"), default="cuda")
+    parser.add_argument("--cache-vision", action="store_true")
+    parser.add_argument("--rollout-batch-size", type=int, default=1)
     parser.add_argument("--checkpoint", type=Path, required=True)
     parser.add_argument("--training-run", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--no-memory-gate", type=Path)
+    parser.add_argument("--offset-gate", type=Path)
+    parser.add_argument("--forward-control", type=Path)
+    parser.add_argument("--screened-fixtures", type=Path)
     parser.add_argument("--acceptance", nargs="+", type=Path)
     parser.add_argument("--seeds-file", type=Path)
     parser.add_argument("--seed", type=int, nargs="+")
     parser.add_argument("--distances", type=int, nargs="+", choices=DISTANCES, default=DISTANCES)
-    run(parser.parse_args())
+    args = parser.parse_args()
+    if args.rollout_batch_size < 1 or (args.rollout_batch_size > 1 and
+                                      (args.mode != "formal" or not args.screened_fixtures)):
+        parser.error("Multiple rollout lanes require screened formal evaluation")
+    run(args)
 
 
 if __name__ == "__main__":

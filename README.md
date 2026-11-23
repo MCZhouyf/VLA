@@ -11,6 +11,8 @@
 | [T1 死亡与重生复核](results/REPORT_t1_respawn.md) | 重生负例、冻结教师与捷径验收、VPT-BC 轨迹复跑 |
 | [阶段 3 实机报告](results/REPORT_phase3_gpu.md) | 三组 BF16 训练与闭环、公开权重试点、5 格导航门槛与正式训练快照 |
 | [阶段 3 复核与重采集报告](results/REPORT_phase3_followup.md) | 四档可见性与捷径复核、第二版布景验收、重采集、正式训练快照 |
+| [阶段 3 第二版启动与恢复验收](results/REPORT_phase3_screened_launch.md) | 本地归档校验、断点恢复、GPU 训练进度和 48 小时调度 |
+| [遮挡建筑 CPU 审计](results/REPORT_phase3_structure_audit.md) | 90 个冻结场景、配对可见性、找结构对照和死亡取证 |
 | [第二版布景数据索引](results/data/t1-screened-hzw7nYp7) | 1,124 个回合的非图像元数据、采集日志与冻结索引校验 |
 | [新版轨迹元数据](results/data/t1-v4-L6ysa9jV/metadata) | 训练、验证与测试的 1,194 个原始回合的布景、位姿与动作 token |
 | [logs](logs) | Minecraft 进程原始日志 |
@@ -304,7 +306,7 @@ envs/mcvla/bin/python -B code/minemem/t1_data_index.py "$data/index-full" \
   "$data/train" "$data/validation" "$data/test" --frozen "$seeds" --screened
 ~~~
 
-正式检查点保留最后一步，`t1_train.py --validate-every 500` 在冻结验证集上记录 `val_loss.csv`。验证按所有回程动作 token 加权，另保留整条动作完全匹配率。已保存的最后检查点可通过 `t1_validation.py` 独立验证。为早测两版导航，`t1_exec.sh eval-cpu` 支持 `--mode nav` 和 `--mode nav_offset`，同一 BF16 检查点在 CPU 以 FP32 执行。评测记录保存推理设备与精度。
+验证按所有回程动作 token 加权，另保留整条动作完全匹配率。已保存的最后检查点可通过 `t1_validation.py` 独立验证。为早测两版导航，`t1_exec.sh eval-cpu` 支持 `--mode nav` 和 `--mode nav_offset`，同一 BF16 检查点在 CPU 以 FP32 执行。评测记录保存推理设备与精度。
 
 ~~~bash
 envs/mcvla-phase1-vllm/bin/python -B code/minemem/t1_validation_plot.py \
@@ -312,3 +314,35 @@ envs/mcvla-phase1-vllm/bin/python -B code/minemem/t1_validation_plot.py \
 ~~~
 
 [可见性、对照与训练监控复核](results/REPORT_phase3_followup.md)
+
+## 第二版布景训练和恢复
+
+正式训练使用第二版冻结索引。无记忆和空间记忆优先，两张卡分别为 6 和 7。长窗口排在两者之后。三个变体使用相同索引、分辨率、有效批大小和优化步数。每 1,000 个优化步验证整个 6,500 帧验证集，记录损失和 token 准确率，正式检查点取最后一步。
+
+~~~bash
+export WORK=/share/project/zhoubowen/zhy/zyf
+cd "$WORK"
+data="$WORK/data/t1-screened-hzw7nYp7/index-full/dataset.jsonl"
+run="$(mktemp -d "$WORK/results/phase3-screened-XXXXXXXX")"
+cache="$(mktemp -d /tmp/minemem-t1-archives-XXXXXXXX)"
+df -h "$cache"
+envs/mcvla-phase3/bin/python -B code/minemem/t1_stage_archives.py \
+  --dataset "$data" --output "$cache" --manifest "$run/archive_sha256.jsonl"
+bash code/minemem/t1_exec.sh train-resilient 6 "$run/train-no_memory" \
+  --dataset "$data" --archive-cache "$cache" --variant no_memory --epochs 1 \
+  --cache-vision --validation-batch-size 4
+~~~
+
+`train-resilient` 在同一张卡的独占锁内运行训练。如果进程异常退出，调度器从最近完整检查点恢复一次。检查点记录 LoRA、可选空间记忆、优化器、调度器、随机数状态和数据游标。训练保留最近两个快照。可以用 `t1_exec.sh train` 和原训练参数加 `--resume` 手动恢复。数据读取超时按 1、2、4、8、16 秒退避。训练从本地归档读取，冻结索引保持原样。归档准备程序记录每个 ZIP 的 SHA-256 并校验冻结索引中的动作与帧指纹。
+
+~~~bash
+CUDA_VISIBLE_DEVICES= PYTHONPATH="$WORK/code/JarvisVLA:$WORK/code/minemem" \
+  OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 envs/mcvla-phase3/bin/python -B \
+  code/minemem/test_t1_resume.py --checkpoint "$WORK/models/JarvisVLA-Qwen2-VL-7B"
+~~~
+
+`--cache-vision` 复用冻结视觉编码器输出，保持历史帧数和图像分辨率。`--validation-batch-size` 一次前向处理多个带独立掩码的样本。正式评测用 `t1_screened_fixtures.py --scores ACCEPTANCE_CSV --seeds-file SEEDS --output FIXTURES` 冻结已验收的布景，再将 `FIXTURES` 传给 `t1_exec.sh eval --mode formal --screened-fixtures`。同时传入 `--no-memory-gate`、`--offset-gate` 和 `--forward-control` 三份门槛 CSV。`--rollout-batch-size` 可在同一次模型生成中推进多个独立环境。
+
+`t1_screened_eval.sh {gates|d30|remaining|all} VARIANT RUN FORWARD_CSV` 使用已冻结的场景与导航控制。先测无记忆的两版门槛。`d30` 使用 30 个固定种子，正式回程评测需要结构对照通过。批量闭环的实际聚合吞吐写入 `rollout_timing.csv`。
+
+[第二版启动与断点恢复验收](results/REPORT_phase3_screened_launch.md)

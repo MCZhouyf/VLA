@@ -1,0 +1,153 @@
+{
+  "30": {
+    "complete": true,
+    "expected": 30,
+    "vision_cases": 30,
+    "planned_endpoint_seeds": [],
+    "planned_endpoint_successes": [],
+    "teacher_replay_success": 30,
+    "shortcut_cases": 30,
+    "shortcut_known_cases": 30,
+    "shortcut_unknown_seeds": [],
+    "shortcut_success": 0,
+    "shortcut_rate": 0.0,
+    "shortcut_ci95": [
+      0.0,
+      0.11351339317396876
+    ],
+    "shortcut_success_upper": 0,
+    "shortcut_rate_lower": 0.0,
+    "shortcut_rate_upper": 0.0,
+    "threshold_decidable": true,
+    "threshold_exceeded": false,
+    "passed": true,
+    "structures": {
+      "endpoint_walls": {
+        "start_visible_any": 30,
+        "start_visible_heading_sum": 1080,
+        "teacher_first_visible": 30,
+        "teacher_first_dist_five_number": [
+          29.92588686615103,
+          29.925896866118453,
+          29.983348710674615,
+          29.98335771067348,
+          29.983400689802217
+        ]
+      },
+      "gold_enclosure": {
+        "start_visible_any": 7,
+        "start_visible_heading_sum": 13,
+        "teacher_first_visible": 30,
+        "teacher_first_dist_five_number": [
+          23.58577477321121,
+          23.585783410521913,
+          23.585901588176647,
+          24.422934716412392,
+          24.423056176202135
+        ]
+      }
+    }
+  },
+  "60": {
+    "complete": true,
+    "expected": 30,
+    "vision_cases": 30,
+    "planned_endpoint_seeds": [],
+    "planned_endpoint_successes": [],
+    "teacher_replay_success": 30,
+    "shortcut_cases": 30,
+    "shortcut_known_cases": 30,
+    "shortcut_unknown_seeds": [],
+    "shortcut_success": 0,
+    "shortcut_rate": 0.0,
+    "shortcut_ci95": [
+      0.0,
+      0.11351339317396876
+    ],
+    "shortcut_success_upper": 0,
+    "shortcut_rate_lower": 0.0,
+    "shortcut_rate_upper": 0.0,
+    "threshold_decidable": true,
+    "threshold_exceeded": false,
+    "passed": true,
+    "structures": {
+      "endpoint_walls": {
+        "start_visible_any": 30,
+        "start_visible_heading_sum": 1080,
+        "teacher_first_visible": 30,
+        "teacher_first_dist_five_number": [
+          59.92758067171084,
+          59.92759067170326,
+          59.98531244378603,
+          59.98532144378568,
+          59.98532144378591
+        ]
+      },
+      "gold_enclosure": {
+        "start_visible_any": 7,
+        "start_visible_heading_sum": 12,
+        "teacher_first_visible": 30,
+        "teacher_first_dist_five_number": [
+          52.77126673224197,
+          52.77140515310998,
+          52.77151746541566,
+          53.90541504638266,
+          53.90811472565729
+        ]
+      }
+    }
+  },
+  "100": {
+    "complete": true,
+    "expected": 30,
+    "vision_cases": 30,
+    "planned_endpoint_seeds": [
+      2026112126
+    ],
+    "planned_endpoint_successes": [],
+    "teacher_replay_success": 29,
+    "shortcut_cases": 30,
+    "shortcut_known_cases": 29,
+    "shortcut_unknown_seeds": [
+      2026112126
+    ],
+    "shortcut_success": 0,
+    "shortcut_rate": 0.0,
+    "shortcut_ci95": [
+      0.0,
+      0.11696979849974075
+    ],
+    "shortcut_success_upper": 1,
+    "shortcut_rate_lower": 0.0,
+    "shortcut_rate_upper": 0.03333333333333333,
+    "threshold_decidable": true,
+    "threshold_exceeded": false,
+    "passed": true,
+    "structures": {
+      "endpoint_walls": {
+        "start_visible_any": 30,
+        "start_visible_heading_sum": 1047,
+        "teacher_first_visible": 29,
+        "teacher_first_dist_five_number": [
+          99.89481493576943,
+          99.89482394545796,
+          99.94812060390984,
+          100.13747216131857,
+          100.13802477080094
+        ]
+      },
+      "gold_enclosure": {
+        "start_visible_any": 2,
+        "start_visible_heading_sum": 8,
+        "teacher_first_visible": 29,
+        "teacher_first_dist_five_number": [
+          38.00772783117126,
+          38.05298268322103,
+          38.09599237766141,
+          38.14626722762812,
+          38.22877755985495
+        ]
+      }
+    }
+  }
+}

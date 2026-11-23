@@ -8,6 +8,7 @@ import json
 import math
 import random
 from contextlib import nullcontext
+from itertools import islice
 from pathlib import Path
 from time import monotonic
 from zipfile import ZipFile
@@ -17,12 +18,14 @@ from PIL import Image
 from torch.nn import functional as F
 
 from t1_model import HISTORY, T1Policy
+from t1_storage import retry_read
+from t1_train_state import checkpoints, load_checkpoint, save_checkpoint, save_weights, trim_log
 
 
 def load_images(archive, indices, wrapper, resolution):
     images = []
     for index in indices:
-        with Image.open(io.BytesIO(archive.read(f"{index:05d}.jpg"))) as image:
+        with Image.open(io.BytesIO(retry_read(archive.read, f"{index:05d}.jpg"))) as image:
             frame = image.convert("RGB")
         if resolution:
             frame = frame.resize(resolution, Image.Resampling.BILINEAR)
@@ -30,15 +33,32 @@ def load_images(archive, indices, wrapper, resolution):
     return images
 
 
-def case_examples(policy, row, epochs_seed, resolution):
-    with ZipFile(row["path"]) as archive:
-        meta = json.loads(archive.read("episode.json"))
-        start = row["outbound_frames"]
-        stop = row["selected_frames"]
-        if start >= stop:
-            return
+def case_examples(policy, row, epochs_seed, resolution, cache_vision=False,
+                  archive_cache=None, validation_frames=None, skip=0):
+    source = Path(row["path"])
+    if archive_cache is not None:
+        source = archive_cache / source.name
+    start = row["outbound_frames"]
+    stop = row["selected_frames"]
+    if start + skip >= stop:
+        return
+    with retry_read(ZipFile, source) as archive:
+        meta = json.loads(retry_read(archive.read, "episode.json"))
         features = None
-        if policy.memory is not None:
+        if cache_vision:
+            encoded = None if validation_frames is None else validation_frames.get(row["path"])
+            if encoded is None:
+                offset = 0 if policy.memory is not None else max(0, start - policy.history)
+                frames = []
+                for begin in range(offset, stop, 3):
+                    images = load_images(archive, range(begin, min(begin + 3, stop)), policy.images, resolution)
+                    frames.extend(policy.encode_frames(images))
+                features = policy.pooled_images(frames[:-1]) if policy.memory is not None else None
+                encoded = offset, frames, features
+                if validation_frames is not None:
+                    validation_frames[row["path"]] = encoded
+            offset, cached, features = encoded
+        elif policy.memory is not None:
             features = torch.cat([
                 policy.pooled_images(load_images(archive, range(begin, min(begin + 8, stop - 1)),
                                                  policy.images, resolution))
@@ -46,9 +66,10 @@ def case_examples(policy, row, epochs_seed, resolution):
             ])
         indices = list(range(start, stop))
         random.Random(epochs_seed + row["scene_seed"]).shuffle(indices)
-        for action_index in indices:
+        for action_index in indices[skip:]:
             first = max(0, action_index - policy.history)
-            frames = load_images(archive, range(first, action_index + 1), policy.images, resolution)
+            frames = (cached[first-offset:action_index+1-offset] if cache_vision else
+                      load_images(archive, range(first, action_index + 1), policy.images, resolution))
             actions = meta["action"][first:action_index]
             if len(actions) < policy.history:
                 missing = policy.history - len(actions)
@@ -64,35 +85,48 @@ VALIDATION_FIELDS = ("update", "frames", "actions", "tokens", "loss",
 
 
 @torch.inference_mode()
-def validation_metrics(policy, dataset, seed, resolution, update):
+def validation_metrics(policy, dataset, seed, resolution, update, *, cache_vision=False,
+                       archive_cache=None, validation_frames=None, batch_size=1):
     started = monotonic()
     training = policy.training
     frames = sum(row["selected_frames"] for row in dataset)
-    actions = tokens = correct = exact = 0
-    total = 0.0
+    actions = tokens = 0
+    correct = torch.zeros((), device=policy.device, dtype=torch.long)
+    exact = torch.zeros_like(correct)
+    total = torch.zeros((), device=policy.device, dtype=torch.float64)
     policy.eval()
     try:
-        for row in dataset:
-            for example in case_examples(policy, row, seed, resolution):
-                logits, targets = policy.action_logits(*example)
-                total += float(F.cross_entropy(logits, targets, reduction="sum"))
-                matched = int(logits.argmax(dim=-1).eq(targets).sum())
+        examples = (example for row in dataset for example in
+                    case_examples(policy, row, seed, resolution, cache_vision,
+                                  archive_cache, validation_frames))
+        while group := list(islice(examples, batch_size)):
+            predictions = (policy.batched_action_logits(group) if len(group) > 1 else
+                           [policy.action_logits(*group[0])])
+            for logits, targets in predictions:
+                total += F.cross_entropy(logits, targets, reduction="sum")
+                matched = logits.argmax(dim=-1).eq(targets).sum()
                 tokens += targets.numel()
                 correct += matched
                 actions += 1
-                exact += int(matched == targets.numel())
+                exact += matched == targets.numel()
     finally:
         policy.train(training)
     if actions != sum(row["selected_labels"] for row in dataset) or not tokens or not math.isfinite(total):
         raise RuntimeError("Invalid validation coverage or loss")
-    return (update, frames, actions, tokens, total/tokens, correct/tokens, exact/actions,
+    return (update, frames, actions, tokens, float(total)/tokens, int(correct)/tokens, int(exact)/actions,
             monotonic()-started, str(policy.device), str(policy.base.dtype))
 
 
 def train(args):
     started = monotonic()
-    args.output.mkdir(parents=True, exist_ok=False)
-    dataset_bytes = args.dataset.read_bytes()
+    snapshots = args.output / "checkpoints"
+    if args.resume:
+        available = checkpoints(snapshots)
+        if not available or (args.output / "summary.json").is_file():
+            raise ValueError("Resume requires an unfinished run with a complete checkpoint")
+    else:
+        args.output.mkdir(parents=True, exist_ok=False)
+    dataset_bytes = retry_read(args.dataset.read_bytes)
     rows = [json.loads(line) for line in dataset_bytes.splitlines()]
     dataset = [row for row in rows if row["split"] == "train" and row["selected_labels"] > 0]
     validation = [row for row in rows if row["split"] == "validation"] if args.validate_every else []
@@ -105,6 +139,7 @@ def train(args):
     policy.train()
     parameters = [param for param in policy.parameters() if param.requires_grad]
     optimizer = torch.optim.AdamW(parameters, lr=args.learning_rate, weight_decay=0.01)
+    scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lr_lambda=lambda _: 1.0)
     optimizer.zero_grad(set_to_none=True)
     examples_per_epoch = sum(row["selected_labels"] for row in dataset)
     total_examples = examples_per_epoch * args.epochs
@@ -115,39 +150,69 @@ def train(args):
         examples_per_epoch=examples_per_epoch, accumulation=args.accumulation,
         trainable_parameters=sum(p.numel() for p in parameters), learning_rate=args.learning_rate,
         budget_seconds=args.budget_seconds, validate_every=args.validate_every,
-        checkpoint_selection="last_optimizer_step",
+        checkpoint_selection="last_optimizer_step", cache_vision=args.cache_vision,
+        validation_batch_size=args.validation_batch_size,
+        checkpoint_every=args.checkpoint_every,
     )
-    (args.output / "training_config.json").write_text(json.dumps(settings, indent=2) + "\n")
-
     updates = samples = group_count = 0
     group_loss = 0.0
     first = last = None
+    initial_epoch = initial_row = initial_offset = 0
+    previous_elapsed = 0.0
     stopped = False
-    val_context = (args.output / "val_loss.csv").open("x", newline="") if validation else nullcontext()
-    with (args.output / "loss.csv").open("x", newline="") as stream, val_context as val_stream:
+    config_path = args.output / "training_config.json"
+    loss_path = args.output / "loss.csv"
+    val_path = args.output / "val_loss.csv"
+    if args.resume:
+        if settings != json.loads(config_path.read_text()):
+            raise ValueError("Resume settings differ from the saved run")
+        progress = load_checkpoint(available[-1], policy, optimizer, scheduler)
+        updates, samples = progress["updates"], progress["samples"]
+        initial_epoch, initial_row, initial_offset = progress["cursor"]
+        first, last, previous_elapsed = progress["first"], progress["last"], progress["elapsed"]
+        trim_log(loss_path, updates)
+        if validation:
+            trim_log(val_path, updates)
+        print(f"Resuming update={updates}, examples={samples}, cursor={progress['cursor']}", flush=True)
+    else:
+        config_path.write_text(json.dumps(settings, indent=2) + "\n")
+    validation_frames = {} if validation and args.cache_vision else None
+    open_mode = "a" if args.resume else "x"
+    val_context = val_path.open(open_mode, newline="") if validation else nullcontext()
+    with loss_path.open(open_mode, newline="") as stream, val_context as val_stream:
         writer = csv.writer(stream)
-        writer.writerow(("update", "examples", "loss", "elapsed_seconds", "peak_allocated_mib"))
         val_writer = csv.writer(val_stream) if val_stream else None
-        if val_writer:
-            val_writer.writerow(VALIDATION_FIELDS)
-            val_stream.flush()
+        if not args.resume:
+            writer.writerow(("update", "examples", "loss", "elapsed_seconds", "peak_allocated_mib"))
+            stream.flush()
+            if val_writer:
+                val_writer.writerow(VALIDATION_FIELDS)
+                val_stream.flush()
+            if args.checkpoint_every:
+                save_checkpoint(snapshots, policy, optimizer, scheduler,
+                                dict(updates=0, samples=0, cursor=(0, 0, 0), first=None, last=None,
+                                     elapsed=monotonic() - started))
 
         def validate():
-            try:
-                metrics = validation_metrics(policy, validation, args.seed, args.resolution, updates)
-            except (RuntimeError, OSError) as error:
-                print(f"validation update={updates} failed: {error}", flush=True)
-                return
+            metrics = validation_metrics(policy, validation, args.seed, args.resolution, updates,
+                                         cache_vision=args.cache_vision, archive_cache=args.archive_cache,
+                                         validation_frames=validation_frames,
+                                         batch_size=args.validation_batch_size)
             val_writer.writerow(metrics)
             val_stream.flush()
             print(f"validation update={updates} loss={metrics[4]:.6f} accuracy={metrics[5]:.6f}",
                   flush=True)
 
-        for epoch in range(args.epochs):
+        for epoch in range(initial_epoch, args.epochs):
             order = dataset.copy()
             random.Random(args.seed + epoch).shuffle(order)
-            for row in order:
-                for example in case_examples(policy, row, args.seed + epoch, args.resolution):
+            row_start = initial_row if epoch == initial_epoch else 0
+            for row_index in range(row_start, len(order)):
+                row = order[row_index]
+                offset = initial_offset if (epoch, row_index) == (initial_epoch, initial_row) else 0
+                examples = case_examples(policy, row, args.seed + epoch, args.resolution,
+                                         args.cache_vision, args.archive_cache, skip=offset)
+                for example_index, example in enumerate(examples, start=offset):
                     count = min(args.accumulation, total_examples - samples + group_count)
                     loss = policy.loss(*example)
                     measured = float(loss.detach())
@@ -161,12 +226,13 @@ def train(args):
                         continue
                     torch.nn.utils.clip_grad_norm_(parameters, 1.0)
                     optimizer.step()
+                    scheduler.step()
                     optimizer.zero_grad(set_to_none=True)
                     updates += 1
                     last = group_loss / group_count
                     if first is None:
                         first = last
-                    elapsed = monotonic() - started
+                    elapsed = previous_elapsed + monotonic() - started
                     writer.writerow((updates, samples, last, elapsed,
                                      torch.cuda.max_memory_allocated() / 2**20))
                     stream.flush()
@@ -176,6 +242,11 @@ def train(args):
                     group_loss = 0.0
                     if val_writer and updates % args.validate_every == 0:
                         validate()
+                    if args.checkpoint_every and updates % args.checkpoint_every == 0:
+                        save_checkpoint(snapshots, policy, optimizer, scheduler,
+                                        dict(updates=updates, samples=samples,
+                                             cursor=(epoch, row_index, example_index + 1), first=first,
+                                             last=last, elapsed=previous_elapsed + monotonic() - started))
                     if args.budget_seconds and elapsed >= args.budget_seconds:
                         stopped = True
                         break
@@ -187,18 +258,17 @@ def train(args):
             validate()
     if not updates:
         raise RuntimeError("No optimizer updates completed")
-    policy.model.save_pretrained(args.output / "adapter", safe_serialization=True)
-    if policy.memory is not None:
-        from safetensors.torch import save_file
-
-        save_file({name: value.detach().cpu().contiguous()
-                   for name, value in policy.memory.state_dict().items()},
-                  args.output / "spatial.safetensors")
-    result = dict(updates=updates, supervised_examples=samples, elapsed_seconds=monotonic() - started,
+    if not stopped and samples != total_examples:
+        raise RuntimeError(f"Expected {total_examples} supervised examples, processed {samples}")
+    save_weights(policy, args.output)
+    result = dict(updates=updates, supervised_examples=samples,
+                  elapsed_seconds=previous_elapsed + monotonic() - started,
                   first_update_loss=first, last_update_loss=last,
                   peak_allocated_mib=torch.cuda.max_memory_allocated() / 2**20,
                   stopped_at_budget=stopped)
-    (args.output / "summary.json").write_text(json.dumps(result, indent=2) + "\n")
+    summary = args.output / ".summary.json.tmp"
+    summary.write_text(json.dumps(result, indent=2) + "\n")
+    summary.replace(args.output / "summary.json")
     print(json.dumps(result, indent=2))
 
 
@@ -216,11 +286,17 @@ def main():
     parser.add_argument("--seed", type=int, default=20261122)
     parser.add_argument("--quantized", action="store_true")
     parser.add_argument("--validate-every", type=int)
+    parser.add_argument("--validation-batch-size", type=int, default=1)
+    parser.add_argument("--checkpoint-every", type=int, default=0)
+    parser.add_argument("--resume", action="store_true")
+    parser.add_argument("--cache-vision", action="store_true")
+    parser.add_argument("--archive-cache", type=Path)
     args = parser.parse_args()
     if args.validate_every is None:
         schedule = args.output.parent / "validation_schedule.json"
         args.validate_every = int(json.loads(schedule.read_text())["interval"]) if schedule.is_file() else 0
-    if args.epochs <= 0 or args.accumulation <= 0 or args.budget_seconds < 0 or args.validate_every < 0:
+    if (args.epochs <= 0 or args.accumulation <= 0 or args.budget_seconds < 0
+            or args.validate_every < 0 or args.validation_batch_size <= 0 or args.checkpoint_every < 0):
         parser.error("Invalid epochs, accumulation, or time budget")
     train(args)
 

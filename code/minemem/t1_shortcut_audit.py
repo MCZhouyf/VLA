@@ -152,7 +152,7 @@ class TrialEnd(Exception):
     pass
 
 
-def evaluate_control(arena, config, trace, scan):
+def evaluate_control(arena, config, trace, scan, *, policy=None):
     arena.restore_return_pose(config)
     closest = math.dist(horizontal(arena.info), arena.landmark)
     reason = "budget"
@@ -177,7 +177,9 @@ def evaluate_control(arena, config, trace, scan):
 
     try:
         with arena.track(trace):
-            if scan:
+            if policy is not None:
+                policy(arena.info["pov"], move)
+            elif scan:
                 scan_policy(arena.info["pov"], move)
             else:
                 while True:
@@ -489,7 +491,9 @@ def main():
     run.add_argument("--worker", type=int, default=0)
     run.add_argument("--workers", type=int, default=1)
     run.add_argument("--seeds-file", type=Path, required=True)
-    run.add_argument("--fixtures", type=Path, nargs="+", required=True)
+    run.add_argument("--fixtures", type=Path, nargs="+")
+    run.add_argument("--structure-scores", type=Path)
+    run.add_argument("--structure-ablation-only", action="store_true")
     run.add_argument("--distances", type=int, nargs="+", choices=DISTANCES, default=DISTANCES)
     run.add_argument("--candidate", action="store_true")
     run.add_argument("--screened-pillar", action="store_true")
@@ -511,6 +515,15 @@ def main():
     report.add_argument("--cohort", choices=("formal","teacher"), default="formal")
     report.add_argument("--teacher-verified", type=Path, nargs="+")
     args = parser.parse_args()
+    if args.mode == "audit" and args.structure_scores:
+        from t1_structure_audit import audit_structures
+
+        audit_structures(args)
+        return
+    if args.mode == "audit" and not args.fixtures:
+        parser.error("The visibility audit needs --fixtures or --structure-scores")
+    if args.mode == "audit" and args.structure_ablation_only:
+        parser.error("--structure-ablation-only requires --structure-scores")
     if args.mode == "audit" and args.screened_pillar and not args.candidate:
         parser.error("A screened pillar requires candidate geometry")
     {"audit":audit, "navigation":navigation, "summary":summarize}[args.mode](args)

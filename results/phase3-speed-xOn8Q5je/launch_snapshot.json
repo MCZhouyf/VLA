@@ -1,0 +1,71 @@
+{
+  "captured_at": "2026-11-23T07:37:54+08:00",
+  "old": {
+    "first": {
+      "update": "13327",
+      "examples": "53308",
+      "loss": "0.0007411831029457971",
+      "elapsed_seconds": "54596.38504447788",
+      "peak_allocated_mib": "21117.90966796875"
+    },
+    "latest": {
+      "update": "13577",
+      "examples": "54305",
+      "loss": "0.0014587885234504938",
+      "elapsed_seconds": "55587.04310366511",
+      "peak_allocated_mib": "21117.90966796875"
+    },
+    "labels_per_second": 1.0064017455407062
+  },
+  "old_summary": {
+    "updates": 13577,
+    "supervised_examples": 54305,
+    "elapsed_seconds": 55587.80062380433,
+    "first_update_loss": 5.549077987670898,
+    "last_update_loss": 0.0014587885234504938,
+    "peak_allocated_mib": 21117.90966796875,
+    "stopped_at_budget": false
+  },
+  "screened": {
+    "first": {
+      "update": "10",
+      "examples": "40",
+      "loss": "0.3772546765394509",
+      "elapsed_seconds": "86.04256788641214",
+      "peak_allocated_mib": "21107.541015625"
+    },
+    "latest": {
+      "update": "546",
+      "examples": "2184",
+      "loss": "0.01583180553279817",
+      "elapsed_seconds": "1615.6203012540936",
+      "peak_allocated_mib": "21110.412109375"
+    },
+    "labels_per_second": 1.4016940448521964
+  },
+  "screened_config": {
+    "variant": "no_memory",
+    "history": 2,
+    "quantized": false,
+    "checkpoint": "/share/project/zhoubowen/zhy/zyf/models/JarvisVLA-Qwen2-VL-7B",
+    "dataset_sha256": "f3a152816553499197053e18ce60e3837c899bed582eaa4cd913a71f52b5cefb",
+    "resolution": null,
+    "seed": 20261122,
+    "epochs": 1,
+    "examples_per_epoch": 57549,
+    "accumulation": 4,
+    "trainable_parameters": 161480704,
+    "learning_rate": 0.0001,
+    "budget_seconds": 0,
+    "validate_every": 1000,
+    "checkpoint_selection": "last_optimizer_step",
+    "cache_vision": true,
+    "validation_batch_size": 4,
+    "checkpoint_every": 1000
+  },
+  "initial_snapshot": true,
+  "gpu": [
+    "6, 22685 MiB, 97 %",
+    "7, 38463 MiB, 0 %"
+  ]
+}

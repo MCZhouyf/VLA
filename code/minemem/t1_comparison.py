@@ -7,6 +7,7 @@ from pathlib import Path
 
 from phase1_metrics import wilson
 from phase1_t1 import DISTANCES
+from t1_occlusion import SCREENED_PROTOCOL
 from t1_safety import SETUP_REVISION
 
 
@@ -31,6 +32,8 @@ def validate_training(runs):
     base_config, base_result = pairs[0]
     for config, result in pairs:
         if (any(config[key] != base_config[key] for key in equal)
+                or any(config.get(key) != base_config.get(key)
+                       for key in ("resolution", "validate_every", "checkpoint_selection"))
                 or result["stopped_at_budget"] or config["budget_seconds"]):
             raise ValueError("Training data, hyperparameters, and complete epochs must match")
         if any(result[key] != base_result[key] for key in ("supervised_examples", "updates")):
@@ -44,6 +47,9 @@ def summarize(rows, seeds):
                 for distance in DISTANCES for seed in seeds}
     if grid != expected or len(grid) != len(rows):
         raise ValueError("Formal evaluation coverage differs from the frozen cohort")
+    protocols = {row.get("scene_protocol", "t1_v4") for row in rows}
+    if len(protocols) != 1 or not protocols <= {"t1_v4", SCREENED_PROTOCOL}:
+        raise ValueError("All results must use the same frozen scene protocol")
     for row in rows:
         outbound_failure = row["end_reason"].startswith("outbound_")
         ok = (float(row["min_dist"]) <= 3 and int(row["deaths"]) == 0
@@ -113,15 +119,17 @@ def main():
     if any(row["training_run"] != runs[row["model"]] for row in rows):
         raise ValueError("Evaluation output does not match the supplied training runs")
     summaries = summarize(rows, seeds)
+    protocol = "screened" if rows[0].get("scene_protocol") == SCREENED_PROTOCOL else "v4"
+    prefix = f"cliff_T1_{protocol}_trained"
     args.output.mkdir(parents=True, exist_ok=True)
-    for name, values in (("cliff_T1_v4_trained.csv", rows), ("cliff_T1_v4_trained_summary.csv", summaries)):
+    for name, values in ((f"{prefix}.csv", rows), (f"{prefix}_summary.csv", summaries)):
         with (args.output / name).open("x", newline="") as stream:
             writer = csv.DictWriter(stream, fieldnames=list(values[0]))
             writer.writeheader()
             writer.writerows(values)
-    plot(args.output / "cliff_T1_v4_trained.svg", summaries)
+    plot(args.output / f"{prefix}.svg", summaries)
     if args.zero_shot_summary:
-        plot(args.output / "cliff_T1_v4_comparison.svg", summaries, read([args.zero_shot_summary]))
+        plot(args.output / f"cliff_T1_{protocol}_comparison.svg", summaries, read([args.zero_shot_summary]))
     rates = {row["model"]: row["rate"] for row in summaries if row["distance"] == 30}
     print(json.dumps(dict(d30=rates, proceed=rates["no_memory"] < 0.20 and rates["spatial"] > 0.50)))
 
