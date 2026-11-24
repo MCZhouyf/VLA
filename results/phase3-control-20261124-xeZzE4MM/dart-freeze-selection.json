@@ -1,0 +1,14 @@
+{
+  "reason": "Verified aggregate quota before every shard reached its local quota",
+  "passive_waiters_superseded": [
+    "dart-recovery",
+    "continuation-no_memory",
+    "continuation-spatial",
+    "repair-formal"
+  ],
+  "active_gpu_evaluations_preserved": true,
+  "source_roots": [
+    "dart-data",
+    "dart-retry"
+  ]
+}

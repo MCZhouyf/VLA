@@ -1,0 +1,236 @@
+{
+  "protocol": "t1_occlusion_candidate",
+  "scenario_seed": 2030211002,
+  "world_seed": 20712101,
+  "distance": 60,
+  "arena_origin": [
+    -727,
+    75,
+    5050
+  ],
+  "native_spawn": {
+    "x": -726.5,
+    "y": 63.0,
+    "z": 5050.5,
+    "pitch": 0.0,
+    "yaw": 0.0
+  },
+  "spawn": {
+    "x": -724.5,
+    "y": 75.0,
+    "z": 5048.5,
+    "pitch": 0.0,
+    "yaw": 45.0
+  },
+  "landmark": [
+    -726.5,
+    5050.5
+  ],
+  "distractors": [
+    {
+      "material": "iron_block",
+      "horizontal": [
+        -733.5,
+        5066.5
+      ]
+    },
+    {
+      "material": "lapis_block",
+      "horizontal": [
+        -741.5,
+        5030.5
+      ]
+    }
+  ],
+  "wall": [
+    -778,
+    75,
+    5044,
+    -778,
+    80,
+    5056
+  ],
+  "planned_endpoint": [
+    -786.5,
+    5050.5
+  ],
+  "waypoints": [
+    [
+      -719.5,
+      5048.5
+    ],
+    [
+      -719.5,
+      5043.3
+    ],
+    [
+      -779.5,
+      5043.3
+    ],
+    [
+      -786.5,
+      5050.5
+    ]
+  ],
+  "final_yaw": 90.0,
+  "outbound_dwell_steps": 40,
+  "final_facing_steps": 20,
+  "setup_revision": "remote_respawn_v1",
+  "protection_commands": [
+    "/gamerule doMobSpawning false",
+    "/kill @e[type=!player]",
+    "/time set day",
+    "/gamerule doDaylightCycle false",
+    "/gamerule doWeatherCycle false",
+    "/weather clear",
+    "/spawnpoint @p -343 160 5434"
+  ],
+  "respawn_pad_commands": [
+    "/forceload add -344 5433 -342 5435",
+    "/fill -344 159 5433 -342 159 5435 minecraft:stone",
+    "/fill -344 160 5433 -342 162 5435 minecraft:air"
+  ],
+  "respawn_point": [
+    -343,
+    160,
+    5434
+  ],
+  "optional_effects": false,
+  "render_distance_chunks": 4,
+  "occlusion_walls": [
+    [
+      -778,
+      75,
+      5044,
+      -778,
+      80,
+      5056
+    ],
+    [
+      -797,
+      75,
+      5044,
+      -797,
+      80,
+      5056
+    ],
+    [
+      -793,
+      75,
+      5041,
+      -781,
+      80,
+      5041
+    ],
+    [
+      -793,
+      75,
+      5060,
+      -781,
+      80,
+      5060
+    ]
+  ],
+  "screened_pillar": true,
+  "candidate_routes": [
+    [
+      [
+        -779.5,
+        5043.3
+      ],
+      [
+        -719.5,
+        5043.3
+      ],
+      [
+        -719.5,
+        5048.5
+      ],
+      [
+        -723.5,
+        5048.5
+      ],
+      [
+        -726.5,
+        5050.5
+      ]
+    ]
+  ],
+  "pillar_screen": [
+    [
+      -732,
+      75,
+      5045,
+      -722,
+      80,
+      5045
+    ],
+    [
+      -732,
+      75,
+      5055,
+      -722,
+      80,
+      5055
+    ],
+    [
+      -732,
+      75,
+      5045,
+      -732,
+      80,
+      5055
+    ],
+    [
+      -722,
+      75,
+      5045,
+      -722,
+      80,
+      5046
+    ],
+    [
+      -722,
+      75,
+      5050,
+      -722,
+      80,
+      5055
+    ],
+    [
+      -718,
+      75,
+      5045,
+      -718,
+      80,
+      5055
+    ]
+  ],
+  "return_pose": {
+    "x": -786.4275342202369,
+    "y": 75.0,
+    "z": 5050.425208419789,
+    "pitch": 0.0,
+    "yaw": -265.4447
+  },
+  "return_limit": 1018,
+  "rgb_anchor_stride": 8,
+  "rgb_anchor_choices": {
+    "first_pose": [
+      0,
+      0
+    ],
+    "rgb_anchor": [
+      0,
+      0
+    ],
+    "rgb_anchor_without_dwell": [
+      40,
+      40
+    ],
+    "rgb_at_shuffled_pose": [
+      0,
+      96
+    ]
+  }
+}

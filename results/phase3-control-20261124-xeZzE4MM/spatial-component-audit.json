@@ -1,0 +1,318 @@
+{
+  "dtype": "bf16",
+  "physical_gpu": 7,
+  "teacher_tokens": [
+    151835,
+    151848,
+    151876,
+    151897,
+    151836
+  ],
+  "teacher_environment": {
+    "forward": 1,
+    "camera": [
+      0.0,
+      0.0
+    ]
+  },
+  "cases": [
+    2030110008,
+    2030112007,
+    2030110006,
+    2030110007
+  ],
+  "combinations": [
+    {
+      "lora_update": 1000,
+      "spatial_update": 1000,
+      "outcomes": [
+        {
+          "tokens": [
+            151835,
+            151848,
+            151876,
+            151897,
+            151836
+          ],
+          "environment": {
+            "forward": 1,
+            "camera": [
+              0.0,
+              0.0
+            ]
+          },
+          "complete": true
+        },
+        {
+          "tokens": [
+            151835,
+            151848,
+            151876,
+            151897,
+            151836
+          ],
+          "environment": {
+            "forward": 1,
+            "camera": [
+              0.0,
+              0.0
+            ]
+          },
+          "complete": true
+        },
+        {
+          "tokens": [
+            151835,
+            151848,
+            151876,
+            151897,
+            151836
+          ],
+          "environment": {
+            "forward": 1,
+            "camera": [
+              0.0,
+              0.0
+            ]
+          },
+          "complete": true
+        },
+        {
+          "tokens": [
+            151835,
+            151848,
+            151876,
+            151897,
+            151836
+          ],
+          "environment": {
+            "forward": 1,
+            "camera": [
+              0.0,
+              0.0
+            ]
+          },
+          "complete": true
+        }
+      ]
+    },
+    {
+      "lora_update": 1000,
+      "spatial_update": 2000,
+      "outcomes": [
+        {
+          "tokens": [
+            151835,
+            151848,
+            151876,
+            151897,
+            151836
+          ],
+          "environment": {
+            "forward": 1,
+            "camera": [
+              0.0,
+              0.0
+            ]
+          },
+          "complete": true
+        },
+        {
+          "tokens": [
+            151835,
+            151848,
+            151876,
+            151897,
+            151836
+          ],
+          "environment": {
+            "forward": 1,
+            "camera": [
+              0.0,
+              0.0
+            ]
+          },
+          "complete": true
+        },
+        {
+          "tokens": [
+            151835,
+            151848,
+            151876,
+            151897,
+            151836
+          ],
+          "environment": {
+            "forward": 1,
+            "camera": [
+              0.0,
+              0.0
+            ]
+          },
+          "complete": true
+        },
+        {
+          "tokens": [
+            151835,
+            151848,
+            151876,
+            151897,
+            151836
+          ],
+          "environment": {
+            "forward": 1,
+            "camera": [
+              0.0,
+              0.0
+            ]
+          },
+          "complete": true
+        }
+      ]
+    },
+    {
+      "lora_update": 2000,
+      "spatial_update": 1000,
+      "outcomes": [
+        {
+          "tokens": [
+            151835,
+            151848,
+            151876,
+            151897,
+            151836
+          ],
+          "environment": {
+            "forward": 1,
+            "camera": [
+              0.0,
+              0.0
+            ]
+          },
+          "complete": true
+        },
+        {
+          "tokens": [
+            151835,
+            151848,
+            151876,
+            151897,
+            151836
+          ],
+          "environment": {
+            "forward": 1,
+            "camera": [
+              0.0,
+              0.0
+            ]
+          },
+          "complete": true
+        },
+        {
+          "tokens": [
+            151835,
+            151848,
+            151876,
+            151897,
+            151836
+          ],
+          "environment": {
+            "forward": 1,
+            "camera": [
+              0.0,
+              0.0
+            ]
+          },
+          "complete": true
+        },
+        {
+          "tokens": [
+            151835,
+            151848,
+            151876,
+            151897,
+            151836
+          ],
+          "environment": {
+            "forward": 1,
+            "camera": [
+              0.0,
+              0.0
+            ]
+          },
+          "complete": true
+        }
+      ]
+    },
+    {
+      "lora_update": 2000,
+      "spatial_update": 2000,
+      "outcomes": [
+        {
+          "tokens": [
+            151835,
+            151876,
+            151907,
+            151836
+          ],
+          "environment": {
+            "forward": 0,
+            "camera": [
+              0.0,
+              10.0
+            ]
+          },
+          "complete": true
+        },
+        {
+          "tokens": [
+            151835,
+            151876,
+            151907,
+            151836
+          ],
+          "environment": {
+            "forward": 0,
+            "camera": [
+              0.0,
+              10.0
+            ]
+          },
+          "complete": true
+        },
+        {
+          "tokens": [
+            151835,
+            151876,
+            151907,
+            151836
+          ],
+          "environment": {
+            "forward": 0,
+            "camera": [
+              0.0,
+              10.0
+            ]
+          },
+          "complete": true
+        },
+        {
+          "tokens": [
+            151835,
+            151876,
+            151907,
+            151836
+          ],
+          "environment": {
+            "forward": 0,
+            "camera": [
+              0.0,
+              10.0
+            ]
+          },
+          "complete": true
+        }
+      ]
+    }
+  ]
+}

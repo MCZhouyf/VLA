@@ -1,0 +1,50 @@
+{
+  "30": {
+    "start_pose": {
+      "cases": 3,
+      "successes": 0,
+      "min_dist_min": 20.80827321112895,
+      "min_dist_max": 21.807364405107606,
+      "deaths": 0,
+      "pose_jumps": 0,
+      "end_reasons": {
+        "budget": 3
+      }
+    },
+    "reverse_poses": {
+      "cases": 3,
+      "successes": 3,
+      "min_dist_min": 2.948679600045655,
+      "min_dist_max": 2.9979103569102783,
+      "deaths": 0,
+      "pose_jumps": 0,
+      "end_reasons": {
+        "reached": 3
+      }
+    }
+  },
+  "100": {
+    "start_pose": {
+      "cases": 3,
+      "successes": 0,
+      "min_dist_min": 90.80000890120219,
+      "min_dist_max": 91.80017617680502,
+      "deaths": 0,
+      "pose_jumps": 0,
+      "end_reasons": {
+        "budget": 3
+      }
+    },
+    "reverse_poses": {
+      "cases": 3,
+      "successes": 3,
+      "min_dist_min": 2.9106662962725807,
+      "min_dist_max": 2.9977293041126933,
+      "deaths": 0,
+      "pose_jumps": 0,
+      "end_reasons": {
+        "reached": 3
+      }
+    }
+  }
+}

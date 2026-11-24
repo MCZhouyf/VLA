@@ -8,7 +8,7 @@ from pathlib import Path
 from tempfile import NamedTemporaryFile
 from zipfile import ZipFile
 
-from t1_storage import retry_read
+from t1_storage import retry_read, trajectory_fingerprint
 
 
 def checksum(path, destination=None):
@@ -22,15 +22,12 @@ def checksum(path, destination=None):
 
 
 def verify(path, expected):
-    fingerprint = hashlib.sha256()
     with ZipFile(path) as archive:
         metadata = json.loads(archive.read("episode.json"))
-        for member in archive.infolist():
-            if member.filename.endswith(".jpg"):
-                fingerprint.update(member.CRC.to_bytes(4, "little"))
-        fingerprint.update(json.dumps(metadata["action"]).encode())
+        images = (member for member in archive.infolist() if member.filename.endswith(".jpg"))
+        fingerprint = trajectory_fingerprint(images, metadata)
         bad_member = archive.testzip()
-    if fingerprint.hexdigest() != expected or bad_member is not None:
+    if fingerprint != expected or bad_member is not None:
         raise ValueError(f"Source fingerprint or ZIP CRC mismatch for {path}")
 
 

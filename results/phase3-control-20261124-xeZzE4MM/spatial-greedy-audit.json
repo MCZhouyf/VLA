@@ -1,0 +1,345 @@
+{
+  "dtype": "bf16",
+  "physical_gpu": 7,
+  "teacher_tokens": [
+    151835,
+    151848,
+    151876,
+    151897,
+    151836
+  ],
+  "teacher_environment": {
+    "forward": 1,
+    "camera": [
+      0.0,
+      0.0
+    ]
+  },
+  "selection": "the same four visible modal-target validation inputs used in the FP32 audit",
+  "checkpoints": {
+    "1000": [
+      {
+        "seed": 2030110008,
+        "action_index": 3,
+        "teacher_forced_tokens": [
+          151835,
+          151848,
+          151876,
+          151897,
+          151836
+        ],
+        "greedy_single_tokens": [
+          151835,
+          151848,
+          151876,
+          151897,
+          151836
+        ],
+        "greedy_batch_tokens": [
+          151835,
+          151848,
+          151876,
+          151897,
+          151836
+        ],
+        "single_environment": {
+          "forward": 1,
+          "camera": [
+            0.0,
+            0.0
+          ]
+        },
+        "batch_environment": {
+          "forward": 1,
+          "camera": [
+            0.0,
+            0.0
+          ]
+        },
+        "complete_single": true,
+        "complete_batch": true
+      },
+      {
+        "seed": 2030112007,
+        "action_index": 3,
+        "teacher_forced_tokens": [
+          151835,
+          151848,
+          151876,
+          151897,
+          151836
+        ],
+        "greedy_single_tokens": [
+          151835,
+          151848,
+          151876,
+          151897,
+          151836
+        ],
+        "greedy_batch_tokens": [
+          151835,
+          151848,
+          151876,
+          151897,
+          151836
+        ],
+        "single_environment": {
+          "forward": 1,
+          "camera": [
+            0.0,
+            0.0
+          ]
+        },
+        "batch_environment": {
+          "forward": 1,
+          "camera": [
+            0.0,
+            0.0
+          ]
+        },
+        "complete_single": true,
+        "complete_batch": true
+      },
+      {
+        "seed": 2030110006,
+        "action_index": 4,
+        "teacher_forced_tokens": [
+          151835,
+          151848,
+          151876,
+          151897,
+          151836
+        ],
+        "greedy_single_tokens": [
+          151835,
+          151848,
+          151876,
+          151897,
+          151836
+        ],
+        "greedy_batch_tokens": [
+          151835,
+          151848,
+          151876,
+          151897,
+          151836
+        ],
+        "single_environment": {
+          "forward": 1,
+          "camera": [
+            0.0,
+            0.0
+          ]
+        },
+        "batch_environment": {
+          "forward": 1,
+          "camera": [
+            0.0,
+            0.0
+          ]
+        },
+        "complete_single": true,
+        "complete_batch": true
+      },
+      {
+        "seed": 2030110007,
+        "action_index": 4,
+        "teacher_forced_tokens": [
+          151835,
+          151848,
+          151876,
+          151897,
+          151836
+        ],
+        "greedy_single_tokens": [
+          151835,
+          151848,
+          151876,
+          151897,
+          151836
+        ],
+        "greedy_batch_tokens": [
+          151835,
+          151848,
+          151876,
+          151897,
+          151836
+        ],
+        "single_environment": {
+          "forward": 1,
+          "camera": [
+            0.0,
+            0.0
+          ]
+        },
+        "batch_environment": {
+          "forward": 1,
+          "camera": [
+            0.0,
+            0.0
+          ]
+        },
+        "complete_single": true,
+        "complete_batch": true
+      }
+    ],
+    "2000": [
+      {
+        "seed": 2030110008,
+        "action_index": 3,
+        "teacher_forced_tokens": [
+          151835,
+          151876,
+          151876,
+          151897,
+          151836
+        ],
+        "greedy_single_tokens": [
+          151835,
+          151876,
+          151907,
+          151836
+        ],
+        "greedy_batch_tokens": [
+          151835,
+          151876,
+          151907,
+          151836
+        ],
+        "single_environment": {
+          "forward": 0,
+          "camera": [
+            0.0,
+            10.0
+          ]
+        },
+        "batch_environment": {
+          "forward": 0,
+          "camera": [
+            0.0,
+            10.0
+          ]
+        },
+        "complete_single": true,
+        "complete_batch": true
+      },
+      {
+        "seed": 2030112007,
+        "action_index": 3,
+        "teacher_forced_tokens": [
+          151835,
+          151876,
+          151876,
+          151897,
+          151836
+        ],
+        "greedy_single_tokens": [
+          151835,
+          151876,
+          151907,
+          151836
+        ],
+        "greedy_batch_tokens": [
+          151835,
+          151876,
+          151907,
+          151836
+        ],
+        "single_environment": {
+          "forward": 0,
+          "camera": [
+            0.0,
+            10.0
+          ]
+        },
+        "batch_environment": {
+          "forward": 0,
+          "camera": [
+            0.0,
+            10.0
+          ]
+        },
+        "complete_single": true,
+        "complete_batch": true
+      },
+      {
+        "seed": 2030110006,
+        "action_index": 4,
+        "teacher_forced_tokens": [
+          151835,
+          151876,
+          151876,
+          151897,
+          151836
+        ],
+        "greedy_single_tokens": [
+          151835,
+          151876,
+          151907,
+          151836
+        ],
+        "greedy_batch_tokens": [
+          151835,
+          151876,
+          151907,
+          151836
+        ],
+        "single_environment": {
+          "forward": 0,
+          "camera": [
+            0.0,
+            10.0
+          ]
+        },
+        "batch_environment": {
+          "forward": 0,
+          "camera": [
+            0.0,
+            10.0
+          ]
+        },
+        "complete_single": true,
+        "complete_batch": true
+      },
+      {
+        "seed": 2030110007,
+        "action_index": 4,
+        "teacher_forced_tokens": [
+          151835,
+          151876,
+          151876,
+          151897,
+          151836
+        ],
+        "greedy_single_tokens": [
+          151835,
+          151876,
+          151907,
+          151836
+        ],
+        "greedy_batch_tokens": [
+          151835,
+          151876,
+          151907,
+          151836
+        ],
+        "single_environment": {
+          "forward": 0,
+          "camera": [
+            0.0,
+            10.0
+          ]
+        },
+        "batch_environment": {
+          "forward": 0,
+          "camera": [
+            0.0,
+            10.0
+          ]
+        },
+        "complete_single": true,
+        "complete_batch": true
+      }
+    ]
+  }
+}

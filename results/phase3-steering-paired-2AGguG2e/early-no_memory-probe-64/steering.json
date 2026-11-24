@@ -1,0 +1,134 @@
+{
+  "dataset_sha256": "8230ddaff864bef2e6be8ec3c1bd67b850b789c73cef065d3111f55e36d1a6ef",
+  "variant": "no_memory",
+  "selection_seed": 20261124,
+  "device": "cpu",
+  "dtype": "torch.float32",
+  "examples_per_class": 2,
+  "confusion": {
+    "forward": {
+      "forward": 2
+    },
+    "left": {
+      "right": 1,
+      "forward": 1
+    },
+    "right": {
+      "forward": 2
+    }
+  },
+  "recalls": {
+    "forward": 1.0,
+    "left": 0.0,
+    "right": 0.0
+  },
+  "rows": [
+    {
+      "scene_seed": 2030110004,
+      "frame": 2,
+      "expected": "left",
+      "expected_yaw_bin": 0,
+      "expected_forward": false,
+      "predicted": "right",
+      "predicted_yaw_bin": 20,
+      "predicted_forward": false,
+      "raw_token_ids": [
+        151835,
+        151876,
+        151907,
+        151836
+      ],
+      "complete": true
+    },
+    {
+      "scene_seed": 2030111004,
+      "frame": 3,
+      "expected": "right",
+      "expected_yaw_bin": 19,
+      "expected_forward": true,
+      "predicted": "forward",
+      "predicted_yaw_bin": 10,
+      "predicted_forward": true,
+      "raw_token_ids": [
+        151835,
+        151848,
+        151876,
+        151897,
+        151836
+      ],
+      "complete": true
+    },
+    {
+      "scene_seed": 2030113004,
+      "frame": 20,
+      "expected": "forward",
+      "expected_yaw_bin": 10,
+      "expected_forward": true,
+      "predicted": "forward",
+      "predicted_yaw_bin": 10,
+      "predicted_forward": true,
+      "raw_token_ids": [
+        151835,
+        151848,
+        151876,
+        151897,
+        151836
+      ],
+      "complete": true
+    },
+    {
+      "scene_seed": 2030110008,
+      "frame": 2,
+      "expected": "right",
+      "expected_yaw_bin": 18,
+      "expected_forward": true,
+      "predicted": "forward",
+      "predicted_yaw_bin": 10,
+      "predicted_forward": true,
+      "raw_token_ids": [
+        151835,
+        151848,
+        151876,
+        151897,
+        151836
+      ],
+      "complete": true
+    },
+    {
+      "scene_seed": 2030112008,
+      "frame": 3,
+      "expected": "left",
+      "expected_yaw_bin": 3,
+      "expected_forward": true,
+      "predicted": "forward",
+      "predicted_yaw_bin": 10,
+      "predicted_forward": true,
+      "raw_token_ids": [
+        151835,
+        151848,
+        151876,
+        151897,
+        151836
+      ],
+      "complete": true
+    },
+    {
+      "scene_seed": 2030111009,
+      "frame": 9,
+      "expected": "forward",
+      "expected_yaw_bin": 10,
+      "expected_forward": true,
+      "predicted": "forward",
+      "predicted_yaw_bin": 10,
+      "predicted_forward": true,
+      "raw_token_ids": [
+        151835,
+        151848,
+        151876,
+        151897,
+        151836
+      ],
+      "complete": true
+    }
+  ]
+}

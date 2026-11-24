@@ -223,7 +223,8 @@ class T1Policy(nn.Module):
         return {count - 2, count - 1} <= {group for group, _ in controls}
 
     @torch.inference_mode()
-    def predict(self, instruction, frames, previous_actions, features=None, poses=None):
+    def predict(self, instruction, frames, previous_actions, features=None, poses=None,
+                *, return_ids=False):
         inputs = self.prompts(instruction, frames, previous_actions)
         embeddings, positions = self.context(inputs, features=features, poses=poses)
         output = self.base.model(inputs_embeds=embeddings, position_ids=positions, use_cache=True)
@@ -240,13 +241,15 @@ class T1Policy(nn.Module):
                 past_key_values=output.past_key_values, use_cache=True,
             )
             next_position += 1
-        return self.decode_prediction(ids)
+        return self.decode_prediction(ids, return_ids=return_ids)
 
-    def decode_prediction(self, ids):
-        return self.actions.decode(ids)[0], self.processor.tokenizer.decode(ids), self.complete_action(ids)
+    def decode_prediction(self, ids, *, return_ids=False):
+        prediction = (self.actions.decode(ids)[0], self.processor.tokenizer.decode(ids),
+                      self.complete_action(ids))
+        return (*prediction, ids) if return_ids else prediction
 
     @torch.inference_mode()
-    def predict_batch(self, examples):
+    def predict_batch(self, examples, *, return_ids=False):
         contexts = [self.context(self.prompts(instruction, frames, actions), features=features, poses=poses)
                     for instruction, frames, actions, features, poses in examples]
         embeddings, positions, mask = self.context_batch(contexts)
@@ -269,4 +272,4 @@ class T1Policy(nn.Module):
                 input_ids=tokens, position_ids=next_positions + step, attention_mask=mask,
                 past_key_values=output.past_key_values, use_cache=True,
             )
-        return [self.decode_prediction(ids) for ids in actions]
+        return [self.decode_prediction(ids, return_ids=return_ids) for ids in actions]

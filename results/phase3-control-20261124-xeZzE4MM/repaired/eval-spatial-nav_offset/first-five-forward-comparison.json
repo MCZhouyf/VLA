@@ -1,0 +1,49 @@
+{
+  "as_of_beijing": "2026-11-24T11:30:36+08:00",
+  "tested_in_view": 5,
+  "frozen_in_view": 15,
+  "required_in_view": 12,
+  "maximum_attainable_in_view": 11,
+  "paired_rollouts": [
+    {
+      "seed": 2030990100,
+      "steps": 22,
+      "identical_poses": 23,
+      "min_distance": 2.9912365067057323,
+      "success": true,
+      "stationary_heading": true
+    },
+    {
+      "seed": 2030990101,
+      "steps": 200,
+      "identical_poses": 201,
+      "min_distance": 3.865555298185391,
+      "success": false,
+      "stationary_heading": true
+    },
+    {
+      "seed": 2030990102,
+      "steps": 200,
+      "identical_poses": 201,
+      "min_distance": 3.169271904002468,
+      "success": false,
+      "stationary_heading": true
+    },
+    {
+      "seed": 2030990103,
+      "steps": 200,
+      "identical_poses": 201,
+      "min_distance": 3.962501032940546,
+      "success": false,
+      "stationary_heading": true
+    },
+    {
+      "seed": 2030990104,
+      "steps": 200,
+      "identical_poses": 201,
+      "min_distance": 3.6191254336048497,
+      "success": false,
+      "stationary_heading": true
+    }
+  ]
+}

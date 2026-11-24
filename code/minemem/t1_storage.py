@@ -1,10 +1,23 @@
 """Bounded retries for transient storage errors."""
 
 import errno
+import hashlib
+import json
 from time import sleep
 
 
 TRANSIENT_ERRORS = {errno.EAGAIN, errno.EIO, errno.ECONNRESET, errno.ESTALE, errno.ETIMEDOUT}
+
+
+def trajectory_fingerprint(images, metadata):
+    digest = hashlib.sha256()
+    for member in images:
+        digest.update(member.CRC.to_bytes(4, "little"))
+    digest.update(json.dumps(metadata["action"]).encode())
+    if "executed_action" in metadata:
+        digest.update(json.dumps(metadata["executed_action"]).encode())
+        digest.update(json.dumps(metadata["perturbation_applied"]).encode())
+    return digest.hexdigest()
 
 
 def retry_read(operation, *args):

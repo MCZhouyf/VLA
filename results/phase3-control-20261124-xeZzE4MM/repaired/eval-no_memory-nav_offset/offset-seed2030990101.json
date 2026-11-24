@@ -1,0 +1,42 @@
+{
+  "protocol": "t1_v4",
+  "scenario_seed": 2030990101,
+  "world_seed": 19961103,
+  "distance": 8.227415418605812,
+  "landmark": [
+    -6237.5,
+    -4517.5
+  ],
+  "heading_offset": 28.024653018557455,
+  "return_pose": {
+    "x": -6230.98379,
+    "y": 76.0,
+    "z": -4512.477115,
+    "pitch": 0.0,
+    "yaw": 155.65074
+  },
+  "visible": true,
+  "setup_revision": "remote_respawn_v1",
+  "protection_commands": [
+    "/gamerule doMobSpawning false",
+    "/kill @e[type=!player]",
+    "/time set day",
+    "/gamerule doDaylightCycle false",
+    "/gamerule doWeatherCycle false",
+    "/weather clear",
+    "/spawnpoint @p -5854 160 -4134"
+  ],
+  "respawn_pad_commands": [
+    "/forceload add -5855 -4135 -5853 -4133",
+    "/fill -5855 159 -4135 -5853 159 -4133 minecraft:stone",
+    "/fill -5855 160 -4135 -5853 162 -4133 minecraft:air"
+  ],
+  "respawn_point": [
+    -5854,
+    160,
+    -4134
+  ],
+  "optional_effects": false,
+  "teacher_return_steps": 29,
+  "return_limit": 200
+}

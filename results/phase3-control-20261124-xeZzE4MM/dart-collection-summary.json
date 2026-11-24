@@ -1,0 +1,20 @@
+{
+  "raw_episodes": 422,
+  "raw_frames": 140288,
+  "raw_frames_by_group": {
+    "10": 16609,
+    "30": 24386,
+    "visible": 10787,
+    "100": 52220,
+    "60": 36286
+  },
+  "completed_unique_shards": 32,
+  "retried_shards": [
+    "worker-010",
+    "worker-012",
+    "worker-016",
+    "worker-030",
+    "worker-031"
+  ],
+  "selected_frames": 50000
+}

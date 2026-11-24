@@ -1,0 +1,194 @@
+{
+  "aggregate": [
+    {
+      "cohort": "in_view",
+      "needed_turn": "right",
+      "first_turn": "right",
+      "success": true,
+      "episodes": 8
+    },
+    {
+      "cohort": "in_view",
+      "needed_turn": "left",
+      "first_turn": "right",
+      "success": false,
+      "episodes": 7
+    },
+    {
+      "cohort": "out_of_view",
+      "needed_turn": "left",
+      "first_turn": "right",
+      "success": false,
+      "episodes": 3
+    },
+    {
+      "cohort": "out_of_view",
+      "needed_turn": "right",
+      "first_turn": "right",
+      "success": false,
+      "episodes": 2
+    }
+  ],
+  "episodes": [
+    {
+      "seed": 2030990100,
+      "cohort": "in_view",
+      "needed_turn": "right",
+      "first_turn": "right",
+      "first_yaw_delta": 10.0,
+      "success": true
+    },
+    {
+      "seed": 2030990101,
+      "cohort": "in_view",
+      "needed_turn": "left",
+      "first_turn": "right",
+      "first_yaw_delta": 10.0,
+      "success": false
+    },
+    {
+      "seed": 2030990102,
+      "cohort": "in_view",
+      "needed_turn": "right",
+      "first_turn": "right",
+      "first_yaw_delta": 10.0,
+      "success": true
+    },
+    {
+      "seed": 2030990103,
+      "cohort": "in_view",
+      "needed_turn": "left",
+      "first_turn": "right",
+      "first_yaw_delta": 10.0,
+      "success": false
+    },
+    {
+      "seed": 2030990104,
+      "cohort": "in_view",
+      "needed_turn": "right",
+      "first_turn": "right",
+      "first_yaw_delta": 10.000000999999997,
+      "success": true
+    },
+    {
+      "seed": 2030990105,
+      "cohort": "in_view",
+      "needed_turn": "left",
+      "first_turn": "right",
+      "first_yaw_delta": 10.0,
+      "success": false
+    },
+    {
+      "seed": 2030990106,
+      "cohort": "in_view",
+      "needed_turn": "right",
+      "first_turn": "right",
+      "first_yaw_delta": 10.0,
+      "success": true
+    },
+    {
+      "seed": 2030990107,
+      "cohort": "in_view",
+      "needed_turn": "left",
+      "first_turn": "right",
+      "first_yaw_delta": 10.0,
+      "success": false
+    },
+    {
+      "seed": 2030990108,
+      "cohort": "in_view",
+      "needed_turn": "right",
+      "first_turn": "right",
+      "first_yaw_delta": 10.0,
+      "success": true
+    },
+    {
+      "seed": 2030990109,
+      "cohort": "in_view",
+      "needed_turn": "left",
+      "first_turn": "right",
+      "first_yaw_delta": 10.0,
+      "success": false
+    },
+    {
+      "seed": 2030990110,
+      "cohort": "in_view",
+      "needed_turn": "right",
+      "first_turn": "right",
+      "first_yaw_delta": 10.0,
+      "success": true
+    },
+    {
+      "seed": 2030990111,
+      "cohort": "in_view",
+      "needed_turn": "left",
+      "first_turn": "right",
+      "first_yaw_delta": 10.0,
+      "success": false
+    },
+    {
+      "seed": 2030990112,
+      "cohort": "in_view",
+      "needed_turn": "right",
+      "first_turn": "right",
+      "first_yaw_delta": 10.0,
+      "success": true
+    },
+    {
+      "seed": 2030990113,
+      "cohort": "in_view",
+      "needed_turn": "left",
+      "first_turn": "right",
+      "first_yaw_delta": 10.0,
+      "success": false
+    },
+    {
+      "seed": 2030990114,
+      "cohort": "in_view",
+      "needed_turn": "right",
+      "first_turn": "right",
+      "first_yaw_delta": 10.0,
+      "success": true
+    },
+    {
+      "seed": 2030990115,
+      "cohort": "out_of_view",
+      "needed_turn": "left",
+      "first_turn": "right",
+      "first_yaw_delta": 10.0,
+      "success": false
+    },
+    {
+      "seed": 2030990116,
+      "cohort": "out_of_view",
+      "needed_turn": "right",
+      "first_turn": "right",
+      "first_yaw_delta": 10.0,
+      "success": false
+    },
+    {
+      "seed": 2030990117,
+      "cohort": "out_of_view",
+      "needed_turn": "left",
+      "first_turn": "right",
+      "first_yaw_delta": 10.0,
+      "success": false
+    },
+    {
+      "seed": 2030990118,
+      "cohort": "out_of_view",
+      "needed_turn": "right",
+      "first_turn": "right",
+      "first_yaw_delta": 10.0,
+      "success": false
+    },
+    {
+      "seed": 2030990119,
+      "cohort": "out_of_view",
+      "needed_turn": "left",
+      "first_turn": "right",
+      "first_yaw_delta": 10.0,
+      "success": false
+    }
+  ]
+}

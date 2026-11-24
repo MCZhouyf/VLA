@@ -1,0 +1,18 @@
+{
+  "dataset": "/share/project/zhoubowen/zhy/zyf/results/phase3-control-20261124-xeZzE4MM/mix/dataset.jsonl",
+  "dataset_sha256": "89e1e31e455a2524402399c956b3fe076cb2b42d53f6d1cac44fe164af896da4",
+  "cache": "/tmp/minemem-t1-dart-frozen-0iJl8VU8",
+  "checked_archives": 216,
+  "train_cap": 1000,
+  "checkpoint_every": 250,
+  "validation_every": 1000,
+  "initial_update": 14388,
+  "optimizer_batch_sources": {
+    "original": 2,
+    "dart": 2
+  },
+  "gpu": {
+    "no_memory": 6,
+    "spatial": 7
+  }
+}

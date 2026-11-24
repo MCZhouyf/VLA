@@ -1,0 +1,20 @@
+{
+  "checkpoint": "/share/project/zhoubowen/zhy/zyf/results/phase3-steering-paired-2AGguG2e/shared-adapter-probe",
+  "verified_no_memory_reference": "/share/project/zhoubowen/zhy/zyf/results/phase3-control-20261124-xeZzE4MM/repaired/train-no_memory",
+  "cohorts": {
+    "aligned": {
+      "episodes": 10,
+      "successes": 10
+    },
+    "in_view": {
+      "episodes": 15,
+      "successes": 14
+    },
+    "out_of_view": {
+      "episodes": 5,
+      "successes": 5
+    }
+  },
+  "spatial_navigation_passed": true,
+  "blockers": []
+}

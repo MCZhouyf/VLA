@@ -1,0 +1,387 @@
+{
+  "distance": 30,
+  "device": "cpu",
+  "dtype": "torch.float32",
+  "dataset_sha256": "89e1e31e455a2524402399c956b3fe076cb2b42d53f6d1cac44fe164af896da4",
+  "selection": "shortest outbound histories from distinct validation worlds",
+  "tested_inputs": 4,
+  "changed_outputs_vs_real_memory": {
+    "real_memory": 0,
+    "shuffled_visual_content": 0,
+    "zero_visual_content": 0,
+    "rotated_historical_poses": 0,
+    "no_prefix": 0
+  },
+  "exact_teacher_actions": {
+    "real_memory": 2,
+    "shuffled_visual_content": 2,
+    "zero_visual_content": 2,
+    "rotated_historical_poses": 2,
+    "no_prefix": 2
+  },
+  "rows": [
+    {
+      "scene_seed": 2030110001,
+      "world_seed": 20711100,
+      "offset": 0,
+      "true_horizontal_distance": 29.98335771067348,
+      "history_frames": 336,
+      "teacher_token_ids": [
+        151835,
+        151876,
+        151907,
+        151836
+      ],
+      "conditions": {
+        "real_memory": {
+          "direction": "left",
+          "yaw_bin": 0,
+          "forward": false,
+          "complete": true,
+          "generated_token_ids": [
+            151835,
+            151876,
+            151887,
+            151836
+          ],
+          "exact_teacher": false,
+          "teacher_log_probability": -0.77391117811203,
+          "relative_prefix_delta": 0.0
+        },
+        "shuffled_visual_content": {
+          "direction": "left",
+          "yaw_bin": 0,
+          "forward": false,
+          "complete": true,
+          "generated_token_ids": [
+            151835,
+            151876,
+            151887,
+            151836
+          ],
+          "exact_teacher": false,
+          "teacher_log_probability": -0.7739325761795044,
+          "relative_prefix_delta": 0.00015833723591640592
+        },
+        "zero_visual_content": {
+          "direction": "left",
+          "yaw_bin": 0,
+          "forward": false,
+          "complete": true,
+          "generated_token_ids": [
+            151835,
+            151876,
+            151887,
+            151836
+          ],
+          "exact_teacher": false,
+          "teacher_log_probability": -0.7744957804679871,
+          "relative_prefix_delta": 0.004815840162336826
+        },
+        "rotated_historical_poses": {
+          "direction": "left",
+          "yaw_bin": 0,
+          "forward": false,
+          "complete": true,
+          "generated_token_ids": [
+            151835,
+            151876,
+            151887,
+            151836
+          ],
+          "exact_teacher": false,
+          "teacher_log_probability": -0.7738917469978333,
+          "relative_prefix_delta": 8.1834958109539e-05
+        },
+        "no_prefix": {
+          "direction": "left",
+          "yaw_bin": 0,
+          "forward": false,
+          "complete": true,
+          "generated_token_ids": [
+            151835,
+            151876,
+            151887,
+            151836
+          ],
+          "exact_teacher": false,
+          "teacher_log_probability": -0.8122905492782593
+        }
+      }
+    },
+    {
+      "scene_seed": 2030110001,
+      "world_seed": 20711100,
+      "offset": 24,
+      "true_horizontal_distance": 28.908389785528218,
+      "history_frames": 360,
+      "teacher_token_ids": [
+        151835,
+        151848,
+        151876,
+        151897,
+        151836
+      ],
+      "conditions": {
+        "real_memory": {
+          "direction": "left",
+          "yaw_bin": 0,
+          "forward": false,
+          "complete": true,
+          "generated_token_ids": [
+            151835,
+            151876,
+            151887,
+            151836
+          ],
+          "exact_teacher": false,
+          "teacher_log_probability": -4.726327419281006,
+          "relative_prefix_delta": 0.0
+        },
+        "shuffled_visual_content": {
+          "direction": "left",
+          "yaw_bin": 0,
+          "forward": false,
+          "complete": true,
+          "generated_token_ids": [
+            151835,
+            151876,
+            151887,
+            151836
+          ],
+          "exact_teacher": false,
+          "teacher_log_probability": -4.724488258361816,
+          "relative_prefix_delta": 0.0008625472546555102
+        },
+        "zero_visual_content": {
+          "direction": "left",
+          "yaw_bin": 0,
+          "forward": false,
+          "complete": true,
+          "generated_token_ids": [
+            151835,
+            151876,
+            151887,
+            151836
+          ],
+          "exact_teacher": false,
+          "teacher_log_probability": -4.719750881195068,
+          "relative_prefix_delta": 0.0047937920317053795
+        },
+        "rotated_historical_poses": {
+          "direction": "left",
+          "yaw_bin": 0,
+          "forward": false,
+          "complete": true,
+          "generated_token_ids": [
+            151835,
+            151876,
+            151887,
+            151836
+          ],
+          "exact_teacher": false,
+          "teacher_log_probability": -4.726022720336914,
+          "relative_prefix_delta": 0.00012404874723870307
+        },
+        "no_prefix": {
+          "direction": "left",
+          "yaw_bin": 0,
+          "forward": false,
+          "complete": true,
+          "generated_token_ids": [
+            151835,
+            151876,
+            151887,
+            151836
+          ],
+          "exact_teacher": false,
+          "teacher_log_probability": -4.368557453155518
+        }
+      }
+    },
+    {
+      "scene_seed": 2030111001,
+      "world_seed": 20711101,
+      "offset": 0,
+      "true_horizontal_distance": 29.925896866118073,
+      "history_frames": 350,
+      "teacher_token_ids": [
+        151835,
+        151876,
+        151887,
+        151836
+      ],
+      "conditions": {
+        "real_memory": {
+          "direction": "left",
+          "yaw_bin": 0,
+          "forward": false,
+          "complete": true,
+          "generated_token_ids": [
+            151835,
+            151876,
+            151887,
+            151836
+          ],
+          "exact_teacher": true,
+          "teacher_log_probability": -0.5487511157989502,
+          "relative_prefix_delta": 0.0
+        },
+        "shuffled_visual_content": {
+          "direction": "left",
+          "yaw_bin": 0,
+          "forward": false,
+          "complete": true,
+          "generated_token_ids": [
+            151835,
+            151876,
+            151887,
+            151836
+          ],
+          "exact_teacher": true,
+          "teacher_log_probability": -0.5486962795257568,
+          "relative_prefix_delta": 0.00032391046988777816
+        },
+        "zero_visual_content": {
+          "direction": "left",
+          "yaw_bin": 0,
+          "forward": false,
+          "complete": true,
+          "generated_token_ids": [
+            151835,
+            151876,
+            151887,
+            151836
+          ],
+          "exact_teacher": true,
+          "teacher_log_probability": -0.5481162667274475,
+          "relative_prefix_delta": 0.005451217759400606
+        },
+        "rotated_historical_poses": {
+          "direction": "left",
+          "yaw_bin": 0,
+          "forward": false,
+          "complete": true,
+          "generated_token_ids": [
+            151835,
+            151876,
+            151887,
+            151836
+          ],
+          "exact_teacher": true,
+          "teacher_log_probability": -0.5487328767776489,
+          "relative_prefix_delta": 9.38024022616446e-05
+        },
+        "no_prefix": {
+          "direction": "left",
+          "yaw_bin": 0,
+          "forward": false,
+          "complete": true,
+          "generated_token_ids": [
+            151835,
+            151876,
+            151887,
+            151836
+          ],
+          "exact_teacher": true,
+          "teacher_log_probability": -0.5240404009819031
+        }
+      }
+    },
+    {
+      "scene_seed": 2030111001,
+      "world_seed": 20711101,
+      "offset": 24,
+      "true_horizontal_distance": 27.261153455630712,
+      "history_frames": 374,
+      "teacher_token_ids": [
+        151835,
+        151848,
+        151876,
+        151897,
+        151836
+      ],
+      "conditions": {
+        "real_memory": {
+          "direction": "forward",
+          "yaw_bin": 10,
+          "forward": true,
+          "complete": true,
+          "generated_token_ids": [
+            151835,
+            151848,
+            151876,
+            151897,
+            151836
+          ],
+          "exact_teacher": true,
+          "teacher_log_probability": -0.6245945692062378,
+          "relative_prefix_delta": 0.0
+        },
+        "shuffled_visual_content": {
+          "direction": "forward",
+          "yaw_bin": 10,
+          "forward": true,
+          "complete": true,
+          "generated_token_ids": [
+            151835,
+            151848,
+            151876,
+            151897,
+            151836
+          ],
+          "exact_teacher": true,
+          "teacher_log_probability": -0.624632716178894,
+          "relative_prefix_delta": 0.0004903770168311894
+        },
+        "zero_visual_content": {
+          "direction": "forward",
+          "yaw_bin": 10,
+          "forward": true,
+          "complete": true,
+          "generated_token_ids": [
+            151835,
+            151848,
+            151876,
+            151897,
+            151836
+          ],
+          "exact_teacher": true,
+          "teacher_log_probability": -0.6248155832290649,
+          "relative_prefix_delta": 0.0054742442443966866
+        },
+        "rotated_historical_poses": {
+          "direction": "forward",
+          "yaw_bin": 10,
+          "forward": true,
+          "complete": true,
+          "generated_token_ids": [
+            151835,
+            151848,
+            151876,
+            151897,
+            151836
+          ],
+          "exact_teacher": true,
+          "teacher_log_probability": -0.6245822310447693,
+          "relative_prefix_delta": 3.359267793712206e-05
+        },
+        "no_prefix": {
+          "direction": "forward",
+          "yaw_bin": 10,
+          "forward": true,
+          "complete": true,
+          "generated_token_ids": [
+            151835,
+            151848,
+            151876,
+            151897,
+            151836
+          ],
+          "exact_teacher": true,
+          "teacher_log_probability": -0.46244126558303833
+        }
+      }
+    }
+  ]
+}

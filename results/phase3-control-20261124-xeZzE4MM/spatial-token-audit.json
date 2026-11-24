@@ -1,0 +1,86 @@
+{
+  "device": "cpu",
+  "dtype": "float32",
+  "selection": "four short visible validation episodes with modal target",
+  "modal_target_validation_frequency": 2075,
+  "modal_target": "<|reserved_special_token_178|><|reserved_special_token_191|><|reserved_special_token_219|><|reserved_special_token_240|><|reserved_special_token_179|>",
+  "validation_actions": 2401,
+  "checkpoints": {
+    "1000": [
+      {
+        "seed": 2030110008,
+        "action_index": 3,
+        "mismatches": []
+      },
+      {
+        "seed": 2030112007,
+        "action_index": 3,
+        "mismatches": []
+      },
+      {
+        "seed": 2030110006,
+        "action_index": 4,
+        "mismatches": []
+      },
+      {
+        "seed": 2030110007,
+        "action_index": 4,
+        "mismatches": []
+      }
+    ],
+    "2000": [
+      {
+        "seed": 2030110008,
+        "action_index": 3,
+        "mismatches": [
+          {
+            "position": 1,
+            "expected_id": 151848,
+            "predicted_id": 151876,
+            "expected": "<|reserved_special_token_191|>",
+            "predicted": "<|reserved_special_token_219|>"
+          }
+        ]
+      },
+      {
+        "seed": 2030112007,
+        "action_index": 3,
+        "mismatches": [
+          {
+            "position": 1,
+            "expected_id": 151848,
+            "predicted_id": 151876,
+            "expected": "<|reserved_special_token_191|>",
+            "predicted": "<|reserved_special_token_219|>"
+          }
+        ]
+      },
+      {
+        "seed": 2030110006,
+        "action_index": 4,
+        "mismatches": [
+          {
+            "position": 1,
+            "expected_id": 151848,
+            "predicted_id": 151876,
+            "expected": "<|reserved_special_token_191|>",
+            "predicted": "<|reserved_special_token_219|>"
+          }
+        ]
+      },
+      {
+        "seed": 2030110007,
+        "action_index": 4,
+        "mismatches": [
+          {
+            "position": 1,
+            "expected_id": 151848,
+            "predicted_id": 151876,
+            "expected": "<|reserved_special_token_191|>",
+            "predicted": "<|reserved_special_token_219|>"
+          }
+        ]
+      }
+    ]
+  }
+}

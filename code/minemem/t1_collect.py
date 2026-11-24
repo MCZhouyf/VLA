@@ -25,6 +25,10 @@ HELD_OUT_QUOTAS = {**dict.fromkeys(DISTANCES, 1500), "visible": 500}
 NAV_SEED = 2030990000
 NAV_WORLD_SEED = 19961103
 NAV_OFFSET_SEED = 2030990100
+DART_SCENARIO_BASE = 2041010000
+DART_WORLD_BASE = 20980100
+DART_QUOTAS = {**dict.fromkeys(DISTANCES, 10000), "visible": 10000}
+DART_PROBABILITY = 0.20
 
 
 class CaptureArena(RandomHeadingArena):
@@ -32,6 +36,14 @@ class CaptureArena(RandomHeadingArena):
         self.capture = None
         self.candidates = []
         super().__init__(world_seed)
+
+    def action_token(self, action):
+        batch = {key: np.asarray([value]) for key, value in action.items()}
+        agent = self.sim.env_action_to_agent_action(batch)
+        return self.tokenizer.encode_action((int(agent["buttons"].item()), int(agent["camera"].item())))
+
+    def executed_return_action(self, correction):
+        return correction
 
     def teacher_step(self, yaw_delta=0.0, forward=False, jump=False, record=False):
         if self.capture is None:
@@ -47,18 +59,18 @@ class CaptureArena(RandomHeadingArena):
         action = self.sim.noop_action()
         action.update(camera=np.array([0.0, yaw_delta], dtype=np.float32),
                       forward=int(forward), jump=int(jump))
+        executed = action
         if record:
             super().teacher_step(yaw_delta, forward, jump, record)
             token = self.outbound[-1][-1]
         else:
-            batch = {key: np.asarray([value]) for key, value in action.items()}
-            agent = self.sim.env_action_to_agent_action(batch)
-            token = self.tokenizer.encode_action(
-                (int(agent["buttons"].item()), int(agent["camera"].item()))
-            )
-            self.tick(action)
-        self.capture.append((encoded.tobytes(), [float(pose[key]) for key in ("x", "z", "yaw")],
-                             token))
+            token = self.action_token(action)
+            executed = self.executed_return_action(action)
+            self.tick(executed)
+        frame = (encoded.tobytes(), [float(pose[key]) for key in ("x", "z", "yaw")], token)
+        if executed is not action:
+            frame += (self.action_token(executed),)
+        self.capture.append(frame)
 
     def follow_return(self, targets, distance):
         self.capture = []
@@ -145,6 +157,42 @@ class RevisedCaptureArena(OcclusionGeometry, ProtectedCaptureArena):
             super().outbound_segment(config)
 
 
+class DartCaptureArena(RevisedCaptureArena):
+    perturb_return = False
+
+    def start_perturbations(self, seed):
+        self.noise = random.Random(f"dart-return:{seed}")
+        self.remaining_noise_steps = 0
+
+    def drive(self, target, tolerance, budget, record=False, on_step=None):
+        previous = self.perturb_return
+        self.perturb_return = self.capture is not None and not record
+        try:
+            if self.perturb_return and self.trace is None:
+                with self.track(StepTrace(None)):
+                    return super().drive(target, tolerance, budget, record, on_step)
+            return super().drive(target, tolerance, budget, record, on_step)
+        finally:
+            self.perturb_return = previous
+
+    def follow_return(self, targets, distance):
+        self.remaining_noise_steps = 0
+        return super().follow_return(targets, distance)
+
+    def executed_return_action(self, correction):
+        if not self.perturb_return:
+            return correction
+        if not self.remaining_noise_steps:
+            if self.noise.random() >= DART_PROBABILITY:
+                return correction
+            self.remaining_noise_steps = self.noise.randint(1, 3)
+            self.noise_yaw = self.noise.choice((-10.0, -5.0, 0.0, 5.0, 10.0))
+        self.remaining_noise_steps -= 1
+        action = self.sim.noop_action()
+        action["camera"] = np.array([0.0, self.noise_yaw], dtype=np.float32)
+        return action
+
+
 def navigation_cases(offset=False):
     if not offset:
         return [(seed, 5, 0.0, "aligned") for seed in range(NAV_SEED, NAV_SEED+10)]
@@ -174,10 +222,13 @@ def write_episode(output, config, outbound, returns, split, group):
         "pose": [frame[1] for frame in frames],
         "action": [frame[2] for frame in frames],
     }
+    if "dart" in config:
+        metadata["executed_action"] = [frame[-1] for frame in frames]
+        metadata["perturbation_applied"] = [len(frame) == 4 for frame in frames]
     with ZipFile(partial, "x", compression=ZIP_STORED) as archive:
         archive.writestr("episode.json", json.dumps(metadata, default=float))
-        for index, (image, _, _) in enumerate(frames):
-            archive.writestr(f"{index:05d}.jpg", image)
+        for index, frame in enumerate(frames):
+            archive.writestr(f"{index:05d}.jpg", frame[0])
     partial.replace(path)
     return {"path": name, "scene_seed": config["scenario_seed"], "world_seed": config["world_seed"],
             "split": split, "group": group, "frames": len(frames), "outbound_frames": len(outbound),
@@ -186,18 +237,18 @@ def write_episode(output, config, outbound, returns, split, group):
 
 def collect(args):
     split_index = SPLITS.index(args.split)
-    quotas = TRAIN_QUOTAS if args.split == "train" else HELD_OUT_QUOTAS
+    quotas = DART_QUOTAS if args.dart else (TRAIN_QUOTAS if args.split == "train" else HELD_OUT_QUOTAS)
     targets = {
         group: math.ceil(quota * args.fraction / args.workers)
         for group, quota in quotas.items()
     }
     done = dict.fromkeys(targets, 0)
-    world = WORLD_BASE + 1000 * split_index + args.worker
-    start_seed = SCENARIO_BASE + 100000 * split_index + 1000 * args.worker
+    world = (DART_WORLD_BASE if args.dart else WORLD_BASE) + 1000 * split_index + args.worker
+    start_seed = (DART_SCENARIO_BASE if args.dart else SCENARIO_BASE) + 100000 * split_index + 1000 * args.worker
     counter = 0
     if args.screened:
         set_candidate_render_distance(args.output)
-    arena_type = RevisedCaptureArena if args.screened else CaptureArena
+    arena_type = DartCaptureArena if args.dart else (RevisedCaptureArena if args.screened else CaptureArena)
     for attempt in range(4):
         try:
             arena = arena_type(world + 100 * attempt)
@@ -217,6 +268,8 @@ def collect(args):
                     seed = start_seed + counter
                     counter += 1
                     try:
+                        if args.dart:
+                            arena.start_perturbations(seed)
                         if group == "visible":
                             offset = random.Random(f"visible-offset:{seed}").uniform(-35,35) if args.screened else 0
                             trajectory = arena.visible_trajectory(seed, heading_offset=offset)
@@ -225,6 +278,13 @@ def collect(args):
                     except RuntimeError as error:
                         print(f"Rejected {seed} in {group}: {error}", flush=True)
                         continue
+                    if args.dart:
+                        config, _, returned = trajectory
+                        config["dart"] = dict(
+                            burst_probability=DART_PROBABILITY, burst_steps=[1, 3],
+                            possible_yaw_degrees=[-10, -5, 0, 5, 10],
+                            perturbed_steps=sum(len(frame) == 4 for frame in returned),
+                        )
                     record = write_episode(args.output, *trajectory, args.split, group)
                     done[group] += record["frames"]
                     index.write(json.dumps(record) + "\n")
@@ -242,9 +302,12 @@ def main():
     parser.add_argument("--split", choices=SPLITS, required=True)
     parser.add_argument("--fraction", type=float, default=1.0)
     parser.add_argument("--screened", action="store_true")
+    parser.add_argument("--dart", action="store_true")
     args = parser.parse_args()
     if not 0 <= args.worker < args.workers <= 32 or not 0 < args.fraction <= 1:
         parser.error("Invalid worker shard or collection fraction")
+    if args.dart and (not args.screened or args.split != "train"):
+        parser.error("DART collection uses the screened training split")
     collect(args)
 
 

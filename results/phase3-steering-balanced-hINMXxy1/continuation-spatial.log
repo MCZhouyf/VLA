@@ -1,0 +1,184 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.48, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+[14:26:47] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[14:26:47] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:07<00:21,  7.14s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:12<00:12,  6.16s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:17<00:05,  5.73s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:19<00:00,  4.22s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:19<00:00,  4.94s/it]
+update=10 samples=40 loss=0.34993
+update=20 samples=80 loss=0.35398
+update=30 samples=120 loss=0.05781
+update=40 samples=160 loss=0.13738
+update=50 samples=200 loss=0.40291
+update=60 samples=240 loss=0.12659
+update=70 samples=280 loss=0.21510
+update=80 samples=320 loss=0.26250
+update=90 samples=360 loss=0.20465
+update=100 samples=400 loss=0.29400
+update=110 samples=440 loss=0.47894
+update=120 samples=480 loss=0.17782
+update=130 samples=520 loss=0.12973
+update=140 samples=560 loss=0.07786
+update=150 samples=600 loss=0.01123
+update=160 samples=640 loss=0.51025
+update=170 samples=680 loss=0.21744
+update=180 samples=720 loss=0.08917
+update=190 samples=760 loss=0.66475
+update=200 samples=800 loss=0.09380
+update=210 samples=840 loss=0.11260
+update=220 samples=880 loss=0.20504
+update=230 samples=920 loss=0.24085
+update=240 samples=960 loss=0.26921
+update=250 samples=1000 loss=0.09179
+update=260 samples=1040 loss=0.11802
+update=270 samples=1080 loss=0.51253
+update=280 samples=1120 loss=0.01857
+update=290 samples=1160 loss=0.18766
+update=300 samples=1200 loss=0.12267
+update=310 samples=1240 loss=0.05341
+update=320 samples=1280 loss=0.28537
+update=330 samples=1320 loss=0.19012
+update=340 samples=1360 loss=0.27756
+update=350 samples=1400 loss=0.02083
+update=360 samples=1440 loss=0.23646
+update=370 samples=1480 loss=0.25156
+update=380 samples=1520 loss=0.16576
+update=390 samples=1560 loss=0.41615
+update=400 samples=1600 loss=0.01958
+update=410 samples=1640 loss=0.25007
+update=420 samples=1680 loss=0.48354
+update=430 samples=1720 loss=0.06119
+update=440 samples=1760 loss=0.09521
+update=450 samples=1800 loss=0.24230
+update=460 samples=1840 loss=0.21744
+update=470 samples=1880 loss=0.00276
+update=480 samples=1920 loss=0.13053
+update=490 samples=1960 loss=0.40087
+update=500 samples=2000 loss=0.47783
+update=510 samples=2040 loss=0.14026
+update=520 samples=2080 loss=0.48120
+update=530 samples=2120 loss=0.19617
+update=540 samples=2160 loss=0.06764
+update=550 samples=2200 loss=0.31476
+update=560 samples=2240 loss=0.01319
+update=570 samples=2280 loss=0.01543
+update=580 samples=2320 loss=0.00321
+update=590 samples=2360 loss=0.15336
+update=600 samples=2400 loss=0.29317
+update=610 samples=2440 loss=0.47364
+update=620 samples=2480 loss=0.07659
+update=630 samples=2520 loss=0.36696
+update=640 samples=2560 loss=0.44319
+update=650 samples=2600 loss=0.02262
+update=660 samples=2640 loss=0.25169
+update=670 samples=2680 loss=0.42598
+update=680 samples=2720 loss=0.16286
+update=690 samples=2760 loss=0.02760
+update=700 samples=2800 loss=0.52707
+update=710 samples=2840 loss=0.24719
+update=720 samples=2880 loss=0.19788
+update=730 samples=2920 loss=0.30124
+update=740 samples=2960 loss=0.42020
+update=750 samples=3000 loss=0.32949
+update=760 samples=3040 loss=0.14749
+update=770 samples=3080 loss=0.43396
+update=780 samples=3120 loss=0.10078
+update=790 samples=3160 loss=0.49836
+update=800 samples=3200 loss=0.02486
+update=810 samples=3240 loss=0.13232
+update=820 samples=3280 loss=0.20669
+update=830 samples=3320 loss=0.11845
+update=840 samples=3360 loss=0.09572
+update=850 samples=3400 loss=0.07673
+update=860 samples=3440 loss=0.09877
+update=870 samples=3480 loss=0.16505
+update=880 samples=3520 loss=0.25439
+update=890 samples=3560 loss=1.82081
+update=900 samples=3600 loss=1.40290
+update=910 samples=3640 loss=0.31298
+update=920 samples=3680 loss=1.02648
+update=930 samples=3720 loss=0.14798
+update=940 samples=3760 loss=0.20267
+update=950 samples=3800 loss=0.54398
+update=960 samples=3840 loss=0.48593
+update=970 samples=3880 loss=0.07861
+update=980 samples=3920 loss=0.02570
+update=990 samples=3960 loss=0.14252
+update=1000 samples=4000 loss=0.06114
+validation update=1000 loss=0.160088 accuracy=0.956940
+{
+  "updates": 1000,
+  "supervised_examples": 4000,
+  "elapsed_seconds": 5201.719494663179,
+  "first_update_loss": 0.34395038716320414,
+  "last_update_loss": 0.06114027742296457,
+  "peak_allocated_mib": 21191.78173828125,
+  "stopped_at_budget": false
+}
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.48, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+[15:53:29] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[15:53:29] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:06<00:18,  6.06s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:11<00:11,  5.94s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:17<00:05,  5.82s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:20<00:00,  4.52s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:20<00:00,  5.03s/it]
+[15:53:52] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[15:53:52] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+INFO: Starting Minecraft process with device: cpu
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+ERROR:minestudio.simulator.minerl.env.malmo.instance.1e5709:[15:54:10] [Render thread/WARN]: ERROR : Couldn't load Narrator library : Unable to load library 'fliteWrapper': Can't obtain InputStream for linux-x86-64/libfliteWrapper.so
+ERROR:minestudio.simulator.minerl.env.malmo.instance.1e5709:[15:54:11] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: null
+ERROR:minestudio.simulator.minerl.env.malmo.instance.1e5709:[15:54:19] [Worker-Main-3/ERROR]: Using missing texture, unable to load minecraft:optifine/ctm/default/empty.png : java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png
+ERROR:minestudio.simulator.minerl.env.malmo.instance.1e5709:[15:54:20] [Render thread/ERROR]: Error starting SoundSystem. Turning off sounds & music
+ERROR:minestudio.simulator.minerl.env.malmo.instance.1e5709:java.lang.IllegalStateException: Failed to open OpenAL device
+WARNING:minestudio.simulator.minerl.env.malmo.instance.1e5709:[15:54:20] [Render thread/WARN]: [OptiFine] Missing CTM sprite: minecraft:optifine/ctm/default/empty
+WARNING:minestudio.simulator.minerl.env.malmo.instance.1e5709:[15:54:23] [Render thread/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.1e5709:[15:54:23] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.1e5709:[15:54:23] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.1e5709:[15:54:23] [Render thread/WARN]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.1e5709:[15:54:23] [Render thread/WARN]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.1e5709:[15:54:49] [Render thread/WARN]: Failed to load texture: minecraft:optifine/ctm/default/empty.png
+ERROR:minestudio.simulator.minerl.env.malmo.instance.1e5709:java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.48, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+[15:58:03] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[15:58:03] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:05<00:17,  5.93s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:12<00:12,  6.05s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:17<00:05,  5.99s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:20<00:00,  4.66s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:20<00:00,  5.15s/it]
+[15:58:27] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[15:58:27] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+INFO: Starting Minecraft process with device: cpu
+ERROR:minestudio.simulator.minerl.env.malmo.instance.ab5230:[15:58:46] [Render thread/WARN]: ERROR : Couldn't load Narrator library : Unable to load library 'fliteWrapper': Can't obtain InputStream for linux-x86-64/libfliteWrapper.so
+ERROR:minestudio.simulator.minerl.env.malmo.instance.ab5230:[15:58:47] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: null
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+ERROR:minestudio.simulator.minerl.env.malmo.instance.ab5230:[15:58:58] [Worker-Main-3/ERROR]: Using missing texture, unable to load minecraft:optifine/ctm/default/empty.png : java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png
+ERROR:minestudio.simulator.minerl.env.malmo.instance.ab5230:[15:58:59] [Render thread/ERROR]: Error starting SoundSystem. Turning off sounds & music
+ERROR:minestudio.simulator.minerl.env.malmo.instance.ab5230:java.lang.IllegalStateException: Failed to open OpenAL device
+WARNING:minestudio.simulator.minerl.env.malmo.instance.ab5230:[15:59:00] [Render thread/WARN]: [OptiFine] Missing CTM sprite: minecraft:optifine/ctm/default/empty
+WARNING:minestudio.simulator.minerl.env.malmo.instance.ab5230:[15:59:03] [Render thread/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.ab5230:[15:59:03] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.ab5230:[15:59:03] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.ab5230:[15:59:03] [Render thread/WARN]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.ab5230:[15:59:03] [Render thread/WARN]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.ab5230:[15:59:29] [Render thread/WARN]: Failed to load texture: minecraft:optifine/ctm/default/empty.png
+ERROR:minestudio.simulator.minerl.env.malmo.instance.ab5230:java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png

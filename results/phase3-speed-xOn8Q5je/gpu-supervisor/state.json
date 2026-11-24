@@ -1,0 +1,92 @@
+{
+  "lanes": {
+    "no_memory": {
+      "training_options": [
+        "--output",
+        "/share/project/zhoubowen/zhy/zyf/results/phase3-speed-xOn8Q5je/train-no_memory",
+        "--validate-every",
+        "1000",
+        "--checkpoint-every",
+        "1000",
+        "--dataset",
+        "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/index-full/dataset.jsonl",
+        "--variant",
+        "no_memory",
+        "--epochs",
+        "1",
+        "--archive-cache",
+        "/dev/shm/minemem-t1-speed-bse1Qtyc/archives",
+        "--cache-vision",
+        "--validation-batch-size",
+        "4"
+      ],
+      "config_sha256": "7a30c6fa41bd18fbccdc387a7f1236a389450dcb1dc4cb11b01a7f12f435e246",
+      "waiter_sha256": "57b9ef3840805d59df05d89f8ae2748d1027685c687c461f49977f078238ad7e",
+      "resume_attempted": false,
+      "inactive_samples": 0,
+      "last_seen_update": 14388,
+      "progress_since": 1795432689.7055035,
+      "progress_key": [
+        "training_or_encoding",
+        14388,
+        14000,
+        14000
+      ],
+      "last_event_key": [
+        "training_complete",
+        "",
+        14000,
+        14388,
+        0,
+        1
+      ]
+    },
+    "spatial": {
+      "training_options": [
+        "--output",
+        "/share/project/zhoubowen/zhy/zyf/results/phase3-speed-xOn8Q5je/train-spatial",
+        "--validate-every",
+        "1000",
+        "--checkpoint-every",
+        "1000",
+        "--dataset",
+        "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/index-full/dataset.jsonl",
+        "--archive-cache",
+        "/tmp/minemem-t1-archives-1MQ7yMfo",
+        "--variant",
+        "spatial",
+        "--epochs",
+        "1",
+        "--accumulation",
+        "4",
+        "--seed",
+        "20261122",
+        "--learning-rate",
+        "0.0001",
+        "--cache-vision",
+        "--validation-batch-size",
+        "4"
+      ],
+      "config_sha256": "88d4087128200260cac908e71eeb1cafed357ff76b8857e085dae740a12af061",
+      "waiter_sha256": "69be7f409e48c8cb85a6bef319c80890743c60a9bd0408184882bbf5b6461c66",
+      "resume_attempted": false,
+      "inactive_samples": 0,
+      "last_seen_update": 14388,
+      "progress_since": 1795455311.2052581,
+      "progress_key": [
+        "training_or_encoding",
+        14388,
+        14000,
+        14000
+      ],
+      "last_event_key": [
+        "training_complete",
+        "",
+        14000,
+        14388,
+        0,
+        1
+      ]
+    }
+  }
+}

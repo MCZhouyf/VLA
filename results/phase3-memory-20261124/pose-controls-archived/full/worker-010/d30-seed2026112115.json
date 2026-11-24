@@ -1,0 +1,219 @@
+{
+  "protocol": "t1_occlusion_candidate",
+  "scenario_seed": 2026112115,
+  "world_seed": 19961118,
+  "distance": 30,
+  "arena_origin": [
+    4034,
+    82,
+    122
+  ],
+  "native_spawn": {
+    "x": 4034.5,
+    "y": 70.0,
+    "z": 122.5,
+    "pitch": 0.0,
+    "yaw": 0.0
+  },
+  "spawn": {
+    "x": 4032.5,
+    "y": 82.0,
+    "z": 124.5,
+    "pitch": 0.0,
+    "yaw": -135.0
+  },
+  "landmark": [
+    4034.5,
+    122.5
+  ],
+  "distractors": [
+    {
+      "material": "iron_block",
+      "horizontal": [
+        4050.5,
+        95.5
+      ]
+    },
+    {
+      "material": "lapis_block",
+      "horizontal": [
+        4014.5,
+        102.5
+      ]
+    }
+  ],
+  "wall": [
+    4028,
+    82,
+    101,
+    4040,
+    87,
+    101
+  ],
+  "planned_endpoint": [
+    4034.5,
+    92.5
+  ],
+  "waypoints": [
+    [
+      4032.5,
+      129.5
+    ],
+    [
+      4027.3,
+      129.5
+    ],
+    [
+      4027.3,
+      99.5
+    ],
+    [
+      4034.5,
+      92.5
+    ]
+  ],
+  "final_yaw": 180.0,
+  "outbound_dwell_steps": 40,
+  "final_facing_steps": 20,
+  "setup_revision": "remote_respawn_v1",
+  "protection_commands": [
+    "/gamerule doMobSpawning false",
+    "/kill @e[type=!player]",
+    "/time set day",
+    "/gamerule doDaylightCycle false",
+    "/gamerule doWeatherCycle false",
+    "/weather clear",
+    "/spawnpoint @p 4418 160 506"
+  ],
+  "respawn_pad_commands": [
+    "/forceload add 4417 505 4419 507",
+    "/fill 4417 159 505 4419 159 507 minecraft:stone",
+    "/fill 4417 160 505 4419 162 507 minecraft:air"
+  ],
+  "respawn_point": [
+    4418,
+    160,
+    506
+  ],
+  "optional_effects": false,
+  "render_distance_chunks": 4,
+  "occlusion_walls": [
+    [
+      4028,
+      82,
+      101,
+      4040,
+      87,
+      101
+    ],
+    [
+      4028,
+      82,
+      82,
+      4040,
+      87,
+      82
+    ],
+    [
+      4044,
+      82,
+      86,
+      4044,
+      87,
+      98
+    ],
+    [
+      4025,
+      82,
+      86,
+      4025,
+      87,
+      98
+    ]
+  ],
+  "screened_pillar": true,
+  "candidate_routes": [
+    [
+      [
+        4027.3,
+        99.5
+      ],
+      [
+        4027.3,
+        129.5
+      ],
+      [
+        4032.5,
+        129.5
+      ],
+      [
+        4032.5,
+        125.5
+      ],
+      [
+        4034.5,
+        122.5
+      ]
+    ]
+  ],
+  "pillar_screen": [
+    [
+      4039,
+      82,
+      117,
+      4039,
+      87,
+      127
+    ],
+    [
+      4029,
+      82,
+      117,
+      4029,
+      87,
+      127
+    ],
+    [
+      4029,
+      82,
+      117,
+      4039,
+      87,
+      117
+    ],
+    [
+      4034,
+      82,
+      127,
+      4039,
+      87,
+      127
+    ],
+    [
+      4029,
+      82,
+      127,
+      4030,
+      87,
+      127
+    ],
+    [
+      4029,
+      82,
+      131,
+      4039,
+      87,
+      131
+    ]
+  ],
+  "return_pose": {
+    "x": 4034.4234661333376,
+    "y": 82.0,
+    "z": 92.57420139814121,
+    "pitch": 0.0,
+    "yaw": 251.50334
+  },
+  "return_limit": 744,
+  "recorded_outbound_trace": "/share/project/zhoubowen/zhy/zyf/results/t1-review-A8vp1K1p/screened-acceptance/worker-015/d30-seed2026112115-outbound.csv.gz",
+  "pose_only_terminal_tolerance": 0.1
+}

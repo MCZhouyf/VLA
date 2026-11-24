@@ -1,0 +1,8 @@
+{"original_index_sha256": "f3a152816553499197053e18ce60e3837c899bed582eaa4cd913a71f52b5cefb", "mixed_index_sha256": "89e1e31e455a2524402399c956b3fe076cb2b42d53f6d1cac44fe164af896da4", "original_raw_episodes": 1124, "dart_raw_episodes": 415, "dart_selected_episodes": 314, "dart_raw_frames": 135727, "dart_selected_frames": {"10": 10000, "30": 10000, "60": 10000, "100": 10000, "visible": 10000}, "return_labels": {"10": 2922, "30": 5393, "60": 5657, "100": 5829, "visible": 9510}, "perturbed_labels": {"10": 954, "30": 1599, "60": 1822, "100": 1792, "visible": 2956}, "correction_differs_from_executed": {"10": 884, "30": 1517, "60": 1740, "100": 1730, "visible": 2857}, "mixed_labels": {"original/10": 1200, "original/30": 1200, "original/60": 1200, "original/100": 1200, "original/visible": 1200, "dart/10": 1200, "dart/30": 1200, "dart/60": 1200, "dart/100": 1200, "dart/visible": 1200}, "mixed_train_labels": 12000, "optimizer_updates": 3000, "dart_scene_seed_range": [2041010000, 2041041020], "dart_world_seeds": [20980100, 20980101, 20980102, 20980103, 20980104, 20980105, 20980106, 20980107, 20980108, 20980109, 20980110, 20980111, 20980112, 20980113, 20980114, 20980115, 20980116, 20980117, 20980118, 20980119, 20980120, 20980121, 20980122, 20980123, 20980124, 20980125, 20980126, 20980127, 20980128, 20980129, 20980130, 20980131], "scene_overlap": 0, "world_overlap": 0, "frozen_overlap": 0}
+{
+  "archives": 216,
+  "bytes": 2000640597,
+  "dataset_sha256": "89e1e31e455a2524402399c956b3fe076cb2b42d53f6d1cac44fe164af896da4",
+  "path": "/tmp/minemem-t1-dart-frozen-0iJl8VU8"
+}
+Frozen data adopted and GPU queues active.

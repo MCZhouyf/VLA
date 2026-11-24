@@ -1,0 +1,43 @@
+{
+  "variants": {
+    "no_memory": {
+      "aligned": {
+        "episodes": 10,
+        "successes": 3
+      },
+      "in_view": {
+        "episodes": 15,
+        "successes": 0
+      },
+      "out_of_view": {
+        "episodes": 5,
+        "successes": 1
+      },
+      "passed": false,
+      "blockers": [
+        "The no-memory model did not pass visible navigation at 8/10",
+        "Offset navigation reached 0/15 in-view scenes, below 12/15"
+      ]
+    },
+    "spatial": {
+      "aligned": {
+        "episodes": 10,
+        "successes": 0
+      },
+      "in_view": {
+        "episodes": 15,
+        "successes": 0
+      },
+      "out_of_view": {
+        "episodes": 5,
+        "successes": 0
+      },
+      "passed": false,
+      "blockers": [
+        "The spatial model did not pass visible navigation at 8/10",
+        "Offset navigation reached 0/15 in-view scenes, below 12/15"
+      ]
+    }
+  },
+  "formal_permitted": false
+}

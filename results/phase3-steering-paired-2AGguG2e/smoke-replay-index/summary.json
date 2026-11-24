@@ -1,0 +1,27 @@
+{
+  "paired_positions": 2,
+  "paired_labels": 6,
+  "replay_labels_by_source": {
+    "original": 3,
+    "dart": 3
+  },
+  "labels_per_epoch": 12,
+  "original_index_sha256": "89e1e31e455a2524402399c956b3fe076cb2b42d53f6d1cac44fe164af896da4",
+  "paired_index_sha256": "7e9c61845d4d10d29b2bbe3ec88cd62a6ef16e1b74bad3ee3222d77f7a89cc55",
+  "index_sha256": "40f5915cccd272ad450c56289954968c3e6a4b23afb5822237c445e94ee223b8",
+  "gold_pixels_side_verified": 6,
+  "gold_horizontal_fraction_ranges": {
+    "forward": [
+      0.5009231735719539,
+      0.5010489206128134
+    ],
+    "left": [
+      0.26308107028753996,
+      0.3041000551267916
+    ],
+    "right": [
+      0.6973078419505447,
+      0.7340179904285213
+    ]
+  }
+}

@@ -1,0 +1,386 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.48, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+[07:38:53] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[07:38:53] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:06<00:18,  6.07s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:11<00:11,  5.93s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:17<00:05,  5.89s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:20<00:00,  4.54s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:20<00:00,  5.05s/it]
+update=10 samples=40 loss=0.89739
+update=20 samples=80 loss=0.22911
+update=30 samples=120 loss=0.64652
+update=40 samples=160 loss=0.54647
+update=50 samples=200 loss=0.48017
+update=60 samples=240 loss=0.10172
+update=70 samples=280 loss=0.19802
+update=80 samples=320 loss=0.14492
+update=90 samples=360 loss=0.27192
+update=100 samples=400 loss=0.37895
+update=110 samples=440 loss=0.13742
+update=120 samples=480 loss=0.09247
+update=130 samples=520 loss=0.02532
+update=140 samples=560 loss=0.03682
+update=150 samples=600 loss=0.00105
+update=160 samples=640 loss=0.18553
+update=170 samples=680 loss=0.16413
+update=180 samples=720 loss=0.20666
+update=190 samples=760 loss=0.10725
+update=200 samples=800 loss=0.45463
+update=210 samples=840 loss=0.42221
+update=220 samples=880 loss=0.03236
+update=230 samples=920 loss=0.02406
+update=240 samples=960 loss=0.14968
+update=250 samples=1000 loss=0.29487
+update=260 samples=1040 loss=0.01722
+update=270 samples=1080 loss=0.04072
+update=280 samples=1120 loss=0.01451
+update=290 samples=1160 loss=0.01523
+update=300 samples=1200 loss=0.11771
+update=310 samples=1240 loss=0.34442
+update=320 samples=1280 loss=0.40329
+update=330 samples=1320 loss=0.56267
+update=340 samples=1360 loss=0.04117
+update=350 samples=1400 loss=0.17756
+update=360 samples=1440 loss=0.16965
+update=370 samples=1480 loss=0.00101
+update=380 samples=1520 loss=0.00094
+update=390 samples=1560 loss=0.00733
+update=400 samples=1600 loss=0.09123
+update=410 samples=1640 loss=0.00902
+update=420 samples=1680 loss=0.00107
+update=430 samples=1720 loss=0.19311
+update=440 samples=1760 loss=0.00272
+update=450 samples=1800 loss=0.11649
+update=460 samples=1840 loss=0.01296
+update=470 samples=1880 loss=0.00341
+update=480 samples=1920 loss=0.30458
+update=490 samples=1960 loss=0.26040
+update=500 samples=2000 loss=0.32846
+update=510 samples=2040 loss=0.46725
+update=520 samples=2080 loss=0.25016
+update=530 samples=2120 loss=0.63873
+update=540 samples=2160 loss=0.13597
+update=550 samples=2200 loss=0.33345
+update=560 samples=2240 loss=0.04315
+update=570 samples=2280 loss=0.31861
+update=580 samples=2320 loss=0.08373
+update=590 samples=2360 loss=0.23578
+update=600 samples=2400 loss=0.08039
+update=610 samples=2440 loss=0.02883
+update=620 samples=2480 loss=0.02179
+update=630 samples=2520 loss=0.04390
+update=640 samples=2560 loss=0.14530
+update=650 samples=2600 loss=0.54322
+update=660 samples=2640 loss=0.31553
+update=670 samples=2680 loss=0.64127
+update=680 samples=2720 loss=0.01883
+update=690 samples=2760 loss=0.00485
+update=700 samples=2800 loss=0.08026
+update=710 samples=2840 loss=0.47697
+update=720 samples=2880 loss=0.08155
+update=730 samples=2920 loss=0.00622
+update=740 samples=2960 loss=0.21679
+update=750 samples=3000 loss=0.05818
+update=760 samples=3040 loss=0.32808
+update=770 samples=3080 loss=0.06573
+update=780 samples=3120 loss=0.00542
+update=790 samples=3160 loss=0.00605
+update=800 samples=3200 loss=0.00380
+update=810 samples=3240 loss=0.40465
+update=820 samples=3280 loss=0.24313
+update=830 samples=3320 loss=0.04882
+update=840 samples=3360 loss=0.33646
+update=850 samples=3400 loss=0.30723
+update=860 samples=3440 loss=0.01895
+update=870 samples=3480 loss=0.18443
+update=880 samples=3520 loss=0.07031
+update=890 samples=3560 loss=0.01861
+update=900 samples=3600 loss=0.01026
+update=910 samples=3640 loss=0.00095
+update=920 samples=3680 loss=0.51446
+update=930 samples=3720 loss=0.70456
+update=940 samples=3760 loss=0.43839
+update=950 samples=3800 loss=1.75895
+update=960 samples=3840 loss=0.59254
+update=970 samples=3880 loss=0.38218
+update=980 samples=3920 loss=0.01448
+update=990 samples=3960 loss=0.00743
+update=1000 samples=4000 loss=0.38868
+validation update=1000 loss=0.165181 accuracy=0.956940
+update=1010 samples=4040 loss=0.51893
+update=1020 samples=4080 loss=0.19009
+update=1030 samples=4120 loss=0.35015
+update=1040 samples=4160 loss=0.21306
+update=1050 samples=4200 loss=0.30642
+update=1060 samples=4240 loss=0.01624
+update=1070 samples=4280 loss=0.07605
+update=1080 samples=4320 loss=0.97474
+update=1090 samples=4360 loss=0.24188
+update=1100 samples=4400 loss=0.02861
+update=1110 samples=4440 loss=0.44659
+update=1120 samples=4480 loss=0.04873
+update=1130 samples=4520 loss=0.34211
+update=1140 samples=4560 loss=0.35724
+update=1150 samples=4600 loss=0.13503
+update=1160 samples=4640 loss=0.40984
+update=1170 samples=4680 loss=0.52529
+update=1180 samples=4720 loss=0.45205
+update=1190 samples=4760 loss=0.25802
+update=1200 samples=4800 loss=0.11992
+update=1210 samples=4840 loss=0.05606
+update=1220 samples=4880 loss=0.16429
+update=1230 samples=4920 loss=0.44389
+update=1240 samples=4960 loss=0.31975
+update=1250 samples=5000 loss=0.31581
+update=1260 samples=5040 loss=0.07956
+update=1270 samples=5080 loss=0.15224
+update=1280 samples=5120 loss=0.16015
+update=1290 samples=5160 loss=0.08484
+update=1300 samples=5200 loss=0.00166
+update=1310 samples=5240 loss=0.38253
+update=1320 samples=5280 loss=0.24687
+update=1330 samples=5320 loss=0.28504
+update=1340 samples=5360 loss=0.23362
+update=1350 samples=5400 loss=0.22278
+update=1360 samples=5440 loss=0.26391
+update=1370 samples=5480 loss=0.09476
+update=1380 samples=5520 loss=0.47162
+update=1390 samples=5560 loss=0.23831
+update=1400 samples=5600 loss=0.20803
+update=1410 samples=5640 loss=0.10416
+update=1420 samples=5680 loss=0.18316
+update=1430 samples=5720 loss=0.70454
+update=1440 samples=5760 loss=0.12802
+update=1450 samples=5800 loss=0.17773
+update=1460 samples=5840 loss=0.13549
+update=1470 samples=5880 loss=0.34369
+update=1480 samples=5920 loss=0.12497
+update=1490 samples=5960 loss=0.07562
+update=1500 samples=6000 loss=0.29736
+update=1510 samples=6040 loss=0.20914
+update=1520 samples=6080 loss=0.17794
+update=1530 samples=6120 loss=0.22903
+update=1540 samples=6160 loss=0.03956
+update=1550 samples=6200 loss=0.27911
+update=1560 samples=6240 loss=2.18513
+update=1570 samples=6280 loss=0.58678
+update=1580 samples=6320 loss=1.08204
+update=1590 samples=6360 loss=0.52685
+update=1600 samples=6400 loss=0.19322
+update=1610 samples=6440 loss=0.11528
+update=1620 samples=6480 loss=0.21879
+update=1630 samples=6520 loss=0.08338
+update=1640 samples=6560 loss=0.32727
+update=1650 samples=6600 loss=0.01691
+update=1660 samples=6640 loss=0.12471
+update=1670 samples=6680 loss=0.33092
+update=1680 samples=6720 loss=0.01851
+update=1690 samples=6760 loss=0.31039
+update=1700 samples=6800 loss=0.26971
+update=1710 samples=6840 loss=0.27525
+update=1720 samples=6880 loss=0.23443
+update=1730 samples=6920 loss=0.49921
+update=1740 samples=6960 loss=0.37521
+update=1750 samples=7000 loss=0.35377
+update=1760 samples=7040 loss=0.57551
+update=1770 samples=7080 loss=0.17801
+update=1780 samples=7120 loss=0.16319
+update=1790 samples=7160 loss=0.14874
+update=1800 samples=7200 loss=0.15698
+update=1810 samples=7240 loss=0.23446
+update=1820 samples=7280 loss=0.01021
+update=1830 samples=7320 loss=0.66394
+update=1840 samples=7360 loss=0.09071
+update=1850 samples=7400 loss=0.04765
+update=1860 samples=7440 loss=0.01723
+update=1870 samples=7480 loss=0.27705
+update=1880 samples=7520 loss=0.30173
+update=1890 samples=7560 loss=0.11913
+update=1900 samples=7600 loss=0.68557
+update=1910 samples=7640 loss=0.15714
+update=1920 samples=7680 loss=0.32225
+update=1930 samples=7720 loss=0.36703
+update=1940 samples=7760 loss=0.42766
+update=1950 samples=7800 loss=0.26340
+update=1960 samples=7840 loss=0.17014
+update=1970 samples=7880 loss=0.38843
+update=1980 samples=7920 loss=0.36707
+update=1990 samples=7960 loss=1.09362
+update=2000 samples=8000 loss=0.18283
+validation update=2000 loss=0.231881 accuracy=0.799421
+update=2010 samples=8040 loss=0.43848
+update=2020 samples=8080 loss=0.16252
+update=2030 samples=8120 loss=0.06667
+update=2040 samples=8160 loss=0.22265
+update=2050 samples=8200 loss=0.15151
+update=2060 samples=8240 loss=0.18775
+update=2070 samples=8280 loss=0.03614
+update=2080 samples=8320 loss=0.29173
+update=2090 samples=8360 loss=0.16673
+update=2100 samples=8400 loss=0.20255
+update=2110 samples=8440 loss=0.18696
+update=2120 samples=8480 loss=0.10205
+update=2130 samples=8520 loss=0.30529
+update=2140 samples=8560 loss=0.03954
+update=2150 samples=8600 loss=0.16658
+update=2160 samples=8640 loss=0.23288
+update=2170 samples=8680 loss=0.43784
+update=2180 samples=8720 loss=0.10134
+update=2190 samples=8760 loss=0.01585
+update=2200 samples=8800 loss=0.00783
+update=2210 samples=8840 loss=0.04210
+update=2220 samples=8880 loss=0.04769
+update=2230 samples=8920 loss=0.00909
+update=2240 samples=8960 loss=0.01827
+update=2250 samples=9000 loss=0.37793
+update=2260 samples=9040 loss=0.58291
+update=2270 samples=9080 loss=0.30475
+update=2280 samples=9120 loss=0.22963
+update=2290 samples=9160 loss=0.07098
+update=2300 samples=9200 loss=0.12458
+update=2310 samples=9240 loss=0.72065
+update=2320 samples=9280 loss=0.42113
+update=2330 samples=9320 loss=0.24484
+update=2340 samples=9360 loss=0.36523
+update=2350 samples=9400 loss=0.42427
+update=2360 samples=9440 loss=0.34531
+update=2370 samples=9480 loss=0.29705
+update=2380 samples=9520 loss=0.16772
+update=2390 samples=9560 loss=0.66586
+update=2400 samples=9600 loss=0.48364
+update=2410 samples=9640 loss=0.39048
+update=2420 samples=9680 loss=0.06003
+update=2430 samples=9720 loss=0.01605
+update=2440 samples=9760 loss=0.11151
+update=2450 samples=9800 loss=0.25059
+update=2460 samples=9840 loss=0.23520
+update=2470 samples=9880 loss=0.24690
+update=2480 samples=9920 loss=0.26555
+update=2490 samples=9960 loss=0.28570
+update=2500 samples=10000 loss=0.19511
+update=2510 samples=10040 loss=0.39998
+update=2520 samples=10080 loss=0.10983
+update=2530 samples=10120 loss=0.06802
+update=2540 samples=10160 loss=0.35293
+update=2550 samples=10200 loss=0.58207
+update=2560 samples=10240 loss=0.39017
+update=2570 samples=10280 loss=0.03069
+update=2580 samples=10320 loss=0.24737
+update=2590 samples=10360 loss=0.00490
+update=2600 samples=10400 loss=0.24429
+update=2610 samples=10440 loss=0.01703
+update=2620 samples=10480 loss=0.02928
+update=2630 samples=10520 loss=0.00679
+update=2640 samples=10560 loss=0.02851
+update=2650 samples=10600 loss=0.24397
+update=2660 samples=10640 loss=0.01216
+update=2670 samples=10680 loss=0.07120
+update=2680 samples=10720 loss=0.26901
+update=2690 samples=10760 loss=0.02207
+update=2700 samples=10800 loss=0.03745
+update=2710 samples=10840 loss=0.03134
+update=2720 samples=10880 loss=0.36959
+update=2730 samples=10920 loss=0.22321
+update=2740 samples=10960 loss=0.04467
+update=2750 samples=11000 loss=0.43103
+update=2760 samples=11040 loss=0.06691
+update=2770 samples=11080 loss=0.05461
+update=2780 samples=11120 loss=0.48310
+update=2790 samples=11160 loss=0.19680
+update=2800 samples=11200 loss=0.19686
+update=2810 samples=11240 loss=0.23905
+update=2820 samples=11280 loss=0.23366
+update=2830 samples=11320 loss=0.18012
+update=2840 samples=11360 loss=0.13106
+update=2850 samples=11400 loss=0.31208
+update=2860 samples=11440 loss=0.20196
+update=2870 samples=11480 loss=0.27084
+update=2880 samples=11520 loss=0.16438
+update=2890 samples=11560 loss=0.33200
+update=2900 samples=11600 loss=0.42128
+update=2910 samples=11640 loss=0.02868
+update=2920 samples=11680 loss=0.06336
+update=2930 samples=11720 loss=0.35358
+update=2940 samples=11760 loss=0.22881
+update=2950 samples=11800 loss=0.23158
+update=2960 samples=11840 loss=0.13169
+update=2970 samples=11880 loss=0.23069
+update=2980 samples=11920 loss=0.05462
+update=2990 samples=11960 loss=0.01759
+update=3000 samples=12000 loss=0.32644
+validation update=3000 loss=0.136641 accuracy=0.965705
+{
+  "updates": 3000,
+  "supervised_examples": 12000,
+  "elapsed_seconds": 13019.254002422094,
+  "first_update_loss": 0.3391143293993082,
+  "last_update_loss": 0.32644152268767357,
+  "peak_allocated_mib": 21193.39306640625,
+  "stopped_at_budget": false
+}
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.48, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+[11:16:34] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[11:16:34] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:06<00:18,  6.10s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:11<00:11,  5.88s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:17<00:05,  5.79s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:20<00:00,  4.50s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:20<00:00,  5.01s/it]
+[11:16:57] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[11:16:57] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+INFO: Starting Minecraft process with device: cpu
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+ERROR:minestudio.simulator.minerl.env.malmo.instance.aa2783:[11:17:17] [Render thread/WARN]: ERROR : Couldn't load Narrator library : Unable to load library 'fliteWrapper': Can't obtain InputStream for linux-x86-64/libfliteWrapper.so
+ERROR:minestudio.simulator.minerl.env.malmo.instance.aa2783:[11:17:18] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: null
+ERROR:minestudio.simulator.minerl.env.malmo.instance.aa2783:[11:17:25] [Worker-Main-3/ERROR]: Using missing texture, unable to load minecraft:optifine/ctm/default/empty.png : java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png
+ERROR:minestudio.simulator.minerl.env.malmo.instance.aa2783:[11:17:26] [Render thread/ERROR]: Error starting SoundSystem. Turning off sounds & music
+ERROR:minestudio.simulator.minerl.env.malmo.instance.aa2783:java.lang.IllegalStateException: Failed to open OpenAL device
+WARNING:minestudio.simulator.minerl.env.malmo.instance.aa2783:[11:17:26] [Render thread/WARN]: [OptiFine] Missing CTM sprite: minecraft:optifine/ctm/default/empty
+WARNING:minestudio.simulator.minerl.env.malmo.instance.aa2783:[11:17:29] [Render thread/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.aa2783:[11:17:29] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.aa2783:[11:17:29] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.aa2783:[11:17:29] [Render thread/WARN]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.aa2783:[11:17:29] [Render thread/WARN]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.aa2783:[11:17:57] [Render thread/WARN]: Failed to load texture: minecraft:optifine/ctm/default/empty.png
+ERROR:minestudio.simulator.minerl.env.malmo.instance.aa2783:java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.48, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+[11:21:08] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[11:21:08] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:06<00:18,  6.01s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:11<00:11,  5.87s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:17<00:05,  5.81s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:20<00:00,  4.51s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:20<00:00,  5.01s/it]
+[11:21:31] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[11:21:31] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+INFO: Starting Minecraft process with device: cpu
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+ERROR:minestudio.simulator.minerl.env.malmo.instance.f57243:[11:21:50] [Render thread/WARN]: ERROR : Couldn't load Narrator library : Unable to load library 'fliteWrapper': Can't obtain InputStream for linux-x86-64/libfliteWrapper.so
+ERROR:minestudio.simulator.minerl.env.malmo.instance.f57243:[11:21:50] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: null
+ERROR:minestudio.simulator.minerl.env.malmo.instance.f57243:[11:21:59] [Worker-Main-6/ERROR]: Using missing texture, unable to load minecraft:optifine/ctm/default/empty.png : java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png
+ERROR:minestudio.simulator.minerl.env.malmo.instance.f57243:[11:22:00] [Render thread/ERROR]: Error starting SoundSystem. Turning off sounds & music
+ERROR:minestudio.simulator.minerl.env.malmo.instance.f57243:java.lang.IllegalStateException: Failed to open OpenAL device
+WARNING:minestudio.simulator.minerl.env.malmo.instance.f57243:[11:22:00] [Render thread/WARN]: [OptiFine] Missing CTM sprite: minecraft:optifine/ctm/default/empty
+WARNING:minestudio.simulator.minerl.env.malmo.instance.f57243:[11:22:03] [Render thread/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.f57243:[11:22:03] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.f57243:[11:22:03] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.f57243:[11:22:03] [Render thread/WARN]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.f57243:[11:22:03] [Render thread/WARN]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.f57243:[11:22:28] [Render thread/WARN]: Failed to load texture: minecraft:optifine/ctm/default/empty.png
+ERROR:minestudio.simulator.minerl.env.malmo.instance.f57243:java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png

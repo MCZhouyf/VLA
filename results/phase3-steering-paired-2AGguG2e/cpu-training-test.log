@@ -1,0 +1,293 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+[17:27:20] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[17:27:20] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+[17:27:20] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[17:27:20] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.48, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+Could not load bitsandbytes native library: /lib/x86_64-linux-gnu/libstdc++.so.6: version `GLIBCXX_3.4.32' not found (required by /share/project/zhoubowen/zhy/zyf/envs/mcvla-phase3/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cpu.so)
+Traceback (most recent call last):
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla-phase3/lib/python3.10/site-packages/bitsandbytes/cextension.py", line 85, in <module>
+    lib = get_native_library()
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla-phase3/lib/python3.10/site-packages/bitsandbytes/cextension.py", line 72, in get_native_library
+    dll = ct.cdll.LoadLibrary(str(binary_path))
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/ctypes/__init__.py", line 452, in LoadLibrary
+    return self._dlltype(name)
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: /lib/x86_64-linux-gnu/libstdc++.so.6: version `GLIBCXX_3.4.32' not found (required by /share/project/zhoubowen/zhy/zyf/envs/mcvla-phase3/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cpu.so)
+[17:27:24] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[17:27:24] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+[17:27:27] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[17:27:27] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+[17:27:29] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[17:27:29] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+Official prompt, cached visual, batched logits and batched greedy decode checks passed
+Spatial geometry and both training microbatch gradients passed
+[17:27:30] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[17:27:30] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+/share/project/zhoubowen/zhy/zyf/envs/mcvla-phase3/lib/python3.10/site-packages/peft/utils/save_and_load.py:246: UserWarning: Could not find a config file in  - will assume that the vocabulary was not modified.
+  warnings.warn(
+{
+  "updates": 5,
+  "supervised_examples": 10,
+  "elapsed_seconds": 1.7967319674789906,
+  "first_update_loss": 11.880480289459229,
+  "last_update_loss": 11.868720054626465,
+  "peak_allocated_mib": 0.0,
+  "stopped_at_budget": false
+}
+[17:27:32] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[17:27:32] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+[17:27:34] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[17:27:34] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+Resuming update=2, examples=4, cursor=(0, 0, 4)
+{
+  "updates": 5,
+  "supervised_examples": 10,
+  "elapsed_seconds": 3.100218743085861,
+  "first_update_loss": 11.880480289459229,
+  "last_update_loss": 11.868720054626465,
+  "peak_allocated_mib": 0.0,
+  "stopped_at_budget": false
+}
+[17:27:35] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[17:27:35] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+{
+  "updates": 5,
+  "supervised_examples": 10,
+  "elapsed_seconds": 1.7848441749811172,
+  "first_update_loss": 11.869463443756104,
+  "last_update_loss": 11.85726022720337,
+  "peak_allocated_mib": 0.0,
+  "stopped_at_budget": false
+}
+[17:27:37] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[17:27:37] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+{
+  "updates": 4,
+  "supervised_examples": 10,
+  "elapsed_seconds": 1.7006135918200016,
+  "first_update_loss": 11.879121780395508,
+  "last_update_loss": 11.864399909973145,
+  "peak_allocated_mib": 0.0,
+  "stopped_at_budget": false
+}
+[17:27:39] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[17:27:39] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+[17:27:40] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[17:27:40] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+Resuming update=2, examples=6, cursor=(0, 1, 1)
+{
+  "updates": 4,
+  "supervised_examples": 10,
+  "elapsed_seconds": 3.022324152290821,
+  "first_update_loss": 11.879121780395508,
+  "last_update_loss": 11.864399909973145,
+  "peak_allocated_mib": 0.0,
+  "stopped_at_budget": false
+}
+[17:27:42] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[17:27:42] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+{
+  "updates": 5,
+  "supervised_examples": 10,
+  "elapsed_seconds": 1.8262599669396877,
+  "first_update_loss": 11.909009456634521,
+  "last_update_loss": 11.884253978729248,
+  "peak_allocated_mib": 0.0,
+  "stopped_at_budget": false
+}
+[17:27:44] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[17:27:44] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+[17:27:45] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[17:27:45] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+Resuming update=2, examples=4, cursor=(0, 0, 4)
+{
+  "updates": 5,
+  "supervised_examples": 10,
+  "elapsed_seconds": 3.1726020723581314,
+  "first_update_loss": 11.909009456634521,
+  "last_update_loss": 11.884253978729248,
+  "peak_allocated_mib": 0.0,
+  "stopped_at_budget": false
+}
+[17:27:47] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[17:27:47] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+{
+  "updates": 5,
+  "supervised_examples": 10,
+  "elapsed_seconds": 1.842670015990734,
+  "first_update_loss": 11.882688522338867,
+  "last_update_loss": 11.85881757736206,
+  "peak_allocated_mib": 0.0,
+  "stopped_at_budget": false
+}
+[17:27:49] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[17:27:49] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+{
+  "updates": 4,
+  "supervised_examples": 10,
+  "elapsed_seconds": 2.0036241747438908,
+  "first_update_loss": 11.907386461893717,
+  "last_update_loss": 11.885274887084961,
+  "peak_allocated_mib": 0.0,
+  "stopped_at_budget": false
+}
+[17:27:51] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[17:27:51] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+[17:27:53] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[17:27:53] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+Resuming update=2, examples=6, cursor=(0, 1, 1)
+{
+  "updates": 4,
+  "supervised_examples": 10,
+  "elapsed_seconds": 3.0623999387025833,
+  "first_update_loss": 11.907386461893717,
+  "last_update_loss": 11.885274887084961,
+  "peak_allocated_mib": 0.0,
+  "stopped_at_budget": false
+}
+[17:27:54] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[17:27:54] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+{
+  "updates": 4,
+  "supervised_examples": 8,
+  "elapsed_seconds": 1.6740640364587307,
+  "first_update_loss": 11.910282611846924,
+  "last_update_loss": 11.891327857971191,
+  "peak_allocated_mib": 0.0,
+  "stopped_at_budget": false
+}
+[17:27:56] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[17:27:56] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+[17:27:58] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[17:27:58] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+Resuming update=2, examples=4, cursor=(0, 1, 4)
+{
+  "updates": 4,
+  "supervised_examples": 8,
+  "elapsed_seconds": 2.9547366462647915,
+  "first_update_loss": 11.910282611846924,
+  "last_update_loss": 11.891327857971191,
+  "peak_allocated_mib": 0.0,
+  "stopped_at_budget": false
+}
+[17:27:59] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[17:27:59] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+[17:28:00] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[17:28:00] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+{
+  "updates": 4,
+  "supervised_examples": 8,
+  "elapsed_seconds": 1.7096200324594975,
+  "first_update_loss": 11.900800943374634,
+  "last_update_loss": 11.885937690734863,
+  "peak_allocated_mib": 0.0,
+  "stopped_at_budget": false
+}
+[17:28:02] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[17:28:02] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+[17:28:04] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[17:28:04] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+Resuming update=2, examples=4, cursor=(0, 1, 4)
+{
+  "updates": 4,
+  "supervised_examples": 8,
+  "elapsed_seconds": 3.137201301753521,
+  "first_update_loss": 11.900800943374634,
+  "last_update_loss": 11.885937690734863,
+  "peak_allocated_mib": 0.0,
+  "stopped_at_budget": false
+}
+[17:28:06] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[17:28:06] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+{
+  "updates": 4,
+  "supervised_examples": 24,
+  "elapsed_seconds": 2.357093460857868,
+  "first_update_loss": 11.903810024261475,
+  "last_update_loss": 11.886423746744791,
+  "peak_allocated_mib": 0.0,
+  "stopped_at_budget": false
+}
+[17:28:08] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[17:28:08] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+[17:28:10] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[17:28:10] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+Resuming update=2, examples=12, cursor=(0, 0, 12)
+{
+  "updates": 4,
+  "supervised_examples": 24,
+  "elapsed_seconds": 3.6771231293678284,
+  "first_update_loss": 11.903810024261475,
+  "last_update_loss": 11.886423746744791,
+  "peak_allocated_mib": 0.0,
+  "stopped_at_budget": false
+}
+Storage read failed (injected timeout); retry 1/5 in 1s
+Storage read failed (injected timeout); retry 2/5 in 2s
+Storage read failed (injected timeout); retry 3/5 in 4s
+Storage read failed (injected timeout); retry 4/5 in 8s
+Storage read failed (injected timeout); retry 5/5 in 16s
+Exact initialization, resumed weights, log rollback, checkpoint retention and backoffs passed

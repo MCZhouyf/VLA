@@ -1,0 +1,27 @@
+{"mode": "bf16", "free_mib": 1440.81, "allocator_cap_mib": 768.0}
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.48, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+[12:47:20] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[12:47:20] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:02<?, ?it/s]
+Traceback (most recent call last):
+  File "/share/project/zhoubowen/zhy/zyf/results/phase3-shared-gpu-npCniGAH/try_load.py", line 15, in <module>
+    T1Policy(checkpoint, "no_memory", quantized=mode == "nf4", training=True)
+  File "/share/project/zhoubowen/zhy/zyf/code/minemem/t1_model.py", line 40, in __init__
+    base = Qwen2VLForConditionalGeneration.from_pretrained(checkpoint, **kwargs)
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/site-packages/transformers/modeling_utils.py", line 262, in _wrapper
+    return func(*args, **kwargs)
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4319, in from_pretrained
+    ) = cls._load_pretrained_model(
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4897, in _load_pretrained_model
+    new_error_msgs, offload_index, state_dict_index = _load_state_dict_into_meta_model(
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/site-packages/transformers/modeling_utils.py", line 896, in _load_state_dict_into_meta_model
+    set_module_tensor_to_device(model, param_name, param_device, **set_module_kwargs)
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/site-packages/accelerate/utils/modeling.py", line 329, in set_module_tensor_to_device
+    new_value = value.to(device)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.02 GiB. GPU 0 has a total capacity of 39.39 GiB of which 1.41 GiB is free. Process 1090168 has 37.57 GiB memory in use. Process 2880283 has 414.00 MiB memory in use. 768.00 MiB allowed; Of the allocated memory 0 bytes is allocated by PyTorch, and 0 bytes is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

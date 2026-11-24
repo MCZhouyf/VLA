@@ -1,0 +1,283 @@
+{
+  "server_files": {
+    "code/minemem": 56,
+    "results/REPORT_phase3_screened_launch.md": 1,
+    "results/REPORT_phase3_structure_audit.md": 1,
+    "results/phase3-7b-0tyjJU3p": 226,
+    "results/phase3-architecture-check-lahxG65U.log": 1,
+    "results/phase3-control-20261124-xeZzE4MM": 788,
+    "results/phase3-memory-20261124": 989,
+    "results/phase3-shared-gpu-npCniGAH": 12,
+    "results/phase3-speed-xOn8Q5je": 175,
+    "results/phase3-steering-balanced-hINMXxy1": 204,
+    "results/phase3-steering-paired-2AGguG2e": 803,
+    "results/phase3-steering-weighted-D2oX6SVa": 209,
+    "results/phase3-train-environment-K25SQvSz.log": 1
+  },
+  "episode_metadata": {
+    "results/phase3-control-20261124-xeZzE4MM/dart-data/episode-metadata.jsonl.gz": 360,
+    "results/phase3-control-20261124-xeZzE4MM/dart-retry/episode-metadata.jsonl.gz": 62,
+    "results/phase3-control-20261124-xeZzE4MM/dart-smoke/episode-metadata.jsonl.gz": 6,
+    "results/phase3-steering-paired-2AGguG2e/alternate-100/episode-metadata.jsonl.gz": 12,
+    "results/phase3-steering-paired-2AGguG2e/capture/episode-metadata.jsonl.gz": 372,
+    "results/phase3-steering-paired-2AGguG2e/smoke/episode-metadata.jsonl.gz": 6
+  },
+  "model_artifact_locations": [
+    {
+      "path": "results/phase3-7b-0tyjJU3p/full/train-no_memory/adapter/adapter_model.safetensors",
+      "bytes": 645975704
+    },
+    {
+      "path": "results/phase3-7b-0tyjJU3p/smoke-long-bf16/adapter/adapter_model.safetensors",
+      "bytes": 645975704
+    },
+    {
+      "path": "results/phase3-7b-0tyjJU3p/smoke-no_memory-bf16/adapter/adapter_model.safetensors",
+      "bytes": 645975704
+    },
+    {
+      "path": "results/phase3-7b-0tyjJU3p/smoke-spatial-bf16/spatial.safetensors",
+      "bytes": 20039220
+    },
+    {
+      "path": "results/phase3-7b-0tyjJU3p/smoke-spatial-bf16/adapter/adapter_model.safetensors",
+      "bytes": 645975704
+    },
+    {
+      "path": "results/phase3-control-20261124-xeZzE4MM/repaired/train-no_memory/adapter/adapter_model.safetensors",
+      "bytes": 645975704
+    },
+    {
+      "path": "results/phase3-control-20261124-xeZzE4MM/repaired/train-no_memory/checkpoints/step-00002000/adapter/adapter_model.safetensors",
+      "bytes": 645975704
+    },
+    {
+      "path": "results/phase3-control-20261124-xeZzE4MM/repaired/train-no_memory/checkpoints/step-00003000/adapter/adapter_model.safetensors",
+      "bytes": 645975704
+    },
+    {
+      "path": "results/phase3-control-20261124-xeZzE4MM/repaired/train-spatial/spatial.safetensors",
+      "bytes": 20039220
+    },
+    {
+      "path": "results/phase3-control-20261124-xeZzE4MM/repaired/train-spatial/adapter/adapter_model.safetensors",
+      "bytes": 645975704
+    },
+    {
+      "path": "results/phase3-control-20261124-xeZzE4MM/repaired/train-spatial/checkpoints/step-00002000/spatial.safetensors",
+      "bytes": 20039220
+    },
+    {
+      "path": "results/phase3-control-20261124-xeZzE4MM/repaired/train-spatial/checkpoints/step-00002000/adapter/adapter_model.safetensors",
+      "bytes": 645975704
+    },
+    {
+      "path": "results/phase3-control-20261124-xeZzE4MM/repaired/train-spatial/checkpoints/step-00003000/spatial.safetensors",
+      "bytes": 20039220
+    },
+    {
+      "path": "results/phase3-control-20261124-xeZzE4MM/repaired/train-spatial/checkpoints/step-00003000/adapter/adapter_model.safetensors",
+      "bytes": 645975704
+    },
+    {
+      "path": "results/phase3-speed-xOn8Q5je/train-no_memory/adapter/adapter_model.safetensors",
+      "bytes": 645975704
+    },
+    {
+      "path": "results/phase3-speed-xOn8Q5je/train-no_memory/checkpoints/step-00013000/adapter/adapter_model.safetensors",
+      "bytes": 645975704
+    },
+    {
+      "path": "results/phase3-speed-xOn8Q5je/train-no_memory/checkpoints/step-00014000/adapter/adapter_model.safetensors",
+      "bytes": 645975704
+    },
+    {
+      "path": "results/phase3-speed-xOn8Q5je/train-spatial/spatial.safetensors",
+      "bytes": 20039220
+    },
+    {
+      "path": "results/phase3-speed-xOn8Q5je/train-spatial/adapter/adapter_model.safetensors",
+      "bytes": 645975704
+    },
+    {
+      "path": "results/phase3-speed-xOn8Q5je/train-spatial/checkpoints/step-00013000/spatial.safetensors",
+      "bytes": 20039220
+    },
+    {
+      "path": "results/phase3-speed-xOn8Q5je/train-spatial/checkpoints/step-00013000/adapter/adapter_model.safetensors",
+      "bytes": 645975704
+    },
+    {
+      "path": "results/phase3-speed-xOn8Q5je/train-spatial/checkpoints/step-00014000/spatial.safetensors",
+      "bytes": 20039220
+    },
+    {
+      "path": "results/phase3-speed-xOn8Q5je/train-spatial/checkpoints/step-00014000/adapter/adapter_model.safetensors",
+      "bytes": 645975704
+    },
+    {
+      "path": "results/phase3-steering-balanced-hINMXxy1/early-spatial-probe-250/spatial.safetensors",
+      "bytes": 20039220
+    },
+    {
+      "path": "results/phase3-steering-balanced-hINMXxy1/early-spatial-probe-250/adapter/adapter_model.safetensors",
+      "bytes": 645975704
+    },
+    {
+      "path": "results/phase3-steering-balanced-hINMXxy1/early-spatial-probe-500/spatial.safetensors",
+      "bytes": 20039220
+    },
+    {
+      "path": "results/phase3-steering-balanced-hINMXxy1/early-spatial-probe-500/adapter/adapter_model.safetensors",
+      "bytes": 645975704
+    },
+    {
+      "path": "results/phase3-steering-balanced-hINMXxy1/repaired/train-no_memory/adapter/adapter_model.safetensors",
+      "bytes": 645975704
+    },
+    {
+      "path": "results/phase3-steering-balanced-hINMXxy1/repaired/train-no_memory/checkpoints/step-00000750/adapter/adapter_model.safetensors",
+      "bytes": 645975704
+    },
+    {
+      "path": "results/phase3-steering-balanced-hINMXxy1/repaired/train-no_memory/checkpoints/step-00001000/adapter/adapter_model.safetensors",
+      "bytes": 645975704
+    },
+    {
+      "path": "results/phase3-steering-balanced-hINMXxy1/repaired/train-spatial/spatial.safetensors",
+      "bytes": 20039220
+    },
+    {
+      "path": "results/phase3-steering-balanced-hINMXxy1/repaired/train-spatial/adapter/adapter_model.safetensors",
+      "bytes": 645975704
+    },
+    {
+      "path": "results/phase3-steering-balanced-hINMXxy1/repaired/train-spatial/checkpoints/step-00000750/spatial.safetensors",
+      "bytes": 20039220
+    },
+    {
+      "path": "results/phase3-steering-balanced-hINMXxy1/repaired/train-spatial/checkpoints/step-00000750/adapter/adapter_model.safetensors",
+      "bytes": 645975704
+    },
+    {
+      "path": "results/phase3-steering-balanced-hINMXxy1/repaired/train-spatial/checkpoints/step-00001000/spatial.safetensors",
+      "bytes": 20039220
+    },
+    {
+      "path": "results/phase3-steering-balanced-hINMXxy1/repaired/train-spatial/checkpoints/step-00001000/adapter/adapter_model.safetensors",
+      "bytes": 645975704
+    },
+    {
+      "path": "results/phase3-steering-paired-2AGguG2e/early-no_memory-probe-256/adapter/adapter_model.safetensors",
+      "bytes": 645975704
+    },
+    {
+      "path": "results/phase3-steering-paired-2AGguG2e/early-no_memory-probe-64/adapter/adapter_model.safetensors",
+      "bytes": 645975704
+    },
+    {
+      "path": "results/phase3-steering-paired-2AGguG2e/repaired/train-no_memory/adapter/adapter_model.safetensors",
+      "bytes": 645975704
+    },
+    {
+      "path": "results/phase3-steering-paired-2AGguG2e/repaired/train-no_memory/checkpoints/step-00000192/adapter/adapter_model.safetensors",
+      "bytes": 645975704
+    },
+    {
+      "path": "results/phase3-steering-paired-2AGguG2e/repaired/train-no_memory/checkpoints/step-00000256/adapter/adapter_model.safetensors",
+      "bytes": 645975704
+    },
+    {
+      "path": "results/phase3-steering-paired-2AGguG2e/repaired/train-spatial/spatial.safetensors",
+      "bytes": 20039220
+    },
+    {
+      "path": "results/phase3-steering-paired-2AGguG2e/repaired/train-spatial/adapter/adapter_model.safetensors",
+      "bytes": 645975704
+    },
+    {
+      "path": "results/phase3-steering-paired-2AGguG2e/repaired/train-spatial/checkpoints/step-00000192/spatial.safetensors",
+      "bytes": 20039220
+    },
+    {
+      "path": "results/phase3-steering-paired-2AGguG2e/repaired/train-spatial/checkpoints/step-00000192/adapter/adapter_model.safetensors",
+      "bytes": 645975704
+    },
+    {
+      "path": "results/phase3-steering-paired-2AGguG2e/repaired/train-spatial/checkpoints/step-00000256/spatial.safetensors",
+      "bytes": 20039220
+    },
+    {
+      "path": "results/phase3-steering-paired-2AGguG2e/repaired/train-spatial/checkpoints/step-00000256/adapter/adapter_model.safetensors",
+      "bytes": 645975704
+    },
+    {
+      "path": "results/phase3-steering-paired-2AGguG2e/shared-adapter-probe/spatial.safetensors",
+      "bytes": 20039220
+    },
+    {
+      "path": "results/phase3-steering-paired-2AGguG2e/shared-adapter-probe/adapter/adapter_model.safetensors",
+      "bytes": 645975704
+    },
+    {
+      "path": "results/phase3-steering-weighted-D2oX6SVa/early-no_memory-probe-250/adapter/adapter_model.safetensors",
+      "bytes": 645975704
+    },
+    {
+      "path": "results/phase3-steering-weighted-D2oX6SVa/early-no_memory-probe-750/adapter/adapter_model.safetensors",
+      "bytes": 645975704
+    },
+    {
+      "path": "results/phase3-steering-weighted-D2oX6SVa/early-spatial-probe-250/spatial.safetensors",
+      "bytes": 20039220
+    },
+    {
+      "path": "results/phase3-steering-weighted-D2oX6SVa/early-spatial-probe-250/adapter/adapter_model.safetensors",
+      "bytes": 645975704
+    },
+    {
+      "path": "results/phase3-steering-weighted-D2oX6SVa/early-spatial-probe-750/spatial.safetensors",
+      "bytes": 20039220
+    },
+    {
+      "path": "results/phase3-steering-weighted-D2oX6SVa/early-spatial-probe-750/adapter/adapter_model.safetensors",
+      "bytes": 645975704
+    },
+    {
+      "path": "results/phase3-steering-weighted-D2oX6SVa/repaired/train-no_memory/adapter/adapter_model.safetensors",
+      "bytes": 645975704
+    },
+    {
+      "path": "results/phase3-steering-weighted-D2oX6SVa/repaired/train-no_memory/checkpoints/step-00000500/adapter/adapter_model.safetensors",
+      "bytes": 645975704
+    },
+    {
+      "path": "results/phase3-steering-weighted-D2oX6SVa/repaired/train-no_memory/checkpoints/step-00000750/adapter/adapter_model.safetensors",
+      "bytes": 645975704
+    },
+    {
+      "path": "results/phase3-steering-weighted-D2oX6SVa/repaired/train-spatial/spatial.safetensors",
+      "bytes": 20039220
+    },
+    {
+      "path": "results/phase3-steering-weighted-D2oX6SVa/repaired/train-spatial/adapter/adapter_model.safetensors",
+      "bytes": 645975704
+    },
+    {
+      "path": "results/phase3-steering-weighted-D2oX6SVa/repaired/train-spatial/checkpoints/step-00000500/spatial.safetensors",
+      "bytes": 20039220
+    },
+    {
+      "path": "results/phase3-steering-weighted-D2oX6SVa/repaired/train-spatial/checkpoints/step-00000500/adapter/adapter_model.safetensors",
+      "bytes": 645975704
+    },
+    {
+      "path": "results/phase3-steering-weighted-D2oX6SVa/repaired/train-spatial/checkpoints/step-00000750/spatial.safetensors",
+      "bytes": 20039220
+    },
+    {
+      "path": "results/phase3-steering-weighted-D2oX6SVa/repaired/train-spatial/checkpoints/step-00000750/adapter/adapter_model.safetensors",
+      "bytes": 645975704
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "dataset_sha256": "f3a152816553499197053e18ce60e3837c899bed582eaa4cd913a71f52b5cefb",
+  "stride": 8,
+  "result": {
+    "30": {
+      "first_pose": {
+        "episodes": 6,
+        "within_3": 6
+      },
+      "rgb_anchor": {
+        "episodes": 6,
+        "within_3": 6
+      },
+      "rgb_anchor_without_dwell": {
+        "episodes": 6,
+        "within_3": 6
+      },
+      "rgb_at_shuffled_pose": {
+        "episodes": 6,
+        "within_3": 2
+      }
+    },
+    "60": {
+      "first_pose": {
+        "episodes": 4,
+        "within_3": 4
+      },
+      "rgb_anchor": {
+        "episodes": 4,
+        "within_3": 4
+      },
+      "rgb_anchor_without_dwell": {
+        "episodes": 4,
+        "within_3": 4
+      },
+      "rgb_at_shuffled_pose": {
+        "episodes": 4,
+        "within_3": 0
+      }
+    },
+    "100": {
+      "first_pose": {
+        "episodes": 4,
+        "within_3": 4
+      },
+      "rgb_anchor": {
+        "episodes": 4,
+        "within_3": 4
+      },
+      "rgb_anchor_without_dwell": {
+        "episodes": 4,
+        "within_3": 4
+      },
+      "rgb_at_shuffled_pose": {
+        "episodes": 4,
+        "within_3": 1
+      }
+    }
+  }
+}

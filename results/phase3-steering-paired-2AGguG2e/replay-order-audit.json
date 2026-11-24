@@ -1,0 +1,21 @@
+{
+  "updates": 256,
+  "labels": 1536,
+  "epochs": 2,
+  "labels_by_source": {
+    "paired": 768,
+    "original": 384,
+    "dart": 384
+  },
+  "paired_label_directions": {
+    "forward": 256,
+    "left": 256,
+    "right": 256
+  },
+  "checked_resume_positions": [
+    64,
+    128,
+    192
+  ],
+  "validation_frames": 6500
+}

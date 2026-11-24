@@ -1,0 +1,41 @@
+{
+  "variants": {
+    "no_memory": {
+      "aligned": {
+        "episodes": 10,
+        "successes": 10
+      },
+      "in_view": {
+        "episodes": 15,
+        "successes": 8
+      },
+      "out_of_view": {
+        "episodes": 5,
+        "successes": 0
+      },
+      "passed": false,
+      "blockers": [
+        "Offset navigation reached 8/15 in-view scenes, below 12/15"
+      ]
+    },
+    "spatial": {
+      "aligned": {
+        "episodes": 10,
+        "successes": 10
+      },
+      "in_view": {
+        "episodes": 15,
+        "successes": 4
+      },
+      "out_of_view": {
+        "episodes": 5,
+        "successes": 0
+      },
+      "passed": false,
+      "blockers": [
+        "Offset navigation reached 4/15 in-view scenes, below 12/15"
+      ]
+    }
+  },
+  "formal_permitted": false
+}

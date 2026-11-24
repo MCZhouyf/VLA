@@ -22,14 +22,22 @@ export T1_LOCAL_DATABASE_ROOT="${T1_LOCAL_DATABASE_ROOT:-$(mktemp -d /dev/shm/mi
 runner="$project/code/minemem/t1_exec.sh"
 nav="$run/eval-no_memory-nav/episodes.csv"
 offset="$run/eval-no_memory-nav_offset/episodes.csv"
+snav="$run/eval-spatial-nav/episodes.csv"
+soffset="$run/eval-spatial-nav_offset/episodes.csv"
 seeds="$WORK/results/phase1_t1_seeds.json"
 python="$WORK/envs/mcvla-phase3/bin/python"
 
 if [[ $stage == gates ]]; then
-    [[ $variant == no_memory ]]
+    [[ $variant == no_memory || $variant == spatial ]]
+    gpu="${T1_NAVIGATION_GPU:-$gpu}"
+    [[ $gpu =~ ^[67]$ ]]
+    gate_options=()
+    if [[ ${T1_CAPTURE_NAVIGATION_ACTIONS:-0} == 1 ]]; then
+        gate_options+=(--control-trace)
+    fi
     for mode in nav nav_offset; do
         bash "$runner" eval "$gpu" "$run/eval-$variant-$mode" \
-            --training-run "$run/train-$variant" --mode "$mode"
+            --training-run "$run/train-$variant" --mode "$mode" "${gate_options[@]}"
     done
     exit
 fi
@@ -75,4 +83,5 @@ bash "$runner" eval "$gpu" "$run/eval-$variant-$stage" \
     --training-run "$run/train-$variant" --mode formal --distances "${distances[@]}" \
     --seeds-file "$seeds" --seed "${frozen_seeds[@]}" --rollout-batch-size 3 \
     --screened-fixtures "$run/screened_fixtures.json" --no-memory-gate "$nav" \
-    --offset-gate "$offset" --forward-control "$forward_control"
+    --offset-gate "$offset" --spatial-gate "$snav" --spatial-offset-gate "$soffset" \
+    --forward-control "$forward_control"

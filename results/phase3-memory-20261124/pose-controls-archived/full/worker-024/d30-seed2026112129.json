@@ -1,0 +1,226 @@
+{
+  "protocol": "t1_occlusion_candidate",
+  "scenario_seed": 2026112129,
+  "world_seed": 19961132,
+  "distance": 30,
+  "arena_origin": [
+    -5310,
+    76,
+    5018
+  ],
+  "native_spawn": {
+    "x": -5309.5,
+    "y": 64.0,
+    "z": 5018.5,
+    "pitch": 0.0,
+    "yaw": 0.0
+  },
+  "spawn": {
+    "x": -5307.5,
+    "y": 76.0,
+    "z": 5016.5,
+    "pitch": 0.0,
+    "yaw": 45.0
+  },
+  "landmark": [
+    -5309.5,
+    5018.5
+  ],
+  "distractors": [
+    {
+      "material": "iron_block",
+      "horizontal": [
+        -5323.5,
+        5034.5
+      ]
+    },
+    {
+      "material": "lapis_block",
+      "horizontal": [
+        -5337.5,
+        4998.5
+      ]
+    },
+    {
+      "material": "redstone_block",
+      "horizontal": [
+        -5323.5,
+        5042.5
+      ]
+    }
+  ],
+  "wall": [
+    -5330,
+    76,
+    5012,
+    -5330,
+    81,
+    5024
+  ],
+  "planned_endpoint": [
+    -5339.5,
+    5018.5
+  ],
+  "waypoints": [
+    [
+      -5302.5,
+      5016.5
+    ],
+    [
+      -5302.5,
+      5011.3
+    ],
+    [
+      -5331.5,
+      5011.3
+    ],
+    [
+      -5339.5,
+      5018.5
+    ]
+  ],
+  "final_yaw": 90.0,
+  "outbound_dwell_steps": 40,
+  "final_facing_steps": 20,
+  "setup_revision": "remote_respawn_v1",
+  "protection_commands": [
+    "/gamerule doMobSpawning false",
+    "/kill @e[type=!player]",
+    "/time set day",
+    "/gamerule doDaylightCycle false",
+    "/gamerule doWeatherCycle false",
+    "/weather clear",
+    "/spawnpoint @p -4926 160 5402"
+  ],
+  "respawn_pad_commands": [
+    "/forceload add -4927 5401 -4925 5403",
+    "/fill -4927 159 5401 -4925 159 5403 minecraft:stone",
+    "/fill -4927 160 5401 -4925 162 5403 minecraft:air"
+  ],
+  "respawn_point": [
+    -4926,
+    160,
+    5402
+  ],
+  "optional_effects": false,
+  "render_distance_chunks": 4,
+  "occlusion_walls": [
+    [
+      -5330,
+      76,
+      5012,
+      -5330,
+      81,
+      5024
+    ],
+    [
+      -5349,
+      76,
+      5012,
+      -5349,
+      81,
+      5024
+    ],
+    [
+      -5346,
+      76,
+      5008,
+      -5334,
+      81,
+      5008
+    ],
+    [
+      -5346,
+      76,
+      5027,
+      -5334,
+      81,
+      5027
+    ]
+  ],
+  "screened_pillar": true,
+  "candidate_routes": [
+    [
+      [
+        -5331.5,
+        5011.3
+      ],
+      [
+        -5302.5,
+        5011.3
+      ],
+      [
+        -5302.5,
+        5016.5
+      ],
+      [
+        -5306.5,
+        5016.5
+      ],
+      [
+        -5309.5,
+        5018.5
+      ]
+    ]
+  ],
+  "pillar_screen": [
+    [
+      -5315,
+      76,
+      5013,
+      -5305,
+      81,
+      5013
+    ],
+    [
+      -5315,
+      76,
+      5023,
+      -5305,
+      81,
+      5023
+    ],
+    [
+      -5315,
+      76,
+      5013,
+      -5315,
+      81,
+      5023
+    ],
+    [
+      -5305,
+      76,
+      5013,
+      -5305,
+      81,
+      5014
+    ],
+    [
+      -5305,
+      76,
+      5018,
+      -5305,
+      81,
+      5023
+    ],
+    [
+      -5301,
+      76,
+      5013,
+      -5301,
+      81,
+      5023
+    ]
+  ],
+  "return_pose": {
+    "x": -5339.483344630866,
+    "y": 76.0,
+    "z": 5018.485083241384,
+    "pitch": 0.0,
+    "yaw": -279.23334
+  },
+  "return_limit": 740,
+  "recorded_outbound_trace": "/share/project/zhoubowen/zhy/zyf/results/t1-review-A8vp1K1p/screened-acceptance-retry/worker-009/d30-seed2026112129-outbound.csv.gz",
+  "pose_only_terminal_tolerance": 0.1
+}

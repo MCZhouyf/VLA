@@ -1,0 +1,890 @@
+Picked up JAVA_TOOL_OPTIONS: -Duser.home='/share/project/zhoubowen/zhy/zyf/runtime/java-home' -Djava.io.tmpdir='/share/project/zhoubowen/zhy/zyf/tmp' -XX:ActiveProcessorCount=2
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+[19:54:17] [main/INFO]: [OptiFine] (Reflector) Field not found: World.tileEntitiesToBeRemoved
+[19:54:17] [main/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.eventbus.api.Event$Result
+[19:54:17] [main/INFO]: [OptiFine] (Reflector) Method not present: net.minecraftforge.common.extensions.IForgeBlockState.hasTileEntity
+[19:54:17] [main/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.extensions.IForgeEntity
+[19:54:17] [main/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.CrashReportExtender
+[19:54:18] [main/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.tags.ItemTags.createOptional
+[19:54:19] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.ForgeHooksClient
+[19:54:19] [Render thread/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[19:54:21] [Render thread/INFO]: Setting user: Player388
+[19:54:21] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.settings.KeyConflictContext
+[19:54:21] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraft.launchwrapper.Launch
+[19:54:21] [Render thread/INFO]: Backend library: LWJGL version 3.2.2 SNAPSHOT
+[19:54:21] [Render thread/INFO]: [OptiFine] 
+[19:54:21] [Render thread/INFO]: [OptiFine] OptiFine_1.16.5_HD_U_G8
+[19:54:21] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: optifine.OptiFineResourceLocator
+[19:54:21] [Render thread/INFO]: [OptiFine] Build: null
+[19:54:21] [Render thread/INFO]: [OptiFine] OS: Linux (amd64) version 5.15.0-1053-nvidia
+[19:54:21] [Render thread/INFO]: [OptiFine] Java: 1.8.0_514, Azul Systems, Inc.
+[19:54:21] [Render thread/INFO]: [OptiFine] VM: OpenJDK 64-Bit Server VM (mixed mode), Azul Systems, Inc.
+[19:54:21] [Render thread/INFO]: [OptiFine] LWJGL: 3.3.0 X11 GLX EGL OSMesa clock_gettime evdev shared
+[19:54:21] [Render thread/INFO]: [OptiFine] OpenGL: llvmpipe (LLVM 15.0.7, 256 bits), version 4.5 (Compatibility Profile) Mesa 23.2.1-1ubuntu3.1~22.04.4, Mesa
+[19:54:21] [Render thread/INFO]: [OptiFine] OpenGL Version: 4.5.0
+[19:54:21] [Render thread/INFO]: [OptiFine] Maximum texture size: 16384x16384
+[19:54:21] [VersionCheck/INFO]: [OptiFine] Checking for new version
+[19:54:21] [Render thread/INFO]: [Shaders] OpenGL Version: 4.5 (Compatibility Profile) Mesa 23.2.1-1ubuntu3.1~22.04.4
+[19:54:21] [Render thread/INFO]: [Shaders] Vendor:  Mesa
+[19:54:21] [Render thread/INFO]: [Shaders] Renderer: llvmpipe (LLVM 15.0.7, 256 bits)
+[19:54:21] [Render thread/INFO]: [Shaders] Capabilities:  2.0  2.1  3.0  3.2  4.0 
+[19:54:21] [Render thread/INFO]: [Shaders] GL_MAX_DRAW_BUFFERS: 8
+[19:54:21] [Render thread/INFO]: [Shaders] GL_MAX_COLOR_ATTACHMENTS_EXT: 8
+[19:54:21] [Render thread/INFO]: [Shaders] GL_MAX_TEXTURE_IMAGE_UNITS: 32
+[19:54:21] [Render thread/INFO]: [Shaders] Load shaders configuration.
+[19:54:21] [Render thread/INFO]: [Shaders] Save shaders configuration.
+[19:54:21] [Render thread/INFO]: [Shaders] No shaderpack loaded.
+[19:54:21] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.common.Loader
+[19:54:22] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.ItemModelMesherForge
+[19:54:22] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.model.pipeline.ForgeBlockModelRenderer
+[19:54:23] [Render thread/WARN]: ERROR : Couldn't load Narrator library : Unable to load library 'fliteWrapper': Can't obtain InputStream for linux-x86-64/libfliteWrapper.so
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.client.gui.screen.ModListScreen
+[19:54:23] [Render thread/INFO]: Reloading ResourceManager: Default
+[19:54:23] [Render thread/INFO]: [OptiFine] *** Reloading textures ***
+[19:54:23] [Render thread/INFO]: [OptiFine] Resource packs: Default
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.client.renderer.RenderTypeLookup.canRenderInLayer
+[19:54:23] [Render thread/INFO]: [OptiFine] *** Reflector Forge ***
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: mods.betterfoliage.client.BetterFoliageClient
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.BrandingControl
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.capabilities.ICapabilityProvider
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.capabilities.CapabilityProvider
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.client.ClientModLoader
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.event.world.ChunkDataEvent$Save
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.event.world.ChunkEvent$Load
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.event.world.ChunkEvent$Unload
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.client.ClientHooks
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.GuiScreenEvent$DrawScreenEvent$Pre
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.GuiScreenEvent$DrawScreenEvent$Post
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraftforge.fml.loading.progress.EarlyProgressVisualization.handOffWindow
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.event.entity.EntityLeaveWorldEvent
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.EntityViewRenderEvent$CameraSetup
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.EntityViewRenderEvent$FogColors
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.EntityViewRenderEvent$RenderFogEvent
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.event.entity.EntityJoinWorldEvent
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraftforge.eventbus.api.Event.isCanceled
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraftforge.eventbus.api.Event.getResult
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.eventbus.api.IEventBus
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.extensions.IForgeBlock
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.client.renderer.BlockModelShapes.getTexture
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraftforge.common.extensions.IForgeBlockState.addDestroyEffects
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraftforge.common.extensions.IForgeBlockState.addHitEffects
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraftforge.common.extensions.IForgeBlockState.getLightValue
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraftforge.common.extensions.IForgeBlockState.getSoundType
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraftforge.common.extensions.IForgeBlockState.getStateAtViewpoint
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraftforge.common.extensions.IForgeBlockState.isAir
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraftforge.common.extensions.IForgeBlockState.shouldDisplayFluidOverlay
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.extensions.IForgeFluid
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fluids.FluidAttributes
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.entity.EntityType.getTags
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.event.ForgeEventFactory
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.fluid.Fluid.getTags
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.ForgeHooks
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.ForgeConfig
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.ForgeConfig$Client
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.ForgeConfigSpec
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.ForgeConfigSpec$ConfigValue
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.world.chunk.IChunk.getWorldForge
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.extensions.IForgeItem
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.extensions.IForgeItemStack
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.ForgeI18n
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.client.settings.KeyBinding.setKeyConflictContext
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.client.settings.KeyBinding.setKeyModifierAndCode
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.client.settings.KeyBinding.getKeyModifier
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.extensions.IForgeEffectInstance
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.registries.ForgeRegistryEntry
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.client.renderer.RenderTypeLookup.canRenderInLayer
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Constructor not present: net.minecraft.world.server.Ticket, params: class net.minecraft.world.server.TicketType, int, class java.lang.Object, boolean
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.world.server.Ticket.isForceTicks
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.extensions.IForgeTileEntity
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.client.world.DimensionRenderInfo.getCloudRenderHandler
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.client.world.DimensionRenderInfo.getSkyRenderHandler
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.client.world.DimensionRenderInfo.getWeatherParticleRenderHandler
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.client.world.DimensionRenderInfo.getWeatherRenderHandler
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.IRenderHandler
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.settings.KeyModifier
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.model.pipeline.LightUtil
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.MinecraftForge
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.MinecraftForgeClient
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.common.ModContainer
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.model.ModelLoaderRegistry
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.gui.NotificationModUpdateScreen
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.entity.PartEntity
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.event.entity.PlaySoundAtEntityEvent
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.RenderBlockOverlayEvent$OverlayType
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.client.registry.RenderingRegistry
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.RenderGameOverlayEvent$BossInfo
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.RenderItemInFrameEvent
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.RenderLivingEvent$Pre
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.RenderLivingEvent$Post
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.RenderNameplateEvent
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.ScreenshotEvent
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.server.ServerLifecycleHooks
+[19:54:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.event.world.WorldEvent$Load
+[19:54:23] [Render thread/INFO]: [OptiFine] *** Reflector Vanilla ***
+[19:54:24] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: null
+[19:54:24] [VersionCheck/INFO]: [OptiFine] Version found: G7
+[19:54:25] [Worker-Main-2/INFO]: [OptiFine] Multitexture: false
+[19:54:25] [Worker-Main-2/INFO]: [OptiFine] Multipass connected textures: false
+[19:54:30] [Worker-Main-2/INFO]: [OptiFine] Mipmap levels: 4
+[19:54:30] [Worker-Main-3/INFO]: [OptiFine] Multitexture: false
+[19:54:30] [Worker-Main-4/INFO]: [OptiFine] Multitexture: false
+[19:54:30] [Worker-Main-5/INFO]: [OptiFine] Multitexture: false
+[19:54:31] [Worker-Main-6/ERROR]: Using missing texture, unable to load minecraft:optifine/ctm/default/empty.png : java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png
+[19:54:31] [Worker-Main-2/INFO]: [OptiFine] Multitexture: false
+[19:54:31] [Worker-Main-2/INFO]: [OptiFine] Sprite size: 64
+[19:54:31] [Worker-Main-2/INFO]: [OptiFine] Mipmap levels: 6
+[19:54:31] [Worker-Main-2/INFO]: [OptiFine] Multitexture: false
+[19:54:31] [Worker-Main-2/INFO]: [OptiFine] Sprite size: 64
+[19:54:31] [Worker-Main-2/INFO]: [OptiFine] Mipmap levels: 6
+[19:54:31] [Worker-Main-2/INFO]: [OptiFine] Multitexture: false
+[19:54:31] [Worker-Main-2/INFO]: [OptiFine] Sprite size: 64
+[19:54:31] [Worker-Main-2/INFO]: [OptiFine] Mipmap levels: 6
+[19:54:31] [Worker-Main-2/INFO]: [OptiFine] Multitexture: false
+[19:54:31] [Worker-Main-2/INFO]: [OptiFine] Sprite size: 64
+[19:54:31] [Worker-Main-2/INFO]: [OptiFine] Mipmap levels: 6
+[19:54:31] [Worker-Main-2/INFO]: [OptiFine] Multitexture: false
+[19:54:31] [Worker-Main-2/INFO]: [OptiFine] Sprite size: 64
+[19:54:31] [Worker-Main-2/INFO]: [OptiFine] Mipmap levels: 6
+[19:54:31] [Worker-Main-2/INFO]: [OptiFine] Multitexture: false
+[19:54:31] [Worker-Main-2/INFO]: [OptiFine] Sprite size: 64
+[19:54:31] [Worker-Main-2/INFO]: [OptiFine] Mipmap levels: 6
+ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+ALSA lib conf.c:5182:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:5182:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1334:(snd_func_refer) error evaluating name
+ALSA lib conf.c:5182:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5705:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2664:(snd_pcm_open_noupdate) Unknown PCM default
+AL lib: (EE) ALCplaybackAlsa_open: Could not open playback device 'default': No such file or directory
+ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+ALSA lib conf.c:5182:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:5182:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1334:(snd_func_refer) error evaluating name
+ALSA lib conf.c:5182:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5705:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2664:(snd_pcm_open_noupdate) Unknown PCM default
+AL lib: (EE) ALCplaybackAlsa_open: Could not open playback device 'default': No such file or directory
+ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+ALSA lib conf.c:5182:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:5182:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1334:(snd_func_refer) error evaluating name
+ALSA lib conf.c:5182:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5705:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2664:(snd_pcm_open_noupdate) Unknown PCM default
+AL lib: (EE) ALCplaybackAlsa_open: Could not open playback device 'default': No such file or directory
+[19:54:31] [Render thread/ERROR]: Error starting SoundSystem. Turning off sounds & music
+java.lang.IllegalStateException: Failed to open OpenAL device
+	at net.minecraft.client.audio.SoundSystem.openDevice(SoundSystem.java:135) ~[mcprec-6.13.jar:?]
+	at net.minecraft.client.audio.SoundSystem.init(SoundSystem.java:51) ~[mcprec-6.13.jar:?]
+	at net.minecraft.client.audio.SoundEngine.load(SoundEngine.java:83) ~[mcprec-6.13.jar:?]
+	at net.minecraft.client.audio.SoundEngine.reload(SoundEngine.java:77) ~[mcprec-6.13.jar:?]
+	at net.minecraft.client.audio.SoundHandler.apply(SoundHandler.java:110) ~[mcprec-6.13.jar:?]
+	at net.minecraft.client.audio.SoundHandler.apply(SoundHandler.java:34) ~[mcprec-6.13.jar:?]
+	at net.minecraft.client.resources.ReloadListener.lambda$reload$1(ReloadListener.java:17) ~[mcprec-6.13.jar:?]
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:670) ~[?:1.8.0_514]
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646) ~[?:1.8.0_514]
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:456) ~[?:1.8.0_514]
+	at net.minecraft.resources.AsyncReloader.lambda$null$3(AsyncReloader.java:71) ~[mcprec-6.13.jar:?]
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.execute(ThreadTaskExecutor.java:92) ~[mcprec-6.13.jar:?]
+	at net.minecraft.resources.AsyncReloader.lambda$new$4(AsyncReloader.java:70) ~[mcprec-6.13.jar:?]
+	at java.util.concurrent.CompletableFuture$UniCompletion.claim(CompletableFuture.java:543) ~[?:1.8.0_514]
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:667) ~[?:1.8.0_514]
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646) ~[?:1.8.0_514]
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488) ~[?:1.8.0_514]
+	at java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:575) ~[?:1.8.0_514]
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:649) ~[?:1.8.0_514]
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:456) ~[?:1.8.0_514]
+	at com.mojang.blaze3d.systems.RenderSystem.replayQueue(RenderSystem.java:101) [mcprec-6.13.jar:?]
+	at com.mojang.blaze3d.systems.RenderSystem.flipFrame(RenderSystem.java:90) [mcprec-6.13.jar:?]
+	at net.minecraft.client.MainWindow.flipFrame(MainWindow.java:356) [mcprec-6.13.jar:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1021) [mcprec-6.13.jar:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:608) [mcprec-6.13.jar:?]
+	at net.minecraft.client.main.Main.main(Main.java:196) [mcprec-6.13.jar:?]
+[19:54:32] [Render thread/INFO]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[19:54:32] [Render thread/WARN]: [OptiFine] Missing CTM sprite: minecraft:optifine/ctm/default/empty
+[19:54:32] [Render thread/INFO]: [OptiFine] Animated sprites: 43
+[19:54:32] [Render thread/INFO]: Created: 256x128x4 minecraft:textures/atlas/signs.png-atlas
+[19:54:32] [Render thread/INFO]: [OptiFine] Animated sprites: 0
+[19:54:32] [Render thread/INFO]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[19:54:32] [Render thread/INFO]: [OptiFine] Animated sprites: 0
+[19:54:32] [Render thread/INFO]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[19:54:32] [Render thread/INFO]: [OptiFine] Animated sprites: 0
+[19:54:32] [Render thread/INFO]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[19:54:32] [Render thread/INFO]: [OptiFine] Animated sprites: 0
+[19:54:32] [Render thread/INFO]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[19:54:32] [Render thread/INFO]: [OptiFine] Animated sprites: 0
+[19:54:32] [Render thread/INFO]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[19:54:32] [Render thread/INFO]: [OptiFine] Animated sprites: 0
+[19:54:32] [Render thread/INFO]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
+[19:54:32] [Render thread/INFO]: [OptiFine] Animated sprites: 0
+[19:54:32] [Render thread/INFO]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[19:54:32] [Render thread/INFO]: [OptiFine] Animated sprites: 0
+[19:54:32] [Render thread/INFO]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[19:54:32] [Render thread/INFO]: [OptiFine] Animated sprites: 0
+[19:54:32] [Render thread/INFO]: [OptiFine] *** Reloading custom textures ***
+[19:54:33] [Render thread/INFO]: [OptiFine] Disable Forge light pipeline
+[19:54:34] [Thread-5/INFO]: [STDOUT]: ***** Start MalmoEnvServer on port 9649
+[19:54:34] [Thread-5/INFO]: [STDOUT]: CLIENT enter state: DORMANT
+[19:54:34] [Thread-5/INFO]: [STDOUT]: SERVER enter state: DORMANT
+[19:54:34] [EnvServerSocketHandler/INFO]: Received Mission token b4c26ee1-27c9-49ac-8d21-37072de9fa23:0:0:1:true:19961103
+[19:54:34] [EnvServerSocketHandler/INFO]: Received mission init command  <MissionInit xmlns="http://ProjectMalmo.microsoft.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" SchemaVersion="" PlatformVersion="0.37.0"><Mission><About><Summary>MineRLHumanSurvival-v0</Summary></About><ModSettings><MsPerTick>50</MsPerTick></ModSettings><ServerSection><ServerInitialConditions><Time><AllowPassageOfTime>true</AllowPassageOfTime></Time><AllowSpawning>true</AllowSpawning></ServerInitialConditions><ServerHandlers><DefaultWorldGenerator forceReset="true" generatorOptions="{}"/><ServerQuitWhenAnyAgentFinishes/></ServerHandlers></ServerSection><AgentSection mode="Survival"><Name>MineRLAgent0</Name><AgentStart><LowLevelInputs>true</LowLevelInputs><GuiScale>1.0</GuiScale><GammaSetting>2.0</GammaSetting><FOVSetting>70.0</FOVSetting><FakeCursorSize>16</FakeCursorSize><Inventory/><PreferredSpawnBiome>plains</PreferredSpawnBiome></AgentStart><AgentHandlers><FileBasedPerformanceProducer/><PauseCommand/><VideoProducer want_depth="false"><Width>640</Width><Height>360</Height></VideoProducer><ObservationFromFullInventory flat="false"/><ObservationFromEquippedItem/><ObservationFromFullStats/><ObservationFromFullStats/><HumanLevelCommands/><CameraCommands/><ChatCommands/><IsGuiOpen/></AgentHandlers></AgentSection></Mission><ExperimentUID>b4c26ee1-27c9-49ac-8d21-37072de9fa23</ExperimentUID><ClientRole>0</ClientRole><ClientAgentConnection><ClientIPAddress>127.0.0.1</ClientIPAddress><ClientMissionControlPort>0</ClientMissionControlPort><ClientCommandsPort>0</ClientCommandsPort><AgentIPAddress>127.0.0.1</AgentIPAddress><AgentMissionControlPort>0</AgentMissionControlPort><AgentVideoPort>0</AgentVideoPort><AgentDepthPort>0</AgentDepthPort><AgentLuminancePort>0</AgentLuminancePort><AgentObservationsPort>0</AgentObservationsPort><AgentRewardsPort>0</AgentRewardsPort><AgentColourMapPort>0</AgentColourMapPort></ClientAgentConnection></MissionInit>
+[19:54:34] [EnvServerSocketHandler/INFO]: [STDOUT]: Setting width, height to 640, 360
+[19:54:34] [EnvServerSocketHandler/INFO]: [STDOUT]: Gamma: 2.0
+[19:54:34] [EnvServerSocketHandler/INFO]: [STDOUT]: FOV: 70.0
+[19:54:34] [EnvServerSocketHandler/INFO]: [STDOUT]: GuiScale: 1.0
+[19:54:35] [Render thread/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[19:54:35] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[19:54:35] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[19:54:35] [Render thread/WARN]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[19:54:35] [Render thread/WARN]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[19:54:35] [Render thread/INFO]: Reloading ResourceManager: Default
+[19:54:35] [Render thread/INFO]: Loaded 7 recipes
+[19:54:35] [Render thread/INFO]: Loaded 927 advancements
+[19:54:36] [Render thread/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[19:54:36] [Render thread/INFO]: Starting integrated minecraft server version 1.16.5
+[19:54:36] [Render thread/INFO]: Generating keypair
+[19:54:42] [Render thread/INFO]: Preparing start region for dimension minecraft:overworld
+[19:54:59] [Render thread/INFO]: Changing view distance to 7, from 10
+[19:54:59] [Render thread/INFO]: MineRLAgent0[local:E:c6ae807d] logged in with entity id 253 at (-6237.5, 64.0, -4517.5)
+[19:54:59] [Render thread/INFO]: MineRLAgent0 joined the game
+[19:54:59] [Render thread/INFO]: [STDOUT]: *** creating fake mouse cursor ***
+[19:54:59] [Render thread/INFO]: Preparing spawn area: 9%
+[19:54:59] [Render thread/INFO]: Time elapsed: 3 ms
+[19:55:00] [Render thread/INFO]: [STDOUT]: Starting new video null
+[19:55:00] [Render thread/INFO]: Saving and pausing game...
+[19:55:00] [Render thread/INFO]: Saving chunks for level 'ServerLevel[mcpworldae3c36e83e17]'/minecraft:overworld
+[19:55:00] [Render thread/INFO]: Saving chunks for level 'ServerLevel[mcpworldae3c36e83e17]'/minecraft:the_nether
+[19:55:00] [Render thread/INFO]: Saving chunks for level 'ServerLevel[mcpworldae3c36e83e17]'/minecraft:the_end
+[19:55:01] [Render thread/WARN]: Failed to load texture: minecraft:optifine/ctm/default/empty.png
+java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png
+	at net.minecraft.resources.FallbackResourceManager.getResource(FallbackResourceManager.java:66) ~[mcprec-6.13.jar:?]
+	at net.minecraft.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:63) ~[mcprec-6.13.jar:?]
+	at net.minecraft.client.renderer.texture.SimpleTexture$TextureData.getTextureData(SimpleTexture.java:96) ~[mcprec-6.13.jar:?]
+	at net.minecraft.client.renderer.texture.SimpleTexture.getTextureData(SimpleTexture.java:72) ~[mcprec-6.13.jar:?]
+	at net.minecraft.client.renderer.texture.SimpleTexture.loadTexture(SimpleTexture.java:32) ~[mcprec-6.13.jar:?]
+	at net.minecraft.client.renderer.texture.DownloadingTexture.lambda$loadTexture$2(DownloadingTexture.java:95) ~[mcprec-6.13.jar:?]
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.run(ThreadTaskExecutor.java:150) [mcprec-6.13.jar:?]
+	at net.minecraft.util.concurrent.RecursiveEventLoop.run(RecursiveEventLoop.java:22) [mcprec-6.13.jar:?]
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.driveOne(ThreadTaskExecutor.java:124) [mcprec-6.13.jar:?]
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.drainTasks(ThreadTaskExecutor.java:107) [mcprec-6.13.jar:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:960) [mcprec-6.13.jar:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:608) [mcprec-6.13.jar:?]
+	at net.minecraft.client.main.Main.main(Main.java:196) [mcprec-6.13.jar:?]
+[19:55:01] [Render thread/INFO]: Loaded 0 advancements
+[19:55:04] [Render thread/INFO]: [MineRLAgent0: Gamerule doMobSpawning is now set to: false]
+[19:55:04] [Render thread/INFO]: [CHAT] Gamerule doMobSpawning is now set to: false
+[19:55:04] [Render thread/INFO]: [MineRLAgent0: Gamerule doDaylightCycle is now set to: false]
+[19:55:04] [Render thread/INFO]: [CHAT] Gamerule doDaylightCycle is now set to: false
+[19:55:04] [Render thread/INFO]: [MineRLAgent0: Gamerule doWeatherCycle is now set to: false]
+[19:55:05] [Render thread/INFO]: [CHAT] Gamerule doWeatherCycle is now set to: false
+[19:55:05] [Render thread/INFO]: [MineRLAgent0: Set the time to 1000]
+[19:55:05] [Render thread/INFO]: [CHAT] Set the time to 1000
+[19:55:05] [Render thread/INFO]: [MineRLAgent0: Set the weather to clear]
+[19:55:05] [Render thread/INFO]: [CHAT] Set the weather to clear
+[19:55:05] [Render thread/INFO]: [MineRLAgent0: The difficulty has been set to Peaceful]
+[19:55:05] [Render thread/INFO]: [CHAT] The difficulty has been set to Peaceful
+[19:55:05] [Render thread/INFO]: [MineRLAgent0: Successfully filled 8177 blocks]
+[19:55:05] [Render thread/INFO]: [CHAT] Successfully filled 8177 blocks
+[19:55:05] [Render thread/INFO]: [CHAT] No blocks were filled
+[19:55:05] [Render thread/INFO]: [CHAT] No blocks were filled
+[19:55:05] [Render thread/INFO]: [CHAT] No blocks were filled
+[19:55:05] [Render thread/INFO]: [MineRLAgent0: Successfully filled 127 blocks]
+[19:55:05] [Render thread/INFO]: [CHAT] Successfully filled 127 blocks
+[19:55:05] [Render thread/INFO]: [MineRLAgent0: Successfully filled 8155 blocks]
+[19:55:05] [Render thread/INFO]: [CHAT] Successfully filled 8155 blocks
+[19:55:06] [Render thread/INFO]: [CHAT] No blocks were filled
+[19:55:06] [Render thread/INFO]: [CHAT] No blocks were filled
+[19:55:06] [Render thread/INFO]: [MineRLAgent0: Successfully filled 5 blocks]
+[19:55:06] [Render thread/INFO]: [CHAT] Successfully filled 5 blocks
+[19:55:06] [Render thread/INFO]: [MineRLAgent0: Successfully filled 639 blocks]
+[19:55:06] [Render thread/INFO]: [CHAT] Successfully filled 639 blocks
+[19:55:06] [Render thread/INFO]: [MineRLAgent0: Successfully filled 8150 blocks]
+[19:55:06] [Render thread/INFO]: [CHAT] Successfully filled 8150 blocks
+[19:55:06] [Render thread/INFO]: [CHAT] No blocks were filled
+[19:55:06] [Render thread/INFO]: [MineRLAgent0: Successfully filled 16 blocks]
+[19:55:06] [Render thread/INFO]: [CHAT] Successfully filled 16 blocks
+[19:55:06] [Render thread/INFO]: [MineRLAgent0: Successfully filled 193 blocks]
+[19:55:06] [Render thread/INFO]: [CHAT] Successfully filled 193 blocks
+[19:55:06] [Render thread/INFO]: [MineRLAgent0: Successfully filled 771 blocks]
+[19:55:06] [Render thread/INFO]: [CHAT] Successfully filled 771 blocks
+[19:55:06] [Render thread/INFO]: [MineRLAgent0: Successfully filled 8122 blocks]
+[19:55:06] [Render thread/INFO]: [CHAT] Successfully filled 8122 blocks
+[19:55:06] [Render thread/INFO]: [MineRLAgent0: Successfully filled 17 blocks]
+[19:55:07] [Render thread/INFO]: [CHAT] Successfully filled 17 blocks
+[19:55:07] [Render thread/INFO]: [MineRLAgent0: Successfully filled 29 blocks]
+[19:55:07] [Render thread/INFO]: [CHAT] Successfully filled 29 blocks
+[19:55:07] [Render thread/INFO]: [MineRLAgent0: Successfully filled 178 blocks]
+[19:55:07] [Render thread/INFO]: [CHAT] Successfully filled 178 blocks
+[19:55:07] [Render thread/INFO]: [MineRLAgent0: Successfully filled 1106 blocks]
+[19:55:07] [Render thread/INFO]: [CHAT] Successfully filled 1106 blocks
+[19:55:07] [Render thread/INFO]: [MineRLAgent0: Successfully filled 8146 blocks]
+[19:55:07] [Render thread/INFO]: [CHAT] Successfully filled 8146 blocks
+[19:55:07] [Render thread/INFO]: [MineRLAgent0: Successfully filled 117 blocks]
+[19:55:07] [Render thread/INFO]: [CHAT] Successfully filled 117 blocks
+[19:55:07] [Render thread/INFO]: [MineRLAgent0: Successfully filled 312 blocks]
+[19:55:07] [Render thread/INFO]: [CHAT] Successfully filled 312 blocks
+[19:55:07] [Render thread/INFO]: [MineRLAgent0: Successfully filled 1006 blocks]
+[19:55:07] [Render thread/INFO]: [CHAT] Successfully filled 1006 blocks
+[19:55:07] [Render thread/INFO]: [MineRLAgent0: Successfully filled 2052 blocks]
+[19:55:07] [Render thread/INFO]: [CHAT] Successfully filled 2052 blocks
+[19:55:07] [Render thread/INFO]: [MineRLAgent0: Successfully filled 7935 blocks]
+[19:55:08] [Render thread/INFO]: [CHAT] Successfully filled 7935 blocks
+[19:55:08] [Render thread/INFO]: [MineRLAgent0: Successfully filled 187 blocks]
+[19:55:08] [Render thread/INFO]: [CHAT] Successfully filled 187 blocks
+[19:55:08] [Render thread/INFO]: [MineRLAgent0: Successfully filled 1489 blocks]
+[19:55:08] [Render thread/INFO]: [CHAT] Successfully filled 1489 blocks
+[19:55:08] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3700 blocks]
+[19:55:08] [Render thread/INFO]: [CHAT] Successfully filled 3700 blocks
+[19:55:08] [Render thread/INFO]: [MineRLAgent0: Successfully filled 4511 blocks]
+[19:55:08] [Render thread/INFO]: [CHAT] Successfully filled 4511 blocks
+[19:55:08] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[19:55:08] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[19:55:08] [Render thread/INFO]: Loaded 3 advancements
+[19:55:09] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[19:55:09] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[19:55:09] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[19:55:09] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[19:55:10] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[19:55:10] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[19:55:10] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[19:55:10] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[19:55:10] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[19:55:10] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[19:55:11] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[19:55:11] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[19:55:11] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[19:55:11] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[19:55:11] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[19:55:11] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[19:55:12] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[19:55:12] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[19:55:12] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[19:55:12] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[19:55:13] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[19:55:13] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[19:55:21] [Render thread/INFO]: [MineRLAgent0: Marked chunk [-366, -259] in minecraft:overworld to be force loaded]
+[19:55:21] [Render thread/INFO]: [CHAT] Marked chunk [-366, -259] in minecraft:overworld to be force loaded
+[19:55:22] [Render thread/INFO]: [MineRLAgent0: Successfully filled 9 blocks]
+[19:55:22] [Render thread/INFO]: [CHAT] Successfully filled 9 blocks
+[19:55:22] [Render thread/INFO]: [CHAT] No blocks were filled
+[19:55:22] [Render thread/INFO]: [MineRLAgent0: Gamerule doMobSpawning is now set to: false]
+[19:55:22] [Render thread/INFO]: [CHAT] Gamerule doMobSpawning is now set to: false
+[19:55:22] [Render thread/INFO]: [MineRLAgent0: Killed 207 entities]
+[19:55:22] [Render thread/INFO]: [CHAT] Killed 207 entities
+[19:55:22] [Render thread/INFO]: [MineRLAgent0: Set the time to 1000]
+[19:55:22] [Render thread/INFO]: [CHAT] Set the time to 1000
+[19:55:22] [Render thread/INFO]: [MineRLAgent0: Gamerule doDaylightCycle is now set to: false]
+[19:55:22] [Render thread/INFO]: [CHAT] Gamerule doDaylightCycle is now set to: false
+[19:55:22] [Render thread/INFO]: [MineRLAgent0: Gamerule doWeatherCycle is now set to: false]
+[19:55:22] [Render thread/INFO]: [CHAT] Gamerule doWeatherCycle is now set to: false
+[19:55:22] [Render thread/INFO]: [MineRLAgent0: Set the weather to clear]
+[19:55:23] [Render thread/INFO]: [CHAT] Set the weather to clear
+[19:55:23] [Render thread/INFO]: [MineRLAgent0: Set spawn point to -5854, 160, -4134 [0.0] in minecraft:overworld for MineRLAgent0]
+[19:55:23] [Render thread/INFO]: [CHAT] Set spawn point to -5854, 160, -4134 [0.0] in minecraft:overworld for MineRLAgent0
+[19:55:23] [Render thread/INFO]: [MineRLAgent0: Gamerule doMobSpawning is now set to: false]
+[19:55:23] [Render thread/INFO]: [CHAT] Gamerule doMobSpawning is now set to: false
+[19:55:23] [Render thread/INFO]: [MineRLAgent0: Killed 176 entities]
+[19:55:23] [Render thread/INFO]: [CHAT] Killed 176 entities
+[19:55:23] [Render thread/INFO]: [MineRLAgent0: Set the time to 1000]
+[19:55:23] [Render thread/INFO]: [CHAT] Set the time to 1000
+[19:55:23] [Render thread/INFO]: [MineRLAgent0: Gamerule doDaylightCycle is now set to: false]
+[19:55:23] [Render thread/INFO]: [CHAT] Gamerule doDaylightCycle is now set to: false
+[19:55:23] [Render thread/INFO]: [MineRLAgent0: Gamerule doWeatherCycle is now set to: false]
+[19:55:23] [Render thread/INFO]: [CHAT] Gamerule doWeatherCycle is now set to: false
+[19:55:23] [Render thread/INFO]: [MineRLAgent0: Set the weather to clear]
+[19:55:24] [Render thread/INFO]: [CHAT] Set the weather to clear
+[19:55:24] [Render thread/INFO]: [MineRLAgent0: Set spawn point to -5854, 160, -4134 [0.0] in minecraft:overworld for MineRLAgent0]
+[19:55:24] [Render thread/INFO]: [CHAT] Set spawn point to -5854, 160, -4134 [0.0] in minecraft:overworld for MineRLAgent0
+[19:55:24] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[19:55:24] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[19:55:24] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to -6243.720218, 76.0, -4515.707952]
+[19:55:24] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to -6243.720218, 76.0, -4515.707952
+[19:55:25] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[19:55:25] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[19:55:25] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[19:55:25] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[19:55:27] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to -6243.720218, 76.0, -4515.707952]
+[19:55:27] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to -6243.720218, 76.0, -4515.707952
+[19:57:05] [Render thread/INFO]: [MineRLAgent0: Gamerule doMobSpawning is now set to: false]
+[19:57:05] [Render thread/INFO]: [CHAT] Gamerule doMobSpawning is now set to: false
+[19:57:05] [Render thread/INFO]: [MineRLAgent0: Killed 2 entities]
+[19:57:05] [Render thread/INFO]: [CHAT] Killed 2 entities
+[19:57:05] [Render thread/INFO]: [MineRLAgent0: Set the time to 1000]
+[19:57:05] [Render thread/INFO]: [CHAT] Set the time to 1000
+[19:57:05] [Render thread/INFO]: [MineRLAgent0: Gamerule doDaylightCycle is now set to: false]
+[19:57:05] [Render thread/INFO]: [CHAT] Gamerule doDaylightCycle is now set to: false
+[19:57:05] [Render thread/INFO]: [MineRLAgent0: Gamerule doWeatherCycle is now set to: false]
+[19:57:05] [Render thread/INFO]: [CHAT] Gamerule doWeatherCycle is now set to: false
+[19:57:05] [Render thread/INFO]: [MineRLAgent0: Set the weather to clear]
+[19:57:05] [Render thread/INFO]: [CHAT] Set the weather to clear
+[19:57:05] [Render thread/INFO]: [MineRLAgent0: Set spawn point to -5854, 160, -4134 [0.0] in minecraft:overworld for MineRLAgent0]
+[19:57:06] [Render thread/INFO]: [CHAT] Set spawn point to -5854, 160, -4134 [0.0] in minecraft:overworld for MineRLAgent0
+[19:57:06] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[19:57:06] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[19:57:06] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[19:57:06] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[19:57:06] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to -6230.98379, 76.0, -4512.477115]
+[19:57:06] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to -6230.98379, 76.0, -4512.477115
+[19:57:07] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[19:57:07] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[19:57:08] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[19:57:08] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[19:57:11] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to -6230.98379, 76.0, -4512.477115]
+[19:57:11] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to -6230.98379, 76.0, -4512.477115
+[19:58:52] [Render thread/INFO]: [MineRLAgent0: Gamerule doMobSpawning is now set to: false]
+[19:58:52] [Render thread/INFO]: [CHAT] Gamerule doMobSpawning is now set to: false
+[19:58:52] [Render thread/INFO]: [MineRLAgent0: Killed 2 entities]
+[19:58:52] [Render thread/INFO]: [CHAT] Killed 2 entities
+[19:58:52] [Render thread/INFO]: [MineRLAgent0: Set the time to 1000]
+[19:58:52] [Render thread/INFO]: [CHAT] Set the time to 1000
+[19:58:52] [Render thread/INFO]: [MineRLAgent0: Gamerule doDaylightCycle is now set to: false]
+[19:58:52] [Render thread/INFO]: [CHAT] Gamerule doDaylightCycle is now set to: false
+[19:58:52] [Render thread/INFO]: [MineRLAgent0: Gamerule doWeatherCycle is now set to: false]
+[19:58:52] [Render thread/INFO]: [CHAT] Gamerule doWeatherCycle is now set to: false
+[19:58:52] [Render thread/INFO]: [MineRLAgent0: Set the weather to clear]
+[19:58:52] [Render thread/INFO]: [CHAT] Set the weather to clear
+[19:58:52] [Render thread/INFO]: [MineRLAgent0: Set spawn point to -5854, 160, -4134 [0.0] in minecraft:overworld for MineRLAgent0]
+[19:58:52] [Render thread/INFO]: [CHAT] Set spawn point to -5854, 160, -4134 [0.0] in minecraft:overworld for MineRLAgent0
+[19:58:52] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[19:58:52] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[19:58:52] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[19:58:52] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[19:58:53] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to -6237.978752, 76.0, -4510.066583]
+[19:58:53] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to -6237.978752, 76.0, -4510.066583
+[19:58:54] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[19:58:54] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[19:58:54] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[19:58:55] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[19:58:58] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to -6237.978752, 76.0, -4510.066583]
+[19:58:58] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to -6237.978752, 76.0, -4510.066583
+[20:00:39] [Render thread/INFO]: [MineRLAgent0: Gamerule doMobSpawning is now set to: false]
+[20:00:39] [Render thread/INFO]: [CHAT] Gamerule doMobSpawning is now set to: false
+[20:00:39] [Render thread/INFO]: [CHAT] No entity was found
+[20:00:39] [Render thread/INFO]: [MineRLAgent0: Set the time to 1000]
+[20:00:39] [Render thread/INFO]: [CHAT] Set the time to 1000
+[20:00:39] [Render thread/INFO]: [MineRLAgent0: Gamerule doDaylightCycle is now set to: false]
+[20:00:40] [Render thread/INFO]: [CHAT] Gamerule doDaylightCycle is now set to: false
+[20:00:40] [Render thread/INFO]: [MineRLAgent0: Gamerule doWeatherCycle is now set to: false]
+[20:00:40] [Render thread/INFO]: [CHAT] Gamerule doWeatherCycle is now set to: false
+[20:00:40] [Render thread/INFO]: [MineRLAgent0: Set the weather to clear]
+[20:00:40] [Render thread/INFO]: [CHAT] Set the weather to clear
+[20:00:40] [Render thread/INFO]: [MineRLAgent0: Set spawn point to -5854, 160, -4134 [0.0] in minecraft:overworld for MineRLAgent0]
+[20:00:40] [Render thread/INFO]: [CHAT] Set spawn point to -5854, 160, -4134 [0.0] in minecraft:overworld for MineRLAgent0
+[20:00:40] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[20:00:40] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[20:00:40] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[20:00:40] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[20:00:41] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to -6231.347817, 76.0, -4512.112538]
+[20:00:41] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to -6231.347817, 76.0, -4512.112538
+[20:00:42] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[20:00:42] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[20:00:42] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[20:00:43] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[20:00:46] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to -6231.347817, 76.0, -4512.112538]
+[20:00:47] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to -6231.347817, 76.0, -4512.112538
+[20:02:31] [Render thread/INFO]: [MineRLAgent0: Gamerule doMobSpawning is now set to: false]
+[20:02:31] [Render thread/INFO]: [CHAT] Gamerule doMobSpawning is now set to: false
+[20:02:31] [Render thread/INFO]: [CHAT] No entity was found
+[20:02:31] [Render thread/INFO]: [MineRLAgent0: Set the time to 1000]
+[20:02:31] [Render thread/INFO]: [CHAT] Set the time to 1000
+[20:02:31] [Render thread/INFO]: [MineRLAgent0: Gamerule doDaylightCycle is now set to: false]
+[20:02:31] [Render thread/INFO]: [CHAT] Gamerule doDaylightCycle is now set to: false
+[20:02:31] [Render thread/INFO]: [MineRLAgent0: Gamerule doWeatherCycle is now set to: false]
+[20:02:32] [Render thread/INFO]: [CHAT] Gamerule doWeatherCycle is now set to: false
+[20:02:32] [Render thread/INFO]: [MineRLAgent0: Set the weather to clear]
+[20:02:32] [Render thread/INFO]: [CHAT] Set the weather to clear
+[20:02:32] [Render thread/INFO]: [MineRLAgent0: Set spawn point to -5854, 160, -4134 [0.0] in minecraft:overworld for MineRLAgent0]
+[20:02:32] [Render thread/INFO]: [CHAT] Set spawn point to -5854, 160, -4134 [0.0] in minecraft:overworld for MineRLAgent0
+[20:02:32] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[20:02:32] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[20:02:32] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[20:02:32] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[20:02:33] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to -6232.269284, 76.0, -4525.475887]
+[20:02:33] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to -6232.269284, 76.0, -4525.475887
+[20:02:33] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[20:02:33] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[20:02:34] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[20:02:34] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[20:02:39] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to -6232.269284, 76.0, -4525.475887]
+[20:02:39] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to -6232.269284, 76.0, -4525.475887
+[20:04:21] [Render thread/INFO]: [MineRLAgent0: Gamerule doMobSpawning is now set to: false]
+[20:04:21] [Render thread/INFO]: [CHAT] Gamerule doMobSpawning is now set to: false
+[20:04:21] [Render thread/INFO]: [CHAT] No entity was found
+[20:04:21] [Render thread/INFO]: [MineRLAgent0: Set the time to 1000]
+[20:04:21] [Render thread/INFO]: [CHAT] Set the time to 1000
+[20:04:21] [Render thread/INFO]: [MineRLAgent0: Gamerule doDaylightCycle is now set to: false]
+[20:04:21] [Render thread/INFO]: [CHAT] Gamerule doDaylightCycle is now set to: false
+[20:04:21] [Render thread/INFO]: [MineRLAgent0: Gamerule doWeatherCycle is now set to: false]
+[20:04:21] [Render thread/INFO]: [CHAT] Gamerule doWeatherCycle is now set to: false
+[20:04:21] [Render thread/INFO]: [MineRLAgent0: Set the weather to clear]
+[20:04:21] [Render thread/INFO]: [CHAT] Set the weather to clear
+[20:04:21] [Render thread/INFO]: [MineRLAgent0: Set spawn point to -5854, 160, -4134 [0.0] in minecraft:overworld for MineRLAgent0]
+[20:04:21] [Render thread/INFO]: [CHAT] Set spawn point to -5854, 160, -4134 [0.0] in minecraft:overworld for MineRLAgent0
+[20:04:21] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[20:04:22] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[20:04:22] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[20:04:22] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[20:04:22] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to -6233.99667, 76.0, -4526.551841]
+[20:04:22] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to -6233.99667, 76.0, -4526.551841
+[20:04:23] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[20:04:23] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[20:04:23] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[20:04:24] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[20:04:28] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to -6233.99667, 76.0, -4526.551841]
+[20:04:28] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to -6233.99667, 76.0, -4526.551841
+[20:06:09] [Render thread/INFO]: [MineRLAgent0: Gamerule doMobSpawning is now set to: false]
+[20:06:09] [Render thread/INFO]: [CHAT] Gamerule doMobSpawning is now set to: false
+[20:06:09] [Render thread/INFO]: [CHAT] No entity was found
+[20:06:09] [Render thread/INFO]: [MineRLAgent0: Set the time to 1000]
+[20:06:09] [Render thread/INFO]: [CHAT] Set the time to 1000
+[20:06:09] [Render thread/INFO]: [MineRLAgent0: Gamerule doDaylightCycle is now set to: false]
+[20:06:09] [Render thread/INFO]: [CHAT] Gamerule doDaylightCycle is now set to: false
+[20:06:09] [Render thread/INFO]: [MineRLAgent0: Gamerule doWeatherCycle is now set to: false]
+[20:06:09] [Render thread/INFO]: [CHAT] Gamerule doWeatherCycle is now set to: false
+[20:06:09] [Render thread/INFO]: [MineRLAgent0: Set the weather to clear]
+[20:06:09] [Render thread/INFO]: [CHAT] Set the weather to clear
+[20:06:09] [Render thread/INFO]: [MineRLAgent0: Set spawn point to -5854, 160, -4134 [0.0] in minecraft:overworld for MineRLAgent0]
+[20:06:09] [Render thread/INFO]: [CHAT] Set spawn point to -5854, 160, -4134 [0.0] in minecraft:overworld for MineRLAgent0
+[20:06:09] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[20:06:09] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[20:06:09] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[20:06:10] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[20:06:10] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to -6234.138379, 76.0, -4510.403921]
+[20:06:10] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to -6234.138379, 76.0, -4510.403921
+[20:06:11] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[20:06:11] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[20:06:11] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[20:06:12] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[20:06:15] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to -6234.138379, 76.0, -4510.403921]
+[20:06:15] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to -6234.138379, 76.0, -4510.403921
+[20:07:58] [Render thread/INFO]: [MineRLAgent0: Gamerule doMobSpawning is now set to: false]
+[20:07:58] [Render thread/INFO]: [CHAT] Gamerule doMobSpawning is now set to: false
+[20:07:58] [Render thread/INFO]: [CHAT] No entity was found
+[20:07:58] [Render thread/INFO]: [MineRLAgent0: Set the time to 1000]
+[20:07:58] [Render thread/INFO]: [CHAT] Set the time to 1000
+[20:07:58] [Render thread/INFO]: [MineRLAgent0: Gamerule doDaylightCycle is now set to: false]
+[20:07:59] [Render thread/INFO]: [CHAT] Gamerule doDaylightCycle is now set to: false
+[20:07:59] [Render thread/INFO]: [MineRLAgent0: Gamerule doWeatherCycle is now set to: false]
+[20:07:59] [Render thread/INFO]: [CHAT] Gamerule doWeatherCycle is now set to: false
+[20:07:59] [Render thread/INFO]: [MineRLAgent0: Set the weather to clear]
+[20:07:59] [Render thread/INFO]: [CHAT] Set the weather to clear
+[20:07:59] [Render thread/INFO]: [MineRLAgent0: Set spawn point to -5854, 160, -4134 [0.0] in minecraft:overworld for MineRLAgent0]
+[20:07:59] [Render thread/INFO]: [CHAT] Set spawn point to -5854, 160, -4134 [0.0] in minecraft:overworld for MineRLAgent0
+[20:07:59] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[20:07:59] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[20:07:59] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[20:07:59] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[20:08:00] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to -6232.637293, 76.0, -4511.124228]
+[20:08:00] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to -6232.637293, 76.0, -4511.124228
+[20:08:00] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[20:08:00] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[20:08:01] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[20:08:01] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[20:08:04] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to -6232.637293, 76.0, -4511.124228]
+[20:08:04] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to -6232.637293, 76.0, -4511.124228
+[20:09:48] [Render thread/INFO]: [MineRLAgent0: Gamerule doMobSpawning is now set to: false]
+[20:09:48] [Render thread/INFO]: [CHAT] Gamerule doMobSpawning is now set to: false
+[20:09:48] [Render thread/INFO]: [CHAT] No entity was found
+[20:09:48] [Render thread/INFO]: [MineRLAgent0: Set the time to 1000]
+[20:09:48] [Render thread/INFO]: [CHAT] Set the time to 1000
+[20:09:48] [Render thread/INFO]: [MineRLAgent0: Gamerule doDaylightCycle is now set to: false]
+[20:09:49] [Render thread/INFO]: [CHAT] Gamerule doDaylightCycle is now set to: false
+[20:09:49] [Render thread/INFO]: [MineRLAgent0: Gamerule doWeatherCycle is now set to: false]
+[20:09:49] [Render thread/INFO]: [CHAT] Gamerule doWeatherCycle is now set to: false
+[20:09:49] [Render thread/INFO]: [MineRLAgent0: Set the weather to clear]
+[20:09:49] [Render thread/INFO]: [CHAT] Set the weather to clear
+[20:09:49] [Render thread/INFO]: [MineRLAgent0: Set spawn point to -5854, 160, -4134 [0.0] in minecraft:overworld for MineRLAgent0]
+[20:09:49] [Render thread/INFO]: [CHAT] Set spawn point to -5854, 160, -4134 [0.0] in minecraft:overworld for MineRLAgent0
+[20:09:49] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[20:09:49] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[20:09:49] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[20:09:49] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[20:09:50] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to -6229.371294, 76.0, -4521.646935]
+[20:09:50] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to -6229.371294, 76.0, -4521.646935
+[20:09:51] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[20:09:51] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[20:09:51] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[20:09:52] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[20:09:56] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to -6229.371294, 76.0, -4521.646935]
+[20:09:56] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to -6229.371294, 76.0, -4521.646935
+[20:11:44] [Render thread/INFO]: [MineRLAgent0: Gamerule doMobSpawning is now set to: false]
+[20:11:44] [Render thread/INFO]: [CHAT] Gamerule doMobSpawning is now set to: false
+[20:11:44] [Render thread/INFO]: [CHAT] No entity was found
+[20:11:44] [Render thread/INFO]: [MineRLAgent0: Set the time to 1000]
+[20:11:44] [Render thread/INFO]: [CHAT] Set the time to 1000
+[20:11:44] [Render thread/INFO]: [MineRLAgent0: Gamerule doDaylightCycle is now set to: false]
+[20:11:44] [Render thread/INFO]: [CHAT] Gamerule doDaylightCycle is now set to: false
+[20:11:44] [Render thread/INFO]: [MineRLAgent0: Gamerule doWeatherCycle is now set to: false]
+[20:11:44] [Render thread/INFO]: [CHAT] Gamerule doWeatherCycle is now set to: false
+[20:11:44] [Render thread/INFO]: [MineRLAgent0: Set the weather to clear]
+[20:11:44] [Render thread/INFO]: [CHAT] Set the weather to clear
+[20:11:44] [Render thread/INFO]: [MineRLAgent0: Set spawn point to -5854, 160, -4134 [0.0] in minecraft:overworld for MineRLAgent0]
+[20:11:44] [Render thread/INFO]: [CHAT] Set spawn point to -5854, 160, -4134 [0.0] in minecraft:overworld for MineRLAgent0
+[20:11:44] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[20:11:44] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[20:11:44] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[20:11:45] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[20:11:45] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to -6234.896124, 76.0, -4510.177306]
+[20:11:46] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to -6234.896124, 76.0, -4510.177306
+[20:11:46] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[20:11:46] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[20:11:47] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[20:11:47] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[20:11:51] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to -6234.896124, 76.0, -4510.177306]
+[20:11:51] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to -6234.896124, 76.0, -4510.177306
+[20:13:44] [Render thread/INFO]: [MineRLAgent0: Gamerule doMobSpawning is now set to: false]
+[20:13:44] [Render thread/INFO]: [CHAT] Gamerule doMobSpawning is now set to: false
+[20:13:44] [Render thread/INFO]: [CHAT] No entity was found
+[20:13:44] [Render thread/INFO]: [MineRLAgent0: Set the time to 1000]
+[20:13:44] [Render thread/INFO]: [CHAT] Set the time to 1000
+[20:13:44] [Render thread/INFO]: [MineRLAgent0: Gamerule doDaylightCycle is now set to: false]
+[20:13:44] [Render thread/INFO]: [CHAT] Gamerule doDaylightCycle is now set to: false
+[20:13:44] [Render thread/INFO]: [MineRLAgent0: Gamerule doWeatherCycle is now set to: false]
+[20:13:44] [Render thread/INFO]: [CHAT] Gamerule doWeatherCycle is now set to: false
+[20:13:44] [Render thread/INFO]: [MineRLAgent0: Set the weather to clear]
+[20:13:44] [Render thread/INFO]: [CHAT] Set the weather to clear
+[20:13:44] [Render thread/INFO]: [MineRLAgent0: Set spawn point to -5854, 160, -4134 [0.0] in minecraft:overworld for MineRLAgent0]
+[20:13:45] [Render thread/INFO]: [CHAT] Set spawn point to -5854, 160, -4134 [0.0] in minecraft:overworld for MineRLAgent0
+[20:13:45] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[20:13:45] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[20:13:45] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[20:13:45] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[20:13:46] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to -6238.187439, 76.0, -4522.560959]
+[20:13:46] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to -6238.187439, 76.0, -4522.560959
+[20:13:47] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[20:13:47] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[20:13:48] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[20:13:48] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[20:13:51] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to -6238.187439, 76.0, -4522.560959]
+[20:13:51] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to -6238.187439, 76.0, -4522.560959
+[20:15:39] [Render thread/INFO]: [MineRLAgent0: Gamerule doMobSpawning is now set to: false]
+[20:15:39] [Render thread/INFO]: [CHAT] Gamerule doMobSpawning is now set to: false
+[20:15:39] [Render thread/INFO]: [CHAT] No entity was found
+[20:15:39] [Render thread/INFO]: [MineRLAgent0: Set the time to 1000]
+[20:15:39] [Render thread/INFO]: [CHAT] Set the time to 1000
+[20:15:39] [Render thread/INFO]: [MineRLAgent0: Gamerule doDaylightCycle is now set to: false]
+[20:15:40] [Render thread/INFO]: [CHAT] Gamerule doDaylightCycle is now set to: false
+[20:15:40] [Render thread/INFO]: [MineRLAgent0: Gamerule doWeatherCycle is now set to: false]
+[20:15:40] [Render thread/INFO]: [CHAT] Gamerule doWeatherCycle is now set to: false
+[20:15:40] [Render thread/INFO]: [MineRLAgent0: Set the weather to clear]
+[20:15:40] [Render thread/INFO]: [CHAT] Set the weather to clear
+[20:15:40] [Render thread/INFO]: [MineRLAgent0: Set spawn point to -5854, 160, -4134 [0.0] in minecraft:overworld for MineRLAgent0]
+[20:15:40] [Render thread/INFO]: [CHAT] Set spawn point to -5854, 160, -4134 [0.0] in minecraft:overworld for MineRLAgent0
+[20:15:40] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[20:15:40] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[20:15:40] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[20:15:40] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[20:15:41] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to -6229.360255, 76.0, -4521.619547]
+[20:15:41] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to -6229.360255, 76.0, -4521.619547
+[20:15:41] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[20:15:41] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[20:15:43] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[20:15:43] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[20:15:47] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to -6229.360255, 76.0, -4521.619547]
+[20:15:47] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to -6229.360255, 76.0, -4521.619547
+[20:17:38] [Render thread/INFO]: [MineRLAgent0: Gamerule doMobSpawning is now set to: false]
+[20:17:38] [Render thread/INFO]: [CHAT] Gamerule doMobSpawning is now set to: false
+[20:17:38] [Render thread/INFO]: [CHAT] No entity was found
+[20:17:38] [Render thread/INFO]: [MineRLAgent0: Set the time to 1000]
+[20:17:38] [Render thread/INFO]: [CHAT] Set the time to 1000
+[20:17:38] [Render thread/INFO]: [MineRLAgent0: Gamerule doDaylightCycle is now set to: false]
+[20:17:38] [Render thread/INFO]: [CHAT] Gamerule doDaylightCycle is now set to: false
+[20:17:38] [Render thread/INFO]: [MineRLAgent0: Gamerule doWeatherCycle is now set to: false]
+[20:17:38] [Render thread/INFO]: [CHAT] Gamerule doWeatherCycle is now set to: false
+[20:17:38] [Render thread/INFO]: [MineRLAgent0: Set the weather to clear]
+[20:17:39] [Render thread/INFO]: [CHAT] Set the weather to clear
+[20:17:39] [Render thread/INFO]: [MineRLAgent0: Set spawn point to -5854, 160, -4134 [0.0] in minecraft:overworld for MineRLAgent0]
+[20:17:39] [Render thread/INFO]: [CHAT] Set spawn point to -5854, 160, -4134 [0.0] in minecraft:overworld for MineRLAgent0
+[20:17:39] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[20:17:39] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[20:17:39] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[20:17:39] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[20:17:40] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to -6230.944962, 76.0, -4524.215878]
+[20:17:40] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to -6230.944962, 76.0, -4524.215878
+[20:17:41] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[20:17:41] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[20:17:41] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[20:17:41] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[20:17:46] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to -6230.944962, 76.0, -4524.215878]
+[20:17:46] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to -6230.944962, 76.0, -4524.215878
+[20:19:35] [Render thread/INFO]: [MineRLAgent0: Gamerule doMobSpawning is now set to: false]
+[20:19:35] [Render thread/INFO]: [CHAT] Gamerule doMobSpawning is now set to: false
+[20:19:35] [Render thread/INFO]: [CHAT] No entity was found
+[20:19:35] [Render thread/INFO]: [MineRLAgent0: Set the time to 1000]
+[20:19:35] [Render thread/INFO]: [CHAT] Set the time to 1000
+[20:19:35] [Render thread/INFO]: [MineRLAgent0: Gamerule doDaylightCycle is now set to: false]
+[20:19:35] [Render thread/INFO]: [CHAT] Gamerule doDaylightCycle is now set to: false
+[20:19:35] [Render thread/INFO]: [MineRLAgent0: Gamerule doWeatherCycle is now set to: false]
+[20:19:35] [Render thread/INFO]: [CHAT] Gamerule doWeatherCycle is now set to: false
+[20:19:35] [Render thread/INFO]: [MineRLAgent0: Set the weather to clear]
+[20:19:35] [Render thread/INFO]: [CHAT] Set the weather to clear
+[20:19:35] [Render thread/INFO]: [MineRLAgent0: Set spawn point to -5854, 160, -4134 [0.0] in minecraft:overworld for MineRLAgent0]
+[20:19:36] [Render thread/INFO]: [CHAT] Set spawn point to -5854, 160, -4134 [0.0] in minecraft:overworld for MineRLAgent0
+[20:19:36] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[20:19:36] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[20:19:36] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[20:19:36] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[20:19:37] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to -6231.720986, 76.0, -4525.012619]
+[20:19:37] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to -6231.720986, 76.0, -4525.012619
+[20:19:37] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[20:19:37] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[20:19:38] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[20:19:38] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[20:19:43] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to -6231.720986, 76.0, -4525.012619]
+[20:19:43] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to -6231.720986, 76.0, -4525.012619
+[20:21:29] [Render thread/INFO]: [MineRLAgent0: Gamerule doMobSpawning is now set to: false]
+[20:21:29] [Render thread/INFO]: [CHAT] Gamerule doMobSpawning is now set to: false
+[20:21:30] [Render thread/INFO]: [CHAT] No entity was found
+[20:21:30] [Render thread/INFO]: [MineRLAgent0: Set the time to 1000]
+[20:21:30] [Render thread/INFO]: [CHAT] Set the time to 1000
+[20:21:30] [Render thread/INFO]: [MineRLAgent0: Gamerule doDaylightCycle is now set to: false]
+[20:21:30] [Render thread/INFO]: [CHAT] Gamerule doDaylightCycle is now set to: false
+[20:21:30] [Render thread/INFO]: [MineRLAgent0: Gamerule doWeatherCycle is now set to: false]
+[20:21:30] [Render thread/INFO]: [CHAT] Gamerule doWeatherCycle is now set to: false
+[20:21:30] [Render thread/INFO]: [MineRLAgent0: Set the weather to clear]
+[20:21:30] [Render thread/INFO]: [CHAT] Set the weather to clear
+[20:21:30] [Render thread/INFO]: [MineRLAgent0: Set spawn point to -5854, 160, -4134 [0.0] in minecraft:overworld for MineRLAgent0]
+[20:21:30] [Render thread/INFO]: [CHAT] Set spawn point to -5854, 160, -4134 [0.0] in minecraft:overworld for MineRLAgent0
+[20:21:30] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[20:21:30] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[20:21:30] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[20:21:30] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[20:21:31] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to -6233.925019, 76.0, -4526.516769]
+[20:21:31] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to -6233.925019, 76.0, -4526.516769
+[20:21:32] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[20:21:32] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[20:21:32] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[20:21:32] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[20:21:37] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to -6233.925019, 76.0, -4526.516769]
+[20:21:37] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to -6233.925019, 76.0, -4526.516769
+[20:23:19] [Render thread/INFO]: [MineRLAgent0: Gamerule doMobSpawning is now set to: false]
+[20:23:19] [Render thread/INFO]: [CHAT] Gamerule doMobSpawning is now set to: false
+[20:23:19] [Render thread/INFO]: [CHAT] No entity was found
+[20:23:19] [Render thread/INFO]: [MineRLAgent0: Set the time to 1000]
+[20:23:19] [Render thread/INFO]: [CHAT] Set the time to 1000
+[20:23:19] [Render thread/INFO]: [MineRLAgent0: Gamerule doDaylightCycle is now set to: false]
+[20:23:19] [Render thread/INFO]: [CHAT] Gamerule doDaylightCycle is now set to: false
+[20:23:19] [Render thread/INFO]: [MineRLAgent0: Gamerule doWeatherCycle is now set to: false]
+[20:23:19] [Render thread/INFO]: [CHAT] Gamerule doWeatherCycle is now set to: false
+[20:23:19] [Render thread/INFO]: [MineRLAgent0: Set the weather to clear]
+[20:23:20] [Render thread/INFO]: [CHAT] Set the weather to clear
+[20:23:20] [Render thread/INFO]: [MineRLAgent0: Set spawn point to -5854, 160, -4134 [0.0] in minecraft:overworld for MineRLAgent0]
+[20:23:20] [Render thread/INFO]: [CHAT] Set spawn point to -5854, 160, -4134 [0.0] in minecraft:overworld for MineRLAgent0
+[20:23:20] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[20:23:20] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[20:23:20] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[20:23:20] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[20:23:20] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to -6232.879665, 76.0, -4510.980593]
+[20:23:21] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to -6232.879665, 76.0, -4510.980593
+[20:23:21] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[20:23:21] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[20:23:22] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[20:23:22] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[20:23:26] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to -6232.879665, 76.0, -4510.980593]
+[20:23:26] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to -6232.879665, 76.0, -4510.980593
+[20:25:09] [Render thread/INFO]: [MineRLAgent0: Gamerule doMobSpawning is now set to: false]
+[20:25:09] [Render thread/INFO]: [CHAT] Gamerule doMobSpawning is now set to: false
+[20:25:09] [Render thread/INFO]: [CHAT] No entity was found
+[20:25:09] [Render thread/INFO]: [MineRLAgent0: Set the time to 1000]
+[20:25:09] [Render thread/INFO]: [CHAT] Set the time to 1000
+[20:25:09] [Render thread/INFO]: [MineRLAgent0: Gamerule doDaylightCycle is now set to: false]
+[20:25:09] [Render thread/INFO]: [CHAT] Gamerule doDaylightCycle is now set to: false
+[20:25:09] [Render thread/INFO]: [MineRLAgent0: Gamerule doWeatherCycle is now set to: false]
+[20:25:09] [Render thread/INFO]: [CHAT] Gamerule doWeatherCycle is now set to: false
+[20:25:09] [Render thread/INFO]: [MineRLAgent0: Set the weather to clear]
+[20:25:09] [Render thread/INFO]: [CHAT] Set the weather to clear
+[20:25:09] [Render thread/INFO]: [MineRLAgent0: Set spawn point to -5854, 160, -4134 [0.0] in minecraft:overworld for MineRLAgent0]
+[20:25:09] [Render thread/INFO]: [CHAT] Set spawn point to -5854, 160, -4134 [0.0] in minecraft:overworld for MineRLAgent0
+[20:25:09] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[20:25:09] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[20:25:09] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[20:25:10] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[20:25:10] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to -6231.643215, 76.0, -4524.940881]
+[20:25:10] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to -6231.643215, 76.0, -4524.940881
+[20:25:11] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[20:25:11] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[20:25:12] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[20:25:12] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[20:25:17] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to -6231.643215, 76.0, -4524.940881]
+[20:25:17] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to -6231.643215, 76.0, -4524.940881
+[20:26:58] [Render thread/INFO]: [MineRLAgent0: Gamerule doMobSpawning is now set to: false]
+[20:26:59] [Render thread/INFO]: [CHAT] Gamerule doMobSpawning is now set to: false
+[20:26:59] [Render thread/INFO]: [CHAT] No entity was found
+[20:26:59] [Render thread/INFO]: [MineRLAgent0: Set the time to 1000]
+[20:26:59] [Render thread/INFO]: [CHAT] Set the time to 1000
+[20:26:59] [Render thread/INFO]: [MineRLAgent0: Gamerule doDaylightCycle is now set to: false]
+[20:26:59] [Render thread/INFO]: [CHAT] Gamerule doDaylightCycle is now set to: false
+[20:26:59] [Render thread/INFO]: [MineRLAgent0: Gamerule doWeatherCycle is now set to: false]
+[20:26:59] [Render thread/INFO]: [CHAT] Gamerule doWeatherCycle is now set to: false
+[20:26:59] [Render thread/INFO]: [MineRLAgent0: Set the weather to clear]
+[20:26:59] [Render thread/INFO]: [CHAT] Set the weather to clear
+[20:26:59] [Render thread/INFO]: [MineRLAgent0: Set spawn point to -5854, 160, -4134 [0.0] in minecraft:overworld for MineRLAgent0]
+[20:26:59] [Render thread/INFO]: [CHAT] Set spawn point to -5854, 160, -4134 [0.0] in minecraft:overworld for MineRLAgent0
+[20:26:59] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[20:26:59] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[20:26:59] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[20:26:59] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[20:27:00] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to -6243.755446, 76.0, -4515.961113]
+[20:27:00] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to -6243.755446, 76.0, -4515.961113
+[20:27:00] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[20:27:00] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[20:27:01] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[20:27:01] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[20:27:05] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to -6243.755446, 76.0, -4515.961113]
+[20:27:05] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to -6243.755446, 76.0, -4515.961113
+[20:28:45] [Render thread/INFO]: [MineRLAgent0: Gamerule doMobSpawning is now set to: false]
+[20:28:45] [Render thread/INFO]: [CHAT] Gamerule doMobSpawning is now set to: false
+[20:28:45] [Render thread/INFO]: [CHAT] No entity was found
+[20:28:45] [Render thread/INFO]: [MineRLAgent0: Set the time to 1000]
+[20:28:45] [Render thread/INFO]: [CHAT] Set the time to 1000
+[20:28:45] [Render thread/INFO]: [MineRLAgent0: Gamerule doDaylightCycle is now set to: false]
+[20:28:45] [Render thread/INFO]: [CHAT] Gamerule doDaylightCycle is now set to: false
+[20:28:45] [Render thread/INFO]: [MineRLAgent0: Gamerule doWeatherCycle is now set to: false]
+[20:28:45] [Render thread/INFO]: [CHAT] Gamerule doWeatherCycle is now set to: false
+[20:28:45] [Render thread/INFO]: [MineRLAgent0: Set the weather to clear]
+[20:28:45] [Render thread/INFO]: [CHAT] Set the weather to clear
+[20:28:45] [Render thread/INFO]: [MineRLAgent0: Set spawn point to -5854, 160, -4134 [0.0] in minecraft:overworld for MineRLAgent0]
+[20:28:45] [Render thread/INFO]: [CHAT] Set spawn point to -5854, 160, -4134 [0.0] in minecraft:overworld for MineRLAgent0
+[20:28:45] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[20:28:45] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[20:28:45] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[20:28:45] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[20:28:46] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to -6229.683608, 76.0, -4522.334777]
+[20:28:46] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to -6229.683608, 76.0, -4522.334777
+[20:28:47] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[20:28:47] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[20:28:47] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[20:28:47] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[20:28:52] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to -6229.683608, 76.0, -4522.334777]
+[20:28:52] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to -6229.683608, 76.0, -4522.334777
+[20:30:33] [Render thread/INFO]: [MineRLAgent0: Gamerule doMobSpawning is now set to: false]
+[20:30:33] [Render thread/INFO]: [CHAT] Gamerule doMobSpawning is now set to: false
+[20:30:33] [Render thread/INFO]: [CHAT] No entity was found
+[20:30:33] [Render thread/INFO]: [MineRLAgent0: Set the time to 1000]
+[20:30:33] [Render thread/INFO]: [CHAT] Set the time to 1000
+[20:30:33] [Render thread/INFO]: [MineRLAgent0: Gamerule doDaylightCycle is now set to: false]
+[20:30:33] [Render thread/INFO]: [CHAT] Gamerule doDaylightCycle is now set to: false
+[20:30:33] [Render thread/INFO]: [MineRLAgent0: Gamerule doWeatherCycle is now set to: false]
+[20:30:33] [Render thread/INFO]: [CHAT] Gamerule doWeatherCycle is now set to: false
+[20:30:33] [Render thread/INFO]: [MineRLAgent0: Set the weather to clear]
+[20:30:33] [Render thread/INFO]: [CHAT] Set the weather to clear
+[20:30:33] [Render thread/INFO]: [MineRLAgent0: Set spawn point to -5854, 160, -4134 [0.0] in minecraft:overworld for MineRLAgent0]
+[20:30:33] [Render thread/INFO]: [CHAT] Set spawn point to -5854, 160, -4134 [0.0] in minecraft:overworld for MineRLAgent0
+[20:30:33] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[20:30:33] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[20:30:33] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[20:30:33] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[20:30:34] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to -6229.195173, 76.0, -4521.174725]
+[20:30:34] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to -6229.195173, 76.0, -4521.174725
+[20:30:35] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[20:30:35] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[20:30:35] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[20:30:35] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[20:30:40] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to -6229.195173, 76.0, -4521.174725]
+[20:30:40] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to -6229.195173, 76.0, -4521.174725
+[20:32:23] [EnvServerSocketHandler/INFO]: [STDOUT]: *** Stopping the replay, returning control to the inputs

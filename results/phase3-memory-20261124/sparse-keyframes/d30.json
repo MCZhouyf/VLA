@@ -1,0 +1,115 @@
+{
+  "distance": 30,
+  "device": "cpu",
+  "dtype": "torch.float32",
+  "dataset_sha256": "89e1e31e455a2524402399c956b3fe076cb2b42d53f6d1cac44fe164af896da4",
+  "selection": "shortest outbound histories from distinct validation worlds",
+  "wider_grid_side": null,
+  "history_stride": 16,
+  "tested_inputs": 1,
+  "changed_outputs_vs_real_memory": {
+    "real_memory": 0,
+    "shuffled_visual_content": 0,
+    "zero_visual_content": 0,
+    "rotated_historical_poses": 0,
+    "no_prefix": 0
+  },
+  "exact_teacher_actions": {
+    "real_memory": 0,
+    "shuffled_visual_content": 0,
+    "zero_visual_content": 0,
+    "rotated_historical_poses": 0,
+    "no_prefix": 0
+  },
+  "rows": [
+    {
+      "scene_seed": 2030110001,
+      "world_seed": 20711100,
+      "offset": 0,
+      "true_horizontal_distance": 29.98335771067348,
+      "history_frames": 23,
+      "teacher_token_ids": [
+        151835,
+        151876,
+        151907,
+        151836
+      ],
+      "conditions": {
+        "real_memory": {
+          "direction": "left",
+          "yaw_bin": 0,
+          "forward": false,
+          "complete": true,
+          "generated_token_ids": [
+            151835,
+            151876,
+            151887,
+            151836
+          ],
+          "exact_teacher": false,
+          "teacher_log_probability": -0.7738802433013916,
+          "relative_prefix_delta": 0.0
+        },
+        "shuffled_visual_content": {
+          "direction": "left",
+          "yaw_bin": 0,
+          "forward": false,
+          "complete": true,
+          "generated_token_ids": [
+            151835,
+            151876,
+            151887,
+            151836
+          ],
+          "exact_teacher": false,
+          "teacher_log_probability": -0.7737929821014404,
+          "relative_prefix_delta": 0.0004778096335940063
+        },
+        "zero_visual_content": {
+          "direction": "left",
+          "yaw_bin": 0,
+          "forward": false,
+          "complete": true,
+          "generated_token_ids": [
+            151835,
+            151876,
+            151887,
+            151836
+          ],
+          "exact_teacher": false,
+          "teacher_log_probability": -0.7744927406311035,
+          "relative_prefix_delta": 0.004919872619211674
+        },
+        "rotated_historical_poses": {
+          "direction": "left",
+          "yaw_bin": 0,
+          "forward": false,
+          "complete": true,
+          "generated_token_ids": [
+            151835,
+            151876,
+            151887,
+            151836
+          ],
+          "exact_teacher": false,
+          "teacher_log_probability": -0.7738572359085083,
+          "relative_prefix_delta": 0.00012398739636410028
+        },
+        "no_prefix": {
+          "direction": "left",
+          "yaw_bin": 0,
+          "forward": false,
+          "complete": true,
+          "generated_token_ids": [
+            151835,
+            151876,
+            151887,
+            151836
+          ],
+          "exact_teacher": false,
+          "teacher_log_probability": -0.8122916221618652
+        }
+      }
+    }
+  ]
+}

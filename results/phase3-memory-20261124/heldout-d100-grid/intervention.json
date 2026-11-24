@@ -1,0 +1,68 @@
+{
+  "distance": 100,
+  "device": "cpu",
+  "dtype": "torch.float32",
+  "dataset_sha256": "89e1e31e455a2524402399c956b3fe076cb2b42d53f6d1cac44fe164af896da4",
+  "selection": "shortest outbound histories from distinct validation worlds",
+  "wider_grid_side": 64,
+  "tested_inputs": 1,
+  "changed_outputs_vs_real_memory": {
+    "real_memory": 0,
+    "wider_grid": 0
+  },
+  "exact_teacher_actions": {
+    "real_memory": 0,
+    "wider_grid": 0
+  },
+  "rows": [
+    {
+      "scene_seed": 2030110003,
+      "world_seed": 20711100,
+      "offset": 0,
+      "true_horizontal_distance": 99.89482394545796,
+      "history_frames": 666,
+      "teacher_token_ids": [
+        151835,
+        151876,
+        151907,
+        151836
+      ],
+      "conditions": {
+        "real_memory": {
+          "direction": "left",
+          "yaw_bin": 0,
+          "forward": false,
+          "complete": true,
+          "generated_token_ids": [
+            151835,
+            151876,
+            151887,
+            151836
+          ],
+          "exact_teacher": false,
+          "teacher_log_probability": -0.8369977474212646,
+          "relative_prefix_delta": 0.0,
+          "retained_frames": 345,
+          "retained_initial_frames": 0
+        },
+        "wider_grid": {
+          "direction": "left",
+          "yaw_bin": 0,
+          "forward": false,
+          "complete": true,
+          "generated_token_ids": [
+            151835,
+            151876,
+            151887,
+            151836
+          ],
+          "exact_teacher": false,
+          "teacher_log_probability": -0.8372347354888916,
+          "relative_prefix_delta": 0.0008832954335957766,
+          "retained_frames": 666,
+          "retained_initial_frames": 40
+        }
+      }
+    }
+  ]
+}

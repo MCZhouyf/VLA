@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/share/project/zhoubowen/zhy/zyf/results/phase3-steering-paired-2AGguG2e/training-snapshot/code/minemem/t1_paired_steering.py", line 218, in <module>
+    main()
+  File "/share/project/zhoubowen/zhy/zyf/results/phase3-steering-paired-2AGguG2e/training-snapshot/code/minemem/t1_paired_steering.py", line 214, in main
+    args.run(args)
+  File "/share/project/zhoubowen/zhy/zyf/results/phase3-steering-paired-2AGguG2e/training-snapshot/code/minemem/t1_paired_steering.py", line 144, in replay_index
+    raise ValueError(f"Gold pixels disagree with steering label for {row['scene_seed']}")
+ValueError: Gold pixels disagree with steering label for 2073013000

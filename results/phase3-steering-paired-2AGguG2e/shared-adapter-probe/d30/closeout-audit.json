@@ -1,0 +1,54 @@
+{
+  "arms": {
+    "no_memory": {
+      "episodes": 30,
+      "successes": 0,
+      "wilson95": [
+        0.0,
+        0.11351339317396876
+      ],
+      "steps": 22148,
+      "deaths": 0,
+      "pose_jumps": 0,
+      "min_distance_median": 28.381406132956954,
+      "best_distance": 22.202121275028208,
+      "return_path_median": 6.8715864221825615,
+      "left_turn_steps": 21259,
+      "right_turn_steps": 0,
+      "wall_seconds": 12564.048500660807,
+      "aggregate_return_fps": 1.7628075853762524
+    },
+    "spatial": {
+      "episodes": 30,
+      "successes": 0,
+      "wilson95": [
+        0.0,
+        0.11351339317396876
+      ],
+      "steps": 22148,
+      "deaths": 0,
+      "pose_jumps": 0,
+      "min_distance_median": 29.81766684970268,
+      "best_distance": 21.329531481349836,
+      "return_path_median": 1.2704238625413775,
+      "left_turn_steps": 21615,
+      "right_turn_steps": 0,
+      "wall_seconds": 14473.988206468523,
+      "aggregate_return_fps": 1.5301933153504927
+    }
+  },
+  "paired_min_distance": {
+    "spatial_closer": 4,
+    "no_memory_closer": 17,
+    "tied": 9,
+    "spatial_minus_no_memory_median": 0.12782445583959046
+  },
+  "decision": {
+    "formal_d30_successes": {
+      "no_memory": 0,
+      "spatial": 0
+    },
+    "episodes_per_variant": 30,
+    "proceed": false
+  }
+}

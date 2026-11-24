@@ -34,6 +34,7 @@ def validate_training(runs):
         if (any(config[key] != base_config[key] for key in equal)
                 or any(config.get(key) != base_config.get(key)
                        for key in ("resolution", "validate_every", "checkpoint_selection"))
+                or config.get("train_microbatch_size", 1) != base_config.get("train_microbatch_size", 1)
                 or result["stopped_at_budget"] or config["budget_seconds"]):
             raise ValueError("Training data, hyperparameters, and complete epochs must match")
         if any(result[key] != base_result[key] for key in ("supervised_examples", "updates")):

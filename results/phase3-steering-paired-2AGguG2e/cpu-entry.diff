@@ -1,0 +1,7 @@
+--- code/minemem/t1_cpu.sh	2026-11-24 03:53:33.000000000 +0800
++++ /share/project/zhoubowen/zhy/zyf/results/phase3-steering-paired-2AGguG2e/code-snapshot/code/minemem/t1_cpu.sh	2026-11-24 16:57:35.000000000 +0800
+@@ -14,0 +15 @@
++    paired-steering) entry=t1_paired_steering.py; entry_args=(collect) ;;
+@@ -17 +18 @@
+-    *) echo 'Usage: t1_cpu.sh {acceptance|protected|collect|visibility|forward-control} OUTPUT WORKERS [options]' >&2; exit 2 ;;
++    *) echo 'Usage: t1_cpu.sh {acceptance|protected|collect|paired-steering|visibility|forward-control} OUTPUT WORKERS [options]' >&2; exit 2 ;;

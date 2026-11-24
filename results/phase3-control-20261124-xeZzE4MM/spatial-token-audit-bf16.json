@@ -1,0 +1,176 @@
+{
+  "checkpoint": 2000,
+  "physical_gpu": 7,
+  "dtype": "bf16",
+  "frames": 6500,
+  "actions": 2401,
+  "tokens": 11751,
+  "correct_tokens": 9394,
+  "exact_actions": 120,
+  "changed_actions": 143,
+  "changed_exact": 21,
+  "wrong_tokens_per_action": {
+    "1": 2205,
+    "0": 120,
+    "2": 76
+  },
+  "errors_by_position": {
+    "1": 2105,
+    "3": 72,
+    "2": 180
+  },
+  "top_substitutions": [
+    {
+      "position": 1,
+      "expected_id": 151848,
+      "predicted_id": 151876,
+      "expected": "<|reserved_special_token_191|>",
+      "predicted": "<|reserved_special_token_219|>",
+      "count": 2099
+    },
+    {
+      "position": 2,
+      "expected_id": 151887,
+      "predicted_id": 151907,
+      "expected": "<|reserved_special_token_230|>",
+      "predicted": "<|reserved_special_token_250|>",
+      "count": 177
+    },
+    {
+      "position": 3,
+      "expected_id": 151898,
+      "predicted_id": 151897,
+      "expected": "<|reserved_special_token_241|>",
+      "predicted": "<|reserved_special_token_240|>",
+      "count": 33
+    },
+    {
+      "position": 1,
+      "expected_id": 151876,
+      "predicted_id": 151848,
+      "expected": "<|reserved_special_token_219|>",
+      "predicted": "<|reserved_special_token_191|>",
+      "count": 6
+    },
+    {
+      "position": 3,
+      "expected_id": 151902,
+      "predicted_id": 151897,
+      "expected": "<|reserved_special_token_245|>",
+      "predicted": "<|reserved_special_token_240|>",
+      "count": 6
+    },
+    {
+      "position": 3,
+      "expected_id": 151896,
+      "predicted_id": 151897,
+      "expected": "<|reserved_special_token_239|>",
+      "predicted": "<|reserved_special_token_240|>",
+      "count": 4
+    },
+    {
+      "position": 3,
+      "expected_id": 151906,
+      "predicted_id": 151897,
+      "expected": "<|reserved_special_token_249|>",
+      "predicted": "<|reserved_special_token_240|>",
+      "count": 4
+    },
+    {
+      "position": 3,
+      "expected_id": 151905,
+      "predicted_id": 151897,
+      "expected": "<|reserved_special_token_248|>",
+      "predicted": "<|reserved_special_token_240|>",
+      "count": 4
+    },
+    {
+      "position": 3,
+      "expected_id": 151890,
+      "predicted_id": 151897,
+      "expected": "<|reserved_special_token_233|>",
+      "predicted": "<|reserved_special_token_240|>",
+      "count": 4
+    },
+    {
+      "position": 3,
+      "expected_id": 151889,
+      "predicted_id": 151897,
+      "expected": "<|reserved_special_token_232|>",
+      "predicted": "<|reserved_special_token_240|>",
+      "count": 3
+    },
+    {
+      "position": 3,
+      "expected_id": 151892,
+      "predicted_id": 151897,
+      "expected": "<|reserved_special_token_235|>",
+      "predicted": "<|reserved_special_token_240|>",
+      "count": 3
+    },
+    {
+      "position": 2,
+      "expected_id": 151906,
+      "predicted_id": 151907,
+      "expected": "<|reserved_special_token_249|>",
+      "predicted": "<|reserved_special_token_250|>",
+      "count": 3
+    },
+    {
+      "position": 3,
+      "expected_id": 151904,
+      "predicted_id": 151897,
+      "expected": "<|reserved_special_token_247|>",
+      "predicted": "<|reserved_special_token_240|>",
+      "count": 2
+    },
+    {
+      "position": 3,
+      "expected_id": 151888,
+      "predicted_id": 151897,
+      "expected": "<|reserved_special_token_231|>",
+      "predicted": "<|reserved_special_token_240|>",
+      "count": 2
+    },
+    {
+      "position": 3,
+      "expected_id": 151891,
+      "predicted_id": 151897,
+      "expected": "<|reserved_special_token_234|>",
+      "predicted": "<|reserved_special_token_240|>",
+      "count": 2
+    },
+    {
+      "position": 3,
+      "expected_id": 151899,
+      "predicted_id": 151897,
+      "expected": "<|reserved_special_token_242|>",
+      "predicted": "<|reserved_special_token_240|>",
+      "count": 2
+    },
+    {
+      "position": 3,
+      "expected_id": 151894,
+      "predicted_id": 151897,
+      "expected": "<|reserved_special_token_237|>",
+      "predicted": "<|reserved_special_token_240|>",
+      "count": 1
+    },
+    {
+      "position": 3,
+      "expected_id": 151901,
+      "predicted_id": 151897,
+      "expected": "<|reserved_special_token_244|>",
+      "predicted": "<|reserved_special_token_240|>",
+      "count": 1
+    },
+    {
+      "position": 3,
+      "expected_id": 151900,
+      "predicted_id": 151897,
+      "expected": "<|reserved_special_token_243|>",
+      "predicted": "<|reserved_special_token_240|>",
+      "count": 1
+    }
+  ]
+}

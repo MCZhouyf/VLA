@@ -14,6 +14,7 @@
 | [阶段 3 第二版启动与恢复验收](results/REPORT_phase3_screened_launch.md) | 本地归档校验、断点恢复、GPU 训练进度和 48 小时调度 |
 | [阶段 3 第二版布景训练与评测报告](results/REPORT_phase3_screened_training.md) | 无记忆与空间记忆的最终训练、全量开环验证、闭环导航门槛和权重清单 |
 | [GPU 6 无记忆训练报告](results/REPORT_phase3_no_memory_gpu6.md) | 实机时间线、逐步轨迹、验证波动和失败回合分析 |
+| [阶段 3 正式结果与分析](results/REPORT_phase3_closeout.md) | 正式 30 格止损、失败机制、位姿折返和 RGB 检索对照、归档复算 |
 | [遮挡建筑 CPU 审计](results/REPORT_phase3_structure_audit.md) | 90 个冻结场景、配对可见性、找结构对照和死亡取证 |
 | [第二版布景数据索引](results/data/t1-screened-hzw7nYp7) | 1,124 个回合的非图像元数据、采集日志与冻结索引校验 |
 | [新版轨迹元数据](results/data/t1-v4-L6ysa9jV/metadata) | 训练、验证与测试的 1,194 个原始回合的布景、位姿与动作 token |
@@ -360,3 +361,14 @@ tail -n 10 "$run/gpu-supervisor/events.jsonl"
 ~~~
 
 [阶段 3 第二版布景双卡训练与评测报告](results/REPORT_phase3_screened_training.md)
+
+
+## 阶段 3 正式 30 格结果
+
+共享 LoRA 的两个变体在相同的 30 个冻结种子上各为 0/30。两组按预定规则止损。代码和非图像数据包括训练及验证曲线的 CSV、各轮续训和诊断、完整数值轨迹、冻结索引及从原始 ZIP 提取的动作与位姿元数据。完整训练和模拟复跑依赖服务器上原有的视觉归档与权重。 [正式结果与分析](results/REPORT_phase3_closeout.md) · [原始日志与控制修复](results/REPORT_phase3_control_diagnostics.md) · [归档清单](results/phase3_archive_inventory.json)
+
+```bash
+python3 -B code/minemem/t1_phase3_closeout.py \
+  --run results/phase3-steering-paired-2AGguG2e/shared-adapter-probe/d30 \
+  --fixtures results/phase3-speed-xOn8Q5je/screened_fixtures.json
+```

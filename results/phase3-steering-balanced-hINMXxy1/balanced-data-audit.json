@@ -1,0 +1,71 @@
+{
+  "updates": 1000,
+  "per_optimizer_batch": {
+    "original": 2,
+    "dart": 2
+  },
+  "training_labels": 4000,
+  "stat_by_source_and_group": {
+    "original/visible": {
+      "actions": 421,
+      "forward": 393,
+      "left": 16,
+      "right": 28,
+      "stationary_full_right": 20
+    },
+    "dart/10": {
+      "actions": 369,
+      "forward": 214,
+      "left": 71,
+      "right": 118,
+      "stationary_full_right": 101
+    },
+    "dart/visible": {
+      "actions": 373,
+      "forward": 250,
+      "left": 70,
+      "right": 88,
+      "stationary_full_right": 68
+    },
+    "original/10": {
+      "actions": 563,
+      "forward": 408,
+      "left": 115,
+      "right": 52,
+      "stationary_full_right": 48
+    },
+    "dart/60": {
+      "actions": 1200,
+      "forward": 854,
+      "left": 246,
+      "right": 220,
+      "stationary_full_right": 145
+    },
+    "original/60": {
+      "actions": 743,
+      "forward": 686,
+      "left": 39,
+      "right": 28,
+      "stationary_full_right": 21
+    },
+    "original/30": {
+      "actions": 273,
+      "forward": 232,
+      "left": 41,
+      "right": 8,
+      "stationary_full_right": 3
+    },
+    "dart/30": {
+      "actions": 58,
+      "forward": 39,
+      "left": 10,
+      "right": 15,
+      "stationary_full_right": 13
+    }
+  },
+  "replay_at_steps": [
+    250,
+    500,
+    750
+  ]
+}

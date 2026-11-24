@@ -1,0 +1,45 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+[03:49:11] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[03:49:11] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+INFO: Starting Minecraft process with device: cpu
+ERROR:minestudio.simulator.minerl.env.malmo.instance.93f7b8:[03:49:44] [Render thread/WARN]: ERROR : Couldn't load Narrator library : Unable to load library 'fliteWrapper': Can't obtain InputStream for linux-x86-64/libfliteWrapper.so
+ERROR:minestudio.simulator.minerl.env.malmo.instance.93f7b8:[03:49:45] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: null
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+ERROR:minestudio.simulator.minerl.env.malmo.instance.93f7b8:[03:53:33] [Worker-Main-3/ERROR]: Using missing texture, unable to load minecraft:optifine/ctm/default/empty.png : java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png
+ERROR:minestudio.simulator.minerl.env.malmo.instance.93f7b8:[03:53:44] [Render thread/ERROR]: Error starting SoundSystem. Turning off sounds & music
+ERROR:minestudio.simulator.minerl.env.malmo.instance.93f7b8:java.lang.IllegalStateException: Failed to open OpenAL device
+WARNING:minestudio.simulator.minerl.env.malmo.instance.93f7b8:[03:53:45] [Render thread/WARN]: [OptiFine] Missing CTM sprite: minecraft:optifine/ctm/default/empty
+WARNING:minestudio.simulator.minerl.env.malmo.instance.93f7b8:[03:53:48] [Render thread/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.93f7b8:[03:53:48] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.93f7b8:[03:53:48] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.93f7b8:[03:53:48] [Render thread/WARN]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.93f7b8:[03:53:48] [Render thread/WARN]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.93f7b8:[03:54:16] [Render thread/WARN]: Failed to load texture: minecraft:optifine/ctm/default/empty.png
+ERROR:minestudio.simulator.minerl.env.malmo.instance.93f7b8:java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png
+{"path": "episode-2041019000.zip", "scene_seed": 2041019000, "world_seed": 20980109, "split": "train", "group": 10, "frames": 247, "outbound_frames": 168, "return_frames": 79}
+Rejected 2041019001 in 30: Teacher did not reach the T1 landmark
+Rejected 2041019002 in 60: Teacher did not reach the T1 landmark
+{"path": "episode-2041019003.zip", "scene_seed": 2041019003, "world_seed": 20980109, "split": "train", "group": 100, "frames": 1651, "outbound_frames": 662, "return_frames": 989}
+{"path": "episode-2041019004.zip", "scene_seed": 2041019004, "world_seed": 20980109, "split": "train", "group": "visible", "frames": 20, "outbound_frames": 2, "return_frames": 18}
+{"path": "episode-2041019005.zip", "scene_seed": 2041019005, "world_seed": 20980109, "split": "train", "group": 10, "frames": 323, "outbound_frames": 184, "return_frames": 139}
+{"path": "episode-2041019006.zip", "scene_seed": 2041019006, "world_seed": 20980109, "split": "train", "group": 30, "frames": 764, "outbound_frames": 343, "return_frames": 421}
+Rejected 2041019007 in 60: Teacher did not reach the T1 landmark
+{"path": "episode-2041019008.zip", "scene_seed": 2041019008, "world_seed": 20980109, "split": "train", "group": "visible", "frames": 34, "outbound_frames": 2, "return_frames": 32}
+Rejected 2041019009 in 60: Teacher did not reach the T1 landmark
+{"path": "episode-2041019010.zip", "scene_seed": 2041019010, "world_seed": 20980109, "split": "train", "group": "visible", "frames": 59, "outbound_frames": 2, "return_frames": 57}
+Rejected 2041019011 in 60: Teacher did not reach the T1 landmark
+{"path": "episode-2041019012.zip", "scene_seed": 2041019012, "world_seed": 20980109, "split": "train", "group": "visible", "frames": 24, "outbound_frames": 2, "return_frames": 22}
+{"path": "episode-2041019013.zip", "scene_seed": 2041019013, "world_seed": 20980109, "split": "train", "group": 60, "frames": 1132, "outbound_frames": 480, "return_frames": 652}
+{"path": "episode-2041019014.zip", "scene_seed": 2041019014, "world_seed": 20980109, "split": "train", "group": "visible", "frames": 23, "outbound_frames": 2, "return_frames": 21}
+{"path": "episode-2041019015.zip", "scene_seed": 2041019015, "world_seed": 20980109, "split": "train", "group": "visible", "frames": 19, "outbound_frames": 2, "return_frames": 17}
+{"path": "episode-2041019016.zip", "scene_seed": 2041019016, "world_seed": 20980109, "split": "train", "group": "visible", "frames": 61, "outbound_frames": 2, "return_frames": 59}
+{"path": "episode-2041019017.zip", "scene_seed": 2041019017, "world_seed": 20980109, "split": "train", "group": "visible", "frames": 40, "outbound_frames": 2, "return_frames": 38}
+{"path": "episode-2041019018.zip", "scene_seed": 2041019018, "world_seed": 20980109, "split": "train", "group": "visible", "frames": 78, "outbound_frames": 2, "return_frames": 76}

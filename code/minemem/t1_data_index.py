@@ -1,7 +1,6 @@
 """Verify captured episodes and select balanced, split-disjoint frame budgets."""
 
 import argparse
-import hashlib
 import json
 from collections import Counter
 from pathlib import Path
@@ -9,6 +8,7 @@ from zipfile import ZipFile
 
 from t1_collect import HELD_OUT_QUOTAS, SPLITS, TRAIN_QUOTAS
 from t1_occlusion import SCREENED_PROTOCOL
+from t1_storage import trajectory_fingerprint
 from t1_v4 import DISTANCES, PROTOCOL
 
 
@@ -49,11 +49,9 @@ def read_episodes(roots, screened=False):
                               if member.filename.endswith(".jpg")]
                     assert [member.filename for member in images] == [
                         f"{i:05d}.jpg" for i in range(row["frames"])]
-                    fingerprint = hashlib.sha256()
-                    for member in images:
-                        fingerprint.update(member.CRC.to_bytes(4, "little"))
-                    fingerprint.update(json.dumps(meta["action"]).encode())
-                digest = fingerprint.hexdigest()
+                    if "executed_action" in meta:
+                        assert len(meta["executed_action"]) == len(meta["perturbation_applied"]) == row["frames"]
+                    digest = trajectory_fingerprint(images, meta)
                 if digest in fingerprints:
                     raise ValueError(f"Duplicate image and action sequence: {archive_path}")
                 fingerprints.add(digest)
