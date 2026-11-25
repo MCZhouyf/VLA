@@ -1,0 +1,5 @@
+distance,seed,world_seed,goal_slot,baseline,success,steps,return_limit,min_dist,deaths,pose_jumps,end_reason,initial_gold_distance,initial_gold_pixels,error
+10,2086000023,21460023,1,teacher,True,135,470,2.812839057621652,0,0,reached,18.027756377319946,583,
+10,2086000023,21460023,1,turn_180,False,470,470,10.0,0,0,budget,18.027756377319946,583,
+10,2086000023,21460023,1,scan,False,470,470,3.8000028734516627,0,0,budget,18.027756377319946,583,
+10,2086000023,21460023,1,find_structure,True,313,470,2.8514202041108923,0,0,reached,18.027756377319946,583,

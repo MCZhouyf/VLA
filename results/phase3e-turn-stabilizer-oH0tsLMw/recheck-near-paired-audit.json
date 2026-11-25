@@ -1,0 +1,60 @@
+{
+  "original": {
+    "successes": 22,
+    "count": 30,
+    "median_success_steps": 100.5,
+    "mean_success_steps": 115.18181818181819,
+    "deaths": 0,
+    "pose_jumps": 0
+  },
+  "stabilized": {
+    "successes": 30,
+    "count": 30,
+    "median_success_steps": 103.0,
+    "mean_success_steps": 108.16666666666667,
+    "deaths": 0,
+    "pose_jumps": 0
+  },
+  "recovered_seeds": [
+    2086000000,
+    2086000008,
+    2086000009,
+    2086000010,
+    2086000017,
+    2086000018,
+    2086000021,
+    2086000028
+  ],
+  "overrides": {
+    "2086000004": {
+      "steps": 1,
+      "first_step": 113,
+      "original_success": true
+    },
+    "2086000008": {
+      "steps": 4,
+      "first_step": 116,
+      "original_success": false
+    },
+    "2086000010": {
+      "steps": 2,
+      "first_step": 120,
+      "original_success": false
+    },
+    "2086000011": {
+      "steps": 1,
+      "first_step": 124,
+      "original_success": true
+    },
+    "2086000014": {
+      "steps": 2,
+      "first_step": 116,
+      "original_success": true
+    },
+    "2086000016": {
+      "steps": 1,
+      "first_step": 118,
+      "original_success": true
+    }
+  }
+}

@@ -372,3 +372,65 @@ python3 -B code/minemem/t1_phase3_closeout.py \
   --run results/phase3-steering-paired-2AGguG2e/shared-adapter-probe/d30 \
   --fixtures results/phase3-speed-xOn8Q5je/screened_fixtures.json
 ```
+
+## 阶段 3e 分层空间记忆
+
+#### 带几何值的记忆读写与两项验收
+
+`t1_memory_cache.py` 仅加载冻结的视觉编码器，缓存 2×2 或 4×4 视觉网格。`t1_memory_probe.py` 使用训练划分统计量做标准化，在 CPU 上训练小型读出头，自动记录训练前后 20 条验证轨迹的前缀敏感性以及航点和金柱的可解码准确率。`--grid-side 64` 对应 128 格的物理宽度。 [验收报告](results/REPORT_phase3e_memory_gate.md)
+
+~~~bash
+source "$WORK/env.sh"
+export HF_HUB_OFFLINE=1 PYTHONPATH="$WORK/code/minemem"
+run="$WORK/results/phase3e-memory-20261125-G8bBJisL"
+attempt="$(mktemp -d "$run/recheck-XXXXXXXX")"
+CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=6 MKL_NUM_THREADS=6 \
+  "$WORK/envs/mcvla-phase3/bin/python" -B code/minemem/t1_memory_probe.py \
+    --cache "$run/cache" --output "$attempt/probe" \
+    --legacy-weights "$WORK/results/phase3-steering-paired-2AGguG2e/shared-adapter-probe/spatial.safetensors"
+~~~
+
+两项验收通过后，使用 `t1_cpu.sh dual-enclosure OUTPUT WORKERS --distances 30 --pairs 1` 测试双围挡实机场景。`--capture --split STR` 采集分层对照所需的历史与末尾八帧。`t1_dual_probe.py cache` 在真值航点和端点匹配检查通过后缓存视觉，`train` 用前置验收的空间权重初始化。选择器评测使用 `--predictions` 与 `--fixtures` 复原相同场景，三组共享位姿航点控制器。
+
+#### 正式 T1 v3 与航点控制器
+
+正式协议使用 [阶段 3e 复核原文](research/phase3e_review.md)。`t1_cpu.sh phase3e` 记录出生点远距观察、同一固定种子下两候选的随机归属，并按进入金柱或干扰柱 3 格半径的先后评分。正式 CPU 验收对每档 30 个冻结种子跑教师和五个脚本基线。`t1_waypoint.py` 从当前教师路线投影沿折线前看 6 格，训练和推理共用 10° 与 1 格的文本量化。
+
+~~~bash
+run="$(mktemp -d "$WORK/results/phase3e-formal-XXXXXXXX")"
+T1_LOCAL_DATABASE_ROOT="$(mktemp -d /dev/shm/minemem-t1-phase3e-smoke-XXXXXXXX)" \
+  bash code/minemem/t1_cpu.sh phase3e "$run/smoke" 4 --seeds 4
+cp "$run/smoke/exit_status" "$run/smoke.status"
+bash code/minemem/t1_phase3e_stage_a.sh "$run"
+~~~
+
+阶段 A 按顺序验收 CPU 布景、采集四档和可见导航并补 DART、核验本地训练归档、在 GPU 6 续训通过原近距门槛的 LoRA，最后在 GPU 6 和 7 运行四档真值航点闭环。训练与评测保留控制器输出的动作 token、航点提示和真实位姿。`oracle_gate.json` 记录四档各 30 场及 `>=80%` 判定。
+
+真值航点评测在每张卡上复用同一世界的两档场景，先采集两条外出轨迹，再逐档重新布景和评分。GPU 锁被占用时调度等待并重试，训练异常恢复沿用最近有效检查点。
+
+正式目标侧按场景朝向与外出访问顺序分层，训练目标侧用独立随机序列生成。若已完成同一组冻结种子的 30 个 CPU 分片，执行 `bash code/minemem/t1_phase3e_stage_a.sh "$run" --reuse-acceptance` 可从验收归并开始。运行目录需含 `smoke.status`、`smoke` 和 `acceptance`，归并验证四档和六种策略的完整覆盖及每个冻结种子的目标归属。
+
+采集启动失败时，调度按组别检查各分片的配额及归档，仅用原种子复跑未完成分片。若先前的采集调度进程已经退出，执行 `bash code/minemem/t1_phase3e_stage_a.sh "$run" --resume-collection` 可接续已冻结的运行。
+
+#### 航点转向振荡诊断
+
+`t1_waypoint_stabilizer_audit.py` 在原始动作日志上定位实验性稳定器会介入的首步。该结果用于选择复测场景。实机诊断使用独立输出目录，记录改写前的模型动作与实际执行动作。稳定器检测连续 24 步交替原地转向，随后在航点对准时给出最多 4 步的短前进。
+
+~~~bash
+PYTHONPATH=code/minemem python3 -B -m unittest discover -s code/minemem \
+  -p 'test_t1_waypoint_stabilizer.py'
+python3 -B code/minemem/t1_waypoint_stabilizer_audit.py --run "$run"
+diagnostic="$(mktemp -d "$WORK/results/phase3e-stabilizer-XXXXXXXX")"
+bash code/minemem/t1_exec.sh waypoint-eval 7 "$diagnostic" \
+  --training-run "$run/controller" --metrics "$run/frozen/metrics.json" \
+  --fixtures "$run/frozen/fixtures.json" --distances 10 --batch 3 \
+  --seeds 2086000000 2086000008 2086000011 --stabilize-turns
+~~~
+
+远档真值航点评测中断后，可用补跑入口保留已落盘的评分。运行目录需含修复版评测快照、原四份评测目录和 `original-run`。补跑使用 GPU 6 和 7，恢复两档缺失种子，待四档的冻结种子全部对齐后生成总判定。
+
+~~~bash
+recovery="$(mktemp -d "$recheck/recovery-XXXXXXXX")"
+python3 -B -u code/minemem/t1_phase3e_recover_eval.py "$recheck" "$recovery"
+~~~
+

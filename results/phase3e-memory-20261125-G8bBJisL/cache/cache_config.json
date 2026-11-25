@@ -1,0 +1,1052 @@
+{
+  "vision_path": "/share/project/zhoubowen/zhy/zyf/models/JarvisVLA-Qwen2-VL-7B",
+  "resolution": [
+    320,
+    180
+  ],
+  "stride": 8,
+  "spatial_pool_side": 2,
+  "return_samples": 12,
+  "episodes": [
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-009/episode-2030019000.zip",
+      "scene_seed": 2030019000,
+      "world_seed": 20710109,
+      "split": "train",
+      "group": 10,
+      "frames": 230,
+      "outbound_frames": 181,
+      "return_frames": 49
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-016/episode-2030026000.zip",
+      "scene_seed": 2030026000,
+      "world_seed": 20710116,
+      "split": "train",
+      "group": 10,
+      "frames": 227,
+      "outbound_frames": 179,
+      "return_frames": 48
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-014/episode-2030024000.zip",
+      "scene_seed": 2030024000,
+      "world_seed": 20710114,
+      "split": "train",
+      "group": 10,
+      "frames": 244,
+      "outbound_frames": 193,
+      "return_frames": 51
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-026/episode-2030036000.zip",
+      "scene_seed": 2030036000,
+      "world_seed": 20710126,
+      "split": "train",
+      "group": 10,
+      "frames": 244,
+      "outbound_frames": 196,
+      "return_frames": 48
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-012/episode-2030022000.zip",
+      "scene_seed": 2030022000,
+      "world_seed": 20710112,
+      "split": "train",
+      "group": 10,
+      "frames": 228,
+      "outbound_frames": 184,
+      "return_frames": 44
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-019/episode-2030029000.zip",
+      "scene_seed": 2030029000,
+      "world_seed": 20710119,
+      "split": "train",
+      "group": 10,
+      "frames": 223,
+      "outbound_frames": 175,
+      "return_frames": 48
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-028/episode-2030038000.zip",
+      "scene_seed": 2030038000,
+      "world_seed": 20710128,
+      "split": "train",
+      "group": 10,
+      "frames": 227,
+      "outbound_frames": 186,
+      "return_frames": 41
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-021/episode-2030031000.zip",
+      "scene_seed": 2030031000,
+      "world_seed": 20710121,
+      "split": "train",
+      "group": 10,
+      "frames": 216,
+      "outbound_frames": 173,
+      "return_frames": 43
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-001/episode-2030011000.zip",
+      "scene_seed": 2030011000,
+      "world_seed": 20710101,
+      "split": "train",
+      "group": 10,
+      "frames": 217,
+      "outbound_frames": 171,
+      "return_frames": 46
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-024/episode-2030034000.zip",
+      "scene_seed": 2030034000,
+      "world_seed": 20710124,
+      "split": "train",
+      "group": 10,
+      "frames": 222,
+      "outbound_frames": 182,
+      "return_frames": 40
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-005/episode-2030015000.zip",
+      "scene_seed": 2030015000,
+      "world_seed": 20710105,
+      "split": "train",
+      "group": 10,
+      "frames": 221,
+      "outbound_frames": 172,
+      "return_frames": 49
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-000/episode-2030010000.zip",
+      "scene_seed": 2030010000,
+      "world_seed": 20710100,
+      "split": "train",
+      "group": 10,
+      "frames": 243,
+      "outbound_frames": 196,
+      "return_frames": 47
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-020/episode-2030030000.zip",
+      "scene_seed": 2030030000,
+      "world_seed": 20710120,
+      "split": "train",
+      "group": 10,
+      "frames": 225,
+      "outbound_frames": 180,
+      "return_frames": 45
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-010/episode-2030020000.zip",
+      "scene_seed": 2030020000,
+      "world_seed": 20710110,
+      "split": "train",
+      "group": 10,
+      "frames": 217,
+      "outbound_frames": 169,
+      "return_frames": 48
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-030/episode-2030040000.zip",
+      "scene_seed": 2030040000,
+      "world_seed": 20710130,
+      "split": "train",
+      "group": 10,
+      "frames": 237,
+      "outbound_frames": 186,
+      "return_frames": 51
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-017/episode-2030027000.zip",
+      "scene_seed": 2030027000,
+      "world_seed": 20710117,
+      "split": "train",
+      "group": 10,
+      "frames": 239,
+      "outbound_frames": 188,
+      "return_frames": 51
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-009/episode-2030019001.zip",
+      "scene_seed": 2030019001,
+      "world_seed": 20710109,
+      "split": "train",
+      "group": 30,
+      "frames": 608,
+      "outbound_frames": 349,
+      "return_frames": 259
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-016/episode-2030026001.zip",
+      "scene_seed": 2030026001,
+      "world_seed": 20710116,
+      "split": "train",
+      "group": 30,
+      "frames": 610,
+      "outbound_frames": 344,
+      "return_frames": 266
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-014/episode-2030024001.zip",
+      "scene_seed": 2030024001,
+      "world_seed": 20710114,
+      "split": "train",
+      "group": 30,
+      "frames": 610,
+      "outbound_frames": 341,
+      "return_frames": 269
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-026/episode-2030036001.zip",
+      "scene_seed": 2030036001,
+      "world_seed": 20710126,
+      "split": "train",
+      "group": 30,
+      "frames": 611,
+      "outbound_frames": 341,
+      "return_frames": 270
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-012/episode-2030022001.zip",
+      "scene_seed": 2030022001,
+      "world_seed": 20710112,
+      "split": "train",
+      "group": 30,
+      "frames": 610,
+      "outbound_frames": 341,
+      "return_frames": 269
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-019/episode-2030029001.zip",
+      "scene_seed": 2030029001,
+      "world_seed": 20710119,
+      "split": "train",
+      "group": 30,
+      "frames": 610,
+      "outbound_frames": 343,
+      "return_frames": 267
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-028/episode-2030038001.zip",
+      "scene_seed": 2030038001,
+      "world_seed": 20710128,
+      "split": "train",
+      "group": 30,
+      "frames": 608,
+      "outbound_frames": 347,
+      "return_frames": 261
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-021/episode-2030031001.zip",
+      "scene_seed": 2030031001,
+      "world_seed": 20710121,
+      "split": "train",
+      "group": 30,
+      "frames": 611,
+      "outbound_frames": 341,
+      "return_frames": 270
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-001/episode-2030011001.zip",
+      "scene_seed": 2030011001,
+      "world_seed": 20710101,
+      "split": "train",
+      "group": 30,
+      "frames": 610,
+      "outbound_frames": 347,
+      "return_frames": 263
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-024/episode-2030034001.zip",
+      "scene_seed": 2030034001,
+      "world_seed": 20710124,
+      "split": "train",
+      "group": 30,
+      "frames": 609,
+      "outbound_frames": 337,
+      "return_frames": 272
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-005/episode-2030015001.zip",
+      "scene_seed": 2030015001,
+      "world_seed": 20710105,
+      "split": "train",
+      "group": 30,
+      "frames": 610,
+      "outbound_frames": 346,
+      "return_frames": 264
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-000/episode-2030010001.zip",
+      "scene_seed": 2030010001,
+      "world_seed": 20710100,
+      "split": "train",
+      "group": 30,
+      "frames": 608,
+      "outbound_frames": 338,
+      "return_frames": 270
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-020/episode-2030030001.zip",
+      "scene_seed": 2030030001,
+      "world_seed": 20710120,
+      "split": "train",
+      "group": 30,
+      "frames": 608,
+      "outbound_frames": 338,
+      "return_frames": 270
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-010/episode-2030020001.zip",
+      "scene_seed": 2030020001,
+      "world_seed": 20710110,
+      "split": "train",
+      "group": 30,
+      "frames": 610,
+      "outbound_frames": 345,
+      "return_frames": 265
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-030/episode-2030040001.zip",
+      "scene_seed": 2030040001,
+      "world_seed": 20710130,
+      "split": "train",
+      "group": 30,
+      "frames": 608,
+      "outbound_frames": 350,
+      "return_frames": 258
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-017/episode-2030027001.zip",
+      "scene_seed": 2030027001,
+      "world_seed": 20710117,
+      "split": "train",
+      "group": 30,
+      "frames": 610,
+      "outbound_frames": 336,
+      "return_frames": 274
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-009/episode-2030019002.zip",
+      "scene_seed": 2030019002,
+      "world_seed": 20710109,
+      "split": "train",
+      "group": 60,
+      "frames": 886,
+      "outbound_frames": 478,
+      "return_frames": 408
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-016/episode-2030026002.zip",
+      "scene_seed": 2030026002,
+      "world_seed": 20710116,
+      "split": "train",
+      "group": 60,
+      "frames": 886,
+      "outbound_frames": 481,
+      "return_frames": 405
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-014/episode-2030024002.zip",
+      "scene_seed": 2030024002,
+      "world_seed": 20710114,
+      "split": "train",
+      "group": 60,
+      "frames": 889,
+      "outbound_frames": 489,
+      "return_frames": 400
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-026/episode-2030036002.zip",
+      "scene_seed": 2030036002,
+      "world_seed": 20710126,
+      "split": "train",
+      "group": 60,
+      "frames": 889,
+      "outbound_frames": 479,
+      "return_frames": 410
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-012/episode-2030022002.zip",
+      "scene_seed": 2030022002,
+      "world_seed": 20710112,
+      "split": "train",
+      "group": 60,
+      "frames": 888,
+      "outbound_frames": 481,
+      "return_frames": 407
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-019/episode-2030029002.zip",
+      "scene_seed": 2030029002,
+      "world_seed": 20710119,
+      "split": "train",
+      "group": 60,
+      "frames": 886,
+      "outbound_frames": 480,
+      "return_frames": 406
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-028/episode-2030038002.zip",
+      "scene_seed": 2030038002,
+      "world_seed": 20710128,
+      "split": "train",
+      "group": 60,
+      "frames": 886,
+      "outbound_frames": 483,
+      "return_frames": 403
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-021/episode-2030031002.zip",
+      "scene_seed": 2030031002,
+      "world_seed": 20710121,
+      "split": "train",
+      "group": 60,
+      "frames": 887,
+      "outbound_frames": 477,
+      "return_frames": 410
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-001/episode-2030011002.zip",
+      "scene_seed": 2030011002,
+      "world_seed": 20710101,
+      "split": "train",
+      "group": 60,
+      "frames": 888,
+      "outbound_frames": 478,
+      "return_frames": 410
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-024/episode-2030034002.zip",
+      "scene_seed": 2030034002,
+      "world_seed": 20710124,
+      "split": "train",
+      "group": 60,
+      "frames": 888,
+      "outbound_frames": 482,
+      "return_frames": 406
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-005/episode-2030015002.zip",
+      "scene_seed": 2030015002,
+      "world_seed": 20710105,
+      "split": "train",
+      "group": 60,
+      "frames": 888,
+      "outbound_frames": 478,
+      "return_frames": 410
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-000/episode-2030010002.zip",
+      "scene_seed": 2030010002,
+      "world_seed": 20710100,
+      "split": "train",
+      "group": 60,
+      "frames": 888,
+      "outbound_frames": 488,
+      "return_frames": 400
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-020/episode-2030030002.zip",
+      "scene_seed": 2030030002,
+      "world_seed": 20710120,
+      "split": "train",
+      "group": 60,
+      "frames": 886,
+      "outbound_frames": 476,
+      "return_frames": 410
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-010/episode-2030020002.zip",
+      "scene_seed": 2030020002,
+      "world_seed": 20710110,
+      "split": "train",
+      "group": 60,
+      "frames": 886,
+      "outbound_frames": 476,
+      "return_frames": 410
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-030/episode-2030040002.zip",
+      "scene_seed": 2030040002,
+      "world_seed": 20710130,
+      "split": "train",
+      "group": 60,
+      "frames": 886,
+      "outbound_frames": 474,
+      "return_frames": 412
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-017/episode-2030027002.zip",
+      "scene_seed": 2030027002,
+      "world_seed": 20710117,
+      "split": "train",
+      "group": 60,
+      "frames": 886,
+      "outbound_frames": 476,
+      "return_frames": 410
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-009/episode-2030019003.zip",
+      "scene_seed": 2030019003,
+      "world_seed": 20710109,
+      "split": "train",
+      "group": 100,
+      "frames": 1257,
+      "outbound_frames": 666,
+      "return_frames": 591
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-016/episode-2030026003.zip",
+      "scene_seed": 2030026003,
+      "world_seed": 20710116,
+      "split": "train",
+      "group": 100,
+      "frames": 1257,
+      "outbound_frames": 664,
+      "return_frames": 593
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-014/episode-2030024003.zip",
+      "scene_seed": 2030024003,
+      "world_seed": 20710114,
+      "split": "train",
+      "group": 100,
+      "frames": 1258,
+      "outbound_frames": 664,
+      "return_frames": 594
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-026/episode-2030036003.zip",
+      "scene_seed": 2030036003,
+      "world_seed": 20710126,
+      "split": "train",
+      "group": 100,
+      "frames": 1257,
+      "outbound_frames": 662,
+      "return_frames": 595
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-012/episode-2030022003.zip",
+      "scene_seed": 2030022003,
+      "world_seed": 20710112,
+      "split": "train",
+      "group": 100,
+      "frames": 1257,
+      "outbound_frames": 660,
+      "return_frames": 597
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-019/episode-2030029003.zip",
+      "scene_seed": 2030029003,
+      "world_seed": 20710119,
+      "split": "train",
+      "group": 100,
+      "frames": 1258,
+      "outbound_frames": 666,
+      "return_frames": 592
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-028/episode-2030038003.zip",
+      "scene_seed": 2030038003,
+      "world_seed": 20710128,
+      "split": "train",
+      "group": 100,
+      "frames": 1257,
+      "outbound_frames": 672,
+      "return_frames": 585
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-021/episode-2030031003.zip",
+      "scene_seed": 2030031003,
+      "world_seed": 20710121,
+      "split": "train",
+      "group": 100,
+      "frames": 1257,
+      "outbound_frames": 665,
+      "return_frames": 592
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-001/episode-2030011003.zip",
+      "scene_seed": 2030011003,
+      "world_seed": 20710101,
+      "split": "train",
+      "group": 100,
+      "frames": 1256,
+      "outbound_frames": 665,
+      "return_frames": 591
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-024/episode-2030034003.zip",
+      "scene_seed": 2030034003,
+      "world_seed": 20710124,
+      "split": "train",
+      "group": 100,
+      "frames": 1256,
+      "outbound_frames": 668,
+      "return_frames": 588
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-005/episode-2030015003.zip",
+      "scene_seed": 2030015003,
+      "world_seed": 20710105,
+      "split": "train",
+      "group": 100,
+      "frames": 1257,
+      "outbound_frames": 669,
+      "return_frames": 588
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-000/episode-2030010003.zip",
+      "scene_seed": 2030010003,
+      "world_seed": 20710100,
+      "split": "train",
+      "group": 100,
+      "frames": 1256,
+      "outbound_frames": 672,
+      "return_frames": 584
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-020/episode-2030030003.zip",
+      "scene_seed": 2030030003,
+      "world_seed": 20710120,
+      "split": "train",
+      "group": 100,
+      "frames": 1257,
+      "outbound_frames": 670,
+      "return_frames": 587
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-010/episode-2030020003.zip",
+      "scene_seed": 2030020003,
+      "world_seed": 20710110,
+      "split": "train",
+      "group": 100,
+      "frames": 1257,
+      "outbound_frames": 664,
+      "return_frames": 593
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-030/episode-2030040003.zip",
+      "scene_seed": 2030040003,
+      "world_seed": 20710130,
+      "split": "train",
+      "group": 100,
+      "frames": 1257,
+      "outbound_frames": 670,
+      "return_frames": 587
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/train/worker-017/episode-2030027003.zip",
+      "scene_seed": 2030027003,
+      "world_seed": 20710117,
+      "split": "train",
+      "group": 100,
+      "frames": 1258,
+      "outbound_frames": 662,
+      "return_frames": 596
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/validation/worker-000/episode-2030110000.zip",
+      "scene_seed": 2030110000,
+      "world_seed": 20711100,
+      "split": "validation",
+      "group": 10,
+      "frames": 217,
+      "outbound_frames": 171,
+      "return_frames": 46
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/validation/worker-000/episode-2030110005.zip",
+      "scene_seed": 2030110005,
+      "world_seed": 20711100,
+      "split": "validation",
+      "group": 10,
+      "frames": 233,
+      "outbound_frames": 184,
+      "return_frames": 49
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/validation/worker-001/episode-2030111000.zip",
+      "scene_seed": 2030111000,
+      "world_seed": 20711101,
+      "split": "validation",
+      "group": 10,
+      "frames": 234,
+      "outbound_frames": 184,
+      "return_frames": 50
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/validation/worker-001/episode-2030111005.zip",
+      "scene_seed": 2030111005,
+      "world_seed": 20711101,
+      "split": "validation",
+      "group": 10,
+      "frames": 215,
+      "outbound_frames": 170,
+      "return_frames": 45
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/validation/worker-002/episode-2030112000.zip",
+      "scene_seed": 2030112000,
+      "world_seed": 20711102,
+      "split": "validation",
+      "group": 10,
+      "frames": 242,
+      "outbound_frames": 201,
+      "return_frames": 41
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/validation/worker-002/episode-2030112005.zip",
+      "scene_seed": 2030112005,
+      "world_seed": 20711102,
+      "split": "validation",
+      "group": 10,
+      "frames": 219,
+      "outbound_frames": 174,
+      "return_frames": 45
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/validation/worker-003/episode-2030113000.zip",
+      "scene_seed": 2030113000,
+      "world_seed": 20711103,
+      "split": "validation",
+      "group": 10,
+      "frames": 239,
+      "outbound_frames": 192,
+      "return_frames": 47
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/validation/worker-003/episode-2030113005.zip",
+      "scene_seed": 2030113005,
+      "world_seed": 20711103,
+      "split": "validation",
+      "group": 10,
+      "frames": 228,
+      "outbound_frames": 177,
+      "return_frames": 51
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/validation/worker-000/episode-2030110001.zip",
+      "scene_seed": 2030110001,
+      "world_seed": 20711100,
+      "split": "validation",
+      "group": 30,
+      "frames": 608,
+      "outbound_frames": 336,
+      "return_frames": 272
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/validation/worker-001/episode-2030111001.zip",
+      "scene_seed": 2030111001,
+      "world_seed": 20711101,
+      "split": "validation",
+      "group": 30,
+      "frames": 611,
+      "outbound_frames": 350,
+      "return_frames": 261
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/validation/worker-002/episode-2030112001.zip",
+      "scene_seed": 2030112001,
+      "world_seed": 20711102,
+      "split": "validation",
+      "group": 30,
+      "frames": 610,
+      "outbound_frames": 338,
+      "return_frames": 272
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/validation/worker-003/episode-2030113001.zip",
+      "scene_seed": 2030113001,
+      "world_seed": 20711103,
+      "split": "validation",
+      "group": 30,
+      "frames": 610,
+      "outbound_frames": 336,
+      "return_frames": 274
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/validation/worker-000/episode-2030110002.zip",
+      "scene_seed": 2030110002,
+      "world_seed": 20711100,
+      "split": "validation",
+      "group": 60,
+      "frames": 887,
+      "outbound_frames": 478,
+      "return_frames": 409
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/validation/worker-001/episode-2030111002.zip",
+      "scene_seed": 2030111002,
+      "world_seed": 20711101,
+      "split": "validation",
+      "group": 60,
+      "frames": 886,
+      "outbound_frames": 488,
+      "return_frames": 398
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/validation/worker-002/episode-2030112002.zip",
+      "scene_seed": 2030112002,
+      "world_seed": 20711102,
+      "split": "validation",
+      "group": 60,
+      "frames": 888,
+      "outbound_frames": 483,
+      "return_frames": 405
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/validation/worker-003/episode-2030113002.zip",
+      "scene_seed": 2030113002,
+      "world_seed": 20711103,
+      "split": "validation",
+      "group": 60,
+      "frames": 889,
+      "outbound_frames": 475,
+      "return_frames": 414
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/validation/worker-000/episode-2030110003.zip",
+      "scene_seed": 2030110003,
+      "world_seed": 20711100,
+      "split": "validation",
+      "group": 100,
+      "frames": 1258,
+      "outbound_frames": 666,
+      "return_frames": 592
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/validation/worker-001/episode-2030111003.zip",
+      "scene_seed": 2030111003,
+      "world_seed": 20711101,
+      "split": "validation",
+      "group": 100,
+      "frames": 1258,
+      "outbound_frames": 662,
+      "return_frames": 596
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/validation/worker-002/episode-2030112003.zip",
+      "scene_seed": 2030112003,
+      "world_seed": 20711102,
+      "split": "validation",
+      "group": 100,
+      "frames": 1256,
+      "outbound_frames": 665,
+      "return_frames": 591
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/validation/worker-003/episode-2030113003.zip",
+      "scene_seed": 2030113003,
+      "world_seed": 20711103,
+      "split": "validation",
+      "group": 100,
+      "frames": 1256,
+      "outbound_frames": 670,
+      "return_frames": 586
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/test/worker-000/episode-2030210000.zip",
+      "scene_seed": 2030210000,
+      "world_seed": 20712100,
+      "split": "test",
+      "group": 10,
+      "frames": 220,
+      "outbound_frames": 169,
+      "return_frames": 51
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/test/worker-000/episode-2030210005.zip",
+      "scene_seed": 2030210005,
+      "world_seed": 20712100,
+      "split": "test",
+      "group": 10,
+      "frames": 225,
+      "outbound_frames": 185,
+      "return_frames": 40
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/test/worker-001/episode-2030211000.zip",
+      "scene_seed": 2030211000,
+      "world_seed": 20712101,
+      "split": "test",
+      "group": 10,
+      "frames": 240,
+      "outbound_frames": 198,
+      "return_frames": 42
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/test/worker-001/episode-2030211005.zip",
+      "scene_seed": 2030211005,
+      "world_seed": 20712101,
+      "split": "test",
+      "group": 10,
+      "frames": 220,
+      "outbound_frames": 174,
+      "return_frames": 46
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/test/worker-002/episode-2030212000.zip",
+      "scene_seed": 2030212000,
+      "world_seed": 20712102,
+      "split": "test",
+      "group": 10,
+      "frames": 225,
+      "outbound_frames": 177,
+      "return_frames": 48
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/test/worker-002/episode-2030212005.zip",
+      "scene_seed": 2030212005,
+      "world_seed": 20712102,
+      "split": "test",
+      "group": 10,
+      "frames": 228,
+      "outbound_frames": 187,
+      "return_frames": 41
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/test/worker-003/episode-2030213000.zip",
+      "scene_seed": 2030213000,
+      "world_seed": 20712103,
+      "split": "test",
+      "group": 10,
+      "frames": 237,
+      "outbound_frames": 193,
+      "return_frames": 44
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/test/worker-003/episode-2030213005.zip",
+      "scene_seed": 2030213005,
+      "world_seed": 20712103,
+      "split": "test",
+      "group": 10,
+      "frames": 230,
+      "outbound_frames": 187,
+      "return_frames": 43
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/test/worker-000/episode-2030210001.zip",
+      "scene_seed": 2030210001,
+      "world_seed": 20712100,
+      "split": "test",
+      "group": 30,
+      "frames": 608,
+      "outbound_frames": 342,
+      "return_frames": 266
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/test/worker-001/episode-2030211001.zip",
+      "scene_seed": 2030211001,
+      "world_seed": 20712101,
+      "split": "test",
+      "group": 30,
+      "frames": 608,
+      "outbound_frames": 344,
+      "return_frames": 264
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/test/worker-002/episode-2030212001.zip",
+      "scene_seed": 2030212001,
+      "world_seed": 20712102,
+      "split": "test",
+      "group": 30,
+      "frames": 608,
+      "outbound_frames": 342,
+      "return_frames": 266
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/test/worker-003/episode-2030213001.zip",
+      "scene_seed": 2030213001,
+      "world_seed": 20712103,
+      "split": "test",
+      "group": 30,
+      "frames": 608,
+      "outbound_frames": 342,
+      "return_frames": 266
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/test/worker-000/episode-2030210002.zip",
+      "scene_seed": 2030210002,
+      "world_seed": 20712100,
+      "split": "test",
+      "group": 60,
+      "frames": 886,
+      "outbound_frames": 481,
+      "return_frames": 405
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/test/worker-001/episode-2030211002.zip",
+      "scene_seed": 2030211002,
+      "world_seed": 20712101,
+      "split": "test",
+      "group": 60,
+      "frames": 889,
+      "outbound_frames": 480,
+      "return_frames": 409
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/test/worker-002/episode-2030212002.zip",
+      "scene_seed": 2030212002,
+      "world_seed": 20712102,
+      "split": "test",
+      "group": 60,
+      "frames": 886,
+      "outbound_frames": 475,
+      "return_frames": 411
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/test/worker-003/episode-2030213002.zip",
+      "scene_seed": 2030213002,
+      "world_seed": 20712103,
+      "split": "test",
+      "group": 60,
+      "frames": 889,
+      "outbound_frames": 477,
+      "return_frames": 412
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/test/worker-000/episode-2030210003.zip",
+      "scene_seed": 2030210003,
+      "world_seed": 20712100,
+      "split": "test",
+      "group": 100,
+      "frames": 1257,
+      "outbound_frames": 665,
+      "return_frames": 592
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/test/worker-001/episode-2030211003.zip",
+      "scene_seed": 2030211003,
+      "world_seed": 20712101,
+      "split": "test",
+      "group": 100,
+      "frames": 1257,
+      "outbound_frames": 663,
+      "return_frames": 594
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/test/worker-002/episode-2030212003.zip",
+      "scene_seed": 2030212003,
+      "world_seed": 20712102,
+      "split": "test",
+      "group": 100,
+      "frames": 1257,
+      "outbound_frames": 674,
+      "return_frames": 583
+    },
+    {
+      "path": "/share/project/zhoubowen/zhy/zyf/data/t1-screened-hzw7nYp7/test/worker-003/episode-2030213003.zip",
+      "scene_seed": 2030213003,
+      "world_seed": 20712103,
+      "split": "test",
+      "group": 100,
+      "frames": 1257,
+      "outbound_frames": 668,
+      "return_frames": 589
+    }
+  ]
+}

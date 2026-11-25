@@ -1,0 +1,262 @@
+{
+  "protocol": "t1_dual_enclosure",
+  "scenario_seed": 2083010030,
+  "world_seed": 21430100,
+  "distance": 30,
+  "target_spacing": 12,
+  "candidate_positions": [
+    [
+      3578.5,
+      -5459.5
+    ],
+    [
+      3578.5,
+      -5483.5
+    ]
+  ],
+  "arena_origin": [
+    3578,
+    76,
+    -5472
+  ],
+  "spawn": [
+    3565.5,
+    -5471.5
+  ],
+  "endpoint": [
+    3605.9954541697352,
+    -5471.5
+  ],
+  "outbound_room_order": [
+    -12,
+    12
+  ],
+  "corridor": [
+    3572.5,
+    -5471.5
+  ],
+  "return_pose": {
+    "x": 3605.9954541697352,
+    "y": 76,
+    "z": -5471.5,
+    "yaw": 9.620930086177509,
+    "pitch": 0.0
+  },
+  "setup_revision": "remote_respawn_v1",
+  "protection_commands": [
+    "/gamerule doMobSpawning false",
+    "/kill @e[type=!player]",
+    "/time set day",
+    "/gamerule doDaylightCycle false",
+    "/gamerule doWeatherCycle false",
+    "/weather clear",
+    "/spawnpoint @p 3962 160 -5088",
+    "/effect give @p resistance 99999 4 true",
+    "/effect give @p water_breathing 99999 0 true"
+  ],
+  "respawn_pad_commands": [
+    "/forceload add 3961 -5089 3963 -5087",
+    "/fill 3961 159 -5089 3963 159 -5087 minecraft:stone",
+    "/fill 3961 160 -5089 3963 162 -5087 minecraft:air"
+  ],
+  "respawn_point": [
+    3962,
+    160,
+    -5088
+  ],
+  "optional_effects": true,
+  "goal_slot": 1,
+  "landmark": [
+    3578.5,
+    -5483.5
+  ],
+  "walls": [
+    [
+      3575,
+      76,
+      -5457,
+      3581,
+      80,
+      -5457
+    ],
+    [
+      3575,
+      76,
+      -5463,
+      3581,
+      80,
+      -5463
+    ],
+    [
+      3581,
+      76,
+      -5463,
+      3581,
+      80,
+      -5457
+    ],
+    [
+      3575,
+      76,
+      -5458,
+      3575,
+      80,
+      -5457
+    ],
+    [
+      3575,
+      76,
+      -5463,
+      3575,
+      80,
+      -5462
+    ],
+    [
+      3575,
+      81,
+      -5463,
+      3581,
+      81,
+      -5457
+    ],
+    [
+      3576,
+      81,
+      -5460,
+      3576,
+      81,
+      -5460
+    ],
+    [
+      3578,
+      76,
+      -5460,
+      3578,
+      78,
+      -5460
+    ],
+    [
+      3575,
+      76,
+      -5481,
+      3581,
+      80,
+      -5481
+    ],
+    [
+      3575,
+      76,
+      -5487,
+      3581,
+      80,
+      -5487
+    ],
+    [
+      3581,
+      76,
+      -5487,
+      3581,
+      80,
+      -5481
+    ],
+    [
+      3575,
+      76,
+      -5482,
+      3575,
+      80,
+      -5481
+    ],
+    [
+      3575,
+      76,
+      -5487,
+      3575,
+      80,
+      -5486
+    ],
+    [
+      3575,
+      81,
+      -5487,
+      3581,
+      81,
+      -5481
+    ],
+    [
+      3576,
+      81,
+      -5484,
+      3576,
+      81,
+      -5484
+    ],
+    [
+      3578,
+      76,
+      -5484,
+      3578,
+      78,
+      -5484
+    ]
+  ],
+  "room_frame_indices": [],
+  "return_limit": 936,
+  "teacher_targets": [
+    [
+      3572.5,
+      -5471.5
+    ],
+    [
+      3572.5,
+      -5483.5
+    ],
+    [
+      3576.3,
+      -5483.5
+    ]
+  ],
+  "path_len_out": 97.96273747962712,
+  "cue_gold_pixels": [
+    0,
+    12219
+  ],
+  "endpoint_frame_sha256": [
+    "2301f3c6dabb9eb731163faeeaceeb3e36a661a0432764e3854ebb553ac9236f",
+    "5e752ace71c1b38597bdf14039bd9d4634d5e0d9bcea8d70e45859cd62d6098d",
+    "6b5356ae15182573f33cfe86a20b605e7a04d588a9d9c7ed82cdbeab2a10acea",
+    "85aca7d44bf3b4bc8293329ba8771500841026268ce023841c48ef81dfde8e2b",
+    "76270b0e5df62fa9a276b4c4e2d4d696a9cb8c68ddb4962fd3d6703aeeac0f96",
+    "b66a008124436abbba3f80842723947e9fbdc12acbd6082f21c04ad51ee1b584",
+    "a654287bbba438f31bcd36150d5a99ec36d39db5eebb67967b290af61bfec39e",
+    "a4c549f309962e5a8113b278e81dc80b926a4e0df9cd8c69760df5e7e33c0699",
+    "0a51de3a0a53ede28935b118ed3c3c5668f4b6660b28332bbdc9b44a1afe744f",
+    "4d9c4b1a409817e76e7529b6565cd16ce1dd1eb7ff3d1158f94656ec5fe36537",
+    "6f110f23b2e0ecc1acbfe98c5e4907c758aceb2d51da6599e5221f6565346878",
+    "3d665a8c7812fa2534fa8236b656be97fb487c3f993f93de5ba9b8dc89f027b1",
+    "76e9f82c67ec514fe9ca05e6995c68f5fecd1e93c7efa26d393d43fa69f48e01",
+    "07a25998f854b5a9cce675fe99e068726d0981a4ac84ba4e8628136e2d42c73b",
+    "eae6ff3b109adc9604aad2d5e7e3a740b45bd176621ef581e479d91caf9836a0",
+    "7ce500b4555c179056a8294a6282e593abecda4a2e606c5788105118c29bdc9f",
+    "acf945eafdd23552bfc6ba98edcf43e5850a5c9548b72fd31aa49b82e17479f3",
+    "308ef0099b58dfef183b509f30dd7c341e6634770c20c78fccf56fc23ad9bad2",
+    "7a040f7dd50098aa31d753c8766d0c507966f5ad1b688eec57f3263c926ee2a6",
+    "4d9c13c2c9ece847fb1fcdcd872e12638f14de7a2d073b2c784e14231bd71a74",
+    "094f99075aa8884b7895d4a88cb4b3f8fd8808a1e61698dff261e9cdb4a06b8d",
+    "3672bf91f54bc73943e9be090246ea44bbbbf3f44d5893feea852f0eadaa2964",
+    "46a1792da7003d28c82975ea89be6b176fc22c51ea881b0c6333311f071a3210",
+    "c6a7f03e38998152f53ae36ff7409b77b168db92f143d6cc07bb1b38cb9010d5",
+    "e67c500e8502698846daa7b4063a090edc612eee17f496722ced385cf40b4a3c",
+    "4a36599030fd000484fb5684d0066b62426da658f033645243eafe7d4d6cb9c9",
+    "2cf6f636684c8d6b513c989f78a1598a00229a31bbb34bab444a8bd43cb91ac0",
+    "94fbae144d6f06759d0acb6c696c767f5fbeaaf00a152418ed804d92d482c98d",
+    "e7a96950c985d5747cb535942ecdc91403ecdda4025f2a4cb66d0a30d31dacc1",
+    "8447d4aa1f347b22713802bea4549881fb78a7b880c320d7da9c25c94185cea6",
+    "d3674c59324c7b0a7c8a709bee0fb8687d76d9ca6629f410cd101de46e3e7ec1",
+    "81e066cbef2ad6b69976ae95cf6f14bc976bf81d5adc847cae9d0d454e5f048d",
+    "2e332985f9087a60fa3247469bd66977c37bae9df8e01cec992c6ae7e459fd3b",
+    "3c6428c66bc3cdd0cb39570640940d0d568bff282f3635a75f1996b165cba611",
+    "d9dbde5a647b77cabb4e1c3dd7e83652156f546d9221873cdeeeae3c00043470",
+    "66d9835077f2f2ddec93e49475f0baa72886d59421e0701423abdcbad26c28c4"
+  ]
+}

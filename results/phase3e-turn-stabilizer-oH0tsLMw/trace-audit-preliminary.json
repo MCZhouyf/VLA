@@ -1,0 +1,723 @@
+{
+  "counts": {
+    "successful": 86,
+    "failed": 9,
+    "failed_with_override": 8,
+    "successful_with_override": 4
+  },
+  "episodes": [
+    {
+      "distance": 10,
+      "seed": 2086000002,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 10,
+      "seed": 2086000001,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 10,
+      "seed": 2086000000,
+      "original_success": false,
+      "original_reason": "budget",
+      "first_intervention": {
+        "step": 98,
+        "waypoint": "waypoint: ahead 0 deg, 3 blocks",
+        "policy_yaw": -10.0
+      }
+    },
+    {
+      "distance": 100,
+      "seed": 2086000002,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 100,
+      "seed": 2086000001,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 100,
+      "seed": 2086000000,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 10,
+      "seed": 2086000004,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 10,
+      "seed": 2086000003,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 10,
+      "seed": 2086000005,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 100,
+      "seed": 2086000004,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 100,
+      "seed": 2086000003,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 100,
+      "seed": 2086000005,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 10,
+      "seed": 2086000006,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 10,
+      "seed": 2086000007,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 10,
+      "seed": 2086000008,
+      "original_success": false,
+      "original_reason": "budget",
+      "first_intervention": {
+        "step": 97,
+        "waypoint": "waypoint: ahead 0 deg, 3 blocks",
+        "policy_yaw": -10.0
+      }
+    },
+    {
+      "distance": 100,
+      "seed": 2086000006,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 100,
+      "seed": 2086000007,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 100,
+      "seed": 2086000008,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 10,
+      "seed": 2086000011,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": {
+        "step": 104,
+        "waypoint": "waypoint: ahead 0 deg, 3 blocks",
+        "policy_yaw": -10.0
+      }
+    },
+    {
+      "distance": 10,
+      "seed": 2086000009,
+      "original_success": false,
+      "original_reason": "budget",
+      "first_intervention": {
+        "step": 92,
+        "waypoint": "waypoint: ahead 0 deg, 3 blocks",
+        "policy_yaw": -10.0
+      }
+    },
+    {
+      "distance": 10,
+      "seed": 2086000010,
+      "original_success": false,
+      "original_reason": "budget",
+      "first_intervention": {
+        "step": 104,
+        "waypoint": "waypoint: ahead 0 deg, 3 blocks",
+        "policy_yaw": -10.0
+      }
+    },
+    {
+      "distance": 100,
+      "seed": 2086000011,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 100,
+      "seed": 2086000009,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 100,
+      "seed": 2086000010,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 10,
+      "seed": 2086000013,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": {
+        "step": 85,
+        "waypoint": "waypoint: ahead 0 deg, 3 blocks",
+        "policy_yaw": -10.0
+      }
+    },
+    {
+      "distance": 10,
+      "seed": 2086000014,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": {
+        "step": 100,
+        "waypoint": "waypoint: ahead 0 deg, 3 blocks",
+        "policy_yaw": -10.0
+      }
+    },
+    {
+      "distance": 10,
+      "seed": 2086000012,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": {
+        "step": 86,
+        "waypoint": "waypoint: ahead 0 deg, 3 blocks",
+        "policy_yaw": -10.0
+      }
+    },
+    {
+      "distance": 100,
+      "seed": 2086000013,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 100,
+      "seed": 2086000012,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 100,
+      "seed": 2086000014,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 10,
+      "seed": 2086000015,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 10,
+      "seed": 2086000016,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 10,
+      "seed": 2086000017,
+      "original_success": false,
+      "original_reason": "budget",
+      "first_intervention": {
+        "step": 88,
+        "waypoint": "waypoint: ahead 0 deg, 3 blocks",
+        "policy_yaw": -10.0
+      }
+    },
+    {
+      "distance": 100,
+      "seed": 2086000016,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 100,
+      "seed": 2086000015,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 100,
+      "seed": 2086000017,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 10,
+      "seed": 2086000020,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 10,
+      "seed": 2086000019,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 10,
+      "seed": 2086000018,
+      "original_success": false,
+      "original_reason": "budget",
+      "first_intervention": {
+        "step": 92,
+        "waypoint": "waypoint: ahead 0 deg, 3 blocks",
+        "policy_yaw": -10.0
+      }
+    },
+    {
+      "distance": 100,
+      "seed": 2086000020,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 100,
+      "seed": 2086000019,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 100,
+      "seed": 2086000018,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 10,
+      "seed": 2086000022,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 10,
+      "seed": 2086000023,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 10,
+      "seed": 2086000021,
+      "original_success": false,
+      "original_reason": "budget",
+      "first_intervention": {
+        "step": 105,
+        "waypoint": "waypoint: ahead 0 deg, 3 blocks",
+        "policy_yaw": -10.0
+      }
+    },
+    {
+      "distance": 100,
+      "seed": 2086000023,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 100,
+      "seed": 2086000022,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 30,
+      "seed": 2086000000,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 30,
+      "seed": 2086000001,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 30,
+      "seed": 2086000002,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 60,
+      "seed": 2086000000,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 60,
+      "seed": 2086000002,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 60,
+      "seed": 2086000001,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 30,
+      "seed": 2086000004,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 30,
+      "seed": 2086000005,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 30,
+      "seed": 2086000003,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 60,
+      "seed": 2086000004,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 60,
+      "seed": 2086000003,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 60,
+      "seed": 2086000005,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 30,
+      "seed": 2086000006,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 30,
+      "seed": 2086000007,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 30,
+      "seed": 2086000008,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 60,
+      "seed": 2086000006,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 60,
+      "seed": 2086000007,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 60,
+      "seed": 2086000008,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 30,
+      "seed": 2086000009,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 30,
+      "seed": 2086000010,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 30,
+      "seed": 2086000011,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 60,
+      "seed": 2086000009,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 60,
+      "seed": 2086000010,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 60,
+      "seed": 2086000011,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 30,
+      "seed": 2086000013,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 30,
+      "seed": 2086000012,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 30,
+      "seed": 2086000014,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 60,
+      "seed": 2086000012,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 60,
+      "seed": 2086000013,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 60,
+      "seed": 2086000014,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 30,
+      "seed": 2086000017,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 30,
+      "seed": 2086000015,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 30,
+      "seed": 2086000016,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 60,
+      "seed": 2086000017,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 60,
+      "seed": 2086000015,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 60,
+      "seed": 2086000016,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 30,
+      "seed": 2086000020,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 30,
+      "seed": 2086000018,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 30,
+      "seed": 2086000019,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 60,
+      "seed": 2086000020,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 60,
+      "seed": 2086000018,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 60,
+      "seed": 2086000019,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 30,
+      "seed": 2086000023,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 30,
+      "seed": 2086000022,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 30,
+      "seed": 2086000021,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 60,
+      "seed": 2086000022,
+      "original_success": true,
+      "original_reason": "reached",
+      "first_intervention": null
+    },
+    {
+      "distance": 60,
+      "seed": 2086000023,
+      "original_success": false,
+      "original_reason": "budget",
+      "first_intervention": {
+        "step": 366,
+        "waypoint": "waypoint: ahead 0 deg, 4 blocks",
+        "policy_yaw": -10.0
+      }
+    },
+    {
+      "distance": 60,
+      "seed": 2086000021,
+      "original_success": false,
+      "original_reason": "budget",
+      "first_intervention": null
+    }
+  ]
+}

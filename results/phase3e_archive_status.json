@@ -1,0 +1,71 @@
+{
+  "capture_started_at": "2026-11-26T07:15:38+08:00",
+  "capture_finished_at": "2026-11-26T07:15:50+08:00",
+  "original_oracle": {
+    "10": {
+      "completed": 30,
+      "successes": 22,
+      "deaths": 0,
+      "pose_jumps": 0,
+      "planned": 30
+    },
+    "30": {
+      "completed": 30,
+      "successes": 30,
+      "deaths": 0,
+      "pose_jumps": 0,
+      "planned": 30
+    },
+    "60": {
+      "completed": 30,
+      "successes": 28,
+      "deaths": 0,
+      "pose_jumps": 0,
+      "planned": 30
+    },
+    "100": {
+      "completed": 30,
+      "successes": 28,
+      "deaths": 0,
+      "pose_jumps": 0,
+      "planned": 30
+    }
+  },
+  "stabilized_oracle": {
+    "10": {
+      "completed": 30,
+      "successes": 30,
+      "deaths": 0,
+      "pose_jumps": 0,
+      "planned": 30
+    },
+    "30": {
+      "completed": 15,
+      "successes": 15,
+      "deaths": 0,
+      "pose_jumps": 0,
+      "planned": 30
+    },
+    "60": {
+      "completed": 15,
+      "successes": 15,
+      "deaths": 0,
+      "pose_jumps": 0,
+      "planned": 30
+    },
+    "100": {
+      "completed": 30,
+      "successes": 30,
+      "deaths": 0,
+      "pose_jumps": 0,
+      "planned": 30
+    }
+  },
+  "phase_b_30_closed_loop": "not_started",
+  "phase_b_30_decision": "pending",
+  "continued_recovery_rows": 0,
+  "remote_files": 5070,
+  "remote_bytes": 119720499,
+  "result_files": 5090,
+  "result_bytes": 120296558
+}

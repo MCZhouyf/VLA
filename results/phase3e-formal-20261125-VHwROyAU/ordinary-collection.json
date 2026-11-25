@@ -1,0 +1,47 @@
+{
+  "snapshot": "2026-11-25T09:36:12.864592+08:00",
+  "roles": {
+    "train": {
+      "workers": 24,
+      "episodes": 966,
+      "frames": 155777,
+      "frames_by_group": {
+        "10": 32691,
+        "30": 26589,
+        "60": 33551,
+        "100": 42603,
+        "visible": 20343
+      },
+      "return_labels": 55070
+    },
+    "validation": {
+      "workers": 4,
+      "episodes": 38,
+      "frames": 20360,
+      "frames_by_group": {
+        "10": 2724,
+        "30": 4433,
+        "60": 5592,
+        "100": 7096,
+        "visible": 515
+      },
+      "return_labels": 5930
+    },
+    "test": {
+      "workers": 4,
+      "episodes": 40,
+      "frames": 20392,
+      "frames_by_group": {
+        "10": 2724,
+        "30": 4432,
+        "60": 5593,
+        "100": 7096,
+        "visible": 547
+      },
+      "return_labels": 6016
+    }
+  },
+  "prior_train_exit_status": 1,
+  "same_seed_retry_exit_status": 0,
+  "data_stage": "collection"
+}

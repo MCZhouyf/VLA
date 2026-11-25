@@ -6,7 +6,7 @@ import torch
 from torch import nn
 from torch.nn import functional as F
 
-from t1_spatial import SpatialMemory
+from t1_spatial import SpatialMemory, pool_vision_grid
 
 
 HISTORY = {"no_memory": 2, "long": 8, "spatial": 2}
@@ -140,6 +140,14 @@ class T1Policy(nn.Module):
         if not isinstance(frames[0], EncodedFrame):
             frames = self.encode_frames(frames, storage=self.device)
         return torch.stack([frame.tokens.float().mean(0) for frame in frames]).cpu().half()
+
+    @torch.no_grad()
+    def spatial_images(self, frames, side=2):
+        if not isinstance(frames[0], EncodedFrame):
+            frames = self.encode_frames(frames, storage=self.device)
+        merge = self.base.config.vision_config.spatial_merge_size
+        return torch.stack([pool_vision_grid(frame.tokens, frame.grid, merge, side)
+                            for frame in frames]).cpu().half()
 
     def context(self, batch, target=None, features=None, poses=None):
         ids = batch["input_ids"]

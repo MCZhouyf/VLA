@@ -69,6 +69,11 @@ def case_examples(policy, row, epochs_seed, resolution, cache_vision=False,
     with retry_read(ZipFile, source) as archive:
         meta = json.loads(retry_read(archive.read, "episode.json"))
         history_actions = meta.get("executed_action", meta["action"])
+        waypoints = None
+        if meta.get("scene", {}).get("waypoint_conditioned"):
+            from t1_waypoint import teacher_waypoints, waypoint_instruction, waypoint_labels
+
+            waypoints = teacher_waypoints(meta)
         features = None
         if cache_vision:
             encoded = None if validation_frames is None else validation_frames.get(row["path"])
@@ -94,7 +99,9 @@ def case_examples(policy, row, epochs_seed, resolution, cache_vision=False,
                 missing = policy.history - len(actions)
                 frames = [frames[0]] * missing + frames
                 actions = [policy.actions.null_token()] * missing + actions
-            yield (meta["instruction"], frames, actions, meta["action"][action_index],
+            instruction = meta["instruction"] if waypoints is None else waypoint_instruction(*waypoint_labels(
+                meta["pose"][action_index], waypoints[action_index-start]))
+            yield (instruction, frames, actions, meta["action"][action_index],
                    features[:action_index] if features is not None else None,
                    meta["pose"][:action_index + 1] if features is not None else None)
 

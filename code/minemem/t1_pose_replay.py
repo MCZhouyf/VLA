@@ -46,7 +46,7 @@ def archived_poses(path, fixture):
     return rows
 
 
-def return_by_pose(arena, fixture, targets, trace, terminal_tolerance):
+def return_by_pose(arena, fixture, targets, trace, terminal_tolerance, waypoint_tolerance=0.4):
     arena.restore_return_pose(fixture)
     target_queue = deque(targets)
     steps, stalled = 0, 0
@@ -57,7 +57,7 @@ def return_by_pose(arena, fixture, targets, trace, terminal_tolerance):
             for _ in range(fixture["return_limit"]):
                 position = horizontal(arena.info)
                 while target_queue:
-                    tolerance = terminal_tolerance if len(target_queue) == 1 else 0.4
+                    tolerance = terminal_tolerance if len(target_queue) == 1 else waypoint_tolerance
                     if math.dist(position, target_queue[0]) > tolerance:
                         break
                     target_queue.popleft()

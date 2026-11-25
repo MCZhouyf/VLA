@@ -1,0 +1,379 @@
+{
+  "protocol": "t1_dual_enclosure",
+  "scenario_seed": 2083111060,
+  "world_seed": 21431101,
+  "distance": 60,
+  "target_spacing": 12,
+  "candidate_positions": [
+    [
+      -4913.5,
+      -2725.5
+    ],
+    [
+      -4937.5,
+      -2725.5
+    ]
+  ],
+  "arena_origin": [
+    -4926,
+    77,
+    -2726
+  ],
+  "spawn": [
+    -4925.5,
+    -2712.5
+  ],
+  "endpoint": [
+    -4925.5,
+    -2784.2877538267962
+  ],
+  "outbound_room_order": [
+    12,
+    -12
+  ],
+  "corridor": [
+    -4925.5,
+    -2719.5
+  ],
+  "return_pose": {
+    "x": -4925.5,
+    "y": 77,
+    "z": -2784.2877538267962,
+    "yaw": -174.85575095285128,
+    "pitch": 0.0
+  },
+  "setup_revision": "remote_respawn_v1",
+  "protection_commands": [
+    "/gamerule doMobSpawning false",
+    "/kill @e[type=!player]",
+    "/time set day",
+    "/gamerule doDaylightCycle false",
+    "/gamerule doWeatherCycle false",
+    "/weather clear",
+    "/spawnpoint @p -4542 160 -2342",
+    "/effect give @p resistance 99999 4 true",
+    "/effect give @p water_breathing 99999 0 true"
+  ],
+  "respawn_pad_commands": [
+    "/forceload add -4543 -2343 -4541 -2341",
+    "/fill -4543 159 -2343 -4541 159 -2341 minecraft:stone",
+    "/fill -4543 160 -2343 -4541 162 -2341 minecraft:air"
+  ],
+  "respawn_point": [
+    -4542,
+    160,
+    -2342
+  ],
+  "optional_effects": true,
+  "goal_slot": 0,
+  "landmark": [
+    -4913.5,
+    -2725.5
+  ],
+  "walls": [
+    [
+      -4911,
+      77,
+      -2729,
+      -4911,
+      81,
+      -2723
+    ],
+    [
+      -4917,
+      77,
+      -2729,
+      -4917,
+      81,
+      -2723
+    ],
+    [
+      -4917,
+      77,
+      -2729,
+      -4911,
+      81,
+      -2729
+    ],
+    [
+      -4912,
+      77,
+      -2723,
+      -4911,
+      81,
+      -2723
+    ],
+    [
+      -4917,
+      77,
+      -2723,
+      -4916,
+      81,
+      -2723
+    ],
+    [
+      -4917,
+      82,
+      -2729,
+      -4911,
+      82,
+      -2723
+    ],
+    [
+      -4914,
+      82,
+      -2724,
+      -4914,
+      82,
+      -2724
+    ],
+    [
+      -4914,
+      77,
+      -2726,
+      -4914,
+      79,
+      -2726
+    ],
+    [
+      -4935,
+      77,
+      -2729,
+      -4935,
+      81,
+      -2723
+    ],
+    [
+      -4941,
+      77,
+      -2729,
+      -4941,
+      81,
+      -2723
+    ],
+    [
+      -4941,
+      77,
+      -2729,
+      -4935,
+      81,
+      -2729
+    ],
+    [
+      -4936,
+      77,
+      -2723,
+      -4935,
+      81,
+      -2723
+    ],
+    [
+      -4941,
+      77,
+      -2723,
+      -4940,
+      81,
+      -2723
+    ],
+    [
+      -4941,
+      82,
+      -2729,
+      -4935,
+      82,
+      -2723
+    ],
+    [
+      -4938,
+      82,
+      -2724,
+      -4938,
+      82,
+      -2724
+    ],
+    [
+      -4938,
+      77,
+      -2726,
+      -4938,
+      79,
+      -2726
+    ]
+  ],
+  "occlusion_boxes": [
+    [
+      -4911,
+      77,
+      -2729,
+      -4911,
+      81,
+      -2723
+    ],
+    [
+      -4917,
+      77,
+      -2729,
+      -4917,
+      81,
+      -2723
+    ],
+    [
+      -4917,
+      77,
+      -2729,
+      -4911,
+      81,
+      -2729
+    ],
+    [
+      -4912,
+      77,
+      -2723,
+      -4911,
+      81,
+      -2723
+    ],
+    [
+      -4917,
+      77,
+      -2723,
+      -4916,
+      81,
+      -2723
+    ],
+    [
+      -4917,
+      82,
+      -2729,
+      -4911,
+      82,
+      -2723
+    ],
+    [
+      -4935,
+      77,
+      -2729,
+      -4935,
+      81,
+      -2723
+    ],
+    [
+      -4941,
+      77,
+      -2729,
+      -4941,
+      81,
+      -2723
+    ],
+    [
+      -4941,
+      77,
+      -2729,
+      -4935,
+      81,
+      -2729
+    ],
+    [
+      -4936,
+      77,
+      -2723,
+      -4935,
+      81,
+      -2723
+    ],
+    [
+      -4941,
+      77,
+      -2723,
+      -4940,
+      81,
+      -2723
+    ],
+    [
+      -4941,
+      82,
+      -2729,
+      -4935,
+      82,
+      -2723
+    ]
+  ],
+  "candidate_occlusion": [
+    true,
+    true
+  ],
+  "room_frame_indices": [
+    37,
+    11
+  ],
+  "history_frames": 90,
+  "return_limit": 1327,
+  "teacher_targets": [
+    [
+      -4925.5,
+      -2719.5
+    ],
+    [
+      -4913.5,
+      -2719.5
+    ],
+    [
+      -4913.5,
+      -2723.3
+    ]
+  ],
+  "path_len_out": 129.12511144581694,
+  "cue_gold_pixels": [
+    27170,
+    0
+  ],
+  "endpoint_frame_sha256": [
+    "d87ddc605d7a28132ca506dc181f0c37c631cfc8a90ead22102f94585d28bd25",
+    "7ff4a3cfd897548aa7b1ee5d61de039e2884d7d5c6ddb2ccd872b1720d54e7d9",
+    "b59b286d8f6d623f479c5759ec35eb66fe049723a94e4b0079c34ff2a539a4c4",
+    "b287f6ad27ef009eb96c185d3c730e9c9c14fde7bd7f70dd446a6ca065e1d18c",
+    "376eb10dd943bea2811e1dd338a931b8ba9e8c443a0cfc7bda81dd5fcd8f5f22",
+    "03abfd5bcc78bd1534f4736275134955f31257f5c91b38308676c7a1c7970cbd",
+    "271fcea11dc7149f09588cee01da416fad6111054f7c567c9435faef7740223c",
+    "60fcd1c03ef6798da3025a3ed131711dd840bc100fc52bef70cc94cf74ca65fc",
+    "25e530e058c19ed140a522f95fa5f0d78a86ea883201b3c62bb82393516388a6",
+    "9e32a6594cd5ea2aecba4489b6471524f68f5ace30e157668b3c3187c2820dac",
+    "18aa6f3fff331eb64a7501d178234551b7150d4710a6f83f84d7f4293f324779",
+    "6566db5e0b5b64ec3120bd6c68fb6d23a405e4d2d4244d99ce330cddf8739795",
+    "5806e9fdd010d20642b78ea57ae4e73be10d51d1f6b7c5238af84d9cccc711a9",
+    "85600ba46905e33c0468478600153ad328f0b76ed0c785813ba15d176e770b54",
+    "9c08d0af205fbe4a74f8698504d43bcd085e8528b073722d5987e35bc43ebb8c",
+    "64b4bdc481eab9a7991fc6a0b64526b0b4f70795edffa96e415efee64a36300e",
+    "ecb3e8e47621f5d9a4301cdcaafe9767e74d6d7693d1c48fe5d09e3b139fe8ed",
+    "1dfb83826e61fcd85d812bb37cc6a62cc90cc8213b850c22c1be5cb59f0e1766",
+    "859392293494a57bc8c12a543905ce8e68642bac4361759b79a7748579833ebd",
+    "4e25df66bbdf716f5d85433e164382252a043f083edd4fcef618ab3b825c0abd",
+    "99d45576e7ed1485b184f846397ce0ca3450e042159a2ccb08e141a7d8714867",
+    "2b33df7c8c730edd3291a7a8d44843b480c0ad6444160dcecef7b6907514d54f",
+    "fa573be1e2f2625058d4b37790c5275327e9332a622d094def24b57178d0478f",
+    "ff228ca8d72fcabb33a8482dca34c137b03d306acbdd3a44f1348b969d7b940f",
+    "7538c635a6fe3ca47c3078261e09300c54933566903f0eb9490b3e79a3490a89",
+    "fe4741eb436b0ee02734d0298777175e456cb98dd88d32de79bf6dc7eee547d6",
+    "f7722b6022b121e5891ffdf92596fbae739df1be485e70e1c436ae95b946dc8a",
+    "1653c4ff38db11a32930df1c832074a4faebfd05faf8360d184d48f1ffafbf3e",
+    "3371e30f26d5cd5a49c53fbf3183f9342656a2132a96be69480c3e07f37c6d1c",
+    "fd7cf21edd3f6457f7380507bc1a62e7a46fb2f2f79762bed1a2348c52a75cb8",
+    "7802a08725f73c6040b365e4fbd4f1bea8c72c0654c0f44b5c31c8893a7127da",
+    "f5ce06cd6070617b058c33d0fb6ddf1d129757ac19bb07a22cdbadda83cf2c99",
+    "983635066ba802009344f7821f5265f1bb8bc4df4ecec0cf52a9ed52bd412ea1",
+    "070e501450a5ef75ae1129c28164206b34f3f1c2304f376bdd28b413ef587de0",
+    "3ba986e85a586ce78af823505c43d9e37937bfb7ad094e86cf391fb2547336cf",
+    "5be084b550e02cdd445c0628213f61bdcf68e4f5f56b81e2e10629f841447cf5"
+  ],
+  "endpoint_window_source_goal": 1,
+  "shared_endpoint_window_sha256": [
+    "620f83ef1ff075f422b4be4eccd0ffd03500e57f69e2126e8c9b681219919407",
+    "03129ba7023be1aaca1a40d9576d196a8a320531e75555051d3aa7703f4dae25",
+    "5085fe9b4f3fddbf38bc76cd3d679020269368bfd2956f5f7b98ae28a455b167",
+    "9b1b749628ce995d954986e84ef4865c0c1c82581852bedd5f8d164f105086c7",
+    "a1be05b38e6af2842a64c7250328f280fffe810231a1c1f77a49062020a33d71",
+    "fd41f6c057e2d24345d9db5edf6ba5528f32a4abafbd342913e5709e3c162415",
+    "8787353e7177bb837452c521f6be7427e2a988d14a48e8ae2db7782f1e7db9fb",
+    "87b284b6d104a74f60e82afe55a55e196237f7d4e1a50ab5fc590c08d888f21c"
+  ]
+}

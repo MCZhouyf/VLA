@@ -1,0 +1,68 @@
+{
+  "smoke-train": {
+    "10": {
+      "labels": 139,
+      "yaw_nonzero": 38,
+      "yaw_matches_hint": 26,
+      "neutral_for_large_hint": 31
+    },
+    "30": {
+      "labels": 247,
+      "yaw_nonzero": 34,
+      "neutral_for_large_hint": 32,
+      "yaw_matches_hint": 14,
+      "yaw_opposes_hint": 2
+    },
+    "60": {
+      "labels": 393,
+      "yaw_nonzero": 35,
+      "yaw_matches_hint": 16,
+      "neutral_for_large_hint": 32,
+      "yaw_opposes_hint": 2
+    },
+    "100": {
+      "labels": 592,
+      "yaw_nonzero": 50,
+      "yaw_matches_hint": 31,
+      "neutral_for_large_hint": 31
+    },
+    "visible": {
+      "labels": 34,
+      "yaw_nonzero": 0
+    }
+  },
+  "smoke-dart": {
+    "10": {
+      "labels": 259,
+      "yaw_nonzero": 147,
+      "yaw_matches_hint": 74,
+      "neutral_for_large_hint": 38,
+      "yaw_opposes_hint": 14
+    },
+    "30": {
+      "labels": 493,
+      "yaw_nonzero": 241,
+      "yaw_matches_hint": 106,
+      "neutral_for_large_hint": 41,
+      "yaw_opposes_hint": 33
+    },
+    "60": {
+      "labels": 657,
+      "yaw_nonzero": 248,
+      "yaw_matches_hint": 53,
+      "neutral_for_large_hint": 39,
+      "yaw_opposes_hint": 13
+    },
+    "100": {
+      "labels": 1016,
+      "yaw_nonzero": 407,
+      "yaw_matches_hint": 87,
+      "neutral_for_large_hint": 34,
+      "yaw_opposes_hint": 11
+    },
+    "visible": {
+      "labels": 25,
+      "yaw_nonzero": 8
+    }
+  }
+}

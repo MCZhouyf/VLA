@@ -15,7 +15,7 @@ cd "$WORK"
 bind_gpu() {
     [[ $1 =~ ^[67]$ ]]
     exec 9>"$TMPDIR/phase1-vllm-gpu-$1.lock"
-    flock -w 30 9
+    flock -E 75 -w 30 9
     local waits=0
     until "$prefix/bin/python" "$project/code/minemem/watch_phase0.py" --check-idle "$1"; do
         # A CUDA subprocess can exit before its utilization sample clears.
@@ -79,13 +79,15 @@ case "${1:-}" in
                  --output "$output" --validate-every 1000 --checkpoint-every 1000 "$@")
         exec bash "$project/code/minemem/t1_recover.sh" "$output" "${command[@]}"
         ;;
-    eval|eval-cpu)
+    eval|eval-cpu|waypoint-eval)
         mode="$1"
-        if [[ $mode == eval ]]; then
+        entry=t1_trained_eval.py
+        if [[ $mode != eval-cpu ]]; then
             gpu="$2"
             output="$3"
             shift 3
             bind_gpu "$gpu"
+            if [[ $mode == waypoint-eval ]]; then entry=t1_phase3e_eval.py; fi
         else
             output="$2"
             shift 2
@@ -97,7 +99,7 @@ case "${1:-}" in
         fi
         simulator_dir "$output"
         exec xvfb-run -a -e "$output/xvfb.log" "$WORK/envs/mcvla-phase3/bin/python" -B -u \
-            "$project/code/minemem/t1_trained_eval.py" --output "$output" \
+            "$project/code/minemem/$entry" --output "$output" \
             --checkpoint "$WORK/models/JarvisVLA-Qwen2-VL-7B" "$@"
         ;;
     *)

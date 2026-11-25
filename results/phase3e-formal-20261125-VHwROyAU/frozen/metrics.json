@@ -1,0 +1,201 @@
+{
+  "passed": true,
+  "distances": {
+    "10": {
+      "teacher": {
+        "n": 30,
+        "successes": 30,
+        "rate": 1.0,
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "turn_180": {
+        "n": 30,
+        "successes": 0,
+        "rate": 0.0,
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "scan": {
+        "n": 30,
+        "successes": 1,
+        "rate": 0.03333333333333333,
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "find_structure": {
+        "n": 30,
+        "successes": 1,
+        "rate": 0.03333333333333333,
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "reverse_route": {
+        "n": 30,
+        "successes": 15,
+        "rate": 0.5,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "wilson95": [
+          0.33154125640533766,
+          0.6684587435946623
+        ],
+        "compatible_with_half": true
+      },
+      "start_pose": {
+        "n": 30,
+        "successes": 0,
+        "rate": 0.0,
+        "deaths": 0,
+        "pose_jumps": 0
+      }
+    },
+    "30": {
+      "teacher": {
+        "n": 30,
+        "successes": 30,
+        "rate": 1.0,
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "turn_180": {
+        "n": 30,
+        "successes": 0,
+        "rate": 0.0,
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "scan": {
+        "n": 30,
+        "successes": 0,
+        "rate": 0.0,
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "find_structure": {
+        "n": 30,
+        "successes": 0,
+        "rate": 0.0,
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "reverse_route": {
+        "n": 30,
+        "successes": 15,
+        "rate": 0.5,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "wilson95": [
+          0.33154125640533766,
+          0.6684587435946623
+        ],
+        "compatible_with_half": true
+      },
+      "start_pose": {
+        "n": 30,
+        "successes": 0,
+        "rate": 0.0,
+        "deaths": 0,
+        "pose_jumps": 0
+      }
+    },
+    "60": {
+      "teacher": {
+        "n": 30,
+        "successes": 30,
+        "rate": 1.0,
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "turn_180": {
+        "n": 30,
+        "successes": 0,
+        "rate": 0.0,
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "scan": {
+        "n": 30,
+        "successes": 1,
+        "rate": 0.03333333333333333,
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "find_structure": {
+        "n": 30,
+        "successes": 0,
+        "rate": 0.0,
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "reverse_route": {
+        "n": 30,
+        "successes": 15,
+        "rate": 0.5,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "wilson95": [
+          0.33154125640533766,
+          0.6684587435946623
+        ],
+        "compatible_with_half": true
+      },
+      "start_pose": {
+        "n": 30,
+        "successes": 0,
+        "rate": 0.0,
+        "deaths": 0,
+        "pose_jumps": 0
+      }
+    },
+    "100": {
+      "teacher": {
+        "n": 30,
+        "successes": 30,
+        "rate": 1.0,
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "turn_180": {
+        "n": 30,
+        "successes": 0,
+        "rate": 0.0,
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "scan": {
+        "n": 30,
+        "successes": 0,
+        "rate": 0.0,
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "find_structure": {
+        "n": 30,
+        "successes": 0,
+        "rate": 0.0,
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "reverse_route": {
+        "n": 30,
+        "successes": 15,
+        "rate": 0.5,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "wilson95": [
+          0.33154125640533766,
+          0.6684587435946623
+        ],
+        "compatible_with_half": true
+      },
+      "start_pose": {
+        "n": 30,
+        "successes": 0,
+        "rate": 0.0,
+        "deaths": 0,
+        "pose_jumps": 0
+      }
+    }
+  }
+}

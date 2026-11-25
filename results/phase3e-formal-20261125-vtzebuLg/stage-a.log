@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/share/project/zhoubowen/zhy/zyf/results/phase3e-formal-20261125-vtzebuLg/snapshot/code/minemem/t1_phase3e_index.py", line 129, in <module>
+    acceptance(args.input, args.output)
+  File "/share/project/zhoubowen/zhy/zyf/results/phase3e-formal-20261125-vtzebuLg/snapshot/code/minemem/t1_phase3e_index.py", line 32, in acceptance
+    raise ValueError(f"Assignment differs from the balanced frozen seed {seed}: {result}")
+ValueError: Assignment differs from the balanced frozen seed 2086000000: /share/project/zhoubowen/zhy/zyf/results/phase3e-formal-20261125-vtzebuLg/acceptance/worker-000/acceptance.csv

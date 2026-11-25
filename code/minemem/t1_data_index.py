@@ -15,7 +15,7 @@ from t1_v4 import DISTANCES, PROTOCOL
 SMOKE_QUOTAS = {**dict.fromkeys(DISTANCES, 1050), "visible": 800}
 
 
-def read_episodes(roots, screened=False):
+def read_episodes(roots, screened=False, protocol=None):
     records = []
     seed_ids = set()
     fingerprints = set()
@@ -32,7 +32,7 @@ def read_episodes(roots, screened=False):
                     meta = json.loads(archive.read("episode.json"))
                     scene = meta["scene"]
                     screened_t1 = screened and row["group"] in DISTANCES
-                    expected = SCREENED_PROTOCOL if screened_t1 else PROTOCOL
+                    expected = protocol or (SCREENED_PROTOCOL if screened_t1 else PROTOCOL)
                     if scene["protocol"] != expected or (
                         screened_t1 and (scene.get("screened_pillar") is not True
                                          or scene.get("render_distance_chunks") != 4)

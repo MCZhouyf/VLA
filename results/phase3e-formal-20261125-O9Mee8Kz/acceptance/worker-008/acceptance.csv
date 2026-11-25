@@ -1,0 +1,4 @@
+distance,seed,world_seed,goal_slot,baseline,success,steps,return_limit,min_dist,deaths,pose_jumps,end_reason,initial_gold_distance,initial_gold_pixels,error
+10,2086000008,21460008,1,,,,,,,,,,,"Initial gold visibility gate failed: pixels=0, distance=18.028"
+30,2086000008,21460008,1,teacher,True,253,706,2.800386117294761,0,0,reached,20.808652046684813,583,
+30,2086000008,21460008,1,turn_180,False,706,706,29.999999844435365,0,0,budget,20.808652046684813,583,

@@ -149,7 +149,7 @@ class ControlTrace(StepTrace):
                 stream.write(json.dumps(row) + "\n")
 
 
-def rollout(arena, controller, config, outbound, instruction, limit, trace):
+def rollout(arena, controller, config, outbound, instruction, limit, trace, *, stabilize_turns=None):
     arena.restore_return_pose(config)
     controller.start(outbound)
     closest = math.dist(horizontal(arena.info), arena.landmark)
@@ -162,11 +162,22 @@ def rollout(arena, controller, config, outbound, instruction, limit, trace):
     try:
         with arena.track(trace):
             for steps in range(1, limit + 1):
-                action, complete = yield controller, arena.info, instruction
+                prompt = instruction(arena.info) if callable(instruction) else instruction
+                action, complete = yield controller, arena.info, prompt
                 tags += complete
                 action = arena.sim.agent_action_to_env_action(action)
                 if controller.control_trace is not None:
                     trace.record_environment(action)
+                    if callable(instruction):
+                        trace.controls[-1]["instruction"] = prompt
+                if stabilize_turns is not None and stabilize_turns.should_advance(prompt, action):
+                    action = dict.fromkeys(action, 0)
+                    action.update(camera=arena.sim.noop_action()["camera"], forward=1)
+                    if controller.control_trace is not None:
+                        record = trace.controls[-1]
+                        record["proposed_environment"] = {key: record[key] for key in ("pitch", "yaw", "buttons")}
+                        record["control_override"] = "waypoint_turn_stabilizer"
+                        trace.record_environment(action)
                 if not arena.navigation_step(action):
                     break
                 final = math.dist(horizontal(arena.info), arena.landmark)

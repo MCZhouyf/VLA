@@ -1,0 +1,379 @@
+{
+  "protocol": "t1_dual_enclosure",
+  "scenario_seed": 2083115010,
+  "world_seed": 21431105,
+  "distance": 10,
+  "target_spacing": 6,
+  "candidate_positions": [
+    [
+      5218.5,
+      5076.5
+    ],
+    [
+      5218.5,
+      5088.5
+    ]
+  ],
+  "arena_origin": [
+    5218,
+    79,
+    5082
+  ],
+  "spawn": [
+    5231.5,
+    5082.5
+  ],
+  "endpoint": [
+    5210.5,
+    5082.5
+  ],
+  "outbound_room_order": [
+    -6,
+    6
+  ],
+  "corridor": [
+    5224.5,
+    5082.5
+  ],
+  "return_pose": {
+    "x": 5210.5,
+    "y": 79,
+    "z": 5082.5,
+    "yaw": -38.77756527204494,
+    "pitch": 0.0
+  },
+  "setup_revision": "remote_respawn_v1",
+  "protection_commands": [
+    "/gamerule doMobSpawning false",
+    "/kill @e[type=!player]",
+    "/time set day",
+    "/gamerule doDaylightCycle false",
+    "/gamerule doWeatherCycle false",
+    "/weather clear",
+    "/spawnpoint @p 5602 160 5466",
+    "/effect give @p resistance 99999 4 true",
+    "/effect give @p water_breathing 99999 0 true"
+  ],
+  "respawn_pad_commands": [
+    "/forceload add 5601 5465 5603 5467",
+    "/fill 5601 159 5465 5603 159 5467 minecraft:stone",
+    "/fill 5601 160 5465 5603 162 5467 minecraft:air"
+  ],
+  "respawn_point": [
+    5602,
+    160,
+    5466
+  ],
+  "optional_effects": true,
+  "goal_slot": 0,
+  "landmark": [
+    5218.5,
+    5076.5
+  ],
+  "walls": [
+    [
+      5215,
+      79,
+      5073,
+      5221,
+      83,
+      5073
+    ],
+    [
+      5215,
+      79,
+      5079,
+      5221,
+      83,
+      5079
+    ],
+    [
+      5215,
+      79,
+      5073,
+      5215,
+      83,
+      5079
+    ],
+    [
+      5221,
+      79,
+      5073,
+      5221,
+      83,
+      5074
+    ],
+    [
+      5221,
+      79,
+      5078,
+      5221,
+      83,
+      5079
+    ],
+    [
+      5215,
+      84,
+      5073,
+      5221,
+      84,
+      5079
+    ],
+    [
+      5220,
+      84,
+      5076,
+      5220,
+      84,
+      5076
+    ],
+    [
+      5218,
+      79,
+      5076,
+      5218,
+      81,
+      5076
+    ],
+    [
+      5215,
+      79,
+      5085,
+      5221,
+      83,
+      5085
+    ],
+    [
+      5215,
+      79,
+      5091,
+      5221,
+      83,
+      5091
+    ],
+    [
+      5215,
+      79,
+      5085,
+      5215,
+      83,
+      5091
+    ],
+    [
+      5221,
+      79,
+      5085,
+      5221,
+      83,
+      5086
+    ],
+    [
+      5221,
+      79,
+      5090,
+      5221,
+      83,
+      5091
+    ],
+    [
+      5215,
+      84,
+      5085,
+      5221,
+      84,
+      5091
+    ],
+    [
+      5220,
+      84,
+      5088,
+      5220,
+      84,
+      5088
+    ],
+    [
+      5218,
+      79,
+      5088,
+      5218,
+      81,
+      5088
+    ]
+  ],
+  "occlusion_boxes": [
+    [
+      5215,
+      79,
+      5073,
+      5221,
+      83,
+      5073
+    ],
+    [
+      5215,
+      79,
+      5079,
+      5221,
+      83,
+      5079
+    ],
+    [
+      5215,
+      79,
+      5073,
+      5215,
+      83,
+      5079
+    ],
+    [
+      5221,
+      79,
+      5073,
+      5221,
+      83,
+      5074
+    ],
+    [
+      5221,
+      79,
+      5078,
+      5221,
+      83,
+      5079
+    ],
+    [
+      5215,
+      84,
+      5073,
+      5221,
+      84,
+      5079
+    ],
+    [
+      5215,
+      79,
+      5085,
+      5221,
+      83,
+      5085
+    ],
+    [
+      5215,
+      79,
+      5091,
+      5221,
+      83,
+      5091
+    ],
+    [
+      5215,
+      79,
+      5085,
+      5215,
+      83,
+      5091
+    ],
+    [
+      5221,
+      79,
+      5085,
+      5221,
+      83,
+      5086
+    ],
+    [
+      5221,
+      79,
+      5090,
+      5221,
+      83,
+      5091
+    ],
+    [
+      5215,
+      84,
+      5085,
+      5221,
+      84,
+      5091
+    ]
+  ],
+  "candidate_occlusion": [
+    true,
+    true
+  ],
+  "room_frame_indices": [
+    8,
+    27
+  ],
+  "history_frames": 49,
+  "return_limit": 618,
+  "teacher_targets": [
+    [
+      5224.5,
+      5082.5
+    ],
+    [
+      5224.5,
+      5076.5
+    ],
+    [
+      5220.7,
+      5076.5
+    ]
+  ],
+  "path_len_out": 56.08902569528748,
+  "cue_gold_pixels": [
+    12717,
+    0
+  ],
+  "endpoint_frame_sha256": [
+    "062a038f64358308fa8922ae43da2df156b6bda82335c07d13ec24cf97d391c4",
+    "500f68cb818139c195225492d67bfc9514cd12e3b38fc6da982dc8e8b40704ea",
+    "04ea2988c7f3bf8aaaa504fc2a2a643d275a9aaa887eddcbf33b6f1e59dc0e37",
+    "5469d1e4639643b857b3208173b5235db9587f7e3874680aeec64605f87a9327",
+    "91a55698c06e9fc28416a64c76050f9b90698e405c9f7cc04338cdb5af81a9fe",
+    "7deae2febadf845e50aa533cd344c2b04a1bb2d9486a7f00222708fd84a013b8",
+    "8a55f791f079072e3a25368bda5cdcd5d9ed962dbcfce8a680d70244796d8029",
+    "c95b98fea09cd71a7a62b37db220664f67a0ea3323f53ea4370013cc5a55dcae",
+    "a1fb4e1f4a28f1adeff180bdd9178af3e9305a0db196ab9b0b53bd601ae96c22",
+    "a5420b5b7289ecc01e96a612b21135a89bc7b9a8503633f09e166f0bc5f882af",
+    "fcd8f2a5abc392d1df158c79fe48555108fd39368b5063259c6c682c69285803",
+    "2d9c20c3acfce028f738f299468ead975c371e3dbbce94bdc087e0f5d6c229c0",
+    "600ff7655bdf8843ff8ebb5ea1111ec74f32a3254fa4f77cb057e5dc9eea20bd",
+    "58e0d700ddf1f21639bd0f927eab440b4f148e3bf7ff8b0dca6e776463e781fe",
+    "cd591881c50ade10cadd977d5d68645b1dc95f33372316367ccd846944ff63c1",
+    "28e5f7647dcbac94c974a56f607161cff1dc8315eb82943bb24589f5d229370f",
+    "8cd952944a7556e6361610188d02f975d81e88ed79509e550c6b098dd1537892",
+    "55abac5ea5702fb1a474ba4442e516024e87b59f92ae5ec4f42501ebd2de4a0c",
+    "165deb7f4b86874e6599d954b8376416fdf71742717bb8ffa94561402d6cc3c1",
+    "df99deb8360f9224f9d042db9f590d7951212a1164bd84afbc39309dbb126865",
+    "68915ee672a4e6aa53bfcd710e600a2c4d79ea1a992cae536c0aa8bdc6727192",
+    "89f77275a2f4e476d303b3f6c94fd21de68f6bcbaf62e4007cd3318a8e1d19aa",
+    "85884a8c2c9f3367404094eabb6451922a44f6348010a7cb2093d2646c29cf01",
+    "68ecf1da5c9970b1f764ee428fed853c7fa4f874080785c7070c4bc9da1ef7eb",
+    "5fd564a18023789d6af68e235ce6bd43e4d522ea2be35f3e29f9bba683038021",
+    "14af86a9cf976b35c2e587f42cbb5c8e495d3c7f8b684b1c87e559a6c1257d2c",
+    "3503b48fc730e5018735f5fcd7bebcc3821be4046ed9496f4143407254c05d8f",
+    "32a6337785503567de519198a0cb459b7c6ad169d638fd9112f3211806b4ae24",
+    "594226fc3564352c1607ef14c5cb44a48a087a98f2905c8b2fa542965bd3de92",
+    "96b7e7cde04faad7466b11e99ebd74b600f4ce662d5c79cdaaddb10f33761301",
+    "afc705b74c9acf965079026088e6a78d2717a78cbe41838f3809d53e5f1cfc94",
+    "1ab6b4827b0d61f1a80c6c10f29dc2c32fb0e1b6bd4ebb93337c32c6a5384e30",
+    "b8ba2022b689b9a7dc737fea3e871ab260501c3a813807528c8f5529ad879c4e",
+    "b8d61ca1a7e6d2f5cd4c9b44a0243eaef9de330862b79cfb55c7b364b6d8c26d",
+    "8b5c48c165790005d373708d77eba2bc8c06f29a5d73ca406fd5dd0b23b2ceb8",
+    "381d6e30cb91a70464e421d4a7fdf7afa451660292349c6acdb7409d677bdbb9"
+  ],
+  "endpoint_window_source_goal": 1,
+  "shared_endpoint_window_sha256": [
+    "87f8c62df791c6a9eee88b46e4b053f8655a6ba5cf6de92009f3334c3d96e6e8",
+    "0c13b2d5fbb4ef08ade6d7c77787852739f1dd1268f2f085afccf5de1595fe63",
+    "901cb87d069d9d30d6c559db375b878333be6d37a9fe2e6a0dba35731106d879",
+    "5a840f3046e02c64de70a88f41b5c738d76b254dc40a69ff3dbb30c62b36c90c",
+    "6f8c9bb9beba08dc07d9c22c043027dd07ebbaa0523a33bca0f89fa87569ff94",
+    "4fe53aee7a4f26f1af79fd7d0efeae739accee915ba5b800960607ed7a585e93",
+    "0f80a44a94597e45319629f3fdbd18dfd415f98ece9d874864ba0bc77eb1191a",
+    "931a08df14992621fe6a146af7f3209486ccaf37ef6b37cff0c09925ebd4e88b"
+  ]
+}
