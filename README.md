@@ -377,6 +377,8 @@ python3 -B code/minemem/t1_phase3_closeout.py \
 
 #### 带几何值的记忆读写与两项验收
 
+[阶段 3e 实验报告](results/REPORT_phase3e.md)
+
 `t1_memory_cache.py` 仅加载冻结的视觉编码器，缓存 2×2 或 4×4 视觉网格。`t1_memory_probe.py` 使用训练划分统计量做标准化，在 CPU 上训练小型读出头，自动记录训练前后 20 条验证轨迹的前缀敏感性以及航点和金柱的可解码准确率。`--grid-side 64` 对应 128 格的物理宽度。 [验收报告](results/REPORT_phase3e_memory_gate.md)
 
 ~~~bash
@@ -433,4 +435,3 @@ bash code/minemem/t1_exec.sh waypoint-eval 7 "$diagnostic" \
 recovery="$(mktemp -d "$recheck/recovery-XXXXXXXX")"
 python3 -B -u code/minemem/t1_phase3e_recover_eval.py "$recheck" "$recovery"
 ~~~
-
