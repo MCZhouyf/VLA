@@ -511,3 +511,15 @@ CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
 ```bash
 python3 -B code/minemem/t1_phase3e_predicted_eval.py --help
 ```
+
+#### 阶段 B 方案 P 两组正式闭环
+
+将 `WORK` 设为服务器上的已分配项目目录。变量 `formal` 指向阶段 3e 冻结布景和控制器目录，`oracle_gate` 指向已通过的共享控制器判定，`no_anchor` 指向本轮离线读出目录，`plan_output` 是 `$WORK/results/` 下的新输出目录。
+
+```bash
+WORK="$WORK" CUDA_VISIBLE_DEVICES= "$WORK/envs/mcvla-phase3/bin/python" -B -u \
+  code/minemem/t1_phase3e_grid_eval.py --formal "$formal" --oracle-gate "$oracle_gate" \
+  --offline "$no_anchor" --output "$plan_output"
+```
+
+调度器在 GPU 6 跑原视觉组，在 GPU 7 跑打乱视觉组。进程异常退出时只重试缺失种子。两组各覆盖 30 个冻结种子后，复算动作记录并写入 `d30_decision.json`。
