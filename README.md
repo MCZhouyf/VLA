@@ -505,3 +505,9 @@ CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
 ```
 
 方案 P 复用 `t1_exec.sh waypoint-predictions`。使用 `--variant spatial --grid-plan visual` 或 `--variant spatial --grid-plan shuffle_visual`，`--room-weights` 和 `--offline-gate` 指向无锚点运行的 `room-head.pt` 与 `offline_gate.json`。30 格两组各用原先冻结的 30 个种子。 [补充实验 CPU 报告](results/REPORT_phase3e_supplement_cpu.md)
+
+可在 CPU 上直接查看参数。正式运行时，评测入口记录加载依赖的开始与完成时间。
+
+```bash
+python3 -B code/minemem/t1_phase3e_predicted_eval.py --help
+```
