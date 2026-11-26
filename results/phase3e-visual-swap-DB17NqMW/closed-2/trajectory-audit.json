@@ -1,0 +1,5793 @@
+{
+  "no_memory": {
+    "n": 30,
+    "wins": 1,
+    "room_correct": 18,
+    "wins_with_correct_room": 1,
+    "stationary_alternation": 1,
+    "reasons": {
+      "distractor_first": 1,
+      "budget": 28,
+      "reached": 1
+    },
+    "episodes": [
+      {
+        "seed": 2086000001,
+        "d": 30,
+        "steps": 414,
+        "success": false,
+        "reason": "distractor_first",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            50,
+            6
+          ],
+          "target": [
+            -110,
+            6
+          ],
+          "angle_error": 160,
+          "world_bearing": -18.197945000000004
+        },
+        "min_dist": 13.209277993171137,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 15.006939689803746,
+        "tail_turns": 106,
+        "tail_alternations": 28,
+        "tail_forward": 94,
+        "tail_median_world_waypoint_jump": 30.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              30,
+              6
+            ],
+            22
+          ],
+          [
+            [
+              -40,
+              6
+            ],
+            13
+          ],
+          [
+            [
+              -20,
+              6
+            ],
+            12
+          ],
+          [
+            [
+              10,
+              6
+            ],
+            11
+          ],
+          [
+            [
+              30,
+              4
+            ],
+            11
+          ]
+        ]
+      },
+      {
+        "seed": 2086000002,
+        "d": 30,
+        "steps": 698,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            -30,
+            6
+          ],
+          "target": [
+            -30,
+            6
+          ],
+          "angle_error": 0,
+          "world_bearing": -178.54727
+        },
+        "min_dist": 5.193008302686367,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 52.362072921502296,
+        "tail_turns": 9,
+        "tail_alternations": 1,
+        "tail_forward": 191,
+        "tail_median_world_waypoint_jump": 0.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            185
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            4
+          ],
+          [
+            [
+              -70,
+              6
+            ],
+            2
+          ],
+          [
+            [
+              -10,
+              6
+            ],
+            2
+          ],
+          [
+            [
+              40,
+              4
+            ],
+            1
+          ]
+        ]
+      },
+      {
+        "seed": 2086000000,
+        "d": 30,
+        "steps": 708,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            -170,
+            6
+          ],
+          "target": [
+            80,
+            6
+          ],
+          "angle_error": 110,
+          "world_bearing": -338.6775
+        },
+        "min_dist": 29.999999844435262,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 28.63397156749705,
+        "tail_turns": 81,
+        "tail_alternations": 27,
+        "tail_forward": 119,
+        "tail_median_world_waypoint_jump": 20.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              -30,
+              4
+            ],
+            22
+          ],
+          [
+            [
+              30,
+              6
+            ],
+            20
+          ],
+          [
+            [
+              0,
+              6
+            ],
+            16
+          ],
+          [
+            [
+              -30,
+              6
+            ],
+            13
+          ],
+          [
+            [
+              50,
+              4
+            ],
+            11
+          ]
+        ]
+      },
+      {
+        "seed": 2086000004,
+        "d": 30,
+        "steps": 694,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            -10,
+            6
+          ],
+          "target": [
+            -10,
+            6
+          ],
+          "angle_error": 0,
+          "world_bearing": 91.406624
+        },
+        "min_dist": 12.126761835012223,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 0.21010620997804147,
+        "tail_turns": 199,
+        "tail_alternations": 80,
+        "tail_forward": 1,
+        "tail_median_world_waypoint_jump": 20.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              50,
+              4
+            ],
+            56
+          ],
+          [
+            [
+              -40,
+              6
+            ],
+            23
+          ],
+          [
+            [
+              -60,
+              4
+            ],
+            20
+          ],
+          [
+            [
+              -50,
+              6
+            ],
+            17
+          ],
+          [
+            [
+              70,
+              6
+            ],
+            17
+          ]
+        ]
+      },
+      {
+        "seed": 2086000003,
+        "d": 30,
+        "steps": 700,
+        "success": false,
+        "reason": "budget",
+        "room_correct": false,
+        "first": {
+          "predicted": [
+            -70,
+            6
+          ],
+          "target": [
+            -50,
+            6
+          ],
+          "angle_error": 20,
+          "world_bearing": -203.13744
+        },
+        "min_dist": 11.21969135480969,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 49.05271518530966,
+        "tail_turns": 13,
+        "tail_alternations": 0,
+        "tail_forward": 187,
+        "tail_median_world_waypoint_jump": 0.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            176
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            7
+          ],
+          [
+            [
+              -30,
+              4
+            ],
+            2
+          ],
+          [
+            [
+              -70,
+              6
+            ],
+            2
+          ],
+          [
+            [
+              -60,
+              6
+            ],
+            2
+          ]
+        ]
+      },
+      {
+        "seed": 2086000005,
+        "d": 30,
+        "steps": 708,
+        "success": false,
+        "reason": "budget",
+        "room_correct": false,
+        "first": {
+          "predicted": [
+            0,
+            6
+          ],
+          "target": [
+            -80,
+            6
+          ],
+          "angle_error": 80,
+          "world_bearing": -7.086293
+        },
+        "min_dist": 12.269387298958968,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 0.0,
+        "tail_turns": 200,
+        "tail_alternations": 70,
+        "tail_forward": 0,
+        "tail_median_world_waypoint_jump": 20.000000999999997,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              50,
+              4
+            ],
+            83
+          ],
+          [
+            [
+              -60,
+              6
+            ],
+            60
+          ],
+          [
+            [
+              -40,
+              6
+            ],
+            30
+          ],
+          [
+            [
+              -50,
+              6
+            ],
+            9
+          ],
+          [
+            [
+              50,
+              6
+            ],
+            9
+          ]
+        ]
+      },
+      {
+        "seed": 2086000007,
+        "d": 30,
+        "steps": 712,
+        "success": false,
+        "reason": "budget",
+        "room_correct": false,
+        "first": {
+          "predicted": [
+            70,
+            6
+          ],
+          "target": [
+            100,
+            6
+          ],
+          "angle_error": 30,
+          "world_bearing": 151.12587000000002
+        },
+        "min_dist": 11.07433809175598,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 0.0,
+        "tail_turns": 200,
+        "tail_alternations": 41,
+        "tail_forward": 0,
+        "tail_median_world_waypoint_jump": 10.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              50,
+              6
+            ],
+            77
+          ],
+          [
+            [
+              -50,
+              6
+            ],
+            59
+          ],
+          [
+            [
+              -50,
+              4
+            ],
+            37
+          ],
+          [
+            [
+              30,
+              6
+            ],
+            18
+          ],
+          [
+            [
+              70,
+              6
+            ],
+            5
+          ]
+        ]
+      },
+      {
+        "seed": 2086000008,
+        "d": 30,
+        "steps": 712,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            40,
+            6
+          ],
+          "target": [
+            -90,
+            6
+          ],
+          "angle_error": 130,
+          "world_bearing": -135.18707
+        },
+        "min_dist": 29.999999844435365,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 46.074029273107946,
+        "tail_turns": 18,
+        "tail_alternations": 0,
+        "tail_forward": 182,
+        "tail_median_world_waypoint_jump": 0.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            157
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            11
+          ],
+          [
+            [
+              40,
+              6
+            ],
+            6
+          ],
+          [
+            [
+              0,
+              5
+            ],
+            4
+          ],
+          [
+            [
+              40,
+              4
+            ],
+            2
+          ]
+        ]
+      },
+      {
+        "seed": 2086000006,
+        "d": 30,
+        "steps": 716,
+        "success": false,
+        "reason": "budget",
+        "room_correct": false,
+        "first": {
+          "predicted": [
+            0,
+            6
+          ],
+          "target": [
+            -100,
+            6
+          ],
+          "angle_error": 100,
+          "world_bearing": 98.543015
+        },
+        "min_dist": 29.999999844435365,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 45.883603951384195,
+        "tail_turns": 25,
+        "tail_alternations": 2,
+        "tail_forward": 175,
+        "tail_median_world_waypoint_jump": 0.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            160
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            6
+          ],
+          [
+            [
+              70,
+              6
+            ],
+            5
+          ],
+          [
+            [
+              -70,
+              6
+            ],
+            4
+          ],
+          [
+            [
+              40,
+              6
+            ],
+            4
+          ]
+        ]
+      },
+      {
+        "seed": 2086000011,
+        "d": 30,
+        "steps": 714,
+        "success": false,
+        "reason": "budget",
+        "room_correct": false,
+        "first": {
+          "predicted": [
+            -40,
+            6
+          ],
+          "target": [
+            -120,
+            6
+          ],
+          "angle_error": 80,
+          "world_bearing": -104.1973
+        },
+        "min_dist": 13.353485933506038,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 35.61012067413801,
+        "tail_turns": 61,
+        "tail_alternations": 11,
+        "tail_forward": 139,
+        "tail_median_world_waypoint_jump": 10.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            95
+          ],
+          [
+            [
+              -40,
+              6
+            ],
+            10
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            8
+          ],
+          [
+            [
+              20,
+              6
+            ],
+            7
+          ],
+          [
+            [
+              -70,
+              6
+            ],
+            5
+          ]
+        ]
+      },
+      {
+        "seed": 2086000009,
+        "d": 30,
+        "steps": 720,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            -40,
+            6
+          ],
+          "target": [
+            -100,
+            6
+          ],
+          "angle_error": 60,
+          "world_bearing": -209.09995
+        },
+        "min_dist": 10.023988730485438,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 0.0,
+        "tail_turns": 200,
+        "tail_alternations": 57,
+        "tail_forward": 0,
+        "tail_median_world_waypoint_jump": 20.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              60,
+              6
+            ],
+            53
+          ],
+          [
+            [
+              -40,
+              4
+            ],
+            47
+          ],
+          [
+            [
+              -40,
+              6
+            ],
+            29
+          ],
+          [
+            [
+              40,
+              6
+            ],
+            24
+          ],
+          [
+            [
+              -50,
+              4
+            ],
+            21
+          ]
+        ]
+      },
+      {
+        "seed": 2086000010,
+        "d": 30,
+        "steps": 726,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            0,
+            6
+          ],
+          "target": [
+            -160,
+            6
+          ],
+          "angle_error": 160,
+          "world_bearing": 163.92169
+        },
+        "min_dist": 29.99999984443516,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 35.07396472526407,
+        "tail_turns": 55,
+        "tail_alternations": 8,
+        "tail_forward": 145,
+        "tail_median_world_waypoint_jump": 20.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            101
+          ],
+          [
+            [
+              50,
+              4
+            ],
+            16
+          ],
+          [
+            [
+              50,
+              6
+            ],
+            10
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            9
+          ],
+          [
+            [
+              -30,
+              6
+            ],
+            7
+          ]
+        ]
+      },
+      {
+        "seed": 2086000014,
+        "d": 30,
+        "steps": 674,
+        "success": true,
+        "reason": "reached",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            60,
+            6
+          ],
+          "target": [
+            -70,
+            6
+          ],
+          "angle_error": 130,
+          "world_bearing": 134.70105
+        },
+        "min_dist": 2.851996853855937,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 13.032871212847521,
+        "tail_turns": 134,
+        "tail_alternations": 34,
+        "tail_forward": 66,
+        "tail_median_world_waypoint_jump": 20.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              50,
+              4
+            ],
+            19
+          ],
+          [
+            [
+              40,
+              4
+            ],
+            18
+          ],
+          [
+            [
+              60,
+              4
+            ],
+            16
+          ],
+          [
+            [
+              60,
+              6
+            ],
+            14
+          ],
+          [
+            [
+              -50,
+              4
+            ],
+            13
+          ]
+        ]
+      },
+      {
+        "seed": 2086000012,
+        "d": 30,
+        "steps": 698,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            40,
+            6
+          ],
+          "target": [
+            30,
+            6
+          ],
+          "angle_error": 10,
+          "world_bearing": 98.47238999999999
+        },
+        "min_dist": 12.888366317633425,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 0.0,
+        "tail_turns": 200,
+        "tail_alternations": 100,
+        "tail_forward": 0,
+        "tail_median_world_waypoint_jump": 50.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              40,
+              6
+            ],
+            45
+          ],
+          [
+            [
+              -40,
+              6
+            ],
+            37
+          ],
+          [
+            [
+              -50,
+              6
+            ],
+            26
+          ],
+          [
+            [
+              50,
+              6
+            ],
+            21
+          ],
+          [
+            [
+              -30,
+              6
+            ],
+            17
+          ]
+        ]
+      },
+      {
+        "seed": 2086000013,
+        "d": 30,
+        "steps": 698,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            20,
+            6
+          ],
+          "target": [
+            30,
+            6
+          ],
+          "angle_error": 10,
+          "world_bearing": 170.0442
+        },
+        "min_dist": 11.764656620139457,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 42.18672449323538,
+        "tail_turns": 30,
+        "tail_alternations": 8,
+        "tail_forward": 170,
+        "tail_median_world_waypoint_jump": 0.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            142
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            14
+          ],
+          [
+            [
+              50,
+              6
+            ],
+            7
+          ],
+          [
+            [
+              50,
+              4
+            ],
+            4
+          ],
+          [
+            [
+              60,
+              6
+            ],
+            3
+          ]
+        ]
+      },
+      {
+        "seed": 2086000015,
+        "d": 30,
+        "steps": 702,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            -50,
+            6
+          ],
+          "target": [
+            50,
+            6
+          ],
+          "angle_error": 100,
+          "world_bearing": -14.416820000000001
+        },
+        "min_dist": 7.334238957951781,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 40.770233298209796,
+        "tail_turns": 34,
+        "tail_alternations": 4,
+        "tail_forward": 166,
+        "tail_median_world_waypoint_jump": 0.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            100
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            23
+          ],
+          [
+            [
+              -40,
+              6
+            ],
+            7
+          ],
+          [
+            [
+              -30,
+              4
+            ],
+            7
+          ],
+          [
+            [
+              50,
+              4
+            ],
+            7
+          ]
+        ]
+      },
+      {
+        "seed": 2086000017,
+        "d": 30,
+        "steps": 706,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            20,
+            6
+          ],
+          "target": [
+            80,
+            6
+          ],
+          "angle_error": 60,
+          "world_bearing": 32.867319
+        },
+        "min_dist": 11.535517803058656,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 0.2098019822815661,
+        "tail_turns": 199,
+        "tail_alternations": 133,
+        "tail_forward": 1,
+        "tail_median_world_waypoint_jump": 70.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              -50,
+              6
+            ],
+            49
+          ],
+          [
+            [
+              -50,
+              4
+            ],
+            35
+          ],
+          [
+            [
+              40,
+              6
+            ],
+            33
+          ],
+          [
+            [
+              30,
+              6
+            ],
+            23
+          ],
+          [
+            [
+              50,
+              6
+            ],
+            17
+          ]
+        ]
+      },
+      {
+        "seed": 2086000016,
+        "d": 30,
+        "steps": 712,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            -60,
+            6
+          ],
+          "target": [
+            110,
+            6
+          ],
+          "angle_error": 170,
+          "world_bearing": 104.75918999999999
+        },
+        "min_dist": 29.99999984443516,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 42.94735243708559,
+        "tail_turns": 23,
+        "tail_alternations": 4,
+        "tail_forward": 177,
+        "tail_median_world_waypoint_jump": 0.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            161
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            13
+          ],
+          [
+            [
+              50,
+              6
+            ],
+            6
+          ],
+          [
+            [
+              50,
+              4
+            ],
+            5
+          ],
+          [
+            [
+              40,
+              6
+            ],
+            2
+          ]
+        ]
+      },
+      {
+        "seed": 2086000020,
+        "d": 30,
+        "steps": 698,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            -30,
+            6
+          ],
+          "target": [
+            -30,
+            6
+          ],
+          "angle_error": 0,
+          "world_bearing": -88.90830199999999
+        },
+        "min_dist": 11.956339595776997,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 30.730178802756615,
+        "tail_turns": 71,
+        "tail_alternations": 19,
+        "tail_forward": 129,
+        "tail_median_world_waypoint_jump": 10.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            118
+          ],
+          [
+            [
+              -10,
+              6
+            ],
+            17
+          ],
+          [
+            [
+              40,
+              6
+            ],
+            14
+          ],
+          [
+            [
+              -30,
+              6
+            ],
+            8
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            7
+          ]
+        ]
+      },
+      {
+        "seed": 2086000018,
+        "d": 30,
+        "steps": 702,
+        "success": false,
+        "reason": "budget",
+        "room_correct": false,
+        "first": {
+          "predicted": [
+            -110,
+            6
+          ],
+          "target": [
+            50,
+            6
+          ],
+          "angle_error": 160,
+          "world_bearing": -164.462234
+        },
+        "min_dist": 15.579301205526965,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 22.41529291834943,
+        "tail_turns": 110,
+        "tail_alternations": 26,
+        "tail_forward": 90,
+        "tail_median_world_waypoint_jump": 20.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            62
+          ],
+          [
+            [
+              20,
+              6
+            ],
+            23
+          ],
+          [
+            [
+              -10,
+              6
+            ],
+            21
+          ],
+          [
+            [
+              -30,
+              6
+            ],
+            8
+          ],
+          [
+            [
+              -30,
+              4
+            ],
+            7
+          ]
+        ]
+      },
+      {
+        "seed": 2086000019,
+        "d": 30,
+        "steps": 706,
+        "success": false,
+        "reason": "budget",
+        "room_correct": false,
+        "first": {
+          "predicted": [
+            -30,
+            6
+          ],
+          "target": [
+            -60,
+            6
+          ],
+          "angle_error": 30,
+          "world_bearing": -153.69155
+        },
+        "min_dist": 3.800088882713336,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 43.44310728179414,
+        "tail_turns": 15,
+        "tail_alternations": 0,
+        "tail_forward": 185,
+        "tail_median_world_waypoint_jump": 0.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            155
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            15
+          ],
+          [
+            [
+              -30,
+              6
+            ],
+            4
+          ],
+          [
+            [
+              -50,
+              4
+            ],
+            3
+          ],
+          [
+            [
+              0,
+              5
+            ],
+            3
+          ]
+        ]
+      },
+      {
+        "seed": 2086000022,
+        "d": 30,
+        "steps": 692,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            0,
+            6
+          ],
+          "target": [
+            0,
+            6
+          ],
+          "angle_error": 0,
+          "world_bearing": 177.18683
+        },
+        "min_dist": 15.09194067688646,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 0.0,
+        "tail_turns": 200,
+        "tail_alternations": 165,
+        "tail_forward": 0,
+        "tail_median_world_waypoint_jump": 30.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              -10,
+              6
+            ],
+            86
+          ],
+          [
+            [
+              10,
+              6
+            ],
+            29
+          ],
+          [
+            [
+              30,
+              6
+            ],
+            26
+          ],
+          [
+            [
+              60,
+              6
+            ],
+            23
+          ],
+          [
+            [
+              40,
+              6
+            ],
+            15
+          ]
+        ]
+      },
+      {
+        "seed": 2086000023,
+        "d": 30,
+        "steps": 708,
+        "success": false,
+        "reason": "budget",
+        "room_correct": false,
+        "first": {
+          "predicted": [
+            -70,
+            4
+          ],
+          "target": [
+            -80,
+            6
+          ],
+          "angle_error": 10,
+          "world_bearing": 10.711426000000003
+        },
+        "min_dist": 14.88874327478739,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 41.496655784401085,
+        "tail_turns": 41,
+        "tail_alternations": 10,
+        "tail_forward": 159,
+        "tail_median_world_waypoint_jump": 0.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            117
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            12
+          ],
+          [
+            [
+              40,
+              4
+            ],
+            7
+          ],
+          [
+            [
+              60,
+              6
+            ],
+            5
+          ],
+          [
+            [
+              80,
+              6
+            ],
+            5
+          ]
+        ]
+      },
+      {
+        "seed": 2086000021,
+        "d": 30,
+        "steps": 726,
+        "success": false,
+        "reason": "budget",
+        "room_correct": false,
+        "first": {
+          "predicted": [
+            -170,
+            6
+          ],
+          "target": [
+            170,
+            6
+          ],
+          "angle_error": 20,
+          "world_bearing": -164.034016
+        },
+        "min_dist": 7.755476100030909,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 0.0,
+        "tail_turns": 200,
+        "tail_alternations": 199,
+        "tail_forward": 0,
+        "tail_median_world_waypoint_jump": 40.0,
+        "tail_stationary_alternation": true,
+        "tail_most_common_prompts": [
+          [
+            [
+              -10,
+              6
+            ],
+            100
+          ],
+          [
+            [
+              40,
+              6
+            ],
+            57
+          ],
+          [
+            [
+              10,
+              6
+            ],
+            24
+          ],
+          [
+            [
+              30,
+              6
+            ],
+            19
+          ]
+        ]
+      },
+      {
+        "seed": 2086000026,
+        "d": 30,
+        "steps": 694,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            -30,
+            6
+          ],
+          "target": [
+            10,
+            6
+          ],
+          "angle_error": 40,
+          "world_bearing": 139.48347
+        },
+        "min_dist": 13.321519212022395,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 41.00731843755191,
+        "tail_turns": 34,
+        "tail_alternations": 0,
+        "tail_forward": 166,
+        "tail_median_world_waypoint_jump": 0.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            146
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            5
+          ],
+          [
+            [
+              -70,
+              6
+            ],
+            5
+          ],
+          [
+            [
+              0,
+              5
+            ],
+            4
+          ],
+          [
+            [
+              -80,
+              6
+            ],
+            4
+          ]
+        ]
+      },
+      {
+        "seed": 2086000024,
+        "d": 30,
+        "steps": 700,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            20,
+            6
+          ],
+          "target": [
+            40,
+            6
+          ],
+          "angle_error": 20,
+          "world_bearing": 158.08952
+        },
+        "min_dist": 11.14096921620564,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 47.70153440302862,
+        "tail_turns": 14,
+        "tail_alternations": 0,
+        "tail_forward": 186,
+        "tail_median_world_waypoint_jump": 0.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            174
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            7
+          ],
+          [
+            [
+              -80,
+              6
+            ],
+            3
+          ],
+          [
+            [
+              -70,
+              6
+            ],
+            3
+          ],
+          [
+            [
+              40,
+              6
+            ],
+            2
+          ]
+        ]
+      },
+      {
+        "seed": 2086000025,
+        "d": 30,
+        "steps": 704,
+        "success": false,
+        "reason": "budget",
+        "room_correct": false,
+        "first": {
+          "predicted": [
+            -30,
+            6
+          ],
+          "target": [
+            50,
+            6
+          ],
+          "angle_error": 80,
+          "world_bearing": 10.692245
+        },
+        "min_dist": 4.738405946355432,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 39.55086644265575,
+        "tail_turns": 34,
+        "tail_alternations": 6,
+        "tail_forward": 166,
+        "tail_median_world_waypoint_jump": 20.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            104
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            18
+          ],
+          [
+            [
+              50,
+              4
+            ],
+            11
+          ],
+          [
+            [
+              50,
+              6
+            ],
+            10
+          ],
+          [
+            [
+              40,
+              6
+            ],
+            7
+          ]
+        ]
+      },
+      {
+        "seed": 2086000029,
+        "d": 30,
+        "steps": 698,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            -70,
+            6
+          ],
+          "target": [
+            -30,
+            6
+          ],
+          "angle_error": 40,
+          "world_bearing": 51.031075
+        },
+        "min_dist": 9.787898981899518,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 41.93813572955492,
+        "tail_turns": 20,
+        "tail_alternations": 0,
+        "tail_forward": 180,
+        "tail_median_world_waypoint_jump": 0.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            148
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            12
+          ],
+          [
+            [
+              0,
+              5
+            ],
+            6
+          ],
+          [
+            [
+              -40,
+              4
+            ],
+            4
+          ],
+          [
+            [
+              -30,
+              6
+            ],
+            4
+          ]
+        ]
+      },
+      {
+        "seed": 2086000028,
+        "d": 30,
+        "steps": 706,
+        "success": false,
+        "reason": "budget",
+        "room_correct": false,
+        "first": {
+          "predicted": [
+            20,
+            6
+          ],
+          "target": [
+            80,
+            6
+          ],
+          "angle_error": 60,
+          "world_bearing": 34.475685999999996
+        },
+        "min_dist": 13.129458551841628,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 0.0,
+        "tail_turns": 200,
+        "tail_alternations": 67,
+        "tail_forward": 0,
+        "tail_median_world_waypoint_jump": 10.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              50,
+              6
+            ],
+            97
+          ],
+          [
+            [
+              -60,
+              4
+            ],
+            36
+          ],
+          [
+            [
+              -50,
+              6
+            ],
+            33
+          ],
+          [
+            [
+              -40,
+              4
+            ],
+            15
+          ],
+          [
+            [
+              -40,
+              6
+            ],
+            13
+          ]
+        ]
+      },
+      {
+        "seed": 2086000027,
+        "d": 30,
+        "steps": 718,
+        "success": false,
+        "reason": "budget",
+        "room_correct": false,
+        "first": {
+          "predicted": [
+            20,
+            6
+          ],
+          "target": [
+            130,
+            6
+          ],
+          "angle_error": 110,
+          "world_bearing": -110.75438
+        },
+        "min_dist": 19.668574678227476,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 0.4190049696837479,
+        "tail_turns": 198,
+        "tail_alternations": 119,
+        "tail_forward": 2,
+        "tail_median_world_waypoint_jump": 49.999998000000005,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              30,
+              6
+            ],
+            83
+          ],
+          [
+            [
+              -30,
+              6
+            ],
+            77
+          ],
+          [
+            [
+              20,
+              6
+            ],
+            10
+          ],
+          [
+            [
+              -40,
+              6
+            ],
+            9
+          ],
+          [
+            [
+              -50,
+              6
+            ],
+            5
+          ]
+        ]
+      }
+    ]
+  },
+  "long": {
+    "n": 30,
+    "wins": 1,
+    "room_correct": 17,
+    "wins_with_correct_room": 1,
+    "stationary_alternation": 1,
+    "reasons": {
+      "budget": 28,
+      "reached": 1,
+      "distractor_first": 1
+    },
+    "episodes": [
+      {
+        "seed": 2086000000,
+        "d": 30,
+        "steps": 708,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            130,
+            6
+          ],
+          "target": [
+            80,
+            6
+          ],
+          "angle_error": 50,
+          "world_bearing": -38.67750000000001
+        },
+        "min_dist": 10.78064082999419,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 35.58142670357288,
+        "tail_turns": 56,
+        "tail_alternations": 7,
+        "tail_forward": 144,
+        "tail_median_world_waypoint_jump": 10.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            106
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            12
+          ],
+          [
+            [
+              0,
+              5
+            ],
+            10
+          ],
+          [
+            [
+              20,
+              6
+            ],
+            7
+          ],
+          [
+            [
+              70,
+              4
+            ],
+            6
+          ]
+        ]
+      },
+      {
+        "seed": 2086000001,
+        "d": 30,
+        "steps": 714,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            50,
+            6
+          ],
+          "target": [
+            -110,
+            6
+          ],
+          "angle_error": 160,
+          "world_bearing": -18.197945000000004
+        },
+        "min_dist": 19.39899060571298,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 36.10119204687148,
+        "tail_turns": 50,
+        "tail_alternations": 9,
+        "tail_forward": 150,
+        "tail_median_world_waypoint_jump": 0.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            113
+          ],
+          [
+            [
+              -10,
+              6
+            ],
+            14
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            14
+          ],
+          [
+            [
+              -30,
+              4
+            ],
+            8
+          ],
+          [
+            [
+              40,
+              4
+            ],
+            7
+          ]
+        ]
+      },
+      {
+        "seed": 2086000002,
+        "d": 30,
+        "steps": 698,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            -30,
+            6
+          ],
+          "target": [
+            -30,
+            6
+          ],
+          "angle_error": 0,
+          "world_bearing": -178.54727
+        },
+        "min_dist": 5.3031085902874855,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 35.19700017178778,
+        "tail_turns": 52,
+        "tail_alternations": 18,
+        "tail_forward": 148,
+        "tail_median_world_waypoint_jump": 0.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            119
+          ],
+          [
+            [
+              -10,
+              6
+            ],
+            10
+          ],
+          [
+            [
+              -10,
+              5
+            ],
+            8
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            8
+          ],
+          [
+            [
+              -70,
+              6
+            ],
+            6
+          ]
+        ]
+      },
+      {
+        "seed": 2086000003,
+        "d": 30,
+        "steps": 700,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            -40,
+            6
+          ],
+          "target": [
+            -50,
+            6
+          ],
+          "angle_error": 10,
+          "world_bearing": -173.13744
+        },
+        "min_dist": 5.289640614018897,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 0.0,
+        "tail_turns": 200,
+        "tail_alternations": 93,
+        "tail_forward": 0,
+        "tail_median_world_waypoint_jump": 40.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              70,
+              6
+            ],
+            81
+          ],
+          [
+            [
+              -40,
+              6
+            ],
+            61
+          ],
+          [
+            [
+              -50,
+              6
+            ],
+            16
+          ],
+          [
+            [
+              -70,
+              6
+            ],
+            16
+          ],
+          [
+            [
+              40,
+              6
+            ],
+            14
+          ]
+        ]
+      },
+      {
+        "seed": 2086000004,
+        "d": 30,
+        "steps": 694,
+        "success": false,
+        "reason": "budget",
+        "room_correct": false,
+        "first": {
+          "predicted": [
+            20,
+            6
+          ],
+          "target": [
+            -10,
+            6
+          ],
+          "angle_error": 30,
+          "world_bearing": 121.406624
+        },
+        "min_dist": 17.887957124660147,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 0.0,
+        "tail_turns": 200,
+        "tail_alternations": 199,
+        "tail_forward": 0,
+        "tail_median_world_waypoint_jump": 90.0,
+        "tail_stationary_alternation": true,
+        "tail_most_common_prompts": [
+          [
+            [
+              70,
+              6
+            ],
+            100
+          ],
+          [
+            [
+              -30,
+              6
+            ],
+            68
+          ],
+          [
+            [
+              -70,
+              6
+            ],
+            31
+          ],
+          [
+            [
+              -40,
+              6
+            ],
+            1
+          ]
+        ]
+      },
+      {
+        "seed": 2086000005,
+        "d": 30,
+        "steps": 708,
+        "success": false,
+        "reason": "budget",
+        "room_correct": false,
+        "first": {
+          "predicted": [
+            40,
+            6
+          ],
+          "target": [
+            -80,
+            6
+          ],
+          "angle_error": 120,
+          "world_bearing": 32.913707
+        },
+        "min_dist": 13.905505138302244,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 32.558052240190776,
+        "tail_turns": 68,
+        "tail_alternations": 11,
+        "tail_forward": 132,
+        "tail_median_world_waypoint_jump": 20.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            78
+          ],
+          [
+            [
+              40,
+              6
+            ],
+            14
+          ],
+          [
+            [
+              -30,
+              6
+            ],
+            11
+          ],
+          [
+            [
+              0,
+              5
+            ],
+            8
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            8
+          ]
+        ]
+      },
+      {
+        "seed": 2086000006,
+        "d": 30,
+        "steps": 716,
+        "success": false,
+        "reason": "budget",
+        "room_correct": false,
+        "first": {
+          "predicted": [
+            60,
+            6
+          ],
+          "target": [
+            -100,
+            6
+          ],
+          "angle_error": 160,
+          "world_bearing": 158.543015
+        },
+        "min_dist": 13.102454911762868,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 40.197327146528345,
+        "tail_turns": 38,
+        "tail_alternations": 5,
+        "tail_forward": 162,
+        "tail_median_world_waypoint_jump": 0.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            145
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            9
+          ],
+          [
+            [
+              10,
+              6
+            ],
+            6
+          ],
+          [
+            [
+              50,
+              6
+            ],
+            5
+          ],
+          [
+            [
+              20,
+              6
+            ],
+            5
+          ]
+        ]
+      },
+      {
+        "seed": 2086000007,
+        "d": 30,
+        "steps": 712,
+        "success": false,
+        "reason": "budget",
+        "room_correct": false,
+        "first": {
+          "predicted": [
+            130,
+            6
+          ],
+          "target": [
+            100,
+            6
+          ],
+          "angle_error": 30,
+          "world_bearing": 211.12587000000002
+        },
+        "min_dist": 4.751751243362188,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 36.893266304348614,
+        "tail_turns": 50,
+        "tail_alternations": 10,
+        "tail_forward": 150,
+        "tail_median_world_waypoint_jump": 0.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            142
+          ],
+          [
+            [
+              -10,
+              6
+            ],
+            6
+          ],
+          [
+            [
+              60,
+              6
+            ],
+            6
+          ],
+          [
+            [
+              50,
+              6
+            ],
+            5
+          ],
+          [
+            [
+              20,
+              6
+            ],
+            5
+          ]
+        ]
+      },
+      {
+        "seed": 2086000008,
+        "d": 30,
+        "steps": 712,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            -10,
+            6
+          ],
+          "target": [
+            -90,
+            6
+          ],
+          "angle_error": 80,
+          "world_bearing": -185.18707
+        },
+        "min_dist": 6.453515224849793,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 42.77479693016489,
+        "tail_turns": 21,
+        "tail_alternations": 2,
+        "tail_forward": 179,
+        "tail_median_world_waypoint_jump": 0.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            166
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            7
+          ],
+          [
+            [
+              50,
+              6
+            ],
+            4
+          ],
+          [
+            [
+              20,
+              6
+            ],
+            4
+          ],
+          [
+            [
+              60,
+              6
+            ],
+            2
+          ]
+        ]
+      },
+      {
+        "seed": 2086000009,
+        "d": 30,
+        "steps": 720,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            80,
+            6
+          ],
+          "target": [
+            -100,
+            6
+          ],
+          "angle_error": 180,
+          "world_bearing": -89.09995
+        },
+        "min_dist": 29.99999984443516,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 36.81796077130327,
+        "tail_turns": 52,
+        "tail_alternations": 7,
+        "tail_forward": 148,
+        "tail_median_world_waypoint_jump": 10.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            74
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            39
+          ],
+          [
+            [
+              -30,
+              4
+            ],
+            9
+          ],
+          [
+            [
+              -40,
+              4
+            ],
+            8
+          ],
+          [
+            [
+              50,
+              4
+            ],
+            7
+          ]
+        ]
+      },
+      {
+        "seed": 2086000010,
+        "d": 30,
+        "steps": 726,
+        "success": false,
+        "reason": "budget",
+        "room_correct": false,
+        "first": {
+          "predicted": [
+            130,
+            6
+          ],
+          "target": [
+            -160,
+            6
+          ],
+          "angle_error": 70,
+          "world_bearing": 293.92169
+        },
+        "min_dist": 21.622977369901893,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 44.255045485653,
+        "tail_turns": 23,
+        "tail_alternations": 0,
+        "tail_forward": 177,
+        "tail_median_world_waypoint_jump": 0.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            157
+          ],
+          [
+            [
+              -50,
+              6
+            ],
+            6
+          ],
+          [
+            [
+              0,
+              5
+            ],
+            5
+          ],
+          [
+            [
+              -50,
+              5
+            ],
+            3
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            3
+          ]
+        ]
+      },
+      {
+        "seed": 2086000011,
+        "d": 30,
+        "steps": 714,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            -140,
+            6
+          ],
+          "target": [
+            -120,
+            6
+          ],
+          "angle_error": 20,
+          "world_bearing": -204.19729999999998
+        },
+        "min_dist": 6.260370865704973,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 39.433646682398994,
+        "tail_turns": 41,
+        "tail_alternations": 3,
+        "tail_forward": 159,
+        "tail_median_world_waypoint_jump": 0.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            134
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            8
+          ],
+          [
+            [
+              20,
+              6
+            ],
+            8
+          ],
+          [
+            [
+              10,
+              6
+            ],
+            6
+          ],
+          [
+            [
+              60,
+              6
+            ],
+            6
+          ]
+        ]
+      },
+      {
+        "seed": 2086000012,
+        "d": 30,
+        "steps": 698,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            20,
+            6
+          ],
+          "target": [
+            30,
+            6
+          ],
+          "angle_error": 10,
+          "world_bearing": 78.47238999999999
+        },
+        "min_dist": 7.635708002939695,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 5.733817306399616,
+        "tail_turns": 174,
+        "tail_alternations": 93,
+        "tail_forward": 26,
+        "tail_median_world_waypoint_jump": 80.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              70,
+              4
+            ],
+            37
+          ],
+          [
+            [
+              70,
+              5
+            ],
+            33
+          ],
+          [
+            [
+              -70,
+              4
+            ],
+            25
+          ],
+          [
+            [
+              70,
+              6
+            ],
+            23
+          ],
+          [
+            [
+              -70,
+              6
+            ],
+            23
+          ]
+        ]
+      },
+      {
+        "seed": 2086000013,
+        "d": 30,
+        "steps": 698,
+        "success": false,
+        "reason": "budget",
+        "room_correct": false,
+        "first": {
+          "predicted": [
+            20,
+            6
+          ],
+          "target": [
+            30,
+            6
+          ],
+          "angle_error": 10,
+          "world_bearing": 170.0442
+        },
+        "min_dist": 21.778968433158216,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 24.53924141016113,
+        "tail_turns": 104,
+        "tail_alternations": 24,
+        "tail_forward": 96,
+        "tail_median_world_waypoint_jump": 10.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            51
+          ],
+          [
+            [
+              -10,
+              6
+            ],
+            21
+          ],
+          [
+            [
+              20,
+              6
+            ],
+            16
+          ],
+          [
+            [
+              10,
+              6
+            ],
+            13
+          ],
+          [
+            [
+              0,
+              5
+            ],
+            12
+          ]
+        ]
+      },
+      {
+        "seed": 2086000014,
+        "d": 30,
+        "steps": 704,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            -70,
+            6
+          ],
+          "target": [
+            -70,
+            6
+          ],
+          "angle_error": 0,
+          "world_bearing": 4.701049999999995
+        },
+        "min_dist": 5.92908691182096,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 32.001541459027585,
+        "tail_turns": 73,
+        "tail_alternations": 22,
+        "tail_forward": 127,
+        "tail_median_world_waypoint_jump": 10.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            87
+          ],
+          [
+            [
+              70,
+              6
+            ],
+            11
+          ],
+          [
+            [
+              -10,
+              6
+            ],
+            10
+          ],
+          [
+            [
+              -70,
+              6
+            ],
+            10
+          ],
+          [
+            [
+              10,
+              6
+            ],
+            8
+          ]
+        ]
+      },
+      {
+        "seed": 2086000015,
+        "d": 30,
+        "steps": 702,
+        "success": false,
+        "reason": "budget",
+        "room_correct": false,
+        "first": {
+          "predicted": [
+            20,
+            6
+          ],
+          "target": [
+            50,
+            6
+          ],
+          "angle_error": 30,
+          "world_bearing": 55.58318
+        },
+        "min_dist": 14.89455266950564,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 43.14097278091105,
+        "tail_turns": 28,
+        "tail_alternations": 2,
+        "tail_forward": 172,
+        "tail_median_world_waypoint_jump": 0.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            136
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            10
+          ],
+          [
+            [
+              -40,
+              4
+            ],
+            5
+          ],
+          [
+            [
+              50,
+              6
+            ],
+            4
+          ],
+          [
+            [
+              20,
+              6
+            ],
+            3
+          ]
+        ]
+      },
+      {
+        "seed": 2086000016,
+        "d": 30,
+        "steps": 712,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            120,
+            6
+          ],
+          "target": [
+            110,
+            6
+          ],
+          "angle_error": 10,
+          "world_bearing": 284.75919
+        },
+        "min_dist": 7.04943344585745,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 30.04704403893179,
+        "tail_turns": 73,
+        "tail_alternations": 16,
+        "tail_forward": 127,
+        "tail_median_world_waypoint_jump": 10.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            78
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            21
+          ],
+          [
+            [
+              -10,
+              6
+            ],
+            18
+          ],
+          [
+            [
+              0,
+              5
+            ],
+            13
+          ],
+          [
+            [
+              20,
+              6
+            ],
+            12
+          ]
+        ]
+      },
+      {
+        "seed": 2086000017,
+        "d": 30,
+        "steps": 706,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            -40,
+            6
+          ],
+          "target": [
+            80,
+            6
+          ],
+          "angle_error": 120,
+          "world_bearing": -27.132680999999998
+        },
+        "min_dist": 16.34992906658153,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 36.67095481247827,
+        "tail_turns": 53,
+        "tail_alternations": 7,
+        "tail_forward": 147,
+        "tail_median_world_waypoint_jump": 10.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            111
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            10
+          ],
+          [
+            [
+              60,
+              6
+            ],
+            9
+          ],
+          [
+            [
+              10,
+              6
+            ],
+            8
+          ],
+          [
+            [
+              0,
+              5
+            ],
+            8
+          ]
+        ]
+      },
+      {
+        "seed": 2086000018,
+        "d": 30,
+        "steps": 702,
+        "success": false,
+        "reason": "budget",
+        "room_correct": false,
+        "first": {
+          "predicted": [
+            30,
+            6
+          ],
+          "target": [
+            50,
+            6
+          ],
+          "angle_error": 20,
+          "world_bearing": -24.462234000000002
+        },
+        "min_dist": 27.85191378579221,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 37.3647290607753,
+        "tail_turns": 52,
+        "tail_alternations": 5,
+        "tail_forward": 148,
+        "tail_median_world_waypoint_jump": 0.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            124
+          ],
+          [
+            [
+              10,
+              6
+            ],
+            15
+          ],
+          [
+            [
+              -30,
+              6
+            ],
+            11
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            9
+          ],
+          [
+            [
+              -10,
+              6
+            ],
+            5
+          ]
+        ]
+      },
+      {
+        "seed": 2086000019,
+        "d": 30,
+        "steps": 706,
+        "success": false,
+        "reason": "budget",
+        "room_correct": false,
+        "first": {
+          "predicted": [
+            -10,
+            6
+          ],
+          "target": [
+            -60,
+            6
+          ],
+          "angle_error": 50,
+          "world_bearing": -133.69155
+        },
+        "min_dist": 4.665734196015268,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 17.40691727796808,
+        "tail_turns": 115,
+        "tail_alternations": 35,
+        "tail_forward": 85,
+        "tail_median_world_waypoint_jump": 20.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            34
+          ],
+          [
+            [
+              -30,
+              6
+            ],
+            25
+          ],
+          [
+            [
+              30,
+              6
+            ],
+            14
+          ],
+          [
+            [
+              -20,
+              6
+            ],
+            14
+          ],
+          [
+            [
+              20,
+              6
+            ],
+            13
+          ]
+        ]
+      },
+      {
+        "seed": 2086000020,
+        "d": 30,
+        "steps": 286,
+        "success": true,
+        "reason": "reached",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            -30,
+            6
+          ],
+          "target": [
+            -30,
+            6
+          ],
+          "angle_error": 0,
+          "world_bearing": -88.90830199999999
+        },
+        "min_dist": 2.915603459194128,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 37.366939394511384,
+        "tail_turns": 42,
+        "tail_alternations": 7,
+        "tail_forward": 158,
+        "tail_median_world_waypoint_jump": 0.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            139
+          ],
+          [
+            [
+              -20,
+              6
+            ],
+            12
+          ],
+          [
+            [
+              0,
+              5
+            ],
+            6
+          ],
+          [
+            [
+              10,
+              6
+            ],
+            5
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            5
+          ]
+        ]
+      },
+      {
+        "seed": 2086000021,
+        "d": 30,
+        "steps": 726,
+        "success": false,
+        "reason": "budget",
+        "room_correct": false,
+        "first": {
+          "predicted": [
+            30,
+            6
+          ],
+          "target": [
+            170,
+            6
+          ],
+          "angle_error": 140,
+          "world_bearing": 35.965984
+        },
+        "min_dist": 6.151032257525868,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 38.21972698947996,
+        "tail_turns": 47,
+        "tail_alternations": 6,
+        "tail_forward": 153,
+        "tail_median_world_waypoint_jump": 0.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            129
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            14
+          ],
+          [
+            [
+              20,
+              6
+            ],
+            14
+          ],
+          [
+            [
+              -10,
+              6
+            ],
+            11
+          ],
+          [
+            [
+              30,
+              6
+            ],
+            5
+          ]
+        ]
+      },
+      {
+        "seed": 2086000022,
+        "d": 30,
+        "steps": 692,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            0,
+            6
+          ],
+          "target": [
+            0,
+            6
+          ],
+          "angle_error": 0,
+          "world_bearing": 177.18683
+        },
+        "min_dist": 11.986587448373394,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 0.4260745220451737,
+        "tail_turns": 198,
+        "tail_alternations": 112,
+        "tail_forward": 2,
+        "tail_median_world_waypoint_jump": 70.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              -70,
+              6
+            ],
+            52
+          ],
+          [
+            [
+              70,
+              6
+            ],
+            39
+          ],
+          [
+            [
+              70,
+              4
+            ],
+            29
+          ],
+          [
+            [
+              -40,
+              6
+            ],
+            17
+          ],
+          [
+            [
+              -70,
+              4
+            ],
+            15
+          ]
+        ]
+      },
+      {
+        "seed": 2086000023,
+        "d": 30,
+        "steps": 708,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            -60,
+            6
+          ],
+          "target": [
+            -80,
+            6
+          ],
+          "angle_error": 20,
+          "world_bearing": 20.711426000000003
+        },
+        "min_dist": 7.929987856900607,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 34.53494816476419,
+        "tail_turns": 61,
+        "tail_alternations": 10,
+        "tail_forward": 139,
+        "tail_median_world_waypoint_jump": 0.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            112
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            16
+          ],
+          [
+            [
+              20,
+              6
+            ],
+            8
+          ],
+          [
+            [
+              -40,
+              4
+            ],
+            6
+          ],
+          [
+            [
+              -20,
+              6
+            ],
+            6
+          ]
+        ]
+      },
+      {
+        "seed": 2086000024,
+        "d": 30,
+        "steps": 700,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            20,
+            6
+          ],
+          "target": [
+            40,
+            6
+          ],
+          "angle_error": 20,
+          "world_bearing": 158.08952
+        },
+        "min_dist": 6.1312524723936574,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 44.83396235000655,
+        "tail_turns": 16,
+        "tail_alternations": 1,
+        "tail_forward": 184,
+        "tail_median_world_waypoint_jump": 0.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            163
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            9
+          ],
+          [
+            [
+              0,
+              5
+            ],
+            8
+          ],
+          [
+            [
+              -20,
+              6
+            ],
+            4
+          ],
+          [
+            [
+              40,
+              6
+            ],
+            3
+          ]
+        ]
+      },
+      {
+        "seed": 2086000025,
+        "d": 30,
+        "steps": 704,
+        "success": false,
+        "reason": "budget",
+        "room_correct": false,
+        "first": {
+          "predicted": [
+            20,
+            6
+          ],
+          "target": [
+            50,
+            6
+          ],
+          "angle_error": 30,
+          "world_bearing": 60.692245
+        },
+        "min_dist": 9.624939664391166,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 28.102253385543225,
+        "tail_turns": 84,
+        "tail_alternations": 17,
+        "tail_forward": 116,
+        "tail_median_world_waypoint_jump": 10.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            101
+          ],
+          [
+            [
+              70,
+              6
+            ],
+            12
+          ],
+          [
+            [
+              -10,
+              6
+            ],
+            11
+          ],
+          [
+            [
+              10,
+              6
+            ],
+            9
+          ],
+          [
+            [
+              -70,
+              6
+            ],
+            9
+          ]
+        ]
+      },
+      {
+        "seed": 2086000026,
+        "d": 30,
+        "steps": 694,
+        "success": false,
+        "reason": "budget",
+        "room_correct": false,
+        "first": {
+          "predicted": [
+            0,
+            6
+          ],
+          "target": [
+            10,
+            6
+          ],
+          "angle_error": 10,
+          "world_bearing": 169.48347
+        },
+        "min_dist": 4.7044250709824444,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 43.55701332194258,
+        "tail_turns": 25,
+        "tail_alternations": 4,
+        "tail_forward": 175,
+        "tail_median_world_waypoint_jump": 0.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            153
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            10
+          ],
+          [
+            [
+              10,
+              6
+            ],
+            4
+          ],
+          [
+            [
+              60,
+              6
+            ],
+            3
+          ],
+          [
+            [
+              0,
+              5
+            ],
+            3
+          ]
+        ]
+      },
+      {
+        "seed": 2086000027,
+        "d": 30,
+        "steps": 718,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            130,
+            6
+          ],
+          "target": [
+            130,
+            6
+          ],
+          "angle_error": 0,
+          "world_bearing": -0.7543799999999976
+        },
+        "min_dist": 21.65413628799394,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 40.91847591052956,
+        "tail_turns": 34,
+        "tail_alternations": 4,
+        "tail_forward": 166,
+        "tail_median_world_waypoint_jump": 0.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            152
+          ],
+          [
+            [
+              -10,
+              6
+            ],
+            10
+          ],
+          [
+            [
+              0,
+              5
+            ],
+            6
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            5
+          ],
+          [
+            [
+              -70,
+              6
+            ],
+            4
+          ]
+        ]
+      },
+      {
+        "seed": 2086000028,
+        "d": 30,
+        "steps": 581,
+        "success": false,
+        "reason": "distractor_first",
+        "room_correct": false,
+        "first": {
+          "predicted": [
+            80,
+            6
+          ],
+          "target": [
+            80,
+            6
+          ],
+          "angle_error": 0,
+          "world_bearing": 94.475686
+        },
+        "min_dist": 6.2830324609009365,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 44.10390045204567,
+        "tail_turns": 28,
+        "tail_alternations": 1,
+        "tail_forward": 172,
+        "tail_median_world_waypoint_jump": 0.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            167
+          ],
+          [
+            [
+              10,
+              6
+            ],
+            8
+          ],
+          [
+            [
+              30,
+              6
+            ],
+            4
+          ],
+          [
+            [
+              50,
+              6
+            ],
+            3
+          ],
+          [
+            [
+              60,
+              6
+            ],
+            3
+          ]
+        ]
+      },
+      {
+        "seed": 2086000029,
+        "d": 30,
+        "steps": 698,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            -30,
+            6
+          ],
+          "target": [
+            -30,
+            6
+          ],
+          "angle_error": 0,
+          "world_bearing": 91.031075
+        },
+        "min_dist": 11.035292554283386,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 42.1785990824828,
+        "tail_turns": 35,
+        "tail_alternations": 2,
+        "tail_forward": 165,
+        "tail_median_world_waypoint_jump": 0.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            137
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            9
+          ],
+          [
+            [
+              -10,
+              6
+            ],
+            7
+          ],
+          [
+            [
+              -70,
+              6
+            ],
+            6
+          ],
+          [
+            [
+              20,
+              6
+            ],
+            4
+          ]
+        ]
+      }
+    ]
+  },
+  "spatial": {
+    "n": 30,
+    "wins": 8,
+    "room_correct": 30,
+    "wins_with_correct_room": 8,
+    "stationary_alternation": 14,
+    "reasons": {
+      "reached": 8,
+      "budget": 22
+    },
+    "episodes": [
+      {
+        "seed": 2086000000,
+        "d": 30,
+        "steps": 241,
+        "success": true,
+        "reason": "reached",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            80,
+            6
+          ],
+          "target": [
+            80,
+            6
+          ],
+          "angle_error": 0,
+          "world_bearing": -88.67750000000001
+        },
+        "min_dist": 2.7863560101877916,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 40.86393813023169,
+        "tail_turns": 24,
+        "tail_alternations": 4,
+        "tail_forward": 176,
+        "tail_median_world_waypoint_jump": 0.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            115
+          ],
+          [
+            [
+              0,
+              5
+            ],
+            15
+          ],
+          [
+            [
+              60,
+              6
+            ],
+            14
+          ],
+          [
+            [
+              60,
+              4
+            ],
+            13
+          ],
+          [
+            [
+              10,
+              5
+            ],
+            9
+          ]
+        ]
+      },
+      {
+        "seed": 2086000002,
+        "d": 30,
+        "steps": 698,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            -30,
+            6
+          ],
+          "target": [
+            -30,
+            6
+          ],
+          "angle_error": 0,
+          "world_bearing": -178.54727
+        },
+        "min_dist": 8.443472291559672,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 0.0,
+        "tail_turns": 200,
+        "tail_alternations": 199,
+        "tail_forward": 0,
+        "tail_median_world_waypoint_jump": 70.0,
+        "tail_stationary_alternation": true,
+        "tail_most_common_prompts": [
+          [
+            [
+              40,
+              5
+            ],
+            100
+          ],
+          [
+            [
+              -40,
+              4
+            ],
+            88
+          ],
+          [
+            [
+              -40,
+              3
+            ],
+            12
+          ]
+        ]
+      },
+      {
+        "seed": 2086000001,
+        "d": 30,
+        "steps": 714,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            -110,
+            6
+          ],
+          "target": [
+            -110,
+            6
+          ],
+          "angle_error": 0,
+          "world_bearing": -178.197945
+        },
+        "min_dist": 6.176612755678806,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 0.0,
+        "tail_turns": 200,
+        "tail_alternations": 199,
+        "tail_forward": 0,
+        "tail_median_world_waypoint_jump": 110.0,
+        "tail_stationary_alternation": true,
+        "tail_most_common_prompts": [
+          [
+            [
+              60,
+              4
+            ],
+            100
+          ],
+          [
+            [
+              -60,
+              4
+            ],
+            92
+          ],
+          [
+            [
+              -50,
+              4
+            ],
+            7
+          ],
+          [
+            [
+              -60,
+              5
+            ],
+            1
+          ]
+        ]
+      },
+      {
+        "seed": 2086000004,
+        "d": 30,
+        "steps": 268,
+        "success": true,
+        "reason": "reached",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            -10,
+            6
+          ],
+          "target": [
+            -10,
+            6
+          ],
+          "angle_error": 0,
+          "world_bearing": 91.406624
+        },
+        "min_dist": 2.9335507942260355,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 35.08617425597784,
+        "tail_turns": 40,
+        "tail_alternations": 20,
+        "tail_forward": 160,
+        "tail_median_world_waypoint_jump": 0.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            91
+          ],
+          [
+            [
+              50,
+              4
+            ],
+            12
+          ],
+          [
+            [
+              70,
+              5
+            ],
+            11
+          ],
+          [
+            [
+              60,
+              6
+            ],
+            11
+          ],
+          [
+            [
+              20,
+              5
+            ],
+            9
+          ]
+        ]
+      },
+      {
+        "seed": 2086000003,
+        "d": 30,
+        "steps": 700,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            -50,
+            6
+          ],
+          "target": [
+            -50,
+            6
+          ],
+          "angle_error": 0,
+          "world_bearing": -183.13744
+        },
+        "min_dist": 12.68674413303164,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 0.0,
+        "tail_turns": 200,
+        "tail_alternations": 199,
+        "tail_forward": 0,
+        "tail_median_world_waypoint_jump": 50.0,
+        "tail_stationary_alternation": true,
+        "tail_most_common_prompts": [
+          [
+            [
+              -30,
+              6
+            ],
+            100
+          ],
+          [
+            [
+              30,
+              6
+            ],
+            100
+          ]
+        ]
+      },
+      {
+        "seed": 2086000005,
+        "d": 30,
+        "steps": 708,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            -100,
+            6
+          ],
+          "target": [
+            -80,
+            6
+          ],
+          "angle_error": 20,
+          "world_bearing": -107.086293
+        },
+        "min_dist": 4.726485056472924,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 0.4789119485165187,
+        "tail_turns": 199,
+        "tail_alternations": 181,
+        "tail_forward": 2,
+        "tail_median_world_waypoint_jump": 50.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              -30,
+              6
+            ],
+            72
+          ],
+          [
+            [
+              30,
+              6
+            ],
+            59
+          ],
+          [
+            [
+              -30,
+              4
+            ],
+            27
+          ],
+          [
+            [
+              60,
+              6
+            ],
+            23
+          ],
+          [
+            [
+              30,
+              4
+            ],
+            13
+          ]
+        ]
+      },
+      {
+        "seed": 2086000006,
+        "d": 30,
+        "steps": 245,
+        "success": true,
+        "reason": "reached",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            -90,
+            6
+          ],
+          "target": [
+            -100,
+            6
+          ],
+          "angle_error": 10,
+          "world_bearing": 8.543014999999997
+        },
+        "min_dist": 2.9586309064797143,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 41.12706812450478,
+        "tail_turns": 18,
+        "tail_alternations": 0,
+        "tail_forward": 182,
+        "tail_median_world_waypoint_jump": 0.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            123
+          ],
+          [
+            [
+              -50,
+              4
+            ],
+            13
+          ],
+          [
+            [
+              0,
+              5
+            ],
+            11
+          ],
+          [
+            [
+              -10,
+              5
+            ],
+            9
+          ],
+          [
+            [
+              -70,
+              5
+            ],
+            7
+          ]
+        ]
+      },
+      {
+        "seed": 2086000007,
+        "d": 30,
+        "steps": 712,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            110,
+            6
+          ],
+          "target": [
+            100,
+            6
+          ],
+          "angle_error": 10,
+          "world_bearing": 191.12587000000002
+        },
+        "min_dist": 4.852498507290027,
+        "stabilizer_steps": 16,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 16.967913234397653,
+        "tail_turns": 126,
+        "tail_alternations": 99,
+        "tail_forward": 74,
+        "tail_median_world_waypoint_jump": 0.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            121
+          ],
+          [
+            [
+              10,
+              6
+            ],
+            53
+          ],
+          [
+            [
+              -30,
+              6
+            ],
+            5
+          ],
+          [
+            [
+              -170,
+              6
+            ],
+            4
+          ],
+          [
+            [
+              -100,
+              6
+            ],
+            3
+          ]
+        ]
+      },
+      {
+        "seed": 2086000008,
+        "d": 30,
+        "steps": 712,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            -110,
+            6
+          ],
+          "target": [
+            -90,
+            6
+          ],
+          "angle_error": 20,
+          "world_bearing": -285.18707
+        },
+        "min_dist": 6.683696939817639,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 0.0,
+        "tail_turns": 200,
+        "tail_alternations": 125,
+        "tail_forward": 0,
+        "tail_median_world_waypoint_jump": 50.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              60,
+              3
+            ],
+            62
+          ],
+          [
+            [
+              0,
+              6
+            ],
+            52
+          ],
+          [
+            [
+              60,
+              6
+            ],
+            38
+          ],
+          [
+            [
+              -50,
+              6
+            ],
+            38
+          ],
+          [
+            [
+              -10,
+              6
+            ],
+            10
+          ]
+        ]
+      },
+      {
+        "seed": 2086000011,
+        "d": 30,
+        "steps": 281,
+        "success": true,
+        "reason": "reached",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            -120,
+            6
+          ],
+          "target": [
+            -120,
+            6
+          ],
+          "angle_error": 0,
+          "world_bearing": -184.19729999999998
+        },
+        "min_dist": 2.9139725287552656,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 37.537268729748085,
+        "tail_turns": 29,
+        "tail_alternations": 12,
+        "tail_forward": 171,
+        "tail_median_world_waypoint_jump": 0.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            103
+          ],
+          [
+            [
+              0,
+              5
+            ],
+            14
+          ],
+          [
+            [
+              60,
+              6
+            ],
+            14
+          ],
+          [
+            [
+              60,
+              4
+            ],
+            13
+          ],
+          [
+            [
+              80,
+              5
+            ],
+            10
+          ]
+        ]
+      },
+      {
+        "seed": 2086000009,
+        "d": 30,
+        "steps": 720,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            -110,
+            6
+          ],
+          "target": [
+            -100,
+            6
+          ],
+          "angle_error": 10,
+          "world_bearing": -279.09995000000004
+        },
+        "min_dist": 6.13421334085989,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 0.0,
+        "tail_turns": 200,
+        "tail_alternations": 199,
+        "tail_forward": 0,
+        "tail_median_world_waypoint_jump": 109.99999500000001,
+        "tail_stationary_alternation": true,
+        "tail_most_common_prompts": [
+          [
+            [
+              60,
+              4
+            ],
+            100
+          ],
+          [
+            [
+              -60,
+              4
+            ],
+            100
+          ]
+        ]
+      },
+      {
+        "seed": 2086000010,
+        "d": 30,
+        "steps": 726,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            -170,
+            6
+          ],
+          "target": [
+            -160,
+            6
+          ],
+          "angle_error": 10,
+          "world_bearing": -6.078309999999988
+        },
+        "min_dist": 9.514904069271426,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 0.0,
+        "tail_turns": 200,
+        "tail_alternations": 120,
+        "tail_forward": 0,
+        "tail_median_world_waypoint_jump": 90.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              60,
+              6
+            ],
+            100
+          ],
+          [
+            [
+              -40,
+              6
+            ],
+            99
+          ],
+          [
+            [
+              -50,
+              6
+            ],
+            1
+          ]
+        ]
+      },
+      {
+        "seed": 2086000014,
+        "d": 30,
+        "steps": 249,
+        "success": true,
+        "reason": "reached",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            -70,
+            6
+          ],
+          "target": [
+            -70,
+            6
+          ],
+          "angle_error": 0,
+          "world_bearing": 4.701049999999995
+        },
+        "min_dist": 2.923414016310227,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 38.65206913082755,
+        "tail_turns": 21,
+        "tail_alternations": 1,
+        "tail_forward": 179,
+        "tail_median_world_waypoint_jump": 0.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            122
+          ],
+          [
+            [
+              60,
+              4
+            ],
+            15
+          ],
+          [
+            [
+              0,
+              5
+            ],
+            9
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            8
+          ],
+          [
+            [
+              10,
+              5
+            ],
+            7
+          ]
+        ]
+      },
+      {
+        "seed": 2086000012,
+        "d": 30,
+        "steps": 251,
+        "success": true,
+        "reason": "reached",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            20,
+            6
+          ],
+          "target": [
+            30,
+            6
+          ],
+          "angle_error": 10,
+          "world_bearing": 78.47238999999999
+        },
+        "min_dist": 2.9388373884921766,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 38.24874634948627,
+        "tail_turns": 26,
+        "tail_alternations": 3,
+        "tail_forward": 174,
+        "tail_median_world_waypoint_jump": 0.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            119
+          ],
+          [
+            [
+              0,
+              5
+            ],
+            15
+          ],
+          [
+            [
+              50,
+              4
+            ],
+            12
+          ],
+          [
+            [
+              60,
+              4
+            ],
+            11
+          ],
+          [
+            [
+              60,
+              6
+            ],
+            7
+          ]
+        ]
+      },
+      {
+        "seed": 2086000013,
+        "d": 30,
+        "steps": 698,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            30,
+            6
+          ],
+          "target": [
+            30,
+            6
+          ],
+          "angle_error": 0,
+          "world_bearing": 180.0442
+        },
+        "min_dist": 3.8381580620761193,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 0.0,
+        "tail_turns": 200,
+        "tail_alternations": 199,
+        "tail_forward": 0,
+        "tail_median_world_waypoint_jump": 140.0,
+        "tail_stationary_alternation": true,
+        "tail_most_common_prompts": [
+          [
+            [
+              60,
+              6
+            ],
+            100
+          ],
+          [
+            [
+              -170,
+              6
+            ],
+            100
+          ]
+        ]
+      },
+      {
+        "seed": 2086000016,
+        "d": 30,
+        "steps": 248,
+        "success": true,
+        "reason": "reached",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            100,
+            6
+          ],
+          "target": [
+            110,
+            6
+          ],
+          "angle_error": 10,
+          "world_bearing": 264.75919
+        },
+        "min_dist": 2.7687218266163733,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 41.065860025079374,
+        "tail_turns": 24,
+        "tail_alternations": 2,
+        "tail_forward": 176,
+        "tail_median_world_waypoint_jump": 0.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            124
+          ],
+          [
+            [
+              50,
+              4
+            ],
+            12
+          ],
+          [
+            [
+              0,
+              5
+            ],
+            11
+          ],
+          [
+            [
+              60,
+              4
+            ],
+            9
+          ],
+          [
+            [
+              60,
+              6
+            ],
+            7
+          ]
+        ]
+      },
+      {
+        "seed": 2086000015,
+        "d": 30,
+        "steps": 702,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            50,
+            6
+          ],
+          "target": [
+            50,
+            6
+          ],
+          "angle_error": 0,
+          "world_bearing": 85.58318
+        },
+        "min_dist": 9.367697040471098,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 0.0,
+        "tail_turns": 200,
+        "tail_alternations": 199,
+        "tail_forward": 0,
+        "tail_median_world_waypoint_jump": 60.0,
+        "tail_stationary_alternation": true,
+        "tail_most_common_prompts": [
+          [
+            [
+              40,
+              3
+            ],
+            100
+          ],
+          [
+            [
+              -30,
+              6
+            ],
+            100
+          ]
+        ]
+      },
+      {
+        "seed": 2086000017,
+        "d": 30,
+        "steps": 706,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            90,
+            6
+          ],
+          "target": [
+            80,
+            6
+          ],
+          "angle_error": 10,
+          "world_bearing": 102.867319
+        },
+        "min_dist": 5.857887860613453,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 0.0,
+        "tail_turns": 200,
+        "tail_alternations": 179,
+        "tail_forward": 0,
+        "tail_median_world_waypoint_jump": 100.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              60,
+              6
+            ],
+            99
+          ],
+          [
+            [
+              -50,
+              5
+            ],
+            59
+          ],
+          [
+            [
+              -50,
+              6
+            ],
+            32
+          ],
+          [
+            [
+              -60,
+              5
+            ],
+            9
+          ],
+          [
+            [
+              60,
+              5
+            ],
+            1
+          ]
+        ]
+      },
+      {
+        "seed": 2086000020,
+        "d": 30,
+        "steps": 698,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            -30,
+            6
+          ],
+          "target": [
+            -30,
+            6
+          ],
+          "angle_error": 0,
+          "world_bearing": -88.90830199999999
+        },
+        "min_dist": 12.238799860068093,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 0.0,
+        "tail_turns": 200,
+        "tail_alternations": 121,
+        "tail_forward": 0,
+        "tail_median_world_waypoint_jump": 40.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              20,
+              6
+            ],
+            100
+          ],
+          [
+            [
+              -30,
+              4
+            ],
+            60
+          ],
+          [
+            [
+              -40,
+              6
+            ],
+            38
+          ],
+          [
+            [
+              -30,
+              6
+            ],
+            2
+          ]
+        ]
+      },
+      {
+        "seed": 2086000018,
+        "d": 30,
+        "steps": 702,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            50,
+            6
+          ],
+          "target": [
+            50,
+            6
+          ],
+          "angle_error": 0,
+          "world_bearing": -4.462234000000002
+        },
+        "min_dist": 9.844174979114536,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 0.0,
+        "tail_turns": 200,
+        "tail_alternations": 191,
+        "tail_forward": 0,
+        "tail_median_world_waypoint_jump": 90.0,
+        "tail_stationary_alternation": true,
+        "tail_most_common_prompts": [
+          [
+            [
+              60,
+              6
+            ],
+            100
+          ],
+          [
+            [
+              -40,
+              6
+            ],
+            96
+          ],
+          [
+            [
+              -20,
+              6
+            ],
+            4
+          ]
+        ]
+      },
+      {
+        "seed": 2086000019,
+        "d": 30,
+        "steps": 706,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            -60,
+            6
+          ],
+          "target": [
+            -60,
+            6
+          ],
+          "angle_error": 0,
+          "world_bearing": -183.69155
+        },
+        "min_dist": 10.172395715303908,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 0.0,
+        "tail_turns": 200,
+        "tail_alternations": 179,
+        "tail_forward": 0,
+        "tail_median_world_waypoint_jump": 100.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              -30,
+              3
+            ],
+            76
+          ],
+          [
+            [
+              80,
+              3
+            ],
+            61
+          ],
+          [
+            [
+              -30,
+              4
+            ],
+            24
+          ],
+          [
+            [
+              120,
+              3
+            ],
+            15
+          ],
+          [
+            [
+              40,
+              3
+            ],
+            15
+          ]
+        ]
+      },
+      {
+        "seed": 2086000022,
+        "d": 30,
+        "steps": 692,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            0,
+            6
+          ],
+          "target": [
+            0,
+            6
+          ],
+          "angle_error": 0,
+          "world_bearing": 177.18683
+        },
+        "min_dist": 6.863022533173379,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 0.0,
+        "tail_turns": 200,
+        "tail_alternations": 199,
+        "tail_forward": 0,
+        "tail_median_world_waypoint_jump": 60.0,
+        "tail_stationary_alternation": true,
+        "tail_most_common_prompts": [
+          [
+            [
+              -10,
+              6
+            ],
+            100
+          ],
+          [
+            [
+              60,
+              4
+            ],
+            100
+          ]
+        ]
+      },
+      {
+        "seed": 2086000023,
+        "d": 30,
+        "steps": 708,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            -100,
+            6
+          ],
+          "target": [
+            -80,
+            6
+          ],
+          "angle_error": 20,
+          "world_bearing": -19.288573999999997
+        },
+        "min_dist": 5.637881401201793,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 0.0,
+        "tail_turns": 200,
+        "tail_alternations": 199,
+        "tail_forward": 0,
+        "tail_median_world_waypoint_jump": 110.0,
+        "tail_stationary_alternation": true,
+        "tail_most_common_prompts": [
+          [
+            [
+              -60,
+              5
+            ],
+            100
+          ],
+          [
+            [
+              60,
+              5
+            ],
+            76
+          ],
+          [
+            [
+              60,
+              6
+            ],
+            24
+          ]
+        ]
+      },
+      {
+        "seed": 2086000021,
+        "d": 30,
+        "steps": 726,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            180,
+            6
+          ],
+          "target": [
+            170,
+            6
+          ],
+          "angle_error": 10,
+          "world_bearing": 185.965984
+        },
+        "min_dist": 8.256671279094176,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 0.0,
+        "tail_turns": 200,
+        "tail_alternations": 199,
+        "tail_forward": 0,
+        "tail_median_world_waypoint_jump": 70.0,
+        "tail_stationary_alternation": true,
+        "tail_most_common_prompts": [
+          [
+            [
+              -40,
+              4
+            ],
+            100
+          ],
+          [
+            [
+              40,
+              4
+            ],
+            72
+          ],
+          [
+            [
+              40,
+              5
+            ],
+            28
+          ]
+        ]
+      },
+      {
+        "seed": 2086000026,
+        "d": 30,
+        "steps": 236,
+        "success": true,
+        "reason": "reached",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            20,
+            6
+          ],
+          "target": [
+            10,
+            6
+          ],
+          "angle_error": 10,
+          "world_bearing": 189.48347
+        },
+        "min_dist": 2.892181676867592,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 41.26460265115742,
+        "tail_turns": 18,
+        "tail_alternations": 0,
+        "tail_forward": 182,
+        "tail_median_world_waypoint_jump": 0.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            116
+          ],
+          [
+            [
+              -70,
+              5
+            ],
+            15
+          ],
+          [
+            [
+              0,
+              5
+            ],
+            14
+          ],
+          [
+            [
+              -10,
+              5
+            ],
+            6
+          ],
+          [
+            [
+              -70,
+              6
+            ],
+            6
+          ]
+        ]
+      },
+      {
+        "seed": 2086000024,
+        "d": 30,
+        "steps": 700,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            30,
+            6
+          ],
+          "target": [
+            40,
+            6
+          ],
+          "angle_error": 10,
+          "world_bearing": 168.08952
+        },
+        "min_dist": 11.581580507332125,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 0.0,
+        "tail_turns": 200,
+        "tail_alternations": 199,
+        "tail_forward": 0,
+        "tail_median_world_waypoint_jump": 60.0,
+        "tail_stationary_alternation": true,
+        "tail_most_common_prompts": [
+          [
+            [
+              -30,
+              6
+            ],
+            100
+          ],
+          [
+            [
+              40,
+              6
+            ],
+            39
+          ],
+          [
+            [
+              40,
+              4
+            ],
+            38
+          ],
+          [
+            [
+              40,
+              3
+            ],
+            23
+          ]
+        ]
+      },
+      {
+        "seed": 2086000025,
+        "d": 30,
+        "steps": 704,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            30,
+            6
+          ],
+          "target": [
+            50,
+            6
+          ],
+          "angle_error": 20,
+          "world_bearing": 70.692245
+        },
+        "min_dist": 5.638589143338024,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 0.0,
+        "tail_turns": 200,
+        "tail_alternations": 187,
+        "tail_forward": 0,
+        "tail_median_world_waypoint_jump": 100.0,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              -50,
+              6
+            ],
+            90
+          ],
+          [
+            [
+              60,
+              6
+            ],
+            82
+          ],
+          [
+            [
+              90,
+              6
+            ],
+            18
+          ],
+          [
+            [
+              -80,
+              6
+            ],
+            10
+          ]
+        ]
+      },
+      {
+        "seed": 2086000029,
+        "d": 30,
+        "steps": 698,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            -30,
+            6
+          ],
+          "target": [
+            -30,
+            6
+          ],
+          "angle_error": 0,
+          "world_bearing": 91.031075
+        },
+        "min_dist": 12.225567626675875,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 0.0,
+        "tail_turns": 200,
+        "tail_alternations": 199,
+        "tail_forward": 0,
+        "tail_median_world_waypoint_jump": 99.99999999999997,
+        "tail_stationary_alternation": true,
+        "tail_most_common_prompts": [
+          [
+            [
+              -50,
+              6
+            ],
+            100
+          ],
+          [
+            [
+              60,
+              6
+            ],
+            100
+          ]
+        ]
+      },
+      {
+        "seed": 2086000028,
+        "d": 30,
+        "steps": 706,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            90,
+            6
+          ],
+          "target": [
+            80,
+            6
+          ],
+          "angle_error": 10,
+          "world_bearing": 104.475686
+        },
+        "min_dist": 11.667463447650753,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 0.0,
+        "tail_turns": 200,
+        "tail_alternations": 199,
+        "tail_forward": 0,
+        "tail_median_world_waypoint_jump": 20.0,
+        "tail_stationary_alternation": true,
+        "tail_most_common_prompts": [
+          [
+            [
+              -10,
+              6
+            ],
+            100
+          ],
+          [
+            [
+              20,
+              6
+            ],
+            100
+          ]
+        ]
+      },
+      {
+        "seed": 2086000027,
+        "d": 30,
+        "steps": 718,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            130,
+            6
+          ],
+          "target": [
+            130,
+            6
+          ],
+          "angle_error": 0,
+          "world_bearing": -0.7543799999999976
+        },
+        "min_dist": 6.170626689079348,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 0.0,
+        "tail_turns": 200,
+        "tail_alternations": 199,
+        "tail_forward": 0,
+        "tail_median_world_waypoint_jump": 120.0,
+        "tail_stationary_alternation": true,
+        "tail_most_common_prompts": [
+          [
+            [
+              70,
+              5
+            ],
+            100
+          ],
+          [
+            [
+              -60,
+              5
+            ],
+            100
+          ]
+        ]
+      }
+    ]
+  }
+}

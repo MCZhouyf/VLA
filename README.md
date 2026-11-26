@@ -479,3 +479,9 @@ OMP_NUM_THREADS=6 "$WORK/envs/mcvla-phase3/bin/python" -B code/minemem/t1_phase3
 ~~~
 
 通过离线孪生门槛后，`t1_phase3e_stage_b_d30.py` 使用通过验收的围挡选择权重。三种模型以预测围挡为条件输出航点，使用同一个冻结 7B 控制器和稳定器。每场记录被改写的动作数。真值航点和真值位姿折返从原来的 30 个冻结种子逐场归并。
+
+30 格五组评测的判定、逐场评分与轨迹审计见 [阶段 B 完成报告](results/REPORT_phase3e_phase_b.md)。使用 Python 3 从归档的动作与位姿记录复算三组学习策略的逐场轨迹指标：
+
+```bash
+python3 -B code/minemem/t1_phase3e_closed_audit.py results/phase3e-visual-swap-DB17NqMW/closed-2
+```

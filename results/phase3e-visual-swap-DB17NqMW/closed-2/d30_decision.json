@@ -1,0 +1,77 @@
+{
+  "distance": 30,
+  "groups": {
+    "oracle": {
+      "successes": 30,
+      "n": 30,
+      "rate": 1.0,
+      "ci95": [
+        0.8864866068260312,
+        1.0
+      ],
+      "deaths": 0,
+      "pose_jumps": 0,
+      "stabilizer_steps": 0,
+      "stabilizer_episodes": 0
+    },
+    "replay": {
+      "successes": 15,
+      "n": 30,
+      "rate": 0.5,
+      "ci95": [
+        0.33154125640533766,
+        0.6684587435946623
+      ],
+      "deaths": 0,
+      "pose_jumps": 0,
+      "stabilizer_steps": 0,
+      "stabilizer_episodes": 0
+    },
+    "spatial": {
+      "successes": 8,
+      "n": 30,
+      "rate": 0.26666666666666666,
+      "ci95": [
+        0.14182663319596317,
+        0.4444796169518888
+      ],
+      "deaths": 0,
+      "pose_jumps": 0,
+      "stabilizer_steps": 16,
+      "stabilizer_episodes": 1
+    },
+    "no_memory": {
+      "successes": 1,
+      "n": 30,
+      "rate": 0.03333333333333333,
+      "ci95": [
+        0.005908590381612455,
+        0.16670390991409173
+      ],
+      "deaths": 0,
+      "pose_jumps": 0,
+      "stabilizer_steps": 0,
+      "stabilizer_episodes": 0
+    },
+    "long": {
+      "successes": 1,
+      "n": 30,
+      "rate": 0.03333333333333333,
+      "ci95": [
+        0.005908590381612455,
+        0.16670390991409173
+      ],
+      "deaths": 0,
+      "pose_jumps": 0,
+      "stabilizer_steps": 0,
+      "stabilizer_episodes": 0
+    }
+  },
+  "continue_to_far_distances": false,
+  "uses_shared_stabilizer": [
+    "oracle",
+    "no_memory",
+    "long",
+    "spatial"
+  ]
+}

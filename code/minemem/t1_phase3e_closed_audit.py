@@ -8,6 +8,7 @@ import math
 import re
 from collections import Counter
 from pathlib import Path
+from statistics import median
 
 from t1_waypoint import RouteLookahead
 
@@ -38,7 +39,7 @@ def summarize_episode(row):
         learn=waypoint(control["instruction"])
         target=waypoint(route.condition(pose))
         error=abs((learn[0]-target[0]+180)%360-180)
-        diagnostics.append(dict(predicted=learn,target=target,angle_error=error))
+        diagnostics.append(dict(predicted=learn,target=target,angle_error=error,world_bearing=pose[2]+learn[0]))
     tail = controls[-200:]
     tail_states = states[-len(tail)-1:]
     positions = [(float(state["x"]),float(state["z"])) for state in tail_states]
@@ -48,6 +49,8 @@ def summarize_episode(row):
     alternations = sum(a*b<0 for a,b in zip(motion,motion[1:]))
     forward = sum(bool(item["buttons"].get("forward")) for item in tail)
     repeated_turn = (len(tail)==200 and alternations>=190 and turns>=190 and travel<.20 and not forward)
+    bearings=[item["world_bearing"] for item in diagnostics[-len(tail):]]
+    bearing_jump=median(abs((a-b+180)%360-180) for a,b in zip(bearings,bearings[1:])) if len(bearings)>1 else 0
     overrides = sum("control_override" in item for item in controls)
     if overrides!=int(row["stabilizer_steps"]):
         raise ValueError(f"Stabilizer count differs for {tag}")
@@ -56,6 +59,7 @@ def summarize_episode(row):
                 first=diagnostics[0],min_dist=float(row["min_dist"]),stabilizer_steps=overrides,
                 deaths=int(row["deaths"]),pose_jumps=int(row["pose_jumps"]),
                 tail_path=travel,tail_turns=turns,tail_alternations=alternations,tail_forward=forward,
+                tail_median_world_waypoint_jump=bearing_jump,
                 tail_stationary_alternation=repeated_turn,
                 tail_most_common_prompts=Counter(item["predicted"] for item in diagnostics[-len(tail):]).most_common(5))
 

@@ -109,6 +109,11 @@ case "${1:-}" in
             gpu="$2"
             output="$3"
             shift 3
+            if [[ $mode == waypoint-predictions && $gpu == 6 && -f "$project/parallel-d30-long" &&
+                  ${T1_PHASE3E_LONG_CHILD:-0} == 0 && " $* " == *" --variant long "* ]]; then
+                exec "$WORK/envs/mcvla/bin/python" -B -u "$project/code/minemem/t1_phase3e_long_parallel.py" \
+                    "$output" "$@"
+            fi
             bind_gpu "$gpu"
             case "$mode" in
                 waypoint-eval) entry=t1_phase3e_eval.py ;;
