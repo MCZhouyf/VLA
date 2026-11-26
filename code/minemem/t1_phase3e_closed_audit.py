@@ -22,6 +22,11 @@ def waypoint(prompt):
     return int(angle)*(-1 if side=="left" else 1),int(distance)
 
 
+def large_turn_switches(controls):
+    angles = [waypoint(row["instruction"])[0] for row in controls[-200:]]
+    return sum(a*b < 0 and abs(b-a) >= 60 for a,b in zip(angles,angles[1:]))
+
+
 def summarize_episode(row):
     root = Path(row["source"])
     tag = f"d{row['d']}-seed{row['seed']}"

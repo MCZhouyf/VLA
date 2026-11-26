@@ -194,7 +194,7 @@ def interval(values, paired, seed):
     return dict(correct=correct,n=total,rate=correct/total,ci95=bounds,clusters=len(values))
 
 
-def summarise(predictions):
+def summarise(predictions, include_direction=True):
     buckets=defaultdict(lambda:defaultdict(lambda:defaultdict(list)))
     for row in predictions:
         buckets[row["split"],str(row["distance"]),row["state"],row["variant"]][row["seed"]][row["slot"]].append(row)
@@ -217,9 +217,11 @@ def summarise(predictions):
                 flips.append([int(pair[0]["room"] != pair[1]["room"]) for pair in by_seed.values()])
         clustered=paired or distance=="all"
         first=dict(room=interval([[int(r["room"]==r["slot"]) for r in group] for group in groups],
-                                 clustered,20261126),
-                   direction=interval([[int(r["direction"]==r["target_direction"]) for r in group] for group in groups],
-                                      clustered,20261127))
+                                 clustered,20261126))
+        if include_direction:
+            first["direction"]=interval(
+                [[int(r["direction"]==r["target_direction"]) for r in group] for group in groups],
+                clustered,20261127)
         if paired:
             first["flip"]=interval(flips,distance=="all",20261128)
             primaries=[[r for r in group if r["primary"]] for group in groups]

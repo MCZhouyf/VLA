@@ -1,0 +1,658 @@
+{
+  "proxy": "10-degree rotations and 0.18-block forward steps, given each candidate slot",
+  "scenes": 30,
+  "routes": 60,
+  "successes": 60,
+  "yaw_invariant": 60,
+  "rows": [
+    {
+      "seed": 2086000000,
+      "slot": 0,
+      "steps": 343,
+      "outcome": "reached",
+      "observed_goal_distance": 2.333089602334957,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000000,
+      "slot": 1,
+      "steps": 368,
+      "outcome": "reached",
+      "observed_goal_distance": 2.33471502074441,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000001,
+      "slot": 0,
+      "steps": 361,
+      "outcome": "reached",
+      "observed_goal_distance": 2.3347298396799916,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000001,
+      "slot": 1,
+      "steps": 387,
+      "outcome": "reached",
+      "observed_goal_distance": 2.3332108976583483,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000002,
+      "slot": 0,
+      "steps": 344,
+      "outcome": "reached",
+      "observed_goal_distance": 2.3347298396853775,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000002,
+      "slot": 1,
+      "steps": 361,
+      "outcome": "reached",
+      "observed_goal_distance": 2.3332108976649564,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000003,
+      "slot": 0,
+      "steps": 432,
+      "outcome": "reached",
+      "observed_goal_distance": 2.3330930192552675,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000003,
+      "slot": 1,
+      "steps": 403,
+      "outcome": "reached",
+      "observed_goal_distance": 2.334713914676181,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000004,
+      "slot": 0,
+      "steps": 341,
+      "outcome": "reached",
+      "observed_goal_distance": 2.3332475924308085,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000004,
+      "slot": 1,
+      "steps": 363,
+      "outcome": "reached",
+      "observed_goal_distance": 2.334738754648402,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000005,
+      "slot": 0,
+      "steps": 396,
+      "outcome": "reached",
+      "observed_goal_distance": 2.3347255053127522,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000005,
+      "slot": 1,
+      "steps": 423,
+      "outcome": "reached",
+      "observed_goal_distance": 2.333140661331436,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000006,
+      "slot": 0,
+      "steps": 374,
+      "outcome": "reached",
+      "observed_goal_distance": 2.334726184274196,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000006,
+      "slot": 1,
+      "steps": 350,
+      "outcome": "reached",
+      "observed_goal_distance": 2.3331406613291623,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000007,
+      "slot": 0,
+      "steps": 339,
+      "outcome": "reached",
+      "observed_goal_distance": 2.3330930192311663,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000007,
+      "slot": 1,
+      "steps": 358,
+      "outcome": "reached",
+      "observed_goal_distance": 2.3347139146620837,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000008,
+      "slot": 0,
+      "steps": 478,
+      "outcome": "reached",
+      "observed_goal_distance": 2.3347139146872418,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000008,
+      "slot": 1,
+      "steps": 494,
+      "outcome": "reached",
+      "observed_goal_distance": 2.333093019262807,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000009,
+      "slot": 0,
+      "steps": 329,
+      "outcome": "reached",
+      "observed_goal_distance": 2.334713914662396,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000009,
+      "slot": 1,
+      "steps": 358,
+      "outcome": "reached",
+      "observed_goal_distance": 2.333093019231262,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000010,
+      "slot": 0,
+      "steps": 464,
+      "outcome": "reached",
+      "observed_goal_distance": 2.3330886085543763,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000010,
+      "slot": 1,
+      "steps": 474,
+      "outcome": "reached",
+      "observed_goal_distance": 2.334978228791759,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000011,
+      "slot": 0,
+      "steps": 497,
+      "outcome": "reached",
+      "observed_goal_distance": 2.334729839672413,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000011,
+      "slot": 1,
+      "steps": 468,
+      "outcome": "reached",
+      "observed_goal_distance": 2.333210897646249,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000012,
+      "slot": 0,
+      "steps": 364,
+      "outcome": "reached",
+      "observed_goal_distance": 2.333247592432973,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000012,
+      "slot": 1,
+      "steps": 348,
+      "outcome": "reached",
+      "observed_goal_distance": 2.334738754658177,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000013,
+      "slot": 0,
+      "steps": 310,
+      "outcome": "reached",
+      "observed_goal_distance": 2.3347298396877565,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000013,
+      "slot": 1,
+      "steps": 326,
+      "outcome": "reached",
+      "observed_goal_distance": 2.3332108976637924,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000014,
+      "slot": 0,
+      "steps": 470,
+      "outcome": "reached",
+      "observed_goal_distance": 2.3347261842744977,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000014,
+      "slot": 1,
+      "steps": 490,
+      "outcome": "reached",
+      "observed_goal_distance": 2.3331406613292507,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000015,
+      "slot": 0,
+      "steps": 474,
+      "outcome": "reached",
+      "observed_goal_distance": 2.333247592428421,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000015,
+      "slot": 1,
+      "steps": 456,
+      "outcome": "reached",
+      "observed_goal_distance": 2.334738754643741,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000016,
+      "slot": 0,
+      "steps": 493,
+      "outcome": "reached",
+      "observed_goal_distance": 2.3330896023121066,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000016,
+      "slot": 1,
+      "steps": 490,
+      "outcome": "reached",
+      "observed_goal_distance": 2.334715020728721,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000017,
+      "slot": 0,
+      "steps": 394,
+      "outcome": "reached",
+      "observed_goal_distance": 2.3347139146857305,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000017,
+      "slot": 1,
+      "steps": 421,
+      "outcome": "reached",
+      "observed_goal_distance": 2.3330930192661814,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000018,
+      "slot": 0,
+      "steps": 473,
+      "outcome": "reached",
+      "observed_goal_distance": 2.333088608554443,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000018,
+      "slot": 1,
+      "steps": 461,
+      "outcome": "reached",
+      "observed_goal_distance": 2.3349782287919836,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000019,
+      "slot": 0,
+      "steps": 471,
+      "outcome": "reached",
+      "observed_goal_distance": 2.334729839672645,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000019,
+      "slot": 1,
+      "steps": 450,
+      "outcome": "reached",
+      "observed_goal_distance": 2.3332108976463117,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000020,
+      "slot": 0,
+      "steps": 331,
+      "outcome": "reached",
+      "observed_goal_distance": 2.3330896023122283,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000020,
+      "slot": 1,
+      "steps": 353,
+      "outcome": "reached",
+      "observed_goal_distance": 2.334715020729032,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000021,
+      "slot": 0,
+      "steps": 479,
+      "outcome": "reached",
+      "observed_goal_distance": 2.334729839685146,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000021,
+      "slot": 1,
+      "steps": 469,
+      "outcome": "reached",
+      "observed_goal_distance": 2.3332108976648938,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000022,
+      "slot": 0,
+      "steps": 415,
+      "outcome": "reached",
+      "observed_goal_distance": 2.3347298396770744,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000022,
+      "slot": 1,
+      "steps": 393,
+      "outcome": "reached",
+      "observed_goal_distance": 2.333210897656481,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000023,
+      "slot": 0,
+      "steps": 324,
+      "outcome": "reached",
+      "observed_goal_distance": 2.3330886085862406,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000023,
+      "slot": 1,
+      "steps": 346,
+      "outcome": "reached",
+      "observed_goal_distance": 2.3349782287750633,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000024,
+      "slot": 0,
+      "steps": 380,
+      "outcome": "reached",
+      "observed_goal_distance": 2.3330930192312023,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000024,
+      "slot": 1,
+      "steps": 359,
+      "outcome": "reached",
+      "observed_goal_distance": 2.334713914662231,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000025,
+      "slot": 0,
+      "steps": 321,
+      "outcome": "reached",
+      "observed_goal_distance": 2.334713914685895,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000025,
+      "slot": 1,
+      "steps": 347,
+      "outcome": "reached",
+      "observed_goal_distance": 2.3330930192662245,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000026,
+      "slot": 0,
+      "steps": 322,
+      "outcome": "reached",
+      "observed_goal_distance": 2.3347298396852554,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000026,
+      "slot": 1,
+      "steps": 317,
+      "outcome": "reached",
+      "observed_goal_distance": 2.3332108976649293,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000027,
+      "slot": 0,
+      "steps": 365,
+      "outcome": "reached",
+      "observed_goal_distance": 2.333088608586327,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000027,
+      "slot": 1,
+      "steps": 329,
+      "outcome": "reached",
+      "observed_goal_distance": 2.3349782287752956,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000028,
+      "slot": 0,
+      "steps": 479,
+      "outcome": "reached",
+      "observed_goal_distance": 2.3332475924329525,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000028,
+      "slot": 1,
+      "steps": 480,
+      "outcome": "reached",
+      "observed_goal_distance": 2.3347387546582197,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000029,
+      "slot": 0,
+      "steps": 330,
+      "outcome": "reached",
+      "observed_goal_distance": 2.3347139146870948,
+      "initial_target_yaw_invariant": true
+    },
+    {
+      "seed": 2086000029,
+      "slot": 1,
+      "steps": 357,
+      "outcome": "reached",
+      "observed_goal_distance": 2.333093019262771,
+      "initial_target_yaw_invariant": true
+    }
+  ],
+  "prior": {
+    "no_memory": {
+      "median_min_dist": 12.198074566985596,
+      "median_final_dist": 37.53518031631667,
+      "reached_within_12": 14
+    },
+    "long": {
+      "median_min_dist": 8.777463760645887,
+      "median_final_dist": 31.881222035779345,
+      "reached_within_12": 19
+    },
+    "spatial": {
+      "median_min_dist": 6.152420014969619,
+      "median_final_dist": 6.430154847748223,
+      "reached_within_12": 27,
+      "waypoint_turn_switches_tail200": [
+        {
+          "seed": 2086000000,
+          "success": true,
+          "switches": 7
+        },
+        {
+          "seed": 2086000002,
+          "success": false,
+          "switches": 199
+        },
+        {
+          "seed": 2086000001,
+          "success": false,
+          "switches": 199
+        },
+        {
+          "seed": 2086000004,
+          "success": true,
+          "switches": 12
+        },
+        {
+          "seed": 2086000003,
+          "success": false,
+          "switches": 199
+        },
+        {
+          "seed": 2086000005,
+          "success": false,
+          "switches": 182
+        },
+        {
+          "seed": 2086000006,
+          "success": true,
+          "switches": 0
+        },
+        {
+          "seed": 2086000007,
+          "success": false,
+          "switches": 0
+        },
+        {
+          "seed": 2086000008,
+          "success": false,
+          "switches": 58
+        },
+        {
+          "seed": 2086000011,
+          "success": true,
+          "switches": 18
+        },
+        {
+          "seed": 2086000009,
+          "success": false,
+          "switches": 199
+        },
+        {
+          "seed": 2086000010,
+          "success": false,
+          "switches": 120
+        },
+        {
+          "seed": 2086000014,
+          "success": true,
+          "switches": 5
+        },
+        {
+          "seed": 2086000012,
+          "success": true,
+          "switches": 1
+        },
+        {
+          "seed": 2086000013,
+          "success": false,
+          "switches": 199
+        },
+        {
+          "seed": 2086000016,
+          "success": true,
+          "switches": 0
+        },
+        {
+          "seed": 2086000015,
+          "success": false,
+          "switches": 199
+        },
+        {
+          "seed": 2086000017,
+          "success": false,
+          "switches": 179
+        },
+        {
+          "seed": 2086000020,
+          "success": false,
+          "switches": 38
+        },
+        {
+          "seed": 2086000018,
+          "success": false,
+          "switches": 191
+        },
+        {
+          "seed": 2086000019,
+          "success": false,
+          "switches": 179
+        },
+        {
+          "seed": 2086000022,
+          "success": false,
+          "switches": 199
+        },
+        {
+          "seed": 2086000023,
+          "success": false,
+          "switches": 199
+        },
+        {
+          "seed": 2086000021,
+          "success": false,
+          "switches": 199
+        },
+        {
+          "seed": 2086000026,
+          "success": true,
+          "switches": 0
+        },
+        {
+          "seed": 2086000024,
+          "success": false,
+          "switches": 199
+        },
+        {
+          "seed": 2086000025,
+          "success": false,
+          "switches": 187
+        },
+        {
+          "seed": 2086000029,
+          "success": false,
+          "switches": 199
+        },
+        {
+          "seed": 2086000028,
+          "success": false,
+          "switches": 0
+        },
+        {
+          "seed": 2086000027,
+          "success": false,
+          "switches": 199
+        }
+      ]
+    }
+  }
+}

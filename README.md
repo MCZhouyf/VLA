@@ -485,3 +485,23 @@ OMP_NUM_THREADS=6 "$WORK/envs/mcvla-phase3/bin/python" -B code/minemem/t1_phase3
 ```bash
 python3 -B code/minemem/t1_phase3e_closed_audit.py results/phase3e-visual-swap-DB17NqMW/closed-2
 ```
+
+#### 阶段 B 补充实验 CPU 检查
+
+从阶段 B 归档复算两候选路线和上一轮的失败轨迹指标。使用一个新的输出文件名。
+
+```bash
+python3 -B code/minemem/t1_phase3e_grid_check.py \
+  results/phase3e-visual-swap-DB17NqMW/closed-2 --output grid-check-recheck.json
+```
+
+在已准备的视觉缓存上重跑无锚点注意力和孪生评测。变量 `stage_b` 和 `swap` 分别指向阶段 B 缓存目录和孪生运行目录，`no_anchor` 指向新的输出目录。
+
+```bash
+CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  "$WORK/envs/mcvla-phase3/bin/python" -B code/minemem/t1_phase3e_no_anchor.py \
+  --train-plan "$stage_b/cache-plan.json" --cache "$swap/features-2" \
+  --weights "$swap/fit-2/room-heads.pt" --holdout "$swap/holdout-index.json" --output "$no_anchor"
+```
+
+方案 P 复用 `t1_exec.sh waypoint-predictions`。使用 `--variant spatial --grid-plan visual` 或 `--variant spatial --grid-plan shuffle_visual`，`--room-weights` 和 `--offline-gate` 指向无锚点运行的 `room-head.pt` 与 `offline_gate.json`。30 格两组各用原先冻结的 30 个种子。 [补充实验 CPU 报告](results/REPORT_phase3e_supplement_cpu.md)
