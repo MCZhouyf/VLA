@@ -17,9 +17,10 @@ case "$mode" in
     rgb-pose-replay) entry=t1_rgb_pose_replay.py ;;
     dual-enclosure) entry=t1_dual_enclosure.py ;;
     phase3e) entry=t1_phase3e.py ;;
+    phase3e-pairs) entry=t1_phase3e_pairs.py ;;
     visibility) entry=t1_shortcut_audit.py; entry_args=(audit) ;;
     forward-control) entry=t1_shortcut_audit.py; entry_args=(navigation) ;;
-    *) echo 'Usage: t1_cpu.sh {acceptance|protected|collect|paired-steering|pose-replay|rgb-pose-replay|dual-enclosure|phase3e|visibility|forward-control} OUTPUT WORKERS [options]' >&2; exit 2 ;;
+    *) echo 'Usage: t1_cpu.sh {acceptance|protected|collect|paired-steering|pose-replay|rgb-pose-replay|dual-enclosure|phase3e|phase3e-pairs|visibility|forward-control} OUTPUT WORKERS [options]' >&2; exit 2 ;;
 esac
 
 canonical="$MINESTUDIO_DIR"

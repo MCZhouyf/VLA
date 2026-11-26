@@ -111,6 +111,7 @@ class FirstArrivalArena(EnclosureArena):
     def outward(self, layout, trace):
         with self.track(trace):
             observations = []
+            dwell_frames = {}
             for room in layout["outbound_room_order"]:
                 position = self.project(room, -10)
                 _, reached, _ = self.drive(position, .35, 350, record=True)
@@ -118,6 +119,7 @@ class FirstArrivalArena(EnclosureArena):
                     raise RuntimeError("The teacher could not reach an initial distant observation point")
                 target = self.project(room, 0)
                 self.face(bearing(horizontal(self.info), target), record=True)
+                dwell_frames[room] = len(self.outbound)
                 x,z = map(math.floor, target)
                 pillar = (x, self.y, z, x, self.y+2, z)
                 views = []
@@ -132,7 +134,8 @@ class FirstArrivalArena(EnclosureArena):
             if gold["gold_pixels"] <= 0 or gold["distance"] < 8:
                 raise RuntimeError(f"Distant observation gate failed: {observations}")
             layout.update(initial_observation_pose=gold["pose"], initial_gold_distance=gold["distance"],
-                          initial_gold_pixels=gold["gold_pixels"], initial_observation_checks=observations)
+                          initial_gold_pixels=gold["gold_pixels"], initial_observation_checks=observations,
+                          distant_frame_indices=[dwell_frames[room] for room in sorted(dwell_frames)])
             self.traverse_outbound(layout)
         layout["path_len_out"] = self.path_len_out
         self.landmark = layout["landmark"]

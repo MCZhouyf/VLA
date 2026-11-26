@@ -69,6 +69,29 @@ case "${1:-}" in
         exec "$WORK/envs/mcvla-phase3/bin/python" -B -u \
             "$project/code/minemem/t1_train.py" --checkpoint "$WORK/models/JarvisVLA-Qwen2-VL-7B" "$@"
         ;;
+    waypoint-cache)
+        gpu="$2"
+        shift 2
+        bind_gpu "$gpu"
+        exec "$WORK/envs/mcvla-phase3/bin/python" -B -u \
+            "$project/code/minemem/t1_phase3e_cache.py" encode \
+            --checkpoint "$WORK/models/JarvisVLA-Qwen2-VL-7B" "$@"
+        ;;
+    waypoint-heads)
+        gpu="$2"
+        shift 2
+        bind_gpu "$gpu"
+        exec "$WORK/envs/mcvla-phase3/bin/python" -B -u \
+            "$project/code/minemem/t1_phase3e_waypoint_heads.py" "$@"
+        ;;
+    waypoint-pair-features)
+        gpu="$2"
+        shift 2
+        bind_gpu "$gpu"
+        exec "$WORK/envs/mcvla-phase3/bin/python" -B -u \
+            "$project/code/minemem/t1_phase3e_pair_features.py" \
+            --checkpoint "$WORK/models/JarvisVLA-Qwen2-VL-7B" "$@"
+        ;;
     train-resilient)
         gpu="$2"
         output="$3"
@@ -79,7 +102,7 @@ case "${1:-}" in
                  --output "$output" --validate-every 1000 --checkpoint-every 1000 "$@")
         exec bash "$project/code/minemem/t1_recover.sh" "$output" "${command[@]}"
         ;;
-    eval|eval-cpu|waypoint-eval)
+    eval|eval-cpu|waypoint-eval|waypoint-predictions)
         mode="$1"
         entry=t1_trained_eval.py
         if [[ $mode != eval-cpu ]]; then
@@ -87,7 +110,10 @@ case "${1:-}" in
             output="$3"
             shift 3
             bind_gpu "$gpu"
-            if [[ $mode == waypoint-eval ]]; then entry=t1_phase3e_eval.py; fi
+            case "$mode" in
+                waypoint-eval) entry=t1_phase3e_eval.py ;;
+                waypoint-predictions) entry=t1_phase3e_predicted_eval.py ;;
+            esac
         else
             output="$2"
             shift 2
@@ -103,7 +129,7 @@ case "${1:-}" in
             --checkpoint "$WORK/models/JarvisVLA-Qwen2-VL-7B" "$@"
         ;;
     *)
-        echo 'Usage: t1_exec.sh {pilot|protected-pilot|historical-pilot|death-replay|eval-cpu} OUTPUT or {train GPU|train-resilient GPU OUTPUT|eval GPU OUTPUT} [options]' >&2
+        echo 'Usage: t1_exec.sh {pilot|protected-pilot|historical-pilot|death-replay|eval-cpu} OUTPUT or {train GPU|waypoint-cache GPU|waypoint-heads GPU|waypoint-pair-features GPU|train-resilient GPU OUTPUT|eval GPU OUTPUT} [options]' >&2
         exit 2
         ;;
 esac

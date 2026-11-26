@@ -1,0 +1,390 @@
+[
+  {
+    "variant": "no_memory",
+    "seed": 2086000001,
+    "success": false,
+    "predicted_slot": 1,
+    "goal_slot": 1,
+    "steps": 414,
+    "reason": "distractor_first",
+    "first": {
+      "predicted": [
+        50,
+        6
+      ],
+      "oracle": [
+        -110,
+        6
+      ],
+      "absolute_angle_error": 160,
+      "camera_yaw": 10.0
+    },
+    "direction_exact": 37,
+    "tail_large_error": 184,
+    "tail_samples": 200,
+    "tail_prediction_counts": [
+      [
+        "30,6",
+        22
+      ],
+      [
+        "-40,6",
+        13
+      ],
+      [
+        "-20,6",
+        12
+      ],
+      [
+        "10,6",
+        11
+      ],
+      [
+        "30,4",
+        11
+      ],
+      [
+        "-20,5",
+        11
+      ],
+      [
+        "0,6",
+        10
+      ],
+      [
+        "-50,4",
+        10
+      ]
+    ],
+    "tail_action_yaws": [
+      [
+        0.0,
+        94
+      ],
+      [
+        -10.0,
+        58
+      ],
+      [
+        10.0,
+        48
+      ]
+    ]
+  },
+  {
+    "variant": "no_memory",
+    "seed": 2086000002,
+    "success": false,
+    "predicted_slot": 0,
+    "goal_slot": 0,
+    "steps": 698,
+    "reason": "budget",
+    "first": {
+      "predicted": [
+        -30,
+        6
+      ],
+      "oracle": [
+        -30,
+        6
+      ],
+      "absolute_angle_error": 0,
+      "camera_yaw": -10.0
+    },
+    "direction_exact": 109,
+    "tail_large_error": 200,
+    "tail_samples": 200,
+    "tail_prediction_counts": [
+      [
+        "0,6",
+        185
+      ],
+      [
+        "0,4",
+        4
+      ],
+      [
+        "-70,6",
+        2
+      ],
+      [
+        "-10,6",
+        2
+      ],
+      [
+        "40,4",
+        1
+      ],
+      [
+        "-50,6",
+        1
+      ],
+      [
+        "50,6",
+        1
+      ],
+      [
+        "-20,6",
+        1
+      ]
+    ],
+    "tail_action_yaws": [
+      [
+        0.0,
+        191
+      ],
+      [
+        -10.0,
+        6
+      ],
+      [
+        10.0,
+        3
+      ]
+    ]
+  },
+  {
+    "variant": "no_memory",
+    "seed": 2086000000,
+    "success": false,
+    "predicted_slot": 1,
+    "goal_slot": 1,
+    "steps": 708,
+    "reason": "budget",
+    "first": {
+      "predicted": [
+        -170,
+        6
+      ],
+      "oracle": [
+        80,
+        6
+      ],
+      "absolute_angle_error": 110,
+      "camera_yaw": -10.0
+    },
+    "direction_exact": 1,
+    "tail_large_error": 200,
+    "tail_samples": 200,
+    "tail_prediction_counts": [
+      [
+        "-30,4",
+        22
+      ],
+      [
+        "30,6",
+        20
+      ],
+      [
+        "0,6",
+        16
+      ],
+      [
+        "-30,6",
+        13
+      ],
+      [
+        "50,4",
+        11
+      ],
+      [
+        "50,6",
+        10
+      ],
+      [
+        "-10,6",
+        8
+      ],
+      [
+        "-20,6",
+        8
+      ]
+    ],
+    "tail_action_yaws": [
+      [
+        0.0,
+        119
+      ],
+      [
+        10.0,
+        44
+      ],
+      [
+        -10.0,
+        37
+      ]
+    ]
+  },
+  {
+    "variant": "spatial",
+    "seed": 2086000000,
+    "success": true,
+    "predicted_slot": 1,
+    "goal_slot": 1,
+    "steps": 241,
+    "reason": "reached",
+    "first": {
+      "predicted": [
+        80,
+        6
+      ],
+      "oracle": [
+        80,
+        6
+      ],
+      "absolute_angle_error": 0,
+      "camera_yaw": 10.0
+    },
+    "direction_exact": 151,
+    "tail_large_error": 3,
+    "tail_samples": 200,
+    "tail_prediction_counts": [
+      [
+        "0,6",
+        115
+      ],
+      [
+        "0,5",
+        15
+      ],
+      [
+        "60,6",
+        14
+      ],
+      [
+        "60,4",
+        13
+      ],
+      [
+        "10,5",
+        9
+      ],
+      [
+        "60,5",
+        9
+      ],
+      [
+        "20,5",
+        6
+      ],
+      [
+        "70,5",
+        5
+      ]
+    ],
+    "tail_action_yaws": [
+      [
+        0.0,
+        176
+      ],
+      [
+        10.0,
+        21
+      ],
+      [
+        -10.0,
+        3
+      ]
+    ]
+  },
+  {
+    "variant": "spatial",
+    "seed": 2086000002,
+    "success": false,
+    "predicted_slot": 0,
+    "goal_slot": 0,
+    "steps": 698,
+    "reason": "budget",
+    "first": {
+      "predicted": [
+        -30,
+        6
+      ],
+      "oracle": [
+        -30,
+        6
+      ],
+      "absolute_angle_error": 0,
+      "camera_yaw": -10.0
+    },
+    "direction_exact": 145,
+    "tail_large_error": 0,
+    "tail_samples": 200,
+    "tail_prediction_counts": [
+      [
+        "40,5",
+        100
+      ],
+      [
+        "-40,4",
+        88
+      ],
+      [
+        "-40,3",
+        12
+      ]
+    ],
+    "tail_action_yaws": [
+      [
+        -10.0,
+        100
+      ],
+      [
+        10.0,
+        100
+      ]
+    ]
+  },
+  {
+    "variant": "spatial",
+    "seed": 2086000001,
+    "success": false,
+    "predicted_slot": 1,
+    "goal_slot": 1,
+    "steps": 714,
+    "reason": "budget",
+    "first": {
+      "predicted": [
+        -110,
+        6
+      ],
+      "oracle": [
+        -110,
+        6
+      ],
+      "absolute_angle_error": 0,
+      "camera_yaw": -10.0
+    },
+    "direction_exact": 136,
+    "tail_large_error": 100,
+    "tail_samples": 200,
+    "tail_prediction_counts": [
+      [
+        "60,4",
+        100
+      ],
+      [
+        "-60,4",
+        92
+      ],
+      [
+        "-50,4",
+        7
+      ],
+      [
+        "-60,5",
+        1
+      ]
+    ],
+    "tail_action_yaws": [
+      [
+        -10.0,
+        100
+      ],
+      [
+        10.0,
+        100
+      ]
+    ]
+  }
+]

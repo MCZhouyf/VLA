@@ -1,0 +1,7 @@
+Local feature cache verified 186 1380723582
+Traceback (most recent call last):
+  File "/share/project/zhoubowen/zhy/zyf/results/phase3e-stage-b-hQcSWdvD/snapshot/code/minemem/t1_phase3e_waypoint_heads.py", line 233, in <module>
+    run(args)
+  File "/share/project/zhoubowen/zhy/zyf/results/phase3e-stage-b-hQcSWdvD/snapshot/code/minemem/t1_phase3e_waypoint_heads.py", line 172, in run
+    initial = retry_read(torch.load, args.initial, map_location="cpu", weights_only=True)
+TypeError: retry_read() got an unexpected keyword argument 'map_location'

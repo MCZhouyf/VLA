@@ -435,3 +435,47 @@ bash code/minemem/t1_exec.sh waypoint-eval 7 "$diagnostic" \
 recovery="$(mktemp -d "$recheck/recovery-XXXXXXXX")"
 python3 -B -u code/minemem/t1_phase3e_recover_eval.py "$recheck" "$recovery"
 ~~~
+
+四档真值航点验收通过后，阶段 B 先缓存三组共用的冻结视觉特征。对回程监督状态保留当前帧及前八帧，对外出段每八步取一帧。验证和测试使用既有留出划分的全部 T1 轨迹。
+
+~~~bash
+stage_b="$(mktemp -d "$WORK/results/phase3e-stage-b-XXXXXXXX")"
+python3 -B code/minemem/t1_phase3e_cache.py plan --run "$run" \
+  --oracle-gate "$recovery/recheck_oracle_gate.json" --output "$stage_b/cache-plan.json"
+bash code/minemem/t1_phase3e_cache.sh "$stage_b"
+~~~
+
+缓存校验通过后，使用本地盘上按 SHA-256 核对的缓存训练航点预测器。三组共享返回监督状态、初始投影、输出头和损失。短窗口分别使用当前帧及前 2 或 8 帧，空间组使用当前帧与外出历史的 32 个空间读出。控制器保持冻结。
+
+~~~bash
+bash code/minemem/t1_exec.sh waypoint-heads 7 \
+  --plan "$stage_b/cache-plan.json" --cache "$verified_local_cache" \
+  --initial "$verified_memory_weights" --output "$stage_b/heads" --epochs 24
+~~~
+
+#### v3 孪生交换离线验收
+
+验证和原始测试每档各用 30 个全新的场景，各 15 个左侧与右侧目标。测试再按同一组真实教师位姿渲染交换金柱和干扰柱的孪生场景。两次渲染逐采样点核对位置与朝向。最后八个外出帧和四个返程状态经遮挡检查后，在同一孪生对中共用其真实渲染。原始渲染的各帧校验值仍保留。共享控制器不参与离线生成。
+
+~~~bash
+swap="$(mktemp -d "$WORK/results/phase3e-visual-swap-XXXXXXXX")"
+"$WORK/envs/mcvla/bin/python" -B code/minemem/t1_phase3e_pairs.py "$swap/plan.json" \
+  --formal "$run" --oracle-gate "$recovery/recheck_oracle_gate.json"
+bash code/minemem/t1_phase3e_pairs_collect.sh "$swap"
+~~~
+
+缓存用 `waypoint-pair-features`，把两卡分别设置为 `--shard 0` 和 `--shard 1`。使用阶段 B 已有训练清单和缓存，加入本次 `holdout-index.json`。同一池化版本使用独立的输出目录。读出在训练划分标准化，分别对冻结验证和孪生测试计算起点及随后三步的围挡分类、航点方向、孪生翻转率和置信区间。
+
+~~~bash
+bash code/minemem/t1_exec.sh waypoint-pair-features 6 \
+  --train-plan "$stage_b/cache-plan.json" --old-cache "$stage_b/cache" \
+  --holdout "$swap/holdout-index.json" --output "$swap/features-2" --shard 0
+OMP_NUM_THREADS=6 "$WORK/envs/mcvla-phase3/bin/python" -B code/minemem/t1_phase3e_pair_probe.py train \
+  --cache "$swap/features-2" --train-plan "$stage_b/cache-plan.json" \
+  --initial "$verified_memory_weights" --output "$swap/fit-2"
+OMP_NUM_THREADS=6 "$WORK/envs/mcvla-phase3/bin/python" -B code/minemem/t1_phase3e_pair_probe.py score \
+  --cache "$swap/features-2" --holdout "$swap/holdout-index.json" \
+  --weights "$swap/fit-2/room-heads.pt" --output "$swap/offline-2"
+~~~
+
+通过离线孪生门槛后，`t1_phase3e_stage_b_d30.py` 使用通过验收的围挡选择权重。三种模型以预测围挡为条件输出航点，使用同一个冻结 7B 控制器和稳定器。每场记录被改写的动作数。真值航点和真值位姿折返从原来的 30 个冻结种子逐场归并。

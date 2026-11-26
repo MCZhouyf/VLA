@@ -1,0 +1,406 @@
+{
+  "no_memory": {
+    "n": 3,
+    "wins": 0,
+    "room_correct": 3,
+    "wins_with_correct_room": 0,
+    "stationary_alternation": 0,
+    "reasons": {
+      "distractor_first": 1,
+      "budget": 2
+    },
+    "episodes": [
+      {
+        "seed": 2086000001,
+        "d": 30,
+        "steps": 414,
+        "success": false,
+        "reason": "distractor_first",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            50,
+            6
+          ],
+          "target": [
+            -110,
+            6
+          ],
+          "angle_error": 160
+        },
+        "min_dist": 13.209277993171137,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 15.006939689803746,
+        "tail_turns": 106,
+        "tail_alternations": 28,
+        "tail_forward": 94,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              30,
+              6
+            ],
+            22
+          ],
+          [
+            [
+              -40,
+              6
+            ],
+            13
+          ],
+          [
+            [
+              -20,
+              6
+            ],
+            12
+          ],
+          [
+            [
+              10,
+              6
+            ],
+            11
+          ],
+          [
+            [
+              30,
+              4
+            ],
+            11
+          ]
+        ]
+      },
+      {
+        "seed": 2086000002,
+        "d": 30,
+        "steps": 698,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            -30,
+            6
+          ],
+          "target": [
+            -30,
+            6
+          ],
+          "angle_error": 0
+        },
+        "min_dist": 5.193008302686367,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 52.362072921502296,
+        "tail_turns": 9,
+        "tail_alternations": 1,
+        "tail_forward": 191,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            185
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            4
+          ],
+          [
+            [
+              -70,
+              6
+            ],
+            2
+          ],
+          [
+            [
+              -10,
+              6
+            ],
+            2
+          ],
+          [
+            [
+              40,
+              4
+            ],
+            1
+          ]
+        ]
+      },
+      {
+        "seed": 2086000000,
+        "d": 30,
+        "steps": 708,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            -170,
+            6
+          ],
+          "target": [
+            80,
+            6
+          ],
+          "angle_error": 110
+        },
+        "min_dist": 29.999999844435262,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 28.63397156749705,
+        "tail_turns": 81,
+        "tail_alternations": 27,
+        "tail_forward": 119,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              -30,
+              4
+            ],
+            22
+          ],
+          [
+            [
+              30,
+              6
+            ],
+            20
+          ],
+          [
+            [
+              0,
+              6
+            ],
+            16
+          ],
+          [
+            [
+              -30,
+              6
+            ],
+            13
+          ],
+          [
+            [
+              50,
+              4
+            ],
+            11
+          ]
+        ]
+      }
+    ]
+  },
+  "long": {
+    "n": 0,
+    "wins": 0,
+    "room_correct": 0,
+    "wins_with_correct_room": 0,
+    "stationary_alternation": 0,
+    "reasons": {},
+    "episodes": []
+  },
+  "spatial": {
+    "n": 3,
+    "wins": 1,
+    "room_correct": 3,
+    "wins_with_correct_room": 1,
+    "stationary_alternation": 2,
+    "reasons": {
+      "reached": 1,
+      "budget": 2
+    },
+    "episodes": [
+      {
+        "seed": 2086000000,
+        "d": 30,
+        "steps": 241,
+        "success": true,
+        "reason": "reached",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            80,
+            6
+          ],
+          "target": [
+            80,
+            6
+          ],
+          "angle_error": 0
+        },
+        "min_dist": 2.7863560101877916,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 40.86393813023169,
+        "tail_turns": 24,
+        "tail_alternations": 4,
+        "tail_forward": 176,
+        "tail_stationary_alternation": false,
+        "tail_most_common_prompts": [
+          [
+            [
+              0,
+              6
+            ],
+            115
+          ],
+          [
+            [
+              0,
+              5
+            ],
+            15
+          ],
+          [
+            [
+              60,
+              6
+            ],
+            14
+          ],
+          [
+            [
+              60,
+              4
+            ],
+            13
+          ],
+          [
+            [
+              10,
+              5
+            ],
+            9
+          ]
+        ]
+      },
+      {
+        "seed": 2086000002,
+        "d": 30,
+        "steps": 698,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            -30,
+            6
+          ],
+          "target": [
+            -30,
+            6
+          ],
+          "angle_error": 0
+        },
+        "min_dist": 8.443472291559672,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 0.0,
+        "tail_turns": 200,
+        "tail_alternations": 199,
+        "tail_forward": 0,
+        "tail_stationary_alternation": true,
+        "tail_most_common_prompts": [
+          [
+            [
+              40,
+              5
+            ],
+            100
+          ],
+          [
+            [
+              -40,
+              4
+            ],
+            88
+          ],
+          [
+            [
+              -40,
+              3
+            ],
+            12
+          ]
+        ]
+      },
+      {
+        "seed": 2086000001,
+        "d": 30,
+        "steps": 714,
+        "success": false,
+        "reason": "budget",
+        "room_correct": true,
+        "first": {
+          "predicted": [
+            -110,
+            6
+          ],
+          "target": [
+            -110,
+            6
+          ],
+          "angle_error": 0
+        },
+        "min_dist": 6.176612755678806,
+        "stabilizer_steps": 0,
+        "deaths": 0,
+        "pose_jumps": 0,
+        "tail_path": 0.0,
+        "tail_turns": 200,
+        "tail_alternations": 199,
+        "tail_forward": 0,
+        "tail_stationary_alternation": true,
+        "tail_most_common_prompts": [
+          [
+            [
+              60,
+              4
+            ],
+            100
+          ],
+          [
+            [
+              -60,
+              4
+            ],
+            92
+          ],
+          [
+            [
+              -50,
+              4
+            ],
+            7
+          ],
+          [
+            [
+              -60,
+              5
+            ],
+            1
+          ]
+        ]
+      }
+    ]
+  }
+}

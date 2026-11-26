@@ -1,0 +1,340 @@
+{
+  "archives": [
+    {
+      "split": "validation",
+      "ordinal": 0,
+      "distance": 10,
+      "seed": 2135000000,
+      "gold": 1,
+      "world": 21470000,
+      "path": "/share/project/zhoubowen/zhy/zyf/results/phase3e-visual-swap-DB17NqMW/smoke-verified/worker-000/2135000000.zip",
+      "sha256": "aa7d94e9f1ad8c56203ffc4c91005db766eb9e7d4ae35f583dc981ae6e38fe17",
+      "paired": false,
+      "history_frames": 72,
+      "goal_view_pixels": {
+        "1": [
+          1960,
+          35062
+        ]
+      },
+      "paired_poses_equal": false
+    },
+    {
+      "split": "validation",
+      "ordinal": 0,
+      "distance": 30,
+      "seed": 2135000100,
+      "gold": 1,
+      "world": 21470000,
+      "path": "/share/project/zhoubowen/zhy/zyf/results/phase3e-visual-swap-DB17NqMW/smoke-verified/worker-000/2135000100.zip",
+      "sha256": "14de41a00b74ab554cc42eee6c162a0d2085198723ad00502e2120e4b919dcde",
+      "paired": false,
+      "history_frames": 110,
+      "goal_view_pixels": {
+        "1": [
+          2098,
+          32449
+        ]
+      },
+      "paired_poses_equal": false
+    },
+    {
+      "split": "validation",
+      "ordinal": 0,
+      "distance": 60,
+      "seed": 2135000204,
+      "gold": 0,
+      "world": 21470000,
+      "path": "/share/project/zhoubowen/zhy/zyf/results/phase3e-visual-swap-DB17NqMW/smoke-verified/worker-000/2135000204.zip",
+      "sha256": "09268d7d534f03a8197c401e6a819bacb8a4ff9faa23de28a61a0f9e43f1c4b8",
+      "paired": false,
+      "history_frames": 128,
+      "goal_view_pixels": {
+        "0": [
+          2100,
+          35926
+        ]
+      },
+      "paired_poses_equal": false
+    },
+    {
+      "split": "validation",
+      "ordinal": 0,
+      "distance": 100,
+      "seed": 2135000300,
+      "gold": 1,
+      "world": 21470000,
+      "path": "/share/project/zhoubowen/zhy/zyf/results/phase3e-visual-swap-DB17NqMW/smoke-verified/worker-000/2135000300.zip",
+      "sha256": "9493452028f950faa010a372409219d19e175e02476e3d358c9f7d48670ac162",
+      "paired": false,
+      "history_frames": 152,
+      "goal_view_pixels": {
+        "1": [
+          2098,
+          38507
+        ]
+      },
+      "paired_poses_equal": false
+    },
+    {
+      "split": "validation",
+      "ordinal": 1,
+      "distance": 10,
+      "seed": 2135001000,
+      "gold": 0,
+      "world": 21470001,
+      "path": "/share/project/zhoubowen/zhy/zyf/results/phase3e-visual-swap-DB17NqMW/smoke-verified/worker-001/2135001000.zip",
+      "sha256": "2842592ca624cefeb65de00f949f00dc87de9680ffd7191979576bdb2bb690f8",
+      "paired": false,
+      "history_frames": 70,
+      "goal_view_pixels": {
+        "0": [
+          2106,
+          35917
+        ]
+      },
+      "paired_poses_equal": false
+    },
+    {
+      "split": "validation",
+      "ordinal": 1,
+      "distance": 30,
+      "seed": 2135001100,
+      "gold": 1,
+      "world": 21470001,
+      "path": "/share/project/zhoubowen/zhy/zyf/results/phase3e-visual-swap-DB17NqMW/smoke-verified/worker-001/2135001100.zip",
+      "sha256": "d7ad8c5499adb84e5ec39c06216f80cb6d4bec567cd674d3ef9541cdbdb32f1b",
+      "paired": false,
+      "history_frames": 110,
+      "goal_view_pixels": {
+        "1": [
+          2111,
+          35874
+        ]
+      },
+      "paired_poses_equal": false
+    },
+    {
+      "split": "validation",
+      "ordinal": 1,
+      "distance": 60,
+      "seed": 2135001204,
+      "gold": 1,
+      "world": 21470001,
+      "path": "/share/project/zhoubowen/zhy/zyf/results/phase3e-visual-swap-DB17NqMW/smoke-verified/worker-001/2135001204.zip",
+      "sha256": "3a11bc95ab5e904f0af015c2ca3bd29918c283bf25364b262f7dbc7037dbd4aa",
+      "paired": false,
+      "history_frames": 129,
+      "goal_view_pixels": {
+        "1": [
+          1972,
+          35028
+        ]
+      },
+      "paired_poses_equal": false
+    },
+    {
+      "split": "validation",
+      "ordinal": 1,
+      "distance": 100,
+      "seed": 2135001300,
+      "gold": 1,
+      "world": 21470001,
+      "path": "/share/project/zhoubowen/zhy/zyf/results/phase3e-visual-swap-DB17NqMW/smoke-verified/worker-001/2135001300.zip",
+      "sha256": "da768c70a386bfd92d74b6cb6e8fbb81e6c2a9ff7d9c9b50f7b707504b6f7334",
+      "paired": false,
+      "history_frames": 154,
+      "goal_view_pixels": {
+        "1": [
+          1972,
+          36345
+        ]
+      },
+      "paired_poses_equal": false
+    },
+    {
+      "split": "test",
+      "ordinal": 0,
+      "distance": 10,
+      "seed": 2136000001,
+      "gold": 1,
+      "world": 21471000,
+      "path": "/share/project/zhoubowen/zhy/zyf/results/phase3e-visual-swap-DB17NqMW/smoke-verified/worker-000/2136000001.zip",
+      "sha256": "9c83ce9eb314c87b73180de380b0dc2a8b03fb56599461cfb09a5808ea8ee9d3",
+      "paired": true,
+      "history_frames": 72,
+      "goal_view_pixels": {
+        "1": [
+          2185,
+          32333
+        ],
+        "0": [
+          2106,
+          35917
+        ]
+      },
+      "paired_poses_equal": true
+    },
+    {
+      "split": "test",
+      "ordinal": 0,
+      "distance": 30,
+      "seed": 2136000100,
+      "gold": 1,
+      "world": 21471000,
+      "path": "/share/project/zhoubowen/zhy/zyf/results/phase3e-visual-swap-DB17NqMW/smoke-verified/worker-000/2136000100.zip",
+      "sha256": "1b7ee776d01b4f6382a09601119f0301dfec7abe3e63c7e8f2b7c34489366280",
+      "paired": true,
+      "history_frames": 109,
+      "goal_view_pixels": {
+        "1": [
+          1972,
+          35030
+        ],
+        "0": [
+          1961,
+          32420
+        ]
+      },
+      "paired_poses_equal": true
+    },
+    {
+      "split": "test",
+      "ordinal": 0,
+      "distance": 60,
+      "seed": 2136000200,
+      "gold": 1,
+      "world": 21471000,
+      "path": "/share/project/zhoubowen/zhy/zyf/results/phase3e-visual-swap-DB17NqMW/smoke-verified/worker-000/2136000200.zip",
+      "sha256": "70c9f09d7f9c2bf8e9a70209c1d81f6c448736f68d48a3ca5741079a5b23f77e",
+      "paired": true,
+      "history_frames": 128,
+      "goal_view_pixels": {
+        "1": [
+          2111,
+          35876
+        ],
+        "0": [
+          2097,
+          33365
+        ]
+      },
+      "paired_poses_equal": true
+    },
+    {
+      "split": "test",
+      "ordinal": 0,
+      "distance": 100,
+      "seed": 2136000300,
+      "gold": 1,
+      "world": 21471000,
+      "path": "/share/project/zhoubowen/zhy/zyf/results/phase3e-visual-swap-DB17NqMW/smoke-verified/worker-000/2136000300.zip",
+      "sha256": "70a74523ed9aab77237d7cf1195a7040cd738e36e2d0b783b76a21f637c2a3f5",
+      "paired": true,
+      "history_frames": 153,
+      "goal_view_pixels": {
+        "1": [
+          2098,
+          32419
+        ],
+        "0": [
+          2100,
+          35924
+        ]
+      },
+      "paired_poses_equal": true
+    },
+    {
+      "split": "test",
+      "ordinal": 1,
+      "distance": 10,
+      "seed": 2136001001,
+      "gold": 0,
+      "world": 21471001,
+      "path": "/share/project/zhoubowen/zhy/zyf/results/phase3e-visual-swap-DB17NqMW/smoke-verified/worker-001/2136001001.zip",
+      "sha256": "9c5a372e2a1e0c05bff9b82b3c265b769cc14d0851865f1f0e802d88b048d7bf",
+      "paired": true,
+      "history_frames": 71,
+      "goal_view_pixels": {
+        "0": [
+          2106,
+          35917
+        ],
+        "1": [
+          2185,
+          32139
+        ]
+      },
+      "paired_poses_equal": true
+    },
+    {
+      "split": "test",
+      "ordinal": 1,
+      "distance": 30,
+      "seed": 2136001100,
+      "gold": 1,
+      "world": 21471001,
+      "path": "/share/project/zhoubowen/zhy/zyf/results/phase3e-visual-swap-DB17NqMW/smoke-verified/worker-001/2136001100.zip",
+      "sha256": "2d21caa861b3242ef22e704c6bda1bc964bc00d53ada90e6a699cf9953fed768",
+      "paired": true,
+      "history_frames": 110,
+      "goal_view_pixels": {
+        "1": [
+          2111,
+          35874
+        ],
+        "0": [
+          2097,
+          33095
+        ]
+      },
+      "paired_poses_equal": true
+    },
+    {
+      "split": "test",
+      "ordinal": 1,
+      "distance": 60,
+      "seed": 2136001200,
+      "gold": 0,
+      "world": 21471001,
+      "path": "/share/project/zhoubowen/zhy/zyf/results/phase3e-visual-swap-DB17NqMW/smoke-verified/worker-001/2136001200.zip",
+      "sha256": "eb1f6bdaa0b09f5318f4336e77b973bb4ce12887a55c0e5de3d7cb4a80f34c22",
+      "paired": true,
+      "history_frames": 128,
+      "goal_view_pixels": {
+        "0": [
+          2097,
+          33095
+        ],
+        "1": [
+          2111,
+          35874
+        ]
+      },
+      "paired_poses_equal": true
+    },
+    {
+      "split": "test",
+      "ordinal": 1,
+      "distance": 100,
+      "seed": 2136001300,
+      "gold": 1,
+      "world": 21471001,
+      "path": "/share/project/zhoubowen/zhy/zyf/results/phase3e-visual-swap-DB17NqMW/smoke-resume-0/worker-001/2136001300.zip",
+      "sha256": "d543ea8db3d8efe46f351811da65ec3d9da90dc7e278e820c82da2fa9181fb9c",
+      "paired": true,
+      "history_frames": 152,
+      "goal_view_pixels": {
+        "1": [
+          2111,
+          35876
+        ],
+        "0": [
+          2097,
+          33413
+        ]
+      },
+      "paired_poses_equal": true
+    }
+  ]
+}

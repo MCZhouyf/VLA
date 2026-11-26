@@ -1,0 +1,51 @@
+{
+  "primary_scenes": 240,
+  "paired": 120,
+  "worlds": 60,
+  "unique_seeds": 240,
+  "split_distance_side": {
+    "validation/10/1": 15,
+    "validation/30/1": 15,
+    "validation/60/0": 15,
+    "validation/100/1": 15,
+    "validation/10/0": 15,
+    "validation/60/1": 15,
+    "validation/30/0": 15,
+    "validation/100/0": 15,
+    "test/10/1": 15,
+    "test/30/1": 15,
+    "test/60/1": 15,
+    "test/100/1": 15,
+    "test/10/0": 15,
+    "test/60/0": 15,
+    "test/30/0": 15,
+    "test/100/0": 15
+  },
+  "independent_raw_windows_differ": 1438,
+  "independent_raw_window_frames": 1440,
+  "matching_paired_start_waypoint_classes": 120,
+  "distant_frame_index_rules": {
+    "geometric_dwell_lookup": 234,
+    "teacher_dwell_start": 6
+  },
+  "corridor_repairs": [
+    {
+      "seed": 2136007300,
+      "contact_column": [
+        -1822,
+        -1444
+      ],
+      "air_check_before": false,
+      "air_check_after": true,
+      "bounds": [
+        -1823,
+        80,
+        -1482,
+        -1821,
+        86,
+        -1375
+      ]
+    }
+  ],
+  "metadata_sha256": "eca5266727c9617e20fd27e3e29e1203fcfdfc28da3437560e6d139b188eac69"
+}
