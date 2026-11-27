@@ -536,3 +536,22 @@ python3 -B code/minemem/t1_phase3e_grid_check.py results/plan-p-d30-bfIpQlbn/clo
 ```
 
 [修复与复测报告](results/REPORT_phase3e_plan_p_tracking.md)
+
+#### 方案 P 冻结确认实验
+
+在 `ed550b0` 的归档检出上生成独立种子，使用安装了 MineStudio 实验依赖的 Python。变量 `frozen_checkout` 指向 Git 归档检出，`seed_output` 指向新目录。
+
+```bash
+python3 -B code/minemem/t1_phase3e_confirmation_cpu.py plan "$frozen_checkout" "$seed_output"
+```
+
+服务器运行目录 `confirmation_run` 含冻结提交导出的 `frozen-source`、单独的 `harness`、种子清单及 SHA-256 清单。设置服务器项目目录 `WORK`，在 CPU 验收通过后用原控制器目录 `controller`、无锚点读出目录 `no_anchor` 与原真值航点验收文件 `oracle_gate` 开始 GPU 两卡确认。
+
+```bash
+bash "$confirmation_run/harness/t1_phase3e_confirmation_cpu.sh" "$confirmation_run"
+PYTHONPATH="$confirmation_run/frozen-source/code/minemem:$WORK/code/JarvisVLA" \
+  "$WORK/envs/mcvla-phase3/bin/python" -B -u "$confirmation_run/harness/t1_phase3e_confirmation_run.py" \
+  --run "$confirmation_run" --controller "$controller" --offline "$no_anchor" --oracle-gate "$oracle_gate"
+```
+
+[确认实验协议与报告](results/REPORT_phase3e_confirmation.md)
