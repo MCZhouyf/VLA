@@ -75,11 +75,21 @@ def existing_seeds(checkout):
     return worlds, scenarios, sources
 
 
-def plan(checkout, output):
-    if subprocess.check_output(["git", "-C", str(checkout), "rev-parse", "HEAD"]).decode().strip() != FROZEN:
-        raise ValueError("Generate the new plan against the frozen archive")
+def plan(checkout, output, repaired=False):
+    git=["git","-C",str(checkout)]
+    inventory=subprocess.check_output([*git,"rev-parse","HEAD"]).decode().strip()
+    if repaired:
+        from t1_phase3e_repaired_scene import SCENE_REVISION
+
+        subprocess.run([*git,"merge-base","--is-ancestor",FROZEN,inventory],check=True)
+        revision=SCENE_REVISION
+    else:
+        if inventory!=FROZEN:
+            raise ValueError("Generate the original plan against the frozen archive")
+        revision="original"
     worlds, scenes, sources = existing_seeds(checkout)
-    rng = random.Random(SEED_NAMESPACE)
+    namespace=SEED_NAMESPACE if not repaired else f"{SEED_NAMESPACE} {revision} {inventory}"
+    rng = random.Random(namespace)
     occupied_worlds, occupied_scenes = worlds.copy(), scenes.copy()
     cases, balance_attempts = [], {}
     for distance in DISTANCES:
@@ -103,15 +113,22 @@ def plan(checkout, output):
     twins = [row["seed"] for slot in (0,1) for row in
              [r for r in cases if r["distance"]==30 and r["goal_slot"]==slot][:5]]
     output.mkdir()
-    save(output/"seed-plan.json",dict(frozen_commit=FROZEN, namespace=SEED_NAMESPACE, cases=cases,
-                                     twin_seeds=twins, balance_attempts=balance_attempts))
+    planned=dict(frozen_commit=FROZEN, namespace=namespace, cases=cases,
+                 twin_seeds=twins,balance_attempts=balance_attempts)
+    if repaired:
+        planned.update(scene_revision=revision, inventory_commit=inventory)
+        previously_failed=checkout/"results/confirmation-ed550b0-iZY2YtxL/seed-plan.json"
+        earlier=json.loads(previously_failed.read_text())["cases"]
+        if not (set(row["seed"] for row in earlier)<=scenes and set(row["world_seed"] for row in earlier)<=worlds):
+            raise ValueError("The repaired confirmation inventory must contain the entire rejected cohort")
+    save(output/"seed-plan.json",planned)
     save(output/"seed-audit.json",dict(frozen_commit=FROZEN, old_world_count=len(worlds),
                                       old_scenario_count=len(scenes), new_world_count=len(cases),
                                       new_scenario_count=len(cases), world_overlap=0, scenario_overlap=0,
                                       old_world_seeds=sorted(worlds), old_scenario_seeds=sorted(scenes), sources=sources))
 
 
-def worker(output, seed_plan, rank, workers, retry):
+def worker(output, seed_plan, rank, workers, retry, scene):
     cases = json.loads(seed_plan.read_text())["cases"]
     configure_rendering(output)
     original = output if retry is None else retry
@@ -119,6 +136,11 @@ def worker(output, seed_plan, rank, workers, retry):
     if retry is not None and (original/"acceptance.csv").exists():
         with (original/"acceptance.csv").open(newline="") as stream:
             seen = {int(row["seed"]) for row in csv.DictReader(stream) if row["baseline"]=="start_pose" and not row["error"]}
+    arena_type=FirstArrivalArena
+    if scene != "original":
+        from t1_phase3e_repaired_scene import GroundProbe, RepairedScene
+
+        arena_type=RepairedScene if scene=="repaired" else GroundProbe
     with (output/"acceptance.csv").open("x",newline="") as stream:
         writer=csv.writer(stream)
         writer.writerow(FIELDS)
@@ -128,7 +150,7 @@ def worker(output, seed_plan, rank, workers, retry):
                 continue
             arena=None
             try:
-                arena=FirstArrivalArena(world,effects=True)
+                arena=arena_type(world,effects=True)
                 layout,poses=acceptance_outbound(arena,seed,distance,slot,output)
                 for row in acceptance_case(arena,layout,poses,output):
                     writer.writerow(row)
@@ -208,21 +230,23 @@ if __name__ == "__main__":
     planning=stages.add_parser("plan")
     planning.add_argument("checkout",type=Path)
     planning.add_argument("output",type=Path)
+    planning.add_argument("--repaired-scene",action="store_true")
     cpu=stages.add_parser("worker")
     cpu.add_argument("output",type=Path)
     cpu.add_argument("--plan",type=Path,required=True)
     cpu.add_argument("--worker",type=int,required=True)
     cpu.add_argument("--workers",type=int,required=True)
     cpu.add_argument("--retry-from",type=Path)
+    cpu.add_argument("--scene",choices=("original","repaired","ground-probe"),default="original")
     freeze=stages.add_parser("freeze")
     freeze.add_argument("output",type=Path)
     freeze.add_argument("--plan",type=Path,required=True)
     freeze.add_argument("--inputs",type=Path,nargs="+",required=True)
     args=parser.parse_args()
     if args.stage=="plan":
-        plan(args.checkout,args.output)
+        plan(args.checkout,args.output,args.repaired_scene)
     elif args.stage=="worker":
         original=args.retry_from/args.output.name if args.retry_from else None
-        worker(args.output,args.plan,args.worker,args.workers,original)
+        worker(args.output,args.plan,args.worker,args.workers,original,args.scene)
     else:
         raise SystemExit(0 if aggregate(args.plan,args.inputs,args.output) else 1)

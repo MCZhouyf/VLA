@@ -555,3 +555,14 @@ PYTHONPATH="$confirmation_run/frozen-source/code/minemem:$WORK/code/JarvisVLA" \
 ```
 
 [确认实验协议与报告](results/REPORT_phase3e_confirmation.md)
+
+#### 修复布景后的独立确认
+
+使用已归档旧确认结果的检出生成新版种子。用修复后的实验工具作为 `harness`，继续使用 `ed550b0` 导出的 `frozen-source`。CPU 验收收集六项基线。GPU 调度读取种子清单里的布景版本，并在验收通过后使用相同布景。
+
+```bash
+python3 -B code/minemem/t1_phase3e_confirmation_cpu.py plan "$inventory_checkout" "$seed_output" --repaired-scene
+T1_CONFIRMATION_SCENE=repaired bash "$confirmation_run/harness/t1_phase3e_confirmation_cpu.sh" "$confirmation_run"
+```
+
+[布景根因、修复与验证](results/REPORT_phase3e_scene_repair.md)

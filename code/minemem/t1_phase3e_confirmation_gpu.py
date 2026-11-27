@@ -4,6 +4,7 @@ import argparse
 import csv
 import hashlib
 import json
+import sys
 from copy import copy
 from pathlib import Path
 from types import SimpleNamespace
@@ -104,7 +105,13 @@ def play(args, arena, controller, config, outbound, policy, tag, arm, emit):
 
 
 def ablation(args, model, controller, config, emit):
-    arena=FirstArrivalArena(config["world_seed"],config["optional_effects"])
+    if args.repaired_scene:
+        from t1_phase3e_repaired_scene import RepairedScene
+
+        arena_type=RepairedScene
+    else:
+        arena_type=FirstArrivalArena
+    arena=arena_type(config["world_seed"],config["optional_effects"])
     try:
         tag=f"d30-seed{config['scenario_seed']}"
         outbound=capture_outbound(arena,checked_scene(arena,config),args.output/f"{tag}-outbound.csv.gz")
@@ -120,7 +127,13 @@ def ablation(args, model, controller, config, emit):
 
 def twin(args, model, controller, config, emit):
     seed=config["scenario_seed"]
-    arena=PairedArena(config["world_seed"],config["optional_effects"])
+    if args.repaired_scene:
+        from t1_phase3e_repaired_scene import RepairedPairedScene
+
+        arena_type=RepairedPairedScene
+    else:
+        arena_type=PairedArena
+    arena=arena_type(config["world_seed"],config["optional_effects"])
     try:
         layout=checked_scene(arena,config)
         canonical,_,_=arena.track_route(layout,args.output/f"d30-seed{seed}-outbound-error.csv.gz")
@@ -181,11 +194,31 @@ def run(args):
             print(f"done={min(index+args.batch,len(cases))}/{len(cases)}",flush=True)
 
 
-if __name__=="__main__":
+def main():
+    entry=argparse.ArgumentParser(add_help=False)
+    entry.add_argument("--mode",choices=(*MODES,"a"),required=True)
+    entry.add_argument("--repaired-scene",action="store_true")
+    if "--help" not in sys.argv[1:]:
+        options,rest=entry.parse_known_args()
+        if options.mode=="a":
+            if not options.repaired_scene:
+                entry.error("Use the frozen evaluator directly for the original scene")
+            import t1_phase3e_predicted_rollout as evaluator
+            from t1_phase3e_predicted_eval import parse_args
+            from t1_phase3e_repaired_scene import RepairedScene
+
+            evaluator.FirstArrivalArena=RepairedScene
+            evaluator.run(parse_args(rest))
+            return
     parser=argparse.ArgumentParser(description=__doc__)
     for name in ("output","checkpoint","training-run","fixtures","room-weights"):
         parser.add_argument(f"--{name}",type=Path,required=True)
     parser.add_argument("--mode",choices=MODES,required=True)
     parser.add_argument("--seeds",type=int,nargs="+",required=True)
     parser.add_argument("--batch",type=int,default=3)
+    parser.add_argument("--repaired-scene",action="store_true")
     run(parser.parse_args())
+
+
+if __name__=="__main__":
+    main()

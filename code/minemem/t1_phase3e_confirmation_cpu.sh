@@ -15,7 +15,11 @@ mkdir -p "$TMPDIR" "$WORK/runtime/java-home"
 (cd "$run" && sha256sum --check --quiet seed-plan.sha256)
 
 database_root="$(mktemp -d /dev/shm/minemem-t1-confirm-XXXXXXXX)"
-workers=32
+workers="${T1_CONFIRMATION_WORKERS:-32}"
+[[ $workers =~ ^[1-9][0-9]?$ && $workers -le 32 ]]
+scene="${T1_CONFIRMATION_SCENE:-original}"
+display_base="${T1_CONFIRMATION_DISPLAY_BASE:-7600}"
+[[ $display_base =~ ^[1-9][0-9]{1,3}$ ]]
 entry="$run/harness/t1_phase3e_confirmation_cpu.py"
 launch() {
     local attempt="$1"
@@ -31,8 +35,9 @@ launch() {
         (
             export MINESTUDIO_DIR="$worker/minestudio" MESA_SHADER_CACHE_DIR="$worker"
             cd "$worker"
-            exec xvfb-run -a -n "$((7600+i))" -e "$worker/xvfb.log" "$prefix/bin/python" -B -u \
-                "$entry" worker "$worker" --worker "$i" --workers "$workers" --plan "$run/seed-plan.json" "$@"
+            exec xvfb-run -a -n "$((display_base+i))" -e "$worker/xvfb.log" "$prefix/bin/python" -B -u \
+                "$entry" worker "$worker" --worker "$i" --workers "$workers" --scene "$scene" \
+                --plan "$run/seed-plan.json" "$@"
         ) >"$worker/worker.log" 2>&1 &
         children+=("$!")
         sleep .4
@@ -46,6 +51,10 @@ launch() {
 
 printf 'cpu_acceptance\n' > "$run/progress"
 launch "$run/cpu"
+if [[ ${T1_CONFIRMATION_PILOT:-0} == 1 ]]; then
+    printf 'pilot_complete\n' > "$run/progress"
+    exit 0
+fi
 input=("$run/cpu")
 # Resume the same preassigned worlds once if MineStudio did not emit all six readings.
 complete="$(python3 - "$run/cpu" <<'PY'

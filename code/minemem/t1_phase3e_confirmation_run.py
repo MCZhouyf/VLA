@@ -34,7 +34,7 @@ def verify(run):
         subprocess.run(["sha256sum","--check","--quiet",manifest],cwd=directory,check=True)
 
 
-def run_job(run, group, gpu, seeds, common, distance=None):
+def run_job(run, group, gpu, seeds, common, distance=None, *, repaired_scene=False):
     frozen=run/"frozen-source/code/minemem/t1_exec.sh"
     target=run/"eval"/group
     target.mkdir(parents=True)
@@ -44,13 +44,16 @@ def run_job(run, group, gpu, seeds, common, distance=None):
         for attempt in (1,2):
             pending=[seed for seed in seeds if seed not in result]
             folder=target/f"attempt-{attempt}"
+            harness=["bash",str(run/"harness/t1_phase3e_confirmation_gpu.sh"),str(run),str(gpu),str(folder)]
+            if repaired_scene:
+                harness.append("--repaired-scene")
             if distance is not None:
-                command=["bash",str(frozen),"waypoint-predictions",str(gpu),str(folder),*common,
-                         "--grid-plan",group.rsplit("/",1)[-1],"--distances",str(distance),
-                         "--metrics",str(run/"frozen/metrics.json"),"--tracking-repair","--variant","spatial"]
+                command=([*harness,"--mode","a"] if repaired_scene else
+                         ["bash",str(frozen),"waypoint-predictions",str(gpu),str(folder)])
+                command.extend([*common,"--grid-plan",group.rsplit("/",1)[-1],"--distances",str(distance),
+                                "--metrics",str(run/"frozen/metrics.json"),"--tracking-repair","--variant","spatial"])
             else:
-                command=["bash",str(run/"harness/t1_phase3e_confirmation_gpu.sh"),str(run),str(gpu),str(folder),
-                         *common,"--mode",group.split("/")[-1].split("-")[0]]
+                command=[*harness,*common,"--mode",group.split("/")[-1].split("-")[0]]
             command+=["--seeds",*map(str,pending)]
             with (target/f"attempt-{attempt}.log").open("x") as stream:
                 for reservation in range(20):
@@ -168,6 +171,7 @@ def twin_summary(rows, plan):
 def run_suite(args):
     run=args.run
     plan=json.loads((run/"seed-plan.json").read_text())
+    repaired_scene="scene_revision" in plan
     if not json.loads((run/"frozen/metrics.json").read_text())["passed"]:
         raise RuntimeError("The frozen CPU acceptance gate rejected these predeclared scenes")
     verify(run)
@@ -184,7 +188,8 @@ def run_suite(args):
     with ThreadPoolExecutor(max_workers=2) as workers:
         for distance in DISTANCES:
             (run/"gpu.progress").write_text(f"A-{distance}\n")
-            jobs={arm:workers.submit(run_job,run,f"A/{distance}/{arm}",gpu,by_distance[distance],standard,distance)
+            jobs={arm:workers.submit(run_job,run,f"A/{distance}/{arm}",gpu,by_distance[distance],standard,distance,
+                                     repaired_scene=repaired_scene)
                   for arm,gpu in zip(ARMS,(6,7),strict=True)}
             groups={}
             for arm,future in jobs.items():
@@ -203,21 +208,22 @@ def run_suite(args):
         shared_seeds=by_distance[30]
         ablations={}
         for first, second in (("b1","b2"),("b3",None)):
-            jobs={first:workers.submit(run_job,run,f"B/{first}",6,shared_seeds,shared)}
+            jobs={first:workers.submit(run_job,run,f"B/{first}",6,shared_seeds,shared,repaired_scene=repaired_scene)}
             if second:
-                jobs[second]=workers.submit(run_job,run,f"B/{second}",7,shared_seeds,shared)
+                jobs[second]=workers.submit(run_job,run,f"B/{second}",7,shared_seeds,shared,repaired_scene=repaired_scene)
             for name,future in jobs.items():
                 ablations[name]=score(future.result())
                 save(run/f"B-{name}.json",ablations[name])
         verify(run)
         (run/"gpu.progress").write_text("C\n")
         pairs=plan["twin_seeds"]
-        jobs=[workers.submit(run_job,run,f"C/twin-{gpu}",gpu,pairs[index::2],shared)
+        jobs=[workers.submit(run_job,run,f"C/twin-{gpu}",gpu,pairs[index::2],shared,repaired_scene=repaired_scene)
               for index,gpu in enumerate((6,7))]
         twins=twin_summary([r for job in jobs for r in job.result()],plan)
     verify(run)
-    save(run/"confirmation-decision.json",dict(frozen_commit=plan["frozen_commit"],A=result,B=ablations,C=twins,
-                                               main_passed=result[30]["passed"]))
+    save(run/"confirmation-decision.json",dict(frozen_commit=plan["frozen_commit"],
+         scene_revision=plan.get("scene_revision","original"),A=result,B=ablations,C=twins,
+         main_passed=result[30]["passed"]))
     (run/"gpu.progress").write_text("complete\n")
 
 
