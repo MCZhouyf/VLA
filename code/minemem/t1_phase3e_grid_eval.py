@@ -12,6 +12,7 @@ from tempfile import TemporaryDirectory
 from time import sleep
 
 from t1_phase3e_closed_audit import large_turn_switches
+from t1_phase3e_grid_plan import TRACKING_REPAIR
 from t1_phase3e_recover_eval import extend_scores, read_scores
 from t1_phase3e_stage_b_d30 import report
 
@@ -56,16 +57,24 @@ def run_arm(output, arm, gpu, common, expected):
 
 def arm_summary(rows):
     switches = []
+    guard_steps = []
     for row in rows:
         path = Path(row["source"]) / f"d30-seed{row['seed']}-actions.jsonl"
         controls = [json.loads(line) for line in path.read_text().splitlines()]
         count = large_turn_switches(controls)
+        stabilized = sum(item.get("control_override")=="waypoint_turn_stabilizer" for item in controls)
+        guards = [item for item in controls if item.get("control_override")=="route_heading_guard"]
         if (len(controls) != int(row["steps"]) or count != int(row["waypoint_jumps_tail200"])
-                or sum("control_override" in item for item in controls) != int(row["stabilizer_steps"])):
+                or stabilized != int(row["stabilizer_steps"]) or len(guards) != int(row.get("heading_guard_steps",0))
+                or any(item["buttons"]["forward"] or not 0 < abs(item["yaw"]) <= 10 for item in guards)):
             raise ValueError(f"Action trace does not agree with the score for {path}")
         switches.append(count)
-    return dict(report(rows), room_correct=sum(row["predicted_slot"] == row["goal_slot"] for row in rows),
-                waypoint_jumps_tail200=sum(switches), waypoint_jump_episodes=sum(count > 0 for count in switches))
+        guard_steps.append(len(guards))
+    result = dict(report(rows), room_correct=sum(row["predicted_slot"] == row["goal_slot"] for row in rows),
+                  waypoint_jumps_tail200=sum(switches), waypoint_jump_episodes=sum(count > 0 for count in switches))
+    if "heading_guard_steps" in rows[0]:
+        result.update(heading_guard_steps=sum(guard_steps), heading_guard_episodes=sum(n > 0 for n in guard_steps))
+    return result
 
 
 def run(args):
@@ -89,8 +98,12 @@ def run(args):
         "--oracle-gate", str(args.oracle_gate), "--room-weights", str(weights),
         "--variant", "spatial", "--distances", "30", "--batch", "3",
     ]
+    if args.tracking_repair:
+        common.append("--tracking-repair")
     args.output.mkdir()
     setup = dict(gpus=ARMS, seeds=seeds, batch=3, room_weights_sha256=weight_hash, arguments=common)
+    if args.tracking_repair:
+        setup["tracking_repair"] = TRACKING_REPAIR
     (args.output / "launch.json").write_text(json.dumps(setup, indent=2) + "\n")
     with ThreadPoolExecutor(max_workers=len(ARMS)) as pool:
         jobs = {arm: pool.submit(run_arm, args.output / arm, arm, gpu, common, expected)
@@ -100,6 +113,8 @@ def run(args):
     difference = visual - arms["shuffle_visual"]["successes"]
     decision = dict(arms=arms, offline_gate_passed=True, success_threshold=23, gap_threshold=6,
                     visual_success_gap=difference, passed=visual >= 23 and difference >= 6)
+    if args.tracking_repair:
+        decision["tracking_repair"] = TRACKING_REPAIR
     (args.output / "d30_decision.json").write_text(json.dumps(decision, indent=2) + "\n")
     print(json.dumps(decision), flush=True)
 
@@ -108,4 +123,5 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     for item in ("formal", "oracle-gate", "offline", "output"):
         parser.add_argument(f"--{item}", type=Path, required=True)
+    parser.add_argument("--tracking-repair", action="store_true")
     run(parser.parse_args())

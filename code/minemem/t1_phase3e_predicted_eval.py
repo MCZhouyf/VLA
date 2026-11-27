@@ -14,6 +14,7 @@ def parse_args(argv=None):
     for name in ("initial", "waypoint-weights"):
         parser.add_argument(f"--{name}", type=Path)
     parser.add_argument("--grid-plan", choices=("visual", "shuffle_visual"))
+    parser.add_argument("--tracking-repair", action="store_true")
     parser.add_argument("--variant", choices=("no_memory", "long", "spatial"), required=True)
     parser.add_argument("--distances", type=int, nargs="+", choices=(10, 30, 60, 100), required=True)
     parser.add_argument("--seeds", type=int, nargs="+")
@@ -25,8 +26,11 @@ def parse_args(argv=None):
     if args.grid_plan:
         if args.variant != "spatial" or args.no_stabilizer:
             parser.error("Grid planning requires the spatial arm and the shared stabilizer")
-    elif args.initial is None or args.waypoint_weights is None:
-        parser.error("Learned waypoints require --initial and --waypoint-weights")
+    else:
+        if args.tracking_repair:
+            parser.error("Route tracking repair requires --grid-plan")
+        if args.initial is None or args.waypoint_weights is None:
+            parser.error("Learned waypoints require --initial and --waypoint-weights")
     return args
 
 

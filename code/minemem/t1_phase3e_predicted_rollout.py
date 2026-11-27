@@ -17,7 +17,7 @@ from t1_memory_cache import encode_image_batch
 from t1_phase3e import PROTOCOL, FirstArrivalArena
 from t1_phase3e_closed_audit import large_turn_switches
 from t1_phase3e_eval import FIELDS, checked_scene, movement_summary
-from t1_phase3e_grid_plan import GridRoute
+from t1_phase3e_grid_plan import TRACKING_REPAIR, CommittedGridRoute, GridRoute, heading_turn
 from t1_phase3e_no_anchor import AnchorFreeReadout, STRIDE
 from t1_phase3e_pairs import encode_view
 from t1_phase3e_pair_features import FrozenVision, RESOLUTION, TAIL
@@ -27,7 +27,7 @@ from t1_respawn import record_config
 from t1_safety import StepTrace
 from t1_spatial import spatial_read_plan
 from t1_trained_eval import ControlTrace, Controller, drive_rollouts, rollout
-from t1_waypoint import WaypointTurnStabilizer, waypoint_instruction
+from t1_waypoint import WaypointTurnStabilizer, waypoint_instruction, waypoint_labels
 
 
 def tensors(parts):
@@ -139,7 +139,7 @@ class WaypointPolicy:
 
 class GridPlanPolicy:
     @torch.inference_mode()
-    def __init__(self, models, outbound, seed, shuffle_visual):
+    def __init__(self, models, outbound, seed, shuffle_visual, tracking_repair=False):
         sampled = outbound[::STRIDE]
         images = models.images([open_jpeg(frame[0]) for frame in sampled],(models.side,))[models.side]
         appearance = models.rooms.embed(images)
@@ -148,11 +148,20 @@ class GridPlanPolicy:
             permutation = torch.randperm(len(sampled),generator=torch.Generator().manual_seed(seed))
             appearance = appearance[permutation.to(appearance.device)]
         self.slot = models.attention(appearance,poses).argmax().item()
-        self.route = GridRoute([frame[1] for frame in outbound], self.slot)
+        route_type = CommittedGridRoute if tracking_repair else GridRoute
+        self.route = route_type([frame[1] for frame in outbound], self.slot)
+        self.track = tracking_repair
+        self.turn = None
 
     def __call__(self, info):
         pose = tuple(float(info["player_pos"][key]) for key in ("x","z","yaw"))
-        return self.route.instruction(pose)
+        target = self.route.target(pose)
+        if self.track:
+            self.turn = heading_turn(pose, target)
+        return waypoint_instruction(*waypoint_labels(pose, target))
+
+    def corrective_yaw(self):
+        return self.turn
 
 
 def run_seed(args,cases,controller,models,emit):
@@ -178,18 +187,22 @@ def run_seed(args,cases,controller,models,emit):
             arena.landmark,arena.distractor=expected["landmark"],expected["distractor"]
             record_config(args.output,tag,expected)
             if args.grid_plan:
-                policy=GridPlanPolicy(models,outbound,expected["scenario_seed"],args.grid_plan=="shuffle_visual")
+                policy=GridPlanPolicy(models,outbound,expected["scenario_seed"],
+                                      args.grid_plan=="shuffle_visual",args.tracking_repair)
             else:
                 policy=WaypointPolicy(models,outbound,anchors)
             trace=ControlTrace(args.output/f"{tag}-return.csv.gz",args.output/f"{tag}-actions.jsonl")
             limit=expected["return_limit"]
             result=yield from rollout(arena,controller,expected,outbound[-controller.policy.history:],policy,
-                                      limit,trace,stabilize_turns=None if args.no_stabilizer else WaypointTurnStabilizer())
-            interventions=sum("control_override" in row for row in trace.controls)
+                                      limit,trace,stabilize_turns=None if args.no_stabilizer else WaypointTurnStabilizer(),
+                                      heading_correction=policy.corrective_yaw if args.tracking_repair else None)
+            interventions=sum(row.get("control_override")=="waypoint_turn_stabilizer" for row in trace.controls)
             row = (expected["distance"],expected["scenario_seed"],expected["world_seed"],*result,limit,
                    *movement_summary(trace),policy.slot,expected["goal_slot"],interventions)
             if args.grid_plan:
                 row += (large_turn_switches(trace.controls),)
+            if args.tracking_repair:
+                row += (sum(item.get("control_override")=="route_heading_guard" for item in trace.controls),)
             emit(row)
             arena.distractor=None
     finally:
@@ -219,11 +232,17 @@ def run(args):
                     distances=args.distances,seeds=selected)
     if args.grid_plan:
         protocol.update(grid_plan=args.grid_plan, room_anchor_input=False)
+    if args.tracking_repair:
+        protocol["tracking_repair"] = TRACKING_REPAIR
     record_config(args.output,"control_protocol",protocol)
     with (args.output/"episodes.csv").open("x",newline="") as stream:
         writer=csv.writer(stream)
         fields = (*FIELDS,"predicted_slot","goal_slot","stabilizer_steps")
-        writer.writerow((*fields,"waypoint_jumps_tail200") if args.grid_plan else fields)
+        if args.grid_plan:
+            fields += ("waypoint_jumps_tail200",)
+        if args.tracking_repair:
+            fields += ("heading_guard_steps",)
+        writer.writerow(fields)
         for offset in range(0,len(cases),args.batch):
             stage=cases[offset:offset+args.batch]
             start=perf_counter()

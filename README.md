@@ -523,3 +523,16 @@ WORK="$WORK" CUDA_VISIBLE_DEVICES= "$WORK/envs/mcvla-phase3/bin/python" -B -u \
 ```
 
 调度器在 GPU 6 跑原视觉组，在 GPU 7 跑打乱视觉组。进程异常退出时只重试缺失种子。两组各覆盖 30 个冻结种子后，复算动作记录并写入 `d30_decision.json`。
+
+#### 方案 P 路径跟踪修复复测
+
+在方案 P 的运行命令末尾加 `--tracking-repair`，使用新的 `plan_output` 目录。两组使用同一套路径跟踪与大偏角转向约束。逐场表的 `heading_guard_steps` 记录新转向约束的覆盖次数，`stabilizer_steps` 继续单独统计原稳定器。
+
+从原方案 P 的外出轨迹复算碰撞代理检查：
+
+```bash
+python3 -B code/minemem/t1_phase3e_grid_check.py results/plan-p-d30-bfIpQlbn/closed \
+  --tracking-repair --output tracking-check-recheck.json
+```
+
+[修复与复测报告](results/REPORT_phase3e_plan_p_tracking.md)

@@ -5,7 +5,10 @@ from collections import defaultdict
 from heapq import heappop, heappush
 from itertools import pairwise
 
-from t1_waypoint import LOOKAHEAD_BLOCKS, waypoint_instruction, waypoint_labels
+from t1_waypoint import LOOKAHEAD_BLOCKS, project, relative_waypoint, waypoint_instruction, waypoint_labels
+
+
+TRACKING_REPAIR = "committed_route_and_heading"
 
 
 def cell(point):
@@ -122,3 +125,69 @@ class GridRoute:
 
     def instruction(self, pose):
         return waypoint_instruction(*waypoint_labels(pose, self.target(pose)))
+
+
+def straight_sections(points, known_chord):
+    """Retain the corners of the observed path while merging nearly collinear edges."""
+    kept = [points[0]]
+    start = 0
+    for end in range(2, len(points)):
+        if not known_chord(points[start], points[end]) or any(
+                math.dist(p, project(p, points[start], points[end])[1]) > .18
+                for p in points[start+1:end]):
+            start = end - 1
+            kept.append(points[start])
+    if kept[-1] != points[-1]:
+        kept.append(points[-1])
+    return kept
+
+
+class CommittedGridRoute(GridRoute):
+    """Track one shortest path, with recovery tied to the current path segment."""
+
+    def __init__(self, outbound, slot):
+        super().__init__(outbound, slot)
+        self.sections = None
+        self.segment = 0
+        self.progress = 0.
+
+    def target(self, pose):
+        point = tuple(pose[:2])
+        if self.sections is None:
+            node = cell(point)
+            if node not in self.distance:
+                node = min(self.distance, key=lambda key: (math.dist(point, self.points[key]), key))
+            points = [self.points[node]]
+            while node in self.next:
+                following = self.next[node]
+                a, b = self.points[node], self.points[following]
+                if not self.known_chord(a, b):
+                    points.extend(self.crossing[node, following])
+                points.append(b)
+                node = following
+            distinct = [points[0], *(b for a, b in pairwise(points) if a != b)]
+            self.sections = straight_sections(distinct, self.known_chord)
+
+        while self.segment < len(self.sections) - 2 and math.dist(point, self.sections[self.segment+1]) <= .42:
+            self.segment += 1
+            self.progress = 0.
+        if len(self.sections) == 1:
+            return self.goal
+        start, end = self.sections[self.segment:self.segment+2]
+        length = math.dist(start, end)
+        fraction, projection = project(point, start, end)
+        offset = math.dist(point, projection)
+        if offset <= .65:
+            self.progress = max(self.progress, fraction * length)
+        # Aim nearer when rejoining this segment. The recovery point stays on the committed route.
+        lookahead = 1. if offset > .65 else LOOKAHEAD_BLOCKS
+        target_fraction = min(1., (self.progress + lookahead) / length)
+        return tuple(a + (b-a)*target_fraction for a, b in zip(start, end, strict=True))
+
+
+def heading_turn(pose, target):
+    """Return a bounded corrective turn when motion would start at a large heading error."""
+    angle, distance = relative_waypoint(pose, target)
+    if abs(angle) > 15. and distance > .05:
+        return math.copysign(min(10., abs(angle)), angle)
+    return None

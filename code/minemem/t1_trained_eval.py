@@ -149,7 +149,8 @@ class ControlTrace(StepTrace):
                 stream.write(json.dumps(row) + "\n")
 
 
-def rollout(arena, controller, config, outbound, instruction, limit, trace, *, stabilize_turns=None):
+def rollout(arena, controller, config, outbound, instruction, limit, trace, *,
+            stabilize_turns=None, heading_correction=None):
     arena.restore_return_pose(config)
     controller.start(outbound)
     closest = math.dist(horizontal(arena.info), arena.landmark)
@@ -170,13 +171,19 @@ def rollout(arena, controller, config, outbound, instruction, limit, trace, *, s
                     trace.record_environment(action)
                     if callable(instruction):
                         trace.controls[-1]["instruction"] = prompt
-                if stabilize_turns is not None and stabilize_turns.should_advance(prompt, action):
+                advance = stabilize_turns is not None and stabilize_turns.should_advance(prompt, action)
+                yaw = heading_correction() if heading_correction is not None else None
+                if yaw is not None or advance:
                     action = dict.fromkeys(action, 0)
-                    action.update(camera=arena.sim.noop_action()["camera"], forward=1)
+                    camera = arena.sim.noop_action()["camera"]
+                    if yaw is not None:
+                        camera[1] = yaw
+                    action.update(camera=camera, forward=int(yaw is None))
                     if controller.control_trace is not None:
                         record = trace.controls[-1]
                         record["proposed_environment"] = {key: record[key] for key in ("pitch", "yaw", "buttons")}
-                        record["control_override"] = "waypoint_turn_stabilizer"
+                        record["control_override"] = ("waypoint_turn_stabilizer" if yaw is None
+                                                      else "route_heading_guard")
                         trace.record_environment(action)
                 if not arena.navigation_step(action):
                     break
