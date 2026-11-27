@@ -1,0 +1,11 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+[13:15:17] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[13:15:17] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+INFO: Starting Minecraft process with device: cpu
+ERROR:minestudio.simulator.minerl.env.malmo.instance.00ab3b:[13:16:21] [Render thread/WARN]: ERROR : Couldn't load Narrator library : Unable to load library 'fliteWrapper': Can't obtain InputStream for linux-x86-64/libfliteWrapper.so
+ERROR:minestudio.simulator.minerl.env.malmo.instance.00ab3b:[13:16:22] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: null

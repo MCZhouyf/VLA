@@ -1,0 +1,80 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+[13:19:40] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[13:19:40] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+INFO: Starting Minecraft process with device: cpu
+ERROR:minestudio.simulator.minerl.env.malmo.instance.7f55fb:[13:20:05] [Render thread/WARN]: ERROR : Couldn't load Narrator library : Unable to load library 'fliteWrapper': Can't obtain InputStream for linux-x86-64/libfliteWrapper.so
+ERROR:minestudio.simulator.minerl.env.malmo.instance.7f55fb:[13:20:06] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: null
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+ERROR:minestudio.simulator.minerl.env.malmo.instance.7f55fb:[13:23:21] [Worker-Main-6/ERROR]: Using missing texture, unable to load minecraft:optifine/ctm/default/empty.png : java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png
+ERROR:minestudio.simulator.minerl.env.malmo.instance.7f55fb:[13:23:30] [Render thread/ERROR]: Error starting SoundSystem. Turning off sounds & music
+ERROR:minestudio.simulator.minerl.env.malmo.instance.7f55fb:java.lang.IllegalStateException: Failed to open OpenAL device
+WARNING:minestudio.simulator.minerl.env.malmo.instance.7f55fb:[13:23:30] [Render thread/WARN]: [OptiFine] Missing CTM sprite: minecraft:optifine/ctm/default/empty
+WARNING:minestudio.simulator.minerl.env.malmo.instance.7f55fb:[13:23:33] [Render thread/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.7f55fb:[13:23:33] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.7f55fb:[13:23:33] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.7f55fb:[13:23:33] [Render thread/WARN]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.7f55fb:[13:23:33] [Render thread/WARN]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.7f55fb:[13:23:58] [Render thread/WARN]: Failed to load texture: minecraft:optifine/ctm/default/empty.png
+ERROR:minestudio.simulator.minerl.env.malmo.instance.7f55fb:java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png
+[13:26:37] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[13:26:37] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+INFO: Starting Minecraft process with device: cpu
+ERROR:minestudio.simulator.minerl.env.malmo.instance.9103c9:[13:26:57] [Render thread/WARN]: ERROR : Couldn't load Narrator library : Unable to load library 'fliteWrapper': Can't obtain InputStream for linux-x86-64/libfliteWrapper.so
+ERROR:minestudio.simulator.minerl.env.malmo.instance.9103c9:[13:26:58] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: null
+ERROR:minestudio.simulator.minerl.env.malmo.instance.9103c9:[13:29:29] [Worker-Main-3/ERROR]: Using missing texture, unable to load minecraft:optifine/ctm/default/empty.png : java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png
+ERROR:minestudio.simulator.minerl.env.malmo.instance.9103c9:[13:29:44] [Render thread/ERROR]: Error starting SoundSystem. Turning off sounds & music
+ERROR:minestudio.simulator.minerl.env.malmo.instance.9103c9:java.lang.IllegalStateException: Failed to open OpenAL device
+WARNING:minestudio.simulator.minerl.env.malmo.instance.9103c9:[13:29:44] [Render thread/WARN]: [OptiFine] Missing CTM sprite: minecraft:optifine/ctm/default/empty
+WARNING:minestudio.simulator.minerl.env.malmo.instance.9103c9:[13:29:47] [Render thread/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.9103c9:[13:29:47] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.9103c9:[13:29:47] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.9103c9:[13:29:47] [Render thread/WARN]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.9103c9:[13:29:47] [Render thread/WARN]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.9103c9:[13:30:13] [Render thread/WARN]: Failed to load texture: minecraft:optifine/ctm/default/empty.png
+ERROR:minestudio.simulator.minerl.env.malmo.instance.9103c9:java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png
+[13:34:38] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[13:34:38] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+INFO: Starting Minecraft process with device: cpu
+ERROR:minestudio.simulator.minerl.env.malmo.instance.1c7f0c:[13:34:58] [Render thread/WARN]: ERROR : Couldn't load Narrator library : Unable to load library 'fliteWrapper': Can't obtain InputStream for linux-x86-64/libfliteWrapper.so
+ERROR:minestudio.simulator.minerl.env.malmo.instance.1c7f0c:[13:34:59] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: null
+ERROR:minestudio.simulator.minerl.env.malmo.instance.1c7f0c:[13:35:10] [Worker-Main-3/ERROR]: Using missing texture, unable to load minecraft:optifine/ctm/default/empty.png : java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png
+ERROR:minestudio.simulator.minerl.env.malmo.instance.1c7f0c:[13:35:11] [Render thread/ERROR]: Error starting SoundSystem. Turning off sounds & music
+ERROR:minestudio.simulator.minerl.env.malmo.instance.1c7f0c:java.lang.IllegalStateException: Failed to open OpenAL device
+WARNING:minestudio.simulator.minerl.env.malmo.instance.1c7f0c:[13:35:11] [Render thread/WARN]: [OptiFine] Missing CTM sprite: minecraft:optifine/ctm/default/empty
+WARNING:minestudio.simulator.minerl.env.malmo.instance.1c7f0c:[13:35:14] [Render thread/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.1c7f0c:[13:35:14] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.1c7f0c:[13:35:14] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.1c7f0c:[13:35:14] [Render thread/WARN]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.1c7f0c:[13:35:14] [Render thread/WARN]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.1c7f0c:[13:35:43] [Render thread/WARN]: Failed to load texture: minecraft:optifine/ctm/default/empty.png
+ERROR:minestudio.simulator.minerl.env.malmo.instance.1c7f0c:java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png
+[13:41:34] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[13:41:34] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+INFO: Starting Minecraft process with device: cpu
+ERROR:minestudio.simulator.minerl.env.malmo.instance.09f3cd:[13:41:55] [Render thread/WARN]: ERROR : Couldn't load Narrator library : Unable to load library 'fliteWrapper': Can't obtain InputStream for linux-x86-64/libfliteWrapper.so
+ERROR:minestudio.simulator.minerl.env.malmo.instance.09f3cd:[13:41:55] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: null
+ERROR:minestudio.simulator.minerl.env.malmo.instance.09f3cd:[13:42:02] [Worker-Main-3/ERROR]: Using missing texture, unable to load minecraft:optifine/ctm/default/empty.png : java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png
+ERROR:minestudio.simulator.minerl.env.malmo.instance.09f3cd:[13:42:03] [Render thread/ERROR]: Error starting SoundSystem. Turning off sounds & music
+ERROR:minestudio.simulator.minerl.env.malmo.instance.09f3cd:java.lang.IllegalStateException: Failed to open OpenAL device
+WARNING:minestudio.simulator.minerl.env.malmo.instance.09f3cd:[13:42:04] [Render thread/WARN]: [OptiFine] Missing CTM sprite: minecraft:optifine/ctm/default/empty
+WARNING:minestudio.simulator.minerl.env.malmo.instance.09f3cd:[13:42:07] [Render thread/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.09f3cd:[13:42:07] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.09f3cd:[13:42:07] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.09f3cd:[13:42:07] [Render thread/WARN]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.09f3cd:[13:42:07] [Render thread/WARN]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.09f3cd:[13:42:36] [Render thread/WARN]: Failed to load texture: minecraft:optifine/ctm/default/empty.png
+ERROR:minestudio.simulator.minerl.env.malmo.instance.09f3cd:java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png
