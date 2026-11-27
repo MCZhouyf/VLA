@@ -1,0 +1,20 @@
+shuffle_visual gpu=7 attempt=1 status=1 scored=0/30
+visual gpu=6 attempt=1 status=1 scored=0/30
+shuffle_visual gpu=7 attempt=2 status=1 scored=0/30
+visual gpu=6 attempt=2 status=1 scored=0/30
+Traceback (most recent call last):
+  File "/share/project/zhoubowen/zhy/zyf/results/phase3e-visual-swap-DB17NqMW/plan-p-d30-o7bVv2P1/snapshot/code/minemem/t1_phase3e_grid_eval.py", line 111, in <module>
+    run(parser.parse_args())
+  File "/share/project/zhoubowen/zhy/zyf/results/phase3e-visual-swap-DB17NqMW/plan-p-d30-o7bVv2P1/snapshot/code/minemem/t1_phase3e_grid_eval.py", line 98, in run
+    arms = {arm: arm_summary(job.result()) for arm, job in jobs.items()}
+  File "/share/project/zhoubowen/zhy/zyf/results/phase3e-visual-swap-DB17NqMW/plan-p-d30-o7bVv2P1/snapshot/code/minemem/t1_phase3e_grid_eval.py", line 98, in <dictcomp>
+    arms = {arm: arm_summary(job.result()) for arm, job in jobs.items()}
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/concurrent/futures/_base.py", line 458, in result
+    return self.__get_result()
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/share/project/zhoubowen/zhy/zyf/results/phase3e-visual-swap-DB17NqMW/plan-p-d30-o7bVv2P1/snapshot/code/minemem/t1_phase3e_grid_eval.py", line 48, in run_arm
+    raise RuntimeError(f"{arm} incomplete after retry; see {output}/attempt-*.log")
+RuntimeError: visual incomplete after retry; see /share/project/zhoubowen/zhy/zyf/results/phase3e-visual-swap-DB17NqMW/plan-p-d30-o7bVv2P1/closed/visual/attempt-*.log

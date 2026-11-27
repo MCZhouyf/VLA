@@ -1,0 +1,706 @@
+{
+  "visual": {
+    "summary": {
+      "scenes": 30,
+      "reasons": {
+        "distractor_first": 3,
+        "reached": 13,
+        "budget": 14
+      },
+      "max_selected_goal_offset": 2.3349782287919836,
+      "medians_outside_fraction_by_reason": {
+        "budget": 0.3336092233545418,
+        "distractor_first": 0.23404255319148937,
+        "reached": 0.19382022471910113
+      },
+      "jump_median": 2.0,
+      "jump_max": 8,
+      "min_dist_median": 4.660111593598193,
+      "final_dist_median": 5.953226632813627
+    },
+    "episodes": [
+      {
+        "seed": 2086000000,
+        "reason": "distractor_first",
+        "room_correct": true,
+        "chosen_goal_offset": 2.33471502074441,
+        "recorded_states": 452,
+        "outside_outbound_cells": 103,
+        "min_dist": 5.61462789457302,
+        "final_dist": 24.19987685661477,
+        "waypoint_jumps_tail200": 6
+      },
+      {
+        "seed": 2086000001,
+        "reason": "reached",
+        "room_correct": true,
+        "chosen_goal_offset": 2.3332108976583483,
+        "recorded_states": 623,
+        "outside_outbound_cells": 262,
+        "min_dist": 2.8376290513668265,
+        "final_dist": 2.8376290513668265,
+        "waypoint_jumps_tail200": 3
+      },
+      {
+        "seed": 2086000002,
+        "reason": "budget",
+        "room_correct": true,
+        "chosen_goal_offset": 2.3347298396853775,
+        "recorded_states": 699,
+        "outside_outbound_cells": 236,
+        "min_dist": 5.97151554943132,
+        "final_dist": 8.374254434494166,
+        "waypoint_jumps_tail200": 2
+      },
+      {
+        "seed": 2086000003,
+        "reason": "reached",
+        "room_correct": true,
+        "chosen_goal_offset": 2.334713914676181,
+        "recorded_states": 260,
+        "outside_outbound_cells": 0,
+        "min_dist": 2.9497336003670664,
+        "final_dist": 2.9497336003670664,
+        "waypoint_jumps_tail200": 0
+      },
+      {
+        "seed": 2086000004,
+        "reason": "distractor_first",
+        "room_correct": true,
+        "chosen_goal_offset": 2.334738754648402,
+        "recorded_states": 423,
+        "outside_outbound_cells": 99,
+        "min_dist": 5.567363177961504,
+        "final_dist": 23.34210603352343,
+        "waypoint_jumps_tail200": 7
+      },
+      {
+        "seed": 2086000005,
+        "reason": "reached",
+        "room_correct": true,
+        "chosen_goal_offset": 2.3347255053127522,
+        "recorded_states": 328,
+        "outside_outbound_cells": 70,
+        "min_dist": 2.798078892368827,
+        "final_dist": 2.798078892368827,
+        "waypoint_jumps_tail200": 2
+      },
+      {
+        "seed": 2086000006,
+        "reason": "distractor_first",
+        "room_correct": true,
+        "chosen_goal_offset": 2.334726184274196,
+        "recorded_states": 586,
+        "outside_outbound_cells": 163,
+        "min_dist": 5.58006040088818,
+        "final_dist": 24.098292210676046,
+        "waypoint_jumps_tail200": 5
+      },
+      {
+        "seed": 2086000007,
+        "reason": "budget",
+        "room_correct": true,
+        "chosen_goal_offset": 2.3330930192311663,
+        "recorded_states": 713,
+        "outside_outbound_cells": 252,
+        "min_dist": 5.7643846497315785,
+        "final_dist": 7.099773906670515,
+        "waypoint_jumps_tail200": 6
+      },
+      {
+        "seed": 2086000008,
+        "reason": "reached",
+        "room_correct": true,
+        "chosen_goal_offset": 2.333093019262807,
+        "recorded_states": 358,
+        "outside_outbound_cells": 69,
+        "min_dist": 2.8684606695461112,
+        "final_dist": 2.8684606695461112,
+        "waypoint_jumps_tail200": 1
+      },
+      {
+        "seed": 2086000009,
+        "reason": "reached",
+        "room_correct": true,
+        "chosen_goal_offset": 2.333093019231262,
+        "recorded_states": 329,
+        "outside_outbound_cells": 69,
+        "min_dist": 2.9607911400437494,
+        "final_dist": 2.9607911400437494,
+        "waypoint_jumps_tail200": 2
+      },
+      {
+        "seed": 2086000010,
+        "reason": "budget",
+        "room_correct": true,
+        "chosen_goal_offset": 2.334978228791759,
+        "recorded_states": 727,
+        "outside_outbound_cells": 166,
+        "min_dist": 5.535991574243295,
+        "final_dist": 5.629446611483891,
+        "waypoint_jumps_tail200": 2
+      },
+      {
+        "seed": 2086000011,
+        "reason": "reached",
+        "room_correct": true,
+        "chosen_goal_offset": 2.333210897646249,
+        "recorded_states": 288,
+        "outside_outbound_cells": 0,
+        "min_dist": 2.8261413256403665,
+        "final_dist": 2.8261413256403665,
+        "waypoint_jumps_tail200": 1
+      },
+      {
+        "seed": 2086000012,
+        "reason": "budget",
+        "room_correct": true,
+        "chosen_goal_offset": 2.334738754658177,
+        "recorded_states": 699,
+        "outside_outbound_cells": 157,
+        "min_dist": 6.061899976855483,
+        "final_dist": 6.277006654143364,
+        "waypoint_jumps_tail200": 1
+      },
+      {
+        "seed": 2086000013,
+        "reason": "budget",
+        "room_correct": true,
+        "chosen_goal_offset": 2.3332108976637924,
+        "recorded_states": 699,
+        "outside_outbound_cells": 295,
+        "min_dist": 4.6385441551749595,
+        "final_dist": 8.186390115636895,
+        "waypoint_jumps_tail200": 6
+      },
+      {
+        "seed": 2086000014,
+        "reason": "reached",
+        "room_correct": true,
+        "chosen_goal_offset": 2.3331406613292507,
+        "recorded_states": 489,
+        "outside_outbound_cells": 183,
+        "min_dist": 2.9340470468208877,
+        "final_dist": 2.9340470468208877,
+        "waypoint_jumps_tail200": 7
+      },
+      {
+        "seed": 2086000015,
+        "reason": "budget",
+        "room_correct": true,
+        "chosen_goal_offset": 2.333247592428421,
+        "recorded_states": 703,
+        "outside_outbound_cells": 215,
+        "min_dist": 4.681679032021427,
+        "final_dist": 4.813964127351127,
+        "waypoint_jumps_tail200": 0
+      },
+      {
+        "seed": 2086000016,
+        "reason": "budget",
+        "room_correct": true,
+        "chosen_goal_offset": 2.334715020728721,
+        "recorded_states": 713,
+        "outside_outbound_cells": 235,
+        "min_dist": 3.865608663857921,
+        "final_dist": 7.552044955253179,
+        "waypoint_jumps_tail200": 2
+      },
+      {
+        "seed": 2086000017,
+        "reason": "budget",
+        "room_correct": true,
+        "chosen_goal_offset": 2.3330930192661814,
+        "recorded_states": 707,
+        "outside_outbound_cells": 244,
+        "min_dist": 5.596452088320547,
+        "final_dist": 7.048747863944033,
+        "waypoint_jumps_tail200": 7
+      },
+      {
+        "seed": 2086000018,
+        "reason": "budget",
+        "room_correct": true,
+        "chosen_goal_offset": 2.3349782287919836,
+        "recorded_states": 703,
+        "outside_outbound_cells": 197,
+        "min_dist": 5.391854141279548,
+        "final_dist": 6.465431650073529,
+        "waypoint_jumps_tail200": 0
+      },
+      {
+        "seed": 2086000019,
+        "reason": "reached",
+        "room_correct": true,
+        "chosen_goal_offset": 2.334729839672645,
+        "recorded_states": 356,
+        "outside_outbound_cells": 69,
+        "min_dist": 2.919732087026944,
+        "final_dist": 2.919732087026944,
+        "waypoint_jumps_tail200": 3
+      },
+      {
+        "seed": 2086000020,
+        "reason": "budget",
+        "room_correct": true,
+        "chosen_goal_offset": 2.3330896023122283,
+        "recorded_states": 699,
+        "outside_outbound_cells": 184,
+        "min_dist": 5.734128500995608,
+        "final_dist": 6.877204366658424,
+        "waypoint_jumps_tail200": 2
+      },
+      {
+        "seed": 2086000021,
+        "reason": "reached",
+        "room_correct": true,
+        "chosen_goal_offset": 2.334729839685146,
+        "recorded_states": 646,
+        "outside_outbound_cells": 240,
+        "min_dist": 2.89468485033009,
+        "final_dist": 2.89468485033009,
+        "waypoint_jumps_tail200": 5
+      },
+      {
+        "seed": 2086000022,
+        "reason": "reached",
+        "room_correct": true,
+        "chosen_goal_offset": 2.333210897656481,
+        "recorded_states": 258,
+        "outside_outbound_cells": 0,
+        "min_dist": 2.9141393808937304,
+        "final_dist": 2.9141393808937304,
+        "waypoint_jumps_tail200": 0
+      },
+      {
+        "seed": 2086000023,
+        "reason": "budget",
+        "room_correct": true,
+        "chosen_goal_offset": 2.3330886085862406,
+        "recorded_states": 709,
+        "outside_outbound_cells": 203,
+        "min_dist": 5.9994239110983845,
+        "final_dist": 20.468115743740046,
+        "waypoint_jumps_tail200": 1
+      },
+      {
+        "seed": 2086000024,
+        "reason": "budget",
+        "room_correct": true,
+        "chosen_goal_offset": 2.3330930192312023,
+        "recorded_states": 701,
+        "outside_outbound_cells": 257,
+        "min_dist": 5.137988942490901,
+        "final_dist": 21.476973998894838,
+        "waypoint_jumps_tail200": 8
+      },
+      {
+        "seed": 2086000025,
+        "reason": "reached",
+        "room_correct": true,
+        "chosen_goal_offset": 2.334713914685895,
+        "recorded_states": 541,
+        "outside_outbound_cells": 211,
+        "min_dist": 2.808628006324347,
+        "final_dist": 2.808628006324347,
+        "waypoint_jumps_tail200": 5
+      },
+      {
+        "seed": 2086000026,
+        "reason": "budget",
+        "room_correct": true,
+        "chosen_goal_offset": 2.3347298396852554,
+        "recorded_states": 695,
+        "outside_outbound_cells": 239,
+        "min_dist": 5.748784490090776,
+        "final_dist": 8.125863365186628,
+        "waypoint_jumps_tail200": 7
+      },
+      {
+        "seed": 2086000027,
+        "reason": "reached",
+        "room_correct": true,
+        "chosen_goal_offset": 2.333088608586327,
+        "recorded_states": 589,
+        "outside_outbound_cells": 93,
+        "min_dist": 2.9934308244173047,
+        "final_dist": 2.9934308244173047,
+        "waypoint_jumps_tail200": 1
+      },
+      {
+        "seed": 2086000028,
+        "reason": "reached",
+        "room_correct": true,
+        "chosen_goal_offset": 2.3332475924329525,
+        "recorded_states": 276,
+        "outside_outbound_cells": 0,
+        "min_dist": 2.9524635671297674,
+        "final_dist": 2.9524635671297674,
+        "waypoint_jumps_tail200": 2
+      },
+      {
+        "seed": 2086000029,
+        "reason": "budget",
+        "room_correct": true,
+        "chosen_goal_offset": 2.3347139146870948,
+        "recorded_states": 699,
+        "outside_outbound_cells": 241,
+        "min_dist": 5.948556198237429,
+        "final_dist": 8.369040058242856,
+        "waypoint_jumps_tail200": 2
+      }
+    ]
+  },
+  "shuffle_visual": {
+    "summary": {
+      "scenes": 30,
+      "reasons": {
+        "budget": 15,
+        "reached": 6,
+        "distractor_first": 9
+      },
+      "max_selected_goal_offset": 2.3349782287919836,
+      "medians_outside_fraction_by_reason": {
+        "budget": 0.3576341127922971,
+        "distractor_first": 0.209375,
+        "reached": 0.20341394652217965
+      },
+      "jump_median": 2.0,
+      "jump_max": 8,
+      "min_dist_median": 6.852838130914609,
+      "final_dist_median": 15.55312417667132
+    },
+    "episodes": [
+      {
+        "seed": 2086000000,
+        "reason": "budget",
+        "room_correct": true,
+        "chosen_goal_offset": 2.33471502074441,
+        "recorded_states": 709,
+        "outside_outbound_cells": 193,
+        "min_dist": 4.999025067550872,
+        "final_dist": 11.698037570889895,
+        "waypoint_jumps_tail200": 8
+      },
+      {
+        "seed": 2086000001,
+        "reason": "reached",
+        "room_correct": true,
+        "chosen_goal_offset": 2.3332108976583483,
+        "recorded_states": 471,
+        "outside_outbound_cells": 117,
+        "min_dist": 2.915628003967446,
+        "final_dist": 2.915628003967446,
+        "waypoint_jumps_tail200": 1
+      },
+      {
+        "seed": 2086000002,
+        "reason": "budget",
+        "room_correct": false,
+        "chosen_goal_offset": 2.3332108976649564,
+        "recorded_states": 699,
+        "outside_outbound_cells": 266,
+        "min_dist": 9.945649590049292,
+        "final_dist": 12.406681209253009,
+        "waypoint_jumps_tail200": 6
+      },
+      {
+        "seed": 2086000003,
+        "reason": "reached",
+        "room_correct": true,
+        "chosen_goal_offset": 2.334713914676181,
+        "recorded_states": 260,
+        "outside_outbound_cells": 0,
+        "min_dist": 2.9497336003670664,
+        "final_dist": 2.9497336003670664,
+        "waypoint_jumps_tail200": 0
+      },
+      {
+        "seed": 2086000004,
+        "reason": "distractor_first",
+        "room_correct": false,
+        "chosen_goal_offset": 2.3332475924308085,
+        "recorded_states": 445,
+        "outside_outbound_cells": 140,
+        "min_dist": 11.719042653002287,
+        "final_dist": 24.308342775271885,
+        "waypoint_jumps_tail200": 4
+      },
+      {
+        "seed": 2086000005,
+        "reason": "distractor_first",
+        "room_correct": false,
+        "chosen_goal_offset": 2.333140661331436,
+        "recorded_states": 329,
+        "outside_outbound_cells": 85,
+        "min_dist": 12.20721333060497,
+        "final_dist": 23.01096533506746,
+        "waypoint_jumps_tail200": 2
+      },
+      {
+        "seed": 2086000006,
+        "reason": "budget",
+        "room_correct": false,
+        "chosen_goal_offset": 2.3331406613291623,
+        "recorded_states": 717,
+        "outside_outbound_cells": 264,
+        "min_dist": 9.391379524935601,
+        "final_dist": 9.651376668419614,
+        "waypoint_jumps_tail200": 5
+      },
+      {
+        "seed": 2086000007,
+        "reason": "distractor_first",
+        "room_correct": false,
+        "chosen_goal_offset": 2.3347139146620837,
+        "recorded_states": 532,
+        "outside_outbound_cells": 73,
+        "min_dist": 6.908489074119349,
+        "final_dist": 24.064784652135568,
+        "waypoint_jumps_tail200": 0
+      },
+      {
+        "seed": 2086000008,
+        "reason": "budget",
+        "room_correct": false,
+        "chosen_goal_offset": 2.3347139146872418,
+        "recorded_states": 713,
+        "outside_outbound_cells": 178,
+        "min_dist": 7.825735376040388,
+        "final_dist": 25.781985162468988,
+        "waypoint_jumps_tail200": 2
+      },
+      {
+        "seed": 2086000009,
+        "reason": "reached",
+        "room_correct": true,
+        "chosen_goal_offset": 2.333093019231262,
+        "recorded_states": 329,
+        "outside_outbound_cells": 69,
+        "min_dist": 2.9607911400437494,
+        "final_dist": 2.9607911400437494,
+        "waypoint_jumps_tail200": 2
+      },
+      {
+        "seed": 2086000010,
+        "reason": "budget",
+        "room_correct": false,
+        "chosen_goal_offset": 2.3330886085543763,
+        "recorded_states": 727,
+        "outside_outbound_cells": 260,
+        "min_dist": 9.962507262060432,
+        "final_dist": 30.339672598313175,
+        "waypoint_jumps_tail200": 2
+      },
+      {
+        "seed": 2086000011,
+        "reason": "reached",
+        "room_correct": true,
+        "chosen_goal_offset": 2.333210897646249,
+        "recorded_states": 290,
+        "outside_outbound_cells": 0,
+        "min_dist": 2.953378006989979,
+        "final_dist": 2.953378006989979,
+        "waypoint_jumps_tail200": 1
+      },
+      {
+        "seed": 2086000012,
+        "reason": "budget",
+        "room_correct": false,
+        "chosen_goal_offset": 2.333247592432973,
+        "recorded_states": 699,
+        "outside_outbound_cells": 256,
+        "min_dist": 9.880595685009903,
+        "final_dist": 27.965375433706782,
+        "waypoint_jumps_tail200": 1
+      },
+      {
+        "seed": 2086000013,
+        "reason": "budget",
+        "room_correct": true,
+        "chosen_goal_offset": 2.3332108976637924,
+        "recorded_states": 699,
+        "outside_outbound_cells": 295,
+        "min_dist": 4.6385441551749595,
+        "final_dist": 8.186390115636895,
+        "waypoint_jumps_tail200": 6
+      },
+      {
+        "seed": 2086000014,
+        "reason": "reached",
+        "room_correct": true,
+        "chosen_goal_offset": 2.3331406613292507,
+        "recorded_states": 345,
+        "outside_outbound_cells": 68,
+        "min_dist": 2.8207998845626356,
+        "final_dist": 2.8207998845626356,
+        "waypoint_jumps_tail200": 1
+      },
+      {
+        "seed": 2086000015,
+        "reason": "reached",
+        "room_correct": true,
+        "chosen_goal_offset": 2.333247592428421,
+        "recorded_states": 655,
+        "outside_outbound_cells": 153,
+        "min_dist": 2.9246460777044114,
+        "final_dist": 2.9246460777044114,
+        "waypoint_jumps_tail200": 2
+      },
+      {
+        "seed": 2086000016,
+        "reason": "distractor_first",
+        "room_correct": false,
+        "chosen_goal_offset": 2.3330896023121066,
+        "recorded_states": 339,
+        "outside_outbound_cells": 63,
+        "min_dist": 11.981107782800466,
+        "final_dist": 24.19084332991501,
+        "waypoint_jumps_tail200": 3
+      },
+      {
+        "seed": 2086000017,
+        "reason": "budget",
+        "room_correct": false,
+        "chosen_goal_offset": 2.3347139146857305,
+        "recorded_states": 707,
+        "outside_outbound_cells": 343,
+        "min_dist": 6.79718718770987,
+        "final_dist": 6.9160868337307875,
+        "waypoint_jumps_tail200": 7
+      },
+      {
+        "seed": 2086000018,
+        "reason": "budget",
+        "room_correct": true,
+        "chosen_goal_offset": 2.3349782287919836,
+        "recorded_states": 703,
+        "outside_outbound_cells": 197,
+        "min_dist": 5.391854141279548,
+        "final_dist": 6.465431650073529,
+        "waypoint_jumps_tail200": 0
+      },
+      {
+        "seed": 2086000019,
+        "reason": "distractor_first",
+        "room_correct": false,
+        "chosen_goal_offset": 2.3332108976463117,
+        "recorded_states": 285,
+        "outside_outbound_cells": 34,
+        "min_dist": 11.927878659552972,
+        "final_dist": 25.160867723423582,
+        "waypoint_jumps_tail200": 2
+      },
+      {
+        "seed": 2086000020,
+        "reason": "distractor_first",
+        "room_correct": false,
+        "chosen_goal_offset": 2.334715020729032,
+        "recorded_states": 641,
+        "outside_outbound_cells": 163,
+        "min_dist": 5.890174632226148,
+        "final_dist": 23.958051472299793,
+        "waypoint_jumps_tail200": 2
+      },
+      {
+        "seed": 2086000021,
+        "reason": "distractor_first",
+        "room_correct": false,
+        "chosen_goal_offset": 2.3332108976648938,
+        "recorded_states": 286,
+        "outside_outbound_cells": 0,
+        "min_dist": 11.910597435996653,
+        "final_dist": 24.168353277955962,
+        "waypoint_jumps_tail200": 2
+      },
+      {
+        "seed": 2086000022,
+        "reason": "distractor_first",
+        "room_correct": false,
+        "chosen_goal_offset": 2.3347298396770744,
+        "recorded_states": 320,
+        "outside_outbound_cells": 67,
+        "min_dist": 12.13290969465919,
+        "final_dist": 24.01122537173338,
+        "waypoint_jumps_tail200": 3
+      },
+      {
+        "seed": 2086000023,
+        "reason": "budget",
+        "room_correct": true,
+        "chosen_goal_offset": 2.3330886085862406,
+        "recorded_states": 709,
+        "outside_outbound_cells": 203,
+        "min_dist": 5.9994239110983845,
+        "final_dist": 20.468115743740046,
+        "waypoint_jumps_tail200": 1
+      },
+      {
+        "seed": 2086000024,
+        "reason": "budget",
+        "room_correct": true,
+        "chosen_goal_offset": 2.3330930192312023,
+        "recorded_states": 701,
+        "outside_outbound_cells": 301,
+        "min_dist": 4.978864480854496,
+        "final_dist": 7.90503729778694,
+        "waypoint_jumps_tail200": 7
+      },
+      {
+        "seed": 2086000025,
+        "reason": "distractor_first",
+        "room_correct": false,
+        "chosen_goal_offset": 2.3330930192662245,
+        "recorded_states": 327,
+        "outside_outbound_cells": 70,
+        "min_dist": 12.152193681460226,
+        "final_dist": 24.067689077185616,
+        "waypoint_jumps_tail200": 4
+      },
+      {
+        "seed": 2086000026,
+        "reason": "budget",
+        "room_correct": true,
+        "chosen_goal_offset": 2.3347298396852554,
+        "recorded_states": 695,
+        "outside_outbound_cells": 239,
+        "min_dist": 5.748784490090776,
+        "final_dist": 8.125863365186628,
+        "waypoint_jumps_tail200": 7
+      },
+      {
+        "seed": 2086000027,
+        "reason": "budget",
+        "room_correct": false,
+        "chosen_goal_offset": 2.3349782287752956,
+        "recorded_states": 719,
+        "outside_outbound_cells": 303,
+        "min_dist": 11.834285565785361,
+        "final_dist": 25.400921481008172,
+        "waypoint_jumps_tail200": 6
+      },
+      {
+        "seed": 2086000028,
+        "reason": "budget",
+        "room_correct": false,
+        "chosen_goal_offset": 2.3347387546582197,
+        "recorded_states": 707,
+        "outside_outbound_cells": 158,
+        "min_dist": 6.399381630090488,
+        "final_dist": 18.69956714408963,
+        "waypoint_jumps_tail200": 1
+      },
+      {
+        "seed": 2086000029,
+        "reason": "budget",
+        "room_correct": false,
+        "chosen_goal_offset": 2.333093019262771,
+        "recorded_states": 699,
+        "outside_outbound_cells": 150,
+        "min_dist": 9.825999180704764,
+        "final_dist": 10.5909637563594,
+        "waypoint_jumps_tail200": 4
+      }
+    ]
+  }
+}
