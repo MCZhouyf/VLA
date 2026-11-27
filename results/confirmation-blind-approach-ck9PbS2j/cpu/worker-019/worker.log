@@ -1,0 +1,227 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+[16:22:35] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[16:22:35] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+INFO: Starting Minecraft process with device: cpu
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:java.lang.IllegalStateException: Failed to initialize GLFW, errors: GLFW error during init: [0x10008]140638963826272
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:Picked up JAVA_TOOL_OPTIONS: -Duser.home='/share/project/zhoubowen/zhy/zyf/runtime/java-home' -Djava.io.tmpdir='/share/project/zhoubowen/zhy/zyf/tmp' -XX:ActiveProcessorCount=2
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:SLF4J: Defaulting to no-operation (NOP) logger implementation
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:[16:23:18] [main/INFO]: [OptiFine] (Reflector) Field not found: World.tileEntitiesToBeRemoved
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:[16:23:18] [main/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.eventbus.api.Event$Result
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:[16:23:18] [main/INFO]: [OptiFine] (Reflector) Method not present: net.minecraftforge.common.extensions.IForgeBlockState.hasTileEntity
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:[16:23:18] [main/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.extensions.IForgeEntity
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:[16:23:18] [main/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.CrashReportExtender
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:[16:23:18] [main/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.tags.ItemTags.createOptional
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:[16:23:20] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.ForgeHooksClient
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:[16:23:20] [Render thread/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:[16:23:21] [Render thread/INFO]: Setting user: Player753
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:[16:23:21] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.settings.KeyConflictContext
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:[16:23:21] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.settings.KeyModifier
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:[16:23:21] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraft.launchwrapper.Launch
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:[16:23:21] [Render thread/INFO]: Backend library: LWJGL version 3.2.2 SNAPSHOT
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:Authorization required, but no authorization protocol specified
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:[16:23:22] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: optifine.OptiFineResourceLocator
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:---- Minecraft Crash Report ----
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:// I let you down. Sorry :(
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:Time: 11/27/26 4:23 PM
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:Description: Initializing game
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:java.lang.IllegalStateException: Failed to initialize GLFW, errors: GLFW error during init: [0x10008]140638963826272
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:	at com.mojang.blaze3d.platform.GLX._initGlfw(GLX.java:85)
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:	at com.mojang.blaze3d.systems.RenderSystem.initBackendSystem(RenderSystem.java:586)
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:	at net.minecraft.client.Minecraft.<init>(Minecraft.java:415)
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:	at net.minecraft.client.main.Main.main(Main.java:157)
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:A detailed walkthrough of the error, its code path and all known details is as follows:
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:---------------------------------------------------------------------------------------
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:-- Head --
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:Thread: Render thread
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:Stacktrace:
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:	at com.mojang.blaze3d.platform.GLX._initGlfw(GLX.java:85)
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:	at com.mojang.blaze3d.systems.RenderSystem.initBackendSystem(RenderSystem.java:586)
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:	at net.minecraft.client.Minecraft.<init>(Minecraft.java:415)
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:-- Initialization --
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:Details:
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:Stacktrace:
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:	at net.minecraft.client.main.Main.main(Main.java:157)
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:-- System Details --
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:Details:
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:	Minecraft Version: 1.16.5
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:	Minecraft Version ID: 1.16.5
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:	Operating System: Linux (amd64) version 5.15.0-1053-nvidia
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:	Java Version: 1.8.0_514, Azul Systems, Inc.
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Azul Systems, Inc.
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:	Memory: 1471059816 bytes (1402 MB) / 1630011392 bytes (1554 MB) up to 1908932608 bytes (1820 MB)
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:	CPUs: 2
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:	JVM Flags: 2 total; -XX:ActiveProcessorCount=2 -Xmx2G
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:	Launched Version: ~~NULL~~
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:	Backend library: LWJGL version 3.2.2 SNAPSHOT
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:	Backend API: NO CONTEXT
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:	GL Caps: 
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:	Using VBOs: Yes
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:	Is Modded: Very likely; Jar signature invalidated
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:	Type: Client (map_client.txt)
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:	CPU: <unknown>
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:	OptiFine Version: OptiFine_1.16.5_HD_U_G8
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:	OptiFine Build: ~~NULL~~
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:	Render Distance Chunks: 4
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:	Mipmaps: 4
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:	Anisotropic Filtering: 1
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:	Antialiasing: 0
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:	Multitexture: false
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:	Shaders: null
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:	OpenGlVersion: null
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:	OpenGlRenderer: null
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:	OpenGlVendor: null
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:	CpuCount: 2
+ERROR:minestudio.simulator.minerl.env.malmo.instance.6c763e:#@!@# Game crashed! Crash report saved to: #@!@# /share/project/zhoubowen/zhy/zyf/results/phase3e-visual-swap-DB17NqMW/confirmation-blind-approach-ck9PbS2j/cpu/worker-019/minestudio/tmp/stark_tech_instances/e611b9b3-76c5-4122-a634-0e0fcf57baa4/./crash-reports/crash-2026-11-27_16.23.22-client.txt
+d=10 seed=1800100591 EOFError: Picked up JAVA_TOOL_OPTIONS: -Duser.home='/share/project/zhoubowen/zhy/zyf/runtime/java-home' -Djava.io.tmpdir='/share/project/zhoubowen/zhy/zyf/tmp' -XX:ActiveProcessorCount=2
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+[16:23:18] [main/INFO]: [OptiFine] (Reflector) Field not found: World.tileEntitiesToBeRemoved
+[16:23:18] [main/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.eventbus.api.Event$Result
+[16:23:18] [main/INFO]: [OptiFine] (Reflector) Method not present: net.minecraftforge.common.extensions.IForgeBlockState.hasTileEntity
+[16:23:18] [main/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.extensions.IForgeEntity
+[16:23:18] [main/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.CrashReportExtender
+[16:23:18] [main/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.tags.ItemTags.createOptional
+[16:23:20] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.ForgeHooksClient
+[16:23:20] [Render thread/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[16:23:21] [Render thread/INFO]: Setting user: Player753
+[16:23:21] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.settings.KeyConflictContext
+[16:23:21] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.settings.KeyModifier
+[16:23:21] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraft.launchwrapper.Launch
+[16:23:21] [Render thread/INFO]: Backend library: LWJGL version 3.2.2 SNAPSHOT
+Authorization required, but no authorization protocol specified
+[16:23:22] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: optifine.OptiFineResourceLocator
+---- Minecraft Crash Report ----
+// I let you down. Sorry :(
+
+Time: 11/27/26 4:23 PM
+Description: Initializing game
+
+java.lang.IllegalStateException: Failed to initialize GLFW, errors: GLFW error during init: [0x10008]140638963826272
+	at com.mojang.blaze3d.platform.GLX._initGlfw(GLX.java:85)
+	at com.mojang.blaze3d.systems.RenderSystem.initBackendSystem(RenderSystem.java:586)
+	at net.minecraft.client.Minecraft.<init>(Minecraft.java:415)
+	at net.minecraft.client.main.Main.main(Main.java:157)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at com.mojang.blaze3d.platform.GLX._initGlfw(GLX.java:85)
+	at com.mojang.blaze3d.systems.RenderSystem.initBackendSystem(RenderSystem.java:586)
+	at net.minecraft.client.Minecraft.<init>(Minecraft.java:415)
+
+-- Initialization --
+Details:
+Stacktrace:
+	at net.minecraft.client.main.Main.main(Main.java:157)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.5
+	Minecraft Version ID: 1.16.5
+	Operating System: Linux (amd64) version 5.15.0-1053-nvidia
+	Java Version: 1.8.0_514, Azul Systems, Inc.
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Azul Systems, Inc.
+	Memory: 1471059816 bytes (1402 MB) / 1630011392 bytes (1554 MB) up to 1908932608 bytes (1820 MB)
+	CPUs: 2
+	JVM Flags: 2 total; -XX:ActiveProcessorCount=2 -Xmx2G
+	Launched Version: ~~NULL~~
+	Backend library: LWJGL version 3.2.2 SNAPSHOT
+	Backend API: NO CONTEXT
+	GL Caps: 
+	Using VBOs: Yes
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	CPU: <unknown>
+	OptiFine Version: OptiFine_1.16.5_HD_U_G8
+	OptiFine Build: ~~NULL~~
+	Render Distance Chunks: 4
+	Mipmaps: 4
+	Anisotropic Filtering: 1
+	Antialiasing: 0
+	Multitexture: false
+	Shaders: null
+	OpenGlVersion: null
+	OpenGlRenderer: null
+	OpenGlVendor: null
+	CpuCount: 2
+#@!@# Game crashed! Crash report saved to: #@!@# /share/project/zhoubowen/zhy/zyf/results/phase3e-visual-swap-DB17NqMW/confirmation-blind-approach-ck9PbS2j/cpu/worker-019/minestudio/tmp/stark_tech_instances/e611b9b3-76c5-4122-a634-0e0fcf57baa4/./crash-reports/crash-2026-11-27_16.23.22-client.txt
+
+
+Minecraft process finished unexpectedly. There was an error with Malmo.
+[16:23:32] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[16:23:32] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+INFO: Starting Minecraft process with device: cpu
+ERROR:minestudio.simulator.minerl.env.malmo.instance.490cd7:[16:24:11] [Render thread/WARN]: ERROR : Couldn't load Narrator library : Unable to load library 'fliteWrapper': Can't obtain InputStream for linux-x86-64/libfliteWrapper.so
+ERROR:minestudio.simulator.minerl.env.malmo.instance.490cd7:[16:24:12] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: null
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+ERROR:minestudio.simulator.minerl.env.malmo.instance.490cd7:[16:27:21] [Worker-Main-3/ERROR]: Using missing texture, unable to load minecraft:optifine/ctm/default/empty.png : java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png
+ERROR:minestudio.simulator.minerl.env.malmo.instance.490cd7:[16:27:28] [Render thread/ERROR]: Error starting SoundSystem. Turning off sounds & music
+ERROR:minestudio.simulator.minerl.env.malmo.instance.490cd7:java.lang.IllegalStateException: Failed to open OpenAL device
+WARNING:minestudio.simulator.minerl.env.malmo.instance.490cd7:[16:27:28] [Render thread/WARN]: [OptiFine] Missing CTM sprite: minecraft:optifine/ctm/default/empty
+WARNING:minestudio.simulator.minerl.env.malmo.instance.490cd7:[16:27:31] [Render thread/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.490cd7:[16:27:31] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.490cd7:[16:27:31] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.490cd7:[16:27:31] [Render thread/WARN]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.490cd7:[16:27:31] [Render thread/WARN]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.490cd7:[16:27:59] [Render thread/WARN]: Failed to load texture: minecraft:optifine/ctm/default/empty.png
+ERROR:minestudio.simulator.minerl.env.malmo.instance.490cd7:java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png
+[16:33:54] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[16:33:54] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+INFO: Starting Minecraft process with device: cpu
+ERROR:minestudio.simulator.minerl.env.malmo.instance.ae1537:[16:34:13] [Render thread/WARN]: ERROR : Couldn't load Narrator library : Unable to load library 'fliteWrapper': Can't obtain InputStream for linux-x86-64/libfliteWrapper.so
+ERROR:minestudio.simulator.minerl.env.malmo.instance.ae1537:[16:34:14] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: null
+ERROR:minestudio.simulator.minerl.env.malmo.instance.ae1537:[16:34:24] [Worker-Main-6/ERROR]: Using missing texture, unable to load minecraft:optifine/ctm/default/empty.png : java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png
+ERROR:minestudio.simulator.minerl.env.malmo.instance.ae1537:[16:34:25] [Render thread/ERROR]: Error starting SoundSystem. Turning off sounds & music
+ERROR:minestudio.simulator.minerl.env.malmo.instance.ae1537:java.lang.IllegalStateException: Failed to open OpenAL device
+WARNING:minestudio.simulator.minerl.env.malmo.instance.ae1537:[16:34:25] [Render thread/WARN]: [OptiFine] Missing CTM sprite: minecraft:optifine/ctm/default/empty
+WARNING:minestudio.simulator.minerl.env.malmo.instance.ae1537:[16:34:28] [Render thread/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.ae1537:[16:34:28] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.ae1537:[16:34:28] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.ae1537:[16:34:28] [Render thread/WARN]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.ae1537:[16:34:28] [Render thread/WARN]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.ae1537:[16:35:02] [Render thread/WARN]: Failed to load texture: minecraft:optifine/ctm/default/empty.png
+ERROR:minestudio.simulator.minerl.env.malmo.instance.ae1537:java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png
+[16:43:14] tokenizer_type: qwen2_vl                        action_mapping.py:356
+[16:43:14] bases: [10, 3, 3, 3, 2, 2, 2, 2, 2, 2, 21, 21], action_mapping.py:357
+           camera_mu: 20, n_camera_bins: 21,                                    
+           camera_binsize: 1                                                    
+INFO: Starting Minecraft process with device: cpu
+ERROR:minestudio.simulator.minerl.env.malmo.instance.236c04:[16:43:36] [Render thread/WARN]: ERROR : Couldn't load Narrator library : Unable to load library 'fliteWrapper': Can't obtain InputStream for linux-x86-64/libfliteWrapper.so
+ERROR:minestudio.simulator.minerl.env.malmo.instance.236c04:[16:43:36] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: null
+ERROR:minestudio.simulator.minerl.env.malmo.instance.236c04:[16:43:44] [Worker-Main-3/ERROR]: Using missing texture, unable to load minecraft:optifine/ctm/default/empty.png : java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png
+ERROR:minestudio.simulator.minerl.env.malmo.instance.236c04:[16:43:45] [Render thread/ERROR]: Error starting SoundSystem. Turning off sounds & music
+ERROR:minestudio.simulator.minerl.env.malmo.instance.236c04:java.lang.IllegalStateException: Failed to open OpenAL device
+WARNING:minestudio.simulator.minerl.env.malmo.instance.236c04:[16:43:45] [Render thread/WARN]: [OptiFine] Missing CTM sprite: minecraft:optifine/ctm/default/empty
+WARNING:minestudio.simulator.minerl.env.malmo.instance.236c04:[16:43:49] [Render thread/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.236c04:[16:43:49] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.236c04:[16:43:49] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.236c04:[16:43:49] [Render thread/WARN]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.236c04:[16:43:49] [Render thread/WARN]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+WARNING:minestudio.simulator.minerl.env.malmo.instance.236c04:[16:44:21] [Render thread/WARN]: Failed to load texture: minecraft:optifine/ctm/default/empty.png
+ERROR:minestudio.simulator.minerl.env.malmo.instance.236c04:java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png

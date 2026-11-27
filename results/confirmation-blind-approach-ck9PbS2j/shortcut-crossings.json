@@ -1,0 +1,374 @@
+[
+  {
+    "distance": 30,
+    "seed": 1800079632,
+    "world_seed": 88230764,
+    "baseline": "scan",
+    "goal_slot": 1,
+    "steps": 818,
+    "direction": [
+      -1.0,
+      0.0
+    ],
+    "trace": "cpu/worker-015/d30-seed1800079632-scan.csv.gz",
+    "fixture": "cpu/worker-015/d30-seed1800079632.json",
+    "crossings": [
+      {
+        "depth": 22,
+        "panel_or_opening_center": -5,
+        "toward_rooms": [
+          {
+            "step": 118,
+            "lateral": 8.93
+          }
+        ]
+      },
+      {
+        "depth": 17,
+        "panel_or_opening_center": -5,
+        "toward_rooms": [
+          {
+            "step": 517,
+            "lateral": -2.89
+          }
+        ]
+      },
+      {
+        "depth": 8,
+        "panel_or_opening_center": 5,
+        "toward_rooms": [
+          {
+            "step": 635,
+            "lateral": 5.68
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "distance": 30,
+    "seed": 1800628155,
+    "world_seed": 88980295,
+    "baseline": "scan",
+    "goal_slot": 1,
+    "steps": 728,
+    "direction": [
+      0.0,
+      -1.0
+    ],
+    "trace": "cpu/worker-014/d30-seed1800628155-scan.csv.gz",
+    "fixture": "cpu/worker-014/d30-seed1800628155.json",
+    "crossings": [
+      {
+        "depth": 22,
+        "panel_or_opening_center": -5,
+        "toward_rooms": [
+          {
+            "step": 198,
+            "lateral": 7.73
+          }
+        ]
+      },
+      {
+        "depth": 17,
+        "panel_or_opening_center": -5,
+        "toward_rooms": [
+          {
+            "step": 343,
+            "lateral": -2.91
+          }
+        ]
+      },
+      {
+        "depth": 8,
+        "panel_or_opening_center": 5,
+        "toward_rooms": [
+          {
+            "step": 468,
+            "lateral": 6.19
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "distance": 30,
+    "seed": 1800735237,
+    "world_seed": 88183665,
+    "baseline": "scan",
+    "goal_slot": 1,
+    "steps": 577,
+    "direction": [
+      1.0,
+      0.0
+    ],
+    "trace": "cpu/worker-017/d30-seed1800735237-scan.csv.gz",
+    "fixture": "cpu/worker-017/d30-seed1800735237.json",
+    "crossings": [
+      {
+        "depth": 22,
+        "panel_or_opening_center": -5,
+        "toward_rooms": [
+          {
+            "step": 115,
+            "lateral": 8.26
+          }
+        ]
+      },
+      {
+        "depth": 17,
+        "panel_or_opening_center": -5,
+        "toward_rooms": [
+          {
+            "step": 247,
+            "lateral": -3.3
+          }
+        ]
+      },
+      {
+        "depth": 8,
+        "panel_or_opening_center": 5,
+        "toward_rooms": [
+          {
+            "step": 369,
+            "lateral": 3.58
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "distance": 60,
+    "seed": 1800467728,
+    "world_seed": 88341651,
+    "baseline": "find_structure",
+    "goal_slot": 1,
+    "steps": 1158,
+    "direction": [
+      1.0,
+      0.0
+    ],
+    "trace": "cpu/worker-024/d60-seed1800467728-find_structure.csv.gz",
+    "fixture": "cpu/worker-024/d60-seed1800467728.json",
+    "crossings": [
+      {
+        "depth": 22,
+        "panel_or_opening_center": 5,
+        "toward_rooms": [
+          {
+            "step": 672,
+            "lateral": 32.1
+          }
+        ]
+      },
+      {
+        "depth": 17,
+        "panel_or_opening_center": 5,
+        "toward_rooms": [
+          {
+            "step": 696,
+            "lateral": 30.9
+          }
+        ]
+      },
+      {
+        "depth": 8,
+        "panel_or_opening_center": -5,
+        "toward_rooms": [
+          {
+            "step": 1029,
+            "lateral": -2.8
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "distance": 60,
+    "seed": 1800496112,
+    "world_seed": 88984641,
+    "baseline": "find_structure",
+    "goal_slot": 0,
+    "steps": 1171,
+    "direction": [
+      0.0,
+      1.0
+    ],
+    "trace": "cpu/worker-028/d60-seed1800496112-find_structure.csv.gz",
+    "fixture": "cpu/worker-028/d60-seed1800496112.json",
+    "crossings": [
+      {
+        "depth": 22,
+        "panel_or_opening_center": 5,
+        "toward_rooms": [
+          {
+            "step": 540,
+            "lateral": -29.83
+          },
+          {
+            "step": 784,
+            "lateral": -0.85
+          }
+        ]
+      },
+      {
+        "depth": 17,
+        "panel_or_opening_center": 5,
+        "toward_rooms": [
+          {
+            "step": 818,
+            "lateral": 3.44
+          }
+        ]
+      },
+      {
+        "depth": 8,
+        "panel_or_opening_center": -5,
+        "toward_rooms": [
+          {
+            "step": 917,
+            "lateral": -4.08
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "distance": 60,
+    "seed": 1800074117,
+    "world_seed": 88141944,
+    "baseline": "scan",
+    "goal_slot": 1,
+    "steps": 1022,
+    "direction": [
+      1.0,
+      0.0
+    ],
+    "trace": "cpu/worker-010/d60-seed1800074117-scan.csv.gz",
+    "fixture": "cpu/worker-010/d60-seed1800074117.json",
+    "crossings": [
+      {
+        "depth": 22,
+        "panel_or_opening_center": -5,
+        "toward_rooms": [
+          {
+            "step": 544,
+            "lateral": 5.55
+          }
+        ]
+      },
+      {
+        "depth": 17,
+        "panel_or_opening_center": -5,
+        "toward_rooms": [
+          {
+            "step": 694,
+            "lateral": -4.39
+          }
+        ]
+      },
+      {
+        "depth": 8,
+        "panel_or_opening_center": 5,
+        "toward_rooms": [
+          {
+            "step": 821,
+            "lateral": 3.31
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "distance": 60,
+    "seed": 1800255511,
+    "world_seed": 88534079,
+    "baseline": "scan",
+    "goal_slot": 1,
+    "steps": 1003,
+    "direction": [
+      -1.0,
+      0.0
+    ],
+    "trace": "cpu/worker-021/d60-seed1800255511-scan.csv.gz",
+    "fixture": "cpu/worker-021/d60-seed1800255511.json",
+    "crossings": [
+      {
+        "depth": 22,
+        "panel_or_opening_center": -5,
+        "toward_rooms": [
+          {
+            "step": 529,
+            "lateral": 5.89
+          }
+        ]
+      },
+      {
+        "depth": 17,
+        "panel_or_opening_center": -5,
+        "toward_rooms": [
+          {
+            "step": 675,
+            "lateral": -4.51
+          }
+        ]
+      },
+      {
+        "depth": 8,
+        "panel_or_opening_center": 5,
+        "toward_rooms": [
+          {
+            "step": 803,
+            "lateral": 3.24
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "distance": 60,
+    "seed": 1800849497,
+    "world_seed": 88990938,
+    "baseline": "scan",
+    "goal_slot": 1,
+    "steps": 1178,
+    "direction": [
+      -1.0,
+      0.0
+    ],
+    "trace": "cpu/worker-014/d60-seed1800849497-scan.csv.gz",
+    "fixture": "cpu/worker-014/d60-seed1800849497.json",
+    "crossings": [
+      {
+        "depth": 22,
+        "panel_or_opening_center": -5,
+        "toward_rooms": [
+          {
+            "step": 559,
+            "lateral": 3.62
+          }
+        ]
+      },
+      {
+        "depth": 17,
+        "panel_or_opening_center": -5,
+        "toward_rooms": [
+          {
+            "step": 701,
+            "lateral": -7.05
+          }
+        ]
+      },
+      {
+        "depth": 8,
+        "panel_or_opening_center": 5,
+        "toward_rooms": [
+          {
+            "step": 921,
+            "lateral": 5.7
+          }
+        ]
+      }
+    ]
+  }
+]

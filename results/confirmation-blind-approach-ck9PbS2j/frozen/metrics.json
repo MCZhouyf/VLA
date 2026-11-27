@@ -1,0 +1,314 @@
+{
+  "passed": false,
+  "distances": {
+    "10": {
+      "teacher": {
+        "n": 30,
+        "successes": 30,
+        "rate": 1.0,
+        "wilson95": [
+          0.8864866068260312,
+          1.0
+        ],
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "turn_180": {
+        "n": 30,
+        "successes": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.11351339317396876
+        ],
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "scan": {
+        "n": 30,
+        "successes": 3,
+        "rate": 0.1,
+        "wilson95": [
+          0.03459988874733419,
+          0.25621082579184085
+        ],
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "find_structure": {
+        "n": 30,
+        "successes": 22,
+        "rate": 0.7333333333333333,
+        "wilson95": [
+          0.555520383048111,
+          0.8581733668040368
+        ],
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "reverse_route": {
+        "n": 30,
+        "successes": 15,
+        "rate": 0.5,
+        "wilson95": [
+          0.33154125640533766,
+          0.6684587435946623
+        ],
+        "deaths": 0,
+        "pose_jumps": 0,
+        "compatible_with_half": true
+      },
+      "start_pose": {
+        "n": 30,
+        "successes": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.11351339317396876
+        ],
+        "deaths": 0,
+        "pose_jumps": 0
+      }
+    },
+    "30": {
+      "teacher": {
+        "n": 30,
+        "successes": 30,
+        "rate": 1.0,
+        "wilson95": [
+          0.8864866068260312,
+          1.0
+        ],
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "turn_180": {
+        "n": 30,
+        "successes": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.11351339317396876
+        ],
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "scan": {
+        "n": 30,
+        "successes": 3,
+        "rate": 0.1,
+        "wilson95": [
+          0.03459988874733419,
+          0.25621082579184085
+        ],
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "find_structure": {
+        "n": 30,
+        "successes": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.11351339317396876
+        ],
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "reverse_route": {
+        "n": 30,
+        "successes": 15,
+        "rate": 0.5,
+        "wilson95": [
+          0.33154125640533766,
+          0.6684587435946623
+        ],
+        "deaths": 0,
+        "pose_jumps": 0,
+        "compatible_with_half": true
+      },
+      "start_pose": {
+        "n": 30,
+        "successes": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.11351339317396876
+        ],
+        "deaths": 0,
+        "pose_jumps": 0
+      }
+    },
+    "60": {
+      "teacher": {
+        "n": 30,
+        "successes": 30,
+        "rate": 1.0,
+        "wilson95": [
+          0.8864866068260312,
+          1.0
+        ],
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "turn_180": {
+        "n": 30,
+        "successes": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.11351339317396876
+        ],
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "scan": {
+        "n": 30,
+        "successes": 3,
+        "rate": 0.1,
+        "wilson95": [
+          0.03459988874733419,
+          0.25621082579184085
+        ],
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "find_structure": {
+        "n": 30,
+        "successes": 2,
+        "rate": 0.06666666666666667,
+        "wilson95": [
+          0.018477023791270378,
+          0.2132345836261692
+        ],
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "reverse_route": {
+        "n": 30,
+        "successes": 15,
+        "rate": 0.5,
+        "wilson95": [
+          0.33154125640533766,
+          0.6684587435946623
+        ],
+        "deaths": 0,
+        "pose_jumps": 0,
+        "compatible_with_half": true
+      },
+      "start_pose": {
+        "n": 30,
+        "successes": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.11351339317396876
+        ],
+        "deaths": 0,
+        "pose_jumps": 0
+      }
+    },
+    "100": {
+      "teacher": {
+        "n": 30,
+        "successes": 30,
+        "rate": 1.0,
+        "wilson95": [
+          0.8864866068260312,
+          1.0
+        ],
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "turn_180": {
+        "n": 30,
+        "successes": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.11351339317396876
+        ],
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "scan": {
+        "n": 30,
+        "successes": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.11351339317396876
+        ],
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "find_structure": {
+        "n": 30,
+        "successes": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.11351339317396876
+        ],
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "reverse_route": {
+        "n": 30,
+        "successes": 15,
+        "rate": 0.5,
+        "wilson95": [
+          0.33154125640533766,
+          0.6684587435946623
+        ],
+        "deaths": 0,
+        "pose_jumps": 0,
+        "compatible_with_half": true
+      },
+      "start_pose": {
+        "n": 30,
+        "successes": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.11351339317396876
+        ],
+        "deaths": 0,
+        "pose_jumps": 0
+      }
+    }
+  },
+  "missing": [],
+  "errors": [
+    {
+      "source": "/share/project/zhoubowen/zhy/zyf/results/phase3e-visual-swap-DB17NqMW/confirmation-blind-approach-ck9PbS2j/cpu/worker-016/acceptance.csv",
+      "distance": 10,
+      "seed": 1800175188,
+      "error": "Picked up JAVA_TOOL_OPTIONS: -Duser.home='/share/project/zhoubowen/zhy/zyf/runtime/java-home' -Djava.io.tmpdir='/share/project/zhoubowen/zhy/zyf/tmp' -XX:ActiveProcessorCount=2\nSLF4J: Failed to load class \"org.slf4j.impl.StaticLoggerBinder\".\nSLF4J: Defaulting to no-operation (NOP) logger implementation\nSLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.\n[16:23:26] [main/INFO]: [OptiFine] (Reflector) Field not found: World.tileEntitiesToBeRemoved\n[16:23:26] [main/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.eventbus.api.Event$Result\n[16:23:26] [main/INFO]: [OptiFine] (Reflector) Method not present: net.minecraftforge.common.extensions.IForgeBlockState.hasTileEntity\n[16:23:26] [main/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.extensions.IForgeEntity\n[16:23:26] [main/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.CrashReportExtender\n[16:23:26] [main/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.tags.ItemTags.createOptional\n[16:23:28] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.ForgeHooksClient\n[16:23:29] [Render thread/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'\n[16:23:30] [Render thread/INFO]: Setting user: Player174\n[16:23:30] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.settings.KeyConflictContext\n[16:23:30] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.settings.KeyModifier\n[16:23:30] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraft.launchwrapper.Launch\n[16:23:30] [Render thread/INFO]: Backend library: LWJGL version 3.2.2 SNAPSHOT\nAuthorization required, but no authorization protocol specified\n[16:23:30] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: optifine.OptiFineResourceLocator\n---- Minecraft Crash Report ----\n// I'm sorry, Dave.\n\nTime: 11/27/26 4:23 PM\nDescription: Initializing game\n\njava.lang.IllegalStateException: Failed to initialize GLFW, errors: GLFW error during init: [0x10008]139909513801312\n\tat com.mojang.blaze3d.platform.GLX._initGlfw(GLX.java:85)\n\tat com.mojang.blaze3d.systems.RenderSystem.initBackendSystem(RenderSystem.java:586)\n\tat net.minecraft.client.Minecraft.<init>(Minecraft.java:415)\n\tat net.minecraft.client.main.Main.main(Main.java:157)\n\n\nA detailed walkthrough of the error, its code path and all known details is as follows:\n---------------------------------------------------------------------------------------\n\n-- Head --\nThread: Render thread\nStacktrace:\n\tat com.mojang.blaze3d.platform.GLX._initGlfw(GLX.java:85)\n\tat com.mojang.blaze3d.systems.RenderSystem.initBackendSystem(RenderSystem.java:586)\n\tat net.minecraft.client.Minecraft.<init>(Minecraft.java:415)\n\n-- Initialization --\nDetails:\nStacktrace:\n\tat net.minecraft.client.main.Main.main(Main.java:157)\n\n-- System Details --\nDetails:\n\tMinecraft Version: 1.16.5\n\tMinecraft Version ID: 1.16.5\n\tOperating System: Linux (amd64) version 5.15.0-1053-nvidia\n\tJava Version: 1.8.0_514, Azul Systems, Inc.\n\tJava VM Version: OpenJDK 64-Bit Server VM (mixed mode), Azul Systems, Inc.\n\tMemory: 992614160 bytes (946 MB) / 1630011392 bytes (1554 MB) up to 1908932608 bytes (1820 MB)\n\tCPUs: 2\n\tJVM Flags: 2 total; -XX:ActiveProcessorCount=2 -Xmx2G\n\tLaunched Version: ~~NULL~~\n\tBackend library: LWJGL version 3.2.2 SNAPSHOT\n\tBackend API: NO CONTEXT\n\tGL Caps: \n\tUsing VBOs: Yes\n\tIs Modded: Very likely; Jar signature invalidated\n\tType: Client (map_client.txt)\n\tCPU: <unknown>\n\tOptiFine Version: OptiFine_1.16.5_HD_U_G8\n\tOptiFine Build: ~~NULL~~\n\tRender Distance Chunks: 4\n\tMipmaps: 4\n\tAnisotropic Filtering: 1\n\tAntialiasing: 0\n\tMultitexture: false\n\tShaders: null\n\tOpenGlVersion: null\n\tOpenGlRenderer: null\n\tOpenGlVendor: null\n\tCpuCount: 2\n#@!@# Game crashed! Crash report saved to: #@!@# /share/project/zhoubowen/zhy/zyf/results/phase3e-visual-swap-DB17NqMW/confirmation-blind-approach-ck9PbS2j/cpu/worker-016/minestudio/tmp/stark_tech_instances/565f12ec-4c6e-4952-83f5-619c6048ccc3/./crash-reports/crash-2026-11-27_16.23.30-client.txt\n\n\nMinecraft process finished unexpectedly. There was an error with Malmo."
+    },
+    {
+      "source": "/share/project/zhoubowen/zhy/zyf/results/phase3e-visual-swap-DB17NqMW/confirmation-blind-approach-ck9PbS2j/cpu/worker-018/acceptance.csv",
+      "distance": 30,
+      "seed": 1800369040,
+      "error": "T1 /execute if block validation failed for [(-3724, 77, -4788, 'grass_block'), (-3724, 77, -4678, 'grass_block'), (-3724, 77, -4568, 'grass_block')]"
+    },
+    {
+      "source": "/share/project/zhoubowen/zhy/zyf/results/phase3e-visual-swap-DB17NqMW/confirmation-blind-approach-ck9PbS2j/cpu/worker-019/acceptance.csv",
+      "distance": 10,
+      "seed": 1800100591,
+      "error": "Picked up JAVA_TOOL_OPTIONS: -Duser.home='/share/project/zhoubowen/zhy/zyf/runtime/java-home' -Djava.io.tmpdir='/share/project/zhoubowen/zhy/zyf/tmp' -XX:ActiveProcessorCount=2\nSLF4J: Failed to load class \"org.slf4j.impl.StaticLoggerBinder\".\nSLF4J: Defaulting to no-operation (NOP) logger implementation\nSLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.\n[16:23:18] [main/INFO]: [OptiFine] (Reflector) Field not found: World.tileEntitiesToBeRemoved\n[16:23:18] [main/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.eventbus.api.Event$Result\n[16:23:18] [main/INFO]: [OptiFine] (Reflector) Method not present: net.minecraftforge.common.extensions.IForgeBlockState.hasTileEntity\n[16:23:18] [main/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.extensions.IForgeEntity\n[16:23:18] [main/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.CrashReportExtender\n[16:23:18] [main/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.tags.ItemTags.createOptional\n[16:23:20] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.ForgeHooksClient\n[16:23:20] [Render thread/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'\n[16:23:21] [Render thread/INFO]: Setting user: Player753\n[16:23:21] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.settings.KeyConflictContext\n[16:23:21] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.settings.KeyModifier\n[16:23:21] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraft.launchwrapper.Launch\n[16:23:21] [Render thread/INFO]: Backend library: LWJGL version 3.2.2 SNAPSHOT\nAuthorization required, but no authorization protocol specified\n[16:23:22] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: optifine.OptiFineResourceLocator\n---- Minecraft Crash Report ----\n// I let you down. Sorry :(\n\nTime: 11/27/26 4:23 PM\nDescription: Initializing game\n\njava.lang.IllegalStateException: Failed to initialize GLFW, errors: GLFW error during init: [0x10008]140638963826272\n\tat com.mojang.blaze3d.platform.GLX._initGlfw(GLX.java:85)\n\tat com.mojang.blaze3d.systems.RenderSystem.initBackendSystem(RenderSystem.java:586)\n\tat net.minecraft.client.Minecraft.<init>(Minecraft.java:415)\n\tat net.minecraft.client.main.Main.main(Main.java:157)\n\n\nA detailed walkthrough of the error, its code path and all known details is as follows:\n---------------------------------------------------------------------------------------\n\n-- Head --\nThread: Render thread\nStacktrace:\n\tat com.mojang.blaze3d.platform.GLX._initGlfw(GLX.java:85)\n\tat com.mojang.blaze3d.systems.RenderSystem.initBackendSystem(RenderSystem.java:586)\n\tat net.minecraft.client.Minecraft.<init>(Minecraft.java:415)\n\n-- Initialization --\nDetails:\nStacktrace:\n\tat net.minecraft.client.main.Main.main(Main.java:157)\n\n-- System Details --\nDetails:\n\tMinecraft Version: 1.16.5\n\tMinecraft Version ID: 1.16.5\n\tOperating System: Linux (amd64) version 5.15.0-1053-nvidia\n\tJava Version: 1.8.0_514, Azul Systems, Inc.\n\tJava VM Version: OpenJDK 64-Bit Server VM (mixed mode), Azul Systems, Inc.\n\tMemory: 1471059816 bytes (1402 MB) / 1630011392 bytes (1554 MB) up to 1908932608 bytes (1820 MB)\n\tCPUs: 2\n\tJVM Flags: 2 total; -XX:ActiveProcessorCount=2 -Xmx2G\n\tLaunched Version: ~~NULL~~\n\tBackend library: LWJGL version 3.2.2 SNAPSHOT\n\tBackend API: NO CONTEXT\n\tGL Caps: \n\tUsing VBOs: Yes\n\tIs Modded: Very likely; Jar signature invalidated\n\tType: Client (map_client.txt)\n\tCPU: <unknown>\n\tOptiFine Version: OptiFine_1.16.5_HD_U_G8\n\tOptiFine Build: ~~NULL~~\n\tRender Distance Chunks: 4\n\tMipmaps: 4\n\tAnisotropic Filtering: 1\n\tAntialiasing: 0\n\tMultitexture: false\n\tShaders: null\n\tOpenGlVersion: null\n\tOpenGlRenderer: null\n\tOpenGlVendor: null\n\tCpuCount: 2\n#@!@# Game crashed! Crash report saved to: #@!@# /share/project/zhoubowen/zhy/zyf/results/phase3e-visual-swap-DB17NqMW/confirmation-blind-approach-ck9PbS2j/cpu/worker-019/minestudio/tmp/stark_tech_instances/e611b9b3-76c5-4122-a634-0e0fcf57baa4/./crash-reports/crash-2026-11-27_16.23.22-client.txt\n\n\nMinecraft process finished unexpectedly. There was an error with Malmo."
+    },
+    {
+      "source": "/share/project/zhoubowen/zhy/zyf/results/phase3e-visual-swap-DB17NqMW/confirmation-blind-approach-ck9PbS2j/cpu/worker-025/acceptance.csv",
+      "distance": 10,
+      "seed": 1800680572,
+      "error": "Picked up JAVA_TOOL_OPTIONS: -Duser.home='/share/project/zhoubowen/zhy/zyf/runtime/java-home' -Djava.io.tmpdir='/share/project/zhoubowen/zhy/zyf/tmp' -XX:ActiveProcessorCount=2\nSLF4J: Failed to load class \"org.slf4j.impl.StaticLoggerBinder\".\nSLF4J: Defaulting to no-operation (NOP) logger implementation\nSLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.\n[16:23:17] [main/INFO]: [OptiFine] (Reflector) Field not found: World.tileEntitiesToBeRemoved\n[16:23:17] [main/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.eventbus.api.Event$Result\n[16:23:17] [main/INFO]: [OptiFine] (Reflector) Method not present: net.minecraftforge.common.extensions.IForgeBlockState.hasTileEntity\n[16:23:17] [main/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.extensions.IForgeEntity\n[16:23:17] [main/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.CrashReportExtender\n[16:23:18] [main/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.tags.ItemTags.createOptional\n[16:23:20] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.ForgeHooksClient\n[16:23:20] [Render thread/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'\n[16:23:22] [Render thread/INFO]: Setting user: Player411\n[16:23:22] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.settings.KeyConflictContext\n[16:23:22] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.settings.KeyModifier\n[16:23:22] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraft.launchwrapper.Launch\n[16:23:22] [Render thread/INFO]: Backend library: LWJGL version 3.2.2 SNAPSHOT\nAuthorization required, but no authorization protocol specified\n[16:23:23] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: optifine.OptiFineResourceLocator\n---- Minecraft Crash Report ----\n// Why did you do that?\n\nTime: 11/27/26 4:23 PM\nDescription: Initializing game\n\njava.lang.IllegalStateException: Failed to initialize GLFW, errors: GLFW error during init: [0x10008]139872703577696\n\tat com.mojang.blaze3d.platform.GLX._initGlfw(GLX.java:85)\n\tat com.mojang.blaze3d.systems.RenderSystem.initBackendSystem(RenderSystem.java:586)\n\tat net.minecraft.client.Minecraft.<init>(Minecraft.java:415)\n\tat net.minecraft.client.main.Main.main(Main.java:157)\n\n\nA detailed walkthrough of the error, its code path and all known details is as follows:\n---------------------------------------------------------------------------------------\n\n-- Head --\nThread: Render thread\nStacktrace:\n\tat com.mojang.blaze3d.platform.GLX._initGlfw(GLX.java:85)\n\tat com.mojang.blaze3d.systems.RenderSystem.initBackendSystem(RenderSystem.java:586)\n\tat net.minecraft.client.Minecraft.<init>(Minecraft.java:415)\n\n-- Initialization --\nDetails:\nStacktrace:\n\tat net.minecraft.client.main.Main.main(Main.java:157)\n\n-- System Details --\nDetails:\n\tMinecraft Version: 1.16.5\n\tMinecraft Version ID: 1.16.5\n\tOperating System: Linux (amd64) version 5.15.0-1053-nvidia\n\tJava Version: 1.8.0_514, Azul Systems, Inc.\n\tJava VM Version: OpenJDK 64-Bit Server VM (mixed mode), Azul Systems, Inc.\n\tMemory: 971514784 bytes (926 MB) / 1600126976 bytes (1526 MB) up to 1908932608 bytes (1820 MB)\n\tCPUs: 2\n\tJVM Flags: 2 total; -XX:ActiveProcessorCount=2 -Xmx2G\n\tLaunched Version: ~~NULL~~\n\tBackend library: LWJGL version 3.2.2 SNAPSHOT\n\tBackend API: NO CONTEXT\n\tGL Caps: \n\tUsing VBOs: Yes\n\tIs Modded: Very likely; Jar signature invalidated\n\tType: Client (map_client.txt)\n\tCPU: <unknown>\n\tOptiFine Version: OptiFine_1.16.5_HD_U_G8\n\tOptiFine Build: ~~NULL~~\n\tRender Distance Chunks: 4\n\tMipmaps: 4\n\tAnisotropic Filtering: 1\n\tAntialiasing: 0\n\tMultitexture: false\n\tShaders: null\n\tOpenGlVersion: null\n\tOpenGlRenderer: null\n\tOpenGlVendor: null\n\tCpuCount: 2\n#@!@# Game crashed! Crash report saved to: #@!@# /share/project/zhoubowen/zhy/zyf/results/phase3e-visual-swap-DB17NqMW/confirmation-blind-approach-ck9PbS2j/cpu/worker-025/minestudio/tmp/stark_tech_instances/0a0254a3-921f-4bc1-a844-a5b03959d205/./crash-reports/crash-2026-11-27_16.23.23-client.txt\n\n\nMinecraft process finished unexpectedly. There was an error with Malmo."
+    },
+    {
+      "source": "/share/project/zhoubowen/zhy/zyf/results/phase3e-visual-swap-DB17NqMW/confirmation-blind-approach-ck9PbS2j/cpu/worker-030/acceptance.csv",
+      "distance": 30,
+      "seed": 1800859905,
+      "error": "Picked up JAVA_TOOL_OPTIONS: -Duser.home='/share/project/zhoubowen/zhy/zyf/runtime/java-home' -Djava.io.tmpdir='/share/project/zhoubowen/zhy/zyf/tmp' -XX:ActiveProcessorCount=2\nSLF4J: Failed to load class \"org.slf4j.impl.StaticLoggerBinder\".\nSLF4J: Defaulting to no-operation (NOP) logger implementation\nSLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.\n[16:23:17] [main/INFO]: [OptiFine] (Reflector) Field not found: World.tileEntitiesToBeRemoved\n[16:23:17] [main/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.eventbus.api.Event$Result\n[16:23:17] [main/INFO]: [OptiFine] (Reflector) Method not present: net.minecraftforge.common.extensions.IForgeBlockState.hasTileEntity\n[16:23:17] [main/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.extensions.IForgeEntity\n[16:23:17] [main/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.CrashReportExtender\n[16:23:17] [main/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.tags.ItemTags.createOptional\n[16:23:19] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.ForgeHooksClient\n[16:23:19] [Render thread/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'\n[16:23:20] [Render thread/INFO]: Setting user: Player846\n[16:23:20] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.settings.KeyConflictContext\n[16:23:20] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.settings.KeyModifier\n[16:23:20] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraft.launchwrapper.Launch\n[16:23:20] [Render thread/INFO]: Backend library: LWJGL version 3.2.2 SNAPSHOT\nAuthorization required, but no authorization protocol specified\n[16:23:21] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: optifine.OptiFineResourceLocator\n---- Minecraft Crash Report ----\n// Quite honestly, I wouldn't worry myself about that.\n\nTime: 11/27/26 4:23 PM\nDescription: Initializing game\n\njava.lang.IllegalStateException: Failed to initialize GLFW, errors: GLFW error during init: [0x10008]140587171659360\n\tat com.mojang.blaze3d.platform.GLX._initGlfw(GLX.java:85)\n\tat com.mojang.blaze3d.systems.RenderSystem.initBackendSystem(RenderSystem.java:586)\n\tat net.minecraft.client.Minecraft.<init>(Minecraft.java:415)\n\tat net.minecraft.client.main.Main.main(Main.java:157)\n\n\nA detailed walkthrough of the error, its code path and all known details is as follows:\n---------------------------------------------------------------------------------------\n\n-- Head --\nThread: Render thread\nStacktrace:\n\tat com.mojang.blaze3d.platform.GLX._initGlfw(GLX.java:85)\n\tat com.mojang.blaze3d.systems.RenderSystem.initBackendSystem(RenderSystem.java:586)\n\tat net.minecraft.client.Minecraft.<init>(Minecraft.java:415)\n\n-- Initialization --\nDetails:\nStacktrace:\n\tat net.minecraft.client.main.Main.main(Main.java:157)\n\n-- System Details --\nDetails:\n\tMinecraft Version: 1.16.5\n\tMinecraft Version ID: 1.16.5\n\tOperating System: Linux (amd64) version 5.15.0-1053-nvidia\n\tJava Version: 1.8.0_514, Azul Systems, Inc.\n\tJava VM Version: OpenJDK 64-Bit Server VM (mixed mode), Azul Systems, Inc.\n\tMemory: 1107882080 bytes (1056 MB) / 1616904192 bytes (1542 MB) up to 1908932608 bytes (1820 MB)\n\tCPUs: 2\n\tJVM Flags: 2 total; -XX:ActiveProcessorCount=2 -Xmx2G\n\tLaunched Version: ~~NULL~~\n\tBackend library: LWJGL version 3.2.2 SNAPSHOT\n\tBackend API: NO CONTEXT\n\tGL Caps: \n\tUsing VBOs: Yes\n\tIs Modded: Very likely; Jar signature invalidated\n\tType: Client (map_client.txt)\n\tCPU: <unknown>\n\tOptiFine Version: OptiFine_1.16.5_HD_U_G8\n\tOptiFine Build: ~~NULL~~\n\tRender Distance Chunks: 4\n\tMipmaps: 4\n\tAnisotropic Filtering: 1\n\tAntialiasing: 0\n\tMultitexture: false\n\tShaders: null\n\tOpenGlVersion: null\n\tOpenGlRenderer: null\n\tOpenGlVendor: null\n\tCpuCount: 2\n#@!@# Game crashed! Crash report saved to: #@!@# /share/project/zhoubowen/zhy/zyf/results/phase3e-visual-swap-DB17NqMW/confirmation-blind-approach-ck9PbS2j/cpu/worker-030/minestudio/tmp/stark_tech_instances/c05790bb-03fe-4646-91b4-31e410b97ecd/./crash-reports/crash-2026-11-27_16.23.21-client.txt\n\n\nMinecraft process finished unexpectedly. There was an error with Malmo."
+    }
+  ]
+}
