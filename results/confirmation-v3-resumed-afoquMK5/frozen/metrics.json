@@ -1,0 +1,296 @@
+{
+  "passed": false,
+  "distances": {
+    "10": {
+      "teacher": {
+        "n": 30,
+        "successes": 30,
+        "rate": 1.0,
+        "wilson95": [
+          0.8864866068260312,
+          1.0
+        ],
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "turn_180": {
+        "n": 30,
+        "successes": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.11351339317396876
+        ],
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "scan": {
+        "n": 30,
+        "successes": 6,
+        "rate": 0.2,
+        "wilson95": [
+          0.0950510717728987,
+          0.3730569641314825
+        ],
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "find_structure": {
+        "n": 30,
+        "successes": 21,
+        "rate": 0.7,
+        "wilson95": [
+          0.5212421254128504,
+          0.8333525173175619
+        ],
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "reverse_route": {
+        "n": 30,
+        "successes": 15,
+        "rate": 0.5,
+        "wilson95": [
+          0.33154125640533766,
+          0.6684587435946623
+        ],
+        "deaths": 0,
+        "pose_jumps": 0,
+        "compatible_with_half": true
+      },
+      "start_pose": {
+        "n": 30,
+        "successes": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.11351339317396876
+        ],
+        "deaths": 0,
+        "pose_jumps": 0
+      }
+    },
+    "30": {
+      "teacher": {
+        "n": 30,
+        "successes": 30,
+        "rate": 1.0,
+        "wilson95": [
+          0.8864866068260312,
+          1.0
+        ],
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "turn_180": {
+        "n": 30,
+        "successes": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.11351339317396876
+        ],
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "scan": {
+        "n": 30,
+        "successes": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.11351339317396876
+        ],
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "find_structure": {
+        "n": 30,
+        "successes": 7,
+        "rate": 0.23333333333333334,
+        "wilson95": [
+          0.11792388144489496,
+          0.40928326158122164
+        ],
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "reverse_route": {
+        "n": 30,
+        "successes": 15,
+        "rate": 0.5,
+        "wilson95": [
+          0.33154125640533766,
+          0.6684587435946623
+        ],
+        "deaths": 0,
+        "pose_jumps": 0,
+        "compatible_with_half": true
+      },
+      "start_pose": {
+        "n": 30,
+        "successes": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.11351339317396876
+        ],
+        "deaths": 0,
+        "pose_jumps": 0
+      }
+    },
+    "60": {
+      "teacher": {
+        "n": 30,
+        "successes": 30,
+        "rate": 1.0,
+        "wilson95": [
+          0.8864866068260312,
+          1.0
+        ],
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "turn_180": {
+        "n": 30,
+        "successes": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.11351339317396876
+        ],
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "scan": {
+        "n": 30,
+        "successes": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.11351339317396876
+        ],
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "find_structure": {
+        "n": 30,
+        "successes": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.11351339317396876
+        ],
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "reverse_route": {
+        "n": 30,
+        "successes": 15,
+        "rate": 0.5,
+        "wilson95": [
+          0.33154125640533766,
+          0.6684587435946623
+        ],
+        "deaths": 0,
+        "pose_jumps": 0,
+        "compatible_with_half": true
+      },
+      "start_pose": {
+        "n": 30,
+        "successes": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.11351339317396876
+        ],
+        "deaths": 0,
+        "pose_jumps": 0
+      }
+    },
+    "100": {
+      "teacher": {
+        "n": 30,
+        "successes": 30,
+        "rate": 1.0,
+        "wilson95": [
+          0.8864866068260312,
+          1.0
+        ],
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "turn_180": {
+        "n": 30,
+        "successes": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.11351339317396876
+        ],
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "scan": {
+        "n": 30,
+        "successes": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.11351339317396876
+        ],
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "find_structure": {
+        "n": 30,
+        "successes": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.11351339317396876
+        ],
+        "deaths": 0,
+        "pose_jumps": 0
+      },
+      "reverse_route": {
+        "n": 30,
+        "successes": 15,
+        "rate": 0.5,
+        "wilson95": [
+          0.33154125640533766,
+          0.6684587435946623
+        ],
+        "deaths": 0,
+        "pose_jumps": 0,
+        "compatible_with_half": true
+      },
+      "start_pose": {
+        "n": 30,
+        "successes": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.11351339317396876
+        ],
+        "deaths": 0,
+        "pose_jumps": 0
+      }
+    }
+  },
+  "missing": [],
+  "errors": [
+    {
+      "source": "/share/project/zhoubowen/zhy/zyf/results/phase3e-visual-swap-DB17NqMW/confirmation-ed550b0-iZY2YtxL/cpu/worker-031/acceptance.csv",
+      "distance": 60,
+      "seed": 1800516419,
+      "error": "T1 /execute if block validation failed for [(-4446, 83, 1228, 'air'), (-4446, 83, 1338, 'air'), (-4446, 83, 1448, 'air')]"
+    },
+    {
+      "source": "/share/project/zhoubowen/zhy/zyf/results/phase3e-visual-swap-DB17NqMW/confirmation-ed550b0-iZY2YtxL/cpu-retry/worker-031/acceptance.csv",
+      "distance": 60,
+      "seed": 1800516419,
+      "error": "T1 /execute if block validation failed for [(-4446, 83, 1228, 'air'), (-4446, 83, 1338, 'air'), (-4446, 83, 1448, 'air')]"
+    }
+  ]
+}

@@ -8,7 +8,7 @@ import json
 import math
 import os
 import subprocess
-from collections import Counter
+from collections import Counter, defaultdict
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from tempfile import TemporaryDirectory
@@ -19,6 +19,8 @@ from phase1_metrics import wilson
 
 ARMS = ("visual", "shuffle_visual")
 DISTANCES = (30, 10, 60, 100)
+SCRIPT_BASELINES = ("turn_180", "scan", "find_structure", "start_pose")
+GRAVEL_WORLD = 88407245
 
 
 def save(path, data):
@@ -34,7 +36,7 @@ def verify(run):
         subprocess.run(["sha256sum","--check","--quiet",manifest],cwd=directory,check=True)
 
 
-def run_job(run, group, gpu, seeds, common, distance=None, *, repaired_scene=False):
+def run_job(run, group, gpu, seeds, common, distance=None, *, repaired_scene=False, ground_repair=False):
     frozen=run/"frozen-source/code/minemem/t1_exec.sh"
     target=run/"eval"/group
     target.mkdir(parents=True)
@@ -47,11 +49,13 @@ def run_job(run, group, gpu, seeds, common, distance=None, *, repaired_scene=Fal
             harness=["bash",str(run/"harness/t1_phase3e_confirmation_gpu.sh"),str(run),str(gpu),str(folder)]
             if repaired_scene:
                 harness.append("--repaired-scene")
+            if ground_repair:
+                harness.extend(("--ground-repair-world",str(GRAVEL_WORLD)))
             if distance is not None:
-                command=([*harness,"--mode","a"] if repaired_scene else
+                command=([*harness,"--mode","a"] if repaired_scene or ground_repair else
                          ["bash",str(frozen),"waypoint-predictions",str(gpu),str(folder)])
                 command.extend([*common,"--grid-plan",group.rsplit("/",1)[-1],"--distances",str(distance),
-                                "--metrics",str(run/"frozen/metrics.json"),"--tracking-repair","--variant","spatial"])
+                                "--tracking-repair","--variant","spatial"])
             else:
                 command=[*harness,*common,"--mode",group.split("/")[-1].split("-")[0]]
             command+=["--seeds",*map(str,pending)]
@@ -168,39 +172,117 @@ def twin_summary(rows, plan):
                 flips=sum(r["arms"][arm]["flip"] for r in pairs)) for arm in ARMS})
 
 
+def evaluation_inputs(run, protocol_update):
+    verify(run)
+    plan=json.loads((run/"seed-plan.json").read_text())
+    metrics_path=run/"frozen/metrics.json"
+    metrics=json.loads(metrics_path.read_text())
+    if not protocol_update:
+        if not metrics["passed"]:
+            raise RuntimeError("The frozen CPU acceptance gate rejected these predeclared scenes")
+        return plan,metrics_path
+    cases=plan["cases"]
+    if (metrics["missing"] or len(cases)!=120 or len({row["seed"] for row in cases})!=120
+            or any(group["n"]!=30 for table in metrics["distances"].values() for group in table.values())
+            or any(metrics["distances"][str(d)]["teacher"]["rate"]<.95 for d in DISTANCES)):
+        raise ValueError("The confirmation requires complete CPU coverage and validated teacher routes")
+    eligibility=run/"gpu-eligibility.json"
+    save(eligibility,dict(passed=True,protocol="2026-11-27_confirmation_update",
+                          legacy_cpu_passed=metrics["passed"],script_scores_used_for="comparison",
+                          cpu_metrics_sha256=hashlib.sha256(metrics_path.read_bytes()).hexdigest()))
+    return plan,eligibility
+
+
+def paired_difference(visual, baseline):
+    """Percentile bootstrap over whole seed pairs, enumerated exactly."""
+    if not visual or set(visual)!=set(baseline):
+        raise ValueError("The comparison must contain the same seed pairs")
+    deltas=[int(value)-int(baseline[seed]) for seed,value in visual.items()]
+    counts=Counter(deltas)
+    n=len(deltas)
+    positive,negative,unchanged=(counts[value]/n for value in (1,-1,0))
+    probabilities=defaultdict(float)
+    for wins in range(n+1):
+        for losses in range(n-wins+1):
+            ties=n-wins-losses
+            probabilities[wins-losses]+=(math.comb(n,wins)*math.comb(n-wins,losses)
+                                        *positive**wins*negative**losses*unchanged**ties)
+    cumulative=0.
+    quantiles=[]
+    for delta,probability in sorted(probabilities.items()):
+        cumulative+=probability
+        while len(quantiles)<2 and cumulative>=(.025,.975)[len(quantiles)]:
+            quantiles.append(delta/n)
+    return dict(gap=sum(deltas), n=n, visual_only=counts[1], baseline_only=counts[-1],
+                ties=counts[0], bootstrap95=quantiles, method="paired_percentile_bootstrap_exact_enumeration")
+
+
+def main_decision(run, groups, visual_rows):
+    with (run/"frozen/acceptance.csv").open(newline="") as stream:
+        scripts={name:{} for name in SCRIPT_BASELINES}
+        for row in csv.DictReader(stream):
+            if row["distance"]=="30" and row["baseline"] in scripts:
+                scripts[row["baseline"]][int(row["seed"])]=row["success"]=="True"
+    best=max(scripts,key=lambda name: sum(scripts[name].values()))
+    if best!="find_structure" or sum(scripts[best].values())!=7:
+        raise ValueError("The preregistered comparison requires the original finding-structure results")
+    visual={int(row["seed"]):row["success"]=="True" for row in visual_rows}
+    gap=paired_difference(visual,scripts[best])
+    wins=groups["visual"]["successes"]
+    advantage=wins-groups["shuffle_visual"]["successes"]
+    return dict(visual_successes=wins,visual_minus_shuffled=advantage,
+                best_script=best,best_script_successes=7,visual_minus_best_script=gap,
+                passed=wins>=23 and advantage>=6 and gap["gap"]>=6)
+
+
+def evaluate_distance(workers, run, seeds, standard, distance, repaired_scene, ground_repair):
+    jobs={arm:workers.submit(run_job,run,f"A/{distance}/{arm}",gpu,seeds,standard,distance,
+                             repaired_scene=repaired_scene,ground_repair=ground_repair)
+          for arm,gpu in zip(ARMS,(6,7),strict=True)}
+    groups={}
+    outcomes={}
+    for arm,future in jobs.items():
+        rows=future.result()
+        outcomes[arm]=rows
+        actions,footprint=trace_stats(rows,distance)
+        groups[arm]=dict(score(rows),actions=actions)
+        if footprint:
+            groups[arm]["footprint"]=footprint
+    return groups,outcomes
+
+
 def run_suite(args):
     run=args.run
-    plan=json.loads((run/"seed-plan.json").read_text())
+    protocol_update=args.generalization is not None
+    plan,metrics_path=evaluation_inputs(run,protocol_update)
     repaired_scene="scene_revision" in plan
-    if not json.loads((run/"frozen/metrics.json").read_text())["passed"]:
-        raise RuntimeError("The frozen CPU acceptance gate rejected these predeclared scenes")
-    verify(run)
+    if protocol_update and repaired_scene:
+        raise ValueError("The main confirmation uses the original v3 scene")
     by_distance={d:[row["seed"] for row in plan["cases"] if row["distance"]==d] for d in DISTANCES}
     weights=args.offline/"room-head.pt"
     offline=args.offline/"offline_gate.json"
     gate=json.loads(offline.read_text())
     if not gate["passed"] or hashlib.sha256(weights.read_bytes()).hexdigest()!=gate["weights_sha256"]:
         raise ValueError("Confirmation room weights do not match the frozen offline record")
-    shared=["--training-run",str(args.controller),"--room-weights",str(weights),
-            "--fixtures",str(run/"frozen/fixtures.json"),"--batch","3"]
-    standard=[*shared,"--oracle-gate",str(args.oracle_gate),"--offline-gate",str(offline)]
+    common=["--training-run",str(args.controller),"--room-weights",str(weights),"--batch","3"]
+    shared=[*common,"--fixtures",str(run/"frozen/fixtures.json")]
+    standard=[*shared,"--oracle-gate",str(args.oracle_gate),"--offline-gate",str(offline),
+              "--metrics",str(metrics_path)]
     result={}
     with ThreadPoolExecutor(max_workers=2) as workers:
         for distance in DISTANCES:
             (run/"gpu.progress").write_text(f"A-{distance}\n")
-            jobs={arm:workers.submit(run_job,run,f"A/{distance}/{arm}",gpu,by_distance[distance],standard,distance,
-                                     repaired_scene=repaired_scene)
-                  for arm,gpu in zip(ARMS,(6,7),strict=True)}
-            groups={}
-            for arm,future in jobs.items():
-                rows=future.result()
-                actions,footprint=trace_stats(rows,distance)
-                groups[arm]=dict(score(rows),actions=actions)
-                if footprint:
-                    groups[arm]["footprint"]=footprint
+            groups,outcomes=evaluate_distance(workers,run,by_distance[distance],standard,distance,repaired_scene,
+                                              protocol_update and distance==60)
             visual=groups["visual"]["successes"]
             advantage=visual-groups["shuffle_visual"]["successes"]
-            result[distance]=dict(groups=groups,advantage=advantage,passed=visual>=23 and advantage>=6)
+            result[distance]=dict(groups=groups,advantage=advantage)
+            if not protocol_update:
+                result[distance]["passed"]=visual>=23 and advantage>=6
+            elif distance==30:
+                decision=main_decision(run,groups,outcomes["visual"])
+                save(run/"main-decision.json",decision)
+                result[distance]["passed"]=decision["passed"]
             save(run/f"A-{distance}.json",result[distance])
             verify(run)
 
@@ -220,10 +302,23 @@ def run_suite(args):
         jobs=[workers.submit(run_job,run,f"C/twin-{gpu}",gpu,pairs[index::2],shared,repaired_scene=repaired_scene)
               for index,gpu in enumerate((6,7))]
         twins=twin_summary([r for job in jobs for r in job.result()],plan)
+        extra=None
+        if protocol_update:
+            (run/"gpu.progress").write_text("generalization-30\n")
+            extra_run=args.generalization
+            extra_plan,extra_gate=evaluation_inputs(extra_run,True)
+            if extra_plan.get("scene_revision")!="staggered_screens_with_blind_approach":
+                raise ValueError("Expected the existing second repaired scene and cohort")
+            seeds=[row["seed"] for row in extra_plan["cases"] if row["distance"]==30]
+            extra_options=[*common,"--fixtures",str(extra_run/"frozen/fixtures.json"),"--oracle-gate",
+                           str(args.oracle_gate),"--offline-gate",str(offline),"--metrics",str(extra_gate)]
+            extra,_=evaluate_distance(workers,extra_run,seeds,extra_options,30,True,False)
+            save(extra_run/"A-30.json",extra)
+            verify(extra_run)
     verify(run)
     save(run/"confirmation-decision.json",dict(frozen_commit=plan["frozen_commit"],
          scene_revision=plan.get("scene_revision","original"),A=result,B=ablations,C=twins,
-         main_passed=result[30]["passed"]))
+         main_passed=result[30]["passed"],generalization_30=extra))
     (run/"gpu.progress").write_text("complete\n")
 
 
@@ -231,4 +326,5 @@ if __name__ == "__main__":
     parser=argparse.ArgumentParser(description=__doc__)
     for name in ("run","controller","offline","oracle-gate"):
         parser.add_argument(f"--{name}",type=Path,required=True)
+    parser.add_argument("--generalization",type=Path)
     run_suite(parser.parse_args())

@@ -198,16 +198,25 @@ def main():
     entry=argparse.ArgumentParser(add_help=False)
     entry.add_argument("--mode",choices=(*MODES,"a"),required=True)
     entry.add_argument("--repaired-scene",action="store_true")
+    entry.add_argument("--ground-repair-world",type=int)
     if "--help" not in sys.argv[1:]:
         options,rest=entry.parse_known_args()
         if options.mode=="a":
-            if not options.repaired_scene:
-                entry.error("Use the frozen evaluator directly for the original scene")
             import t1_phase3e_predicted_rollout as evaluator
             from t1_phase3e_predicted_eval import parse_args
-            from t1_phase3e_repaired_scene import RepairedScene
+            from t1_phase3e_repaired_scene import GroundRepairedArena, RepairedScene
 
-            evaluator.FirstArrivalArena=RepairedScene
+            if options.repaired_scene and options.ground_repair_world is not None:
+                entry.error("Choose the original layout with a ground repair, or the revised layout")
+            if options.repaired_scene:
+                evaluator.FirstArrivalArena=RepairedScene
+            if options.ground_repair_world is not None:
+                def arena_for_world(world_seed, effects):
+                    arena_type=(GroundRepairedArena if world_seed==options.ground_repair_world
+                                else FirstArrivalArena)
+                    return arena_type(world_seed,effects)
+
+                evaluator.FirstArrivalArena=arena_for_world
             evaluator.run(parse_args(rest))
             return
     parser=argparse.ArgumentParser(description=__doc__)

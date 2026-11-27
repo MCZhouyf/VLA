@@ -20,7 +20,9 @@ def matches_block(arena, block):
     return True
 
 
-class RepairedScene(FirstArrivalArena):
+class GroundRepairedArena(FirstArrivalArena):
+    """Use the original v3 layout with local clearance of failed air samples."""
+
     def prepare_ground(self):
         self.ground_repairs=[]
         self.checking_ground=True
@@ -55,14 +57,20 @@ class RepairedScene(FirstArrivalArena):
 
     def layout(self, seed, distance):
         layout=super().layout(seed,distance)
+        layout.update(ground_force_loaded=True,ground_repairs=self.ground_repairs)
+        return layout
+
+
+class RepairedScene(GroundRepairedArena):
+    def layout(self, seed, distance):
+        layout=super().layout(seed,distance)
         gates=[]
         if distance>=30:
             # The openings depend on the scenario seed, independently of the planted material.
             first=random.Random(f"{OPENING_NAMESPACE}:{seed}").choice((-5,5))
             gates=[(first,8),(-first,17)]
         blind_screen=(gates[-1][0],22) if gates else None
-        layout.update(scene_revision=SCENE_REVISION,neutral_gates=gates,ground_force_loaded=True,
-                      ground_repairs=self.ground_repairs,blind_screen=blind_screen)
+        layout.update(scene_revision=SCENE_REVISION,neutral_gates=gates,blind_screen=blind_screen)
         return layout
 
     def establish(self, layout, goal_slot):

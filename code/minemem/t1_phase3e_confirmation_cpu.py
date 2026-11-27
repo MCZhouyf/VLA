@@ -138,9 +138,10 @@ def worker(output, seed_plan, rank, workers, retry, scene):
             seen = {int(row["seed"]) for row in csv.DictReader(stream) if row["baseline"]=="start_pose" and not row["error"]}
     arena_type=FirstArrivalArena
     if scene != "original":
-        from t1_phase3e_repaired_scene import GroundProbe, RepairedScene
+        from t1_phase3e_repaired_scene import GroundProbe, GroundRepairedArena, RepairedScene
 
-        arena_type=RepairedScene if scene=="repaired" else GroundProbe
+        arena_type={"repaired":RepairedScene,"ground-probe":GroundProbe,
+                    "ground-repaired":GroundRepairedArena}[scene]
     with (output/"acceptance.csv").open("x",newline="") as stream:
         writer=csv.writer(stream)
         writer.writerow(FIELDS)
@@ -237,7 +238,7 @@ if __name__ == "__main__":
     cpu.add_argument("--worker",type=int,required=True)
     cpu.add_argument("--workers",type=int,required=True)
     cpu.add_argument("--retry-from",type=Path)
-    cpu.add_argument("--scene",choices=("original","repaired","ground-probe"),default="original")
+    cpu.add_argument("--scene",choices=("original","repaired","ground-probe","ground-repaired"),default="original")
     freeze=stages.add_parser("freeze")
     freeze.add_argument("output",type=Path)
     freeze.add_argument("--plan",type=Path,required=True)
