@@ -103,7 +103,7 @@ def report(main, generalization):
         lines.append("| 待完成 | — | — | — | — | — |")
 
     lines.extend(("", "## C. 30 格材料交换", ""))
-    pairs = conclusion.get("C")
+    pairs = conclusion.get("C") or read(main / "C-pairs.json")
     if pairs:
         lines.extend(("单元格依次列出金柱在 0、1 侧时的预测围挡与成功判定。"
                       "两臂的采样位姿逐帧相同，原始记录含渲染散列。", "",
@@ -131,6 +131,10 @@ def report(main, generalization):
                           f"[逐组指标]({generalization.name}/A-30.json)"))
     else:
         lines.extend(("", "泛化闭环待完成。"))
+    if (main / "generalization-dependency.sha256").is_file():
+        lines.extend(("", "泛化首轮因恢复目录缺少布景模块退出，产生 0 条评分。"
+                      "重试使用从已校验的原工具目录复制的相同模块。 "
+                      f"[模块校验记录]({main.name}/generalization-dependency.sha256)"))
     lines.extend(("", "## 冻结源码与记录", "",
                   f"规划器与控制链使用 `{plan['frozen_commit']}`，由 SHA-256 清单逐项验证。"
                   "7B、房间读出、稳定器和控制条件遵循冻结评测。布景泛化使用已归档的第二版场景。 "

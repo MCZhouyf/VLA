@@ -11,3 +11,18 @@ A/100/shuffle_visual gpu=7 attempt=1 status=0 complete=30/30
 A/100/visual gpu=6 attempt=2 status=0 complete=30/30
 B/b2 gpu=7 attempt=1 status=1 complete=0/30
 B/b2 gpu=7 attempt=2 status=1 complete=0/30
+B/b1 gpu=6 attempt=1 status=0 complete=30/30
+Traceback (most recent call last):
+  File "/share/project/zhoubowen/zhy/zyf/results/phase3e-visual-swap-DB17NqMW/confirmation-v3-resumed-afoquMK5/harness/t1_phase3e_confirmation_run.py", line 330, in <module>
+    run_suite(parser.parse_args())
+  File "/share/project/zhoubowen/zhy/zyf/results/phase3e-visual-swap-DB17NqMW/confirmation-v3-resumed-afoquMK5/harness/t1_phase3e_confirmation_run.py", line 297, in run_suite
+    ablations[name]=score(future.result())
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/share/project/zhoubowen/zhy/zyf/envs/mcvla/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/share/project/zhoubowen/zhy/zyf/results/phase3e-visual-swap-DB17NqMW/confirmation-v3-resumed-afoquMK5/harness/t1_phase3e_confirmation_run.py", line 97, in run_job
+    raise RuntimeError(f"Missing cases in {group}: {sorted(set(seeds)-result.keys())}")
+RuntimeError: Missing cases in B/b2: [1800001985, 1800039799, 1800100476, 1800109898, 1800170341, 1800176619, 1800336858, 1800393704, 1800438084, 1800450569, 1800487138, 1800487416, 1800535636, 1800552100, 1800575684, 1800647309, 1800660654, 1800661523, 1800709228, 1800724114, 1800760121, 1800768602, 1800791175, 1800805616, 1800880524, 1800930682, 1800937968, 1800948984, 1800975837, 1800979662]
