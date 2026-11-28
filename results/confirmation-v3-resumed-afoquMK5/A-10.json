@@ -1,0 +1,55 @@
+{
+  "groups": {
+    "visual": {
+      "successes": 30,
+      "n": 30,
+      "wilson95": [
+        0.8864866068260312,
+        1.0
+      ],
+      "room_correct": 30,
+      "distractor_first": 0,
+      "budget": 0,
+      "deaths": 0,
+      "pose_jumps": 0,
+      "stabilizer_steps": 0,
+      "heading_guard_steps": 709,
+      "waypoint_jumps_tail200": 7,
+      "actions": {
+        "steps": 4295,
+        "forward": 3052,
+        "turn": 1243,
+        "other": 0,
+        "forward_and_camera": 0,
+        "heading_guard_steps": 709,
+        "guard_agrees": 704
+      }
+    },
+    "shuffle_visual": {
+      "successes": 13,
+      "n": 30,
+      "wilson95": [
+        0.2737748557646652,
+        0.6080269299918639
+      ],
+      "room_correct": 13,
+      "distractor_first": 17,
+      "budget": 0,
+      "deaths": 0,
+      "pose_jumps": 0,
+      "stabilizer_steps": 0,
+      "heading_guard_steps": 720,
+      "waypoint_jumps_tail200": 7,
+      "actions": {
+        "steps": 4280,
+        "forward": 3042,
+        "turn": 1238,
+        "other": 0,
+        "forward_and_camera": 0,
+        "heading_guard_steps": 720,
+        "guard_agrees": 713
+      }
+    }
+  },
+  "advantage": 17
+}

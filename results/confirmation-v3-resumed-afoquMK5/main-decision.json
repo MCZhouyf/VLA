@@ -1,0 +1,19 @@
+{
+  "visual_successes": 30,
+  "visual_minus_shuffled": 17,
+  "best_script": "find_structure",
+  "best_script_successes": 7,
+  "visual_minus_best_script": {
+    "gap": 23,
+    "n": 30,
+    "visual_only": 23,
+    "baseline_only": 0,
+    "ties": 7,
+    "bootstrap95": [
+      0.6,
+      0.9
+    ],
+    "method": "paired_percentile_bootstrap_exact_enumeration"
+  },
+  "passed": true
+}

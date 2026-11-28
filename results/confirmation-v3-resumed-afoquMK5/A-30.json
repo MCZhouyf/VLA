@@ -1,0 +1,56 @@
+{
+  "groups": {
+    "visual": {
+      "successes": 30,
+      "n": 30,
+      "wilson95": [
+        0.8864866068260312,
+        1.0
+      ],
+      "room_correct": 30,
+      "distractor_first": 0,
+      "budget": 0,
+      "deaths": 0,
+      "pose_jumps": 0,
+      "stabilizer_steps": 0,
+      "heading_guard_steps": 755,
+      "waypoint_jumps_tail200": 22,
+      "actions": {
+        "steps": 8018,
+        "forward": 6574,
+        "turn": 1443,
+        "other": 1,
+        "forward_and_camera": 3,
+        "heading_guard_steps": 755,
+        "guard_agrees": 581
+      }
+    },
+    "shuffle_visual": {
+      "successes": 13,
+      "n": 30,
+      "wilson95": [
+        0.2737748557646652,
+        0.6080269299918639
+      ],
+      "room_correct": 13,
+      "distractor_first": 17,
+      "budget": 0,
+      "deaths": 0,
+      "pose_jumps": 0,
+      "stabilizer_steps": 0,
+      "heading_guard_steps": 758,
+      "waypoint_jumps_tail200": 23,
+      "actions": {
+        "steps": 7976,
+        "forward": 6571,
+        "turn": 1404,
+        "other": 1,
+        "forward_and_camera": 4,
+        "heading_guard_steps": 758,
+        "guard_agrees": 574
+      }
+    }
+  },
+  "advantage": 17,
+  "passed": true
+}

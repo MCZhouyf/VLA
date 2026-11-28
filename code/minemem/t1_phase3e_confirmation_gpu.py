@@ -72,7 +72,7 @@ def drive_script(generator, arena, trace):
     forward=arena.sim.noop_action()
     forward["forward"]=1
     agent=arena.sim.env_action_to_agent_action({key:np.asarray([value]) for key,value in forward.items()})
-    agent={key:int(np.asarray(value).item()) for key,value in agent.items()}
+    agent={key:np.asarray(value).reshape(1) for key,value in agent.items()}
     try:
         next(generator)
         while True:

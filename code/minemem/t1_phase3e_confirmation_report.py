@@ -84,6 +84,10 @@ def report(main, generalization):
         row = (f"{counts(score)} [{interval(score['wilson95'])}] | {score['heading_guard_steps']} | "
                f"{score['stabilizer_steps']} | {score['waypoint_jumps_tail200']}") if score else "待完成 | — | — | —"
         lines.append(f"| {label} | {row} |")
+    if (main / "b2-recovery.sha256").is_file():
+        lines.extend(("", "B2 前两次在动作解码时因输入类型错误退出，均产生 0 条评分。"
+                      "修复后将同一个前进动作以 MineStudio 所需的单元素数组传入，并沿用原 30 个种子。 "
+                      f"[恢复工具校验]({main.name}/b2-recovery.sha256)"))
     lines.extend(("", "| 主确认组 | 7B 提出前进 | 仅相机转动 | 其他 | 强制转向占比 | 覆盖时动作一致 |",
                   "| --- | ---: | ---: | ---: | ---: | ---: |"))
     for d in (10, 30, 60, 100):

@@ -36,17 +36,56 @@ def verify(run):
         subprocess.run(["sha256sum","--check","--quiet",manifest],cwd=directory,check=True)
 
 
-def run_job(run, group, gpu, seeds, common, distance=None, *, repaired_scene=False, ground_repair=False):
+def attempt_rows(folder, group, seeds, distance):
+    partial={}
+    table=folder/"episodes.csv"
+    if table.exists():
+        with table.open(newline="") as stream:
+            for row in csv.DictReader(stream):
+                seed=int(row["seed"])
+                if seed not in seeds or row["success"] not in ("True","False"):
+                    raise ValueError(f"Unexpected result for {group}: {row}")
+                if distance is not None:
+                    row.update(arm=group.rsplit("/",1)[-1],material_slot=row["goal_slot"])
+                partial.setdefault(seed,[]).append(dict(row,source=str(folder)))
+    complete={}
+    for seed,rows in partial.items():
+        if group.startswith("C/"):
+            coverage={(row["material_slot"],row["arm"]) for row in rows}
+            if len(rows)==4 and coverage=={(s,a) for s in ("0","1") for a in ARMS}:
+                complete[seed]=rows
+            elif len(rows)>4 or len(coverage)!=len(rows):
+                raise ValueError(f"Repeated material arm for {group}/{seed}")
+        elif len(rows)==1:
+            complete[seed]=rows
+        else:
+            raise ValueError(f"Repeated outcome for {group}/{seed}")
+    return complete
+
+
+def run_job(run, group, gpu, seeds, common, distance=None, *, repaired_scene=False, ground_repair=False,
+            recovery_harness=None):
     frozen=run/"frozen-source/code/minemem/t1_exec.sh"
     target=run/"eval"/group
-    target.mkdir(parents=True)
+    target.mkdir(parents=True,exist_ok=recovery_harness is not None)
     result={}
+    first_attempt=1
+    if recovery_harness:
+        attempts=sorted(int(path.stem.split("-")[-1]) for path in target.glob("attempt-*.log"))
+        for attempt in attempts:
+            pending=set(seeds)-result.keys()
+            result.update(attempt_rows(target/f"attempt-{attempt}",group,pending,distance))
+        if attempts:
+            first_attempt=attempts[-1]+1
+    harness_dir=recovery_harness or run/"harness"
     with TemporaryDirectory(prefix=f"minemem-t1-confirm-{gpu}-",dir="/dev/shm") as local:
         env=dict(os.environ,T1_LOCAL_DATABASE_ROOT=local)
-        for attempt in (1,2):
+        for attempt in range(first_attempt,first_attempt+2):
             pending=[seed for seed in seeds if seed not in result]
+            if not pending:
+                break
             folder=target/f"attempt-{attempt}"
-            harness=["bash",str(run/"harness/t1_phase3e_confirmation_gpu.sh"),str(run),str(gpu),str(folder)]
+            harness=["bash",str(harness_dir/"t1_phase3e_confirmation_gpu.sh"),str(run),str(gpu),str(folder)]
             if repaired_scene:
                 harness.append("--repaired-scene")
             if ground_repair:
@@ -65,29 +104,7 @@ def run_job(run, group, gpu, seeds, common, distance=None, *, repaired_scene=Fal
                     if status!=75 or reservation==19:
                         break
                     sleep(30)
-            partial={}
-            table=folder/"episodes.csv"
-            if table.exists():
-                with table.open(newline="") as stream:
-                    for row in csv.DictReader(stream):
-                        seed=int(row["seed"])
-                        if seed not in pending or row["success"] not in ("True","False"):
-                            raise ValueError(f"Unexpected result for {group}: {row}")
-                        if distance is not None:
-                            row.update(arm=group.rsplit("/",1)[-1],material_slot=row["goal_slot"])
-                        partial.setdefault(seed,[]).append(dict(row,source=str(folder)))
-            twin=group.startswith("C/")
-            for seed,rows in partial.items():
-                if twin:
-                    coverage={(row["material_slot"],row["arm"]) for row in rows}
-                    if len(rows)==4 and coverage=={(s,a) for s in ("0","1") for a in ARMS}:
-                        result[seed]=rows
-                    elif len(rows)>4 or len(coverage)!=len(rows):
-                        raise ValueError(f"Repeated material arm for {group}/{seed}")
-                elif len(rows)==1:
-                    result[seed]=rows
-                else:
-                    raise ValueError(f"Repeated outcome for {group}/{seed}")
+            result.update(attempt_rows(folder,group,pending,distance))
             print(f"{group} gpu={gpu} attempt={attempt} status={status} complete={len(result)}/{len(seeds)}",flush=True)
             if set(result)==set(seeds):
                 break
@@ -96,10 +113,16 @@ def run_job(run, group, gpu, seeds, common, distance=None, *, repaired_scene=Fal
     if set(result)!=set(seeds):
         raise RuntimeError(f"Missing cases in {group}: {sorted(set(seeds)-result.keys())}")
     rows=[row for seed in seeds for row in result[seed]]
-    with (target/"episodes.csv").open("x",newline="") as stream:
-        writer=csv.DictWriter(stream,fieldnames=tuple(rows[0]))
-        writer.writeheader()
-        writer.writerows(rows)
+    table=target/"episodes.csv"
+    if table.exists():
+        with table.open(newline="") as stream:
+            if list(csv.DictReader(stream))!=rows:
+                raise ValueError(f"Previously summarized rows differ for {group}")
+    else:
+        with table.open("x",newline="") as stream:
+            writer=csv.DictWriter(stream,fieldnames=tuple(rows[0]))
+            writer.writeheader()
+            writer.writerows(rows)
     return rows
 
 
@@ -187,10 +210,17 @@ def evaluation_inputs(run, protocol_update):
             or any(metrics["distances"][str(d)]["teacher"]["rate"]<.95 for d in DISTANCES)):
         raise ValueError("The confirmation requires complete CPU coverage and validated teacher routes")
     eligibility=run/"gpu-eligibility.json"
-    save(eligibility,dict(passed=True,protocol="2026-11-27_confirmation_update",
-                          legacy_cpu_passed=metrics["passed"],script_scores_used_for="comparison",
-                          cpu_metrics_sha256=hashlib.sha256(metrics_path.read_bytes()).hexdigest()))
+    record=dict(passed=True,protocol="2026-11-27_confirmation_update",legacy_cpu_passed=metrics["passed"],
+                script_scores_used_for="comparison",cpu_metrics_sha256=hashlib.sha256(metrics_path.read_bytes()).hexdigest())
+    save_or_verify(eligibility,record)
     return plan,eligibility
+
+
+def save_or_verify(path, data):
+    if not path.exists():
+        save(path,data)
+    elif json.loads(path.read_text())!=json.loads(json.dumps(data)):
+        raise ValueError(f"Existing summary differs from recalculated data: {path}")
 
 
 def paired_difference(visual, baseline):
@@ -235,9 +265,9 @@ def main_decision(run, groups, visual_rows):
                 passed=wins>=23 and advantage>=6 and gap["gap"]>=6)
 
 
-def evaluate_distance(workers, run, seeds, standard, distance, repaired_scene, ground_repair):
+def evaluate_distance(workers, run, seeds, standard, distance, repaired_scene, ground_repair, recovery_harness=None):
     jobs={arm:workers.submit(run_job,run,f"A/{distance}/{arm}",gpu,seeds,standard,distance,
-                             repaired_scene=repaired_scene,ground_repair=ground_repair)
+                             repaired_scene=repaired_scene,ground_repair=ground_repair,recovery_harness=recovery_harness)
           for arm,gpu in zip(ARMS,(6,7),strict=True)}
     groups={}
     outcomes={}
@@ -255,6 +285,10 @@ def run_suite(args):
     run=args.run
     protocol_update=args.generalization is not None
     plan,metrics_path=evaluation_inputs(run,protocol_update)
+    recovery_harness=run/"recovery-harness" if args.resume else None
+    if recovery_harness:
+        for manifest in ("b2-recovery.sha256","continuation.sha256"):
+            subprocess.run(["sha256sum","--check","--quiet",manifest],cwd=run,check=True)
     repaired_scene="scene_revision" in plan
     if protocol_update and repaired_scene:
         raise ValueError("The main confirmation uses the original v3 scene")
@@ -271,9 +305,15 @@ def run_suite(args):
     result={}
     with ThreadPoolExecutor(max_workers=2) as workers:
         for distance in DISTANCES:
+            existing=run/f"A-{distance}.json"
+            if recovery_harness and existing.exists():
+                result[distance]=json.loads(existing.read_text())
+                if any(result[distance]["groups"][arm]["n"]!=len(by_distance[distance]) for arm in ARMS):
+                    raise ValueError(f"Incomplete saved main result at {distance}")
+                continue
             (run/"gpu.progress").write_text(f"A-{distance}\n")
             groups,outcomes=evaluate_distance(workers,run,by_distance[distance],standard,distance,repaired_scene,
-                                              protocol_update and distance==60)
+                                              protocol_update and distance==60,recovery_harness)
             visual=groups["visual"]["successes"]
             advantage=visual-groups["shuffle_visual"]["successes"]
             result[distance]=dict(groups=groups,advantage=advantage)
@@ -288,18 +328,32 @@ def run_suite(args):
 
         (run/"gpu.progress").write_text("B\n")
         shared_seeds=by_distance[30]
-        ablations={}
-        for first, second in (("b1","b2"),("b3",None)):
-            jobs={first:workers.submit(run_job,run,f"B/{first}",6,shared_seeds,shared,repaired_scene=repaired_scene)}
-            if second:
-                jobs[second]=workers.submit(run_job,run,f"B/{second}",7,shared_seeds,shared,repaired_scene=repaired_scene)
-            for name,future in jobs.items():
-                ablations[name]=score(future.result())
-                save(run/f"B-{name}.json",ablations[name])
+
+        def ablation_series(gpu, names):
+            results={}
+            for name in names:
+                if recovery_harness and name=="b2":
+                    while not (run/"b2-recovery.status").is_file():
+                        sleep(30)
+                rows=run_job(run,f"B/{name}",gpu,shared_seeds,shared,repaired_scene=repaired_scene,
+                             recovery_harness=recovery_harness)
+                results[name]=score(rows)
+                save_or_verify(run/f"B-{name}.json",results[name])
+            return results
+
+        b2=workers.submit(ablation_series,7,("b2",))
+        if recovery_harness:
+            ablations=workers.submit(ablation_series,6,("b1","b3")).result()
+            ablations.update(b2.result())
+        else:
+            ablations=workers.submit(ablation_series,6,("b1",)).result()
+            ablations.update(b2.result())
+            ablations.update(ablation_series(6,("b3",)))
         verify(run)
         (run/"gpu.progress").write_text("C\n")
         pairs=plan["twin_seeds"]
-        jobs=[workers.submit(run_job,run,f"C/twin-{gpu}",gpu,pairs[index::2],shared,repaired_scene=repaired_scene)
+        jobs=[workers.submit(run_job,run,f"C/twin-{gpu}",gpu,pairs[index::2],shared,repaired_scene=repaired_scene,
+                             recovery_harness=recovery_harness)
               for index,gpu in enumerate((6,7))]
         twins=twin_summary([r for job in jobs for r in job.result()],plan)
         extra=None
@@ -312,8 +366,8 @@ def run_suite(args):
             seeds=[row["seed"] for row in extra_plan["cases"] if row["distance"]==30]
             extra_options=[*common,"--fixtures",str(extra_run/"frozen/fixtures.json"),"--oracle-gate",
                            str(args.oracle_gate),"--offline-gate",str(offline),"--metrics",str(extra_gate)]
-            extra,_=evaluate_distance(workers,extra_run,seeds,extra_options,30,True,False)
-            save(extra_run/"A-30.json",extra)
+            extra,_=evaluate_distance(workers,extra_run,seeds,extra_options,30,True,False,recovery_harness)
+            save_or_verify(extra_run/"A-30.json",extra)
             verify(extra_run)
     verify(run)
     save(run/"confirmation-decision.json",dict(frozen_commit=plan["frozen_commit"],
@@ -327,4 +381,5 @@ if __name__ == "__main__":
     for name in ("run","controller","offline","oracle-gate"):
         parser.add_argument(f"--{name}",type=Path,required=True)
     parser.add_argument("--generalization",type=Path)
+    parser.add_argument("--resume",action="store_true")
     run_suite(parser.parse_args())

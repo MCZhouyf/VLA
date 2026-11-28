@@ -672,6 +672,8 @@ PYTHONPATH="$confirmation_run/frozen-source/code/minemem:$WORK/code/JarvisVLA" \
 
 调度器校验完整的 CPU 评分与场景清单，为新版协议记录独立的 `gpu-eligibility.json`。保留旧 CPU 判定，脚本实测用于并列表和配对差值区间。主确认按 30、10、60、100 格运行 A，再运行 30 格的 B、C。泛化另在第二版布景的 30 格档运行两组。
 
+B2 的动作转换恢复记录保存在运行目录的 `recovery-harness`。已有运行的续跑入口是 `bash "$confirmation_run/recovery-harness/continue.sh" "$confirmation_run" --controller "$controller" --offline "$no_anchor" --oracle-gate "$oracle_gate" --generalization "$generalization_run"`。它等待原调度器退出，再从已记录的评分继续处理同一组种子。
+
 ## 研究交接总报告
 
 完整阶段事实、证据边界、原始结果索引和接手复核命令见
