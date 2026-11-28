@@ -200,6 +200,7 @@ def main():
     entry.add_argument("--repaired-scene",action="store_true")
     entry.add_argument("--ground-repair-world",type=int)
     entry.add_argument("--pose-noise",nargs=2,type=float,metavar=("BLOCKS","DEGREES"))
+    entry.add_argument("--odometry-calibration",type=Path)
     if "--help" not in sys.argv[1:]:
         options,rest=entry.parse_known_args()
         if options.mode in ("pointer","pointer-twin"):
@@ -218,7 +219,7 @@ def main():
                 entry.error("Choose the original layout with a ground repair, or the revised layout")
             if options.repaired_scene:
                 evaluator.FirstArrivalArena=RepairedScene
-            if options.ground_repair_world is not None:
+            if options.ground_repair_world is not None and options.odometry_calibration is None:
                 def arena_for_world(world_seed, effects):
                     arena_type=(GroundRepairedArena if world_seed==options.ground_repair_world
                                 else FirstArrivalArena)
@@ -230,6 +231,12 @@ def main():
                 from t1_phase3e_pose_noise import install_noise
 
                 install_noise(evaluator,args.output,*options.pose_noise)
+            if options.odometry_calibration:
+                from t1_phase3e_odometry_eval import install_odometry
+
+                if options.pose_noise or options.repaired_scene:
+                    entry.error("Action-only odometry uses the original scene and its registered ground repair")
+                install_odometry(evaluator,args.output,options.odometry_calibration,options.ground_repair_world)
             evaluator.run(args)
             return
     parser=argparse.ArgumentParser(description=__doc__)

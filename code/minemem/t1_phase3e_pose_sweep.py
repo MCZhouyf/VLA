@@ -25,16 +25,22 @@ def sweep(args):
     common = ["--training-run",str(args.controller),"--room-weights",str(args.offline/"room-head.pt"),
               "--fixtures",str(run/"frozen/fixtures.json"),"--batch","3","--oracle-gate",str(args.oracle_gate),
               "--offline-gate",str(offline),"--metrics",str(gate)]
-    schedule = [(distance,position,yaw) for distance in DISTANCES for position,yaw in LEVELS]
+    is_odometry = args.odometry_calibration is not None
+    schedule = ([(distance,None,None) for distance in DISTANCES] if is_odometry else
+                [(distance,position,yaw) for distance in DISTANCES for position,yaw in LEVELS])
+    def label(position, yaw):
+        return "odometry" if is_odometry else f"sigma-{position:g}-{yaw:g}"
 
     def lane(gpu, jobs):
         for distance,position,yaw in jobs:
-            name = f"sigma-{position:g}-{yaw:g}"
+            name = label(position,yaw)
             rows = run_job(run,f"{name}/{distance}/visual",gpu,seed_sets[distance],common,distance,
-                           ground_repair=distance==60,pose_noise=(position,yaw),recovery_harness=run/"harness")
+                           ground_repair=distance==60,pose_noise=None if is_odometry else (position,yaw),
+                           odometry_calibration=args.odometry_calibration,recovery_harness=run/"harness")
             samples = position_squared = yaw_squared = 0
             for row in rows:
-                tag = f"d{distance}-seed{row['seed']}-pose-noise.json"
+                measurement = "odometry" if is_odometry else "pose-noise"
+                tag = f"d{distance}-seed{row['seed']}-{measurement}.json"
                 evidence = json.loads((Path(row["source"])/tag).read_text())
                 samples += evidence["samples"]
                 position_squared += evidence["horizontal_rmse"]**2 * evidence["samples"]
@@ -43,19 +49,20 @@ def sweep(args):
                           horizontal_rmse=math.sqrt(position_squared/samples),
                           yaw_rmse=math.sqrt(yaw_squared/samples),**score(rows))
             save_or_verify(run/f"{name}-d{distance}.json",result)
-            print(f"d={distance} noise={position:g}/{yaw:g} success={result['successes']}/30",flush=True)
+            print(f"d={distance} mode={name} success={result['successes']}/30",flush=True)
 
     with ThreadPoolExecutor(max_workers=2) as workers:
         jobs = [workers.submit(lane,gpu,schedule[index::2]) for index,gpu in enumerate((6,7))]
         for job in jobs:
             job.result()
     verify(run)
-    save_or_verify(run/"pose-results.json",[json.loads((run/f"sigma-{p:g}-{y:g}-d{d}.json").read_text())
-                                          for d,p,y in schedule])
+    destination = "odometry-results.json" if is_odometry else "pose-results.json"
+    save_or_verify(run/destination,[json.loads((run/f"{label(p,y)}-d{d}.json").read_text()) for d,p,y in schedule])
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     for name in ("run","controller","offline","oracle-gate"):
         parser.add_argument(f"--{name}",type=Path,required=True)
+    parser.add_argument("--odometry-calibration",type=Path)
     sweep(parser.parse_args())

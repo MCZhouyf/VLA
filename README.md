@@ -687,6 +687,8 @@ python3 -B code/minemem/t1_phase3e_pointer_train.py --train-plan "$stage_b/cache
 
 服务器运行目录含 SHA-256 清单与冻结原 v3 源码。完成 CPU 布景验收后，Plan L 调度使用 `eval-harness/t1_phase3e_pointer_confirm.py`，指定 `--run`、`--controller` 和 `--room-weights`。位姿噪声调度使用 `harness/t1_phase3e_pose_sweep.py`，指定 `--run`、`--controller`、`--offline` 和 `--oracle-gate`。读取归档汇总生成论文曲线和 CSV。
 
+使用同一位姿调度入口并加 `--odometry-calibration "$calibration"`，可在独立运行目录中评测动作积分。校准文件通过 `python3 -B code/minemem/t1_phase3e_odometry.py "$archived_actions" "$calibration"` 从已记录的平地动作和位移拟合。
+
 ```bash
 python3 -B code/minemem/t1_phase3e_pose_plot.py "$confirmation_run/confirmation-decision.json" \
   "$pose_run/pose-results.json" "$plot_output/pose-error-curve"

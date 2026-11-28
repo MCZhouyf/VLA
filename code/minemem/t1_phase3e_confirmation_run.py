@@ -64,7 +64,7 @@ def attempt_rows(folder, group, seeds, distance):
 
 
 def run_job(run, group, gpu, seeds, common, distance=None, *, repaired_scene=False, ground_repair=False,
-            recovery_harness=None, pose_noise=None, harness_mode=None):
+            recovery_harness=None, pose_noise=None, harness_mode=None, odometry_calibration=None):
     frozen=run/"frozen-source/code/minemem/t1_exec.sh"
     target=run/"eval"/group
     target.mkdir(parents=True,exist_ok=recovery_harness is not None)
@@ -92,8 +92,11 @@ def run_job(run, group, gpu, seeds, common, distance=None, *, repaired_scene=Fal
                 harness.extend(("--ground-repair-world",str(GRAVEL_WORLD)))
             if pose_noise:
                 harness.extend(("--pose-noise",*map(str,pose_noise)))
+            if odometry_calibration:
+                harness.extend(("--odometry-calibration",str(odometry_calibration)))
             if distance is not None:
-                command=([*harness,"--mode","a"] if repaired_scene or ground_repair or pose_noise else
+                modified = repaired_scene or ground_repair or pose_noise or odometry_calibration
+                command=([*harness,"--mode","a"] if modified else
                          ["bash",str(frozen),"waypoint-predictions",str(gpu),str(folder)])
                 command.extend([*common,"--grid-plan",group.rsplit("/",1)[-1],"--distances",str(distance),
                                 "--tracking-repair","--variant","spatial"])
