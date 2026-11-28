@@ -1,0 +1,994 @@
+Picked up JAVA_TOOL_OPTIONS: -Duser.home='/share/project/zhoubowen/zhy/zyf/runtime/java-home' -Djava.io.tmpdir='/share/project/zhoubowen/zhy/zyf/tmp' -XX:ActiveProcessorCount=2
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+[13:05:04] [main/INFO]: [OptiFine] (Reflector) Field not found: World.tileEntitiesToBeRemoved
+[13:05:04] [main/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.eventbus.api.Event$Result
+[13:05:04] [main/INFO]: [OptiFine] (Reflector) Method not present: net.minecraftforge.common.extensions.IForgeBlockState.hasTileEntity
+[13:05:04] [main/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.extensions.IForgeEntity
+[13:05:04] [main/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.CrashReportExtender
+[13:05:05] [main/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.tags.ItemTags.createOptional
+[13:05:06] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.ForgeHooksClient
+[13:05:07] [Render thread/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[13:05:09] [Render thread/INFO]: Setting user: Player410
+[13:05:09] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.settings.KeyConflictContext
+[13:05:09] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.settings.KeyModifier
+[13:05:09] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraft.launchwrapper.Launch
+[13:05:09] [Render thread/INFO]: Backend library: LWJGL version 3.2.2 SNAPSHOT
+[13:05:09] [Render thread/INFO]: [OptiFine] 
+[13:05:09] [Render thread/INFO]: [OptiFine] OptiFine_1.16.5_HD_U_G8
+[13:05:09] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: optifine.OptiFineResourceLocator
+[13:05:09] [Render thread/INFO]: [OptiFine] Build: null
+[13:05:09] [Render thread/INFO]: [OptiFine] OS: Linux (amd64) version 5.15.0-1053-nvidia
+[13:05:09] [Render thread/INFO]: [OptiFine] Java: 1.8.0_514, Azul Systems, Inc.
+[13:05:09] [Render thread/INFO]: [OptiFine] VM: OpenJDK 64-Bit Server VM (mixed mode), Azul Systems, Inc.
+[13:05:09] [Render thread/INFO]: [OptiFine] LWJGL: 3.3.0 X11 GLX EGL OSMesa clock_gettime evdev shared
+[13:05:09] [Render thread/INFO]: [OptiFine] OpenGL: llvmpipe (LLVM 15.0.7, 256 bits), version 4.5 (Compatibility Profile) Mesa 23.2.1-1ubuntu3.1~22.04.4, Mesa
+[13:05:09] [Render thread/INFO]: [OptiFine] OpenGL Version: 4.5.0
+[13:05:09] [Render thread/INFO]: [OptiFine] Maximum texture size: 16384x16384
+[13:05:09] [VersionCheck/INFO]: [OptiFine] Checking for new version
+[13:05:09] [Render thread/INFO]: [Shaders] OpenGL Version: 4.5 (Compatibility Profile) Mesa 23.2.1-1ubuntu3.1~22.04.4
+[13:05:09] [Render thread/INFO]: [Shaders] Vendor:  Mesa
+[13:05:09] [Render thread/INFO]: [Shaders] Renderer: llvmpipe (LLVM 15.0.7, 256 bits)
+[13:05:09] [Render thread/INFO]: [Shaders] Capabilities:  2.0  2.1  3.0  3.2  4.0 
+[13:05:09] [Render thread/INFO]: [Shaders] GL_MAX_DRAW_BUFFERS: 8
+[13:05:09] [Render thread/INFO]: [Shaders] GL_MAX_COLOR_ATTACHMENTS_EXT: 8
+[13:05:09] [Render thread/INFO]: [Shaders] GL_MAX_TEXTURE_IMAGE_UNITS: 32
+[13:05:09] [Render thread/INFO]: [Shaders] Load shaders configuration.
+[13:05:09] [Render thread/INFO]: [Shaders] Save shaders configuration.
+[13:05:09] [Render thread/INFO]: [Shaders] No shaderpack loaded.
+[13:05:09] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.common.Loader
+[13:05:11] [VersionCheck/INFO]: [OptiFine] Version found: G7
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.ItemModelMesherForge
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.model.pipeline.ForgeBlockModelRenderer
+[13:05:11] [Render thread/WARN]: ERROR : Couldn't load Narrator library : Unable to load library 'fliteWrapper': Can't obtain InputStream for linux-x86-64/libfliteWrapper.so
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.client.gui.screen.ModListScreen
+[13:05:11] [Render thread/INFO]: Reloading ResourceManager: Default
+[13:05:11] [Render thread/INFO]: [OptiFine] *** Reloading textures ***
+[13:05:11] [Render thread/INFO]: [OptiFine] Resource packs: Default
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.client.renderer.RenderTypeLookup.canRenderInLayer
+[13:05:11] [Render thread/INFO]: [OptiFine] *** Reflector Forge ***
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: mods.betterfoliage.client.BetterFoliageClient
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.BrandingControl
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.capabilities.ICapabilityProvider
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.capabilities.CapabilityProvider
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.client.ClientModLoader
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.event.world.ChunkDataEvent$Save
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.event.world.ChunkEvent$Load
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.event.world.ChunkEvent$Unload
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.client.ClientHooks
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.GuiScreenEvent$DrawScreenEvent$Pre
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.GuiScreenEvent$DrawScreenEvent$Post
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraftforge.fml.loading.progress.EarlyProgressVisualization.handOffWindow
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.event.entity.EntityLeaveWorldEvent
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.EntityViewRenderEvent$CameraSetup
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.EntityViewRenderEvent$FogColors
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.EntityViewRenderEvent$RenderFogEvent
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.event.entity.EntityJoinWorldEvent
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraftforge.eventbus.api.Event.isCanceled
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraftforge.eventbus.api.Event.getResult
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.eventbus.api.IEventBus
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.extensions.IForgeBlock
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.client.renderer.BlockModelShapes.getTexture
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraftforge.common.extensions.IForgeBlockState.addDestroyEffects
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraftforge.common.extensions.IForgeBlockState.addHitEffects
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraftforge.common.extensions.IForgeBlockState.getLightValue
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraftforge.common.extensions.IForgeBlockState.getSoundType
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraftforge.common.extensions.IForgeBlockState.getStateAtViewpoint
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraftforge.common.extensions.IForgeBlockState.isAir
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraftforge.common.extensions.IForgeBlockState.shouldDisplayFluidOverlay
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.extensions.IForgeFluid
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fluids.FluidAttributes
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.entity.EntityType.getTags
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.event.ForgeEventFactory
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.fluid.Fluid.getTags
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.ForgeHooks
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.ForgeConfig
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.ForgeConfig$Client
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.ForgeConfigSpec
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.ForgeConfigSpec$ConfigValue
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.world.chunk.IChunk.getWorldForge
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.extensions.IForgeItem
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.extensions.IForgeItemStack
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.ForgeI18n
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.client.settings.KeyBinding.setKeyConflictContext
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.client.settings.KeyBinding.setKeyModifierAndCode
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.client.settings.KeyBinding.getKeyModifier
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.extensions.IForgeEffectInstance
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.registries.ForgeRegistryEntry
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.client.renderer.RenderTypeLookup.canRenderInLayer
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Constructor not present: net.minecraft.world.server.Ticket, params: class net.minecraft.world.server.TicketType, int, class java.lang.Object, boolean
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.world.server.Ticket.isForceTicks
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.extensions.IForgeTileEntity
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.client.world.DimensionRenderInfo.getCloudRenderHandler
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.client.world.DimensionRenderInfo.getSkyRenderHandler
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.client.world.DimensionRenderInfo.getWeatherParticleRenderHandler
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.client.world.DimensionRenderInfo.getWeatherRenderHandler
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.IRenderHandler
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.model.pipeline.LightUtil
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.MinecraftForge
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.MinecraftForgeClient
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.common.ModContainer
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.model.ModelLoaderRegistry
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.gui.NotificationModUpdateScreen
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.entity.PartEntity
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.event.entity.PlaySoundAtEntityEvent
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.RenderBlockOverlayEvent$OverlayType
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.client.registry.RenderingRegistry
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.RenderGameOverlayEvent$BossInfo
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.RenderItemInFrameEvent
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.RenderLivingEvent$Pre
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.RenderLivingEvent$Post
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.RenderNameplateEvent
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.ScreenshotEvent
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.server.ServerLifecycleHooks
+[13:05:11] [Render thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.event.world.WorldEvent$Load
+[13:05:11] [Render thread/INFO]: [OptiFine] *** Reflector Vanilla ***
+[13:05:12] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: null
+[13:05:13] [Worker-Main-2/INFO]: [OptiFine] Multitexture: false
+[13:05:13] [Worker-Main-2/INFO]: [OptiFine] Multipass connected textures: false
+[13:05:26] [Worker-Main-2/INFO]: [OptiFine] Mipmap levels: 4
+[13:05:26] [Worker-Main-3/INFO]: [OptiFine] Multitexture: false
+[13:05:26] [Worker-Main-4/INFO]: [OptiFine] Multitexture: false
+[13:05:26] [Worker-Main-5/INFO]: [OptiFine] Multitexture: false
+[13:05:26] [Worker-Main-3/ERROR]: Using missing texture, unable to load minecraft:optifine/ctm/default/empty.png : java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png
+[13:05:26] [Worker-Main-2/INFO]: [OptiFine] Multitexture: false
+[13:05:26] [Worker-Main-2/INFO]: [OptiFine] Sprite size: 64
+[13:05:26] [Worker-Main-2/INFO]: [OptiFine] Mipmap levels: 6
+[13:05:26] [Worker-Main-2/INFO]: [OptiFine] Multitexture: false
+[13:05:27] [Worker-Main-2/INFO]: [OptiFine] Sprite size: 64
+[13:05:27] [Worker-Main-2/INFO]: [OptiFine] Mipmap levels: 6
+[13:05:27] [Worker-Main-2/INFO]: [OptiFine] Multitexture: false
+[13:05:27] [Worker-Main-2/INFO]: [OptiFine] Sprite size: 64
+[13:05:27] [Worker-Main-2/INFO]: [OptiFine] Mipmap levels: 6
+[13:05:27] [Worker-Main-2/INFO]: [OptiFine] Multitexture: false
+[13:05:27] [Worker-Main-2/INFO]: [OptiFine] Sprite size: 64
+[13:05:27] [Worker-Main-2/INFO]: [OptiFine] Mipmap levels: 6
+[13:05:27] [Worker-Main-2/INFO]: [OptiFine] Multitexture: false
+[13:05:27] [Worker-Main-2/INFO]: [OptiFine] Sprite size: 64
+[13:05:27] [Worker-Main-2/INFO]: [OptiFine] Mipmap levels: 6
+[13:05:27] [Worker-Main-2/INFO]: [OptiFine] Multitexture: false
+[13:05:27] [Worker-Main-2/INFO]: [OptiFine] Sprite size: 64
+[13:05:27] [Worker-Main-2/INFO]: [OptiFine] Mipmap levels: 6
+ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+ALSA lib conf.c:5182:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:5182:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1334:(snd_func_refer) error evaluating name
+ALSA lib conf.c:5182:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5705:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2664:(snd_pcm_open_noupdate) Unknown PCM default
+AL lib: (EE) ALCplaybackAlsa_open: Could not open playback device 'default': No such file or directory
+ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+ALSA lib conf.c:5182:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:5182:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1334:(snd_func_refer) error evaluating name
+ALSA lib conf.c:5182:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5705:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2664:(snd_pcm_open_noupdate) Unknown PCM default
+AL lib: (EE) ALCplaybackAlsa_open: Could not open playback device 'default': No such file or directory
+ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+ALSA lib conf.c:5182:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:5182:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1334:(snd_func_refer) error evaluating name
+ALSA lib conf.c:5182:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5705:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2664:(snd_pcm_open_noupdate) Unknown PCM default
+AL lib: (EE) ALCplaybackAlsa_open: Could not open playback device 'default': No such file or directory
+[13:05:27] [Render thread/ERROR]: Error starting SoundSystem. Turning off sounds & music
+java.lang.IllegalStateException: Failed to open OpenAL device
+	at net.minecraft.client.audio.SoundSystem.openDevice(SoundSystem.java:135) ~[mcprec-6.13.jar:?]
+	at net.minecraft.client.audio.SoundSystem.init(SoundSystem.java:51) ~[mcprec-6.13.jar:?]
+	at net.minecraft.client.audio.SoundEngine.load(SoundEngine.java:83) ~[mcprec-6.13.jar:?]
+	at net.minecraft.client.audio.SoundEngine.reload(SoundEngine.java:77) ~[mcprec-6.13.jar:?]
+	at net.minecraft.client.audio.SoundHandler.apply(SoundHandler.java:110) ~[mcprec-6.13.jar:?]
+	at net.minecraft.client.audio.SoundHandler.apply(SoundHandler.java:34) ~[mcprec-6.13.jar:?]
+	at net.minecraft.client.resources.ReloadListener.lambda$reload$1(ReloadListener.java:17) ~[mcprec-6.13.jar:?]
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:670) ~[?:1.8.0_514]
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646) ~[?:1.8.0_514]
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:456) ~[?:1.8.0_514]
+	at net.minecraft.resources.AsyncReloader.lambda$null$3(AsyncReloader.java:71) ~[mcprec-6.13.jar:?]
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.execute(ThreadTaskExecutor.java:92) ~[mcprec-6.13.jar:?]
+	at net.minecraft.resources.AsyncReloader.lambda$new$4(AsyncReloader.java:70) ~[mcprec-6.13.jar:?]
+	at java.util.concurrent.CompletableFuture$UniCompletion.claim(CompletableFuture.java:543) ~[?:1.8.0_514]
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:667) ~[?:1.8.0_514]
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646) ~[?:1.8.0_514]
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488) ~[?:1.8.0_514]
+	at java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:575) ~[?:1.8.0_514]
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:649) ~[?:1.8.0_514]
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:456) ~[?:1.8.0_514]
+	at com.mojang.blaze3d.systems.RenderSystem.replayQueue(RenderSystem.java:101) [mcprec-6.13.jar:?]
+	at com.mojang.blaze3d.systems.RenderSystem.flipFrame(RenderSystem.java:90) [mcprec-6.13.jar:?]
+	at net.minecraft.client.MainWindow.flipFrame(MainWindow.java:356) [mcprec-6.13.jar:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1021) [mcprec-6.13.jar:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:608) [mcprec-6.13.jar:?]
+	at net.minecraft.client.main.Main.main(Main.java:196) [mcprec-6.13.jar:?]
+[13:05:28] [Render thread/INFO]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[13:05:28] [Render thread/WARN]: [OptiFine] Missing CTM sprite: minecraft:optifine/ctm/default/empty
+[13:05:28] [Render thread/INFO]: [OptiFine] Animated sprites: 43
+[13:05:28] [Render thread/INFO]: Created: 256x128x4 minecraft:textures/atlas/signs.png-atlas
+[13:05:28] [Render thread/INFO]: [OptiFine] Animated sprites: 0
+[13:05:28] [Render thread/INFO]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[13:05:28] [Render thread/INFO]: [OptiFine] Animated sprites: 0
+[13:05:28] [Render thread/INFO]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[13:05:28] [Render thread/INFO]: [OptiFine] Animated sprites: 0
+[13:05:28] [Render thread/INFO]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[13:05:28] [Render thread/INFO]: [OptiFine] Animated sprites: 0
+[13:05:28] [Render thread/INFO]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[13:05:28] [Render thread/INFO]: [OptiFine] Animated sprites: 0
+[13:05:28] [Render thread/INFO]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[13:05:28] [Render thread/INFO]: [OptiFine] Animated sprites: 0
+[13:05:28] [Render thread/INFO]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
+[13:05:28] [Render thread/INFO]: [OptiFine] Animated sprites: 0
+[13:05:28] [Render thread/INFO]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[13:05:28] [Render thread/INFO]: [OptiFine] Animated sprites: 0
+[13:05:28] [Render thread/INFO]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[13:05:28] [Render thread/INFO]: [OptiFine] Animated sprites: 0
+[13:05:28] [Render thread/INFO]: [OptiFine] *** Reloading custom textures ***
+[13:05:29] [Render thread/INFO]: [OptiFine] Disable Forge light pipeline
+[13:05:30] [Thread-5/INFO]: [STDOUT]: ***** Start MalmoEnvServer on port 12290
+[13:05:30] [Thread-5/INFO]: [STDOUT]: CLIENT enter state: DORMANT
+[13:05:30] [Thread-5/INFO]: [STDOUT]: SERVER enter state: DORMANT
+[13:05:30] [EnvServerSocketHandler/INFO]: Received Mission token b6aa391b-264a-4565-af8f-d81dfe1eff50:0:0:1:true:88956082
+[13:05:30] [EnvServerSocketHandler/INFO]: Received mission init command  <MissionInit xmlns="http://ProjectMalmo.microsoft.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" SchemaVersion="" PlatformVersion="0.37.0"><Mission><About><Summary>MineRLHumanSurvival-v0</Summary></About><ModSettings><MsPerTick>50</MsPerTick></ModSettings><ServerSection><ServerInitialConditions><Time><AllowPassageOfTime>true</AllowPassageOfTime></Time><AllowSpawning>true</AllowSpawning></ServerInitialConditions><ServerHandlers><DefaultWorldGenerator forceReset="true" generatorOptions="{}"/><ServerQuitWhenAnyAgentFinishes/></ServerHandlers></ServerSection><AgentSection mode="Survival"><Name>MineRLAgent0</Name><AgentStart><LowLevelInputs>true</LowLevelInputs><GuiScale>1.0</GuiScale><GammaSetting>2.0</GammaSetting><FOVSetting>70.0</FOVSetting><FakeCursorSize>16</FakeCursorSize><Inventory/><PreferredSpawnBiome>plains</PreferredSpawnBiome></AgentStart><AgentHandlers><FileBasedPerformanceProducer/><PauseCommand/><VideoProducer want_depth="false"><Width>640</Width><Height>360</Height></VideoProducer><ObservationFromFullInventory flat="false"/><ObservationFromEquippedItem/><ObservationFromFullStats/><ObservationFromFullStats/><HumanLevelCommands/><CameraCommands/><ChatCommands/><IsGuiOpen/></AgentHandlers></AgentSection></Mission><ExperimentUID>b6aa391b-264a-4565-af8f-d81dfe1eff50</ExperimentUID><ClientRole>0</ClientRole><ClientAgentConnection><ClientIPAddress>127.0.0.1</ClientIPAddress><ClientMissionControlPort>0</ClientMissionControlPort><ClientCommandsPort>0</ClientCommandsPort><AgentIPAddress>127.0.0.1</AgentIPAddress><AgentMissionControlPort>0</AgentMissionControlPort><AgentVideoPort>0</AgentVideoPort><AgentDepthPort>0</AgentDepthPort><AgentLuminancePort>0</AgentLuminancePort><AgentObservationsPort>0</AgentObservationsPort><AgentRewardsPort>0</AgentRewardsPort><AgentColourMapPort>0</AgentColourMapPort></ClientAgentConnection></MissionInit>
+[13:05:30] [EnvServerSocketHandler/INFO]: [STDOUT]: Setting width, height to 640, 360
+[13:05:30] [EnvServerSocketHandler/INFO]: [STDOUT]: Gamma: 2.0
+[13:05:30] [EnvServerSocketHandler/INFO]: [STDOUT]: FOV: 70.0
+[13:05:30] [EnvServerSocketHandler/INFO]: [STDOUT]: GuiScale: 1.0
+[13:05:31] [Render thread/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[13:05:31] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[13:05:31] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[13:05:31] [Render thread/WARN]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[13:05:31] [Render thread/WARN]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[13:05:31] [Render thread/INFO]: Reloading ResourceManager: Default
+[13:05:31] [Render thread/INFO]: Loaded 7 recipes
+[13:05:31] [Render thread/INFO]: Loaded 927 advancements
+[13:05:32] [Render thread/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[13:05:32] [Render thread/INFO]: Starting integrated minecraft server version 1.16.5
+[13:05:32] [Render thread/INFO]: Generating keypair
+[13:05:38] [Render thread/INFO]: Preparing start region for dimension minecraft:overworld
+[13:05:52] [Render thread/INFO]: Changing view distance to 3, from 10
+[13:05:52] [Render thread/INFO]: MineRLAgent0[local:E:0cbb41d9] logged in with entity id 174 at (5890.5, 64.0, 4378.5)
+[13:05:52] [Render thread/INFO]: MineRLAgent0 joined the game
+[13:05:52] [Render thread/INFO]: [STDOUT]: *** creating fake mouse cursor ***
+[13:05:52] [Render thread/INFO]: Preparing spawn area: 0%
+[13:05:52] [Render thread/INFO]: Time elapsed: 3 ms
+[13:05:53] [Render thread/INFO]: [STDOUT]: Starting new video null
+[13:05:53] [Render thread/INFO]: Saving and pausing game...
+[13:05:53] [Render thread/INFO]: Saving chunks for level 'ServerLevel[mcpworldabfcf1c1b7d5]'/minecraft:overworld
+[13:05:53] [Render thread/INFO]: Saving chunks for level 'ServerLevel[mcpworldabfcf1c1b7d5]'/minecraft:the_nether
+[13:05:53] [Render thread/INFO]: Saving chunks for level 'ServerLevel[mcpworldabfcf1c1b7d5]'/minecraft:the_end
+[13:05:54] [Render thread/WARN]: Failed to load texture: minecraft:optifine/ctm/default/empty.png
+java.io.FileNotFoundException: minecraft:optifine/ctm/default/empty.png
+	at net.minecraft.resources.FallbackResourceManager.getResource(FallbackResourceManager.java:66) ~[mcprec-6.13.jar:?]
+	at net.minecraft.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:63) ~[mcprec-6.13.jar:?]
+	at net.minecraft.client.renderer.texture.SimpleTexture$TextureData.getTextureData(SimpleTexture.java:96) ~[mcprec-6.13.jar:?]
+	at net.minecraft.client.renderer.texture.SimpleTexture.getTextureData(SimpleTexture.java:72) ~[mcprec-6.13.jar:?]
+	at net.minecraft.client.renderer.texture.SimpleTexture.loadTexture(SimpleTexture.java:32) ~[mcprec-6.13.jar:?]
+	at net.minecraft.client.renderer.texture.DownloadingTexture.lambda$loadTexture$2(DownloadingTexture.java:95) ~[mcprec-6.13.jar:?]
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.run(ThreadTaskExecutor.java:150) [mcprec-6.13.jar:?]
+	at net.minecraft.util.concurrent.RecursiveEventLoop.run(RecursiveEventLoop.java:22) [mcprec-6.13.jar:?]
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.driveOne(ThreadTaskExecutor.java:124) [mcprec-6.13.jar:?]
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.drainTasks(ThreadTaskExecutor.java:107) [mcprec-6.13.jar:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:960) [mcprec-6.13.jar:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:608) [mcprec-6.13.jar:?]
+	at net.minecraft.client.main.Main.main(Main.java:196) [mcprec-6.13.jar:?]
+[13:05:54] [Render thread/INFO]: Loaded 0 advancements
+[13:05:56] [Render thread/INFO]: [MineRLAgent0: Marked 225 chunks in minecraft:overworld from [361, 266] to [375, 280] to be force loaded]
+[13:05:56] [Render thread/INFO]: [CHAT] Marked 225 chunks in minecraft:overworld from [361, 266] to [375, 280] to be force loaded
+[13:05:58] [Render thread/INFO]: [MineRLAgent0: Gamerule doMobSpawning is now set to: false]
+[13:05:58] [Render thread/INFO]: [CHAT] Gamerule doMobSpawning is now set to: false
+[13:05:58] [Render thread/INFO]: [MineRLAgent0: Gamerule doDaylightCycle is now set to: false]
+[13:05:58] [Render thread/INFO]: [CHAT] Gamerule doDaylightCycle is now set to: false
+[13:05:58] [Render thread/INFO]: [MineRLAgent0: Gamerule doWeatherCycle is now set to: false]
+[13:05:58] [Render thread/INFO]: [CHAT] Gamerule doWeatherCycle is now set to: false
+[13:05:58] [Render thread/INFO]: [MineRLAgent0: Set the time to 1000]
+[13:05:58] [Render thread/INFO]: [CHAT] Set the time to 1000
+[13:05:58] [Render thread/INFO]: [MineRLAgent0: Set the weather to clear]
+[13:05:58] [Render thread/INFO]: [CHAT] Set the weather to clear
+[13:05:58] [Render thread/INFO]: [MineRLAgent0: The difficulty has been set to Peaceful]
+[13:05:58] [Render thread/INFO]: [CHAT] The difficulty has been set to Peaceful
+[13:05:58] [Render thread/INFO]: [MineRLAgent0: Successfully filled 8165 blocks]
+[13:05:58] [Render thread/INFO]: [CHAT] Successfully filled 8165 blocks
+[13:05:58] [Render thread/INFO]: [MineRLAgent0: Successfully filled 76 blocks]
+[13:05:58] [Render thread/INFO]: [CHAT] Successfully filled 76 blocks
+[13:05:58] [Render thread/INFO]: [MineRLAgent0: Successfully filled 250 blocks]
+[13:05:58] [Render thread/INFO]: [CHAT] Successfully filled 250 blocks
+[13:05:58] [Render thread/INFO]: [MineRLAgent0: Successfully filled 499 blocks]
+[13:05:58] [Render thread/INFO]: [CHAT] Successfully filled 499 blocks
+[13:05:58] [Render thread/INFO]: [MineRLAgent0: Successfully filled 687 blocks]
+[13:05:58] [Render thread/INFO]: [CHAT] Successfully filled 687 blocks
+[13:05:58] [Render thread/INFO]: [MineRLAgent0: Successfully filled 8177 blocks]
+[13:05:59] [Render thread/INFO]: [CHAT] Successfully filled 8177 blocks
+[13:05:59] [Render thread/INFO]: [CHAT] No blocks were filled
+[13:05:59] [Render thread/INFO]: [CHAT] No blocks were filled
+[13:05:59] [Render thread/INFO]: [CHAT] No blocks were filled
+[13:05:59] [Render thread/INFO]: [CHAT] No blocks were filled
+[13:05:59] [Render thread/INFO]: [MineRLAgent0: Successfully filled 8177 blocks]
+[13:05:59] [Render thread/INFO]: [CHAT] Successfully filled 8177 blocks
+[13:05:59] [Render thread/INFO]: [CHAT] No blocks were filled
+[13:05:59] [Render thread/INFO]: [CHAT] No blocks were filled
+[13:05:59] [Render thread/INFO]: [MineRLAgent0: Successfully filled 30 blocks]
+[13:05:59] [Render thread/INFO]: [CHAT] Successfully filled 30 blocks
+[13:05:59] [Render thread/INFO]: [MineRLAgent0: Successfully filled 210 blocks]
+[13:05:59] [Render thread/INFO]: [CHAT] Successfully filled 210 blocks
+[13:05:59] [Render thread/INFO]: [MineRLAgent0: Successfully filled 8177 blocks]
+[13:05:59] [Render thread/INFO]: [CHAT] Successfully filled 8177 blocks
+[13:05:59] [Render thread/INFO]: [CHAT] No blocks were filled
+[13:05:59] [Render thread/INFO]: [CHAT] No blocks were filled
+[13:05:59] [Render thread/INFO]: [CHAT] No blocks were filled
+[13:05:59] [Render thread/INFO]: [CHAT] No blocks were filled
+[13:05:59] [Render thread/INFO]: [MineRLAgent0: Successfully filled 8177 blocks]
+[13:06:00] [Render thread/INFO]: [CHAT] Successfully filled 8177 blocks
+[13:06:00] [Render thread/INFO]: [CHAT] No blocks were filled
+[13:06:00] [Render thread/INFO]: [CHAT] No blocks were filled
+[13:06:00] [Render thread/INFO]: [CHAT] No blocks were filled
+[13:06:00] [Render thread/INFO]: [MineRLAgent0: Successfully filled 1 blocks]
+[13:06:00] [Render thread/INFO]: [CHAT] Successfully filled 1 blocks
+[13:06:00] [Render thread/INFO]: [MineRLAgent0: Successfully filled 7956 blocks]
+[13:06:00] [Render thread/INFO]: [CHAT] Successfully filled 7956 blocks
+[13:06:00] [Render thread/INFO]: [CHAT] No blocks were filled
+[13:06:00] [Render thread/INFO]: [MineRLAgent0: Successfully filled 29 blocks]
+[13:06:00] [Render thread/INFO]: [CHAT] Successfully filled 29 blocks
+[13:06:00] [Render thread/INFO]: [MineRLAgent0: Successfully filled 214 blocks]
+[13:06:00] [Render thread/INFO]: [CHAT] Successfully filled 214 blocks
+[13:06:00] [Render thread/INFO]: [MineRLAgent0: Successfully filled 145 blocks]
+[13:06:00] [Render thread/INFO]: [CHAT] Successfully filled 145 blocks
+[13:06:00] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[13:06:00] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[13:06:00] [Render thread/INFO]: Loaded 3 advancements
+[13:06:01] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[13:06:01] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[13:06:01] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[13:06:01] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[13:06:01] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[13:06:01] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[13:06:01] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[13:06:01] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[13:06:01] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[13:06:02] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[13:06:02] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[13:06:02] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[13:06:02] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[13:06:02] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[13:06:02] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[13:06:02] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[13:06:02] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[13:06:02] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[13:06:03] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[13:06:03] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[13:06:03] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[13:06:03] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[13:06:24] [Render thread/INFO]: [MineRLAgent0: Marked chunk [392, 297] in minecraft:overworld to be force loaded]
+[13:06:24] [Render thread/INFO]: [CHAT] Marked chunk [392, 297] in minecraft:overworld to be force loaded
+[13:06:24] [Render thread/INFO]: [MineRLAgent0: Successfully filled 9 blocks]
+[13:06:24] [Render thread/INFO]: [CHAT] Successfully filled 9 blocks
+[13:06:25] [Render thread/INFO]: [CHAT] No blocks were filled
+[13:06:25] [Render thread/INFO]: [MineRLAgent0: Gamerule doMobSpawning is now set to: false]
+[13:06:25] [Render thread/INFO]: [CHAT] Gamerule doMobSpawning is now set to: false
+[13:06:25] [Render thread/INFO]: [MineRLAgent0: Killed 147 entities]
+[13:06:25] [Render thread/INFO]: [CHAT] Killed 147 entities
+[13:06:25] [Render thread/INFO]: [MineRLAgent0: Set the time to 1000]
+[13:06:25] [Render thread/INFO]: [CHAT] Set the time to 1000
+[13:06:25] [Render thread/INFO]: [MineRLAgent0: Gamerule doDaylightCycle is now set to: false]
+[13:06:25] [Render thread/INFO]: [CHAT] Gamerule doDaylightCycle is now set to: false
+[13:06:25] [Render thread/INFO]: [MineRLAgent0: Gamerule doWeatherCycle is now set to: false]
+[13:06:25] [Render thread/INFO]: [CHAT] Gamerule doWeatherCycle is now set to: false
+[13:06:25] [Render thread/INFO]: [MineRLAgent0: Set the weather to clear]
+[13:06:25] [Render thread/INFO]: [CHAT] Set the weather to clear
+[13:06:25] [Render thread/INFO]: [MineRLAgent0: Set spawn point to 6274, 160, 4762 [0.0] in minecraft:overworld for MineRLAgent0]
+[13:06:25] [Render thread/INFO]: [CHAT] Set spawn point to 6274, 160, 4762 [0.0] in minecraft:overworld for MineRLAgent0
+[13:06:25] [Render thread/INFO]: [MineRLAgent0: Applied effect Resistance to MineRLAgent0]
+[13:06:25] [Render thread/INFO]: [CHAT] Applied effect Resistance to MineRLAgent0
+[13:06:25] [Render thread/INFO]: [MineRLAgent0: Applied effect Water Breathing to MineRLAgent0]
+[13:06:25] [Render thread/INFO]: [CHAT] Applied effect Water Breathing to MineRLAgent0
+[13:06:25] [Render thread/INFO]: [MineRLAgent0: Unmarked 225 chunks in minecraft:overworld from [361, 266] to [375, 280] for force loading]
+[13:06:25] [Render thread/INFO]: [CHAT] Unmarked 225 chunks in minecraft:overworld from [361, 266] to [375, 280] for force loading
+[13:06:26] [Render thread/INFO]: [MineRLAgent0: Gamerule doMobSpawning is now set to: false]
+[13:06:26] [Render thread/INFO]: [CHAT] Gamerule doMobSpawning is now set to: false
+[13:06:26] [Render thread/INFO]: [MineRLAgent0: Killed 242 entities]
+[13:06:26] [Render thread/INFO]: [CHAT] Killed 242 entities
+[13:06:26] [Render thread/INFO]: [MineRLAgent0: Set the time to 1000]
+[13:06:26] [Render thread/INFO]: [CHAT] Set the time to 1000
+[13:06:26] [Render thread/INFO]: [MineRLAgent0: Gamerule doDaylightCycle is now set to: false]
+[13:06:26] [Render thread/INFO]: [CHAT] Gamerule doDaylightCycle is now set to: false
+[13:06:26] [Render thread/INFO]: [MineRLAgent0: Gamerule doWeatherCycle is now set to: false]
+[13:06:26] [Render thread/INFO]: [CHAT] Gamerule doWeatherCycle is now set to: false
+[13:06:26] [Render thread/INFO]: [MineRLAgent0: Set the weather to clear]
+[13:06:26] [Render thread/INFO]: [CHAT] Set the weather to clear
+[13:06:26] [Render thread/INFO]: [MineRLAgent0: Set spawn point to 6274, 160, 4762 [0.0] in minecraft:overworld for MineRLAgent0]
+[13:06:26] [Render thread/INFO]: [CHAT] Set spawn point to 6274, 160, 4762 [0.0] in minecraft:overworld for MineRLAgent0
+[13:06:26] [Render thread/INFO]: [MineRLAgent0: Applied effect Resistance to MineRLAgent0]
+[13:06:26] [Render thread/INFO]: [CHAT] Applied effect Resistance to MineRLAgent0
+[13:06:26] [Render thread/INFO]: [MineRLAgent0: Applied effect Water Breathing to MineRLAgent0]
+[13:06:26] [Render thread/INFO]: [CHAT] Applied effect Water Breathing to MineRLAgent0
+[13:06:26] [Render thread/INFO]: [MineRLAgent0: Successfully filled 35 blocks]
+[13:06:26] [Render thread/INFO]: [CHAT] Successfully filled 35 blocks
+[13:06:26] [Render thread/INFO]: [MineRLAgent0: Successfully filled 35 blocks]
+[13:06:26] [Render thread/INFO]: [CHAT] Successfully filled 35 blocks
+[13:06:26] [Render thread/INFO]: [MineRLAgent0: Successfully filled 25 blocks]
+[13:06:26] [Render thread/INFO]: [CHAT] Successfully filled 25 blocks
+[13:06:26] [Render thread/INFO]: [CHAT] No blocks were filled
+[13:06:27] [Render thread/INFO]: [CHAT] No blocks were filled
+[13:06:27] [Render thread/INFO]: [MineRLAgent0: Successfully filled 49 blocks]
+[13:06:27] [Render thread/INFO]: [CHAT] Successfully filled 49 blocks
+[13:06:27] [Render thread/INFO]: [MineRLAgent0: Successfully filled 1 blocks]
+[13:06:27] [Render thread/INFO]: [CHAT] Successfully filled 1 blocks
+[13:06:27] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[13:06:27] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[13:06:27] [Render thread/INFO]: [MineRLAgent0: Successfully filled 35 blocks]
+[13:06:27] [Render thread/INFO]: [CHAT] Successfully filled 35 blocks
+[13:06:27] [Render thread/INFO]: [MineRLAgent0: Successfully filled 35 blocks]
+[13:06:27] [Render thread/INFO]: [CHAT] Successfully filled 35 blocks
+[13:06:27] [Render thread/INFO]: [MineRLAgent0: Successfully filled 25 blocks]
+[13:06:27] [Render thread/INFO]: [CHAT] Successfully filled 25 blocks
+[13:06:27] [Render thread/INFO]: [CHAT] No blocks were filled
+[13:06:27] [Render thread/INFO]: [CHAT] No blocks were filled
+[13:06:27] [Render thread/INFO]: [MineRLAgent0: Successfully filled 49 blocks]
+[13:06:27] [Render thread/INFO]: [CHAT] Successfully filled 49 blocks
+[13:06:27] [Render thread/INFO]: [MineRLAgent0: Successfully filled 1 blocks]
+[13:06:27] [Render thread/INFO]: [CHAT] Successfully filled 1 blocks
+[13:06:27] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[13:06:27] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[13:06:27] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[13:06:27] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[13:06:27] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[13:06:27] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[13:06:28] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[13:06:28] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[13:06:28] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[13:06:28] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[13:06:28] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[13:06:28] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[13:06:28] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[13:06:28] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[13:06:29] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[13:06:29] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[13:06:29] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[13:06:29] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[13:06:29] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5873.5, 76.0, 4378.5]
+[13:06:30] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5873.5, 76.0, 4378.5
+[13:07:09] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5917.995454, 76.0, 4378.5]
+[13:07:09] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5917.995454, 76.0, 4378.5
+[13:07:09] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5873.5, 76.0, 4378.5]
+[13:07:10] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5873.5, 76.0, 4378.5
+[13:07:10] [Render thread/INFO]: [MineRLAgent0: Marked 3 chunks in minecraft:overworld from [368, 272] to [368, 274] to be force loaded]
+[13:07:10] [Render thread/INFO]: [CHAT] Marked 3 chunks in minecraft:overworld from [368, 272] to [368, 274] to be force loaded
+[13:07:11] [Render thread/INFO]: [CHAT] No blocks were filled
+[13:07:11] [Render thread/INFO]: [CHAT] No blocks were filled
+[13:07:11] [Render thread/INFO]: [CHAT] No items were found on player MineRLAgent0
+[13:07:11] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[13:07:11] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[13:07:11] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[13:07:11] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[13:07:12] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[13:07:12] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[13:07:12] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[13:07:12] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[13:07:12] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5873.5, 76.0, 4378.5]
+[13:07:12] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5873.5, 76.0, 4378.5
+[13:07:12] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5873.625719517, 76.0, 4378.715507903]
+[13:07:12] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5873.625719517, 76.0, 4378.715507903
+[13:07:12] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5874.457134738, 76.0, 4380.140762751]
+[13:07:13] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5874.457134738, 76.0, 4380.140762751
+[13:07:13] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5875.326912252, 76.0, 4381.631815399]
+[13:07:13] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5875.326912252, 76.0, 4381.631815399
+[13:07:13] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5876.196992768, 76.0, 4383.123386133]
+[13:07:13] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5876.196992768, 76.0, 4383.123386133
+[13:07:13] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5877.067075678, 76.0, 4384.61496096]
+[13:07:13] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5877.067075678, 76.0, 4384.61496096
+[13:07:13] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5877.937158606, 76.0, 4386.10654055]
+[13:07:14] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5877.937158606, 76.0, 4386.10654055
+[13:07:14] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5878.807242855, 76.0, 4387.598120284]
+[13:07:14] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5878.807242855, 76.0, 4387.598120284
+[13:07:14] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5879.67732833, 76.0, 4389.089704042]
+[13:07:14] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5879.67732833, 76.0, 4389.089704042
+[13:07:14] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.421704305, 76.0, 4390.365763753]
+[13:07:14] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.421704305, 76.0, 4390.365763753
+[13:07:14] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.454351921, 76.0, 4390.426668517]
+[13:07:15] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.454351921, 76.0, 4390.426668517
+[13:07:15] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.454351921, 76.0, 4390.426668517]
+[13:07:15] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.454351921, 76.0, 4390.426668517
+[13:07:15] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.454351921, 76.0, 4390.426668517]
+[13:07:15] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.454351921, 76.0, 4390.426668517
+[13:07:15] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.455704892, 76.0, 4389.171503572]
+[13:07:15] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.455704892, 76.0, 4389.171503572
+[13:07:15] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.457302148, 76.0, 4387.448360295]
+[13:07:15] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.457302148, 76.0, 4387.448360295
+[13:07:16] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.458974569, 76.0, 4385.721521029]
+[13:07:16] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.458974569, 76.0, 4385.721521029
+[13:07:16] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.460722156, 76.0, 4383.99465296]
+[13:07:16] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.460722156, 76.0, 4383.99465296
+[13:07:16] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.462563698, 76.0, 4382.26778508]
+[13:07:16] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.462563698, 76.0, 4382.26778508
+[13:07:16] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.464508592, 76.0, 4380.540917739]
+[13:07:16] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.464508592, 76.0, 4380.540917739
+[13:07:17] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.46659442, 76.0, 4378.814051149]
+[13:07:17] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.46659442, 76.0, 4378.814051149
+[13:07:17] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.468839973, 76.0, 4377.087185519]
+[13:07:17] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.468839973, 76.0, 4377.087185519
+[13:07:17] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.471282833, 76.0, 4375.360321153]
+[13:07:17] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.471282833, 76.0, 4375.360321153
+[13:07:17] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.47398877, 76.0, 4373.633458571]
+[13:07:17] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.47398877, 76.0, 4373.633458571
+[13:07:18] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.477079925, 76.0, 4371.906598925]
+[13:07:18] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.477079925, 76.0, 4371.906598925
+[13:07:18] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.480744209, 76.0, 4370.179744318]
+[13:07:18] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.480744209, 76.0, 4370.179744318
+[13:07:18] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.485507764, 76.0, 4368.452901254]
+[13:07:18] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.485507764, 76.0, 4368.452901254
+[13:07:18] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.494001203, 76.0, 4366.726116234]
+[13:07:18] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.494001203, 76.0, 4366.726116234
+[13:07:18] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.494001203, 76.0, 4366.470298092]
+[13:07:19] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.494001203, 76.0, 4366.470298092
+[13:07:19] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.494001203, 76.0, 4366.470298092]
+[13:07:19] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.494001203, 76.0, 4366.470298092
+[13:07:19] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.494001203, 76.0, 4366.470298092]
+[13:07:19] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.494001203, 76.0, 4366.470298092
+[13:07:19] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.56474858, 76.0, 4366.89466599]
+[13:07:19] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.56474858, 76.0, 4366.89466599
+[13:07:19] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.841822344, 76.0, 4368.556652872]
+[13:07:19] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.841822344, 76.0, 4368.556652872
+[13:07:20] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5881.125735316, 76.0, 4370.259663749]
+[13:07:20] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5881.125735316, 76.0, 4370.259663749
+[13:07:20] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5881.409702307, 76.0, 4371.963002578]
+[13:07:20] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5881.409702307, 76.0, 4371.963002578
+[13:07:20] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5881.693649473, 76.0, 4373.666346255]
+[13:07:20] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5881.693649473, 76.0, 4373.666346255
+[13:07:21] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5881.977616734, 76.0, 4375.369683786]
+[13:07:21] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5881.977616734, 76.0, 4375.369683786
+[13:07:21] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5882.261584154, 76.0, 4377.07302127]
+[13:07:21] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5882.261584154, 76.0, 4377.07302127
+[13:07:21] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5882.545551575, 76.0, 4378.776358752]
+[13:07:21] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5882.545551575, 76.0, 4378.776358752
+[13:07:21] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5882.829509729, 76.0, 4380.479700161]
+[13:07:21] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5882.829509729, 76.0, 4380.479700161
+[13:07:21] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5883.113466093, 76.0, 4382.183040488]
+[13:07:22] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5883.113466093, 76.0, 4382.183040488
+[13:07:22] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5883.397433426, 76.0, 4383.886377994]
+[13:07:22] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5883.397433426, 76.0, 4383.886377994
+[13:07:22] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5883.681400847, 76.0, 4385.589715476]
+[13:07:22] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5883.681400847, 76.0, 4385.589715476
+[13:07:22] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5883.965368268, 76.0, 4387.293052959]
+[13:07:22] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5883.965368268, 76.0, 4387.293052959
+[13:07:22] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.249318599, 76.0, 4388.996393286]
+[13:07:23] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.249318599, 76.0, 4388.996393286
+[13:07:23] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.492253554, 76.0, 4390.453623777]
+[13:07:23] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.492253554, 76.0, 4390.453623777
+[13:07:23] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.75068729, 76.0, 4390.524828074]
+[13:07:23] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.75068729, 76.0, 4390.524828074
+[13:07:23] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5886.400724099, 76.0, 4390.518204234]
+[13:07:23] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5886.400724099, 76.0, 4390.518204234
+[13:07:23] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5888.028811834, 76.0, 4390.50757832]
+[13:07:23] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5888.028811834, 76.0, 4390.50757832
+[13:07:24] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5888.166764715, 76.0, 4390.50757832]
+[13:07:24] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5888.166764715, 76.0, 4390.50757832
+[13:07:24] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5888.166764715, 76.0, 4390.50757832]
+[13:07:24] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5888.166764715, 76.0, 4390.50757832
+[13:07:24] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5888.166764715, 76.0, 4390.50757832]
+[13:07:24] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5888.166764715, 76.0, 4390.50757832
+[13:07:24] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5887.736534262, 76.0, 4390.506958209]
+[13:07:25] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5887.736534262, 76.0, 4390.506958209
+[13:07:25] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5886.051588761, 76.0, 4390.504956941]
+[13:07:25] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5886.051588761, 76.0, 4390.504956941
+[13:07:25] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.574568555, 76.0, 4390.502363757]
+[13:07:25] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.574568555, 76.0, 4390.502363757
+[13:07:25] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.500936161, 76.0, 4390.404363753]
+[13:07:25] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.500936161, 76.0, 4390.404363753
+[13:07:26] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.500936161, 76.0, 4388.818114098]
+[13:07:26] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.500936161, 76.0, 4388.818114098
+[13:07:26] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.500936161, 76.0, 4387.092352252]
+[13:07:26] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.500936161, 76.0, 4387.092352252
+[13:07:26] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.500936161, 76.0, 4385.365488478]
+[13:07:26] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.500936161, 76.0, 4385.365488478
+[13:07:26] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.500936161, 76.0, 4383.638616]
+[13:07:26] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.500936161, 76.0, 4383.638616
+[13:07:26] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.500936161, 76.0, 4381.911743453]
+[13:07:27] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.500936161, 76.0, 4381.911743453
+[13:07:27] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.500936161, 76.0, 4380.184870906]
+[13:07:27] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.500936161, 76.0, 4380.184870906
+[13:07:27] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.500936161, 76.0, 4378.457998359]
+[13:07:27] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.500936161, 76.0, 4378.457998359
+[13:07:27] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.500936161, 76.0, 4376.731125811]
+[13:07:27] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.500936161, 76.0, 4376.731125811
+[13:07:28] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.500889182, 76.0, 4375.004253264]
+[13:07:28] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.500889182, 76.0, 4375.004253264
+[13:07:28] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.500814017, 76.0, 4373.277380717]
+[13:07:28] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.500814017, 76.0, 4373.277380717
+[13:07:28] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.500738852, 76.0, 4371.55050817]
+[13:07:28] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.500738852, 76.0, 4371.55050817
+[13:07:28] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.500663687, 76.0, 4369.823635622]
+[13:07:28] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.500663687, 76.0, 4369.823635622
+[13:07:28] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.500503961, 76.0, 4368.096763081]
+[13:07:29] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.500503961, 76.0, 4368.096763081
+[13:07:29] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.500269071, 76.0, 4366.619398661]
+[13:07:29] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.500269071, 76.0, 4366.619398661
+[13:07:29] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.598261229, 76.0, 4366.5445225]
+[13:07:29] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.598261229, 76.0, 4366.5445225
+[13:07:29] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5886.184358445, 76.0, 4366.533426637]
+[13:07:29] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5886.184358445, 76.0, 4366.533426637
+[13:07:29] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5887.909626075, 76.0, 4366.513210198]
+[13:07:29] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5887.909626075, 76.0, 4366.513210198
+[13:07:30] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5888.165298618, 76.0, 4366.513210198]
+[13:07:30] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5888.165298618, 76.0, 4366.513210198
+[13:07:30] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5888.165298618, 76.0, 4366.513210198]
+[13:07:30] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5888.165298618, 76.0, 4366.513210198
+[13:07:30] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5888.165298618, 76.0, 4366.513210198]
+[13:07:30] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5888.165298618, 76.0, 4366.513210198
+[13:07:30] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5888.067299263, 76.0, 4366.512853165]
+[13:07:30] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5888.067299263, 76.0, 4366.512853165
+[13:07:31] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5886.481062165, 76.0, 4366.509668055]
+[13:07:31] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5886.481062165, 76.0, 4366.509668055
+[13:07:31] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.755337557, 76.0, 4366.504134085]
+[13:07:31] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.755337557, 76.0, 4366.504134085
+[13:07:31] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.4995117, 76.0, 4366.504134085]
+[13:07:31] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.4995117, 76.0, 4366.504134085
+[13:07:32] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.4995117, 76.0, 4367.759301461]
+[13:07:32] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.4995117, 76.0, 4367.759301461
+[13:07:32] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.4995117, 76.0, 4369.482448271]
+[13:07:32] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.4995117, 76.0, 4369.482448271
+[13:07:32] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.4995117, 76.0, 4371.209291391]
+[13:07:32] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.4995117, 76.0, 4371.209291391
+[13:07:32] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.4995117, 76.0, 4372.936163706]
+[13:07:32] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.4995117, 76.0, 4372.936163706
+[13:07:33] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.499558679, 76.0, 4374.663036251]
+[13:07:33] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.499558679, 76.0, 4374.663036251
+[13:07:33] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.499633844, 76.0, 4376.389908799]
+[13:07:33] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.499633844, 76.0, 4376.389908799
+[13:07:33] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.499793569, 76.0, 4378.116781331]
+[13:07:33] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.499793569, 76.0, 4378.116781331
+[13:07:33] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.499840547, 76.0, 4378.588486466]
+[13:07:33] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.499840547, 76.0, 4378.588486466
+[13:07:34] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5885.542267996, 76.0, 4378.586964375]
+[13:07:34] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5885.542267996, 76.0, 4378.586964375
+[13:07:34] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5887.26231081, 76.0, 4378.584869151]
+[13:07:34] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5887.26231081, 76.0, 4378.584869151
+[13:07:34] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5888.989122975, 76.0, 4378.582708159]
+[13:07:34] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5888.989122975, 76.0, 4378.582708159
+[13:07:34] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5890.71598821, 76.0, 4378.580481397]
+[13:07:34] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5890.71598821, 76.0, 4378.580481397
+[13:07:35] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5892.442853344, 76.0, 4378.578170074]
+[13:07:35] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5892.442853344, 76.0, 4378.578170074
+[13:07:35] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5894.169717873, 76.0, 4378.575764796]
+[13:07:35] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5894.169717873, 76.0, 4378.575764796
+[13:07:35] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5895.896581689, 76.0, 4378.573256166]
+[13:07:35] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5895.896581689, 76.0, 4378.573256166
+[13:07:35] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5897.62344484, 76.0, 4378.570653581]
+[13:07:35] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5897.62344484, 76.0, 4378.570653581
+[13:07:36] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5899.350306966, 76.0, 4378.567910062]
+[13:07:36] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5899.350306966, 76.0, 4378.567910062
+[13:07:36] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5901.077168014, 76.0, 4378.565025609]
+[13:07:36] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5901.077168014, 76.0, 4378.565025609
+[13:07:36] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5902.804027706, 76.0, 4378.561972036]
+[13:07:36] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5902.804027706, 76.0, 4378.561972036
+[13:07:36] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5904.530885685, 76.0, 4378.558721157]
+[13:07:36] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5904.530885685, 76.0, 4378.558721157
+[13:07:36] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5906.257741437, 76.0, 4378.555225993]
+[13:07:37] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5906.257741437, 76.0, 4378.555225993
+[13:07:37] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5907.984594199, 76.0, 4378.551430172]
+[13:07:37] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5907.984594199, 76.0, 4378.551430172
+[13:07:37] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5909.711442987, 76.0, 4378.547258531]
+[13:07:37] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5909.711442987, 76.0, 4378.547258531
+[13:07:37] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5911.438285608, 76.0, 4378.542560743]
+[13:07:37] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5911.438285608, 76.0, 4378.542560743
+[13:07:37] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5913.165118618, 76.0, 4378.537139507]
+[13:07:37] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5913.165118618, 76.0, 4378.537139507
+[13:07:38] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5914.891932888, 76.0, 4378.53050627]
+[13:07:38] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5914.891932888, 76.0, 4378.53050627
+[13:07:38] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5916.618698173, 76.0, 4378.521355141]
+[13:07:38] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5916.618698173, 76.0, 4378.521355141
+[13:07:38] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5917.91509678, 76.0, 4378.51142473]
+[13:07:38] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5917.91509678, 76.0, 4378.51142473
+[13:07:38] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5917.953586425, 76.0, 4378.51142473]
+[13:07:38] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5917.953586425, 76.0, 4378.51142473
+[13:07:38] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5917.953586425, 76.0, 4378.51142473]
+[13:07:38] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5917.953586425, 76.0, 4378.51142473
+[13:07:39] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5917.953586425, 76.0, 4378.51142473]
+[13:07:39] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5917.953586425, 76.0, 4378.51142473
+[13:07:39] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5873.5, 76.0, 4378.5]
+[13:07:39] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5873.5, 76.0, 4378.5
+[13:07:40] [Render thread/INFO]: [CHAT] No chunks were marked for force loading
+[13:07:40] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[13:07:40] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[13:07:40] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[13:07:41] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[13:07:41] [Render thread/INFO]: [CHAT] No items were found on player MineRLAgent0
+[13:07:41] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[13:07:41] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[13:07:41] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[13:07:41] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[13:07:41] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[13:07:41] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[13:07:42] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[13:07:42] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[13:07:42] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5873.5, 76.0, 4378.5]
+[13:07:42] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5873.5, 76.0, 4378.5
+[13:07:42] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5873.625719517, 76.0, 4378.715507903]
+[13:07:42] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5873.625719517, 76.0, 4378.715507903
+[13:07:42] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5874.457134738, 76.0, 4380.140762751]
+[13:07:42] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5874.457134738, 76.0, 4380.140762751
+[13:07:43] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5875.326912252, 76.0, 4381.631815399]
+[13:07:43] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5875.326912252, 76.0, 4381.631815399
+[13:07:43] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5876.196992768, 76.0, 4383.123386133]
+[13:07:43] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5876.196992768, 76.0, 4383.123386133
+[13:07:43] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5877.067075678, 76.0, 4384.61496096]
+[13:07:43] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5877.067075678, 76.0, 4384.61496096
+[13:07:43] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5877.937158606, 76.0, 4386.10654055]
+[13:07:43] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5877.937158606, 76.0, 4386.10654055
+[13:07:44] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5878.807242855, 76.0, 4387.598120284]
+[13:07:44] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5878.807242855, 76.0, 4387.598120284
+[13:07:44] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5879.67732833, 76.0, 4389.089704042]
+[13:07:44] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5879.67732833, 76.0, 4389.089704042
+[13:07:44] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.421704305, 76.0, 4390.365763753]
+[13:07:44] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.421704305, 76.0, 4390.365763753
+[13:07:44] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.454351921, 76.0, 4390.426668517]
+[13:07:44] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.454351921, 76.0, 4390.426668517
+[13:07:45] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.454351921, 76.0, 4390.426668517]
+[13:07:45] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.454351921, 76.0, 4390.426668517
+[13:07:45] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.454351921, 76.0, 4390.426668517]
+[13:07:45] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.454351921, 76.0, 4390.426668517
+[13:07:45] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.455704892, 76.0, 4389.171503572]
+[13:07:45] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.455704892, 76.0, 4389.171503572
+[13:07:45] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.457302148, 76.0, 4387.448360295]
+[13:07:45] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.457302148, 76.0, 4387.448360295
+[13:07:45] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.458974569, 76.0, 4385.721521029]
+[13:07:46] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.458974569, 76.0, 4385.721521029
+[13:07:46] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.460722156, 76.0, 4383.99465296]
+[13:07:46] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.460722156, 76.0, 4383.99465296
+[13:07:46] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.462563698, 76.0, 4382.26778508]
+[13:07:46] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.462563698, 76.0, 4382.26778508
+[13:07:46] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.464508592, 76.0, 4380.540917739]
+[13:07:46] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.464508592, 76.0, 4380.540917739
+[13:07:47] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.46659442, 76.0, 4378.814051149]
+[13:07:47] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.46659442, 76.0, 4378.814051149
+[13:07:47] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.468839973, 76.0, 4377.087185519]
+[13:07:47] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.468839973, 76.0, 4377.087185519
+[13:07:47] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.471282833, 76.0, 4375.360321153]
+[13:07:47] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.471282833, 76.0, 4375.360321153
+[13:07:47] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.47398877, 76.0, 4373.633458571]
+[13:07:47] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.47398877, 76.0, 4373.633458571
+[13:07:47] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.477079925, 76.0, 4371.906598925]
+[13:07:47] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.477079925, 76.0, 4371.906598925
+[13:07:48] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.480744209, 76.0, 4370.179744318]
+[13:07:48] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.480744209, 76.0, 4370.179744318
+[13:07:48] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.485507764, 76.0, 4368.452901254]
+[13:07:48] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.485507764, 76.0, 4368.452901254
+[13:07:48] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.494001203, 76.0, 4366.726116234]
+[13:07:48] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.494001203, 76.0, 4366.726116234
+[13:07:48] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.494001203, 76.0, 4366.470298092]
+[13:07:48] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.494001203, 76.0, 4366.470298092
+[13:07:49] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.494001203, 76.0, 4366.470298092]
+[13:07:49] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.494001203, 76.0, 4366.470298092
+[13:07:49] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.494001203, 76.0, 4366.470298092]
+[13:07:49] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.494001203, 76.0, 4366.470298092
+[13:07:49] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.56474858, 76.0, 4366.89466599]
+[13:07:49] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.56474858, 76.0, 4366.89466599
+[13:07:49] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5880.841822344, 76.0, 4368.556652872]
+[13:07:49] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5880.841822344, 76.0, 4368.556652872
+[13:07:50] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5881.125735316, 76.0, 4370.259663749]
+[13:07:50] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5881.125735316, 76.0, 4370.259663749
+[13:07:50] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5881.409702307, 76.0, 4371.963002578]
+[13:07:50] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5881.409702307, 76.0, 4371.963002578
+[13:07:50] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5881.693649473, 76.0, 4373.666346255]
+[13:07:50] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5881.693649473, 76.0, 4373.666346255
+[13:07:51] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5881.977616734, 76.0, 4375.369683786]
+[13:07:51] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5881.977616734, 76.0, 4375.369683786
+[13:07:51] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5882.261584154, 76.0, 4377.07302127]
+[13:07:51] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5882.261584154, 76.0, 4377.07302127
+[13:07:51] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5882.545551575, 76.0, 4378.776358752]
+[13:07:51] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5882.545551575, 76.0, 4378.776358752
+[13:07:51] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5882.829509729, 76.0, 4380.479700161]
+[13:07:51] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5882.829509729, 76.0, 4380.479700161
+[13:07:52] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5883.113466093, 76.0, 4382.183040488]
+[13:07:52] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5883.113466093, 76.0, 4382.183040488
+[13:07:52] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5883.397433426, 76.0, 4383.886377994]
+[13:07:52] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5883.397433426, 76.0, 4383.886377994
+[13:07:52] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5883.681400847, 76.0, 4385.589715476]
+[13:07:52] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5883.681400847, 76.0, 4385.589715476
+[13:07:52] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5883.965368268, 76.0, 4387.293052959]
+[13:07:52] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5883.965368268, 76.0, 4387.293052959
+[13:07:53] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.249318599, 76.0, 4388.996393286]
+[13:07:53] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.249318599, 76.0, 4388.996393286
+[13:07:53] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.492253554, 76.0, 4390.453623777]
+[13:07:53] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.492253554, 76.0, 4390.453623777
+[13:07:53] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.75068729, 76.0, 4390.524828074]
+[13:07:53] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.75068729, 76.0, 4390.524828074
+[13:07:53] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5886.400724099, 76.0, 4390.518204234]
+[13:07:53] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5886.400724099, 76.0, 4390.518204234
+[13:07:54] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5888.028811834, 76.0, 4390.50757832]
+[13:07:54] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5888.028811834, 76.0, 4390.50757832
+[13:07:54] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5888.166764715, 76.0, 4390.50757832]
+[13:07:54] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5888.166764715, 76.0, 4390.50757832
+[13:07:54] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5888.166764715, 76.0, 4390.50757832]
+[13:07:54] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5888.166764715, 76.0, 4390.50757832
+[13:07:54] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5888.166764715, 76.0, 4390.50757832]
+[13:07:54] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5888.166764715, 76.0, 4390.50757832
+[13:07:55] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5887.736534262, 76.0, 4390.506958209]
+[13:07:55] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5887.736534262, 76.0, 4390.506958209
+[13:07:55] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5886.051588761, 76.0, 4390.504956941]
+[13:07:55] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5886.051588761, 76.0, 4390.504956941
+[13:07:55] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.574568555, 76.0, 4390.502363757]
+[13:07:55] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.574568555, 76.0, 4390.502363757
+[13:07:55] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.500936161, 76.0, 4390.404363753]
+[13:07:55] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.500936161, 76.0, 4390.404363753
+[13:07:56] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.500936161, 76.0, 4388.818114098]
+[13:07:56] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.500936161, 76.0, 4388.818114098
+[13:07:56] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.500936161, 76.0, 4387.092352252]
+[13:07:56] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.500936161, 76.0, 4387.092352252
+[13:07:56] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.500936161, 76.0, 4385.365488478]
+[13:07:56] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.500936161, 76.0, 4385.365488478
+[13:07:56] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.500936161, 76.0, 4383.638616]
+[13:07:56] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.500936161, 76.0, 4383.638616
+[13:07:57] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.500936161, 76.0, 4381.911743453]
+[13:07:57] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.500936161, 76.0, 4381.911743453
+[13:07:57] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.500936161, 76.0, 4380.184870906]
+[13:07:57] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.500936161, 76.0, 4380.184870906
+[13:07:57] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.500936161, 76.0, 4378.457998359]
+[13:07:57] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.500936161, 76.0, 4378.457998359
+[13:07:57] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.500936161, 76.0, 4376.731125811]
+[13:07:58] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.500936161, 76.0, 4376.731125811
+[13:07:58] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.500889182, 76.0, 4375.004253264]
+[13:07:58] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.500889182, 76.0, 4375.004253264
+[13:07:58] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.500814017, 76.0, 4373.277380717]
+[13:07:58] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.500814017, 76.0, 4373.277380717
+[13:07:58] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.500738852, 76.0, 4371.55050817]
+[13:07:58] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.500738852, 76.0, 4371.55050817
+[13:07:58] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.500663687, 76.0, 4369.823635622]
+[13:07:58] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.500663687, 76.0, 4369.823635622
+[13:07:59] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.500503961, 76.0, 4368.096763081]
+[13:07:59] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.500503961, 76.0, 4368.096763081
+[13:07:59] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.500269071, 76.0, 4366.619398661]
+[13:07:59] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.500269071, 76.0, 4366.619398661
+[13:07:59] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.598261229, 76.0, 4366.5445225]
+[13:07:59] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.598261229, 76.0, 4366.5445225
+[13:07:59] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5886.184358445, 76.0, 4366.533426637]
+[13:07:59] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5886.184358445, 76.0, 4366.533426637
+[13:08:00] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5887.909626075, 76.0, 4366.513210198]
+[13:08:00] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5887.909626075, 76.0, 4366.513210198
+[13:08:00] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5888.165298618, 76.0, 4366.513210198]
+[13:08:00] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5888.165298618, 76.0, 4366.513210198
+[13:08:00] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5888.165298618, 76.0, 4366.513210198]
+[13:08:00] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5888.165298618, 76.0, 4366.513210198
+[13:08:00] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5888.165298618, 76.0, 4366.513210198]
+[13:08:00] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5888.165298618, 76.0, 4366.513210198
+[13:08:01] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5888.067299263, 76.0, 4366.512853165]
+[13:08:01] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5888.067299263, 76.0, 4366.512853165
+[13:08:01] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5886.481062165, 76.0, 4366.509668055]
+[13:08:01] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5886.481062165, 76.0, 4366.509668055
+[13:08:01] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.755337557, 76.0, 4366.504134085]
+[13:08:01] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.755337557, 76.0, 4366.504134085
+[13:08:02] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.4995117, 76.0, 4366.504134085]
+[13:08:02] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.4995117, 76.0, 4366.504134085
+[13:08:02] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.4995117, 76.0, 4367.759301461]
+[13:08:02] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.4995117, 76.0, 4367.759301461
+[13:08:02] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.4995117, 76.0, 4369.482448271]
+[13:08:02] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.4995117, 76.0, 4369.482448271
+[13:08:02] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.4995117, 76.0, 4371.209291391]
+[13:08:02] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.4995117, 76.0, 4371.209291391
+[13:08:03] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.4995117, 76.0, 4372.936163706]
+[13:08:03] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.4995117, 76.0, 4372.936163706
+[13:08:03] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.499558679, 76.0, 4374.663036251]
+[13:08:03] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.499558679, 76.0, 4374.663036251
+[13:08:03] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.499633844, 76.0, 4376.389908799]
+[13:08:03] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.499633844, 76.0, 4376.389908799
+[13:08:03] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.499793569, 76.0, 4378.116781331]
+[13:08:04] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.499793569, 76.0, 4378.116781331
+[13:08:04] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5884.499840547, 76.0, 4378.588486466]
+[13:08:04] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5884.499840547, 76.0, 4378.588486466
+[13:08:04] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5885.542267996, 76.0, 4378.586964375]
+[13:08:04] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5885.542267996, 76.0, 4378.586964375
+[13:08:04] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5887.26231081, 76.0, 4378.584869151]
+[13:08:04] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5887.26231081, 76.0, 4378.584869151
+[13:08:04] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5888.989122975, 76.0, 4378.582708159]
+[13:08:04] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5888.989122975, 76.0, 4378.582708159
+[13:08:05] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5890.71598821, 76.0, 4378.580481397]
+[13:08:05] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5890.71598821, 76.0, 4378.580481397
+[13:08:05] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5892.442853344, 76.0, 4378.578170074]
+[13:08:05] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5892.442853344, 76.0, 4378.578170074
+[13:08:05] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5894.169717873, 76.0, 4378.575764796]
+[13:08:05] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5894.169717873, 76.0, 4378.575764796
+[13:08:05] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5895.896581689, 76.0, 4378.573256166]
+[13:08:06] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5895.896581689, 76.0, 4378.573256166
+[13:08:06] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5897.62344484, 76.0, 4378.570653581]
+[13:08:06] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5897.62344484, 76.0, 4378.570653581
+[13:08:06] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5899.350306966, 76.0, 4378.567910062]
+[13:08:06] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5899.350306966, 76.0, 4378.567910062
+[13:08:06] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5901.077168014, 76.0, 4378.565025609]
+[13:08:06] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5901.077168014, 76.0, 4378.565025609
+[13:08:06] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5902.804027706, 76.0, 4378.561972036]
+[13:08:06] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5902.804027706, 76.0, 4378.561972036
+[13:08:07] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5904.530885685, 76.0, 4378.558721157]
+[13:08:07] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5904.530885685, 76.0, 4378.558721157
+[13:08:07] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5906.257741437, 76.0, 4378.555225993]
+[13:08:07] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5906.257741437, 76.0, 4378.555225993
+[13:08:07] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5907.984594199, 76.0, 4378.551430172]
+[13:08:07] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5907.984594199, 76.0, 4378.551430172
+[13:08:07] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5909.711442987, 76.0, 4378.547258531]
+[13:08:07] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5909.711442987, 76.0, 4378.547258531
+[13:08:08] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5911.438285608, 76.0, 4378.542560743]
+[13:08:08] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5911.438285608, 76.0, 4378.542560743
+[13:08:08] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5913.165118618, 76.0, 4378.537139507]
+[13:08:08] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5913.165118618, 76.0, 4378.537139507
+[13:08:08] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5914.891932888, 76.0, 4378.53050627]
+[13:08:08] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5914.891932888, 76.0, 4378.53050627
+[13:08:08] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5916.618698173, 76.0, 4378.521355141]
+[13:08:08] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5916.618698173, 76.0, 4378.521355141
+[13:08:08] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5917.91509678, 76.0, 4378.51142473]
+[13:08:09] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5917.91509678, 76.0, 4378.51142473
+[13:08:09] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5917.953586425, 76.0, 4378.51142473]
+[13:08:09] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5917.953586425, 76.0, 4378.51142473
+[13:08:09] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5917.953586425, 76.0, 4378.51142473]
+[13:08:09] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5917.953586425, 76.0, 4378.51142473
+[13:08:09] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5917.953586425, 76.0, 4378.51142473]
+[13:08:09] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5917.953586425, 76.0, 4378.51142473
+[13:08:10] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5873.5, 76.0, 4378.5]
+[13:08:10] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5873.5, 76.0, 4378.5
+[13:08:11] [Render thread/INFO]: [CHAT] No chunks were marked for force loading
+[13:08:11] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[13:08:11] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[13:08:11] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[13:08:11] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[13:08:12] [Render thread/INFO]: [CHAT] No items were found on player MineRLAgent0
+[13:08:12] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[13:08:12] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[13:08:12] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[13:08:12] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[13:08:12] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[13:08:12] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[13:08:12] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[13:08:12] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[13:08:17] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5917.995454, 76.0, 4378.5]
+[13:08:17] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5917.995454, 76.0, 4378.5
+[13:15:21] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5873.5, 76.0, 4378.5]
+[13:15:21] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5873.5, 76.0, 4378.5
+[13:15:21] [Render thread/INFO]: [CHAT] No chunks were marked for force loading
+[13:15:22] [Render thread/INFO]: [CHAT] No blocks were filled
+[13:15:22] [Render thread/INFO]: [CHAT] No blocks were filled
+[13:15:22] [Render thread/INFO]: [CHAT] No items were found on player MineRLAgent0
+[13:15:22] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[13:15:22] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[13:15:22] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[13:15:22] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[13:15:23] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[13:15:23] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[13:15:23] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[13:15:23] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[13:15:27] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5917.995454, 76.0, 4378.5]
+[13:15:27] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5917.995454, 76.0, 4378.5
+[13:19:01] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5873.5, 76.0, 4378.5]
+[13:19:01] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5873.5, 76.0, 4378.5
+[13:19:01] [Render thread/INFO]: [CHAT] No chunks were marked for force loading
+[13:19:02] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[13:19:02] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[13:19:02] [Render thread/INFO]: [MineRLAgent0: Successfully filled 3 blocks]
+[13:19:02] [Render thread/INFO]: [CHAT] Successfully filled 3 blocks
+[13:19:02] [Render thread/INFO]: [CHAT] No items were found on player MineRLAgent0
+[13:19:02] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[13:19:02] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[13:19:02] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[13:19:02] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[13:19:02] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[13:19:02] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[13:19:03] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[13:19:03] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[13:19:07] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5917.995454, 76.0, 4378.5]
+[13:19:07] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5917.995454, 76.0, 4378.5
+[13:22:43] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5873.5, 76.0, 4378.5]
+[13:22:43] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5873.5, 76.0, 4378.5
+[13:22:43] [Render thread/INFO]: [CHAT] No chunks were marked for force loading
+[13:22:44] [Render thread/INFO]: [CHAT] No blocks were filled
+[13:22:44] [Render thread/INFO]: [CHAT] No blocks were filled
+[13:22:44] [Render thread/INFO]: [CHAT] No items were found on player MineRLAgent0
+[13:22:44] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[13:22:44] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[13:22:44] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[13:22:44] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[13:22:45] [Render thread/INFO]: [MineRLAgent0: Gave 1 [Paper] to MineRLAgent0]
+[13:22:45] [Render thread/INFO]: [CHAT] Gave 1 [Paper] to MineRLAgent0
+[13:22:45] [Render thread/INFO]: [MineRLAgent0: Removed 1 items from player MineRLAgent0]
+[13:22:45] [Render thread/INFO]: [CHAT] Removed 1 items from player MineRLAgent0
+[13:22:49] [Render thread/INFO]: [MineRLAgent0: Teleported MineRLAgent0 to 5917.995454, 76.0, 4378.5]
+[13:22:49] [Render thread/INFO]: [CHAT] Teleported MineRLAgent0 to 5917.995454, 76.0, 4378.5
+[13:26:23] [EnvServerSocketHandler/INFO]: [STDOUT]: *** Stopping the replay, returning control to the inputs

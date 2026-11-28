@@ -64,10 +64,12 @@ B2 前两次在动作解码时因输入类型错误退出，均产生 0 条评�
 
 第二版在 30 格使用原有的第二版确认种子，原视觉与打乱视觉各 30 场。该结果单独解释布景变化下的表现。
 
-泛化闭环待完成。
+原视觉 30/30 [88.6% 至 100.0%]，选对 30，干扰柱 0，超时 0。打乱视觉 9/30 [16.7% 至 47.9%]，选对 9，干扰柱 21，超时 0。 [逐组指标](confirmation-v3-generalization-bC0rsef2/A-30.json)
 
 泛化首轮因恢复目录缺少布景模块退出，产生 0 条评分。重试使用从已校验的原工具目录复制的相同模块。 [模块校验记录](confirmation-v3-resumed-afoquMK5/generalization-dependency.sha256)
 
 ## 冻结源码与记录
 
 规划器与控制链使用 `ed550b0ee9d1ef1226e762d00b35d9e7cc5d1fee`，由 SHA-256 清单逐项验证。7B、房间读出、稳定器和控制条件遵循冻结评测。布景泛化使用已归档的第二版场景。 [冻结源码校验](confirmation-v3-resumed-afoquMK5/frozen-code.sha256) · [实验工具校验](confirmation-v3-resumed-afoquMK5/harness.sha256) · [种子校验](confirmation-v3-resumed-afoquMK5/seed-plan.sha256) · [GPU 前置记录](confirmation-v3-resumed-afoquMK5/gpu-eligibility.json)
+
+[完整机器汇总](confirmation-v3-resumed-afoquMK5/confirmation-decision.json)
