@@ -75,7 +75,7 @@ def existing_seeds(checkout):
     return worlds, scenarios, sources
 
 
-def plan(checkout, output, repaired=False):
+def plan(checkout, output, repaired=False, plan_l=False):
     git=["git","-C",str(checkout)]
     inventory=subprocess.check_output([*git,"rev-parse","HEAD"]).decode().strip()
     if repaired:
@@ -83,16 +83,22 @@ def plan(checkout, output, repaired=False):
 
         subprocess.run([*git,"merge-base","--is-ancestor",FROZEN,inventory],check=True)
         revision=SCENE_REVISION
+    elif plan_l:
+        subprocess.run([*git,"merge-base","--is-ancestor",FROZEN,inventory],check=True)
+        revision="original"
     else:
         if inventory!=FROZEN:
             raise ValueError("Generate the original plan against the frozen archive")
         revision="original"
     worlds, scenes, sources = existing_seeds(checkout)
-    namespace=SEED_NAMESPACE if not repaired else f"{SEED_NAMESPACE} {revision} {inventory}"
+    if plan_l:
+        namespace=f"MineMem learned pointer confirmation {inventory} 2026-11-28"
+    else:
+        namespace=SEED_NAMESPACE if not repaired else f"{SEED_NAMESPACE} {revision} {inventory}"
     rng = random.Random(namespace)
     occupied_worlds, occupied_scenes = worlds.copy(), scenes.copy()
     cases, balance_attempts = [], {}
-    for distance in DISTANCES:
+    for distance in ((30,) if plan_l else DISTANCES):
         while True:
             seeds = rng.sample(range(1_800_000_000,1_801_000_000),30)
             balance_attempts[distance] = balance_attempts.get(distance,0)+1
@@ -115,6 +121,8 @@ def plan(checkout, output, repaired=False):
     output.mkdir()
     planned=dict(frozen_commit=FROZEN, namespace=namespace, cases=cases,
                  twin_seeds=twins,balance_attempts=balance_attempts)
+    if plan_l:
+        planned.update(evaluation="learned_cell_pointers",inventory_commit=inventory)
     if repaired:
         planned.update(scene_revision=revision, inventory_commit=inventory)
         previously_failed=checkout/"results/confirmation-ed550b0-iZY2YtxL/seed-plan.json"
@@ -167,7 +175,8 @@ def worker(output, seed_plan, rank, workers, retry, scene):
 
 def aggregate(seed_plan, inputs, output):
     output.mkdir()
-    cases = json.loads(seed_plan.read_text())["cases"]
+    plan = json.loads(seed_plan.read_text())
+    cases = plan["cases"]
     expected = {(row["distance"],row["seed"]):row for row in cases}
     complete, configs = {}, {}
     errors = []
@@ -207,10 +216,13 @@ def aggregate(seed_plan, inputs, output):
                  pose_jumps=sum(int(row["pose_jumps"]) for row in values))
         low, high = metrics[distance]["reverse_route"]["wilson95"]
         metrics[distance]["reverse_route"]["compatible_with_half"] = low<=.50<=high
-    passed=(not missing and all(metrics[d]["teacher"]["rate"]>=.95 for d in DISTANCES)
-            and all(metrics[d][name]["rate"]<.10 for d in (30,60,100)
-                    for name in ("turn_180","scan","find_structure","start_pose"))
-            and all(metrics[d]["reverse_route"]["compatible_with_half"] for d in (30,60,100)))
+    if plan.get("evaluation")=="learned_cell_pointers":
+        passed=not missing and metrics[30]["teacher"]["n"]==30 and metrics[30]["teacher"]["rate"]>=.95
+    else:
+        passed=(not missing and all(metrics[d]["teacher"]["rate"]>=.95 for d in DISTANCES)
+                and all(metrics[d][name]["rate"]<.10 for d in (30,60,100)
+                        for name in ("turn_180","scan","find_structure","start_pose"))
+                and all(metrics[d]["reverse_route"]["compatible_with_half"] for d in (30,60,100)))
     save(output/"metrics.json",dict(passed=passed,distances=metrics,missing=missing,errors=errors))
     save(output/"fixtures.json",dict(protocol=PROTOCOL,formal=[r["seed"] for r in cases],fixtures=configs))
     with (output/"acceptance.csv").open("x",newline="") as stream:
@@ -231,7 +243,9 @@ if __name__ == "__main__":
     planning=stages.add_parser("plan")
     planning.add_argument("checkout",type=Path)
     planning.add_argument("output",type=Path)
-    planning.add_argument("--repaired-scene",action="store_true")
+    cohort=planning.add_mutually_exclusive_group()
+    cohort.add_argument("--repaired-scene",action="store_true")
+    cohort.add_argument("--plan-l",action="store_true")
     cpu=stages.add_parser("worker")
     cpu.add_argument("output",type=Path)
     cpu.add_argument("--plan",type=Path,required=True)
@@ -245,7 +259,7 @@ if __name__ == "__main__":
     freeze.add_argument("--inputs",type=Path,nargs="+",required=True)
     args=parser.parse_args()
     if args.stage=="plan":
-        plan(args.checkout,args.output,args.repaired_scene)
+        plan(args.checkout,args.output,args.repaired_scene,args.plan_l)
     elif args.stage=="worker":
         original=args.retry_from/args.output.name if args.retry_from else None
         worker(args.output,args.plan,args.worker,args.workers,original,args.scene)

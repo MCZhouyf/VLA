@@ -52,11 +52,13 @@ def crossed_cells(start, end):
 
 
 class GridRoute:
-    def __init__(self, outbound, slot):
+    def __init__(self, outbound, slot=None, *, goal=None):
         points = [tuple(pose[:2]) for pose in outbound]
-        if len(points) < 2 or slot not in (0, 1):
+        if len(points) < 2 or (goal is None and slot not in (0, 1)):
             raise ValueError("A grid route requires an outbound walk and a room choice")
-        self.goal = room_observations(points)[slot]
+        self.goal = room_observations(points)[slot] if goal is None else tuple(goal)
+        if self.goal not in points:
+            raise ValueError("The goal must be a visited point")
         self.neighbours = defaultdict(set)
         observed = defaultdict(list)
         self.crossing = {}
@@ -145,8 +147,8 @@ def straight_sections(points, known_chord):
 class CommittedGridRoute(GridRoute):
     """Track one shortest path, with recovery tied to the current path segment."""
 
-    def __init__(self, outbound, slot):
-        super().__init__(outbound, slot)
+    def __init__(self, outbound, slot=None, *, goal=None):
+        super().__init__(outbound, slot, goal=goal)
         self.sections = None
         self.segment = 0
         self.progress = 0.

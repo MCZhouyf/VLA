@@ -64,7 +64,7 @@ def attempt_rows(folder, group, seeds, distance):
 
 
 def run_job(run, group, gpu, seeds, common, distance=None, *, repaired_scene=False, ground_repair=False,
-            recovery_harness=None):
+            recovery_harness=None, pose_noise=None, harness_mode=None):
     frozen=run/"frozen-source/code/minemem/t1_exec.sh"
     target=run/"eval"/group
     target.mkdir(parents=True,exist_ok=recovery_harness is not None)
@@ -90,13 +90,16 @@ def run_job(run, group, gpu, seeds, common, distance=None, *, repaired_scene=Fal
                 harness.append("--repaired-scene")
             if ground_repair:
                 harness.extend(("--ground-repair-world",str(GRAVEL_WORLD)))
+            if pose_noise:
+                harness.extend(("--pose-noise",*map(str,pose_noise)))
             if distance is not None:
-                command=([*harness,"--mode","a"] if repaired_scene or ground_repair else
+                command=([*harness,"--mode","a"] if repaired_scene or ground_repair or pose_noise else
                          ["bash",str(frozen),"waypoint-predictions",str(gpu),str(folder)])
                 command.extend([*common,"--grid-plan",group.rsplit("/",1)[-1],"--distances",str(distance),
                                 "--tracking-repair","--variant","spatial"])
             else:
-                command=[*harness,*common,"--mode",group.split("/")[-1].split("-")[0]]
+                mode=harness_mode or group.split("/")[-1].split("-")[0]
+                command=[*harness,*common,"--mode",mode]
             command+=["--seeds",*map(str,pending)]
             with (target/f"attempt-{attempt}.log").open("x") as stream:
                 for reservation in range(20):

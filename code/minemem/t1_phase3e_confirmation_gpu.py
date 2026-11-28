@@ -196,11 +196,19 @@ def run(args):
 
 def main():
     entry=argparse.ArgumentParser(add_help=False)
-    entry.add_argument("--mode",choices=(*MODES,"a"),required=True)
+    entry.add_argument("--mode",choices=(*MODES,"a","pointer","pointer-twin"),required=True)
     entry.add_argument("--repaired-scene",action="store_true")
     entry.add_argument("--ground-repair-world",type=int)
+    entry.add_argument("--pose-noise",nargs=2,type=float,metavar=("BLOCKS","DEGREES"))
     if "--help" not in sys.argv[1:]:
         options,rest=entry.parse_known_args()
+        if options.mode in ("pointer","pointer-twin"):
+            # The eval module must share this process's loaded entry module.
+            sys.modules["t1_phase3e_confirmation_gpu"]=sys.modules[__name__]
+            from t1_phase3e_pointer_eval import main as pointer_main
+
+            pointer_main(rest,twin=options.mode=="pointer-twin")
+            return
         if options.mode=="a":
             import t1_phase3e_predicted_rollout as evaluator
             from t1_phase3e_predicted_eval import parse_args
@@ -217,7 +225,12 @@ def main():
                     return arena_type(world_seed,effects)
 
                 evaluator.FirstArrivalArena=arena_for_world
-            evaluator.run(parse_args(rest))
+            args=parse_args(rest)
+            if options.pose_noise:
+                from t1_phase3e_pose_noise import install_noise
+
+                install_noise(evaluator,args.output,*options.pose_noise)
+            evaluator.run(args)
             return
     parser=argparse.ArgumentParser(description=__doc__)
     for name in ("output","checkpoint","training-run","fixtures","room-weights"):

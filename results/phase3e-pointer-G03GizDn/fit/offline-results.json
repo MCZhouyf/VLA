@@ -1,0 +1,127 @@
+{
+  "train_trajectories": 122,
+  "train_supervised_states": 39959,
+  "validation_arms": 120,
+  "groups": {
+    "validation/10": {
+      "n": 30,
+      "assigned_right_room": 30,
+      "room_wilson95": [
+        0.8864866068260312,
+        1.0
+      ],
+      "pairs": 0,
+      "flips": 0,
+      "both_correct": 0,
+      "goal_cell_correct": 30,
+      "waypoint_cells_correct": 26,
+      "waypoint_within_two": 47,
+      "waypoint_n": 120
+    },
+    "validation/30": {
+      "n": 30,
+      "assigned_right_room": 30,
+      "room_wilson95": [
+        0.8864866068260312,
+        1.0
+      ],
+      "pairs": 0,
+      "flips": 0,
+      "both_correct": 0,
+      "goal_cell_correct": 30,
+      "waypoint_cells_correct": 25,
+      "waypoint_within_two": 74,
+      "waypoint_n": 120
+    },
+    "validation/60": {
+      "n": 30,
+      "assigned_right_room": 30,
+      "room_wilson95": [
+        0.8864866068260312,
+        1.0
+      ],
+      "pairs": 0,
+      "flips": 0,
+      "both_correct": 0,
+      "goal_cell_correct": 30,
+      "waypoint_cells_correct": 16,
+      "waypoint_within_two": 29,
+      "waypoint_n": 120
+    },
+    "validation/100": {
+      "n": 30,
+      "assigned_right_room": 30,
+      "room_wilson95": [
+        0.8864866068260312,
+        1.0
+      ],
+      "pairs": 0,
+      "flips": 0,
+      "both_correct": 0,
+      "goal_cell_correct": 29,
+      "waypoint_cells_correct": 3,
+      "waypoint_within_two": 22,
+      "waypoint_n": 120
+    },
+    "test/10": {
+      "n": 60,
+      "assigned_right_room": 60,
+      "room_wilson95": [
+        0.93982814785791,
+        1.0
+      ],
+      "pairs": 30,
+      "flips": 30,
+      "both_correct": 30,
+      "goal_cell_correct": 60,
+      "waypoint_cells_correct": 38,
+      "waypoint_within_two": 78,
+      "waypoint_n": 240
+    },
+    "test/30": {
+      "n": 60,
+      "assigned_right_room": 59,
+      "room_wilson95": [
+        0.9114487027240993,
+        0.9970518402052136
+      ],
+      "pairs": 30,
+      "flips": 29,
+      "both_correct": 29,
+      "goal_cell_correct": 59,
+      "waypoint_cells_correct": 85,
+      "waypoint_within_two": 134,
+      "waypoint_n": 240
+    },
+    "test/60": {
+      "n": 60,
+      "assigned_right_room": 60,
+      "room_wilson95": [
+        0.93982814785791,
+        1.0
+      ],
+      "pairs": 30,
+      "flips": 30,
+      "both_correct": 30,
+      "goal_cell_correct": 59,
+      "waypoint_cells_correct": 18,
+      "waypoint_within_two": 35,
+      "waypoint_n": 240
+    },
+    "test/100": {
+      "n": 60,
+      "assigned_right_room": 60,
+      "room_wilson95": [
+        0.93982814785791,
+        1.0
+      ],
+      "pairs": 30,
+      "flips": 30,
+      "both_correct": 30,
+      "goal_cell_correct": 59,
+      "waypoint_cells_correct": 0,
+      "waypoint_within_two": 66,
+      "waypoint_n": 240
+    }
+  }
+}

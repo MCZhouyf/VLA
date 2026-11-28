@@ -674,6 +674,26 @@ PYTHONPATH="$confirmation_run/frozen-source/code/minemem:$WORK/code/JarvisVLA" \
 
 B2 的动作转换恢复记录保存在运行目录的 `recovery-harness`。已有运行的续跑入口是 `bash "$confirmation_run/recovery-harness/continue.sh" "$confirmation_run" --controller "$controller" --offline "$no_anchor" --oracle-gate "$oracle_gate" --generalization "$generalization_run"`。它等待原调度器退出，再从已记录的评分继续处理同一组种子。
 
+#### 学习式目标格、航点和位姿误差
+
+用包含确认结果的归档检出生成 30 格新种子。在 MineStudio 实验 Python 环境训练目标格和航点指针，使用现有阶段 B 训练缓存、孪生留出以及冻结的视觉投影。
+
+```bash
+python3 -B code/minemem/t1_phase3e_confirmation_cpu.py plan "$inventory_checkout" "$seed_output" --plan-l
+python3 -B code/minemem/t1_phase3e_pointer_train.py --train-plan "$stage_b/cache-plan.json" \
+  --train-cache "$stage_b/cache" --holdout "$swap/holdout-index.json" --holdout-cache "$swap/features-2" \
+  --room-weights "$no_anchor/room-head.pt" --output "$pointer_run/fit"
+```
+
+服务器运行目录含 SHA-256 清单与冻结原 v3 源码。完成 CPU 布景验收后，Plan L 调度使用 `eval-harness/t1_phase3e_pointer_confirm.py`，指定 `--run`、`--controller` 和 `--room-weights`。位姿噪声调度使用 `harness/t1_phase3e_pose_sweep.py`，指定 `--run`、`--controller`、`--offline` 和 `--oracle-gate`。读取归档汇总生成论文曲线和 CSV。
+
+```bash
+python3 -B code/minemem/t1_phase3e_pose_plot.py "$confirmation_run/confirmation-decision.json" \
+  "$pose_run/pose-results.json" "$plot_output/pose-error-curve"
+```
+
+[补充实验与投稿日期核对](results/REPORT_phase3e_followup.md)
+
 ## 研究交接总报告
 
 完整阶段事实、证据边界、原始结果索引和接手复核命令见

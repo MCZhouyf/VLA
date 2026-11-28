@@ -67,7 +67,8 @@ for path in Path(sys.argv[1]).glob("worker-*/acceptance.csv"):
 print(len(rows))
 PY
 )"
-if (( complete < 120 )); then
+expected="$(python3 -c 'import json,sys; print(len(json.load(open(sys.argv[1]))["cases"]))' "$run/seed-plan.json")"
+if (( complete < expected )); then
     printf 'cpu_retry_same_seeds\n' > "$run/progress"
     launch "$run/cpu-retry" --retry-from "$run/cpu"
     input+=("$run/cpu-retry")

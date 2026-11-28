@@ -1,0 +1,5762 @@
+[
+  {
+    "seed": 2135000000,
+    "split": "validation",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 4,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.0,
+    "goal_world": [
+      1472.164794921875,
+      1972.4886474609375
+    ]
+  },
+  {
+    "seed": 2135000100,
+    "split": "validation",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.9427571296691895,
+    "goal_world": [
+      1462.4921875,
+      1980.8331298828125
+    ]
+  },
+  {
+    "seed": 2135000204,
+    "split": "validation",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 3.9932801723480225,
+    "goal_world": [
+      1462.51318359375,
+      1976.165283203125
+    ]
+  },
+  {
+    "seed": 2135000300,
+    "split": "validation",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 3.5613176822662354,
+    "goal_world": [
+      1462.515869140625,
+      1980.5902099609375
+    ]
+  },
+  {
+    "seed": 2135001000,
+    "split": "validation",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 7.133352279663086,
+    "goal_world": [
+      3804.488525390625,
+      760.1648559570312
+    ]
+  },
+  {
+    "seed": 2135001100,
+    "split": "validation",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.1012725830078125,
+    "goal_world": [
+      3798.51318359375,
+      764.8349609375
+    ]
+  },
+  {
+    "seed": 2135001204,
+    "split": "validation",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.158452272415161,
+    "goal_world": [
+      3812.834716796875,
+      774.48681640625
+    ]
+  },
+  {
+    "seed": 2135001300,
+    "split": "validation",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 3.0220143795013428,
+    "goal_world": [
+      3808.361083984375,
+      750.5138549804688
+    ]
+  },
+  {
+    "seed": 2135002000,
+    "split": "validation",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 7.398775100708008,
+    "goal_world": [
+      2068.488525390625,
+      6206.83544921875
+    ]
+  },
+  {
+    "seed": 2135002100,
+    "split": "validation",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 3,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.2697765529155731,
+    "goal_world": [
+      2062.51318359375,
+      6202.16552734375
+    ]
+  },
+  {
+    "seed": 2135002204,
+    "split": "validation",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.9643874168396,
+    "goal_world": [
+      2086.48681640625,
+      6206.83447265625
+    ]
+  },
+  {
+    "seed": 2135002300,
+    "split": "validation",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.9428740739822388,
+    "goal_world": [
+      2072.165283203125,
+      6192.51318359375
+    ]
+  },
+  {
+    "seed": 2135003000,
+    "split": "validation",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 5.345755100250244,
+    "goal_world": [
+      -4291.51123046875,
+      -5923.16455078125
+    ]
+  },
+  {
+    "seed": 2135003100,
+    "split": "validation",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 4,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.0,
+    "goal_world": [
+      -4287.8330078125,
+      -5937.5078125
+    ]
+  },
+  {
+    "seed": 2135003204,
+    "split": "validation",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.158695936203003,
+    "goal_world": [
+      -4297.5078125,
+      -5923.1669921875
+    ]
+  },
+  {
+    "seed": 2135003300,
+    "split": "validation",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 2,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.532767295837402,
+    "goal_world": [
+      -4287.5908203125,
+      -5913.51416015625
+    ]
+  },
+  {
+    "seed": 2135004000,
+    "split": "validation",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 6.969829559326172,
+    "goal_world": [
+      1608.5096435546875,
+      -6119.8251953125
+    ]
+  },
+  {
+    "seed": 2135004100,
+    "split": "validation",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 1,
+    "waypoint_within_two": 2,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.4283645153045654,
+    "goal_world": [
+      1614.48681640625,
+      -6119.83447265625
+    ]
+  },
+  {
+    "seed": 2135004204,
+    "split": "validation",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.8887674808502197,
+    "goal_world": [
+      1604.8331298828125,
+      -6105.4921875
+    ]
+  },
+  {
+    "seed": 2135004300,
+    "split": "validation",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.532773971557617,
+    "goal_world": [
+      1590.515869140625,
+      -6115.40966796875
+    ]
+  },
+  {
+    "seed": 2135005000,
+    "split": "validation",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 7.774040699005127,
+    "goal_world": [
+      -4191.8251953125,
+      -1727.4903564453125
+    ]
+  },
+  {
+    "seed": 2135005100,
+    "split": "validation",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.1873829364776611,
+    "goal_world": [
+      -4191.8330078125,
+      -1745.5078125
+    ]
+  },
+  {
+    "seed": 2135005204,
+    "split": "validation",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 4,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.0,
+    "goal_world": [
+      -4187.16552734375,
+      -1721.51318359375
+    ]
+  },
+  {
+    "seed": 2135005300,
+    "split": "validation",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 3.0218911170959473,
+    "goal_world": [
+      -4177.51318359375,
+      -1735.638916015625
+    ]
+  },
+  {
+    "seed": 2135006000,
+    "split": "validation",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 1,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.8094650506973267,
+    "goal_world": [
+      376.17510986328125,
+      -297.5098876953125
+    ]
+  },
+  {
+    "seed": 2135006100,
+    "split": "validation",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 3,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.26981478929519653,
+    "goal_world": [
+      376.1667785644531,
+      -279.492431640625
+    ]
+  },
+  {
+    "seed": 2135006204,
+    "split": "validation",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.26311731338501,
+    "goal_world": [
+      366.5132141113281,
+      -293.8346862792969
+    ]
+  },
+  {
+    "seed": 2135006300,
+    "split": "validation",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.532824516296387,
+    "goal_world": [
+      390.4869079589844,
+      -293.6388854980469
+    ]
+  },
+  {
+    "seed": 2135007000,
+    "split": "validation",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 6.314490795135498,
+    "goal_world": [
+      1948.4901123046875,
+      -2919.824951171875
+    ]
+  },
+  {
+    "seed": 2135007100,
+    "split": "validation",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 2,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 3.022045135498047,
+    "goal_world": [
+      1956.8331298828125,
+      -2929.5078125
+    ]
+  },
+  {
+    "seed": 2135007204,
+    "split": "validation",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.158696413040161,
+    "goal_world": [
+      1942.51318359375,
+      -2915.1650390625
+    ]
+  },
+  {
+    "seed": 2135007300,
+    "split": "validation",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 9.497488021850586,
+    "goal_world": [
+      1952.4097900390625,
+      -2929.484130859375
+    ]
+  },
+  {
+    "seed": 2135008000,
+    "split": "validation",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 4,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.0,
+    "goal_world": [
+      5052.48876953125,
+      1272.164794921875
+    ]
+  },
+  {
+    "seed": 2135008100,
+    "split": "validation",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 3.021984815597534,
+    "goal_world": [
+      5060.8330078125,
+      1286.5078125
+    ]
+  },
+  {
+    "seed": 2135008204,
+    "split": "validation",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 3.6695635318756104,
+    "goal_world": [
+      5046.51318359375,
+      1272.165283203125
+    ]
+  },
+  {
+    "seed": 2135008300,
+    "split": "validation",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.942654013633728,
+    "goal_world": [
+      5070.48681640625,
+      1276.6387939453125
+    ]
+  },
+  {
+    "seed": 2135009000,
+    "split": "validation",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 2,
+    "waypoint_within_two": 2,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.0792871713638306,
+    "goal_world": [
+      428.8249206542969,
+      3698.509765625
+    ]
+  },
+  {
+    "seed": 2135009100,
+    "split": "validation",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 3,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.4856816530227661,
+    "goal_world": [
+      428.83306884765625,
+      3680.4921875
+    ]
+  },
+  {
+    "seed": 2135009204,
+    "split": "validation",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 2,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.6189309358596802,
+    "goal_world": [
+      424.16693115234375,
+      3680.4921875
+    ]
+  },
+  {
+    "seed": 2135009300,
+    "split": "validation",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.910536766052246,
+    "goal_world": [
+      414.5158996582031,
+      3690.40966796875
+    ]
+  },
+  {
+    "seed": 2135010000,
+    "split": "validation",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.158451795578003,
+    "goal_world": [
+      -1987.5113525390625,
+      2460.835205078125
+    ]
+  },
+  {
+    "seed": 2135010100,
+    "split": "validation",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 16.369579315185547,
+    "goal_world": [
+      -1979.1668701171875,
+      2446.4921875
+    ]
+  },
+  {
+    "seed": 2135010204,
+    "split": "validation",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 1,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.6190223693847656,
+    "goal_world": [
+      -1969.4923095703125,
+      2460.8330078125
+    ]
+  },
+  {
+    "seed": 2135010300,
+    "split": "validation",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 5.072447776794434,
+    "goal_world": [
+      -1979.361083984375,
+      2470.486572265625
+    ]
+  },
+  {
+    "seed": 2135011000,
+    "split": "validation",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 1,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.427997589111328,
+    "goal_world": [
+      -6299.1650390625,
+      2932.48876953125
+    ]
+  },
+  {
+    "seed": 2135011100,
+    "split": "validation",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 1,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.8095122575759888,
+    "goal_world": [
+      -6289.4921875,
+      2940.8330078125
+    ]
+  },
+  {
+    "seed": 2135011204,
+    "split": "validation",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.158451795578003,
+    "goal_world": [
+      -6289.51318359375,
+      2936.165283203125
+    ]
+  },
+  {
+    "seed": 2135011300,
+    "split": "validation",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.101128101348877,
+    "goal_world": [
+      -6299.408203125,
+      2950.482177734375
+    ]
+  },
+  {
+    "seed": 2135012000,
+    "split": "validation",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 3,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.3491082191467285,
+    "goal_world": [
+      -6327.490234375,
+      988.8248901367188
+    ]
+  },
+  {
+    "seed": 2135012100,
+    "split": "validation",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.155130863189697,
+    "goal_world": [
+      -6345.48681640625,
+      984.165283203125
+    ]
+  },
+  {
+    "seed": 2135012204,
+    "split": "validation",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 5.180673599243164,
+    "goal_world": [
+      -6335.8330078125,
+      974.4921875
+    ]
+  },
+  {
+    "seed": 2135012300,
+    "split": "validation",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 7.0150556564331055,
+    "goal_world": [
+      -6321.51318359375,
+      988.6387329101562
+    ]
+  },
+  {
+    "seed": 2135013000,
+    "split": "validation",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 2,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.6188997030258179,
+    "goal_world": [
+      -1659.1649169921875,
+      5792.51123046875
+    ]
+  },
+  {
+    "seed": 2135013100,
+    "split": "validation",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.7522177696228027,
+    "goal_world": [
+      -1649.51318359375,
+      5784.16552734375
+    ]
+  },
+  {
+    "seed": 2135013204,
+    "split": "validation",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.0795925855636597,
+    "goal_world": [
+      -1649.51318359375,
+      5788.83447265625
+    ]
+  },
+  {
+    "seed": 2135013300,
+    "split": "validation",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 3.1295573711395264,
+    "goal_world": [
+      -1649.5159912109375,
+      5788.59033203125
+    ]
+  },
+  {
+    "seed": 2135014000,
+    "split": "validation",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 7.071743011474609,
+    "goal_world": [
+      1948.164794921875,
+      1494.4886474609375
+    ]
+  },
+  {
+    "seed": 2135014100,
+    "split": "validation",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.9427571296691895,
+    "goal_world": [
+      1938.4921875,
+      1502.8331298828125
+    ]
+  },
+  {
+    "seed": 2135014204,
+    "split": "validation",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 2,
+    "waypoint_within_two": 2,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 3.0219836235046387,
+    "goal_world": [
+      1962.5076904296875,
+      1498.166748046875
+    ]
+  },
+  {
+    "seed": 2135014300,
+    "split": "validation",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.53283166885376,
+    "goal_world": [
+      1952.5902099609375,
+      1488.5159912109375
+    ]
+  },
+  {
+    "seed": 2135015000,
+    "split": "validation",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 1,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 5.832552433013916,
+    "goal_world": [
+      808.5112915039062,
+      2396.835205078125
+    ]
+  },
+  {
+    "seed": 2135015100,
+    "split": "validation",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 3.021984815597534,
+    "goal_world": [
+      800.165283203125,
+      2382.51318359375
+    ]
+  },
+  {
+    "seed": 2135015204,
+    "split": "validation",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.158452272415161,
+    "goal_world": [
+      814.4867553710938,
+      2392.165283203125
+    ]
+  },
+  {
+    "seed": 2135015300,
+    "split": "validation",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.964659214019775,
+    "goal_world": [
+      790.5126342773438,
+      2392.35498046875
+    ]
+  },
+  {
+    "seed": 2135016000,
+    "split": "validation",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 7.774377822875977,
+    "goal_world": [
+      -4535.490234375,
+      -643.1751098632812
+    ]
+  },
+  {
+    "seed": 2135016100,
+    "split": "validation",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 2,
+    "waypoint_within_two": 3,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.510992169380188,
+    "goal_world": [
+      -4543.83447265625,
+      -633.5132446289062
+    ]
+  },
+  {
+    "seed": 2135016204,
+    "split": "validation",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 3,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.349108338356018,
+    "goal_world": [
+      -4553.5078125,
+      -643.1668701171875
+    ]
+  },
+  {
+    "seed": 2135016300,
+    "split": "validation",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 6.7988996505737305,
+    "goal_world": [
+      -4539.40966796875,
+      -657.4840698242188
+    ]
+  },
+  {
+    "seed": 2135017000,
+    "split": "validation",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 4,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.0,
+    "goal_world": [
+      -5251.8349609375,
+      -3838.488525390625
+    ]
+  },
+  {
+    "seed": 2135017100,
+    "split": "validation",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.5109927654266357,
+    "goal_world": [
+      -5251.83447265625,
+      -3832.51318359375
+    ]
+  },
+  {
+    "seed": 2135017204,
+    "split": "validation",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 7.123547077178955,
+    "goal_world": [
+      -5247.1669921875,
+      -3856.5078125
+    ]
+  },
+  {
+    "seed": 2135017300,
+    "split": "validation",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 5.504332065582275,
+    "goal_world": [
+      -5237.51611328125,
+      -3842.409912109375
+    ]
+  },
+  {
+    "seed": 2135018000,
+    "split": "validation",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.8886152505874634,
+    "goal_world": [
+      2076.488525390625,
+      2588.835205078125
+    ]
+  },
+  {
+    "seed": 2135018100,
+    "split": "validation",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.964419364929199,
+    "goal_world": [
+      2080.165283203125,
+      2598.48681640625
+    ]
+  },
+  {
+    "seed": 2135018204,
+    "split": "validation",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.158696413040161,
+    "goal_world": [
+      2070.51318359375,
+      2588.8349609375
+    ]
+  },
+  {
+    "seed": 2135018300,
+    "split": "validation",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 3.0217981338500977,
+    "goal_world": [
+      2070.51318359375,
+      2588.638916015625
+    ]
+  },
+  {
+    "seed": 2135019000,
+    "split": "validation",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 7.774416923522949,
+    "goal_world": [
+      -6034.48876953125,
+      2593.164794921875
+    ]
+  },
+  {
+    "seed": 2135019100,
+    "split": "validation",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.1013336181640625,
+    "goal_world": [
+      -6052.5078125,
+      2597.8330078125
+    ]
+  },
+  {
+    "seed": 2135019204,
+    "split": "validation",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 2,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.6189006567001343,
+    "goal_world": [
+      -6028.4921875,
+      2593.166748046875
+    ]
+  },
+  {
+    "seed": 2135019300,
+    "split": "validation",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 7.500934600830078,
+    "goal_world": [
+      -6028.515625,
+      2593.40966796875
+    ]
+  },
+  {
+    "seed": 2135020000,
+    "split": "validation",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 2,
+    "waypoint_within_two": 2,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 3.8871653079986572,
+    "goal_world": [
+      488.5097961425781,
+      -707.1751098632812
+    ]
+  },
+  {
+    "seed": 2135020100,
+    "split": "validation",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.964510917663574,
+    "goal_world": [
+      484.8346862792969,
+      -697.51318359375
+    ]
+  },
+  {
+    "seed": 2135020204,
+    "split": "validation",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.158574342727661,
+    "goal_world": [
+      484.8346862792969,
+      -721.4867553710938
+    ]
+  },
+  {
+    "seed": 2135020300,
+    "split": "validation",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 3.021768093109131,
+    "goal_world": [
+      484.6321716308594,
+      -697.513671875
+    ]
+  },
+  {
+    "seed": 2135021000,
+    "split": "validation",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 6.804052829742432,
+    "goal_world": [
+      584.509765625,
+      -4003.175048828125
+    ]
+  },
+  {
+    "seed": 2135021100,
+    "split": "validation",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 4,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.0,
+    "goal_world": [
+      580.834716796875,
+      -4017.48681640625
+    ]
+  },
+  {
+    "seed": 2135021204,
+    "split": "validation",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 5.612253665924072,
+    "goal_world": [
+      566.4921875,
+      -4007.8330078125
+    ]
+  },
+  {
+    "seed": 2135021300,
+    "split": "validation",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 3.9929275512695312,
+    "goal_world": [
+      576.40966796875,
+      -3993.515869140625
+    ]
+  },
+  {
+    "seed": 2135022000,
+    "split": "validation",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 6.220682621002197,
+    "goal_world": [
+      2856.51123046875,
+      -227.16488647460938
+    ]
+  },
+  {
+    "seed": 2135022100,
+    "split": "validation",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.9426960945129395,
+    "goal_world": [
+      2838.4921875,
+      -231.8330841064453
+    ]
+  },
+  {
+    "seed": 2135022204,
+    "split": "validation",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.860088586807251,
+    "goal_world": [
+      2862.5078125,
+      -227.16693115234375
+    ]
+  },
+  {
+    "seed": 2135022300,
+    "split": "validation",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": false,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 6.745157241821289,
+    "goal_world": [
+      2844.39990234375,
+      -223.40817260742188
+    ]
+  },
+  {
+    "seed": 2135023000,
+    "split": "validation",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 3,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.591027021408081,
+    "goal_world": [
+      4124.490234375,
+      -2819.175048828125
+    ]
+  },
+  {
+    "seed": 2135023100,
+    "split": "validation",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.0793510675430298,
+    "goal_world": [
+      4142.48681640625,
+      -2819.165283203125
+    ]
+  },
+  {
+    "seed": 2135023204,
+    "split": "validation",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.158696413040161,
+    "goal_world": [
+      4128.1669921875,
+      -2809.492431640625
+    ]
+  },
+  {
+    "seed": 2135023300,
+    "split": "validation",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 5.179812431335449,
+    "goal_world": [
+      4132.59033203125,
+      -2833.484130859375
+    ]
+  },
+  {
+    "seed": 2135024000,
+    "split": "validation",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 2,
+    "waypoint_within_two": 2,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 3.8884453773498535,
+    "goal_world": [
+      4356.8349609375,
+      1652.48876953125
+    ]
+  },
+  {
+    "seed": 2135024100,
+    "split": "validation",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 9.852363586425781,
+    "goal_world": [
+      4366.48681640625,
+      1660.834716796875
+    ]
+  },
+  {
+    "seed": 2135024204,
+    "split": "validation",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 4,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.0,
+    "goal_world": [
+      4356.83447265625,
+      1646.51318359375
+    ]
+  },
+  {
+    "seed": 2135024300,
+    "split": "validation",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 6.043526649475098,
+    "goal_world": [
+      4356.59033203125,
+      1670.484130859375
+    ]
+  },
+  {
+    "seed": 2135025000,
+    "split": "validation",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 1,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.6186556816101074,
+    "goal_world": [
+      5852.82470703125,
+      4514.509765625
+    ]
+  },
+  {
+    "seed": 2135025100,
+    "split": "validation",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.9428799152374268,
+    "goal_world": [
+      5852.8330078125,
+      4520.5078125
+    ]
+  },
+  {
+    "seed": 2135025204,
+    "split": "validation",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 9.06641960144043,
+    "goal_world": [
+      5848.16552734375,
+      4520.48681640625
+    ]
+  },
+  {
+    "seed": 2135025300,
+    "split": "validation",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 5.072202205657959,
+    "goal_world": [
+      5838.51318359375,
+      4506.361328125
+    ]
+  },
+  {
+    "seed": 2135026000,
+    "split": "validation",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 2,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.539612889289856,
+    "goal_world": [
+      -323.5098876953125,
+      -1735.824951171875
+    ]
+  },
+  {
+    "seed": 2135026100,
+    "split": "validation",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.9427573680877686,
+    "goal_world": [
+      -329.4867858886719,
+      -1735.834716796875
+    ]
+  },
+  {
+    "seed": 2135026204,
+    "split": "validation",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 4,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.0,
+    "goal_world": [
+      -305.4922790527344,
+      -1731.1668701171875
+    ]
+  },
+  {
+    "seed": 2135026300,
+    "split": "validation",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 9.065763473510742,
+    "goal_world": [
+      -329.4869079589844,
+      -1731.3612060546875
+    ]
+  },
+  {
+    "seed": 2135027000,
+    "split": "validation",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.0793474912643433,
+    "goal_world": [
+      4476.490234375,
+      3452.824951171875
+    ]
+  },
+  {
+    "seed": 2135027100,
+    "split": "validation",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 4,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.0,
+    "goal_world": [
+      4494.5078125,
+      3448.166748046875
+    ]
+  },
+  {
+    "seed": 2135027204,
+    "split": "validation",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.371346473693848,
+    "goal_world": [
+      4484.8330078125,
+      3462.5078125
+    ]
+  },
+  {
+    "seed": 2135027300,
+    "split": "validation",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 3,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.2697797119617462,
+    "goal_world": [
+      4484.638671875,
+      3438.51318359375
+    ]
+  },
+  {
+    "seed": 2135028000,
+    "split": "validation",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 6.999399662017822,
+    "goal_world": [
+      552.5097045898438,
+      -3015.8251953125
+    ]
+  },
+  {
+    "seed": 2135028100,
+    "split": "validation",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 2,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.050673723220825,
+    "goal_world": [
+      558.5076293945312,
+      -3015.833251953125
+    ]
+  },
+  {
+    "seed": 2135028204,
+    "split": "validation",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.158574342727661,
+    "goal_world": [
+      544.1653442382812,
+      -3001.51318359375
+    ]
+  },
+  {
+    "seed": 2135028300,
+    "split": "validation",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.1584789752960205,
+    "goal_world": [
+      544.40966796875,
+      -3001.515869140625
+    ]
+  },
+  {
+    "seed": 2135029000,
+    "split": "validation",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 2,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.4316413402557373,
+    "goal_world": [
+      -3531.8251953125,
+      835.5097045898438
+    ]
+  },
+  {
+    "seed": 2135029100,
+    "split": "validation",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.942635416984558,
+    "goal_world": [
+      -3527.165283203125,
+      841.48681640625
+    ]
+  },
+  {
+    "seed": 2135029204,
+    "split": "validation",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 1,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.3204450607299805,
+    "goal_world": [
+      -3541.5078125,
+      831.8331298828125
+    ]
+  },
+  {
+    "seed": 2135029300,
+    "split": "validation",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.9424223899841309,
+    "goal_world": [
+      -3527.361083984375,
+      841.4869384765625
+    ]
+  },
+  {
+    "seed": 2136000001,
+    "split": "test",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 4,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.0,
+    "goal_world": [
+      -5443.509765625,
+      -2307.175048828125
+    ]
+  },
+  {
+    "seed": 2136000001,
+    "split": "test",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 4,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.0,
+    "goal_world": [
+      -5431.48876953125,
+      -2307.164794921875
+    ]
+  },
+  {
+    "seed": 2136000100,
+    "split": "test",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 2,
+    "waypoint_within_two": 2,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.4822096824645996,
+    "goal_world": [
+      -5439.83447265625,
+      -2321.48681640625
+    ]
+  },
+  {
+    "seed": 2136000100,
+    "split": "test",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 11.15277099609375,
+    "goal_world": [
+      -5439.8330078125,
+      -2297.492431640625
+    ]
+  },
+  {
+    "seed": 2136000200,
+    "split": "test",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 6.043967247009277,
+    "goal_world": [
+      -5425.51318359375,
+      -2311.834716796875
+    ]
+  },
+  {
+    "seed": 2136000200,
+    "split": "test",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 6.583634853363037,
+    "goal_world": [
+      -5449.5078125,
+      -2311.8330078125
+    ]
+  },
+  {
+    "seed": 2136000300,
+    "split": "test",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.9428740739822388,
+    "goal_world": [
+      -5449.5078125,
+      -2307.1669921875
+    ]
+  },
+  {
+    "seed": 2136000300,
+    "split": "test",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.9428740739822388,
+    "goal_world": [
+      -5425.51318359375,
+      -2307.165283203125
+    ]
+  },
+  {
+    "seed": 2136001001,
+    "split": "test",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 6.9183526039123535,
+    "goal_world": [
+      2588.488525390625,
+      5144.1650390625
+    ]
+  },
+  {
+    "seed": 2136001001,
+    "split": "test",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 7.350650310516357,
+    "goal_world": [
+      2600.509765625,
+      5144.1748046875
+    ]
+  },
+  {
+    "seed": 2136001100,
+    "split": "test",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.9428791999816895,
+    "goal_world": [
+      2582.51318359375,
+      5148.8349609375
+    ]
+  },
+  {
+    "seed": 2136001100,
+    "split": "test",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 3,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.4824318885803223,
+    "goal_world": [
+      2606.5078125,
+      5148.8330078125
+    ]
+  },
+  {
+    "seed": 2136001200,
+    "split": "test",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 2,
+    "waypoint_within_two": 2,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.0791040658950806,
+    "goal_world": [
+      2606.5078125,
+      5148.8330078125
+    ]
+  },
+  {
+    "seed": 2136001200,
+    "split": "test",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.158208131790161,
+    "goal_world": [
+      2582.51318359375,
+      5148.8349609375
+    ]
+  },
+  {
+    "seed": 2136001300,
+    "split": "test",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 6.313605308532715,
+    "goal_world": [
+      2606.48681640625,
+      5144.16552734375
+    ]
+  },
+  {
+    "seed": 2136001300,
+    "split": "test",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.53272008895874,
+    "goal_world": [
+      2582.4921875,
+      5144.1669921875
+    ]
+  },
+  {
+    "seed": 2136002001,
+    "split": "test",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 6.318422317504883,
+    "goal_world": [
+      732.4901123046875,
+      2424.175048828125
+    ]
+  },
+  {
+    "seed": 2136002001,
+    "split": "test",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 1,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 6.361710548400879,
+    "goal_world": [
+      744.5113525390625,
+      2424.164794921875
+    ]
+  },
+  {
+    "seed": 2136002100,
+    "split": "test",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.047270774841309,
+    "goal_world": [
+      750.5076293945312,
+      2424.166748046875
+    ]
+  },
+  {
+    "seed": 2136002100,
+    "split": "test",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 1,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.9139668941497803,
+    "goal_world": [
+      726.51318359375,
+      2424.165283203125
+    ]
+  },
+  {
+    "seed": 2136002200,
+    "split": "test",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.0793483257293701,
+    "goal_world": [
+      726.51318359375,
+      2424.165283203125
+    ]
+  },
+  {
+    "seed": 2136002200,
+    "split": "test",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.158452272415161,
+    "goal_world": [
+      750.5076293945312,
+      2424.166748046875
+    ]
+  },
+  {
+    "seed": 2136002300,
+    "split": "test",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.10107946395874,
+    "goal_world": [
+      726.51318359375,
+      2428.8349609375
+    ]
+  },
+  {
+    "seed": 2136002300,
+    "split": "test",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.10107946395874,
+    "goal_world": [
+      750.5076904296875,
+      2428.8330078125
+    ]
+  },
+  {
+    "seed": 2136003001,
+    "split": "test",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.158696413040161,
+    "goal_world": [
+      -4319.8349609375,
+      -3647.488525390625
+    ]
+  },
+  {
+    "seed": 2136003001,
+    "split": "test",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 1,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.8093278408050537,
+    "goal_world": [
+      -4319.82470703125,
+      -3659.509765625
+    ]
+  },
+  {
+    "seed": 2136003100,
+    "split": "test",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.964420318603516,
+    "goal_world": [
+      -4305.4921875,
+      -3651.1669921875
+    ]
+  },
+  {
+    "seed": 2136003100,
+    "split": "test",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 1,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 3.2377095222473145,
+    "goal_world": [
+      -4329.48681640625,
+      -3651.1650390625
+    ]
+  },
+  {
+    "seed": 2136003200,
+    "split": "test",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 7.123547554016113,
+    "goal_world": [
+      -4319.83447265625,
+      -3665.48681640625
+    ]
+  },
+  {
+    "seed": 2136003200,
+    "split": "test",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 1,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.050666332244873,
+    "goal_world": [
+      -4319.8330078125,
+      -3641.492431640625
+    ]
+  },
+  {
+    "seed": 2136003300,
+    "split": "test",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 6.097784996032715,
+    "goal_world": [
+      -4315.1669921875,
+      -3641.4921875
+    ]
+  },
+  {
+    "seed": 2136003300,
+    "split": "test",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 6.799323081970215,
+    "goal_world": [
+      -4315.16552734375,
+      -3665.48681640625
+    ]
+  },
+  {
+    "seed": 2136004001,
+    "split": "test",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 1,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 6.361612319946289,
+    "goal_world": [
+      -511.1648864746094,
+      3681.51123046875
+    ]
+  },
+  {
+    "seed": 2136004001,
+    "split": "test",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 7.7767205238342285,
+    "goal_world": [
+      -511.17510986328125,
+      3669.490234375
+    ]
+  },
+  {
+    "seed": 2136004100,
+    "split": "test",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 3,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.2698223292827606,
+    "goal_world": [
+      -511.1653137207031,
+      3663.51318359375
+    ]
+  },
+  {
+    "seed": 2136004100,
+    "split": "test",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.2951411008834839,
+    "goal_world": [
+      -511.1668701171875,
+      3687.5078125
+    ]
+  },
+  {
+    "seed": 2136004200,
+    "split": "test",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 3.669685125350952,
+    "goal_world": [
+      -501.4922790527344,
+      3677.8330078125
+    ]
+  },
+  {
+    "seed": 2136004200,
+    "split": "test",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.158696413040161,
+    "goal_world": [
+      -525.48681640625,
+      3677.8349609375
+    ]
+  },
+  {
+    "seed": 2136004300,
+    "split": "test",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 7.123298645019531,
+    "goal_world": [
+      -525.48681640625,
+      3677.8349609375
+    ]
+  },
+  {
+    "seed": 2136004300,
+    "split": "test",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 3.561467170715332,
+    "goal_world": [
+      -501.4922790527344,
+      3677.8330078125
+    ]
+  },
+  {
+    "seed": 2136005001,
+    "split": "test",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 1,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.6189303398132324,
+    "goal_world": [
+      384.16485595703125,
+      756.4886474609375
+    ]
+  },
+  {
+    "seed": 2136005001,
+    "split": "test",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 1,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.8094650506973267,
+    "goal_world": [
+      384.1748962402344,
+      768.5097045898438
+    ]
+  },
+  {
+    "seed": 2136005100,
+    "split": "test",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 5.828136444091797,
+    "goal_world": [
+      388.8346862792969,
+      750.5132446289062
+    ]
+  },
+  {
+    "seed": 2136005100,
+    "split": "test",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.1012725830078125,
+    "goal_world": [
+      388.8331298828125,
+      774.5078125
+    ]
+  },
+  {
+    "seed": 2136005200,
+    "split": "test",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 9.066023826599121,
+    "goal_world": [
+      388.8331298828125,
+      774.5078125
+    ]
+  },
+  {
+    "seed": 2136005200,
+    "split": "test",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 7.339161396026611,
+    "goal_world": [
+      388.8346862792969,
+      750.5132446289062
+    ]
+  },
+  {
+    "seed": 2136005300,
+    "split": "test",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.9427069425582886,
+    "goal_world": [
+      398.5077209472656,
+      764.8330688476562
+    ]
+  },
+  {
+    "seed": 2136005300,
+    "split": "test",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 3,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 3.237888813018799,
+    "goal_world": [
+      374.51318359375,
+      764.8349609375
+    ]
+  },
+  {
+    "seed": 2136006001,
+    "split": "test",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 8.27253246307373,
+    "goal_world": [
+      2376.509765625,
+      4664.1748046875
+    ]
+  },
+  {
+    "seed": 2136006001,
+    "split": "test",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 8.106369018554688,
+    "goal_world": [
+      2364.488525390625,
+      4664.1650390625
+    ]
+  },
+  {
+    "seed": 2136006100,
+    "split": "test",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 4,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.0,
+    "goal_world": [
+      2368.165283203125,
+      4654.51318359375
+    ]
+  },
+  {
+    "seed": 2136006100,
+    "split": "test",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 2,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.5396755337715149,
+    "goal_world": [
+      2368.166748046875,
+      4678.5078125
+    ]
+  },
+  {
+    "seed": 2136006200,
+    "split": "test",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.425015449523926,
+    "goal_world": [
+      2372.8330078125,
+      4678.5078125
+    ]
+  },
+  {
+    "seed": 2136006200,
+    "split": "test",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.964632511138916,
+    "goal_world": [
+      2372.834716796875,
+      4654.51318359375
+    ]
+  },
+  {
+    "seed": 2136006300,
+    "split": "test",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": false,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 8.52638053894043,
+    "goal_world": [
+      2376.4990234375,
+      4654.49755859375
+    ]
+  },
+  {
+    "seed": 2136006300,
+    "split": "test",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 6.044079303741455,
+    "goal_world": [
+      2372.834716796875,
+      4678.48681640625
+    ]
+  },
+  {
+    "seed": 2136007001,
+    "split": "test",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.158573865890503,
+    "goal_world": [
+      -1827.5113525390625,
+      -1379.164794921875
+    ]
+  },
+  {
+    "seed": 2136007001,
+    "split": "test",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.158573865890503,
+    "goal_world": [
+      -1815.490234375,
+      -1379.175048828125
+    ]
+  },
+  {
+    "seed": 2136007100,
+    "split": "test",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 3.021984815597534,
+    "goal_world": [
+      -1809.51318359375,
+      -1383.834716796875
+    ]
+  },
+  {
+    "seed": 2136007100,
+    "split": "test",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 6.583639144897461,
+    "goal_world": [
+      -1833.5078125,
+      -1383.8331298828125
+    ]
+  },
+  {
+    "seed": 2136007200,
+    "split": "test",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.158574342727661,
+    "goal_world": [
+      -1823.8331298828125,
+      -1393.5078125
+    ]
+  },
+  {
+    "seed": 2136007200,
+    "split": "test",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.158574342727661,
+    "goal_world": [
+      -1823.834716796875,
+      -1369.51318359375
+    ]
+  },
+  {
+    "seed": 2136007300,
+    "split": "test",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 2,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 3.777531385421753,
+    "goal_world": [
+      -1809.51318359375,
+      -1379.165283203125
+    ]
+  },
+  {
+    "seed": 2136007300,
+    "split": "test",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 3.561680555343628,
+    "goal_world": [
+      -1833.5078125,
+      -1379.1668701171875
+    ]
+  },
+  {
+    "seed": 2136008001,
+    "split": "test",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 5.828033447265625,
+    "goal_world": [
+      -1134.1649169921875,
+      -2987.51123046875
+    ]
+  },
+  {
+    "seed": 2136008001,
+    "split": "test",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 6.315247535705566,
+    "goal_world": [
+      -1134.175048828125,
+      -2975.490234375
+    ]
+  },
+  {
+    "seed": 2136008100,
+    "split": "test",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.9427571296691895,
+    "goal_world": [
+      -1134.165283203125,
+      -2969.51318359375
+    ]
+  },
+  {
+    "seed": 2136008100,
+    "split": "test",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 3.507673501968384,
+    "goal_world": [
+      -1134.1668701171875,
+      -2993.5078125
+    ]
+  },
+  {
+    "seed": 2136008200,
+    "split": "test",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 1,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.8094197511672974,
+    "goal_world": [
+      -1138.834716796875,
+      -2969.51318359375
+    ]
+  },
+  {
+    "seed": 2136008200,
+    "split": "test",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 3,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.2698065936565399,
+    "goal_world": [
+      -1138.8331298828125,
+      -2993.5078125
+    ]
+  },
+  {
+    "seed": 2136008300,
+    "split": "test",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 7.123298168182373,
+    "goal_world": [
+      -1148.48681640625,
+      -2979.1650390625
+    ]
+  },
+  {
+    "seed": 2136008300,
+    "split": "test",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 5.828131198883057,
+    "goal_world": [
+      -1124.4923095703125,
+      -2979.1669921875
+    ]
+  },
+  {
+    "seed": 2136009001,
+    "split": "test",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.158573865890503,
+    "goal_world": [
+      996.824951171875,
+      -5119.490234375
+    ]
+  },
+  {
+    "seed": 2136009001,
+    "split": "test",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.0792864561080933,
+    "goal_world": [
+      996.8351440429688,
+      -5131.51123046875
+    ]
+  },
+  {
+    "seed": 2136009100,
+    "split": "test",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 3,
+    "waypoint_within_two": 3,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.7554988861083984,
+    "goal_world": [
+      982.51318359375,
+      -5127.83447265625
+    ]
+  },
+  {
+    "seed": 2136009100,
+    "split": "test",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 1,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 3.075817108154297,
+    "goal_world": [
+      1006.5076293945312,
+      -5127.8330078125
+    ]
+  },
+  {
+    "seed": 2136009200,
+    "split": "test",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 3,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.2698981463909149,
+    "goal_world": [
+      982.4921875,
+      -5127.8330078125
+    ]
+  },
+  {
+    "seed": 2136009200,
+    "split": "test",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 3,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.26977595686912537,
+    "goal_world": [
+      1006.4867553710938,
+      -5127.83447265625
+    ]
+  },
+  {
+    "seed": 2136009300,
+    "split": "test",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 3,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.4820590019226074,
+    "goal_world": [
+      982.4921875,
+      -5127.8330078125
+    ]
+  },
+  {
+    "seed": 2136009300,
+    "split": "test",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.10107946395874,
+    "goal_world": [
+      1006.4867553710938,
+      -5127.83447265625
+    ]
+  },
+  {
+    "seed": 2136010001,
+    "split": "test",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 3,
+    "waypoint_within_two": 3,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.9435571432113647,
+    "goal_world": [
+      4192.17529296875,
+      1652.4901123046875
+    ]
+  },
+  {
+    "seed": 2136010001,
+    "split": "test",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 2,
+    "waypoint_within_two": 3,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.9713147282600403,
+    "goal_world": [
+      4192.1650390625,
+      1664.5113525390625
+    ]
+  },
+  {
+    "seed": 2136010100,
+    "split": "test",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 1,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.266488552093506,
+    "goal_world": [
+      4196.8330078125,
+      1670.5078125
+    ]
+  },
+  {
+    "seed": 2136010100,
+    "split": "test",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 4,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.0,
+    "goal_world": [
+      4196.83447265625,
+      1646.51318359375
+    ]
+  },
+  {
+    "seed": 2136010200,
+    "split": "test",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.8889203071594238,
+    "goal_world": [
+      4196.83447265625,
+      1646.51318359375
+    ]
+  },
+  {
+    "seed": 2136010200,
+    "split": "test",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.158696413040161,
+    "goal_world": [
+      4196.8330078125,
+      1670.5078125
+    ]
+  },
+  {
+    "seed": 2136010300,
+    "split": "test",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 3,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.6978795528411865,
+    "goal_world": [
+      4196.8330078125,
+      1670.5078125
+    ]
+  },
+  {
+    "seed": 2136010300,
+    "split": "test",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.9423856735229492,
+    "goal_world": [
+      4196.83447265625,
+      1646.51318359375
+    ]
+  },
+  {
+    "seed": 2136011001,
+    "split": "test",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.0792254209518433,
+    "goal_world": [
+      1056.1749267578125,
+      -5503.490234375
+    ]
+  },
+  {
+    "seed": 2136011001,
+    "split": "test",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 1,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.8094190359115601,
+    "goal_world": [
+      1056.164794921875,
+      -5515.51123046875
+    ]
+  },
+  {
+    "seed": 2136011100,
+    "split": "test",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 4,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.0,
+    "goal_world": [
+      1046.51318359375,
+      -5511.83447265625
+    ]
+  },
+  {
+    "seed": 2136011100,
+    "split": "test",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 4,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.0,
+    "goal_world": [
+      1070.5076904296875,
+      -5511.8330078125
+    ]
+  },
+  {
+    "seed": 2136011200,
+    "split": "test",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 3.669684886932373,
+    "goal_world": [
+      1046.4921875,
+      -5507.1669921875
+    ]
+  },
+  {
+    "seed": 2136011200,
+    "split": "test",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 6.637828826904297,
+    "goal_world": [
+      1070.48681640625,
+      -5507.16552734375
+    ]
+  },
+  {
+    "seed": 2136011300,
+    "split": "test",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.10107946395874,
+    "goal_world": [
+      1070.5076904296875,
+      -5507.1669921875
+    ]
+  },
+  {
+    "seed": 2136011300,
+    "split": "test",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.964849472045898,
+    "goal_world": [
+      1046.51318359375,
+      -5507.1650390625
+    ]
+  },
+  {
+    "seed": 2136012001,
+    "split": "test",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 6.86004114151001,
+    "goal_world": [
+      -183.4886474609375,
+      -5095.8349609375
+    ]
+  },
+  {
+    "seed": 2136012001,
+    "split": "test",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 6.40293550491333,
+    "goal_world": [
+      -195.5098876953125,
+      -5095.82470703125
+    ]
+  },
+  {
+    "seed": 2136012100,
+    "split": "test",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.1012725830078125,
+    "goal_world": [
+      -187.1668701171875,
+      -5081.4921875
+    ]
+  },
+  {
+    "seed": 2136012100,
+    "split": "test",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 2,
+    "waypoint_within_two": 3,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.2411547899246216,
+    "goal_world": [
+      -187.16531372070312,
+      -5105.48681640625
+    ]
+  },
+  {
+    "seed": 2136012200,
+    "split": "test",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.158573865890503,
+    "goal_world": [
+      -191.8330841064453,
+      -5105.5078125
+    ]
+  },
+  {
+    "seed": 2136012200,
+    "split": "test",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.158573865890503,
+    "goal_world": [
+      -191.8346710205078,
+      -5081.51318359375
+    ]
+  },
+  {
+    "seed": 2136012300,
+    "split": "test",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.10107946395874,
+    "goal_world": [
+      -201.50779724121094,
+      -5095.8330078125
+    ]
+  },
+  {
+    "seed": 2136012300,
+    "split": "test",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 6.367560863494873,
+    "goal_world": [
+      -177.51324462890625,
+      -5095.83447265625
+    ]
+  },
+  {
+    "seed": 2136013001,
+    "split": "test",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.158573865890503,
+    "goal_world": [
+      -5603.51123046875,
+      -423.83514404296875
+    ]
+  },
+  {
+    "seed": 2136013001,
+    "split": "test",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.158573865890503,
+    "goal_world": [
+      -5591.490234375,
+      -423.8251037597656
+    ]
+  },
+  {
+    "seed": 2136013100,
+    "split": "test",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.1012725830078125,
+    "goal_world": [
+      -5585.51318359375,
+      -423.8346862792969
+    ]
+  },
+  {
+    "seed": 2136013100,
+    "split": "test",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.748849868774414,
+    "goal_world": [
+      -5609.5078125,
+      -423.83306884765625
+    ]
+  },
+  {
+    "seed": 2136013200,
+    "split": "test",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.158696413040161,
+    "goal_world": [
+      -5595.1669921875,
+      -409.4921569824219
+    ]
+  },
+  {
+    "seed": 2136013200,
+    "split": "test",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.158696413040161,
+    "goal_world": [
+      -5595.16552734375,
+      -433.48675537109375
+    ]
+  },
+  {
+    "seed": 2136013300,
+    "split": "test",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 7.069380760192871,
+    "goal_world": [
+      -5609.48681640625,
+      -419.1650695800781
+    ]
+  },
+  {
+    "seed": 2136013300,
+    "split": "test",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 10.307251930236816,
+    "goal_world": [
+      -5585.4921875,
+      -419.16693115234375
+    ]
+  },
+  {
+    "seed": 2136014001,
+    "split": "test",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.0792254209518433,
+    "goal_world": [
+      2020.8350830078125,
+      6304.51123046875
+    ]
+  },
+  {
+    "seed": 2136014001,
+    "split": "test",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 2,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.6188995838165283,
+    "goal_world": [
+      2020.824951171875,
+      6292.490234375
+    ]
+  },
+  {
+    "seed": 2136014100,
+    "split": "test",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.1010894775390625,
+    "goal_world": [
+      2006.4921875,
+      6300.8330078125
+    ]
+  },
+  {
+    "seed": 2136014100,
+    "split": "test",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.748918056488037,
+    "goal_world": [
+      2030.48681640625,
+      6300.83447265625
+    ]
+  },
+  {
+    "seed": 2136014200,
+    "split": "test",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.158208131790161,
+    "goal_world": [
+      2006.51318359375,
+      6300.8349609375
+    ]
+  },
+  {
+    "seed": 2136014200,
+    "split": "test",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 9.605483055114746,
+    "goal_world": [
+      2030.5076904296875,
+      6300.8330078125
+    ]
+  },
+  {
+    "seed": 2136014300,
+    "split": "test",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.479132175445557,
+    "goal_world": [
+      2006.51318359375,
+      6296.16552734375
+    ]
+  },
+  {
+    "seed": 2136014300,
+    "split": "test",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.047248363494873,
+    "goal_world": [
+      2030.5076904296875,
+      6296.1669921875
+    ]
+  },
+  {
+    "seed": 2136015001,
+    "split": "test",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 2,
+    "waypoint_within_two": 2,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 3.887169599533081,
+    "goal_world": [
+      4232.51123046875,
+      -1539.1649169921875
+    ]
+  },
+  {
+    "seed": 2136015001,
+    "split": "test",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 2,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.107020378112793,
+    "goal_world": [
+      4220.490234375,
+      -1539.175048828125
+    ]
+  },
+  {
+    "seed": 2136015100,
+    "split": "test",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 4,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.0,
+    "goal_world": [
+      4214.51318359375,
+      -1543.834716796875
+    ]
+  },
+  {
+    "seed": 2136015100,
+    "split": "test",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 4,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.0,
+    "goal_world": [
+      4238.5078125,
+      -1543.833251953125
+    ]
+  },
+  {
+    "seed": 2136015200,
+    "split": "test",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.425015449523926,
+    "goal_world": [
+      4238.48681640625,
+      -1543.834716796875
+    ]
+  },
+  {
+    "seed": 2136015200,
+    "split": "test",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.964632511138916,
+    "goal_world": [
+      4214.4921875,
+      -1543.8331298828125
+    ]
+  },
+  {
+    "seed": 2136015300,
+    "split": "test",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.101323127746582,
+    "goal_world": [
+      4238.48681640625,
+      -1539.165283203125
+    ]
+  },
+  {
+    "seed": 2136015300,
+    "split": "test",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.101323127746582,
+    "goal_world": [
+      4214.4921875,
+      -1539.1668701171875
+    ]
+  },
+  {
+    "seed": 2136016001,
+    "split": "test",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 2,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.5395519137382507,
+    "goal_world": [
+      -4987.17529296875,
+      -2667.509765625
+    ]
+  },
+  {
+    "seed": 2136016001,
+    "split": "test",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 3,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.26977595686912537,
+    "goal_world": [
+      -4987.1650390625,
+      -2655.48876953125
+    ]
+  },
+  {
+    "seed": 2136016100,
+    "split": "test",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 1,
+    "waypoint_within_two": 2,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.536325693130493,
+    "goal_world": [
+      -5001.5078125,
+      -2663.8330078125
+    ]
+  },
+  {
+    "seed": 2136016100,
+    "split": "test",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 4,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.0,
+    "goal_world": [
+      -4977.51318359375,
+      -2663.834716796875
+    ]
+  },
+  {
+    "seed": 2136016200,
+    "split": "test",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 3.1298279762268066,
+    "goal_world": [
+      -4977.51318359375,
+      -2659.165283203125
+    ]
+  },
+  {
+    "seed": 2136016200,
+    "split": "test",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.158451795578003,
+    "goal_world": [
+      -5001.5078125,
+      -2659.1669921875
+    ]
+  },
+  {
+    "seed": 2136016300,
+    "split": "test",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.964860439300537,
+    "goal_world": [
+      -4987.16552734375,
+      -2673.48681640625
+    ]
+  },
+  {
+    "seed": 2136016300,
+    "split": "test",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.964860439300537,
+    "goal_world": [
+      -4987.1669921875,
+      -2649.4921875
+    ]
+  },
+  {
+    "seed": 2136017001,
+    "split": "test",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.158695936203003,
+    "goal_world": [
+      -5219.51123046875,
+      6044.83544921875
+    ]
+  },
+  {
+    "seed": 2136017001,
+    "split": "test",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.158695936203003,
+    "goal_world": [
+      -5207.490234375,
+      6044.82470703125
+    ]
+  },
+  {
+    "seed": 2136017100,
+    "split": "test",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 2,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.4824345111846924,
+    "goal_world": [
+      -5211.16552734375,
+      6054.48681640625
+    ]
+  },
+  {
+    "seed": 2136017100,
+    "split": "test",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 3.7234206199645996,
+    "goal_world": [
+      -5211.1669921875,
+      6030.4921875
+    ]
+  },
+  {
+    "seed": 2136017200,
+    "split": "test",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.910660743713379,
+    "goal_world": [
+      -5211.16552734375,
+      6030.51318359375
+    ]
+  },
+  {
+    "seed": 2136017200,
+    "split": "test",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.209123134613037,
+    "goal_world": [
+      -5211.1669921875,
+      6054.5078125
+    ]
+  },
+  {
+    "seed": 2136017300,
+    "split": "test",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 6.097784996032715,
+    "goal_world": [
+      -5225.48681640625,
+      6040.16552734375
+    ]
+  },
+  {
+    "seed": 2136017300,
+    "split": "test",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 5.827887535095215,
+    "goal_world": [
+      -5201.4921875,
+      6040.1669921875
+    ]
+  },
+  {
+    "seed": 2136018001,
+    "split": "test",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.8884320259094238,
+    "goal_world": [
+      4740.8349609375,
+      3988.48876953125
+    ]
+  },
+  {
+    "seed": 2136018001,
+    "split": "test",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 2,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.6186559200286865,
+    "goal_world": [
+      4740.82470703125,
+      4000.509765625
+    ]
+  },
+  {
+    "seed": 2136018100,
+    "split": "test",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 4,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.0,
+    "goal_world": [
+      4726.51318359375,
+      3992.165283203125
+    ]
+  },
+  {
+    "seed": 2136018100,
+    "split": "test",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 4,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.0,
+    "goal_world": [
+      4750.5078125,
+      3992.166748046875
+    ]
+  },
+  {
+    "seed": 2136018200,
+    "split": "test",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.806164503097534,
+    "goal_world": [
+      4726.4921875,
+      3996.8330078125
+    ]
+  },
+  {
+    "seed": 2136018200,
+    "split": "test",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 3.3457815647125244,
+    "goal_world": [
+      4750.48681640625,
+      3996.834716796875
+    ]
+  },
+  {
+    "seed": 2136018300,
+    "split": "test",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.9428740739822388,
+    "goal_world": [
+      4750.48681640625,
+      3996.834716796875
+    ]
+  },
+  {
+    "seed": 2136018300,
+    "split": "test",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.9428740739822388,
+    "goal_world": [
+      4726.4921875,
+      3996.8330078125
+    ]
+  },
+  {
+    "seed": 2136019001,
+    "split": "test",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.158695697784424,
+    "goal_world": [
+      3364.824951171875,
+      5184.509765625
+    ]
+  },
+  {
+    "seed": 2136019001,
+    "split": "test",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.0793474912643433,
+    "goal_world": [
+      3364.835205078125,
+      5172.48876953125
+    ]
+  },
+  {
+    "seed": 2136019100,
+    "split": "test",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 12.933525085449219,
+    "goal_world": [
+      3360.166748046875,
+      5190.5078125
+    ]
+  },
+  {
+    "seed": 2136019100,
+    "split": "test",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 3.9933104515075684,
+    "goal_world": [
+      3360.165283203125,
+      5166.51318359375
+    ]
+  },
+  {
+    "seed": 2136019200,
+    "split": "test",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": false,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.640999794006348,
+    "goal_world": [
+      3368.4990234375,
+      5176.51513671875
+    ]
+  },
+  {
+    "seed": 2136019200,
+    "split": "test",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 5.180673122406006,
+    "goal_world": [
+      3364.8330078125,
+      5190.5078125
+    ]
+  },
+  {
+    "seed": 2136019300,
+    "split": "test",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.2091803550720215,
+    "goal_world": [
+      3360.165283203125,
+      5166.51318359375
+    ]
+  },
+  {
+    "seed": 2136019300,
+    "split": "test",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.2091803550720215,
+    "goal_world": [
+      3360.166748046875,
+      5190.5078125
+    ]
+  },
+  {
+    "seed": 2136020001,
+    "split": "test",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 2,
+    "waypoint_within_two": 2,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.219451427459717,
+    "goal_world": [
+      2088.509765625,
+      -131.1750946044922
+    ]
+  },
+  {
+    "seed": 2136020001,
+    "split": "test",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 3,
+    "waypoint_within_two": 3,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.8376590013504028,
+    "goal_world": [
+      2076.488525390625,
+      -131.1647491455078
+    ]
+  },
+  {
+    "seed": 2136020100,
+    "split": "test",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.7521474361419678,
+    "goal_world": [
+      2084.8330078125,
+      -145.50772094726562
+    ]
+  },
+  {
+    "seed": 2136020100,
+    "split": "test",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 3,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.212472677230835,
+    "goal_world": [
+      2084.834716796875,
+      -121.51318359375
+    ]
+  },
+  {
+    "seed": 2136020200,
+    "split": "test",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 5.180582046508789,
+    "goal_world": [
+      2094.507568359375,
+      -135.83319091796875
+    ]
+  },
+  {
+    "seed": 2136020200,
+    "split": "test",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 5.180582046508789,
+    "goal_world": [
+      2070.51318359375,
+      -135.83468627929688
+    ]
+  },
+  {
+    "seed": 2136020300,
+    "split": "test",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.10132360458374,
+    "goal_world": [
+      2080.165283203125,
+      -145.48678588867188
+    ]
+  },
+  {
+    "seed": 2136020300,
+    "split": "test",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.9428738355636597,
+    "goal_world": [
+      2080.166748046875,
+      -121.49242401123047
+    ]
+  },
+  {
+    "seed": 2136021001,
+    "split": "test",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 6.402965068817139,
+    "goal_world": [
+      -407.4902038574219,
+      -3267.175048828125
+    ]
+  },
+  {
+    "seed": 2136021001,
+    "split": "test",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 5.67200231552124,
+    "goal_world": [
+      -419.5113525390625,
+      -3267.164794921875
+    ]
+  },
+  {
+    "seed": 2136021100,
+    "split": "test",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.9426352977752686,
+    "goal_world": [
+      -401.49237060546875,
+      -3271.833251953125
+    ]
+  },
+  {
+    "seed": 2136021100,
+    "split": "test",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 3.561659097671509,
+    "goal_world": [
+      -425.4867858886719,
+      -3271.834716796875
+    ]
+  },
+  {
+    "seed": 2136021200,
+    "split": "test",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 5.180673599243164,
+    "goal_world": [
+      -401.51324462890625,
+      -3271.834716796875
+    ]
+  },
+  {
+    "seed": 2136021200,
+    "split": "test",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.158452272415161,
+    "goal_world": [
+      -425.5078125,
+      -3271.8330078125
+    ]
+  },
+  {
+    "seed": 2136021300,
+    "split": "test",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.9426296949386597,
+    "goal_world": [
+      -401.4922790527344,
+      -3267.1669921875
+    ]
+  },
+  {
+    "seed": 2136021300,
+    "split": "test",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 3,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.4822421073913574,
+    "goal_world": [
+      -425.48681640625,
+      -3267.1650390625
+    ]
+  },
+  {
+    "seed": 2136022001,
+    "split": "test",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 6.402976989746094,
+    "goal_world": [
+      1796.824951171875,
+      -875.5098266601562
+    ]
+  },
+  {
+    "seed": 2136022001,
+    "split": "test",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 7.1923933029174805,
+    "goal_world": [
+      1796.8350830078125,
+      -863.4886474609375
+    ]
+  },
+  {
+    "seed": 2136022100,
+    "split": "test",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 4,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.0,
+    "goal_world": [
+      1782.4921875,
+      -871.8330688476562
+    ]
+  },
+  {
+    "seed": 2136022100,
+    "split": "test",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 4,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.0,
+    "goal_world": [
+      1806.48681640625,
+      -871.8346557617188
+    ]
+  },
+  {
+    "seed": 2136022200,
+    "split": "test",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 1,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.644237995147705,
+    "goal_world": [
+      1792.165283203125,
+      -857.5132446289062
+    ]
+  },
+  {
+    "seed": 2136022200,
+    "split": "test",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 2,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.9426947832107544,
+    "goal_world": [
+      1792.1668701171875,
+      -881.5078125
+    ]
+  },
+  {
+    "seed": 2136022300,
+    "split": "test",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 7.123298168182373,
+    "goal_world": [
+      1806.5076904296875,
+      -871.8331909179688
+    ]
+  },
+  {
+    "seed": 2136022300,
+    "split": "test",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 3,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.4823336601257324,
+    "goal_world": [
+      1782.51318359375,
+      -871.834716796875
+    ]
+  },
+  {
+    "seed": 2136023001,
+    "split": "test",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.8887369632720947,
+    "goal_world": [
+      1860.8350830078125,
+      -1931.51123046875
+    ]
+  },
+  {
+    "seed": 2136023001,
+    "split": "test",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 2,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.5109893083572388,
+    "goal_world": [
+      1860.824951171875,
+      -1919.4901123046875
+    ]
+  },
+  {
+    "seed": 2136023100,
+    "split": "test",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 4,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.0,
+    "goal_world": [
+      1870.48681640625,
+      -1923.165283203125
+    ]
+  },
+  {
+    "seed": 2136023100,
+    "split": "test",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 1,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.457067847251892,
+    "goal_world": [
+      1846.4921875,
+      -1923.1668701171875
+    ]
+  },
+  {
+    "seed": 2136023200,
+    "split": "test",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 2,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 3.561591386795044,
+    "goal_world": [
+      1856.166748046875,
+      -1913.492431640625
+    ]
+  },
+  {
+    "seed": 2136023200,
+    "split": "test",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.101264953613281,
+    "goal_world": [
+      1856.165283203125,
+      -1937.48681640625
+    ]
+  },
+  {
+    "seed": 2136023300,
+    "split": "test",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.20924186706543,
+    "goal_world": [
+      1856.166748046875,
+      -1913.492431640625
+    ]
+  },
+  {
+    "seed": 2136023300,
+    "split": "test",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 3.9394049644470215,
+    "goal_world": [
+      1856.165283203125,
+      -1937.48681640625
+    ]
+  },
+  {
+    "seed": 2136024001,
+    "split": "test",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 1,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 3.023531913757324,
+    "goal_world": [
+      -2779.164794921875,
+      -4747.51123046875
+    ]
+  },
+  {
+    "seed": 2136024001,
+    "split": "test",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 4,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.0,
+    "goal_world": [
+      -2779.175048828125,
+      -4735.490234375
+    ]
+  },
+  {
+    "seed": 2136024100,
+    "split": "test",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 3.4536423683166504,
+    "goal_world": [
+      -2793.48681640625,
+      -4743.83447265625
+    ]
+  },
+  {
+    "seed": 2136024100,
+    "split": "test",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 2,
+    "waypoint_within_two": 2,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.942644715309143,
+    "goal_world": [
+      -2769.492431640625,
+      -4743.8330078125
+    ]
+  },
+  {
+    "seed": 2136024200,
+    "split": "test",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 3.6695008277893066,
+    "goal_world": [
+      -2779.165283203125,
+      -4729.51318359375
+    ]
+  },
+  {
+    "seed": 2136024200,
+    "split": "test",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 8.364514350891113,
+    "goal_world": [
+      -2779.1669921875,
+      -4753.5078125
+    ]
+  },
+  {
+    "seed": 2136024300,
+    "split": "test",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 3.561405658721924,
+    "goal_world": [
+      -2769.51318359375,
+      -4743.83447265625
+    ]
+  },
+  {
+    "seed": 2136024300,
+    "split": "test",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.263188362121582,
+    "goal_world": [
+      -2793.5078125,
+      -4743.8330078125
+    ]
+  },
+  {
+    "seed": 2136025001,
+    "split": "test",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 1,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 5.548943996429443,
+    "goal_world": [
+      -1407.4903564453125,
+      -928.8250732421875
+    ]
+  },
+  {
+    "seed": 2136025001,
+    "split": "test",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 1,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 5.832710266113281,
+    "goal_world": [
+      -1419.5113525390625,
+      -928.8351440429688
+    ]
+  },
+  {
+    "seed": 2136025100,
+    "split": "test",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 3,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.2698224186897278,
+    "goal_world": [
+      -1401.4923095703125,
+      -928.8331909179688
+    ]
+  },
+  {
+    "seed": 2136025100,
+    "split": "test",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 1,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.8094672560691833,
+    "goal_world": [
+      -1425.48681640625,
+      -928.834716796875
+    ]
+  },
+  {
+    "seed": 2136025200,
+    "split": "test",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.8061022758483887,
+    "goal_world": [
+      -1425.48681640625,
+      -924.1650390625
+    ]
+  },
+  {
+    "seed": 2136025200,
+    "split": "test",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.424999237060547,
+    "goal_world": [
+      -1401.4923095703125,
+      -924.1669311523438
+    ]
+  },
+  {
+    "seed": 2136025300,
+    "split": "test",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 11.548394203186035,
+    "goal_world": [
+      -1425.5078125,
+      -928.8330688476562
+    ]
+  },
+  {
+    "seed": 2136025300,
+    "split": "test",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 8.310507774353027,
+    "goal_world": [
+      -1401.51318359375,
+      -928.8346557617188
+    ]
+  },
+  {
+    "seed": 2136026001,
+    "split": "test",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 7.398401737213135,
+    "goal_world": [
+      -91.1750717163086,
+      1120.5098876953125
+    ]
+  },
+  {
+    "seed": 2136026001,
+    "split": "test",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 7.776866436004639,
+    "goal_world": [
+      -91.16487884521484,
+      1108.48876953125
+    ]
+  },
+  {
+    "seed": 2136026100,
+    "split": "test",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 1,
+    "goal_cell_correct": false,
+    "waypoint_cells_correct": 1,
+    "waypoint_within_two": 2,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 2.536306619644165,
+    "goal_world": [
+      -99.50048828125,
+      1105.482421875
+    ]
+  },
+  {
+    "seed": 2136026100,
+    "split": "test",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 4,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.0,
+    "goal_world": [
+      -95.83470153808594,
+      1102.51318359375
+    ]
+  },
+  {
+    "seed": 2136026200,
+    "split": "test",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 3,
+    "waypoint_within_two": 3,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.24115788936615,
+    "goal_world": [
+      -105.4867935180664,
+      1112.165283203125
+    ]
+  },
+  {
+    "seed": 2136026200,
+    "split": "test",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 6.044017791748047,
+    "goal_world": [
+      -81.49235534667969,
+      1112.166748046875
+    ]
+  },
+  {
+    "seed": 2136026300,
+    "split": "test",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 8.580361366271973,
+    "goal_world": [
+      -81.49235534667969,
+      1112.166748046875
+    ]
+  },
+  {
+    "seed": 2136026300,
+    "split": "test",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 11.062723159790039,
+    "goal_world": [
+      -105.4867935180664,
+      1112.165283203125
+    ]
+  },
+  {
+    "seed": 2136027001,
+    "split": "test",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 7.39863395690918,
+    "goal_world": [
+      2140.488525390625,
+      764.8352661132812
+    ]
+  },
+  {
+    "seed": 2136027001,
+    "split": "test",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 7.7768168449401855,
+    "goal_world": [
+      2152.509765625,
+      764.8248901367188
+    ]
+  },
+  {
+    "seed": 2136027100,
+    "split": "test",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 3.5616283416748047,
+    "goal_world": [
+      2158.507568359375,
+      760.1668090820312
+    ]
+  },
+  {
+    "seed": 2136027100,
+    "split": "test",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.9426960945129395,
+    "goal_world": [
+      2134.51318359375,
+      760.165283203125
+    ]
+  },
+  {
+    "seed": 2136027200,
+    "split": "test",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 5.23941707611084,
+    "goal_world": [
+      2144.166748046875,
+      774.507568359375
+    ]
+  },
+  {
+    "seed": 2136027200,
+    "split": "test",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 3.9933106899261475,
+    "goal_world": [
+      2144.165283203125,
+      750.51318359375
+    ]
+  },
+  {
+    "seed": 2136027300,
+    "split": "test",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.101262092590332,
+    "goal_world": [
+      2134.4921875,
+      764.8331298828125
+    ]
+  },
+  {
+    "seed": 2136027300,
+    "split": "test",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.101262092590332,
+    "goal_world": [
+      2158.48681640625,
+      764.834716796875
+    ]
+  },
+  {
+    "seed": 2136028001,
+    "split": "test",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 7.776890754699707,
+    "goal_world": [
+      6364.490234375,
+      2680.175048828125
+    ]
+  },
+  {
+    "seed": 2136028001,
+    "split": "test",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 8.482150077819824,
+    "goal_world": [
+      6376.51123046875,
+      2680.164794921875
+    ]
+  },
+  {
+    "seed": 2136028100,
+    "split": "test",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 4,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.0,
+    "goal_world": [
+      6368.1669921875,
+      2694.507568359375
+    ]
+  },
+  {
+    "seed": 2136028100,
+    "split": "test",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 4,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 0.0,
+    "goal_world": [
+      6368.16552734375,
+      2670.51318359375
+    ]
+  },
+  {
+    "seed": 2136028200,
+    "split": "test",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 7.878857135772705,
+    "goal_world": [
+      6358.4921875,
+      2680.1669921875
+    ]
+  },
+  {
+    "seed": 2136028200,
+    "split": "test",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 7.123302459716797,
+    "goal_world": [
+      6382.48681640625,
+      2680.165283203125
+    ]
+  },
+  {
+    "seed": 2136028300,
+    "split": "test",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 5.828192234039307,
+    "goal_world": [
+      6382.5078125,
+      2680.166748046875
+    ]
+  },
+  {
+    "seed": 2136028300,
+    "split": "test",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 3.0222208499908447,
+    "goal_world": [
+      6358.51318359375,
+      2680.165283203125
+    ]
+  },
+  {
+    "seed": 2136029001,
+    "split": "test",
+    "distance": 10,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 7.350366592407227,
+    "goal_world": [
+      2404.824951171875,
+      -2591.490234375
+    ]
+  },
+  {
+    "seed": 2136029001,
+    "split": "test",
+    "distance": 10,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 7.774073123931885,
+    "goal_world": [
+      2404.835205078125,
+      -2603.51123046875
+    ]
+  },
+  {
+    "seed": 2136029100,
+    "split": "test",
+    "distance": 30,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.9426350593566895,
+    "goal_world": [
+      2400.1669921875,
+      -2609.5078125
+    ]
+  },
+  {
+    "seed": 2136029100,
+    "split": "test",
+    "distance": 30,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 4.748796463012695,
+    "goal_world": [
+      2400.165283203125,
+      -2585.51318359375
+    ]
+  },
+  {
+    "seed": 2136029200,
+    "split": "test",
+    "distance": 60,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 1,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.6190223693847656,
+    "goal_world": [
+      2414.5078125,
+      -2595.1669921875
+    ]
+  },
+  {
+    "seed": 2136029200,
+    "split": "test",
+    "distance": 60,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 0,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 5.180673599243164,
+    "goal_world": [
+      2390.51318359375,
+      -2595.1650390625
+    ]
+  },
+  {
+    "seed": 2136029300,
+    "split": "test",
+    "distance": 100,
+    "slot": 0,
+    "prediction": 0,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 4,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 1.9428737163543701,
+    "goal_world": [
+      2390.51318359375,
+      -2599.834716796875
+    ]
+  },
+  {
+    "seed": 2136029300,
+    "split": "test",
+    "distance": 100,
+    "slot": 1,
+    "prediction": 1,
+    "goal_cell_correct": true,
+    "waypoint_cells_correct": 0,
+    "waypoint_within_two": 1,
+    "waypoint_n": 4,
+    "waypoint_mean_error": 5.828192234039307,
+    "goal_world": [
+      2414.507568359375,
+      -2599.833251953125
+    ]
+  }
+]
